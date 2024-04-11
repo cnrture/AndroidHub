@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=WASM
+compiler_version=1.9.22
+depends=kotlin
+ir_signature_versions=1,2
+jsOutputName=compose-multiplatform-core-annotation-annotation-wasm-js
+metadata_version=1.4.1
+serializedIrFileFingerprints=12etzdst41goa.19yjz56ilyi6d 2yjkqcf3x1st1.3jht1t7xc15aq 2q1kgybo3y9qj.nf9st513epds 2hyk3ypeg6hch.3v0j7dzky1eyr 3bly15ahl304x.1cmr4pr4cwwem 3k6olw2x54r8u.1i2b90xwusqv0 24us2s3igsr1n.3nxelrterxkbg 2g1abmjry44pu.1p4ut8q2zzkei 1lg8mrt50d8yf.3v2k25p6nkr01 pmpmsfjie62u.2euor3kvitz3g 2qtfi0c2d4o29.i3e2a29rajhz 2vl0kzaq2nnkh.2ht2jl6xpab6t 2n9i08njoan1e.1938971dlgbgc 32972qxbr9js0.9nohjw3wmqep 39gcwztvb15r6.3g8gom8acomdu 2glgg0fq25v5h.30w9jq9685nmy 1dw4l5hjt6we7.92nghqe0c5lx 3nynq9ecblbtt.2mswryan9c8fp 1fhusr6d98efr.1vle5yusx684e 3eh4i4v9holzz.1efnnly5ikc7m 1vogtnpzsq69v.2ztr5axfhlh69 350jj46lwl1t9.18x2yps4wt8rq
+serializedKlibFingerprint=3ojic1y1ewvms.hoybjnk17trx
+unique_name=org.jetbrains.compose.annotation-internal\:annotation

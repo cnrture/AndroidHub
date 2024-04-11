@@ -1,0 +1,84 @@
+{
+  "version": "9",
+  "items": {
+    "a17fdb4fafc8e13123c5926fe34c400e": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-wasm-js/1.9.22/184ac1ecda4780e160cb3a52bd47ac922fcdd2c/kotlin-stdlib-wasm-js-1.9.22.klib"
+    },
+    "35d6a216fa60e756b93eff8beffda6a0": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.runtime/runtime-wasm-js/1.6.0/132f2bf17a9aede6da4e1421a2f42f7225340b18/runtime-wasm-js-1.6.0.klib"
+    },
+    "cb6e555b2a0da1918e44ff0d6c067ed5": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.collection-internal/collection-wasm-js/1.6.0/d2dfade0048f4bc3f3f6272bf94cfd1ed8fce32f/collection-wasm-js-1.6.0.klib"
+    },
+    "1c6fc0b4d51e510c7517b56b13805943": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/atomicfu-wasm-js/0.23.2/f7046e9f5ce6014c3471098284bd654831bb1f41/atomicfu-wasm-js-0.23.2.klib"
+    },
+    "6c277e18dec3ef2c3892c0352b92d9ff": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.annotation-internal/annotation-wasm-js/1.6.0/203e9ce7e3f574cc9ca2403c67845aa6f2ef602b/annotation-wasm-js-1.6.0.klib"
+    },
+    "501aeec458033ad6cb31a41c6c012000": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-wasm-js/1.8.0-RC2/29639c3732586a673744ed3b9c9e7935a7a146/kotlinx-coroutines-core-wasm-js-1.8.0-RC2.klib"
+    },
+    "f7b1165b8c148000ddbd35c4358b4634": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.foundation/foundation-wasm-js/1.6.0/3f8440b3fe7df731784d2bb35c8c1dc88ec135cd/foundation-wasm-js-1.6.0.klib"
+    },
+    "c98677f447951e3b9f11eea56d4d02e3": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.animation/animation-wasm-js/1.6.0/b7e82bd3511c25f1d47cbe6237e24bfe43f281fe/animation-wasm-js-1.6.0.klib"
+    },
+    "eb0439124d6b3bd4b80b354951978899": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.foundation/foundation-layout-wasm-js/1.6.0/d1f023e51c33a7cd1bb24464a87e27c5f8929e49/foundation-layout-wasm-js-1.6.0.klib"
+    },
+    "74857c97d2c617b9b06beb7f8146d0f8": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-wasm-js/1.6.0/ffb36b0d07febf2af49cee65724eb2f44532caa5/ui-wasm-js-1.6.0.klib"
+    },
+    "3a03c70ffbee99903534ec30d5642da6": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-text-wasm-js/1.6.0/58c16771927fda88993d16c2232478dbd6b0b31e/ui-text-wasm-js-1.6.0.klib"
+    },
+    "fa0c5f5cd0ecbbeaf1f8adfa6206fbbd": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.runtime/runtime-saveable-wasm-js/1.6.0/6327ebeb068ea240e27c591c59b91b9baa272ff1/runtime-saveable-wasm-js-1.6.0.klib"
+    },
+    "f6563233fc3f0f1c00df1ffa6b20d226": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-graphics-wasm-js/1.6.0/3ec14038e296cc6b03adc9e1a7dd0367421b8cf9/ui-graphics-wasm-js-1.6.0.klib"
+    },
+    "1a6194f2093a08f026fd0c8572474feb": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-unit-wasm-js/1.6.0/2361be08aa171989cc30076592c5d6279f34fcac/ui-unit-wasm-js-1.6.0.klib"
+    },
+    "ffde23330a867b92b76182b4c13b5079": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-geometry-wasm-js/1.6.0/c847a01e0f8e8b84a76a9064542aff23cc4cb2c0/ui-geometry-wasm-js-1.6.0.klib"
+    },
+    "e5694f42dd8a38594a241cab01b40ca2": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-util-wasm-js/1.6.0/aa68c98868b44b79aef6e1c7101a3a79c4a26650/ui-util-wasm-js-1.6.0.klib"
+    },
+    "e8278e1ca2b2c61789a2014b416ebbfa": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.skiko/skiko-wasm-js/0.7.93/4e0d16e0dbd09686c155ce37341b0d6dd7dc6ba5/skiko-wasm-js-0.7.93.klib",
+      "target": "skiko-wasm-js/0.7.93"
+    },
+    "5f8c396c611dba6f31ce6325345f9730": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.skiko/skiko-js-wasm-runtime/0.7.93/7aab65f777796ce91617702ef0a26d40d93ffdc3/skiko-js-wasm-runtime-0.7.93.jar",
+      "target": "skiko-js-wasm-runtime/0.7.93"
+    },
+    "4a496aa4cdad813ccbea5b674d339b4d": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.animation/animation-core-wasm-js/1.6.0/a7db9884c7422cffa07edf047500e92814445ce/animation-core-wasm-js-1.6.0.klib"
+    },
+    "b9da081b2495d8f26df2700bf83ab4c4": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material/material-wasm-js/1.6.0/1b48ad1879982bfe4b3e6f03e094ebc97ea530e4/material-wasm-js-1.6.0.klib"
+    },
+    "7f0b638eccba490c6c915f25348cf48b": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material/material-ripple-wasm-js/1.6.0/5e9267001d34372f4234f645beda2de081a6ac0b/material-ripple-wasm-js-1.6.0.klib"
+    },
+    "f888e172715920c72d9674970298dfd6": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material/material-icons-core-wasm-js/1.6.0/92e85b4ab529f0508281e5ce349805e0e7d900e9/material-icons-core-wasm-js-1.6.0.klib"
+    },
+    "1a43adc46a52cf559bd1bf8ac339d728": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.components/components-resources-wasmJs/1.6.0/200eacab136558b32794e153bb2779bc2fe2e82/library-wasm-js-1.6.0.klib",
+      "target": "components-resources-wasmJs/1.6.0"
+    },
+    "4a22f4116b5f75eb813960d66951d3b7": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.components/components-ui-tooling-preview-wasmJs/1.6.0/1b163f7f7974363211a06ff60a82ccbde64ee398/library-wasm-js-1.6.0.klib"
+    },
+    "a66860f155cb10a237acb5f7d0f6d0e3": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js-runner/1.9.22/e9b1fc55af69eb09d63b271d17c217d9483241cc/kotlin-test-js-runner-1.9.22.jar",
+      "target": "kotlin-test-js-runner/0.0.1"
+    }
+  }
+}

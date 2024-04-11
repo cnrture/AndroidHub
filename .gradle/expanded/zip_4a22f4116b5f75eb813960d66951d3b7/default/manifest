@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=WASM
+compiler_version=1.9.22
+depends=kotlin
+ir_signature_versions=1,2
+jsOutputName=components-ui-tooling-preview-library-wasm-js
+metadata_version=1.4.1
+serializedIrFileFingerprints=2fkqddhqfytxm.13kg7zes41983 8mn4xe8r0zfs.zdt1wpb18ilj
+serializedKlibFingerprint=f9c7akybjneg.135jz6mnnjwla
+unique_name=components.ui-tooling-preview\:library

@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=WASM
+compiler_version=1.9.22
+depends=org.jetbrains.compose.ui\:ui-geometry org.jetbrains.compose.runtime\:runtime org.jetbrains.compose.ui\:ui-util org.jetbrains.compose.annotation-internal\:annotation kotlin
+ir_signature_versions=1,2
+jsOutputName=compose-multiplatform-core-compose-ui-ui-unit-wasm-js
+metadata_version=1.4.1
+serializedIrFileFingerprints=1griudzf7eq0o.2rmepa9igvfts 2ixxpvezmtc4w.2nhpwflfi6346 xbzh31zdt5kx.3fm6gw214l7dq 7vjuhc6nc766.1xpmra3w9nfhe 2t2a7pbvrktkp.18vl1gcwfy5a6 1q981ujmrxpp3.18g89yk78ax34 32i75lwd3ao6f.1gfyggc34ikiv e0zlgxihl2q6.1eybjwnyw0f9u 3owldvr8c6a8c.1bxdwdtyqv839 216uw19lge55e.18c24uvw0spvg k2lbtjehd2h6.3epq9wbx9jh90 lzhox9136avg.3s48nn14o1xee 1ssoh9j0j6vzl.3pbcho0f9oa02 1vk6adspc25eh.v9uyn6wwd19f
+serializedKlibFingerprint=3p1u27nid7q0a.1al3osibsnqlk
+unique_name=org.jetbrains.compose.ui\:ui-unit

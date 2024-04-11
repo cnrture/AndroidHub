@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=WASM
+compiler_version=1.9.21
+depends=kotlin
+ir_signature_versions=1,2
+jsOutputName=88b0986a7186d029-atomicfu-wasm-js
+metadata_version=1.4.1
+serializedIrFileFingerprints=3ueigr7ckakuu.sn9hu6u09g6u w6gtm9m59qg7.3arnf4me01mme 2c4uqqrwuf31t.240ncbex9vy0o 3c9rbe259ktxq.6e1djose67ui 2zwqkd4l2xznv.38sky71mehphd 2a6bdagslf23a.16ri02kj0c7le 1034ctq94wtia.27iuj9qbufp9s 2dp4inzt4mjqs.2typdj4n526p5 uthp3cp2nxdn.2kn68qdvgmanj
+serializedKlibFingerprint=10z1gfgoholcl.25yoob5uts3g4
+unique_name=org.jetbrains.kotlinx\:atomicfu

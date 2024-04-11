@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=WASM
+compiler_version=1.9.22
+depends=org.jetbrains.compose.collection-internal\:collection org.jetbrains.compose.ui\:ui org.jetbrains.compose.runtime\:runtime-saveable org.jetbrains.compose.runtime\:runtime org.jetbrains.compose.ui\:ui-text org.jetbrains.compose.ui\:ui-graphics org.jetbrains.compose.ui\:ui-unit org.jetbrains.compose.ui\:ui-util org.jetbrains.compose.annotation-internal\:annotation org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu org.jetbrains.compose.ui\:ui-geometry kotlin org.jetbrains.skiko\:skiko
+ir_signature_versions=1,2
+jsOutputName=compose-multiplatform-core-compose-animation-animation-core-wasm-js
+metadata_version=1.4.1
+serializedIrFileFingerprints=2bwd3ry3uohxo.1qqbertxrads 1elhvc1vqgs0f.2xqntn27rsudv xn398nywkz4u.33ycjkhwx8v8d 44ofay6y8bfo.210x0xmc4xcwi 2w1fydhenm9xy.1dg94fws25obb 1o6057u9z1api.pv8h1goex7e9 2szri532uqhjl.2ctwbdpvwkeag 3is6dcafex9g7.v7chq9iwxeg7 95qsbrygn7fu.32rk662jvq5v0 3m9kbnjg7oya7.1ymhtaqy5jelp 33pyby1rhvpk4.27d0unr7sxobx 3lg858xfbos6n.1vfjlddswt2v7 20ccl9lgxeyka.1hm5tdhibi1ua 1gr9hrz60aqpg.38t1jhu7uic84 b435wg2iacpb.206qzq1rjcyc4 265cep9c7fyc3.apgmfcuvttbr bfsqnq8pi12u.3hc15yp7guu5a 23n3tt1y4v9j5.3prtkvtns0wyz 1d0t1akfmbngt.2u1qjrp9vx73n wflyygj85bc1.29a75mn90xga2 2nmdezrd8v54c.fmx3642lme6r 3uk91h54836qs.5e2wjx21id97 1d1gp4n0xhkbj.3matz80egsjzo kwwpfsgppt2w.33oq02dgyiufr 24k9j1xneqhhu.25rucahtvmo8n 110ns2td9mlno.278drgtdqxyni 2hvwcmwifwwqo.1qz31t3dqahu e2dxx8a7in1d.3ejv7wzjtrv6q 2869o3jes712l.24ap80dbbwgt9 1jzik7ys70js.255ilnrf5s1id 3bv7inugpe56g.39c47xo28qgfz 29vh1952qskgj.4si0qj2hcjm6 157svtkqghmzq.18vumzza5gvoj 2iymiay92flni.3e5oyi9k47w4g 2xz6vixbeljxj.28pnq5pzo9x5k tzkfrx9x03ca.19elhzsqbvoce 36id2gninhpe2.wbo8cfpsf6xw
+serializedKlibFingerprint=27vb3yr5521k5.25rbst5tqm71
+unique_name=org.jetbrains.compose.animation\:animation-core

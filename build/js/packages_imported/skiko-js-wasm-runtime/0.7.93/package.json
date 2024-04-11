@@ -1,0 +1,10 @@
+{
+  "name": "skiko-js-wasm-runtime",
+  "version": "0.7.93",
+  "customFields": {},
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

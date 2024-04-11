@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=WASM
+compiler_version=1.9.22
+depends=components.resources\:library components.ui-tooling-preview\:library org.jetbrains.compose.material\:material org.jetbrains.compose.material\:material-ripple org.jetbrains.compose.foundation\:foundation org.jetbrains.compose.animation\:animation org.jetbrains.compose.animation\:animation-core org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu org.jetbrains.compose.material\:material-icons-core org.jetbrains.compose.foundation\:foundation-layout org.jetbrains.compose.ui\:ui org.jetbrains.compose.runtime\:runtime-saveable kotlin org.jetbrains.compose.runtime\:runtime org.jetbrains.compose.ui\:ui-text org.jetbrains.compose.ui\:ui-graphics org.jetbrains.compose.ui\:ui-unit org.jetbrains.skiko\:skiko org.jetbrains.compose.ui\:ui-geometry org.jetbrains.compose.ui\:ui-util
+ir_signature_versions=1,2
+jsOutputName=composeApp
+metadata_version=1.4.1
+serializedIrFileFingerprints=6yjsu9s0o5a5.xmxh4wbq8x5e 2jjc0go30t58h.2xh7k702lictq io60v92myw4d.3dkh5zr6n97ph a7qhn94h0vr2.17mvoywp5ijcl 207ewf8whh3tz.u55y8x0rirps r3hcjhgwrsrm.2z3whwdj2nbpr 2vl37ax43fz51.3qyuvvorghife
+serializedKlibFingerprint=1308gx57bdp33.3sgcehw2wp0en
+unique_name=AndroidHub\:composeApp

@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=WASM
+compiler_version=1.9.22
+depends=org.jetbrains.compose.runtime\:runtime kotlin
+ir_signature_versions=1,2
+jsOutputName=compose-multiplatform-core-compose-runtime-runtime-saveable-wasm-js
+metadata_version=1.4.1
+serializedIrFileFingerprints=1jj7peo6ya9bf.12u5rmqvm8zgc 3axw2mi8u7d6b.3horgoi4ls8h 2bu609nh68z3u.2nxjbqp59lb63 1gdklozka7u5g.2iquji9qodfmz 35x5wdfrqly2r.10wjs8x8wa4sw 1u7lluvx3511e.3dvtxrqehv6pi
+serializedKlibFingerprint=3goyw9qiar6dh.y8n7ffn9o4qi
+unique_name=org.jetbrains.compose.runtime\:runtime-saveable
