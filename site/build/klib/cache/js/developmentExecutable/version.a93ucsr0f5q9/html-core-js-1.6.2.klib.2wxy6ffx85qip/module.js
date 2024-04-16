@@ -26,14 +26,14 @@
   var setMetadataFor = kotlin_kotlin.$_$.pb;
   var VOID = kotlin_kotlin.$_$.e;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var objectMeta = kotlin_kotlin.$_$.nb;
-  var asList = kotlin_kotlin.$_$.x5;
-  var interfaceMeta = kotlin_kotlin.$_$.qa;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.t;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
   var addAll = kotlin_kotlin.$_$.p5;
   var to = kotlin_kotlin.$_$.zf;
   var Pair = kotlin_kotlin.$_$.se;
+  var objectMeta = kotlin_kotlin.$_$.nb;
+  var asList = kotlin_kotlin.$_$.x5;
+  var interfaceMeta = kotlin_kotlin.$_$.qa;
   var THROW_IAE = kotlin_kotlin.$_$.we;
   var enumEntries = kotlin_kotlin.$_$.u9;
   var Enum = kotlin_kotlin.$_$.ke;
@@ -80,14 +80,14 @@
   var emptyList = kotlin_kotlin.$_$.r6;
   var copyToArray = kotlin_kotlin.$_$.p6;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var DOMScope = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.a;
   var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.xf;
+  var DOMScope = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.a;
   var SideEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
   var RememberObserver = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m;
-  var lazy = kotlin_kotlin.$_$.qf;
   var invalidApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
   var DomApplier = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.b;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
+  var lazy = kotlin_kotlin.$_$.qf;
   var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
   var DisposableEffect_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i;
   var KProperty1 = kotlin_kotlin.$_$.fc;
@@ -97,7 +97,6 @@
   //endregion
   //region block: pre-declaration
   setMetadataFor(ExperimentalComposeWebApi, 'ExperimentalComposeWebApi', classMeta, VOID, [Annotation]);
-  setMetadataFor(Companion, 'Companion', objectMeta);
   function onContextMenu(listener) {
     this.registerEventListener_oiyxlj_k$(new MouseEventListener('contextmenu', listener));
   }
@@ -248,6 +247,7 @@
   }
   setMetadataFor(AttrsScope, 'AttrsScope', interfaceMeta, VOID, [EventsListenerScope]);
   setMetadataFor(AttrsScopeBuilder, 'AttrsScopeBuilder', classMeta, VOID, [AttrsScope, EventsListenerScope], AttrsScopeBuilder);
+  setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(EventsListenerScopeBuilder, 'EventsListenerScopeBuilder', classMeta, VOID, [EventsListenerScope], EventsListenerScopeBuilder);
   setMetadataFor(HtmlAttrMarker, 'HtmlAttrMarker', classMeta, VOID, [Annotation]);
@@ -640,29 +640,29 @@
   setMetadataFor(CSSBuilderImpl, 'CSSBuilderImpl', classMeta, CSSRuleBuilderImpl, [CSSRuleBuilderImpl, CSSBuilder, CSSRulesHolder]);
   setMetadataFor(Companion_1, 'Companion', objectMeta);
   setMetadataFor(StylePropertyEnum, 'StylePropertyEnum', interfaceMeta);
-  setMetadataFor(DisplayStyle, 'DisplayStyle', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_2, 'Companion', objectMeta);
-  setMetadataFor(LineStyle, 'LineStyle', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_3, 'Companion', objectMeta);
   setMetadataFor(Position, 'Position', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_4, 'Companion', objectMeta);
-  setMetadataFor(AnimationTimingFunction, 'AnimationTimingFunction', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_5, 'Companion', objectMeta);
-  setMetadataFor(AnimationDirection, 'AnimationDirection', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_6, 'Companion', objectMeta);
-  setMetadataFor(AnimationFillMode, 'AnimationFillMode', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_7, 'Companion', objectMeta);
-  setMetadataFor(StepPosition, 'StepPosition', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_8, 'Companion', objectMeta);
-  setMetadataFor(AnimationPlayState, 'AnimationPlayState', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_9, 'Companion', objectMeta);
+  setMetadataFor(Companion_2, 'Companion', objectMeta);
   setMetadataFor(AlignItems, 'AlignItems', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_10, 'Companion', objectMeta);
-  setMetadataFor(AlignSelf, 'AlignSelf', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_11, 'Companion', objectMeta);
-  setMetadataFor(FlexDirection, 'FlexDirection', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_12, 'Companion', objectMeta);
+  setMetadataFor(Companion_3, 'Companion', objectMeta);
   setMetadataFor(JustifyContent, 'JustifyContent', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_4, 'Companion', objectMeta);
+  setMetadataFor(LineStyle, 'LineStyle', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_5, 'Companion', objectMeta);
+  setMetadataFor(DisplayStyle, 'DisplayStyle', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_6, 'Companion', objectMeta);
+  setMetadataFor(AnimationTimingFunction, 'AnimationTimingFunction', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_7, 'Companion', objectMeta);
+  setMetadataFor(FlexDirection, 'FlexDirection', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_8, 'Companion', objectMeta);
+  setMetadataFor(AlignSelf, 'AlignSelf', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_9, 'Companion', objectMeta);
+  setMetadataFor(StepPosition, 'StepPosition', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_10, 'Companion', objectMeta);
+  setMetadataFor(AnimationDirection, 'AnimationDirection', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_11, 'Companion', objectMeta);
+  setMetadataFor(AnimationFillMode, 'AnimationFillMode', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_12, 'Companion', objectMeta);
+  setMetadataFor(AnimationPlayState, 'AnimationPlayState', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(CSSKeyframe, 'CSSKeyframe', classMeta);
   setMetadataFor(From, 'From', objectMeta, CSSKeyframe);
   setMetadataFor(To, 'To', objectMeta, CSSKeyframe);
@@ -692,6 +692,7 @@
   setMetadataFor(CSSMediaRuleDeclaration, 'CSSMediaRuleDeclaration', classMeta, VOID, [CSSGroupingRuleDeclaration]);
   setMetadataFor(CSSStyleRuleDeclaration, 'CSSStyleRuleDeclaration', classMeta, VOID, [CSSRuleDeclaration, CSSStyledRuleDeclaration]);
   setMetadataFor(CSSUnit, 'CSSUnit', interfaceMeta);
+  setMetadataFor(CSSUnitTime, 'CSSUnitTime', interfaceMeta, VOID, [CSSUnit]);
   setMetadataFor(CSSUnitLengthOrPercentage, 'CSSUnitLengthOrPercentage', interfaceMeta, VOID, [CSSUnit]);
   setMetadataFor(CSSUnitLength, 'CSSUnitLength', interfaceMeta, VOID, [CSSUnitLengthOrPercentage]);
   setMetadataFor(CSSUnitPercentage, 'CSSUnitPercentage', interfaceMeta, VOID, [CSSUnitLengthOrPercentage]);
@@ -722,7 +723,6 @@
   setMetadataFor(grad, 'grad', interfaceMeta, VOID, [CSSUnitAngle]);
   setMetadataFor(rad, 'rad', interfaceMeta, VOID, [CSSUnitAngle]);
   setMetadataFor(turn, 'turn', interfaceMeta, VOID, [CSSUnitAngle]);
-  setMetadataFor(CSSUnitTime, 'CSSUnitTime', interfaceMeta, VOID, [CSSUnit]);
   setMetadataFor(s, 's', interfaceMeta, VOID, [CSSUnitTime]);
   setMetadataFor(ms, 'ms', interfaceMeta, VOID, [CSSUnitTime]);
   setMetadataFor(CSSUnitFrequency, 'CSSUnitFrequency', interfaceMeta, VOID, [CSSUnit]);
@@ -806,9 +806,9 @@
     $composer_0.endReplaceableGroup_ern0ak_k$();
   }
   setMetadataFor(ElementScope, 'ElementScope', interfaceMeta, VOID, [DOMScope]);
-  setMetadataFor(DomEffectScope, 'DomEffectScope', interfaceMeta);
   setMetadataFor(ElementScopeBase, 'ElementScopeBase', classMeta, VOID, [ElementScope]);
   setMetadataFor(ElementScopeImpl, 'ElementScopeImpl', classMeta, ElementScopeBase, VOID, ElementScopeImpl);
+  setMetadataFor(DomEffectScope, 'DomEffectScope', interfaceMeta);
   setMetadataFor(DomDisposableEffectHolder, 'DomDisposableEffectHolder', classMeta, VOID, [RememberObserver, DomEffectScope]);
   setMetadataFor(Companion_16, 'Companion', objectMeta);
   setMetadataFor(ElementBuilder, 'ElementBuilder', interfaceMeta);
@@ -903,57 +903,6 @@
     return setClassList;
   }
   var setClassList;
-  function Companion() {
-    Companion_instance = this;
-    this.CLASS_1 = 'class';
-    this.ID_1 = 'id';
-    this.HIDDEN_1 = 'hidden';
-    this.TITLE_1 = 'title';
-    this.DIR_1 = 'dir';
-    this.DRAGGABLE_1 = 'draggable';
-    this.CONTENT_EDITABLE_1 = 'contenteditable';
-    this.LANG_1 = 'lang';
-    this.TAB_INDEX_1 = 'tabindex';
-    this.SPELLCHECK_1 = 'spellcheck';
-  }
-  protoOf(Companion).get_CLASS_i7lkq7_k$ = function () {
-    return this.CLASS_1;
-  };
-  protoOf(Companion).get_ID_kntopo_k$ = function () {
-    return this.ID_1;
-  };
-  protoOf(Companion).get_HIDDEN_1dp9hp_k$ = function () {
-    return this.HIDDEN_1;
-  };
-  protoOf(Companion).get_TITLE_igwjrj_k$ = function () {
-    return this.TITLE_1;
-  };
-  protoOf(Companion).get_DIR_18jvuk_k$ = function () {
-    return this.DIR_1;
-  };
-  protoOf(Companion).get_DRAGGABLE_lgsxfg_k$ = function () {
-    return this.DRAGGABLE_1;
-  };
-  protoOf(Companion).get_CONTENT_EDITABLE_pkf1hv_k$ = function () {
-    return this.CONTENT_EDITABLE_1;
-  };
-  protoOf(Companion).get_LANG_wo4kl3_k$ = function () {
-    return this.LANG_1;
-  };
-  protoOf(Companion).get_TAB_INDEX_us6klb_k$ = function () {
-    return this.TAB_INDEX_1;
-  };
-  protoOf(Companion).get_SPELLCHECK_xv0ui1_k$ = function () {
-    return this.SPELLCHECK_1;
-  };
-  var Companion_instance;
-  function Companion_getInstance_0() {
-    if (Companion_instance == null)
-      new Companion();
-    return Companion_instance;
-  }
-  function AttrsScope() {
-  }
   function get_$stableprop() {
     return 8;
   }
@@ -1141,6 +1090,57 @@
     this.propertyUpdates_1.addAll_4lagoh_k$(attrsScope.propertyUpdates_1);
     this.eventsListenerScopeBuilder_1.copyListenersFrom_8b6my_k$(attrsScope.eventsListenerScopeBuilder_1);
   };
+  function Companion() {
+    Companion_instance = this;
+    this.CLASS_1 = 'class';
+    this.ID_1 = 'id';
+    this.HIDDEN_1 = 'hidden';
+    this.TITLE_1 = 'title';
+    this.DIR_1 = 'dir';
+    this.DRAGGABLE_1 = 'draggable';
+    this.CONTENT_EDITABLE_1 = 'contenteditable';
+    this.LANG_1 = 'lang';
+    this.TAB_INDEX_1 = 'tabindex';
+    this.SPELLCHECK_1 = 'spellcheck';
+  }
+  protoOf(Companion).get_CLASS_i7lkq7_k$ = function () {
+    return this.CLASS_1;
+  };
+  protoOf(Companion).get_ID_kntopo_k$ = function () {
+    return this.ID_1;
+  };
+  protoOf(Companion).get_HIDDEN_1dp9hp_k$ = function () {
+    return this.HIDDEN_1;
+  };
+  protoOf(Companion).get_TITLE_igwjrj_k$ = function () {
+    return this.TITLE_1;
+  };
+  protoOf(Companion).get_DIR_18jvuk_k$ = function () {
+    return this.DIR_1;
+  };
+  protoOf(Companion).get_DRAGGABLE_lgsxfg_k$ = function () {
+    return this.DRAGGABLE_1;
+  };
+  protoOf(Companion).get_CONTENT_EDITABLE_pkf1hv_k$ = function () {
+    return this.CONTENT_EDITABLE_1;
+  };
+  protoOf(Companion).get_LANG_wo4kl3_k$ = function () {
+    return this.LANG_1;
+  };
+  protoOf(Companion).get_TAB_INDEX_us6klb_k$ = function () {
+    return this.TAB_INDEX_1;
+  };
+  protoOf(Companion).get_SPELLCHECK_xv0ui1_k$ = function () {
+    return this.SPELLCHECK_1;
+  };
+  var Companion_instance;
+  function Companion_getInstance_0() {
+    if (Companion_instance == null)
+      new Companion();
+    return Companion_instance;
+  }
+  function AttrsScope() {
+  }
   function setClassList$lambda(e, classList) {
     _init_properties_AttrsScope_kt__ek7k4y();
     (function () {
@@ -1891,101 +1891,35 @@
   function Companion_1() {
     Companion_instance_1 = this;
   }
-  protoOf(Companion_1).get_Block_i7n684_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_1).get_Static_4hz9g7_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.Position' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'block';
+    return 'static';
   };
-  protoOf(Companion_1).get_Inline_bkx8e_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_1).get_Relative_v4kdkl_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.Position' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'inline';
+    return 'relative';
   };
-  protoOf(Companion_1).get_InlineBlock_dx9ywb_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_1).get_Absolute_25kja8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.Position' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'inline-block';
+    return 'absolute';
   };
-  protoOf(Companion_1).get_Flex_wo1n4y_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_1).get_Sticky_4i40sy_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.Position' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'flex';
+    return 'sticky';
   };
-  protoOf(Companion_1).get_LegacyInlineFlex_bx32c_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_1).get_Fixed_i9smcr_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.Position' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'inline-flex';
-  };
-  protoOf(Companion_1).get_Grid_wo2enj_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'grid';
-  };
-  protoOf(Companion_1).get_LegacyInlineGrid_bxukx_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inline-grid';
-  };
-  protoOf(Companion_1).get_FlowRoot_2ttlax_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flow-root';
-  };
-  protoOf(Companion_1).get_None_wo6tgh_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'none';
-  };
-  protoOf(Companion_1).get_Contents_uww6pv_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'contents';
-  };
-  protoOf(Companion_1).get_Table_ihc6md_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'table';
-  };
-  protoOf(Companion_1).get_TableRow_phjndh_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'table-row';
-  };
-  protoOf(Companion_1).get_ListItem_8hh2km_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'list-item';
-  };
-  protoOf(Companion_1).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
-  };
-  protoOf(Companion_1).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
-  };
-  protoOf(Companion_1).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
+    return 'fixed';
   };
   var Companion_instance_1;
   function Companion_getInstance_2() {
@@ -1993,70 +1927,93 @@
       new Companion_1();
     return Companion_instance_1;
   }
-  function DisplayStyle() {
+  function Position() {
+  }
+  function get_value(_this__u8e3s4) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return _this__u8e3s4;
   }
   function Companion_2() {
     Companion_instance_2 = this;
   }
-  protoOf(Companion_2).get_None_wo6tgh_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_Normal_22avww_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'none';
+    return 'normal';
   };
-  protoOf(Companion_2).get_Hidden_viqel_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_Stretch_2brthg_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'hidden';
+    return 'stretch';
   };
-  protoOf(Companion_2).get_Dotted_2o3wrx_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_Center_3arb0i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'dotted';
+    return 'center';
   };
-  protoOf(Companion_2).get_Dashed_2vtwyu_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_Start_ih4i6x_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'dashed';
+    return 'start';
   };
-  protoOf(Companion_2).get_Solid_ih1j6q_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_End_18ju7i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'solid';
+    return 'end';
   };
-  protoOf(Companion_2).get_Double_2o3myu_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_FlexStart_cfavq8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'double';
+    return 'flex-start';
   };
-  protoOf(Companion_2).get_Groove_17ey1p_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_FlexEnd_fz7iu1_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'groove';
+    return 'flex-end';
   };
-  protoOf(Companion_2).get_Ridge_igdqoy_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_Baseline_bu5gku_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ridge';
+    return 'baseline';
   };
-  protoOf(Companion_2).get_Inset_ibj3dg_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_SafeCenter_caps7p_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'inset';
+    return 'safe center';
   };
-  protoOf(Companion_2).get_Outset_2mooe5_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_2).get_UnsafeCenter_h98ef8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'outset';
+    return 'unsafe center';
+  };
+  protoOf(Companion_2).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_2).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_2).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
   };
   var Companion_instance_2;
   function Companion_getInstance_3() {
@@ -2064,40 +2021,112 @@
       new Companion_2();
     return Companion_instance_2;
   }
-  function LineStyle() {
+  function AlignItems() {
   }
   function Companion_3() {
     Companion_instance_3 = this;
   }
-  protoOf(Companion_3).get_Static_4hz9g7_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.Position' call
+  protoOf(Companion_3).get_Center_3arb0i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'static';
+    return 'center';
   };
-  protoOf(Companion_3).get_Relative_v4kdkl_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.Position' call
+  protoOf(Companion_3).get_Start_ih4i6x_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'relative';
+    return 'start';
   };
-  protoOf(Companion_3).get_Absolute_25kja8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.Position' call
+  protoOf(Companion_3).get_End_18ju7i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'absolute';
+    return 'end';
   };
-  protoOf(Companion_3).get_Sticky_4i40sy_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.Position' call
+  protoOf(Companion_3).get_FlexStart_cfavq8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'sticky';
+    return 'flex-start';
   };
-  protoOf(Companion_3).get_Fixed_i9smcr_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.Position' call
+  protoOf(Companion_3).get_FlexEnd_fz7iu1_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'fixed';
+    return 'flex-end';
+  };
+  protoOf(Companion_3).get_Left_wo5bw0_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'left';
+  };
+  protoOf(Companion_3).get_Right_igdsyb_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'right';
+  };
+  protoOf(Companion_3).get_Normal_22avww_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'normal';
+  };
+  protoOf(Companion_3).get_SpaceBetween_5p3wqd_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'space-between';
+  };
+  protoOf(Companion_3).get_SpaceAround_1tvu22_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'space-around';
+  };
+  protoOf(Companion_3).get_SpaceEvenly_3s2yx0_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'space-evenly';
+  };
+  protoOf(Companion_3).get_Stretch_2brthg_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'stretch';
+  };
+  protoOf(Companion_3).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_3).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_3).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
+  };
+  protoOf(Companion_3).get_SafeCenter_caps7p_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'safe center';
+  };
+  protoOf(Companion_3).get_UnsafeCenter_h98ef8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unsafe center';
   };
   var Companion_instance_3;
   function Companion_getInstance_4() {
@@ -2105,88 +2134,70 @@
       new Companion_3();
     return Companion_instance_3;
   }
-  function Position() {
+  function JustifyContent() {
   }
   function Companion_4() {
     Companion_instance_4 = this;
   }
-  protoOf(Companion_4).get_Ease_wo0sbb_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_None_wo6tgh_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ease';
+    return 'none';
   };
-  protoOf(Companion_4).get_EaseIn_2esdgk_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_Hidden_viqel_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ease-in';
+    return 'hidden';
   };
-  protoOf(Companion_4).get_EaseOut_3pbekp_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_Dotted_2o3wrx_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ease-out';
+    return 'dotted';
   };
-  protoOf(Companion_4).get_EaseInOut_7d98oe_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_Dashed_2vtwyu_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ease-in-out';
+    return 'dashed';
   };
-  protoOf(Companion_4).get_Linear_10u5ou_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_Solid_ih1j6q_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'linear';
+    return 'solid';
   };
-  protoOf(Companion_4).get_StepStart_7bah8z_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_Double_2o3myu_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'step-start';
+    return 'double';
   };
-  protoOf(Companion_4).get_StepEnd_2ir2xm_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_Groove_17ey1p_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'step-end';
+    return 'groove';
   };
-  protoOf(Companion_4).cubicBezier_lhi215_k$ = function (x1, y1, x2, y2) {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_Ridge_igdqoy_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'cubic-bezier(' + x1 + ', ' + y1 + ', ' + x2 + ', ' + y2 + ')';
+    return 'ridge';
   };
-  protoOf(Companion_4).steps_fj33mi_k$ = function (count, stepPosition) {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_Inset_ibj3dg_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'steps(' + count + ', ' + stepPosition + ')';
+    return 'inset';
   };
-  protoOf(Companion_4).steps_rhawfj_k$ = function (count) {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_4).get_Outset_2mooe5_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'steps(' + count + ')';
-  };
-  protoOf(Companion_4).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
-  };
-  protoOf(Companion_4).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
-  };
-  protoOf(Companion_4).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
+    return 'outset';
   };
   var Companion_instance_4;
   function Companion_getInstance_5() {
@@ -2194,49 +2205,103 @@
       new Companion_4();
     return Companion_instance_4;
   }
-  function AnimationTimingFunction() {
+  function LineStyle() {
   }
   function Companion_5() {
     Companion_instance_5 = this;
   }
-  protoOf(Companion_5).get_Normal_22avww_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+  protoOf(Companion_5).get_Block_i7n684_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'normal';
+    return 'block';
   };
-  protoOf(Companion_5).get_Reverse_o1nacn_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+  protoOf(Companion_5).get_Inline_bkx8e_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'reverse';
+    return 'inline';
   };
-  protoOf(Companion_5).get_Alternate_idby5t_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+  protoOf(Companion_5).get_InlineBlock_dx9ywb_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'alternate';
+    return 'inline-block';
   };
-  protoOf(Companion_5).get_AlternateReverse_i0aiof_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+  protoOf(Companion_5).get_Flex_wo1n4y_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'alternate-reverse';
+    return 'flex';
+  };
+  protoOf(Companion_5).get_LegacyInlineFlex_bx32c_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inline-flex';
+  };
+  protoOf(Companion_5).get_Grid_wo2enj_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'grid';
+  };
+  protoOf(Companion_5).get_LegacyInlineGrid_bxukx_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inline-grid';
+  };
+  protoOf(Companion_5).get_FlowRoot_2ttlax_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'flow-root';
+  };
+  protoOf(Companion_5).get_None_wo6tgh_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'none';
+  };
+  protoOf(Companion_5).get_Contents_uww6pv_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'contents';
+  };
+  protoOf(Companion_5).get_Table_ihc6md_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'table';
+  };
+  protoOf(Companion_5).get_TableRow_phjndh_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'table-row';
+  };
+  protoOf(Companion_5).get_ListItem_8hh2km_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'list-item';
   };
   protoOf(Companion_5).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'inherit';
   };
   protoOf(Companion_5).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'initial';
   };
   protoOf(Companion_5).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'unset';
@@ -2247,34 +2312,88 @@
       new Companion_5();
     return Companion_instance_5;
   }
-  function AnimationDirection() {
+  function DisplayStyle() {
   }
   function Companion_6() {
     Companion_instance_6 = this;
   }
-  protoOf(Companion_6).get_None_wo6tgh_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+  protoOf(Companion_6).get_Ease_wo0sbb_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'none';
+    return 'ease';
   };
-  protoOf(Companion_6).get_Forwards_mqp421_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+  protoOf(Companion_6).get_EaseIn_2esdgk_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'forwards';
+    return 'ease-in';
   };
-  protoOf(Companion_6).get_Backwards_6xoxjt_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+  protoOf(Companion_6).get_EaseOut_3pbekp_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'backwards';
+    return 'ease-out';
   };
-  protoOf(Companion_6).get_Both_wnz5re_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+  protoOf(Companion_6).get_EaseInOut_7d98oe_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'both';
+    return 'ease-in-out';
+  };
+  protoOf(Companion_6).get_Linear_10u5ou_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'linear';
+  };
+  protoOf(Companion_6).get_StepStart_7bah8z_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'step-start';
+  };
+  protoOf(Companion_6).get_StepEnd_2ir2xm_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'step-end';
+  };
+  protoOf(Companion_6).cubicBezier_lhi215_k$ = function (x1, y1, x2, y2) {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'cubic-bezier(' + x1 + ', ' + y1 + ', ' + x2 + ', ' + y2 + ')';
+  };
+  protoOf(Companion_6).steps_fj33mi_k$ = function (count, stepPosition) {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'steps(' + count + ', ' + stepPosition + ')';
+  };
+  protoOf(Companion_6).steps_rhawfj_k$ = function (count) {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'steps(' + count + ')';
+  };
+  protoOf(Companion_6).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_6).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_6).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
   };
   var Companion_instance_6;
   function Companion_getInstance_7() {
@@ -2282,11 +2401,163 @@
       new Companion_6();
     return Companion_instance_6;
   }
-  function AnimationFillMode() {
+  function AnimationTimingFunction() {
+  }
+  function Companion_7() {
+    Companion_instance_7 = this;
+  }
+  protoOf(Companion_7).get_Row_18jkj3_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'row';
+  };
+  protoOf(Companion_7).get_RowReverse_d0ukpd_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'row-reverse';
+  };
+  protoOf(Companion_7).get_Column_35am4h_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'column';
+  };
+  protoOf(Companion_7).get_ColumnReverse_rkbov1_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'column-reverse';
+  };
+  var Companion_instance_7;
+  function Companion_getInstance_8() {
+    if (Companion_instance_7 == null)
+      new Companion_7();
+    return Companion_instance_7;
+  }
+  function FlexDirection() {
+  }
+  function Companion_8() {
+    Companion_instance_8 = this;
+  }
+  protoOf(Companion_8).get_Auto_wnyn88_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'auto';
+  };
+  protoOf(Companion_8).get_Normal_22avww_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'normal';
+  };
+  protoOf(Companion_8).get_Center_3arb0i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'center';
+  };
+  protoOf(Companion_8).get_Start_ih4i6x_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'start';
+  };
+  protoOf(Companion_8).get_End_18ju7i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'end';
+  };
+  protoOf(Companion_8).get_SelfStart_di8gbx_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'self-start';
+  };
+  protoOf(Companion_8).get_SelfEnd_9ir8ka_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'self-end';
+  };
+  protoOf(Companion_8).get_FlexStart_cfavq8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'flex-start';
+  };
+  protoOf(Companion_8).get_FlexEnd_fz7iu1_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'flex-end';
+  };
+  protoOf(Companion_8).get_Baseline_bu5gku_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'baseline';
+  };
+  protoOf(Companion_8).get_Stretch_2brthg_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'stretch';
+  };
+  protoOf(Companion_8).get_SafeCenter_caps7p_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'safe center';
+  };
+  protoOf(Companion_8).get_UnsafeCenter_h98ef8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unsafe center';
+  };
+  protoOf(Companion_8).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_8).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_8).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
+  };
+  var Companion_instance_8;
+  function Companion_getInstance_9() {
+    if (Companion_instance_8 == null)
+      new Companion_8();
+    return Companion_instance_8;
+  }
+  function AlignSelf() {
   }
   function StylePropertyEnum() {
   }
-  function DisplayStyle_0(value) {
+  function Position_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function AlignItems_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function JustifyContent_0(value) {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return value;
@@ -2296,7 +2567,7 @@
     // Inline function 'kotlin.js.asDynamic' call
     return value;
   }
-  function Position_0(value) {
+  function DisplayStyle_0(value) {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return value;
@@ -2306,52 +2577,155 @@
     // Inline function 'kotlin.js.asDynamic' call
     return value;
   }
-  function Companion_7() {
-    Companion_instance_7 = this;
+  function Companion_9() {
+    Companion_instance_9 = this;
   }
-  protoOf(Companion_7).get_JumpStart_i85v5h_k$ = function () {
+  protoOf(Companion_9).get_JumpStart_i85v5h_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'jump-start';
   };
-  protoOf(Companion_7).get_JumpEnd_81cg5g_k$ = function () {
+  protoOf(Companion_9).get_JumpEnd_81cg5g_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'jump-end';
   };
-  protoOf(Companion_7).get_JumpNone_yykj9t_k$ = function () {
+  protoOf(Companion_9).get_JumpNone_yykj9t_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'jump-none';
   };
-  protoOf(Companion_7).get_JumpBoth_yys6yw_k$ = function () {
+  protoOf(Companion_9).get_JumpBoth_yys6yw_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'jump-both';
   };
-  protoOf(Companion_7).get_Start_ih4i6x_k$ = function () {
+  protoOf(Companion_9).get_Start_ih4i6x_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'start';
   };
-  protoOf(Companion_7).get_End_18ju7i_k$ = function () {
+  protoOf(Companion_9).get_End_18ju7i_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'end';
   };
-  var Companion_instance_7;
-  function Companion_getInstance_8() {
-    if (Companion_instance_7 == null)
-      new Companion_7();
-    return Companion_instance_7;
+  var Companion_instance_9;
+  function Companion_getInstance_10() {
+    if (Companion_instance_9 == null)
+      new Companion_9();
+    return Companion_instance_9;
   }
   function StepPosition() {
+  }
+  function FlexDirection_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function AlignSelf_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function StepPosition_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function Companion_10() {
+    Companion_instance_10 = this;
+  }
+  protoOf(Companion_10).get_Normal_22avww_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'normal';
+  };
+  protoOf(Companion_10).get_Reverse_o1nacn_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'reverse';
+  };
+  protoOf(Companion_10).get_Alternate_idby5t_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'alternate';
+  };
+  protoOf(Companion_10).get_AlternateReverse_i0aiof_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'alternate-reverse';
+  };
+  protoOf(Companion_10).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_10).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_10).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
+  };
+  var Companion_instance_10;
+  function Companion_getInstance_11() {
+    if (Companion_instance_10 == null)
+      new Companion_10();
+    return Companion_instance_10;
+  }
+  function AnimationDirection() {
+  }
+  function Companion_11() {
+    Companion_instance_11 = this;
+  }
+  protoOf(Companion_11).get_None_wo6tgh_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'none';
+  };
+  protoOf(Companion_11).get_Forwards_mqp421_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'forwards';
+  };
+  protoOf(Companion_11).get_Backwards_6xoxjt_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'backwards';
+  };
+  protoOf(Companion_11).get_Both_wnz5re_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'both';
+  };
+  var Companion_instance_11;
+  function Companion_getInstance_12() {
+    if (Companion_instance_11 == null)
+      new Companion_11();
+    return Companion_instance_11;
+  }
+  function AnimationFillMode() {
   }
   function AnimationDirection_0(value) {
     // Inline function 'kotlin.js.unsafeCast' call
@@ -2363,409 +2737,50 @@
     // Inline function 'kotlin.js.asDynamic' call
     return value;
   }
-  function StepPosition_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
+  function Companion_12() {
+    Companion_instance_12 = this;
   }
-  function Companion_8() {
-    Companion_instance_8 = this;
-  }
-  protoOf(Companion_8).get_Running_gl64p6_k$ = function () {
+  protoOf(Companion_12).get_Running_gl64p6_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'running';
   };
-  protoOf(Companion_8).get_Paused_2sr1w7_k$ = function () {
+  protoOf(Companion_12).get_Paused_2sr1w7_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'Paused';
   };
-  protoOf(Companion_8).get_Backwards_6xoxjt_k$ = function () {
+  protoOf(Companion_12).get_Backwards_6xoxjt_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'backwards';
   };
-  protoOf(Companion_8).get_Both_wnz5re_k$ = function () {
+  protoOf(Companion_12).get_Both_wnz5re_k$ = function () {
     // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'both';
   };
-  protoOf(Companion_8).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
-  };
-  protoOf(Companion_8).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
-  };
-  protoOf(Companion_8).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
-  };
-  var Companion_instance_8;
-  function Companion_getInstance_9() {
-    if (Companion_instance_8 == null)
-      new Companion_8();
-    return Companion_instance_8;
-  }
-  function AnimationPlayState() {
-  }
-  function get_value(_this__u8e3s4) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return _this__u8e3s4;
-  }
-  function AnimationPlayState_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function Companion_9() {
-    Companion_instance_9 = this;
-  }
-  protoOf(Companion_9).get_Normal_22avww_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'normal';
-  };
-  protoOf(Companion_9).get_Stretch_2brthg_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'stretch';
-  };
-  protoOf(Companion_9).get_Center_3arb0i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'center';
-  };
-  protoOf(Companion_9).get_Start_ih4i6x_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'start';
-  };
-  protoOf(Companion_9).get_End_18ju7i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'end';
-  };
-  protoOf(Companion_9).get_FlexStart_cfavq8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-start';
-  };
-  protoOf(Companion_9).get_FlexEnd_fz7iu1_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-end';
-  };
-  protoOf(Companion_9).get_Baseline_bu5gku_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'baseline';
-  };
-  protoOf(Companion_9).get_SafeCenter_caps7p_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'safe center';
-  };
-  protoOf(Companion_9).get_UnsafeCenter_h98ef8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unsafe center';
-  };
-  protoOf(Companion_9).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
-  };
-  protoOf(Companion_9).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
-  };
-  protoOf(Companion_9).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
-  };
-  var Companion_instance_9;
-  function Companion_getInstance_10() {
-    if (Companion_instance_9 == null)
-      new Companion_9();
-    return Companion_instance_9;
-  }
-  function AlignItems() {
-  }
-  function Companion_10() {
-    Companion_instance_10 = this;
-  }
-  protoOf(Companion_10).get_Auto_wnyn88_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'auto';
-  };
-  protoOf(Companion_10).get_Normal_22avww_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'normal';
-  };
-  protoOf(Companion_10).get_Center_3arb0i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'center';
-  };
-  protoOf(Companion_10).get_Start_ih4i6x_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'start';
-  };
-  protoOf(Companion_10).get_End_18ju7i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'end';
-  };
-  protoOf(Companion_10).get_SelfStart_di8gbx_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'self-start';
-  };
-  protoOf(Companion_10).get_SelfEnd_9ir8ka_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'self-end';
-  };
-  protoOf(Companion_10).get_FlexStart_cfavq8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-start';
-  };
-  protoOf(Companion_10).get_FlexEnd_fz7iu1_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-end';
-  };
-  protoOf(Companion_10).get_Baseline_bu5gku_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'baseline';
-  };
-  protoOf(Companion_10).get_Stretch_2brthg_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'stretch';
-  };
-  protoOf(Companion_10).get_SafeCenter_caps7p_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'safe center';
-  };
-  protoOf(Companion_10).get_UnsafeCenter_h98ef8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unsafe center';
-  };
-  protoOf(Companion_10).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
-  };
-  protoOf(Companion_10).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
-  };
-  protoOf(Companion_10).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
-  };
-  var Companion_instance_10;
-  function Companion_getInstance_11() {
-    if (Companion_instance_10 == null)
-      new Companion_10();
-    return Companion_instance_10;
-  }
-  function AlignSelf() {
-  }
-  function Companion_11() {
-    Companion_instance_11 = this;
-  }
-  protoOf(Companion_11).get_Row_18jkj3_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'row';
-  };
-  protoOf(Companion_11).get_RowReverse_d0ukpd_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'row-reverse';
-  };
-  protoOf(Companion_11).get_Column_35am4h_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'column';
-  };
-  protoOf(Companion_11).get_ColumnReverse_rkbov1_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'column-reverse';
-  };
-  var Companion_instance_11;
-  function Companion_getInstance_12() {
-    if (Companion_instance_11 == null)
-      new Companion_11();
-    return Companion_instance_11;
-  }
-  function FlexDirection() {
-  }
-  function Companion_12() {
-    Companion_instance_12 = this;
-  }
-  protoOf(Companion_12).get_Center_3arb0i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'center';
-  };
-  protoOf(Companion_12).get_Start_ih4i6x_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'start';
-  };
-  protoOf(Companion_12).get_End_18ju7i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'end';
-  };
-  protoOf(Companion_12).get_FlexStart_cfavq8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-start';
-  };
-  protoOf(Companion_12).get_FlexEnd_fz7iu1_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-end';
-  };
-  protoOf(Companion_12).get_Left_wo5bw0_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'left';
-  };
-  protoOf(Companion_12).get_Right_igdsyb_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'right';
-  };
-  protoOf(Companion_12).get_Normal_22avww_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'normal';
-  };
-  protoOf(Companion_12).get_SpaceBetween_5p3wqd_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'space-between';
-  };
-  protoOf(Companion_12).get_SpaceAround_1tvu22_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'space-around';
-  };
-  protoOf(Companion_12).get_SpaceEvenly_3s2yx0_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'space-evenly';
-  };
-  protoOf(Companion_12).get_Stretch_2brthg_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'stretch';
-  };
   protoOf(Companion_12).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'inherit';
   };
   protoOf(Companion_12).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'initial';
   };
   protoOf(Companion_12).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'unset';
-  };
-  protoOf(Companion_12).get_SafeCenter_caps7p_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'safe center';
-  };
-  protoOf(Companion_12).get_UnsafeCenter_h98ef8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unsafe center';
   };
   var Companion_instance_12;
   function Companion_getInstance_13() {
@@ -2773,24 +2788,9 @@
       new Companion_12();
     return Companion_instance_12;
   }
-  function JustifyContent() {
+  function AnimationPlayState() {
   }
-  function AlignItems_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function AlignSelf_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function FlexDirection_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function JustifyContent_0(value) {
+  function AnimationPlayState_0(value) {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return value;
@@ -3571,6 +3571,8 @@
     StyleScopeBuilder.call(this);
     this.$stable_2 = 0;
   }
+  function CSSUnitTime() {
+  }
   function CSSUnitLength() {
   }
   function percent() {
@@ -3815,13 +3817,7 @@
   }
   function CSSUnit() {
   }
-  function get_cssRem(_this__u8e3s4) {
-    var tmp = numberToDouble(_this__u8e3s4);
-    // Inline function 'org.jetbrains.compose.web.css.Companion.rem' call
-    Companion_getInstance_14();
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return new CSSUnitValueTyped(tmp, 'rem');
+  function CSSUnitAngle() {
   }
   function get_px(_this__u8e3s4) {
     var tmp = numberToDouble(_this__u8e3s4);
@@ -3831,9 +3827,15 @@
     // Inline function 'kotlin.js.asDynamic' call
     return new CSSUnitValueTyped(tmp, 'px');
   }
-  function CSSUnitTime() {
-  }
   function CSSUnitLengthOrPercentage() {
+  }
+  function get_cssRem(_this__u8e3s4) {
+    var tmp = numberToDouble(_this__u8e3s4);
+    // Inline function 'org.jetbrains.compose.web.css.Companion.rem' call
+    Companion_getInstance_14();
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return new CSSUnitValueTyped(tmp, 'rem');
   }
   function get_percent(_this__u8e3s4) {
     var tmp = numberToDouble(_this__u8e3s4);
@@ -3843,14 +3845,6 @@
     // Inline function 'kotlin.js.asDynamic' call
     return new CSSUnitValueTyped(tmp, '%');
   }
-  function get_fr(_this__u8e3s4) {
-    var tmp = numberToDouble(_this__u8e3s4);
-    // Inline function 'org.jetbrains.compose.web.css.Companion.fr' call
-    Companion_getInstance_14();
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return new CSSUnitValueTyped(tmp, 'fr');
-  }
   function get_ms(_this__u8e3s4) {
     var tmp = numberToDouble(_this__u8e3s4);
     // Inline function 'org.jetbrains.compose.web.css.Companion.ms' call
@@ -3859,33 +3853,15 @@
     // Inline function 'kotlin.js.asDynamic' call
     return new CSSUnitValueTyped(tmp, 'ms');
   }
-  function get_vh(_this__u8e3s4) {
+  function get_fr(_this__u8e3s4) {
     var tmp = numberToDouble(_this__u8e3s4);
-    // Inline function 'org.jetbrains.compose.web.css.Companion.vh' call
+    // Inline function 'org.jetbrains.compose.web.css.Companion.fr' call
     Companion_getInstance_14();
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return new CSSUnitValueTyped(tmp, 'vh');
-  }
-  function get_em(_this__u8e3s4) {
-    var tmp = numberToDouble(_this__u8e3s4);
-    // Inline function 'org.jetbrains.compose.web.css.Companion.em' call
-    Companion_getInstance_14();
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return new CSSUnitValueTyped(tmp, 'em');
+    return new CSSUnitValueTyped(tmp, 'fr');
   }
   function CSSUnitPercentage() {
-  }
-  function CSSUnitRel() {
-  }
-  function CSSUnitAbs() {
-  }
-  function CSSUnitAngle() {
-  }
-  function CSSUnitFrequency() {
-  }
-  function CSSUnitResolution() {
   }
   function CSSUnitFlex() {
   }
@@ -3937,6 +3913,14 @@
       return false;
     return true;
   };
+  function CSSUnitRel() {
+  }
+  function CSSUnitAbs() {
+  }
+  function CSSUnitFrequency() {
+  }
+  function CSSUnitResolution() {
+  }
   function get_deg(_this__u8e3s4) {
     var tmp = numberToDouble(_this__u8e3s4);
     // Inline function 'org.jetbrains.compose.web.css.Companion.deg' call
@@ -3944,6 +3928,22 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return new CSSUnitValueTyped(tmp, 'deg');
+  }
+  function get_vh(_this__u8e3s4) {
+    var tmp = numberToDouble(_this__u8e3s4);
+    // Inline function 'org.jetbrains.compose.web.css.Companion.vh' call
+    Companion_getInstance_14();
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return new CSSUnitValueTyped(tmp, 'vh');
+  }
+  function get_em(_this__u8e3s4) {
+    var tmp = numberToDouble(_this__u8e3s4);
+    // Inline function 'org.jetbrains.compose.web.css.Companion.em' call
+    Companion_getInstance_14();
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return new CSSUnitValueTyped(tmp, 'em');
   }
   function get_$stableprop_36() {
     return 0;
@@ -6699,10 +6699,6 @@
       return $factory();
     };
   }
-  function ElementScope() {
-  }
-  function DomEffectScope() {
-  }
   function get_$stableprop_61() {
     return 8;
   }
@@ -6724,6 +6720,8 @@
   protoOf(ElementScopeImpl).get_scopeElement_61kop2_k$ = function (_this__u8e3s4) {
     return this.get_element_q8gf71_k$();
   };
+  function ElementScope() {
+  }
   function _set_nextDisposableDomEffectKey__ral2d4($this, _set____db54di) {
     $this.nextDisposableDomEffectKey_1 = _set____db54di;
   }
@@ -6811,6 +6809,8 @@
     }
     $composer_0.endReplaceableGroup_ern0ak_k$();
   };
+  function DomEffectScope() {
+  }
   function DomDisposableEffectHolder(elementScope) {
     this.elementScope_1 = elementScope;
     this.onDispose_1 = null;
@@ -7203,105 +7203,6 @@
     return Style_0;
   }
   var Style_0;
-  function Companion_16() {
-    Companion_instance_16 = this;
-    var tmp = this;
-    // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp.buildersCache_1 = LinkedHashMap_init_$Create$();
-  }
-  protoOf(Companion_16).get_buildersCache_c71wch_k$ = function () {
-    return this.buildersCache_1;
-  };
-  protoOf(Companion_16).createBuilder_cjmhhk_k$ = function (tagName) {
-    // Inline function 'kotlin.text.lowercase' call
-    // Inline function 'kotlin.js.asDynamic' call
-    var tagLowercase = tagName.toLowerCase();
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.collections.getOrPut' call
-    var this_0 = this.buildersCache_1;
-    var value = this_0.get_wei43m_k$(tagLowercase);
-    var tmp;
-    if (value == null) {
-      // Inline function 'org.jetbrains.compose.web.dom.Companion.createBuilder.<anonymous>' call
-      var answer = new ElementBuilderImplementation(tagLowercase);
-      this_0.put_4fpzoq_k$(tagLowercase, answer);
-      tmp = answer;
-    } else {
-      tmp = value;
-    }
-    // Inline function 'kotlin.js.asDynamic' call
-    return tmp;
-  };
-  var Companion_instance_16;
-  function Companion_getInstance_17() {
-    if (Companion_instance_16 == null)
-      new Companion_16();
-    return Companion_instance_16;
-  }
-  function ElementBuilder() {
-  }
-  function _get_tagName__m9buy4($this) {
-    return $this.tagName_1;
-  }
-  function _get_el__ndc0ck($this) {
-    // Inline function 'kotlin.getValue' call
-    var this_0 = $this.el$delegate_1;
-    el$factory();
-    return this_0.get_value_j01efc_k$();
-  }
-  function ElementBuilderImplementation$el$delegate$lambda(this$0) {
-    return function () {
-      return document.createElement(this$0.tagName_1);
-    };
-  }
-  function ElementBuilderImplementation(tagName) {
-    this.tagName_1 = tagName;
-    var tmp = this;
-    tmp.el$delegate_1 = lazy(ElementBuilderImplementation$el$delegate$lambda(this));
-  }
-  protoOf(ElementBuilderImplementation).create_md4cuc_k$ = function () {
-    var tmp = _get_el__ndc0ck(this).cloneNode();
-    return tmp instanceof Element ? tmp : THROW_CCE();
-  };
-  function Div_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1121267064);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(1121267064, $dirty, -1, 'org.jetbrains.compose.web.dom.Div (Elements.kt:495)');
-      }
-      TagElement(get_Div(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Div$lambda(attrs_0, content_0, $changed, $default));
-    }
-  }
   function Text_0(value, $composer, $changed) {
     _init_properties_Elements_kt__eyv5nt();
     var $composer_0 = $composer;
@@ -7364,6 +7265,271 @@
     else {
       tmp0_safe_receiver.updateScope_t8jcf_k$(Text$lambda_2(value, $changed));
     }
+  }
+  function Div_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1121267064);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(1121267064, $dirty, -1, 'org.jetbrains.compose.web.dom.Div (Elements.kt:495)');
+      }
+      TagElement(get_Div(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Div$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Companion_16() {
+    Companion_instance_16 = this;
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableMapOf' call
+    tmp.buildersCache_1 = LinkedHashMap_init_$Create$();
+  }
+  protoOf(Companion_16).get_buildersCache_c71wch_k$ = function () {
+    return this.buildersCache_1;
+  };
+  protoOf(Companion_16).createBuilder_cjmhhk_k$ = function (tagName) {
+    // Inline function 'kotlin.text.lowercase' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tagLowercase = tagName.toLowerCase();
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.collections.getOrPut' call
+    var this_0 = this.buildersCache_1;
+    var value = this_0.get_wei43m_k$(tagLowercase);
+    var tmp;
+    if (value == null) {
+      // Inline function 'org.jetbrains.compose.web.dom.Companion.createBuilder.<anonymous>' call
+      var answer = new ElementBuilderImplementation(tagLowercase);
+      this_0.put_4fpzoq_k$(tagLowercase, answer);
+      tmp = answer;
+    } else {
+      tmp = value;
+    }
+    // Inline function 'kotlin.js.asDynamic' call
+    return tmp;
+  };
+  var Companion_instance_16;
+  function Companion_getInstance_17() {
+    if (Companion_instance_16 == null)
+      new Companion_16();
+    return Companion_instance_16;
+  }
+  function ElementBuilder() {
+  }
+  function A_0(href, attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var href_0 = {_v: href};
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1386364631);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(href_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 32 : 16);
+    if (!(($default & 4) === 0))
+      $dirty = $dirty | 384;
+    else if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 256 : 128);
+    if (!(($dirty & 731) === 146) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        href_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 4) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(1386364631, $dirty, -1, 'org.jetbrains.compose.web.dom.A (Elements.kt:508)');
+      }
+      var tmp = get_A();
+      $composer_0.startReplaceableGroup_ip860b_k$(-671461516);
+      // Inline function 'androidx.compose.runtime.cache' call
+      var this_0 = $composer_0;
+      var invalid = !!($composer_0.changed_ga7h3f_k$(href_0._v) | $composer_0.changedInstance_s1wkiy_k$(attrs_0._v));
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = this_0.rememberedValue_4dg93v_k$();
+      var tmp_0;
+      if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
+        // Inline function 'org.jetbrains.compose.web.dom.A.<anonymous>' call
+        var value = A$lambda(href_0, attrs_0);
+        this_0.updateRememberedValue_l1wh71_k$(value);
+        tmp_0 = value;
+      } else {
+        tmp_0 = it;
+      }
+      var tmp_1 = tmp_0;
+      var tmpCache = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
+      TagElement(tmp, tmpCache, content_0._v, $composer_0, 896 & $dirty);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(A$lambda_0(href_0, attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Style_1(applyAttrs, cssRules, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var applyAttrs_0 = {_v: applyAttrs};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(244974285);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(applyAttrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(cssRules) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        applyAttrs_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(244974285, $dirty, -1, 'org.jetbrains.compose.web.dom.Style (Elements.kt:1002)');
+      }
+      var tmp = get_Style();
+      $composer_0.startReplaceableGroup_ip860b_k$(-671448825);
+      // Inline function 'androidx.compose.runtime.cache' call
+      var this_0 = $composer_0;
+      var invalid = $composer_0.changedInstance_s1wkiy_k$(applyAttrs_0._v);
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = this_0.rememberedValue_4dg93v_k$();
+      var tmp_0;
+      if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
+        // Inline function 'org.jetbrains.compose.web.dom.Style.<anonymous>' call
+        var value = Style$lambda(applyAttrs_0);
+        this_0.updateRememberedValue_l1wh71_k$(value);
+        tmp_0 = value;
+      } else {
+        tmp_0 = it;
+      }
+      var tmp_1 = tmp_0;
+      var tmpCache = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
+      // Inline function 'kotlin.run' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'org.jetbrains.compose.web.dom.Style.<anonymous>' call
+      var tmp_2 = $composer_0;
+      var dispatchReceiver = composableLambda(tmp_2, 962227798, true, Style$lambda_0(cssRules));
+      // Inline function 'androidx.compose.runtime.remember' call
+      var $composer_1 = $composer_0;
+      $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
+      sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      var invalid_0 = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it_0 = $composer_1.rememberedValue_4dg93v_k$();
+      var tmp_3;
+      if (invalid_0 ? true : it_0 === Companion_getInstance().get_Empty_i9b85g_k$()) {
+        // Inline function 'org.jetbrains.compose.web.dom.Style.<anonymous>.<anonymous>' call
+        var value_0 = ComposableLambda$invoke$ref(dispatchReceiver);
+        $composer_1.updateRememberedValue_l1wh71_k$(value_0);
+        tmp_3 = value_0;
+      } else {
+        tmp_3 = it_0;
+      }
+      var tmp_4 = tmp_3;
+      var tmp0 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
+      TagElement(tmp, tmpCache, tmp0, $composer_0, 384);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Style$lambda_1(applyAttrs_0, cssRules, $changed, $default));
+    }
+  }
+  function _get_tagName__m9buy4($this) {
+    return $this.tagName_1;
+  }
+  function _get_el__ndc0ck($this) {
+    // Inline function 'kotlin.getValue' call
+    var this_0 = $this.el$delegate_1;
+    el$factory();
+    return this_0.get_value_j01efc_k$();
+  }
+  function ElementBuilderImplementation$el$delegate$lambda(this$0) {
+    return function () {
+      return document.createElement(this$0.tagName_1);
+    };
+  }
+  function ElementBuilderImplementation(tagName) {
+    this.tagName_1 = tagName;
+    var tmp = this;
+    tmp.el$delegate_1 = lazy(ElementBuilderImplementation$el$delegate$lambda(this));
+  }
+  protoOf(ElementBuilderImplementation).create_md4cuc_k$ = function () {
+    var tmp = _get_el__ndc0ck(this).cloneNode();
+    return tmp instanceof Element ? tmp : THROW_CCE();
+  };
+  function clearCSSRules(_this__u8e3s4) {
+    _init_properties_Elements_kt__eyv5nt();
+    // Inline function 'kotlin.repeat' call
+    var times = _this__u8e3s4.cssRules.length;
+    // Inline function 'kotlin.contracts.contract' call
+    var inductionVariable = 0;
+    if (inductionVariable < times)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        // Inline function 'org.jetbrains.compose.web.dom.clearCSSRules.<anonymous>' call
+        _this__u8e3s4.deleteRule(0);
+      }
+       while (inductionVariable < times);
   }
   function Code_0(attrs, content, $composer, $changed, $default) {
     _init_properties_Elements_kt__eyv5nt();
@@ -7959,178 +8125,6 @@
       tmp0_safe_receiver.updateScope_t8jcf_k$(Img$lambda_0(src, alt_0, attrs_0, $changed, $default));
     }
   }
-  function A_0(href, attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var href_0 = {_v: href};
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1386364631);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(href_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 32 : 16);
-    if (!(($default & 4) === 0))
-      $dirty = $dirty | 384;
-    else if (($changed & 896) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 256 : 128);
-    if (!(($dirty & 731) === 146) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        href_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 4) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(1386364631, $dirty, -1, 'org.jetbrains.compose.web.dom.A (Elements.kt:508)');
-      }
-      var tmp = get_A();
-      $composer_0.startReplaceableGroup_ip860b_k$(-671461516);
-      // Inline function 'androidx.compose.runtime.cache' call
-      var this_0 = $composer_0;
-      var invalid = !!($composer_0.changed_ga7h3f_k$(href_0._v) | $composer_0.changedInstance_s1wkiy_k$(attrs_0._v));
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.rememberedValue_4dg93v_k$();
-      var tmp_0;
-      if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
-        // Inline function 'org.jetbrains.compose.web.dom.A.<anonymous>' call
-        var value = A$lambda(href_0, attrs_0);
-        this_0.updateRememberedValue_l1wh71_k$(value);
-        tmp_0 = value;
-      } else {
-        tmp_0 = it;
-      }
-      var tmp_1 = tmp_0;
-      var tmpCache = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_0.endReplaceableGroup_ern0ak_k$();
-      TagElement(tmp, tmpCache, content_0._v, $composer_0, 896 & $dirty);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(A$lambda_0(href_0, attrs_0, content_0, $changed, $default));
-    }
-  }
-  function Style_1(applyAttrs, cssRules, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var applyAttrs_0 = {_v: applyAttrs};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(244974285);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(applyAttrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(cssRules) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        applyAttrs_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(244974285, $dirty, -1, 'org.jetbrains.compose.web.dom.Style (Elements.kt:1002)');
-      }
-      var tmp = get_Style();
-      $composer_0.startReplaceableGroup_ip860b_k$(-671448825);
-      // Inline function 'androidx.compose.runtime.cache' call
-      var this_0 = $composer_0;
-      var invalid = $composer_0.changedInstance_s1wkiy_k$(applyAttrs_0._v);
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.rememberedValue_4dg93v_k$();
-      var tmp_0;
-      if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
-        // Inline function 'org.jetbrains.compose.web.dom.Style.<anonymous>' call
-        var value = Style$lambda(applyAttrs_0);
-        this_0.updateRememberedValue_l1wh71_k$(value);
-        tmp_0 = value;
-      } else {
-        tmp_0 = it;
-      }
-      var tmp_1 = tmp_0;
-      var tmpCache = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_0.endReplaceableGroup_ern0ak_k$();
-      // Inline function 'kotlin.run' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'org.jetbrains.compose.web.dom.Style.<anonymous>' call
-      var tmp_2 = $composer_0;
-      var dispatchReceiver = composableLambda(tmp_2, 962227798, true, Style$lambda_0(cssRules));
-      // Inline function 'androidx.compose.runtime.remember' call
-      var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
-      sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
-      // Inline function 'androidx.compose.runtime.cache' call
-      var invalid_0 = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = $composer_1.rememberedValue_4dg93v_k$();
-      var tmp_3;
-      if (invalid_0 ? true : it_0 === Companion_getInstance().get_Empty_i9b85g_k$()) {
-        // Inline function 'org.jetbrains.compose.web.dom.Style.<anonymous>.<anonymous>' call
-        var value_0 = ComposableLambda$invoke$ref(dispatchReceiver);
-        $composer_1.updateRememberedValue_l1wh71_k$(value_0);
-        tmp_3 = value_0;
-      } else {
-        tmp_3 = it_0;
-      }
-      var tmp_4 = tmp_3;
-      var tmp0 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
-      $composer_1.endReplaceableGroup_ern0ak_k$();
-      TagElement(tmp, tmpCache, tmp0, $composer_0, 384);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Style$lambda_1(applyAttrs_0, cssRules, $changed, $default));
-    }
-  }
-  function clearCSSRules(_this__u8e3s4) {
-    _init_properties_Elements_kt__eyv5nt();
-    // Inline function 'kotlin.repeat' call
-    var times = _this__u8e3s4.cssRules.length;
-    // Inline function 'kotlin.contracts.contract' call
-    var inductionVariable = 0;
-    if (inductionVariable < times)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'org.jetbrains.compose.web.dom.clearCSSRules.<anonymous>' call
-        _this__u8e3s4.deleteRule(0);
-      }
-       while (inductionVariable < times);
-  }
-  function Div$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      Div_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
   function Text$lambda() {
     _init_properties_Elements_kt__eyv5nt();
     return new DomNodeWrapper(document.createTextNode(''));
@@ -8149,6 +8143,106 @@
   function Text$lambda_2($value, $$changed) {
     return function ($composer, $force) {
       Text_0($value, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
+  }
+  function Div$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Div_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
+  function A$lambda($href, $attrs) {
+    return function ($this$TagElement) {
+      var tmp;
+      if (!($href._v == null)) {
+        href($this$TagElement, $href._v);
+        tmp = Unit_getInstance();
+      }
+      var tmp_0;
+      if (!($attrs._v == null)) {
+        tmp_0 = $attrs._v($this$TagElement);
+      }
+      return Unit_getInstance();
+    };
+  }
+  function A$lambda_0($href, $attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      A_0($href._v, $attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
+  function Style$lambda($applyAttrs) {
+    return function ($this$TagElement) {
+      var tmp;
+      if (!($applyAttrs._v == null)) {
+        tmp = $applyAttrs._v($this$TagElement);
+      }
+      return Unit_getInstance();
+    };
+  }
+  function _no_name_provided__qut3iv($cssStylesheet) {
+    this.$cssStylesheet_1 = $cssStylesheet;
+  }
+  protoOf(_no_name_provided__qut3iv).dispose_3nnxhr_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.dom.Style.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
+    var tmp0_safe_receiver = this.$cssStylesheet_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      clearCSSRules(tmp0_safe_receiver);
+    }
+  };
+  function Style$lambda$lambda($this_TagElement, $cssRules) {
+    return function ($this$DisposableEffect) {
+      var tmp = $this_TagElement.get_scopeElement_61kop2_k$($this$DisposableEffect).sheet;
+      var cssStylesheet = tmp instanceof CSSStyleSheet ? tmp : null;
+      if (cssStylesheet == null)
+        null;
+      else {
+        setCSSRules(cssStylesheet, $cssRules);
+      }
+      // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
+      return new _no_name_provided__qut3iv(cssStylesheet);
+    };
+  }
+  function Style$lambda_0($cssRules) {
+    return function ($this$TagElement, $composer, $changed) {
+      var $composer_0 = $composer;
+      var $dirty = $changed;
+      var tmp;
+      if (($changed & 14) === 0) {
+        $dirty = $dirty | ($composer_0.changed_ga7h3f_k$($this$TagElement) ? 4 : 2);
+        tmp = Unit_getInstance();
+      }
+      var tmp_0;
+      if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+        if (isTraceInProgress()) {
+          traceEventStart(962227798, $dirty, -1, 'org.jetbrains.compose.web.dom.Style.<anonymous> (Elements.kt:1011)');
+        }
+        var tmp_1 = $cssRules.get_size_woubt6_k$();
+        DisposableEffect_0($cssRules, tmp_1, Style$lambda$lambda($this$TagElement, $cssRules), $composer_0, 0);
+        var tmp_2;
+        if (isTraceInProgress()) {
+          traceEventEnd();
+          tmp_2 = Unit_getInstance();
+        }
+        tmp_0 = tmp_2;
+      } else {
+        $composer_0.skipToGroupEnd_lh3zi2_k$();
+        tmp_0 = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function ComposableLambda$invoke$ref($boundThis) {
+    return function (p0, p1, p2) {
+      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
+    };
+  }
+  function Style$lambda_1($applyAttrs, $cssRules, $$changed, $$default) {
+    return function ($composer, $force) {
+      Style_1($applyAttrs._v, $cssRules, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_getInstance();
     };
   }
@@ -8249,100 +8343,6 @@
   function Img$lambda_0($src, $alt, $attrs, $$changed, $$default) {
     return function ($composer, $force) {
       Img_0($src, $alt._v, $attrs._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function A$lambda($href, $attrs) {
-    return function ($this$TagElement) {
-      var tmp;
-      if (!($href._v == null)) {
-        href($this$TagElement, $href._v);
-        tmp = Unit_getInstance();
-      }
-      var tmp_0;
-      if (!($attrs._v == null)) {
-        tmp_0 = $attrs._v($this$TagElement);
-      }
-      return Unit_getInstance();
-    };
-  }
-  function A$lambda_0($href, $attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      A_0($href._v, $attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Style$lambda($applyAttrs) {
-    return function ($this$TagElement) {
-      var tmp;
-      if (!($applyAttrs._v == null)) {
-        tmp = $applyAttrs._v($this$TagElement);
-      }
-      return Unit_getInstance();
-    };
-  }
-  function _no_name_provided__qut3iv($cssStylesheet) {
-    this.$cssStylesheet_1 = $cssStylesheet;
-  }
-  protoOf(_no_name_provided__qut3iv).dispose_3nnxhr_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.dom.Style.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-    var tmp0_safe_receiver = this.$cssStylesheet_1;
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      clearCSSRules(tmp0_safe_receiver);
-    }
-  };
-  function Style$lambda$lambda($this_TagElement, $cssRules) {
-    return function ($this$DisposableEffect) {
-      var tmp = $this_TagElement.get_scopeElement_61kop2_k$($this$DisposableEffect).sheet;
-      var cssStylesheet = tmp instanceof CSSStyleSheet ? tmp : null;
-      if (cssStylesheet == null)
-        null;
-      else {
-        setCSSRules(cssStylesheet, $cssRules);
-      }
-      // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      return new _no_name_provided__qut3iv(cssStylesheet);
-    };
-  }
-  function Style$lambda_0($cssRules) {
-    return function ($this$TagElement, $composer, $changed) {
-      var $composer_0 = $composer;
-      var $dirty = $changed;
-      var tmp;
-      if (($changed & 14) === 0) {
-        $dirty = $dirty | ($composer_0.changed_ga7h3f_k$($this$TagElement) ? 4 : 2);
-        tmp = Unit_getInstance();
-      }
-      var tmp_0;
-      if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-        if (isTraceInProgress()) {
-          traceEventStart(962227798, $dirty, -1, 'org.jetbrains.compose.web.dom.Style.<anonymous> (Elements.kt:1011)');
-        }
-        var tmp_1 = $cssRules.get_size_woubt6_k$();
-        DisposableEffect_0($cssRules, tmp_1, Style$lambda$lambda($this$TagElement, $cssRules), $composer_0, 0);
-        var tmp_2;
-        if (isTraceInProgress()) {
-          traceEventEnd();
-          tmp_2 = Unit_getInstance();
-        }
-        tmp_0 = tmp_2;
-      } else {
-        $composer_0.skipToGroupEnd_lh3zi2_k$();
-        tmp_0 = Unit_getInstance();
-      }
-      return Unit_getInstance();
-    };
-  }
-  function ComposableLambda$invoke$ref($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function Style$lambda_1($applyAttrs, $cssRules, $$changed, $$default) {
-    return function ($composer, $force) {
-      Style_1($applyAttrs._v, $cssRules, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_getInstance();
     };
   }
@@ -8784,10 +8784,33 @@
       normalizedKeys = mapOf([to('Esc', 'Escape'), to('Spacebar', ' '), to('Left', 'ArrowLeft'), to('Up', 'ArrowUp'), to('Right', 'ArrowRight'), to('Down', 'ArrowDown'), to('Del', 'Delete'), to('Apps', 'ContextMenu'), to('Menu', 'ContextMenu'), to('Scroll', 'ScrollLock'), to('MozPrintableKey', 'Unidentified')]);
     }
   }
+  function get_$stableprop_69() {
+    return 0;
+  }
+  function SyntheticWheelEvent(nativeEvent) {
+    SyntheticMouseEvent.call(this, nativeEvent);
+    this.deltaX_1 = nativeEvent.deltaX;
+    this.deltaY_1 = nativeEvent.deltaY;
+    this.deltaZ_1 = nativeEvent.deltaZ;
+    this.deltaMode_1 = nativeEvent.deltaMode;
+    this.$stable_3 = 0;
+  }
+  protoOf(SyntheticWheelEvent).get_deltaX_cboxwp_k$ = function () {
+    return this.deltaX_1;
+  };
+  protoOf(SyntheticWheelEvent).get_deltaY_cboxwq_k$ = function () {
+    return this.deltaY_1;
+  };
+  protoOf(SyntheticWheelEvent).get_deltaZ_cboxwr_k$ = function () {
+    return this.deltaZ_1;
+  };
+  protoOf(SyntheticWheelEvent).get_deltaMode_9dro42_k$ = function () {
+    return this.deltaMode_1;
+  };
   function _get_mouseEvent__o09ya2($this) {
     return $this.mouseEvent_1;
   }
-  function get_$stableprop_69() {
+  function get_$stableprop_70() {
     return 0;
   }
   function SyntheticMouseEvent(nativeEvent) {
@@ -8885,29 +8908,6 @@
   };
   protoOf(SyntheticMouseEvent).getModifierState_g49qi_k$ = function (keyArg) {
     return this.mouseEvent_1.getModifierState(keyArg);
-  };
-  function get_$stableprop_70() {
-    return 0;
-  }
-  function SyntheticWheelEvent(nativeEvent) {
-    SyntheticMouseEvent.call(this, nativeEvent);
-    this.deltaX_1 = nativeEvent.deltaX;
-    this.deltaY_1 = nativeEvent.deltaY;
-    this.deltaZ_1 = nativeEvent.deltaZ;
-    this.deltaMode_1 = nativeEvent.deltaMode;
-    this.$stable_3 = 0;
-  }
-  protoOf(SyntheticWheelEvent).get_deltaX_cboxwp_k$ = function () {
-    return this.deltaX_1;
-  };
-  protoOf(SyntheticWheelEvent).get_deltaY_cboxwq_k$ = function () {
-    return this.deltaY_1;
-  };
-  protoOf(SyntheticWheelEvent).get_deltaZ_cboxwr_k$ = function () {
-    return this.deltaZ_1;
-  };
-  protoOf(SyntheticWheelEvent).get_deltaMode_9dro42_k$ = function () {
-    return this.deltaMode_1;
   };
   function get_$stableprop_71() {
     return 0;
@@ -9407,19 +9407,19 @@
   _.$_$ = _.$_$ || {};
   _.$_$.a = ButtonType_Button_getInstance;
   _.$_$.b = StyleSheet_init_$Init$;
-  _.$_$.c = Companion_getInstance_10;
-  _.$_$.d = Companion_getInstance_11;
-  _.$_$.e = Companion_getInstance_6;
-  _.$_$.f = Companion_getInstance_7;
-  _.$_$.g = Companion_getInstance_5;
+  _.$_$.c = Companion_getInstance_3;
+  _.$_$.d = Companion_getInstance_9;
+  _.$_$.e = Companion_getInstance_11;
+  _.$_$.f = Companion_getInstance_12;
+  _.$_$.g = Companion_getInstance_7;
   _.$_$.h = From_getInstance;
   _.$_$.i = To_getInstance;
   _.$_$.j = Color_getInstance;
-  _.$_$.k = Companion_getInstance_2;
-  _.$_$.l = Companion_getInstance_12;
-  _.$_$.m = Companion_getInstance_13;
-  _.$_$.n = Companion_getInstance_3;
-  _.$_$.o = Companion_getInstance_4;
+  _.$_$.k = Companion_getInstance_6;
+  _.$_$.l = Companion_getInstance_8;
+  _.$_$.m = Companion_getInstance_4;
+  _.$_$.n = Companion_getInstance_5;
+  _.$_$.o = Companion_getInstance_2;
   _.$_$.p = classes;
   _.$_$.q = contentEditable;
   _.$_$.r = dir;

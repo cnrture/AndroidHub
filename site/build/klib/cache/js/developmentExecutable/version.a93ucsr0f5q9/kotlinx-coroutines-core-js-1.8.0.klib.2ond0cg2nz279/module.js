@@ -162,8 +162,8 @@
   setMetadataFor(ChildJob, 'ChildJob', interfaceMeta, VOID, [Job], VOID, VOID, VOID, [0]);
   setMetadataFor(ParentJob, 'ParentJob', interfaceMeta, VOID, [Job], VOID, VOID, VOID, [0]);
   setMetadataFor(JobSupport, 'JobSupport', classMeta, VOID, [Job, ChildJob, ParentJob], VOID, VOID, VOID, [0]);
-  setMetadataFor(CoroutineScope, 'CoroutineScope', interfaceMeta);
-  setMetadataFor(AbstractCoroutine, 'AbstractCoroutine', classMeta, JobSupport, [JobSupport, Job, Continuation, CoroutineScope], VOID, VOID, VOID, [0]);
+  setMetadataFor(CoroutineScope_0, 'CoroutineScope', interfaceMeta);
+  setMetadataFor(AbstractCoroutine, 'AbstractCoroutine', classMeta, JobSupport, [JobSupport, Job, Continuation, CoroutineScope_0], VOID, VOID, VOID, [0]);
   setMetadataFor(InternalCoroutinesApi, 'InternalCoroutinesApi', classMeta, VOID, [Annotation]);
   setMetadataFor(ExperimentalCoroutinesApi, 'ExperimentalCoroutinesApi', classMeta, VOID, [Annotation]);
   setMetadataFor(DelicateCoroutinesApi, 'DelicateCoroutinesApi', classMeta, VOID, [Annotation]);
@@ -351,7 +351,7 @@
   setMetadataFor($receiveOrNullCOROUTINE$6, '$receiveOrNullCOROUTINE$6', classMeta, CoroutineImpl);
   setMetadataFor(ChannelCoroutine, 'ChannelCoroutine', classMeta, AbstractCoroutine, [AbstractCoroutine, Channel], VOID, VOID, VOID, [0, 1]);
   setMetadataFor(ConflatedBufferedChannel, 'ConflatedBufferedChannel', classMeta, BufferedChannel, VOID, VOID, VOID, VOID, [1, 0]);
-  setMetadataFor(ProducerScope, 'ProducerScope', interfaceMeta, VOID, [CoroutineScope, SendChannel], VOID, VOID, VOID, [1]);
+  setMetadataFor(ProducerScope, 'ProducerScope', interfaceMeta, VOID, [CoroutineScope_0, SendChannel], VOID, VOID, VOID, [1]);
   setMetadataFor(ProducerCoroutine, 'ProducerCoroutine', classMeta, ChannelCoroutine, [ChannelCoroutine, ProducerScope], VOID, VOID, VOID, [0, 1]);
   setMetadataFor($emitAllImplCOROUTINE$7, '$emitAllImplCOROUTINE$7', classMeta, CoroutineImpl);
   setMetadataFor(Flow, 'Flow', interfaceMeta, VOID, VOID, VOID, VOID, VOID, [1]);
@@ -430,7 +430,7 @@
   setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(LockFreeTaskQueueCore, 'LockFreeTaskQueueCore', classMeta);
   setMetadataFor(UndeliveredElementException, 'UndeliveredElementException', classMeta, RuntimeException);
-  setMetadataFor(ContextScope, 'ContextScope', classMeta, VOID, [CoroutineScope]);
+  setMetadataFor(ContextScope, 'ContextScope', classMeta, VOID, [CoroutineScope_0]);
   setMetadataFor(Symbol, 'Symbol', classMeta);
   setMetadataFor(_no_name_provided__qut3iv_6, VOID, classMeta, VOID, [Runnable]);
   setMetadataFor(OnTimeout, 'OnTimeout', classMeta);
@@ -1955,10 +1955,10 @@
     addSuppressed(this_0, originalException);
     return this_0;
   }
-  function CoroutineScope() {
-  }
-  function CoroutineScope_0(context) {
+  function CoroutineScope(context) {
     return new ContextScope(!(context.get_y2st91_k$(Key_getInstance_2()) == null) ? context : context.plus_s13ygv_k$(Job_0()));
+  }
+  function CoroutineScope_0() {
   }
   function coroutineScope(block, $completion) {
     // Inline function 'kotlin.contracts.contract' call
@@ -11440,7 +11440,7 @@
     return tmp.doResume_5yljmg_k$();
   };
   protoOf(ChannelFlow$collect$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope_0) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChannelFlow$collect$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -11479,7 +11479,7 @@
     return i;
   };
   protoOf(ChannelFlow$collect$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope_0) : false) ? value : THROW_CCE(), completion);
   };
   function ChannelFlow$collect$slambda_0($collector, this$0, resultContinuation) {
     var i = new ChannelFlow$collect$slambda($collector, this$0, resultContinuation);
@@ -11718,7 +11718,7 @@
     return tmp.doResume_5yljmg_k$();
   };
   protoOf(ChannelLimitedFlowMerge$collectTo$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope_0) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChannelLimitedFlowMerge$collectTo$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -11757,7 +11757,7 @@
     return i;
   };
   protoOf(ChannelLimitedFlowMerge$collectTo$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope_0) : false) ? value : THROW_CCE(), completion);
   };
   function ChannelLimitedFlowMerge$collectTo$slambda_0($flow, $collector, resultContinuation) {
     var i = new ChannelLimitedFlowMerge$collectTo$slambda($flow, $collector, resultContinuation);
@@ -12650,7 +12650,7 @@
     return tmp.doResume_5yljmg_k$();
   };
   protoOf(launchIn$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope_0) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(launchIn$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -12689,7 +12689,7 @@
     return i;
   };
   protoOf(launchIn$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope_0) : false) ? value : THROW_CCE(), completion);
   };
   function launchIn$slambda_0($this_launchIn, resultContinuation) {
     var i = new launchIn$slambda($this_launchIn, resultContinuation);
@@ -17010,8 +17010,8 @@
   _.$_$.n = CancellableContinuationImpl;
   _.$_$.o = CompletableDeferred_0;
   _.$_$.p = CoroutineDispatcher;
-  _.$_$.q = CoroutineScope_0;
-  _.$_$.r = CoroutineScope;
+  _.$_$.q = CoroutineScope;
+  _.$_$.r = CoroutineScope_0;
   _.$_$.s = Job_0;
   _.$_$.t = get_MODE_CANCELLABLE;
   _.$_$.u = SupervisorJob;

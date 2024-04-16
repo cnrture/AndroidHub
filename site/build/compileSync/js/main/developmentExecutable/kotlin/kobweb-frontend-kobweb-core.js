@@ -58,13 +58,13 @@
   var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.r1;
   var getValue = kotlin_kotlin.$_$.a7;
   var getStringHashCode = kotlin_kotlin.$_$.na;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
   var substringAfterLast = kotlin_kotlin.$_$.od;
   var plus = kotlin_kotlin.$_$.u7;
   var equals = kotlin_kotlin.$_$.ha;
   var hashCode = kotlin_kotlin.$_$.oa;
   var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
   var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
   var interfaceMeta = kotlin_kotlin.$_$.qa;
   var A = kotlin_org_jetbrains_compose_html_html_core.$_$.n5;
@@ -504,6 +504,33 @@
     return PageContextLocal;
   }
   var PageContextLocal;
+  function rememberPageContext($composer, $changed) {
+    _init_properties_PageContext_kt__u2hiem();
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_ip860b_k$(979146567);
+    if (isTraceInProgress()) {
+      traceEventStart(979146567, $changed, -1, 'com.varabyte.kobweb.core.rememberPageContext (PageContext.kt:165)');
+    }
+    // Inline function 'androidx.compose.runtime.CompositionLocal.current' call
+    var this_0 = get_PageContextLocal();
+    var $composer_1 = $composer_0;
+    sourceInformationMarkerStart($composer_1, 2023513938, 'CC:CompositionLocal.kt#9igjgp');
+    var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
+    sourceInformationMarkerEnd($composer_1);
+    var tmp;
+    if (tmp0 == null) {
+      var message = 'PageContext is only valid within a @Page composable';
+      throw IllegalStateException_init_$Create$(toString(message));
+    } else {
+      tmp = tmp0;
+    }
+    var tmp0_0 = tmp;
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    return tmp0_0;
+  }
   function _get_route__bsf68o($this) {
     return $this.route_1;
   }
@@ -632,33 +659,6 @@
     }
     return tmp;
   };
-  function rememberPageContext($composer, $changed) {
-    _init_properties_PageContext_kt__u2hiem();
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_ip860b_k$(979146567);
-    if (isTraceInProgress()) {
-      traceEventStart(979146567, $changed, -1, 'com.varabyte.kobweb.core.rememberPageContext (PageContext.kt:165)');
-    }
-    // Inline function 'androidx.compose.runtime.CompositionLocal.current' call
-    var this_0 = get_PageContextLocal();
-    var $composer_1 = $composer_0;
-    sourceInformationMarkerStart($composer_1, 2023513938, 'CC:CompositionLocal.kt#9igjgp');
-    var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
-    sourceInformationMarkerEnd($composer_1);
-    var tmp;
-    if (tmp0 == null) {
-      var message = 'PageContext is only valid within a @Page composable';
-      throw IllegalStateException_init_$Create$(toString(message));
-    } else {
-      tmp = tmp0;
-    }
-    var tmp0_0 = tmp;
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    return tmp0_0;
-  }
   function PageContextLocal$lambda() {
     _init_properties_PageContext_kt__u2hiem();
     return null;

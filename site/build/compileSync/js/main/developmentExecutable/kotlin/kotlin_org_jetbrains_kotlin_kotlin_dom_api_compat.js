@@ -148,12 +148,6 @@
     // Inline function 'kotlin.js.asDynamic' call
     return _this__u8e3s4[index];
   }
-  function EventSourceInit(withCredentials) {
-    withCredentials = withCredentials === VOID ? false : withCredentials;
-    var o = {};
-    o['withCredentials'] = withCredentials;
-    return o;
-  }
   function get_1(_this__u8e3s4, index) {
     // Inline function 'kotlin.js.asDynamic' call
     return _this__u8e3s4[index];
@@ -174,6 +168,12 @@
     o['attributeOldValue'] = attributeOldValue;
     o['characterDataOldValue'] = characterDataOldValue;
     o['attributeFilter'] = attributeFilter;
+    return o;
+  }
+  function EventSourceInit(withCredentials) {
+    withCredentials = withCredentials === VOID ? false : withCredentials;
+    var o = {};
+    o['withCredentials'] = withCredentials;
     return o;
   }
   function RequestInit(method, headers, body, referrer, referrerPolicy, mode, credentials, cache, redirect, integrity, keepalive, window_0) {

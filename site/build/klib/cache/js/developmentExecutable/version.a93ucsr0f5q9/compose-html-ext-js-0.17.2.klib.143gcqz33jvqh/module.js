@@ -118,15 +118,15 @@
   var invoke_1 = kotlin_org_jetbrains_compose_html_html_core.$_$.x2;
   var StyleScope = kotlin_org_jetbrains_compose_html_html_core.$_$.f3;
   var copyToArray = kotlin_kotlin.$_$.p6;
-  var gridTemplateColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.l4;
-  var gridTemplateRows = kotlin_org_jetbrains_compose_html_html_core.$_$.m4;
   var Annotation = kotlin_kotlin.$_$.he;
-  var lastOrNull = kotlin_kotlin.$_$.j7;
-  var get_lastIndex = kotlin_kotlin.$_$.h7;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
   var display = kotlin_org_jetbrains_compose_html_html_core.$_$.v3;
+  var gridTemplateColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.l4;
+  var gridTemplateRows = kotlin_org_jetbrains_compose_html_html_core.$_$.m4;
   var gridAutoColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.f4;
   var gridAutoRows = kotlin_org_jetbrains_compose_html_html_core.$_$.g4;
+  var lastOrNull = kotlin_kotlin.$_$.j7;
+  var get_lastIndex = kotlin_kotlin.$_$.h7;
   var noWhenBranchMatchedException = kotlin_kotlin.$_$.rf;
   var listOf = kotlin_kotlin.$_$.m7;
   var emptyList = kotlin_kotlin.$_$.r6;
@@ -203,6 +203,8 @@
   setMetadataFor(Companion_5, 'Companion', objectMeta);
   setMetadataFor(FontWeight, 'FontWeight', classMeta);
   setMetadataFor(GridTrackBuilderInRepeat, 'GridTrackBuilderInRepeat', classMeta);
+  setMetadataFor(GridBuilderInAuto, 'GridBuilderInAuto', classMeta);
+  setMetadataFor(GridBuilder, 'GridBuilder', classMeta, GridBuilderInAuto, VOID, GridBuilder);
   setMetadataFor(GridTrackBuilder, 'GridTrackBuilder', classMeta, GridTrackBuilderInRepeat, VOID, GridTrackBuilder);
   setMetadataFor(GridEntry, 'GridEntry', classMeta);
   setMetadataFor(TrackSize, 'TrackSize', classMeta, GridEntry);
@@ -219,8 +221,6 @@
   setMetadataFor(Auto, 'Auto', classMeta, Repeat);
   setMetadataFor(LineNames, 'LineNames', classMeta, GridEntry);
   setMetadataFor(Companion_7, 'Companion', objectMeta);
-  setMetadataFor(GridBuilderInAuto, 'GridBuilderInAuto', classMeta);
-  setMetadataFor(GridBuilder, 'GridBuilder', classMeta, GridBuilderInAuto, VOID, GridBuilder);
   setMetadataFor(GridDslMarker, 'GridDslMarker', classMeta, VOID, [Annotation]);
   setMetadataFor(Companion_8, 'Companion', objectMeta);
   setMetadataFor(VerticalAlign, 'VerticalAlign', classMeta);
@@ -237,18 +237,18 @@
   setMetadataFor(OverflowWrap, 'OverflowWrap', classMeta);
   setMetadataFor(Companion_14, 'Companion', objectMeta);
   setMetadataFor(ScrollBehavior, 'ScrollBehavior', classMeta);
-  setMetadataFor(StyleVariable, 'StyleVariable', classMeta, VOID, [CSSVariable]);
-  setMetadataFor(PropertyValue, 'PropertyValue', classMeta, StyleVariable);
-  setMetadataFor(NumberValue, 'NumberValue', classMeta, StyleVariable);
-  setMetadataFor(StringValue, 'StringValue', classMeta, StyleVariable);
-  setMetadataFor(StyleVariablePropertyProvider, 'StyleVariablePropertyProvider', classMeta);
   setMetadataFor(StyleVariableNumberProvider, 'StyleVariableNumberProvider', classMeta);
+  setMetadataFor(StyleVariable_1, 'StyleVariable', classMeta, VOID, [CSSVariable]);
+  setMetadataFor(PropertyValue, 'PropertyValue', classMeta, StyleVariable_1);
+  setMetadataFor(NumberValue, 'NumberValue', classMeta, StyleVariable_1);
+  setMetadataFor(StringValue, 'StringValue', classMeta, StyleVariable_1);
+  setMetadataFor(StyleVariablePropertyProvider, 'StyleVariablePropertyProvider', classMeta);
   setMetadataFor(Companion_15, 'Companion', objectMeta);
-  setMetadataFor(UserSelect, 'UserSelect', classMeta);
-  setMetadataFor(Companion_16, 'Companion', objectMeta);
-  setMetadataFor(WhiteSpace, 'WhiteSpace', classMeta);
-  setMetadataFor(Companion_17, 'Companion', objectMeta);
   setMetadataFor(TextAlign, 'TextAlign', classMeta);
+  setMetadataFor(Companion_16, 'Companion', objectMeta);
+  setMetadataFor(UserSelect, 'UserSelect', classMeta);
+  setMetadataFor(Companion_17, 'Companion', objectMeta);
+  setMetadataFor(WhiteSpace, 'WhiteSpace', classMeta);
   setMetadataFor(Companion_18, 'Companion', objectMeta);
   setMetadataFor(TextDecorationLine, 'TextDecorationLine', classMeta);
   setMetadataFor(CSSTextShadow, 'CSSTextShadow', classMeta);
@@ -1961,29 +1961,13 @@
   function fontWeight(_this__u8e3s4, weight) {
     _this__u8e3s4.property_npxg1h_k$('font-weight', weight);
   }
-  function GridTrackBuilder() {
-    GridTrackBuilderInRepeat.call(this);
+  function grid(_this__u8e3s4, block) {
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    this_0.buildInto_bd9p49_k$(_this__u8e3s4);
   }
-  protoOf(GridTrackBuilder).repeat_n9ti1_k$ = function (count, block) {
-    // Inline function 'kotlin.collections.toTypedArray' call
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    var this_1 = this_0.tracks_1;
-    var repeatTracks = copyToArray(this_1);
-    this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().repeat_1fs2oe_k$(count, repeatTracks.slice()));
-  };
-  protoOf(GridTrackBuilder).repeat_x8tdgb_k$ = function (type, block) {
-    // Inline function 'kotlin.collections.toTypedArray' call
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    var this_1 = this_0.tracks_1;
-    var repeatTracks = copyToArray(this_1);
-    this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().repeat_lz16g6_k$(type, repeatTracks.slice()));
-  };
   function GridTrackBuilderInRepeat() {
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
@@ -2042,6 +2026,40 @@
   };
   protoOf(GridTrackBuilderInRepeat).lineNames_ii8gtg_k$ = function (names) {
     this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().lineNames_npjmfo_k$(names.slice()));
+  };
+  function GridBuilder() {
+    GridBuilderInAuto.call(this);
+  }
+  protoOf(GridBuilder).auto_9oitg_k$ = function (block) {
+    var tmp = this;
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    tmp.autoBuilder_1 = this_0;
+  };
+  function GridTrackBuilder() {
+    GridTrackBuilderInRepeat.call(this);
+  }
+  protoOf(GridTrackBuilder).repeat_n9ti1_k$ = function (count, block) {
+    // Inline function 'kotlin.collections.toTypedArray' call
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    var this_1 = this_0.tracks_1;
+    var repeatTracks = copyToArray(this_1);
+    this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().repeat_1fs2oe_k$(count, repeatTracks.slice()));
+  };
+  protoOf(GridTrackBuilder).repeat_x8tdgb_k$ = function (type, block) {
+    // Inline function 'kotlin.collections.toTypedArray' call
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    var this_1 = this_0.tracks_1;
+    var repeatTracks = copyToArray(this_1);
+    this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().repeat_lz16g6_k$(type, repeatTracks.slice()));
   };
   function FitContent(value) {
     TrackSize.call(this, 'fit-content(' + value + ')');
@@ -2200,38 +2218,6 @@
   protoOf(GridEntry).toString = function () {
     return this.value_1;
   };
-  function GridBuilder() {
-    GridBuilderInAuto.call(this);
-  }
-  protoOf(GridBuilder).auto_9oitg_k$ = function (block) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    tmp.autoBuilder_1 = this_0;
-  };
-  function gridTemplateColumns_0(_this__u8e3s4, block) {
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    gridTemplateColumns(_this__u8e3s4, toTrackListString_0(this_0.tracks_1));
-  }
-  function gridTemplateRows_0(_this__u8e3s4, block) {
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    gridTemplateRows(_this__u8e3s4, toTrackListString_0(this_0.tracks_1));
-  }
-  function grid(_this__u8e3s4, block) {
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    this_0.buildInto_bd9p49_k$(_this__u8e3s4);
-  }
   function GridDslMarker() {
   }
   protoOf(GridDslMarker).equals = function (other) {
@@ -2246,41 +2232,6 @@
   protoOf(GridDslMarker).toString = function () {
     return '@com.varabyte.kobweb.compose.css.GridDslMarker()';
   };
-  function toTrackListString(_this__u8e3s4) {
-    validate(_this__u8e3s4);
-    // Inline function 'kotlin.collections.fold' call
-    // Inline function 'kotlin.collections.mutableListOf' call
-    var accumulator = ArrayList_init_$Create$();
-    var inductionVariable = 0;
-    var last = _this__u8e3s4.length;
-    while (inductionVariable < last) {
-      var element = _this__u8e3s4[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.compose.css.toTrackListString.<anonymous>' call
-      var acc = accumulator;
-      var prev = lastOrNull(acc);
-      var tmp;
-      if (prev instanceof LineNames) {
-        tmp = element instanceof LineNames;
-      } else {
-        tmp = false;
-      }
-      if (tmp) {
-        var tmp_0 = get_lastIndex(acc);
-        // Inline function 'kotlin.collections.plus' call
-        var this_0 = prev.names_1;
-        var elements = element.names_1;
-        // Inline function 'kotlin.js.asDynamic' call
-        var tmp$ret$2 = this_0.concat(elements);
-        acc.set_82063s_k$(tmp_0, new LineNames(tmp$ret$2.slice()));
-      } else {
-        acc.add_utx5q5_k$(element);
-      }
-      accumulator = acc;
-    }
-    var tmp$ret$4 = accumulator;
-    return joinToString(tmp$ret$4, ' ');
-  }
   function GridBuilderInAuto() {
     this.columns_1 = null;
     this.rows_1 = null;
@@ -2370,6 +2321,41 @@
       }
     }
   };
+  function toTrackListString(_this__u8e3s4) {
+    validate(_this__u8e3s4);
+    // Inline function 'kotlin.collections.fold' call
+    // Inline function 'kotlin.collections.mutableListOf' call
+    var accumulator = ArrayList_init_$Create$();
+    var inductionVariable = 0;
+    var last = _this__u8e3s4.length;
+    while (inductionVariable < last) {
+      var element = _this__u8e3s4[inductionVariable];
+      inductionVariable = inductionVariable + 1 | 0;
+      // Inline function 'com.varabyte.kobweb.compose.css.toTrackListString.<anonymous>' call
+      var acc = accumulator;
+      var prev = lastOrNull(acc);
+      var tmp;
+      if (prev instanceof LineNames) {
+        tmp = element instanceof LineNames;
+      } else {
+        tmp = false;
+      }
+      if (tmp) {
+        var tmp_0 = get_lastIndex(acc);
+        // Inline function 'kotlin.collections.plus' call
+        var this_0 = prev.names_1;
+        var elements = element.names_1;
+        // Inline function 'kotlin.js.asDynamic' call
+        var tmp$ret$2 = this_0.concat(elements);
+        acc.set_82063s_k$(tmp_0, new LineNames(tmp$ret$2.slice()));
+      } else {
+        acc.add_utx5q5_k$(element);
+      }
+      accumulator = acc;
+    }
+    var tmp$ret$4 = accumulator;
+    return joinToString(tmp$ret$4, ' ');
+  }
   function toTrackListString_0(_this__u8e3s4) {
     // Inline function 'kotlin.collections.toTypedArray' call
     var tmp$ret$0 = copyToArray(_this__u8e3s4);
@@ -2498,6 +2484,20 @@
         }
       }
     }
+  }
+  function gridTemplateColumns_0(_this__u8e3s4, block) {
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    gridTemplateColumns(_this__u8e3s4, toTrackListString_0(this_0.tracks_1));
+  }
+  function gridTemplateRows_0(_this__u8e3s4, block) {
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    gridTemplateRows(_this__u8e3s4, toTrackListString_0(this_0.tracks_1));
   }
   function _get_value__a43j40_7($this) {
     return $this.value_1;
@@ -2974,6 +2974,15 @@
   protoOf(Overflow).toString = function () {
     return this.value_1;
   };
+  function overflowX(_this__u8e3s4, overflowX) {
+    _this__u8e3s4.property_npxg1h_k$('overflow-x', overflowX);
+  }
+  function overflowY(_this__u8e3s4, overflowY) {
+    _this__u8e3s4.property_npxg1h_k$('overflow-y', overflowY);
+  }
+  function overflow(_this__u8e3s4, overflow) {
+    _this__u8e3s4.property_npxg1h_k$('overflow', overflow);
+  }
   function _get_value__a43j40_12($this) {
     return $this.value_1;
   }
@@ -3014,15 +3023,6 @@
   protoOf(OverflowWrap).toString = function () {
     return this.value_1;
   };
-  function overflowX(_this__u8e3s4, overflowX) {
-    _this__u8e3s4.property_npxg1h_k$('overflow-x', overflowX);
-  }
-  function overflowY(_this__u8e3s4, overflowY) {
-    _this__u8e3s4.property_npxg1h_k$('overflow-y', overflowY);
-  }
-  function overflow(_this__u8e3s4, overflow) {
-    _this__u8e3s4.property_npxg1h_k$('overflow', overflow);
-  }
   function overflowWrap(_this__u8e3s4, overflowWrap) {
     _this__u8e3s4.property_npxg1h_k$('overflow-wrap', overflowWrap);
   }
@@ -3066,13 +3066,35 @@
   function scrollBehavior(_this__u8e3s4, scrollBehavior) {
     _this__u8e3s4.property_npxg1h_k$('scroll-behavior', scrollBehavior);
   }
+  function StyleVariable(defaultFallback, prefix) {
+    defaultFallback = defaultFallback === VOID ? null : defaultFallback;
+    prefix = prefix === VOID ? null : prefix;
+    return new StyleVariablePropertyProvider(defaultFallback, prefix);
+  }
+  function StyleVariable_0(prefix) {
+    prefix = prefix === VOID ? null : prefix;
+    return new StyleVariablePropertyProvider(null, prefix);
+  }
   function _get_defaultFallback__wdjuwe($this) {
+    return $this.defaultFallback_1;
+  }
+  function _get_prefix__wiwq7t($this) {
+    return $this.prefix_1;
+  }
+  function StyleVariableNumberProvider(defaultFallback, prefix) {
+    this.defaultFallback_1 = defaultFallback;
+    this.prefix_1 = prefix;
+  }
+  protoOf(StyleVariableNumberProvider).getValue_fbnwi2_k$ = function (thisRef, property) {
+    return new NumberValue(provideVariableName(thisRef, property), this.defaultFallback_1, this.prefix_1);
+  };
+  function _get_defaultFallback__wdjuwe_0($this) {
     return $this.defaultFallback_1;
   }
   function PropertyValue(name, defaultFallback, prefix) {
     defaultFallback = defaultFallback === VOID ? null : defaultFallback;
     prefix = prefix === VOID ? null : prefix;
-    StyleVariable.call(this, name, defaultFallback, prefix);
+    StyleVariable_1.call(this, name, defaultFallback, prefix);
   }
   protoOf(PropertyValue).value_wk9s6x_k$ = function (fallback) {
     return this.variableValue_ovgee5_k$(fallback);
@@ -3095,7 +3117,7 @@
       // Inline function 'kotlin.js.asDynamic' call
       tmp = defaultFallback;
     }
-    StyleVariable.call(this, name, tmp, prefix);
+    StyleVariable_1.call(this, name, tmp, prefix);
   }
   protoOf(NumberValue).value_9bth3g_k$ = function (fallback) {
     // Inline function 'kotlin.js.unsafeCast' call
@@ -3132,7 +3154,7 @@
       // Inline function 'kotlin.js.asDynamic' call
       tmp = defaultFallback;
     }
-    StyleVariable.call(this, name, tmp, prefix);
+    StyleVariable_1.call(this, name, tmp, prefix);
   }
   protoOf(StringValue).value_lu1i8m_k$ = function (fallback) {
     // Inline function 'kotlin.js.unsafeCast' call
@@ -3154,7 +3176,7 @@
   protoOf(StringValue).value_66g3ir_k$ = function (fallback) {
     return this.value_lu1i8m_k$((fallback == null ? true : typeof fallback === 'string') ? fallback : THROW_CCE());
   };
-  function StyleVariable(name, defaultFallback, prefix) {
+  function StyleVariable_1(name, defaultFallback, prefix) {
     this.defaultFallback_1 = defaultFallback;
     var tmp = this;
     var tmp_0;
@@ -3169,14 +3191,14 @@
     var tmp1_elvis_lhs = tmp_0;
     tmp.name_1 = tmp1_elvis_lhs == null ? name : tmp1_elvis_lhs;
   }
-  protoOf(StyleVariable).get_name_woqyms_k$ = function () {
+  protoOf(StyleVariable_1).get_name_woqyms_k$ = function () {
     return this.name_1;
   };
-  protoOf(StyleVariable).value$default_36t2hw_k$ = function (fallback, $super) {
+  protoOf(StyleVariable_1).value$default_36t2hw_k$ = function (fallback, $super) {
     fallback = fallback === VOID ? null : fallback;
     return $super === VOID ? this.value_66g3ir_k$(fallback) : $super.value_66g3ir_k$.call(this, fallback);
   };
-  protoOf(StyleVariable).variableValue_ovgee5_k$ = function (fallback) {
+  protoOf(StyleVariable_1).variableValue_ovgee5_k$ = function (fallback) {
     // Inline function 'org.jetbrains.compose.web.css.CSSVariableValue' call
     var tmp1_safe_receiver = fallback == null ? this.defaultFallback_1 : fallback;
     var tmp;
@@ -3197,10 +3219,15 @@
     // Inline function 'kotlin.js.asDynamic' call
     return 'var(--' + this.name_1 + (tmp2_elvis_lhs == null ? '' : tmp2_elvis_lhs) + ')';
   };
-  function _get_defaultFallback__wdjuwe_0($this) {
+  function StyleVariable_2(defaultFallback, prefix) {
+    defaultFallback = defaultFallback === VOID ? null : defaultFallback;
+    prefix = prefix === VOID ? null : prefix;
+    return new StyleVariableNumberProvider(defaultFallback, prefix);
+  }
+  function _get_defaultFallback__wdjuwe_1($this) {
     return $this.defaultFallback_1;
   }
-  function _get_prefix__wiwq7t($this) {
+  function _get_prefix__wiwq7t_0($this) {
     return $this.prefix_1;
   }
   function StyleVariablePropertyProvider(defaultFallback, prefix) {
@@ -3210,40 +3237,10 @@
   protoOf(StyleVariablePropertyProvider).getValue_fbnwi2_k$ = function (thisRef, property) {
     return new PropertyValue(provideVariableName(thisRef, property), this.defaultFallback_1, this.prefix_1);
   };
-  function StyleVariable_0(prefix) {
-    prefix = prefix === VOID ? null : prefix;
-    return new StyleVariablePropertyProvider(null, prefix);
-  }
-  function StyleVariable_1(defaultFallback, prefix) {
-    defaultFallback = defaultFallback === VOID ? null : defaultFallback;
-    prefix = prefix === VOID ? null : prefix;
-    return new StyleVariablePropertyProvider(defaultFallback, prefix);
-  }
-  function StyleVariable_2(defaultFallback, prefix) {
-    defaultFallback = defaultFallback === VOID ? null : defaultFallback;
-    prefix = prefix === VOID ? null : prefix;
-    return new StyleVariablePropertyProvider(defaultFallback, prefix);
-  }
-  function _get_defaultFallback__wdjuwe_1($this) {
-    return $this.defaultFallback_1;
-  }
-  function _get_prefix__wiwq7t_0($this) {
-    return $this.prefix_1;
-  }
-  function StyleVariableNumberProvider(defaultFallback, prefix) {
-    this.defaultFallback_1 = defaultFallback;
-    this.prefix_1 = prefix;
-  }
-  protoOf(StyleVariableNumberProvider).getValue_fbnwi2_k$ = function (thisRef, property) {
-    return new NumberValue(provideVariableName(thisRef, property), this.defaultFallback_1, this.prefix_1);
-  };
   function StyleVariable_3(defaultFallback, prefix) {
     defaultFallback = defaultFallback === VOID ? null : defaultFallback;
     prefix = prefix === VOID ? null : prefix;
-    return new StyleVariableNumberProvider(defaultFallback, prefix);
-  }
-  function setVariable(_this__u8e3s4, variable, value) {
-    _this__u8e3s4.property_npxg1h_k$('--' + variable.name_1, value);
+    return new StyleVariablePropertyProvider(defaultFallback, prefix);
   }
   function provideVariableName(groupObject, property) {
     // Inline function 'kotlin.text.buildString' call
@@ -3259,38 +3256,50 @@
     this_0.append_22ad7x_k$(removeSuffix(removeSuffix(titleCamelCaseToKebabCase(property.callableName), '-var'), '-variable'));
     return this_0.toString();
   }
+  function setVariable(_this__u8e3s4, variable, value) {
+    _this__u8e3s4.property_npxg1h_k$('--' + variable.name_1, value);
+  }
   function _get_value__a43j40_14($this) {
     return $this.value_1;
   }
   function Companion_15() {
     Companion_instance_15 = this;
   }
-  protoOf(Companion_15).get_None_wo6tgh_k$ = function () {
-    return new UserSelect('none');
+  protoOf(Companion_15).get_Left_wo5bw0_k$ = function () {
+    return new TextAlign('left');
   };
-  protoOf(Companion_15).get_Auto_wnyn88_k$ = function () {
-    return new UserSelect('auto');
+  protoOf(Companion_15).get_Right_igdsyb_k$ = function () {
+    return new TextAlign('right');
   };
-  protoOf(Companion_15).get_Text_woag7q_k$ = function () {
-    return new UserSelect('text');
+  protoOf(Companion_15).get_Center_3arb0i_k$ = function () {
+    return new TextAlign('center');
   };
-  protoOf(Companion_15).get_Contain_qhyalx_k$ = function () {
-    return new UserSelect('contain');
+  protoOf(Companion_15).get_Justify_84qi6f_k$ = function () {
+    return new TextAlign('justify');
   };
-  protoOf(Companion_15).get_All_18jx7s_k$ = function () {
-    return new UserSelect('all');
+  protoOf(Companion_15).get_JustifyAll_vzjb16_k$ = function () {
+    return new TextAlign('justify-all');
+  };
+  protoOf(Companion_15).get_Start_ih4i6x_k$ = function () {
+    return new TextAlign('start');
+  };
+  protoOf(Companion_15).get_End_18ju7i_k$ = function () {
+    return new TextAlign('end');
+  };
+  protoOf(Companion_15).get_MatchParent_4236be_k$ = function () {
+    return new TextAlign('match-parent');
   };
   protoOf(Companion_15).get_Inherit_a1a9e6_k$ = function () {
-    return new UserSelect('inherit');
+    return new TextAlign('inherit');
   };
   protoOf(Companion_15).get_Initial_a0h2v9_k$ = function () {
-    return new UserSelect('initial');
+    return new TextAlign('initial');
   };
   protoOf(Companion_15).get_Revert_3t1tzh_k$ = function () {
-    return new UserSelect('revert');
+    return new TextAlign('revert');
   };
   protoOf(Companion_15).get_Unset_ii4mhs_k$ = function () {
-    return new UserSelect('unset');
+    return new TextAlign('unset');
   };
   var Companion_instance_15;
   function Companion_getInstance_18() {
@@ -3298,11 +3307,11 @@
       new Companion_15();
     return Companion_instance_15;
   }
-  function UserSelect(value) {
+  function TextAlign(value) {
     Companion_getInstance_18();
     this.value_1 = value;
   }
-  protoOf(UserSelect).toString = function () {
+  protoOf(TextAlign).toString = function () {
     return this.value_1;
   };
   function _get_value__a43j40_15($this) {
@@ -3311,35 +3320,32 @@
   function Companion_16() {
     Companion_instance_16 = this;
   }
-  protoOf(Companion_16).get_Normal_22avww_k$ = function () {
-    return new WhiteSpace('normal');
+  protoOf(Companion_16).get_None_wo6tgh_k$ = function () {
+    return new UserSelect('none');
   };
-  protoOf(Companion_16).get_NoWrap_21tqz8_k$ = function () {
-    return new WhiteSpace('nowrap');
+  protoOf(Companion_16).get_Auto_wnyn88_k$ = function () {
+    return new UserSelect('auto');
   };
-  protoOf(Companion_16).get_Pre_18jlye_k$ = function () {
-    return new WhiteSpace('pre');
+  protoOf(Companion_16).get_Text_woag7q_k$ = function () {
+    return new UserSelect('text');
   };
-  protoOf(Companion_16).get_PreWrap_nintz8_k$ = function () {
-    return new WhiteSpace('pre-wrap');
+  protoOf(Companion_16).get_Contain_qhyalx_k$ = function () {
+    return new UserSelect('contain');
   };
-  protoOf(Companion_16).get_PreLine_nigmr2_k$ = function () {
-    return new WhiteSpace('pre-line');
-  };
-  protoOf(Companion_16).get_BreakSpaces_6b23jx_k$ = function () {
-    return new WhiteSpace('break-spaces');
+  protoOf(Companion_16).get_All_18jx7s_k$ = function () {
+    return new UserSelect('all');
   };
   protoOf(Companion_16).get_Inherit_a1a9e6_k$ = function () {
-    return new WhiteSpace('inherit');
+    return new UserSelect('inherit');
   };
   protoOf(Companion_16).get_Initial_a0h2v9_k$ = function () {
-    return new WhiteSpace('initial');
+    return new UserSelect('initial');
   };
   protoOf(Companion_16).get_Revert_3t1tzh_k$ = function () {
-    return new WhiteSpace('revert');
+    return new UserSelect('revert');
   };
   protoOf(Companion_16).get_Unset_ii4mhs_k$ = function () {
-    return new WhiteSpace('unset');
+    return new UserSelect('unset');
   };
   var Companion_instance_16;
   function Companion_getInstance_19() {
@@ -3347,11 +3353,11 @@
       new Companion_16();
     return Companion_instance_16;
   }
-  function WhiteSpace(value) {
+  function UserSelect(value) {
     Companion_getInstance_19();
     this.value_1 = value;
   }
-  protoOf(WhiteSpace).toString = function () {
+  protoOf(UserSelect).toString = function () {
     return this.value_1;
   };
   function _get_value__a43j40_16($this) {
@@ -3360,41 +3366,35 @@
   function Companion_17() {
     Companion_instance_17 = this;
   }
-  protoOf(Companion_17).get_Left_wo5bw0_k$ = function () {
-    return new TextAlign('left');
+  protoOf(Companion_17).get_Normal_22avww_k$ = function () {
+    return new WhiteSpace('normal');
   };
-  protoOf(Companion_17).get_Right_igdsyb_k$ = function () {
-    return new TextAlign('right');
+  protoOf(Companion_17).get_NoWrap_21tqz8_k$ = function () {
+    return new WhiteSpace('nowrap');
   };
-  protoOf(Companion_17).get_Center_3arb0i_k$ = function () {
-    return new TextAlign('center');
+  protoOf(Companion_17).get_Pre_18jlye_k$ = function () {
+    return new WhiteSpace('pre');
   };
-  protoOf(Companion_17).get_Justify_84qi6f_k$ = function () {
-    return new TextAlign('justify');
+  protoOf(Companion_17).get_PreWrap_nintz8_k$ = function () {
+    return new WhiteSpace('pre-wrap');
   };
-  protoOf(Companion_17).get_JustifyAll_vzjb16_k$ = function () {
-    return new TextAlign('justify-all');
+  protoOf(Companion_17).get_PreLine_nigmr2_k$ = function () {
+    return new WhiteSpace('pre-line');
   };
-  protoOf(Companion_17).get_Start_ih4i6x_k$ = function () {
-    return new TextAlign('start');
-  };
-  protoOf(Companion_17).get_End_18ju7i_k$ = function () {
-    return new TextAlign('end');
-  };
-  protoOf(Companion_17).get_MatchParent_4236be_k$ = function () {
-    return new TextAlign('match-parent');
+  protoOf(Companion_17).get_BreakSpaces_6b23jx_k$ = function () {
+    return new WhiteSpace('break-spaces');
   };
   protoOf(Companion_17).get_Inherit_a1a9e6_k$ = function () {
-    return new TextAlign('inherit');
+    return new WhiteSpace('inherit');
   };
   protoOf(Companion_17).get_Initial_a0h2v9_k$ = function () {
-    return new TextAlign('initial');
+    return new WhiteSpace('initial');
   };
   protoOf(Companion_17).get_Revert_3t1tzh_k$ = function () {
-    return new TextAlign('revert');
+    return new WhiteSpace('revert');
   };
   protoOf(Companion_17).get_Unset_ii4mhs_k$ = function () {
-    return new TextAlign('unset');
+    return new WhiteSpace('unset');
   };
   var Companion_instance_17;
   function Companion_getInstance_20() {
@@ -3402,13 +3402,22 @@
       new Companion_17();
     return Companion_instance_17;
   }
-  function TextAlign(value) {
+  function WhiteSpace(value) {
     Companion_getInstance_20();
     this.value_1 = value;
   }
-  protoOf(TextAlign).toString = function () {
+  protoOf(WhiteSpace).toString = function () {
     return this.value_1;
   };
+  function userSelect(_this__u8e3s4, userSelect) {
+    _this__u8e3s4.property_npxg1h_k$('user-select', userSelect);
+  }
+  function whiteSpace(_this__u8e3s4, whiteSpace) {
+    _this__u8e3s4.property_npxg1h_k$('white-space', whiteSpace);
+  }
+  function textAlign(_this__u8e3s4, textAlign) {
+    _this__u8e3s4.property_npxg1h_k$('text-align', textAlign);
+  }
   function _get_value__a43j40_17($this) {
     return $this.value_1;
   }
@@ -3452,15 +3461,6 @@
   protoOf(TextDecorationLine).toString = function () {
     return this.value_1;
   };
-  function userSelect(_this__u8e3s4, userSelect) {
-    _this__u8e3s4.property_npxg1h_k$('user-select', userSelect);
-  }
-  function whiteSpace(_this__u8e3s4, whiteSpace) {
-    _this__u8e3s4.property_npxg1h_k$('white-space', whiteSpace);
-  }
-  function textAlign(_this__u8e3s4, textAlign) {
-    _this__u8e3s4.property_npxg1h_k$('text-align', textAlign);
-  }
   function textDecorationLine(_this__u8e3s4, textDecorationLines) {
     _this__u8e3s4.property_wcrait_k$('text-decoration-line', joinToString_0(textDecorationLines, ' '));
   }
@@ -6555,10 +6555,10 @@
   _.$_$.d = CSSAnimation;
   _.$_$.e = ComparableStyleScope;
   _.$_$.f = NumberValue;
-  _.$_$.g = StyleVariable_3;
-  _.$_$.h = StyleVariable_2;
+  _.$_$.g = StyleVariable_2;
+  _.$_$.h = StyleVariable;
   _.$_$.i = StyleVariable_0;
-  _.$_$.j = StyleVariable_1;
+  _.$_$.j = StyleVariable_3;
   _.$_$.k = animation;
   _.$_$.l = appearance;
   _.$_$.m = ariaDisabled;
@@ -6640,11 +6640,11 @@
   _.$_$.k3 = Companion_getInstance_15;
   _.$_$.l3 = Companion_getInstance_16;
   _.$_$.m3 = Companion_getInstance_17;
-  _.$_$.n3 = Companion_getInstance_20;
+  _.$_$.n3 = Companion_getInstance_18;
   _.$_$.o3 = Companion_getInstance_21;
-  _.$_$.p3 = Companion_getInstance_18;
+  _.$_$.p3 = Companion_getInstance_19;
   _.$_$.q3 = Companion_getInstance_11;
-  _.$_$.r3 = Companion_getInstance_19;
+  _.$_$.r3 = Companion_getInstance_20;
   _.$_$.s3 = Companion_getInstance_32;
   //endregion
   return _;

@@ -300,14 +300,14 @@
   setMetadataFor(Hiding, 'Hiding', classMeta, VOID, [Visible]);
   setMetadataFor(_no_name_provided__qut3iv, VOID, classMeta, VOID, [DisposableEffectResult]);
   setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [DisposableEffectResult]);
-  setMetadataFor(PopupVars, 'PopupVars', objectMeta);
-  setMetadataFor(PopupPlacement, 'PopupPlacement', classMeta, Enum);
   setMetadataFor(PopupPlacementStrategy, 'PopupPlacementStrategy', classMeta);
   setMetadataFor(PopupPlacementStrategy$Companion$of$1, VOID, classMeta, PopupPlacementStrategy);
   setMetadataFor(Position, 'Position', classMeta);
   setMetadataFor(PositionAndPlacement, 'PositionAndPlacement', classMeta);
   setMetadataFor(Companion_1, 'Companion', objectMeta);
+  setMetadataFor(PopupPlacement, 'PopupPlacement', classMeta, Enum);
   setMetadataFor(PopupScope, 'PopupScope', classMeta, VOID, [BoxScope]);
+  setMetadataFor(PopupVars, 'PopupVars', objectMeta);
   setMetadataFor(TooltipVars, 'TooltipVars', objectMeta);
   setMetadataFor(TransitionDurationVars, 'TransitionDurationVars', objectMeta);
   setMetadataFor(FontSizeVars, 'FontSizeVars', objectMeta);
@@ -5770,99 +5770,6 @@
     return PopupStyle$delegate.getValue_fbnwi2_k$(null, PopupStyle$factory());
   }
   var PopupStyle$delegate;
-  function PopupVars() {
-    PopupVars_instance = this;
-    var tmp = this;
-    var tmp0_defaultFallback = TransitionDurationVars_getInstance().get_Fast_wo1fb9_k$().value$default_36t2hw_k$();
-    tmp.TransitionDuration$delegate_1 = StyleVariable_1(tmp0_defaultFallback, 'silk');
-  }
-  protoOf(PopupVars).get_TransitionDuration_6zl6by_k$ = function () {
-    return this.TransitionDuration$delegate_1.getValue_fbnwi2_k$(this, TransitionDuration$factory_1());
-  };
-  var PopupVars_instance;
-  function PopupVars_getInstance() {
-    if (PopupVars_instance == null)
-      new PopupVars();
-    return PopupVars_instance;
-  }
-  var PopupPlacement_TopLeft_instance;
-  var PopupPlacement_Top_instance;
-  var PopupPlacement_TopRight_instance;
-  var PopupPlacement_LeftTop_instance;
-  var PopupPlacement_RightTop_instance;
-  var PopupPlacement_Left_instance;
-  var PopupPlacement_Right_instance;
-  var PopupPlacement_LeftBottom_instance;
-  var PopupPlacement_RightBottom_instance;
-  var PopupPlacement_BottomLeft_instance;
-  var PopupPlacement_Bottom_instance;
-  var PopupPlacement_BottomRight_instance;
-  function values_0() {
-    return [PopupPlacement_TopLeft_getInstance(), PopupPlacement_Top_getInstance(), PopupPlacement_TopRight_getInstance(), PopupPlacement_LeftTop_getInstance(), PopupPlacement_RightTop_getInstance(), PopupPlacement_Left_getInstance(), PopupPlacement_Right_getInstance(), PopupPlacement_LeftBottom_getInstance(), PopupPlacement_RightBottom_getInstance(), PopupPlacement_BottomLeft_getInstance(), PopupPlacement_Bottom_getInstance(), PopupPlacement_BottomRight_getInstance()];
-  }
-  function valueOf_0(value) {
-    switch (value) {
-      case 'TopLeft':
-        return PopupPlacement_TopLeft_getInstance();
-      case 'Top':
-        return PopupPlacement_Top_getInstance();
-      case 'TopRight':
-        return PopupPlacement_TopRight_getInstance();
-      case 'LeftTop':
-        return PopupPlacement_LeftTop_getInstance();
-      case 'RightTop':
-        return PopupPlacement_RightTop_getInstance();
-      case 'Left':
-        return PopupPlacement_Left_getInstance();
-      case 'Right':
-        return PopupPlacement_Right_getInstance();
-      case 'LeftBottom':
-        return PopupPlacement_LeftBottom_getInstance();
-      case 'RightBottom':
-        return PopupPlacement_RightBottom_getInstance();
-      case 'BottomLeft':
-        return PopupPlacement_BottomLeft_getInstance();
-      case 'Bottom':
-        return PopupPlacement_Bottom_getInstance();
-      case 'BottomRight':
-        return PopupPlacement_BottomRight_getInstance();
-      default:
-        PopupPlacement_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries_1() {
-    if ($ENTRIES_0 == null)
-      $ENTRIES_0 = enumEntries(values_0());
-    return $ENTRIES_0;
-  }
-  var PopupPlacement_entriesInitialized;
-  function PopupPlacement_initEntries() {
-    if (PopupPlacement_entriesInitialized)
-      return Unit_getInstance();
-    PopupPlacement_entriesInitialized = true;
-    PopupPlacement_TopLeft_instance = new PopupPlacement('TopLeft', 0);
-    PopupPlacement_Top_instance = new PopupPlacement('Top', 1);
-    PopupPlacement_TopRight_instance = new PopupPlacement('TopRight', 2);
-    PopupPlacement_LeftTop_instance = new PopupPlacement('LeftTop', 3);
-    PopupPlacement_RightTop_instance = new PopupPlacement('RightTop', 4);
-    PopupPlacement_Left_instance = new PopupPlacement('Left', 5);
-    PopupPlacement_Right_instance = new PopupPlacement('Right', 6);
-    PopupPlacement_LeftBottom_instance = new PopupPlacement('LeftBottom', 7);
-    PopupPlacement_RightBottom_instance = new PopupPlacement('RightBottom', 8);
-    PopupPlacement_BottomLeft_instance = new PopupPlacement('BottomLeft', 9);
-    PopupPlacement_Bottom_instance = new PopupPlacement('Bottom', 10);
-    PopupPlacement_BottomRight_instance = new PopupPlacement('BottomRight', 11);
-  }
-  var $ENTRIES_0;
-  function PopupPlacement(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  function get_DEFAULT_POPUP_OFFSET_PX() {
-    return DEFAULT_POPUP_OFFSET_PX;
-  }
-  var DEFAULT_POPUP_OFFSET_PX;
   function _set_placementElement__vwo480($this, _set____db54di) {
     $this.placementElement_1 = _set____db54di;
   }
@@ -6069,12 +5976,105 @@
     offsetPixels = offsetPixels === VOID ? 15 : offsetPixels;
     return $super === VOID ? this.calculateDefaultPosition_6ufwvm_k$(placement, popupWidth, popupHeight, placementBounds, offsetPixels) : $super.calculateDefaultPosition_6ufwvm_k$.call(this, placement, popupWidth, popupHeight, placementBounds, offsetPixels);
   };
+  var PopupPlacement_TopLeft_instance;
+  var PopupPlacement_Top_instance;
+  var PopupPlacement_TopRight_instance;
+  var PopupPlacement_LeftTop_instance;
+  var PopupPlacement_RightTop_instance;
+  var PopupPlacement_Left_instance;
+  var PopupPlacement_Right_instance;
+  var PopupPlacement_LeftBottom_instance;
+  var PopupPlacement_RightBottom_instance;
+  var PopupPlacement_BottomLeft_instance;
+  var PopupPlacement_Bottom_instance;
+  var PopupPlacement_BottomRight_instance;
+  function values_0() {
+    return [PopupPlacement_TopLeft_getInstance(), PopupPlacement_Top_getInstance(), PopupPlacement_TopRight_getInstance(), PopupPlacement_LeftTop_getInstance(), PopupPlacement_RightTop_getInstance(), PopupPlacement_Left_getInstance(), PopupPlacement_Right_getInstance(), PopupPlacement_LeftBottom_getInstance(), PopupPlacement_RightBottom_getInstance(), PopupPlacement_BottomLeft_getInstance(), PopupPlacement_Bottom_getInstance(), PopupPlacement_BottomRight_getInstance()];
+  }
+  function valueOf_0(value) {
+    switch (value) {
+      case 'TopLeft':
+        return PopupPlacement_TopLeft_getInstance();
+      case 'Top':
+        return PopupPlacement_Top_getInstance();
+      case 'TopRight':
+        return PopupPlacement_TopRight_getInstance();
+      case 'LeftTop':
+        return PopupPlacement_LeftTop_getInstance();
+      case 'RightTop':
+        return PopupPlacement_RightTop_getInstance();
+      case 'Left':
+        return PopupPlacement_Left_getInstance();
+      case 'Right':
+        return PopupPlacement_Right_getInstance();
+      case 'LeftBottom':
+        return PopupPlacement_LeftBottom_getInstance();
+      case 'RightBottom':
+        return PopupPlacement_RightBottom_getInstance();
+      case 'BottomLeft':
+        return PopupPlacement_BottomLeft_getInstance();
+      case 'Bottom':
+        return PopupPlacement_Bottom_getInstance();
+      case 'BottomRight':
+        return PopupPlacement_BottomRight_getInstance();
+      default:
+        PopupPlacement_initEntries();
+        THROW_IAE('No enum constant value.');
+        break;
+    }
+  }
+  function get_entries_1() {
+    if ($ENTRIES_0 == null)
+      $ENTRIES_0 = enumEntries(values_0());
+    return $ENTRIES_0;
+  }
+  var PopupPlacement_entriesInitialized;
+  function PopupPlacement_initEntries() {
+    if (PopupPlacement_entriesInitialized)
+      return Unit_getInstance();
+    PopupPlacement_entriesInitialized = true;
+    PopupPlacement_TopLeft_instance = new PopupPlacement('TopLeft', 0);
+    PopupPlacement_Top_instance = new PopupPlacement('Top', 1);
+    PopupPlacement_TopRight_instance = new PopupPlacement('TopRight', 2);
+    PopupPlacement_LeftTop_instance = new PopupPlacement('LeftTop', 3);
+    PopupPlacement_RightTop_instance = new PopupPlacement('RightTop', 4);
+    PopupPlacement_Left_instance = new PopupPlacement('Left', 5);
+    PopupPlacement_Right_instance = new PopupPlacement('Right', 6);
+    PopupPlacement_LeftBottom_instance = new PopupPlacement('LeftBottom', 7);
+    PopupPlacement_RightBottom_instance = new PopupPlacement('RightBottom', 8);
+    PopupPlacement_BottomLeft_instance = new PopupPlacement('BottomLeft', 9);
+    PopupPlacement_Bottom_instance = new PopupPlacement('Bottom', 10);
+    PopupPlacement_BottomRight_instance = new PopupPlacement('BottomRight', 11);
+  }
+  var $ENTRIES_0;
+  function PopupPlacement(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
   function PopupScope(placement) {
     this.placement_1 = placement;
   }
   protoOf(PopupScope).get_placement_wv4cec_k$ = function () {
     return this.placement_1;
   };
+  function PopupVars() {
+    PopupVars_instance = this;
+    var tmp = this;
+    var tmp0_defaultFallback = TransitionDurationVars_getInstance().get_Fast_wo1fb9_k$().value$default_36t2hw_k$();
+    tmp.TransitionDuration$delegate_1 = StyleVariable_1(tmp0_defaultFallback, 'silk');
+  }
+  protoOf(PopupVars).get_TransitionDuration_6zl6by_k$ = function () {
+    return this.TransitionDuration$delegate_1.getValue_fbnwi2_k$(this, TransitionDuration$factory_1());
+  };
+  var PopupVars_instance;
+  function PopupVars_getInstance() {
+    if (PopupVars_instance == null)
+      new PopupVars();
+    return PopupVars_instance;
+  }
+  function get_DEFAULT_POPUP_OFFSET_PX() {
+    return DEFAULT_POPUP_OFFSET_PX;
+  }
+  var DEFAULT_POPUP_OFFSET_PX;
   function updatePosition(_this__u8e3s4, position) {
     _init_properties_Popup_kt__lluomy();
     _this__u8e3s4.style.top = '' + position.top_1;

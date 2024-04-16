@@ -1,8 +1,8 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './compose-multiplatform-core-compose-runtime-runtime.js', './kotlin-kotlin-stdlib.js', './kobweb-frontend-kobweb-compose.js', './html-html-core.js', './kobweb-frontend-compose-html-ext.js', './kobweb-frontend-browser-ext.js'], factory);
+    define(['exports', './compose-multiplatform-core-compose-runtime-runtime.js', './kotlin-kotlin-stdlib.js', './kobweb-frontend-kobweb-compose.js', './html-html-core.js', './kobweb-frontend-browser-ext.js', './kobweb-frontend-compose-html-ext.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./kotlin-kotlin-stdlib.js'), require('./kobweb-frontend-kobweb-compose.js'), require('./html-html-core.js'), require('./kobweb-frontend-compose-html-ext.js'), require('./kobweb-frontend-browser-ext.js'));
+    factory(module.exports, require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./kotlin-kotlin-stdlib.js'), require('./kobweb-frontend-kobweb-compose.js'), require('./html-html-core.js'), require('./kobweb-frontend-browser-ext.js'), require('./kobweb-frontend-compose-html-ext.js'));
   else {
     if (typeof this['compose-multiplatform-core-compose-runtime-runtime'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'compose-multiplatform-core-compose-runtime-runtime' was not found. Please, check whether 'compose-multiplatform-core-compose-runtime-runtime' is loaded prior to 'kobweb-frontend-silk-foundation'.");
@@ -16,15 +16,15 @@
     if (typeof this['html-html-core'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'html-html-core' was not found. Please, check whether 'html-html-core' is loaded prior to 'kobweb-frontend-silk-foundation'.");
     }
-    if (typeof this['kobweb-frontend-compose-html-ext'] === 'undefined') {
-      throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'kobweb-frontend-compose-html-ext' was not found. Please, check whether 'kobweb-frontend-compose-html-ext' is loaded prior to 'kobweb-frontend-silk-foundation'.");
-    }
     if (typeof this['kobweb-frontend-browser-ext'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'kobweb-frontend-browser-ext' was not found. Please, check whether 'kobweb-frontend-browser-ext' is loaded prior to 'kobweb-frontend-silk-foundation'.");
     }
-    root['kobweb-frontend-silk-foundation'] = factory(typeof this['kobweb-frontend-silk-foundation'] === 'undefined' ? {} : this['kobweb-frontend-silk-foundation'], this['compose-multiplatform-core-compose-runtime-runtime'], this['kotlin-kotlin-stdlib'], this['kobweb-frontend-kobweb-compose'], this['html-html-core'], this['kobweb-frontend-compose-html-ext'], this['kobweb-frontend-browser-ext']);
+    if (typeof this['kobweb-frontend-compose-html-ext'] === 'undefined') {
+      throw new Error("Error loading module 'kobweb-frontend-silk-foundation'. Its dependency 'kobweb-frontend-compose-html-ext' was not found. Please, check whether 'kobweb-frontend-compose-html-ext' is loaded prior to 'kobweb-frontend-silk-foundation'.");
+    }
+    root['kobweb-frontend-silk-foundation'] = factory(typeof this['kobweb-frontend-silk-foundation'] === 'undefined' ? {} : this['kobweb-frontend-silk-foundation'], this['compose-multiplatform-core-compose-runtime-runtime'], this['kotlin-kotlin-stdlib'], this['kobweb-frontend-kobweb-compose'], this['html-html-core'], this['kobweb-frontend-browser-ext'], this['kobweb-frontend-compose-html-ext']);
   }
-}(this, function (_, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_kotlin, kotlin_com_varabyte_kobweb_kobweb_compose, kotlin_org_jetbrains_compose_html_html_core, kotlin_com_varabyte_kobweb_compose_html_ext, kotlin_com_varabyte_kobweb_browser_ext) {
+}(this, function (_, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_kotlin, kotlin_com_varabyte_kobweb_kobweb_compose, kotlin_org_jetbrains_compose_html_html_core, kotlin_com_varabyte_kobweb_browser_ext, kotlin_com_varabyte_kobweb_compose_html_ext) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
@@ -43,6 +43,14 @@
   var protoOf = kotlin_kotlin.$_$.ob;
   var objectMeta = kotlin_kotlin.$_$.nb;
   var setMetadataFor = kotlin_kotlin.$_$.pb;
+  var listOf = kotlin_kotlin.$_$.n7;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.a6;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
+  var distinct = kotlin_kotlin.$_$.q6;
+  var lazy = kotlin_kotlin.$_$.qf;
+  var classMeta = kotlin_kotlin.$_$.ea;
+  var removeSuffix = kotlin_kotlin.$_$.fd;
+  var titleCamelCaseToKebabCase = kotlin_com_varabyte_kobweb_browser_ext.$_$.g;
   var mapCapacity = kotlin_kotlin.$_$.o7;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.s;
   var ComparableStyleScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e;
@@ -56,17 +64,9 @@
   var Combine = kotlin_org_jetbrains_compose_html_html_core.$_$.p2;
   var equals = kotlin_kotlin.$_$.ha;
   var hashCode = kotlin_kotlin.$_$.oa;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
   var StyleScopeBuilder = kotlin_org_jetbrains_compose_html_html_core.$_$.e3;
   var CSSKeyframeRuleDeclaration = kotlin_org_jetbrains_compose_html_html_core.$_$.r2;
   var CSSKeyframesRuleDeclaration = kotlin_org_jetbrains_compose_html_html_core.$_$.s2;
-  var classMeta = kotlin_kotlin.$_$.ea;
-  var listOf = kotlin_kotlin.$_$.n7;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.a6;
-  var distinct = kotlin_kotlin.$_$.q6;
-  var lazy = kotlin_kotlin.$_$.qf;
-  var removeSuffix = kotlin_kotlin.$_$.fd;
-  var titleCamelCaseToKebabCase = kotlin_com_varabyte_kobweb_browser_ext.$_$.g;
   var toString = kotlin_kotlin.$_$.rb;
   var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.r1;
   var CSSAnimation = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d;
@@ -78,6 +78,7 @@
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
   var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b1;
   var KProperty0 = kotlin_kotlin.$_$.ec;
+  var getValue = kotlin_kotlin.$_$.a7;
   var objectCreate = kotlin_kotlin.$_$.mb;
   var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
   var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.b2;
@@ -98,13 +99,12 @@
   var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m1;
   var mutableListOf = kotlin_kotlin.$_$.s7;
   var plus = kotlin_kotlin.$_$.v7;
-  var interfaceMeta = kotlin_kotlin.$_$.qa;
-  var substringAfterLast_0 = kotlin_kotlin.$_$.od;
-  var plus_0 = kotlin_kotlin.$_$.x7;
   var toSet = kotlin_kotlin.$_$.x8;
   var endsWith = kotlin_kotlin.$_$.uc;
   var copyToArray = kotlin_kotlin.$_$.p6;
-  var getValue = kotlin_kotlin.$_$.a7;
+  var interfaceMeta = kotlin_kotlin.$_$.qa;
+  var substringAfterLast_0 = kotlin_kotlin.$_$.od;
+  var plus_0 = kotlin_kotlin.$_$.x7;
   var emptyList = kotlin_kotlin.$_$.r6;
   var listOf_0 = kotlin_kotlin.$_$.m7;
   var plus_1 = kotlin_kotlin.$_$.y7;
@@ -128,16 +128,16 @@
   var Span = kotlin_org_jetbrains_compose_html_html_core.$_$.d6;
   var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r2;
   var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.g6;
-  var mutableStateListOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
-  var CompositionLocalProvider = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
   var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
   var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
   var DisposableEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j;
+  var mutableStateListOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
+  var CompositionLocalProvider = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
+  var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
   var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
   var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
-  var Annotation = kotlin_kotlin.$_$.he;
   var invokeLater = kotlin_com_varabyte_kobweb_browser_ext.$_$.c;
+  var Annotation = kotlin_kotlin.$_$.he;
   var asList = kotlin_kotlin.$_$.bg;
   var Map = kotlin_kotlin.$_$.f5;
   var isInterface = kotlin_kotlin.$_$.za;
@@ -154,17 +154,19 @@
   //endregion
   //region block: pre-declaration
   setMetadataFor(SilkStyleSheet, 'SilkStyleSheet', objectMeta, StyleSheet);
-  setMetadataFor(KeyframesBuilder, 'KeyframesBuilder', classMeta);
   setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(Keyframes, 'Keyframes', classMeta);
   setMetadataFor(CacheByPropertyNameDelegate, 'CacheByPropertyNameDelegate', classMeta);
   setMetadataFor(KeyframesProvider, 'KeyframesProvider', classMeta, CacheByPropertyNameDelegate);
-  setMetadataFor(Companion_0, 'Companion', objectMeta);
-  setMetadataFor(ComponentStyle, 'ComponentStyle', classMeta);
-  setMetadataFor(ComponentStyleProvider, 'ComponentStyleProvider', classMeta, CacheByPropertyNameDelegate);
+  setMetadataFor(KeyframesBuilder, 'KeyframesBuilder', classMeta);
   setMetadataFor(ComponentModifier, 'ComponentModifier', interfaceMeta);
   setMetadataFor(StyleModifiers, 'StyleModifiers', classMeta);
   setMetadataFor(ComponentModifiers, 'ComponentModifiers', classMeta, StyleModifiers, [ComponentModifier, StyleModifiers]);
+  setMetadataFor(ComponentBaseModifier, 'ComponentBaseModifier', classMeta, VOID, [ComponentModifier]);
+  setMetadataFor(ComponentStyleProvider, 'ComponentStyleProvider', classMeta, CacheByPropertyNameDelegate);
+  setMetadataFor(Companion_0, 'Companion', objectMeta);
+  setMetadataFor(ComponentStyle_0, 'ComponentStyle', classMeta);
+  setMetadataFor(ImmutableComponentStyle, 'ImmutableComponentStyle', classMeta);
   setMetadataFor(StyleGroup, 'StyleGroup', interfaceMeta);
   setMetadataFor(Light, 'Light', classMeta, VOID, [StyleGroup]);
   setMetadataFor(Dark, 'Dark', classMeta, VOID, [StyleGroup]);
@@ -172,12 +174,10 @@
   setMetadataFor(ColorAware, 'ColorAware', classMeta, VOID, [StyleGroup]);
   setMetadataFor(Companion_1, 'Companion', objectMeta);
   setMetadataFor(ClassSelectors, 'ClassSelectors', classMeta);
-  setMetadataFor(ImmutableComponentStyle, 'ImmutableComponentStyle', classMeta);
-  setMetadataFor(ComponentBaseModifier, 'ComponentBaseModifier', classMeta, VOID, [ComponentModifier]);
+  setMetadataFor(ComponentVariantProvider, 'ComponentVariantProvider', classMeta, CacheByPropertyNameDelegate);
   setMetadataFor(ComponentVariant, 'ComponentVariant', classMeta);
   setMetadataFor(SimpleComponentVariant, 'SimpleComponentVariant', classMeta, ComponentVariant);
   setMetadataFor(CompositeComponentVariant, 'CompositeComponentVariant', classMeta, ComponentVariant);
-  setMetadataFor(ComponentVariantProvider, 'ComponentVariantProvider', classMeta, CacheByPropertyNameDelegate);
   setMetadataFor(Companion_2, 'Companion', objectMeta);
   setMetadataFor(CssRule, 'CssRule', classMeta);
   setMetadataFor(OfMedia, 'OfMedia', classMeta, CssRule);
@@ -222,8 +222,8 @@
   }
   setMetadataFor(SilkStylesheet, 'SilkStylesheet', interfaceMeta);
   setMetadataFor(SilkStylesheetInstance, 'SilkStylesheetInstance', objectMeta, VOID, [SilkStylesheet]);
-  setMetadataFor(MutableSilkTheme, 'MutableSilkTheme', classMeta, VOID, VOID, MutableSilkTheme);
   setMetadataFor(ImmutableSilkTheme, 'ImmutableSilkTheme', classMeta);
+  setMetadataFor(MutableSilkTheme, 'MutableSilkTheme', classMeta, VOID, VOID, MutableSilkTheme);
   setMetadataFor(Companion_5, 'Companion', objectMeta);
   setMetadataFor(ColorMode, 'ColorMode', classMeta, Enum);
   setMetadataFor(ColorScheme, 'ColorScheme', interfaceMeta);
@@ -248,6 +248,13 @@
   setMetadataFor(Gray, 'Gray', objectMeta, VOID, [ColorScheme]);
   setMetadataFor(BlueGray, 'BlueGray', objectMeta, VOID, [ColorScheme]);
   setMetadataFor(ColorSchemes, 'ColorSchemes', objectMeta);
+  setMetadataFor(EntryDelegate, 'EntryDelegate', classMeta);
+  setMetadataFor(ColorGroup, 'ColorGroup', classMeta);
+  function getValue_0(key) {
+    return ensureNotNull(this.get_6bo4tg_k$(key));
+  }
+  setMetadataFor(Palette, 'Palette', interfaceMeta);
+  setMetadataFor(MutablePalette, 'MutablePalette', classMeta, VOID, [Palette], MutablePalette);
   function get(colorMode) {
     var tmp;
     switch (colorMode.get_ordinal_ip24qg_k$()) {
@@ -265,13 +272,6 @@
   }
   setMetadataFor(Palettes, 'Palettes', interfaceMeta);
   setMetadataFor(MutablePalettes, 'MutablePalettes', classMeta, VOID, [Palettes], MutablePalettes);
-  function getValue_0(key) {
-    return ensureNotNull(this.get_6bo4tg_k$(key));
-  }
-  setMetadataFor(Palette, 'Palette', interfaceMeta);
-  setMetadataFor(EntryDelegate, 'EntryDelegate', classMeta);
-  setMetadataFor(ColorGroup, 'ColorGroup', classMeta);
-  setMetadataFor(MutablePalette, 'MutablePalette', classMeta, VOID, [Palette], MutablePalette);
   setMetadataFor(Shape, 'Shape', interfaceMeta);
   setMetadataFor(RectF, 'RectF', classMeta, VOID, [Shape], RectF_init_$Create$);
   setMetadataFor(Path, 'Path', classMeta);
@@ -393,6 +393,84 @@
       new SilkStyleSheet();
     return SilkStyleSheet_instance;
   }
+  function Companion() {
+    Companion_instance = this;
+  }
+  protoOf(Companion).isColorModeAgnostic_ijx3jt_k$ = function (build) {
+    // Inline function 'kotlin.collections.count' call
+    // Inline function 'kotlin.collections.map' call
+    var this_0 = listOf([ColorMode_LIGHT_getInstance(), ColorMode_DARK_getInstance()]);
+    // Inline function 'kotlin.collections.mapTo' call
+    var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var item = tmp0_iterator.next_20eer_k$();
+      // Inline function 'com.varabyte.kobweb.silk.components.animation.Companion.isColorModeAgnostic.<anonymous>' call
+      // Inline function 'kotlin.apply' call
+      var this_1 = new KeyframesBuilder(item);
+      // Inline function 'kotlin.contracts.contract' call
+      build(this_1);
+      destination.add_utx5q5_k$(this_1);
+    }
+    return distinct(destination).get_size_woubt6_k$() === 1;
+  };
+  var Companion_instance;
+  function Companion_getInstance_4() {
+    if (Companion_instance == null)
+      new Companion();
+    return Companion_instance;
+  }
+  function Keyframes$usesColorMode$delegate$lambda(this$0) {
+    return function () {
+      return !Companion_getInstance_4().isColorModeAgnostic_ijx3jt_k$(this$0.init_1);
+    };
+  }
+  function Keyframes(name, prefix, init) {
+    Companion_getInstance_4();
+    prefix = prefix === VOID ? null : prefix;
+    this.init_1 = init;
+    var tmp = this;
+    var tmp_0;
+    if (prefix == null) {
+      tmp_0 = null;
+    } else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.varabyte.kobweb.silk.components.animation.Keyframes.name.<anonymous>' call
+      tmp_0 = prefix + '-' + name;
+    }
+    var tmp1_elvis_lhs = tmp_0;
+    tmp.name_1 = tmp1_elvis_lhs == null ? name : tmp1_elvis_lhs;
+    var tmp_1 = this;
+    tmp_1.usesColorMode$delegate_1 = lazy(Keyframes$usesColorMode$delegate$lambda(this));
+  }
+  protoOf(Keyframes).get_init_woo195_k$ = function () {
+    return this.init_1;
+  };
+  protoOf(Keyframes).get_name_woqyms_k$ = function () {
+    return this.name_1;
+  };
+  protoOf(Keyframes).get_usesColorMode_a99qlr_k$ = function () {
+    // Inline function 'kotlin.getValue' call
+    var this_0 = this.usesColorMode$delegate_1;
+    usesColorMode$factory();
+    return this_0.get_value_j01efc_k$();
+  };
+  function _get_prefix__wiwq7t($this) {
+    return $this.prefix_1;
+  }
+  function _get_init__d89e0r($this) {
+    return $this.init_1;
+  }
+  function KeyframesProvider(prefix, init) {
+    CacheByPropertyNameDelegate.call(this);
+    this.prefix_1 = prefix;
+    this.init_1 = init;
+  }
+  protoOf(KeyframesProvider).create_oysagu_k$ = function (propertyName) {
+    var name = titleCamelCaseToKebabCase(removeSuffix(removeSuffix(removeSuffix(propertyName, 'Anim'), 'Animation'), 'Keyframes'));
+    return new Keyframes(name, this.prefix_1, this.init_1);
+  };
   function _get_keyframeStyles__di4hej($this) {
     return $this.keyframeStyles_1;
   }
@@ -482,84 +560,6 @@
     }
     var keyframeRules = destination;
     stylesheet.add_19esmm_k$(new CSSKeyframesRuleDeclaration(keyframesName, keyframeRules));
-  };
-  function Companion() {
-    Companion_instance = this;
-  }
-  protoOf(Companion).isColorModeAgnostic_ijx3jt_k$ = function (build) {
-    // Inline function 'kotlin.collections.count' call
-    // Inline function 'kotlin.collections.map' call
-    var this_0 = listOf([ColorMode_LIGHT_getInstance(), ColorMode_DARK_getInstance()]);
-    // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList_init_$Create$(collectionSizeOrDefault(this_0, 10));
-    var tmp0_iterator = this_0.iterator_jk1svi_k$();
-    while (tmp0_iterator.hasNext_bitz1p_k$()) {
-      var item = tmp0_iterator.next_20eer_k$();
-      // Inline function 'com.varabyte.kobweb.silk.components.animation.Companion.isColorModeAgnostic.<anonymous>' call
-      // Inline function 'kotlin.apply' call
-      var this_1 = new KeyframesBuilder(item);
-      // Inline function 'kotlin.contracts.contract' call
-      build(this_1);
-      destination.add_utx5q5_k$(this_1);
-    }
-    return distinct(destination).get_size_woubt6_k$() === 1;
-  };
-  var Companion_instance;
-  function Companion_getInstance_4() {
-    if (Companion_instance == null)
-      new Companion();
-    return Companion_instance;
-  }
-  function Keyframes$usesColorMode$delegate$lambda(this$0) {
-    return function () {
-      return !Companion_getInstance_4().isColorModeAgnostic_ijx3jt_k$(this$0.init_1);
-    };
-  }
-  function Keyframes(name, prefix, init) {
-    Companion_getInstance_4();
-    prefix = prefix === VOID ? null : prefix;
-    this.init_1 = init;
-    var tmp = this;
-    var tmp_0;
-    if (prefix == null) {
-      tmp_0 = null;
-    } else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'com.varabyte.kobweb.silk.components.animation.Keyframes.name.<anonymous>' call
-      tmp_0 = prefix + '-' + name;
-    }
-    var tmp1_elvis_lhs = tmp_0;
-    tmp.name_1 = tmp1_elvis_lhs == null ? name : tmp1_elvis_lhs;
-    var tmp_1 = this;
-    tmp_1.usesColorMode$delegate_1 = lazy(Keyframes$usesColorMode$delegate$lambda(this));
-  }
-  protoOf(Keyframes).get_init_woo195_k$ = function () {
-    return this.init_1;
-  };
-  protoOf(Keyframes).get_name_woqyms_k$ = function () {
-    return this.name_1;
-  };
-  protoOf(Keyframes).get_usesColorMode_a99qlr_k$ = function () {
-    // Inline function 'kotlin.getValue' call
-    var this_0 = this.usesColorMode$delegate_1;
-    usesColorMode$factory();
-    return this_0.get_value_j01efc_k$();
-  };
-  function _get_prefix__wiwq7t($this) {
-    return $this.prefix_1;
-  }
-  function _get_init__d89e0r($this) {
-    return $this.init_1;
-  }
-  function KeyframesProvider(prefix, init) {
-    CacheByPropertyNameDelegate.call(this);
-    this.prefix_1 = prefix;
-    this.init_1 = init;
-  }
-  protoOf(KeyframesProvider).create_oysagu_k$ = function (propertyName) {
-    var name = titleCamelCaseToKebabCase(removeSuffix(removeSuffix(removeSuffix(propertyName, 'Anim'), 'Animation'), 'Keyframes'));
-    return new Keyframes(name, this.prefix_1, this.init_1);
   };
   function Keyframes_0(prefix, init) {
     prefix = prefix === VOID ? null : prefix;
@@ -922,26 +922,86 @@
   function _init_properties_BreakpointConditions_kt__53om95() {
     if (!properties_initialized_BreakpointConditions_kt_kx7tgr) {
       properties_initialized_BreakpointConditions_kt_kx7tgr = true;
-      DisplayIfAtLeastZeroStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayIfAtLeastZeroStyle$delegate$lambda);
-      DisplayIfAtLeastSmStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayIfAtLeastSmStyle$delegate$lambda);
-      DisplayIfAtLeastMdStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayIfAtLeastMdStyle$delegate$lambda);
-      DisplayIfAtLeastLgStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayIfAtLeastLgStyle$delegate$lambda);
-      DisplayIfAtLeastXlStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayIfAtLeastXlStyle$delegate$lambda);
-      DisplayUntilZeroStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayUntilZeroStyle$delegate$lambda);
-      DisplayUntilSmStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayUntilSmStyle$delegate$lambda);
-      DisplayUntilMdStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayUntilMdStyle$delegate$lambda);
-      DisplayUntilLgStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayUntilLgStyle$delegate$lambda);
-      DisplayUntilXlStyle$delegate = ComponentStyle_0(VOID, 'silk', DisplayUntilXlStyle$delegate$lambda);
+      DisplayIfAtLeastZeroStyle$delegate = ComponentStyle(VOID, 'silk', DisplayIfAtLeastZeroStyle$delegate$lambda);
+      DisplayIfAtLeastSmStyle$delegate = ComponentStyle(VOID, 'silk', DisplayIfAtLeastSmStyle$delegate$lambda);
+      DisplayIfAtLeastMdStyle$delegate = ComponentStyle(VOID, 'silk', DisplayIfAtLeastMdStyle$delegate$lambda);
+      DisplayIfAtLeastLgStyle$delegate = ComponentStyle(VOID, 'silk', DisplayIfAtLeastLgStyle$delegate$lambda);
+      DisplayIfAtLeastXlStyle$delegate = ComponentStyle(VOID, 'silk', DisplayIfAtLeastXlStyle$delegate$lambda);
+      DisplayUntilZeroStyle$delegate = ComponentStyle(VOID, 'silk', DisplayUntilZeroStyle$delegate$lambda);
+      DisplayUntilSmStyle$delegate = ComponentStyle(VOID, 'silk', DisplayUntilSmStyle$delegate$lambda);
+      DisplayUntilMdStyle$delegate = ComponentStyle(VOID, 'silk', DisplayUntilMdStyle$delegate$lambda);
+      DisplayUntilLgStyle$delegate = ComponentStyle(VOID, 'silk', DisplayUntilLgStyle$delegate$lambda);
+      DisplayUntilXlStyle$delegate = ComponentStyle(VOID, 'silk', DisplayUntilXlStyle$delegate$lambda);
     }
   }
+  function base(_this__u8e3s4, extraModifiers, prefix, init) {
+    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
+    prefix = prefix === VOID ? null : prefix;
+    return base_0(_this__u8e3s4, base$lambda(extraModifiers), prefix, init);
+  }
+  function ComponentStyle(extraModifiers, prefix, init) {
+    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
+    prefix = prefix === VOID ? null : prefix;
+    return ComponentStyle_1(ComponentStyle$lambda(extraModifiers), prefix, init);
+  }
+  function toModifier(_this__u8e3s4, variants, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_ip860b_k$(-974293209);
+    if (isTraceInProgress()) {
+      traceEventStart(-974293209, $changed, -1, 'com.varabyte.kobweb.silk.components.style.toModifier (ComponentStyle.kt:456)');
+    }
+    var tmp = getValue(get_SilkTheme().get_componentStyles_qanhau_k$(), _this__u8e3s4.name_1).toModifier_7iov47_k$($composer_0, 8);
+    var tmp0_safe_receiver = combine(toList(variants), $composer_0, 8);
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.toModifier_7iov47_k$($composer_0, 0);
+    var tmp0 = tmp.then_mmfvo6_k$(tmp1_elvis_lhs == null ? Companion_getInstance_0() : tmp1_elvis_lhs);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    return tmp0;
+  }
+  function ComponentModifiers(colorMode) {
+    StyleModifiers.call(this);
+    this.colorMode_1 = colorMode;
+  }
+  protoOf(ComponentModifiers).get_colorMode_trbg8z_k$ = function () {
+    return this.colorMode_1;
+  };
+  function ComponentBaseModifier(colorMode) {
+    this.colorMode_1 = colorMode;
+  }
+  protoOf(ComponentBaseModifier).get_colorMode_trbg8z_k$ = function () {
+    return this.colorMode_1;
+  };
+  function _get_extraModifiers__fohold($this) {
+    return $this.extraModifiers_1;
+  }
+  function _get_prefix__wiwq7t_0($this) {
+    return $this.prefix_1;
+  }
+  function _get_init__d89e0r_0($this) {
+    return $this.init_1;
+  }
+  function ComponentStyleProvider(extraModifiers, prefix, init) {
+    prefix = prefix === VOID ? null : prefix;
+    CacheByPropertyNameDelegate.call(this);
+    this.extraModifiers_1 = extraModifiers;
+    this.prefix_1 = prefix;
+    this.init_1 = init;
+  }
+  protoOf(ComponentStyleProvider).create_oysagu_k$ = function (propertyName) {
+    var name = titleCamelCaseToKebabCase(removeSuffix(propertyName, 'Style'));
+    return new ComponentStyle_0(name, this.extraModifiers_1, this.prefix_1, this.init_1);
+  };
+  var com_varabyte_kobweb_silk_components_style_ComponentStyle$stable;
   function ComponentStyle_init_$Init$(name, extraModifiers, prefix, init, $this) {
     extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
     prefix = prefix === VOID ? null : prefix;
-    ComponentStyle.call($this, name, ComponentStyle$_init_$lambda_6xe5ih(extraModifiers), prefix, init);
+    ComponentStyle_0.call($this, name, ComponentStyle$_init_$lambda_6xe5ih(extraModifiers), prefix, init);
     return $this;
   }
   function ComponentStyle_init_$Create$(name, extraModifiers, prefix, init) {
-    return ComponentStyle_init_$Init$(name, extraModifiers, prefix, init, objectCreate(protoOf(ComponentStyle)));
+    return ComponentStyle_init_$Init$(name, extraModifiers, prefix, init, objectCreate(protoOf(ComponentStyle_0)));
   }
   function Companion_0() {
     Companion_instance_0 = this;
@@ -1221,7 +1281,7 @@
       return Unit_getInstance();
     };
   }
-  function ComponentStyle(name, extraModifiers, prefix, init) {
+  function ComponentStyle_0(name, extraModifiers, prefix, init) {
     Companion_getInstance_5();
     prefix = prefix === VOID ? null : prefix;
     this.extraModifiers_1 = extraModifiers;
@@ -1250,32 +1310,32 @@
     var tmp1_elvis_lhs = tmp_0;
     tmp.name_1 = tmp1_elvis_lhs == null ? name : tmp1_elvis_lhs;
   }
-  protoOf(ComponentStyle).get_extraModifiers_h2rw6j_k$ = function () {
+  protoOf(ComponentStyle_0).get_extraModifiers_h2rw6j_k$ = function () {
     return this.extraModifiers_1;
   };
-  protoOf(ComponentStyle).get_prefix_i78za3_k$ = function () {
+  protoOf(ComponentStyle_0).get_prefix_i78za3_k$ = function () {
     return this.prefix_1;
   };
-  protoOf(ComponentStyle).get_init_woo195_k$ = function () {
+  protoOf(ComponentStyle_0).get_init_woo195_k$ = function () {
     return this.init_1;
   };
-  protoOf(ComponentStyle).get_nameWithoutPrefix_lto6iu_k$ = function () {
+  protoOf(ComponentStyle_0).get_nameWithoutPrefix_lto6iu_k$ = function () {
     return this.nameWithoutPrefix_1;
   };
-  protoOf(ComponentStyle).get_name_woqyms_k$ = function () {
+  protoOf(ComponentStyle_0).get_name_woqyms_k$ = function () {
     return this.name_1;
   };
-  protoOf(ComponentStyle).addVariant_jzm308_k$ = function (name, extraModifiers, init) {
+  protoOf(ComponentStyle_0).addVariant_jzm308_k$ = function (name, extraModifiers, init) {
     return this.addVariant_meui_k$(name, ComponentStyle$addVariant$lambda(extraModifiers), init);
   };
-  protoOf(ComponentStyle).addVariant$default_dlxnlm_k$ = function (name, extraModifiers, init, $super) {
+  protoOf(ComponentStyle_0).addVariant$default_dlxnlm_k$ = function (name, extraModifiers, init, $super) {
     extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
     return $super === VOID ? this.addVariant_jzm308_k$(name, extraModifiers, init) : $super.addVariant_jzm308_k$.call(this, name, extraModifiers, init);
   };
-  protoOf(ComponentStyle).addVariant_meui_k$ = function (name, extraModifiers, init) {
-    return new SimpleComponentVariant(new ComponentStyle(this.name_1 + '-' + name, extraModifiers, null, init), this);
+  protoOf(ComponentStyle_0).addVariant_meui_k$ = function (name, extraModifiers, init) {
+    return new SimpleComponentVariant(new ComponentStyle_0(this.name_1 + '-' + name, extraModifiers, null, init), this);
   };
-  protoOf(ComponentStyle).addStylesInto_7ve9v0_k$ = function (styleSheet, selectorName) {
+  protoOf(ComponentStyle_0).addStylesInto_7ve9v0_k$ = function (styleSheet, selectorName) {
     var classNames = mutableListOf([selectorName]);
     var lightModifiers = assertNoAttributeModifiers(mergeCssModifiers(new ComponentModifiers(ColorMode_LIGHT_getInstance()), this, this.init_1), this, selectorName);
     var darkModifiers = assertNoAttributeModifiers(mergeCssModifiers(new ComponentModifiers(ColorMode_DARK_getInstance()), this, this.init_1), this, selectorName);
@@ -1323,44 +1383,73 @@
     }
     return _ClassSelectors___init__impl__tbnzdx(classNames);
   };
-  protoOf(ComponentStyle).addStylesInto_gj0mv0_k$ = function (styleSheet) {
+  protoOf(ComponentStyle_0).addStylesInto_gj0mv0_k$ = function (styleSheet) {
     return this.addStylesInto_7ve9v0_k$(styleSheet, '.' + this.name_1);
   };
-  protoOf(ComponentStyle).intoImmutableStyle_g690ow_k$ = function (classSelectors) {
+  protoOf(ComponentStyle_0).intoImmutableStyle_g690ow_k$ = function (classSelectors) {
     return new ImmutableComponentStyle(classSelectors, this.extraModifiers_1);
   };
-  function _get_extraModifiers__fohold($this) {
+  function ComponentStyle_1(extraModifiers, prefix, init) {
+    prefix = prefix === VOID ? null : prefix;
+    return new ComponentStyleProvider(extraModifiers, prefix, init);
+  }
+  function base_0(_this__u8e3s4, extraModifiers, prefix, init) {
+    prefix = prefix === VOID ? null : prefix;
+    return new ComponentStyleProvider(extraModifiers, prefix, base$lambda_0(init));
+  }
+  function _get_extraModifiers__fohold_0($this) {
     return $this.extraModifiers_1;
   }
-  function _get_prefix__wiwq7t_0($this) {
-    return $this.prefix_1;
+  function _get_classNames__oqef2z($this) {
+    return $this.classNames_1;
   }
-  function _get_init__d89e0r_0($this) {
-    return $this.init_1;
-  }
-  function ComponentStyleProvider(extraModifiers, prefix, init) {
-    prefix = prefix === VOID ? null : prefix;
-    CacheByPropertyNameDelegate.call(this);
+  function ImmutableComponentStyle(classSelectors, extraModifiers) {
     this.extraModifiers_1 = extraModifiers;
-    this.prefix_1 = prefix;
-    this.init_1 = init;
+    this.classNames_1 = toSet(_ClassSelectors___get_classNames__impl__eyto04(classSelectors));
   }
-  protoOf(ComponentStyleProvider).create_oysagu_k$ = function (propertyName) {
-    var name = titleCamelCaseToKebabCase(removeSuffix(propertyName, 'Style'));
-    return new ComponentStyle(name, this.extraModifiers_1, this.prefix_1, this.init_1);
+  protoOf(ImmutableComponentStyle).toModifier_7iov47_k$ = function ($composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_ip860b_k$(-1123366866);
+    if (isTraceInProgress()) {
+      traceEventStart(-1123366866, $changed, -1, 'com.varabyte.kobweb.silk.components.style.ImmutableComponentStyle.toModifier (ComponentStyle.kt:287)');
+    }
+    $composer_0.startReplaceableGroup_ip860b_k$(1240656943);
+    // Inline function 'kotlin.collections.filterNot' call
+    // Inline function 'kotlin.collections.filterNotTo' call
+    var this_0 = this.classNames_1;
+    var destination = ArrayList_init_$Create$_0();
+    var tmp0_iterator = this_0.iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var element = tmp0_iterator.next_20eer_k$();
+      // Inline function 'com.varabyte.kobweb.silk.components.style.ImmutableComponentStyle.toModifier.<anonymous>' call
+      // Inline function 'kotlin.text.lowercase' call
+      // Inline function 'kotlin.js.asDynamic' call
+      var tmp$ret$1 = Companion_getInstance_10().get_current_2iudd5_k$($composer_0, 6).get_opposite_ywslzk_k$().get_name_woqyms_k$().toLowerCase();
+      if (!endsWith(element, tmp$ret$1)) {
+        destination.add_utx5q5_k$(element);
+      }
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    var currentClassNames = destination;
+    var tmp;
+    // Inline function 'kotlin.collections.isNotEmpty' call
+    if (!currentClassNames.isEmpty_y1axqb_k$()) {
+      var tmp_0 = Companion_getInstance_0();
+      // Inline function 'kotlin.collections.toTypedArray' call
+      var tmp$ret$6 = copyToArray(currentClassNames);
+      tmp = classNames(tmp_0, tmp$ret$6.slice());
+    } else {
+      tmp = Companion_getInstance_0();
+    }
+    var tmp0 = tmp.then_mmfvo6_k$(this.extraModifiers_1($composer_0, 0));
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    return tmp0;
   };
-  function ComponentStyle_0(extraModifiers, prefix, init) {
-    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
-    prefix = prefix === VOID ? null : prefix;
-    return ComponentStyle_1(ComponentStyle$lambda(extraModifiers), prefix, init);
+  function ComponentModifier() {
   }
-  function ComponentModifiers(colorMode) {
-    StyleModifiers.call(this);
-    this.colorMode_1 = colorMode;
-  }
-  protoOf(ComponentModifiers).get_colorMode_trbg8z_k$ = function () {
-    return this.colorMode_1;
-  };
   function Light(styles) {
     this.styles_1 = styles;
   }
@@ -1503,99 +1592,10 @@
   protoOf(ClassSelectors).equals = function (other) {
     return ClassSelectors__equals_impl_a7r10u(this.value_1, other);
   };
-  function _get_extraModifiers__fohold_0($this) {
-    return $this.extraModifiers_1;
-  }
-  function _get_classNames__oqef2z($this) {
-    return $this.classNames_1;
-  }
-  function ImmutableComponentStyle(classSelectors, extraModifiers) {
-    this.extraModifiers_1 = extraModifiers;
-    this.classNames_1 = toSet(_ClassSelectors___get_classNames__impl__eyto04(classSelectors));
-  }
-  protoOf(ImmutableComponentStyle).toModifier_7iov47_k$ = function ($composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_ip860b_k$(-1123366866);
-    if (isTraceInProgress()) {
-      traceEventStart(-1123366866, $changed, -1, 'com.varabyte.kobweb.silk.components.style.ImmutableComponentStyle.toModifier (ComponentStyle.kt:287)');
-    }
-    $composer_0.startReplaceableGroup_ip860b_k$(1240656943);
-    // Inline function 'kotlin.collections.filterNot' call
-    // Inline function 'kotlin.collections.filterNotTo' call
-    var this_0 = this.classNames_1;
-    var destination = ArrayList_init_$Create$_0();
-    var tmp0_iterator = this_0.iterator_jk1svi_k$();
-    while (tmp0_iterator.hasNext_bitz1p_k$()) {
-      var element = tmp0_iterator.next_20eer_k$();
-      // Inline function 'com.varabyte.kobweb.silk.components.style.ImmutableComponentStyle.toModifier.<anonymous>' call
-      // Inline function 'kotlin.text.lowercase' call
-      // Inline function 'kotlin.js.asDynamic' call
-      var tmp$ret$1 = Companion_getInstance_10().get_current_2iudd5_k$($composer_0, 6).get_opposite_ywslzk_k$().get_name_woqyms_k$().toLowerCase();
-      if (!endsWith(element, tmp$ret$1)) {
-        destination.add_utx5q5_k$(element);
-      }
-    }
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    var currentClassNames = destination;
-    var tmp;
-    // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!currentClassNames.isEmpty_y1axqb_k$()) {
-      var tmp_0 = Companion_getInstance_0();
-      // Inline function 'kotlin.collections.toTypedArray' call
-      var tmp$ret$6 = copyToArray(currentClassNames);
-      tmp = classNames(tmp_0, tmp$ret$6.slice());
-    } else {
-      tmp = Companion_getInstance_0();
-    }
-    var tmp0 = tmp.then_mmfvo6_k$(this.extraModifiers_1($composer_0, 0));
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    return tmp0;
-  };
-  function ComponentStyle_1(extraModifiers, prefix, init) {
-    prefix = prefix === VOID ? null : prefix;
-    return new ComponentStyleProvider(extraModifiers, prefix, init);
-  }
-  function ComponentModifier() {
-  }
-  function toModifier(_this__u8e3s4, variants, $composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_ip860b_k$(-974293209);
-    if (isTraceInProgress()) {
-      traceEventStart(-974293209, $changed, -1, 'com.varabyte.kobweb.silk.components.style.toModifier (ComponentStyle.kt:456)');
-    }
-    var tmp = getValue(get_SilkTheme().get_componentStyles_qanhau_k$(), _this__u8e3s4.name_1).toModifier_7iov47_k$($composer_0, 8);
-    var tmp0_safe_receiver = combine(toList(variants), $composer_0, 8);
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.toModifier_7iov47_k$($composer_0, 0);
-    var tmp0 = tmp.then_mmfvo6_k$(tmp1_elvis_lhs == null ? Companion_getInstance_0() : tmp1_elvis_lhs);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    return tmp0;
-  }
-  function base(_this__u8e3s4, extraModifiers, prefix, init) {
+  function base_1(_this__u8e3s4, className, extraModifiers, init) {
     extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
-    prefix = prefix === VOID ? null : prefix;
-    return base_1(_this__u8e3s4, base$lambda(extraModifiers), prefix, init);
+    return base_2(_this__u8e3s4, className, base$lambda_1(extraModifiers), init);
   }
-  function ComponentBaseModifier(colorMode) {
-    this.colorMode_1 = colorMode;
-  }
-  protoOf(ComponentBaseModifier).get_colorMode_trbg8z_k$ = function () {
-    return this.colorMode_1;
-  };
-  function base_0(_this__u8e3s4, className, extraModifiers, init) {
-    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
-    return base_2(_this__u8e3s4, className, base$lambda_0(extraModifiers), init);
-  }
-  function base_1(_this__u8e3s4, extraModifiers, prefix, init) {
-    prefix = prefix === VOID ? null : prefix;
-    return new ComponentStyleProvider(extraModifiers, prefix, base$lambda_1(init));
-  }
-  var com_varabyte_kobweb_silk_components_style_ComponentStyle$stable;
   function toAttrs_0(_this__u8e3s4, variant, finalHandler, $composer, $changed, $default) {
     var finalHandler_0 = finalHandler;
     var $composer_0 = $composer;
@@ -1613,26 +1613,7 @@
     return tmp0;
   }
   function base_2(_this__u8e3s4, className, extraModifiers, init) {
-    return new ComponentStyle(className, extraModifiers, VOID, base$lambda_2(init));
-  }
-  function ComponentStyle$lambda($extraModifiers) {
-    return function ($composer, $changed) {
-      var $composer_0 = $composer;
-      $composer_0.startReplaceableGroup_ip860b_k$(1744510051);
-      var tmp;
-      if (isTraceInProgress()) {
-        traceEventStart(1744510051, $changed, -1, 'com.varabyte.kobweb.silk.components.style.ComponentStyle.<anonymous> (ComponentStyle.kt:427)');
-        tmp = Unit_getInstance();
-      }
-      var tmp0 = $extraModifiers;
-      var tmp_0;
-      if (isTraceInProgress()) {
-        traceEventEnd();
-        tmp_0 = Unit_getInstance();
-      }
-      $composer_0.endReplaceableGroup_ern0ak_k$();
-      return tmp0;
-    };
+    return new ComponentStyle_0(className, extraModifiers, VOID, base$lambda_2(init));
   }
   function base$lambda($extraModifiers) {
     return function ($composer, $changed) {
@@ -1653,13 +1634,13 @@
       return tmp0;
     };
   }
-  function base$lambda_0($extraModifiers) {
+  function ComponentStyle$lambda($extraModifiers) {
     return function ($composer, $changed) {
       var $composer_0 = $composer;
-      $composer_0.startReplaceableGroup_ip860b_k$(1154855457);
+      $composer_0.startReplaceableGroup_ip860b_k$(1744510051);
       var tmp;
       if (isTraceInProgress()) {
-        traceEventStart(1154855457, $changed, -1, 'com.varabyte.kobweb.silk.components.style.base.<anonymous> (ComponentStyle.kt:396)');
+        traceEventStart(1744510051, $changed, -1, 'com.varabyte.kobweb.silk.components.style.ComponentStyle.<anonymous> (ComponentStyle.kt:427)');
         tmp = Unit_getInstance();
       }
       var tmp0 = $extraModifiers;
@@ -1680,10 +1661,29 @@
       return $init(this_0);
     };
   }
-  function base$lambda_1($init) {
+  function base$lambda_0($init) {
     return function ($this$$receiver) {
       $this$$receiver.base_y8uu8g_k$(base$lambda$lambda($this$$receiver, $init));
       return Unit_getInstance();
+    };
+  }
+  function base$lambda_1($extraModifiers) {
+    return function ($composer, $changed) {
+      var $composer_0 = $composer;
+      $composer_0.startReplaceableGroup_ip860b_k$(1154855457);
+      var tmp;
+      if (isTraceInProgress()) {
+        traceEventStart(1154855457, $changed, -1, 'com.varabyte.kobweb.silk.components.style.base.<anonymous> (ComponentStyle.kt:396)');
+        tmp = Unit_getInstance();
+      }
+      var tmp0 = $extraModifiers;
+      var tmp_0;
+      if (isTraceInProgress()) {
+        traceEventEnd();
+        tmp_0 = Unit_getInstance();
+      }
+      $composer_0.endReplaceableGroup_ern0ak_k$();
+      return tmp0;
     };
   }
   function base$lambda$lambda_0($this_$receiver, $init) {
@@ -1700,11 +1700,88 @@
       return Unit_getInstance();
     };
   }
+  function _get_style__b8k6v4($this) {
+    return $this.style_1;
+  }
+  function _get_extraModifiers__fohold_1($this) {
+    return $this.extraModifiers_1;
+  }
+  function _get_init__d89e0r_1($this) {
+    return $this.init_1;
+  }
+  function ComponentVariantProvider(style, extraModifiers, init) {
+    CacheByPropertyNameDelegate.call(this);
+    this.style_1 = style;
+    this.extraModifiers_1 = extraModifiers;
+    this.init_1 = init;
+  }
+  protoOf(ComponentVariantProvider).create_oysagu_k$ = function (propertyName) {
+    var withoutSuffix = titleCamelCaseToKebabCase(removeSuffix(propertyName, 'Variant'));
+    // Inline function 'kotlin.takeIf' call
+    var this_0 = removeSuffix(removePrefix(withoutSuffix, this.style_1.get_nameWithoutPrefix_lto6iu_k$() + '-'), '-' + this.style_1.get_nameWithoutPrefix_lto6iu_k$());
+    // Inline function 'kotlin.contracts.contract' call
+    var tmp;
+    // Inline function 'com.varabyte.kobweb.silk.components.style.ComponentVariantProvider.create.<anonymous>' call
+    // Inline function 'kotlin.text.isNotEmpty' call
+    if (charSequenceLength(this_0) > 0) {
+      tmp = this_0;
+    } else {
+      tmp = null;
+    }
+    var tmp0_elvis_lhs = tmp;
+    var name = tmp0_elvis_lhs == null ? withoutSuffix : tmp0_elvis_lhs;
+    return this.style_1.addVariant_meui_k$(name, this.extraModifiers_1, this.init_1);
+  };
+  var com_varabyte_kobweb_silk_components_style_ComponentVariant$stable;
   function ComponentVariant() {
   }
   protoOf(ComponentVariant).then_x4ddsu_k$ = function (next) {
     return new CompositeComponentVariant(this, next);
   };
+  function addVariantBase(_this__u8e3s4, extraModifiers, init) {
+    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
+    return addVariantBase_0(_this__u8e3s4, addVariantBase$lambda(extraModifiers), init);
+  }
+  function addVariant(_this__u8e3s4, extraModifiers, init) {
+    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
+    return addVariant_0(_this__u8e3s4, addVariant$lambda(extraModifiers), init);
+  }
+  function combine(_this__u8e3s4, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_ip860b_k$(-1181076790);
+    if (isTraceInProgress()) {
+      traceEventStart(-1181076790, $changed, -1, 'com.varabyte.kobweb.silk.components.style.combine (ComponentVariant.kt:85)');
+    }
+    var tmp$ret$0;
+    $l$block: {
+      // Inline function 'kotlin.collections.reduceOrNull' call
+      var iterator = _this__u8e3s4.iterator_jk1svi_k$();
+      if (!iterator.hasNext_bitz1p_k$()) {
+        tmp$ret$0 = null;
+        break $l$block;
+      }
+      var accumulator = iterator.next_20eer_k$();
+      while (iterator.hasNext_bitz1p_k$()) {
+        // Inline function 'com.varabyte.kobweb.silk.components.style.combine.<anonymous>' call
+        var acc = accumulator;
+        var variant = iterator.next_20eer_k$();
+        var tmp;
+        if (!(acc == null) ? !(variant == null) : false) {
+          tmp = acc.then_x4ddsu_k$(variant);
+        } else {
+          tmp = acc == null ? variant : acc;
+        }
+        accumulator = tmp;
+      }
+      tmp$ret$0 = accumulator;
+    }
+    var tmp0 = tmp$ret$0;
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    return tmp0;
+  }
   function SimpleComponentVariant(style, baseStyle) {
     ComponentVariant.call(this);
     this.style_1 = style;
@@ -1765,83 +1842,6 @@
     $composer_0.endReplaceableGroup_ern0ak_k$();
     return tmp0;
   };
-  function combine(_this__u8e3s4, $composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_ip860b_k$(-1181076790);
-    if (isTraceInProgress()) {
-      traceEventStart(-1181076790, $changed, -1, 'com.varabyte.kobweb.silk.components.style.combine (ComponentVariant.kt:85)');
-    }
-    var tmp$ret$0;
-    $l$block: {
-      // Inline function 'kotlin.collections.reduceOrNull' call
-      var iterator = _this__u8e3s4.iterator_jk1svi_k$();
-      if (!iterator.hasNext_bitz1p_k$()) {
-        tmp$ret$0 = null;
-        break $l$block;
-      }
-      var accumulator = iterator.next_20eer_k$();
-      while (iterator.hasNext_bitz1p_k$()) {
-        // Inline function 'com.varabyte.kobweb.silk.components.style.combine.<anonymous>' call
-        var acc = accumulator;
-        var variant = iterator.next_20eer_k$();
-        var tmp;
-        if (!(acc == null) ? !(variant == null) : false) {
-          tmp = acc.then_x4ddsu_k$(variant);
-        } else {
-          tmp = acc == null ? variant : acc;
-        }
-        accumulator = tmp;
-      }
-      tmp$ret$0 = accumulator;
-    }
-    var tmp0 = tmp$ret$0;
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    return tmp0;
-  }
-  function _get_style__b8k6v4($this) {
-    return $this.style_1;
-  }
-  function _get_extraModifiers__fohold_1($this) {
-    return $this.extraModifiers_1;
-  }
-  function _get_init__d89e0r_1($this) {
-    return $this.init_1;
-  }
-  function ComponentVariantProvider(style, extraModifiers, init) {
-    CacheByPropertyNameDelegate.call(this);
-    this.style_1 = style;
-    this.extraModifiers_1 = extraModifiers;
-    this.init_1 = init;
-  }
-  protoOf(ComponentVariantProvider).create_oysagu_k$ = function (propertyName) {
-    var withoutSuffix = titleCamelCaseToKebabCase(removeSuffix(propertyName, 'Variant'));
-    // Inline function 'kotlin.takeIf' call
-    var this_0 = removeSuffix(removePrefix(withoutSuffix, this.style_1.get_nameWithoutPrefix_lto6iu_k$() + '-'), '-' + this.style_1.get_nameWithoutPrefix_lto6iu_k$());
-    // Inline function 'kotlin.contracts.contract' call
-    var tmp;
-    // Inline function 'com.varabyte.kobweb.silk.components.style.ComponentVariantProvider.create.<anonymous>' call
-    // Inline function 'kotlin.text.isNotEmpty' call
-    if (charSequenceLength(this_0) > 0) {
-      tmp = this_0;
-    } else {
-      tmp = null;
-    }
-    var tmp0_elvis_lhs = tmp;
-    var name = tmp0_elvis_lhs == null ? withoutSuffix : tmp0_elvis_lhs;
-    return this.style_1.addVariant_meui_k$(name, this.extraModifiers_1, this.init_1);
-  };
-  function addVariantBase(_this__u8e3s4, extraModifiers, init) {
-    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
-    return addVariantBase_0(_this__u8e3s4, addVariantBase$lambda(extraModifiers), init);
-  }
-  function addVariant(_this__u8e3s4, extraModifiers, init) {
-    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
-    return addVariant_0(_this__u8e3s4, addVariant$lambda(extraModifiers), init);
-  }
-  var com_varabyte_kobweb_silk_components_style_ComponentVariant$stable;
   function addVariantBase_0(_this__u8e3s4, extraModifiers, init) {
     return new ComponentVariantProvider(_this__u8e3s4, extraModifiers, addVariantBase$lambda_0(init));
   }
@@ -2587,7 +2587,7 @@
   function _init_properties_SpanText_kt__upt1hl() {
     if (!properties_initialized_SpanText_kt_kccny1) {
       properties_initialized_SpanText_kt_kccny1 = true;
-      SpanTextStyle$delegate = ComponentStyle_0(VOID, 'silk', SpanTextStyle$delegate$lambda);
+      SpanTextStyle$delegate = ComponentStyle(VOID, 'silk', SpanTextStyle$delegate$lambda);
     }
   }
   function _get_cache__j44d4h($this) {
@@ -2619,6 +2619,60 @@
     return LocalDeferred;
   }
   var LocalDeferred;
+  function deferRender(content, $composer, $changed) {
+    _init_properties_Deferred_kt__im2yn();
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1215818569);
+    var $dirty = $changed;
+    if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-1215818569, $dirty, -1, 'com.varabyte.kobweb.silk.defer.deferRender (Deferred.kt:59)');
+      }
+      // Inline function 'androidx.compose.runtime.CompositionLocal.current' call
+      var this_0 = get_LocalDeferred();
+      var $composer_1 = $composer_0;
+      sourceInformationMarkerStart($composer_1, 2023513938, 'CC:CompositionLocal.kt#9igjgp');
+      var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
+      sourceInformationMarkerEnd($composer_1);
+      var state = tmp0;
+      $composer_0.startReplaceableGroup_ip860b_k$(-1824718458);
+      // Inline function 'androidx.compose.runtime.cache' call
+      var this_1 = $composer_0;
+      var invalid = $composer_0.changed_ga7h3f_k$(state);
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = this_1.rememberedValue_4dg93v_k$();
+      var tmp;
+      if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
+        // Inline function 'com.varabyte.kobweb.silk.defer.deferRender.<anonymous>' call
+        var value = state.append_nc4352_k$();
+        this_1.updateRememberedValue_l1wh71_k$(value);
+        tmp = value;
+      } else {
+        tmp = it;
+      }
+      var tmp_0 = tmp;
+      var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
+      var deferredEntry = tmp0_group;
+      deferredEntry.content_1 = content;
+      DisposableEffect(deferredEntry, deferRender$lambda(deferredEntry), $composer_0, 8);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp1_safe_receiver == null)
+      null;
+    else {
+      tmp1_safe_receiver.updateScope_t8jcf_k$(deferRender$lambda_0(content, $changed));
+    }
+  }
   function DeferredComposablesState$Entry$dismiss$lambda(this$0, this$1) {
     return function () {
       this$0.entries_1.remove_an8aut_k$(this$1);
@@ -2815,64 +2869,29 @@
       new ComposableSingletons$DeferredKt();
     return ComposableSingletons$DeferredKt_instance;
   }
-  function deferRender(content, $composer, $changed) {
-    _init_properties_Deferred_kt__im2yn();
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1215818569);
-    var $dirty = $changed;
-    if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (isTraceInProgress()) {
-        traceEventStart(-1215818569, $dirty, -1, 'com.varabyte.kobweb.silk.defer.deferRender (Deferred.kt:59)');
-      }
-      // Inline function 'androidx.compose.runtime.CompositionLocal.current' call
-      var this_0 = get_LocalDeferred();
-      var $composer_1 = $composer_0;
-      sourceInformationMarkerStart($composer_1, 2023513938, 'CC:CompositionLocal.kt#9igjgp');
-      var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
-      sourceInformationMarkerEnd($composer_1);
-      var state = tmp0;
-      $composer_0.startReplaceableGroup_ip860b_k$(-1824718458);
-      // Inline function 'androidx.compose.runtime.cache' call
-      var this_1 = $composer_0;
-      var invalid = $composer_0.changed_ga7h3f_k$(state);
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_1.rememberedValue_4dg93v_k$();
-      var tmp;
-      if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
-        // Inline function 'com.varabyte.kobweb.silk.defer.deferRender.<anonymous>' call
-        var value = state.append_nc4352_k$();
-        this_1.updateRememberedValue_l1wh71_k$(value);
-        tmp = value;
-      } else {
-        tmp = it;
-      }
-      var tmp_0 = tmp;
-      var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.endReplaceableGroup_ern0ak_k$();
-      var deferredEntry = tmp0_group;
-      deferredEntry.content_1 = content;
-      DisposableEffect(deferredEntry, deferRender$lambda(deferredEntry), $composer_0, 8);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp1_safe_receiver == null)
-      null;
-    else {
-      tmp1_safe_receiver.updateScope_t8jcf_k$(deferRender$lambda_0(content, $changed));
-    }
-  }
   function LocalDeferred$lambda() {
     _init_properties_Deferred_kt__im2yn();
     var message = 'Attempting to defer rendering without calling `renderWithDeferred`, a required pre-requisite.';
     throw IllegalStateException_init_$Create$(toString(message));
+  }
+  function _no_name_provided__qut3iv($deferredEntry) {
+    this.$deferredEntry_1 = $deferredEntry;
+  }
+  protoOf(_no_name_provided__qut3iv).dispose_3nnxhr_k$ = function () {
+    // Inline function 'com.varabyte.kobweb.silk.defer.deferRender.<anonymous>.<anonymous>' call
+    this.$deferredEntry_1.dismiss_53zbra_k$();
+  };
+  function deferRender$lambda($deferredEntry) {
+    return function ($this$DisposableEffect) {
+      // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
+      return new _no_name_provided__qut3iv($deferredEntry);
+    };
+  }
+  function deferRender$lambda_0($content, $$changed) {
+    return function ($composer, $force) {
+      deferRender($content, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
   }
   function renderWithDeferred$lambda($content, $state) {
     return function ($composer, $changed) {
@@ -2908,25 +2927,6 @@
       return Unit_getInstance();
     };
   }
-  function _no_name_provided__qut3iv($deferredEntry) {
-    this.$deferredEntry_1 = $deferredEntry;
-  }
-  protoOf(_no_name_provided__qut3iv).dispose_3nnxhr_k$ = function () {
-    // Inline function 'com.varabyte.kobweb.silk.defer.deferRender.<anonymous>.<anonymous>' call
-    this.$deferredEntry_1.dismiss_53zbra_k$();
-  };
-  function deferRender$lambda($deferredEntry) {
-    return function ($this$DisposableEffect) {
-      // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      return new _no_name_provided__qut3iv($deferredEntry);
-    };
-  }
-  function deferRender$lambda_0($content, $$changed) {
-    return function ($composer, $force) {
-      deferRender($content, $composer, updateChangedFlags($$changed | 1));
-      return Unit_getInstance();
-    };
-  }
   var properties_initialized_Deferred_kt_1ab2bj;
   function _init_properties_Deferred_kt__im2yn() {
     if (!properties_initialized_Deferred_kt_1ab2bj) {
@@ -2956,20 +2956,6 @@
   };
   protoOf(InitSilkContext).get_theme_iz24rk_k$ = function () {
     return this.theme_1;
-  };
-  function InitSilk() {
-  }
-  protoOf(InitSilk).equals = function (other) {
-    if (!(other instanceof InitSilk))
-      return false;
-    other instanceof InitSilk || THROW_CCE();
-    return true;
-  };
-  protoOf(InitSilk).hashCode = function () {
-    return 0;
-  };
-  protoOf(InitSilk).toString = function () {
-    return '@com.varabyte.kobweb.silk.init.InitSilk()';
   };
   function initSilk(additionalInit) {
     var tmp;
@@ -3001,6 +2987,20 @@
     SilkStylesheetInstance_getInstance().registerStylesAndKeyframesInto_i9rw0p_k$(SilkStyleSheet_getInstance());
     get_SilkTheme().registerStyles_qysvzp_k$(SilkStyleSheet_getInstance());
   }
+  function InitSilk() {
+  }
+  protoOf(InitSilk).equals = function (other) {
+    if (!(other instanceof InitSilk))
+      return false;
+    other instanceof InitSilk || THROW_CCE();
+    return true;
+  };
+  protoOf(InitSilk).hashCode = function () {
+    return 0;
+  };
+  protoOf(InitSilk).toString = function () {
+    return '@com.varabyte.kobweb.silk.init.InitSilk()';
+  };
   function additionalSilkInitialization$lambda(it) {
     _init_properties_InitSilk_kt__vukue3();
     return Unit_getInstance();
@@ -3171,13 +3171,6 @@
   }
   function SilkStylesheet() {
   }
-  function registerStyleBase(_this__u8e3s4, cssSelector, extraModifiers, init) {
-    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
-    registerStyleBase_0(_this__u8e3s4, cssSelector, registerStyleBase$lambda(extraModifiers), init);
-  }
-  function registerStyleBase_0(_this__u8e3s4, cssSelector, extraModifiers, init) {
-    _this__u8e3s4.registerStyle_3m3zng_k$(cssSelector, extraModifiers, registerStyleBase$lambda_0(init));
-  }
   function _get_styles__6s6eeh($this) {
     return $this.styles_1;
   }
@@ -3194,7 +3187,7 @@
     tmp_0.keyframes_1 = LinkedHashMap_init_$Create$_0();
   }
   protoOf(SilkStylesheetInstance).registerStyle_3m3zng_k$ = function (cssSelector, extraModifiers, init) {
-    this.styles_1.add_utx5q5_k$(new ComponentStyle(cssSelector, extraModifiers, null, init));
+    this.styles_1.add_utx5q5_k$(new ComponentStyle_0(cssSelector, extraModifiers, null, init));
   };
   protoOf(SilkStylesheetInstance).registerKeyframes_n0b7tv_k$ = function (name, build) {
     // Inline function 'kotlin.require' call
@@ -3256,6 +3249,13 @@
       new SilkStylesheetInstance();
     return SilkStylesheetInstance_instance;
   }
+  function registerStyleBase(_this__u8e3s4, cssSelector, extraModifiers, init) {
+    extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
+    registerStyleBase_0(_this__u8e3s4, cssSelector, registerStyleBase$lambda(extraModifiers), init);
+  }
+  function registerStyleBase_0(_this__u8e3s4, cssSelector, extraModifiers, init) {
+    _this__u8e3s4.registerStyle_3m3zng_k$(cssSelector, extraModifiers, registerStyleBase$lambda_0(init));
+  }
   function registerStyleBase$lambda($extraModifiers) {
     return function ($composer, $changed) {
       var $composer_0 = $composer;
@@ -3293,7 +3293,101 @@
     return _SilkTheme;
   }
   var _SilkTheme;
+  function get_SilkTheme() {
+    var tmp0_elvis_lhs = _SilkTheme;
+    var tmp;
+    if (tmp0_elvis_lhs == null) {
+      var message = "You can't access SilkTheme before first calling SilkApp";
+      throw IllegalStateException_init_$Create$(toString(message));
+    } else {
+      tmp = tmp0_elvis_lhs;
+    }
+    return tmp;
+  }
+  function _get_mutableSilkTheme__kqd2n1($this) {
+    return $this.mutableSilkTheme_1;
+  }
   function _get__componentStyles__eema7p($this) {
+    return $this._componentStyles_1;
+  }
+  function ImmutableSilkTheme(mutableSilkTheme) {
+    this.mutableSilkTheme_1 = mutableSilkTheme;
+    var tmp = this;
+    var tmp_0 = this.mutableSilkTheme_1.palettes_1;
+    tmp.palettes_1 = isInterface(tmp_0, Palettes) ? tmp_0 : THROW_CCE();
+    this.breakpoints_1 = this.mutableSilkTheme_1.breakpoints_1;
+    var tmp_1 = this;
+    // Inline function 'kotlin.collections.mutableMapOf' call
+    tmp_1._componentStyles_1 = LinkedHashMap_init_$Create$_0();
+    this.componentStyles_1 = this._componentStyles_1;
+  }
+  protoOf(ImmutableSilkTheme).get_palettes_f7ft27_k$ = function () {
+    return this.palettes_1;
+  };
+  protoOf(ImmutableSilkTheme).get_palette_vetkex_k$ = function ($composer, $changed) {
+    var $composer_0 = $composer;
+    if (isTraceInProgress()) {
+      traceEventStart(-1777229, $changed, -1, 'com.varabyte.kobweb.silk.theme.ImmutableSilkTheme.<get-palette> (SilkTheme.kt:350)');
+    }
+    var tmp0 = this.palettes_1.get_4bsmki_k$(Companion_getInstance_10().get_current_2iudd5_k$($composer_0, 6));
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    return tmp0;
+  };
+  protoOf(ImmutableSilkTheme).get_breakpoints_k65pzb_k$ = function () {
+    return this.breakpoints_1;
+  };
+  protoOf(ImmutableSilkTheme).get_componentStyles_qanhau_k$ = function () {
+    return this.componentStyles_1;
+  };
+  protoOf(ImmutableSilkTheme).registerStyles_qysvzp_k$ = function (componentStyleSheet) {
+    // Inline function 'kotlin.check' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.check' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!!(_SilkTheme == null)) {
+      // Inline function 'kotlin.check.<anonymous>' call
+      var message = 'Check failed.';
+      throw IllegalStateException_init_$Create$(toString(message));
+    }
+    // Inline function 'kotlin.collections.forEach' call
+    var tmp0_iterator = this.mutableSilkTheme_1.componentStyles_1.get_values_ksazhn_k$().iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var element = tmp0_iterator.next_20eer_k$();
+      // Inline function 'com.varabyte.kobweb.silk.theme.ImmutableSilkTheme.registerStyles.<anonymous>' call
+      var classNames = element.addStylesInto_gj0mv0_k$(componentStyleSheet);
+      // Inline function 'kotlin.collections.set' call
+      var this_0 = this._componentStyles_1;
+      var key = element.get_name_woqyms_k$();
+      var value = element.intoImmutableStyle_g690ow_k$(classNames);
+      this_0.put_4fpzoq_k$(key, value);
+    }
+    // Inline function 'kotlin.collections.forEach' call
+    // Inline function 'kotlin.collections.filterIsInstance' call
+    // Inline function 'kotlin.collections.filterIsInstanceTo' call
+    var this_1 = this.mutableSilkTheme_1.componentVariants_1.get_values_ksazhn_k$();
+    var destination = ArrayList_init_$Create$_0();
+    var tmp0_iterator_0 = this_1.iterator_jk1svi_k$();
+    while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
+      var element_0 = tmp0_iterator_0.next_20eer_k$();
+      if (element_0 instanceof SimpleComponentVariant) {
+        destination.add_utx5q5_k$(element_0);
+      }
+    }
+    var tmp0_iterator_1 = destination.iterator_jk1svi_k$();
+    while (tmp0_iterator_1.hasNext_bitz1p_k$()) {
+      var element_1 = tmp0_iterator_1.next_20eer_k$();
+      // Inline function 'com.varabyte.kobweb.silk.theme.ImmutableSilkTheme.registerStyles.<anonymous>' call
+      var classNames_0 = element_1.addStylesInto_gj0mv0_k$(componentStyleSheet);
+      // Inline function 'kotlin.collections.set' call
+      var this_2 = this._componentStyles_1;
+      var key_0 = element_1.get_style_iyqetk_k$().get_name_woqyms_k$();
+      var value_0 = element_1.intoImmutableStyle_g690ow_k$(classNames_0);
+      this_2.put_4fpzoq_k$(key_0, value_0);
+    }
+  };
+  function _get__componentStyles__eema7p_0($this) {
     return $this._componentStyles_1;
   }
   function _get_overriddenStyles__hyvinf($this) {
@@ -3429,7 +3523,7 @@
     // Inline function 'kotlin.collections.set' call
     var this_1 = this._componentStyles_1;
     var key_0 = style.get_name_woqyms_k$();
-    var value = new ComponentStyle(style.get_nameWithoutPrefix_lto6iu_k$(), extraModifiers, style.get_prefix_i78za3_k$(), init);
+    var value = new ComponentStyle_0(style.get_nameWithoutPrefix_lto6iu_k$(), extraModifiers, style.get_prefix_i78za3_k$(), init);
     this_1.put_4fpzoq_k$(key_0, value);
   };
   protoOf(MutableSilkTheme).registerComponentVariants_gvd8pt_k$ = function (variants) {
@@ -3515,100 +3609,6 @@
     var value = variant_0.get_baseStyle_lpil3d_k$().addVariant_meui_k$(variant_0.get_name_woqyms_k$(), extraModifiers, init);
     this_1.put_4fpzoq_k$(key_0, value);
   };
-  function _get_mutableSilkTheme__kqd2n1($this) {
-    return $this.mutableSilkTheme_1;
-  }
-  function _get__componentStyles__eema7p_0($this) {
-    return $this._componentStyles_1;
-  }
-  function ImmutableSilkTheme(mutableSilkTheme) {
-    this.mutableSilkTheme_1 = mutableSilkTheme;
-    var tmp = this;
-    var tmp_0 = this.mutableSilkTheme_1.palettes_1;
-    tmp.palettes_1 = isInterface(tmp_0, Palettes) ? tmp_0 : THROW_CCE();
-    this.breakpoints_1 = this.mutableSilkTheme_1.breakpoints_1;
-    var tmp_1 = this;
-    // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp_1._componentStyles_1 = LinkedHashMap_init_$Create$_0();
-    this.componentStyles_1 = this._componentStyles_1;
-  }
-  protoOf(ImmutableSilkTheme).get_palettes_f7ft27_k$ = function () {
-    return this.palettes_1;
-  };
-  protoOf(ImmutableSilkTheme).get_palette_vetkex_k$ = function ($composer, $changed) {
-    var $composer_0 = $composer;
-    if (isTraceInProgress()) {
-      traceEventStart(-1777229, $changed, -1, 'com.varabyte.kobweb.silk.theme.ImmutableSilkTheme.<get-palette> (SilkTheme.kt:350)');
-    }
-    var tmp0 = this.palettes_1.get_4bsmki_k$(Companion_getInstance_10().get_current_2iudd5_k$($composer_0, 6));
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    return tmp0;
-  };
-  protoOf(ImmutableSilkTheme).get_breakpoints_k65pzb_k$ = function () {
-    return this.breakpoints_1;
-  };
-  protoOf(ImmutableSilkTheme).get_componentStyles_qanhau_k$ = function () {
-    return this.componentStyles_1;
-  };
-  protoOf(ImmutableSilkTheme).registerStyles_qysvzp_k$ = function (componentStyleSheet) {
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!!(_SilkTheme == null)) {
-      // Inline function 'kotlin.check.<anonymous>' call
-      var message = 'Check failed.';
-      throw IllegalStateException_init_$Create$(toString(message));
-    }
-    // Inline function 'kotlin.collections.forEach' call
-    var tmp0_iterator = this.mutableSilkTheme_1.componentStyles_1.get_values_ksazhn_k$().iterator_jk1svi_k$();
-    while (tmp0_iterator.hasNext_bitz1p_k$()) {
-      var element = tmp0_iterator.next_20eer_k$();
-      // Inline function 'com.varabyte.kobweb.silk.theme.ImmutableSilkTheme.registerStyles.<anonymous>' call
-      var classNames = element.addStylesInto_gj0mv0_k$(componentStyleSheet);
-      // Inline function 'kotlin.collections.set' call
-      var this_0 = this._componentStyles_1;
-      var key = element.get_name_woqyms_k$();
-      var value = element.intoImmutableStyle_g690ow_k$(classNames);
-      this_0.put_4fpzoq_k$(key, value);
-    }
-    // Inline function 'kotlin.collections.forEach' call
-    // Inline function 'kotlin.collections.filterIsInstance' call
-    // Inline function 'kotlin.collections.filterIsInstanceTo' call
-    var this_1 = this.mutableSilkTheme_1.componentVariants_1.get_values_ksazhn_k$();
-    var destination = ArrayList_init_$Create$_0();
-    var tmp0_iterator_0 = this_1.iterator_jk1svi_k$();
-    while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
-      var element_0 = tmp0_iterator_0.next_20eer_k$();
-      if (element_0 instanceof SimpleComponentVariant) {
-        destination.add_utx5q5_k$(element_0);
-      }
-    }
-    var tmp0_iterator_1 = destination.iterator_jk1svi_k$();
-    while (tmp0_iterator_1.hasNext_bitz1p_k$()) {
-      var element_1 = tmp0_iterator_1.next_20eer_k$();
-      // Inline function 'com.varabyte.kobweb.silk.theme.ImmutableSilkTheme.registerStyles.<anonymous>' call
-      var classNames_0 = element_1.addStylesInto_gj0mv0_k$(componentStyleSheet);
-      // Inline function 'kotlin.collections.set' call
-      var this_2 = this._componentStyles_1;
-      var key_0 = element_1.get_style_iyqetk_k$().get_name_woqyms_k$();
-      var value_0 = element_1.intoImmutableStyle_g690ow_k$(classNames_0);
-      this_2.put_4fpzoq_k$(key_0, value_0);
-    }
-  };
-  function get_SilkTheme() {
-    var tmp0_elvis_lhs = _SilkTheme;
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      var message = "You can't access SilkTheme before first calling SilkApp";
-      throw IllegalStateException_init_$Create$(toString(message));
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    return tmp;
-  }
   function modifyComponentStyleBase(_this__u8e3s4, style, extraModifiers, init) {
     extraModifiers = extraModifiers === VOID ? Companion_getInstance_0() : extraModifiers;
     modifyComponentStyleBase_0(_this__u8e3s4, style, modifyComponentStyleBase$lambda(extraModifiers), init);
@@ -3737,12 +3737,6 @@
     return LocalColorMode;
   }
   var LocalColorMode;
-  function suffixedWith(_this__u8e3s4, colorMode) {
-    _init_properties_ColorMode_kt__lz79sc();
-    // Inline function 'kotlin.text.lowercase' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return _this__u8e3s4 + '_' + colorMode.get_name_woqyms_k$().toLowerCase();
-  }
   var ColorMode_LIGHT_instance;
   var ColorMode_DARK_instance;
   function Companion_5() {
@@ -3847,6 +3841,12 @@
   protoOf(ColorMode).provide_53xuu7_k$ = function () {
     return get_LocalColorMode().provides_3agxel_k$(mutableStateOf(this));
   };
+  function suffixedWith(_this__u8e3s4, colorMode) {
+    _init_properties_ColorMode_kt__lz79sc();
+    // Inline function 'kotlin.text.lowercase' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return _this__u8e3s4 + '_' + colorMode.get_name_woqyms_k$().toLowerCase();
+  }
   function rootColorModeState$delegate$lambda() {
     _init_properties_ColorMode_kt__lz79sc();
     return mutableStateOf(Companion_getInstance_9().get_Instance_ljxvgi_k$().get_initialColorMode_i1z52t_k$());
@@ -4868,20 +4868,6 @@
   var com_varabyte_kobweb_silk_theme_colors_ColorSchemes_Blue$stable;
   function ColorScheme() {
   }
-  function MutablePalettes() {
-    this.light_1 = new MutablePalette();
-    this.dark_1 = new MutablePalette();
-  }
-  protoOf(MutablePalettes).get_light_iuogdp_k$ = function () {
-    return this.light_1;
-  };
-  protoOf(MutablePalettes).get_dark_wokkvz_k$ = function () {
-    return this.dark_1;
-  };
-  function Palettes() {
-  }
-  function Palette() {
-  }
   function _get_palette__j9ubre($this) {
     return $this.palette_1;
   }
@@ -4934,6 +4920,20 @@
   protoOf(MutablePalette).set_17rjxm_k$ = function (key, value) {
     // Inline function 'kotlin.collections.set' call
     this.colors_1.put_4fpzoq_k$(key, value);
+  };
+  function Palette() {
+  }
+  function Palettes() {
+  }
+  function MutablePalettes() {
+    this.light_1 = new MutablePalette();
+    this.dark_1 = new MutablePalette();
+  }
+  protoOf(MutablePalettes).get_light_iuogdp_k$ = function () {
+    return this.light_1;
+  };
+  protoOf(MutablePalettes).get_dark_wokkvz_k$ = function () {
+    return this.dark_1;
   };
   function toPalette(_this__u8e3s4) {
     return get_SilkTheme().get_palettes_f7ft27_k$().get_4bsmki_k$(_this__u8e3s4);
@@ -5074,8 +5074,8 @@
   //region block: post-declaration
   protoOf(SilkStylesheetInstance).registerStyle_ug9rpu_k$ = registerStyle;
   protoOf(SilkStylesheetInstance).registerStyle$default_n7lw5n_k$ = registerStyle$default;
-  protoOf(MutablePalettes).get_4bsmki_k$ = get;
   protoOf(MutablePalette).getValue_r24mvz_k$ = getValue_0;
+  protoOf(MutablePalettes).get_4bsmki_k$ = get;
   //endregion
   //region block: init
   com_varabyte_kobweb_silk_components_animation_Keyframes$stable = 8;
@@ -5092,7 +5092,7 @@
   _.$_$.d = displayIfAtLeast;
   _.$_$.e = displayUntil;
   _.$_$.f = get_entries;
-  _.$_$.g = ComponentStyle_0;
+  _.$_$.g = ComponentStyle;
   _.$_$.h = ComponentStyle_1;
   _.$_$.i = get_active;
   _.$_$.j = addVariantBase;
@@ -5100,8 +5100,8 @@
   _.$_$.l = get_ariaDisabled;
   _.$_$.m = get_ariaInvalid;
   _.$_$.n = base;
-  _.$_$.o = base_1;
-  _.$_$.p = base_0;
+  _.$_$.o = base_0;
+  _.$_$.p = base_1;
   _.$_$.q = get_disabled;
   _.$_$.r = get_focusVisible;
   _.$_$.s = get_hover;
