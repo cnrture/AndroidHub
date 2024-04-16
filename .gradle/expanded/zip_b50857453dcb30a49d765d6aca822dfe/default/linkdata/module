@@ -1,0 +1,3 @@
+
+,<org.jetbrains.kotlin:kotlin-dom-api-compat>:kotlin.browser:
+kotlin.dom:kotlinx.browser:kotlinx.dom:org.khronos.webgl:org.w3c.css.masking:org.w3c.dom:org.w3c.dom.clipboard:org.w3c.dom.css:org.w3c.dom.encryptedmedia:org.w3c.dom.events:org.w3c.dom.mediacapture:org.w3c.dom.mediasource:org.w3c.dom.parsing:org.w3c.dom.pointerevents:org.w3c.dom.svg:org.w3c.dom.url:org.w3c.fetch:org.w3c.files:org.w3c.notifications:org.w3c.performance:org.w3c.workers:org.w3c.xhr

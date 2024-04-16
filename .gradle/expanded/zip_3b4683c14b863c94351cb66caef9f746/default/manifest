@@ -1,0 +1,10 @@
+builtins_platform=JS
+unique_name=io.ktor\:ktor-websocket-serialization
+compiler_version=1.8.22
+depends=io.ktor\:ktor-serialization io.ktor\:ktor-websockets io.ktor\:ktor-http io.ktor\:ktor-utils io.ktor\:ktor-io org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+serializedKlibFingerprint=7s3yjunsmhf2.2xd2g6hnvmfi4
+serializedIrFileFingerprints=SerializedIrFileFingerprint(fileFingerprint\=87895p59yhuw.1z9bqqrmx5n9m)
+jsOutputName=ktor-ktor-websocket-serialization
+abi_version=1.7.0
+metadata_version=1.4.1
+ir_version=1.0.0

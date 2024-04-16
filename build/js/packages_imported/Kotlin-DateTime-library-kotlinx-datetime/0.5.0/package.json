@@ -1,0 +1,14 @@
+{
+  "name": "Kotlin-DateTime-library-kotlinx-datetime",
+  "version": "0.5.0",
+  "main": "Kotlin-DateTime-library-kotlinx-datetime.js",
+  "types": "Kotlin-DateTime-library-kotlinx-datetime.d.ts",
+  "devDependencies": {},
+  "dependencies": {
+    "@js-joda/core": "3.2.0",
+    "format-util": "^1.0.5"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

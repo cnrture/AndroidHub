@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=JS
+compiler_version=1.9.20-dev-9102
+depends=kotlin
+ir_signature_versions=1,2
+jsOutputName=kotlin-kotlinx-atomicfu-runtime
+metadata_version=1.4.1
+serializedIrFileFingerprints=2v1y7c8xmcz78.23lr8eky3h2wr
+serializedKlibFingerprint=20cszrzaui7yn.33g78oirivwz2
+unique_name=org.jetbrains.kotlin\:kotlinx-atomicfu-runtime

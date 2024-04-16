@@ -1,0 +1,10 @@
+builtins_platform=JS
+unique_name=io.ktor\:ktor-serialization-kotlinx
+compiler_version=1.8.22
+depends=io.ktor\:ktor-serialization io.ktor\:ktor-websockets io.ktor\:ktor-http io.ktor\:ktor-utils io.ktor\:ktor-io org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:kotlinx-serialization-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+serializedKlibFingerprint=ri5mwfs6acda.3hxa4302tlyh0
+serializedIrFileFingerprints=SerializedIrFileFingerprint(fileFingerprint\=qgv4v5uamnwz.2zal45fda43mr) SerializedIrFileFingerprint(fileFingerprint\=15jq9orxko2r7.dl80l0q6q7y2) SerializedIrFileFingerprint(fileFingerprint\=11w0s2plwhorw.2lv5g4zy1gt8) SerializedIrFileFingerprint(fileFingerprint\=16wqujj3ctlwv.1rcsx3uszbtej) SerializedIrFileFingerprint(fileFingerprint\=3ch3hixdpycd2.2r6f4oqiij2xt)
+jsOutputName=ktor-ktor-serialization-kotlinx
+abi_version=1.7.0
+metadata_version=1.4.1
+ir_version=1.0.0

@@ -1,0 +1,2 @@
+
+<io.ktor:ktor-http>:io.ktor.content:io.ktor.http:io.ktor.http.auth:io.ktor.http.content:io.ktor.http.parsing:io.ktor.http.parsing.regex:io.ktor.http.websocket

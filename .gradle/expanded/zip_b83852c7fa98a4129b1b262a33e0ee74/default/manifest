@@ -1,0 +1,10 @@
+builtins_platform=JS
+unique_name=io.insert-koin\:koin-compose
+compiler_version=1.8.22
+depends=org.jetbrains.compose.runtime\:runtime io.insert-koin\:koin-core org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+serializedKlibFingerprint=22cebbpx8vw9w.1hf6tl1uie32y
+serializedIrFileFingerprints=SerializedIrFileFingerprint(fileFingerprint\=1oinblu8h1l4x.32tochmlwsggi) SerializedIrFileFingerprint(fileFingerprint\=22t7z83i7byk8.2g7446aplet2t) SerializedIrFileFingerprint(fileFingerprint\=2dekq5jazq9xk.1pm3qancej43w) SerializedIrFileFingerprint(fileFingerprint\=ke026xqtzjcd.9i1sneltw7is) SerializedIrFileFingerprint(fileFingerprint\=355qijmj817tk.1adu0s7qsu5oq) SerializedIrFileFingerprint(fileFingerprint\=v90ch4im30t4.1uzh58ld4dodu) SerializedIrFileFingerprint(fileFingerprint\=1x2ft7xpwseq0.1cbkol3br121r)
+jsOutputName=compose-koin-compose
+abi_version=1.7.0
+metadata_version=1.4.1
+ir_version=1.0.0

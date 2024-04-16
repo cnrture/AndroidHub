@@ -1,0 +1,10 @@
+builtins_platform=JS
+unique_name=io.ktor\:ktor-websockets
+compiler_version=1.8.22
+depends=io.ktor\:ktor-http io.ktor\:ktor-utils io.ktor\:ktor-io org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+serializedKlibFingerprint=b47tl8kaqvbu.3d34xzcqjn7uv
+serializedIrFileFingerprints=SerializedIrFileFingerprint(fileFingerprint\=3qh53ltdqadvq.3hui64f8rjfgf) SerializedIrFileFingerprint(fileFingerprint\=14rmrgv5iu3u4.20c3bn677lhr8) SerializedIrFileFingerprint(fileFingerprint\=6wb7amjtysdf.1ci9wm3m80el8) SerializedIrFileFingerprint(fileFingerprint\=1cwzi72cvi7qc.203qz4tzbvcq8) SerializedIrFileFingerprint(fileFingerprint\=133s8dmlubyq5.w3pn4o5mvcz2) SerializedIrFileFingerprint(fileFingerprint\=1rwvgfrhq02s2.knoenwadr79u) SerializedIrFileFingerprint(fileFingerprint\=3o2s2jd3wybgp.3s9hs0j6qnl29) SerializedIrFileFingerprint(fileFingerprint\=28ka41a2bac3s.13q085nqjb999) SerializedIrFileFingerprint(fileFingerprint\=kdj25ix0clcu.2y5eb861pwupd) SerializedIrFileFingerprint(fileFingerprint\=3k6dm49vs9k7j.333akfz6pc9ym) SerializedIrFileFingerprint(fileFingerprint\=28dbrvdcjpw2d.2p5apcir3iv1g) SerializedIrFileFingerprint(fileFingerprint\=2192476z22pkq.1u736cb7orw1e) SerializedIrFileFingerprint(fileFingerprint\=23b0di8ftk036.13jmi44y3l2t1) SerializedIrFileFingerprint(fileFingerprint\=1eitjg8wq4ynk.2fld9rionbs3u) SerializedIrFileFingerprint(fileFingerprint\=2acuwhu4t4hgd.302rsxamwk29i)
+jsOutputName=ktor-ktor-websockets
+abi_version=1.7.0
+metadata_version=1.4.1
+ir_version=1.0.0

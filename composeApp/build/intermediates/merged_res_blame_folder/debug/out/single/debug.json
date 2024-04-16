@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.canerture.androidhub.composeApp-merged_res-50:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.canerture.androidhub.composeApp-androidMain-51:/mipmap-xxxhdpi/ic_launcher_round.png"
+    }
+]

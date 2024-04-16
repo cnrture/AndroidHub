@@ -1,0 +1,10 @@
+builtins_platform=JS
+unique_name=io.ktor\:ktor-client-content-negotiation
+compiler_version=1.8.22
+depends=io.ktor\:ktor-client-core io.ktor\:ktor-websocket-serialization io.ktor\:ktor-serialization io.ktor\:ktor-events io.ktor\:ktor-websockets io.ktor\:ktor-http io.ktor\:ktor-utils io.ktor\:ktor-io org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+serializedKlibFingerprint=9acu8yr161en.19yds73521zyt
+serializedIrFileFingerprints=SerializedIrFileFingerprint(fileFingerprint\=1nnehxjkfjdfy.etfhdipl7a34) SerializedIrFileFingerprint(fileFingerprint\=10zsjhkdynlsg.3ebf0pkmqgjwd) SerializedIrFileFingerprint(fileFingerprint\=utq1xg9ihz9j.fvezhj4xbdol)
+jsOutputName=ktor-ktor-client-content-negotiation
+abi_version=1.7.0
+metadata_version=1.4.1
+ir_version=1.0.0

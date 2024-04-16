@@ -1,0 +1,8 @@
+builtins_platform=JS
+unique_name=dev.icerock.moko\:mvvm-internal
+compiler_version=1.8.10
+depends=org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+jsOutputName=moko-mvvm-mvvm-internal
+abi_version=1.7.0
+metadata_version=1.4.1
+ir_version=1.0.0

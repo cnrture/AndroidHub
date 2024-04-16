@@ -1,0 +1,2 @@
+
+<io.ktor:ktor-utils>:io.ktor.util:io.ktor.util.cio:io.ktor.util.collections:io.ktor.util.converters:io.ktor.util.date:io.ktor.util.debug:io.ktor.util.debug.plugins:io.ktor.util.internal:io.ktor.util.logging:io.ktor.util.network:io.ktor.util.pipeline:io.ktor.util.reflect

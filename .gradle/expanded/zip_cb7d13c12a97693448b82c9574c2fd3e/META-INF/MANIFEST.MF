@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Implementation-Vendor: JetBrains
+Implementation-Title: kotlin-stdlib-js
+Implementation-Version: 1.9.22-release-704
+Kotlin-Runtime-Component: Main
+Kotlin-Version: 1.9
+Multi-Release: true
+

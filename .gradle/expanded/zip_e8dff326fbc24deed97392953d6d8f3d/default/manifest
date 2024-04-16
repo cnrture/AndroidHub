@@ -1,0 +1,9 @@
+builtins_platform=JS
+unique_name=co.touchlab\:stately-strict
+compiler_version=1.9.10
+depends=org.jetbrains.kotlin\:kotlin-dom-api-compat kotlin
+serializedKlibFingerprint=3rf5p5dnvlr3l.1963omft8gubu
+serializedIrFileFingerprints=bor7o4u898vm.1h9fmhfo2c4mp 26ijkcwki96e4.3dd0ngj8vpd21
+jsOutputName=Stately-stately-strict
+abi_version=1.8.0
+metadata_version=1.4.1

@@ -1,0 +1,9 @@
+builtins_platform=JS
+unique_name=voyager\:voyager-navigator
+compiler_version=1.9.10
+depends=voyager\:voyager-core org.jetbrains.compose.runtime\:runtime-saveable org.jetbrains.kotlin\:kotlin-dom-api-compat org.jetbrains.compose.runtime\:runtime org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+serializedKlibFingerprint=40kav9wba0f4.2rhf8vk50cccy
+serializedIrFileFingerprints=qbdryrlbxjw8.3frvg4vo23296 1g8krxpgmalty.3hh0ux7mp4sfk 1dhj80vvzckuf.1rvnibn350bxs ko95w2868p40.1lafrlb4gay7q 1xrvlyi271t89.3acm4674nhgw6 2peiwcfqtx2ep.32gyml2mj05dc 35ct1mmb31l39.ewm4z51c2ubk 32lkcwjkfaz7t.a2w4m82tj00o
+jsOutputName=voyager-voyager-navigator
+abi_version=1.8.0
+metadata_version=1.4.1

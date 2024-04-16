@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=JS
+compiler_version=1.9.23
+depends=org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu org.jetbrains.kotlin\:kotlin-dom-api-compat kotlin
+ir_signature_versions=1,2
+jsOutputName=kmm-viewmodel-kmm-viewmodel-core
+metadata_version=1.4.1
+serializedIrFileFingerprints=1zei1e10ogjf2.77ktt9nnd0r8 uqht71vv9das.16zzrt6k2gljy 30r4v5q9rjqxp.1m3hxq670zhxr 3pa5z9k6gy6ys.27i4gkdxldvnm s901pz3pwsa8.3dtvvkzdg4mzr vx97kyrr2iku.22pidwip2ac02 3543ibnc2xbgx.38l6sqr3d9lzf 1ohi1zj9dkygi.2ut2t68sc8wr9
+serializedKlibFingerprint=2puu6ue8hliew.3m7andothwmtr
+unique_name=com.rickclephas.kmm\:kmm-viewmodel-core

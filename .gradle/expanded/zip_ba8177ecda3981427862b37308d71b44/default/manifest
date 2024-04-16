@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=JS
+compiler_version=1.9.21
+depends=org.jetbrains.kotlin\:kotlin-dom-api-compat kotlin
+ir_signature_versions=1,2
+jsOutputName=kotlinx-atomicfu
+metadata_version=1.4.1
+serializedIrFileFingerprints=2wvrmvycb2xlq.1y5mv9jwps6cf w6gtm9m59qg7.3arnf4me01mme 3vjgbxvtpfony.acgxutw4cn4d xz4659qy17bt.238jfni1vnitw 1lu57b7w6c0ke.3pec1v9pjj49e 2a6bdagslf23a.16ri02kj0c7le 1tzo25hgez1sa.3t24geyojsx89 1nq6u32ndmbvh.28zm1dwvl42qs 1n0b2v9g482cb.25jtlkx7wzt1e bugiqqdyj2ht.1cgj3kcqzt8no
+serializedKlibFingerprint=ftawef18vx39.25gucb8q67k1j
+unique_name=org.jetbrains.kotlinx\:atomicfu

@@ -1,0 +1,10 @@
+builtins_platform=JS
+unique_name=io.ktor\:ktor-events
+compiler_version=1.8.22
+depends=io.ktor\:ktor-http io.ktor\:ktor-utils io.ktor\:ktor-io org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+serializedKlibFingerprint=1jiaa8hljjqtn.3sp8c2gl59o2q
+serializedIrFileFingerprints=SerializedIrFileFingerprint(fileFingerprint\=1qwwny8gpi17.cz81clzjcmvl)
+jsOutputName=ktor-ktor-events
+abi_version=1.7.0
+metadata_version=1.4.1
+ir_version=1.0.0

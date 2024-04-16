@@ -1,0 +1,9 @@
+abi_version=1.8.0
+builtins_platform=JS
+compiler_version=1.9.20-dev-9102
+depends=kotlin
+ir_signature_versions=1,2
+metadata_version=1.4.1
+serializedIrFileFingerprints=2jd1zdt7f8rjw.2bhcyo370ioyt 14dsye32mn5yg.pdwjpfq4l0gx 1dfadk8cmkp9q.2174fn1vhoxmv 1xaj38opayu60.1rthbfj9msniq 2mkkfzbwtmjki.rfm1b0efnk4u 37yg0nbjmfy9z.27rbacj9p8su9 djar7rezyjtz.2owipalbx2gxj 5zx19q0vbsx3.2i1b2bhgzz5u2 1yhml7dz3601z.1e1hh0z9xj16m 2hcfniyda93b.347ku5cm8yme5 3qttgfp3j08ib.2mkn7zhy4z6k1 2m8v1wo8rle1c.2gfstg53mvp58 2p28m04l6bwj4.3oqys970e1wys 14og8d8kvqp8q.x660310dreqz 3n8r4tpiti4qi.3c7vpyvrqt2wb 389dt4loc3w4d.2nx7zktizr320 1i4ed8fvvoy1n.wcllq44f8v1m 14idmlfvv9syt.2abdp8v959v2g 1f9v40tuas00s.304fpzowv2921 1g7phrjd1b3hr.1cccp4ejfgkiw vwkc36jbv1j6.2ugvrgj6wtgyd 2spcqtrqkceh5.eoq00st47al 7oc3ud2h3c52.21oucvlluu3dv 3cp50o8mpffag.2r5lqyijxxlm0 22syh6bxnsrlt.3eett7d2641f5 3u4f4vo4bt011.1ayjdviwl6q9m 1zoquu8wzyvz5.3ey0q2h8819gf 3rgmlyhgu1q76.2bc1ssu7i82cg 1dl8674dn52qk.2odhmkikeltqu 3grot6hgy949c.25gqukvhwpxcq 2r4ohlrgsfz1h.211oi1ubcv1g3
+serializedKlibFingerprint=kwny0mmn86ok.3fyqbmr6fnzlo
+unique_name=org.jetbrains.kotlin\:kotlin-dom-api-compat

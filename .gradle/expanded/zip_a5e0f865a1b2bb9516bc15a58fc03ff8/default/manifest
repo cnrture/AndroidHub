@@ -1,0 +1,9 @@
+builtins_platform=JS
+unique_name=voyager\:voyager-core
+compiler_version=1.9.10
+depends=org.jetbrains.compose.runtime\:runtime-saveable org.jetbrains.compose.runtime\:runtime com.benasher44\:uuid org.jetbrains.kotlin\:kotlin-dom-api-compat org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+serializedKlibFingerprint=8m5yiyxgqpno.121vagwr55jkq
+serializedIrFileFingerprints=h0igmkoen9ed.12p7lmba4s8ao 2h7uve28pklkn.3i14ig3mem4zh 1ui7stcglt83t.2gubz14idr6qw xd4xs2hjno46.3ohni1tbkmyl9 305p79oz6cue3.3j62jje3y8jpt vbjzkb3kc0dx.2x4n323fdtf9m 6yuy0cg7zx7v.ueaxox2c3wdd 31uvg15je1d2s.3mbnngtkbvdv1 1t6ikelve241v.2zdq1xisvsdtc 1khw483pxz7kb.3gi292zjj2zy2 zpqkvk62n03.3mujnet1n7smh 1tb419dehchp4.jze6b57n0s70 3pb5i7frbh3hs.29lnmhqqkuxdb 1kpxjeemx71ca.32h6wf5azcnj 5wj2klxf9ar.1w0rx27u5qmez 2iw2vkgum4dj2.1lruprd4beflm 2v0jlh1c75tqn.2j9ing87tc4i4 3feo451fc9ple.34wxkwpc47gko 23gpxs5te4scw.463msnoiugqw 1cpau5xgl3uvt.otagszqeb8r 28j9y4bvgmffc.34j1dktrpzz2o 3n1mehe79ke3k.exnngaml9xxq lubl0ef21e6u.1dgn77klclnaq 1ng0lbbtxdnh8.3rhjrmkue9lf2 pengms35hzau.1y7a2j2vsbcrx 2nnc0q1b0ab5z.1kbspigjw3r4r 2gm5brcuxkrax.19urrs18y7po4 1xswby3i4ghpo.mbisv33yatxt 8wf77othd81l.22f6v5vy5uavx 2jyzsr37u1rgi.3lnjj1k07aruj 3qrj5u66ce92.kagosjafqd0p 2qw2f77da6skk.25zoa66nsibjv 28ynzo0pt8xkf.1r85ghb4rdtd1
+jsOutputName=voyager-voyager-core
+abi_version=1.8.0
+metadata_version=1.4.1

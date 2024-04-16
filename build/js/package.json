@@ -3,11 +3,12 @@
   "version": "unspecified",
   "private": true,
   "workspaces": [
-    "packages/composeApp",
-    "packages/composeApp-test",
-    "packages_imported/skiko-wasm-js/0.7.93",
-    "packages_imported/skiko-js-wasm-runtime/0.7.93",
-    "packages_imported/components-resources-wasmJs/1.6.0",
+    "packages/AndroidHub-composeApp",
+    "packages/AndroidHub-composeApp-test",
+    "packages_imported/skiko-js/0.7.93",
+    "packages_imported/Kotlin-DateTime-library-kotlinx-datetime/0.5.0",
+    "packages_imported/components-resources-js/1.6.0",
+    "packages_imported/ktor-ktor-client-core/2.3.8",
     "packages_imported/kotlin-test-js-runner/0.0.1"
   ],
   "resolutions": {},
