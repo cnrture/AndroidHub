@@ -1,169 +1,79 @@
 {
   "version": "9",
   "items": {
-    "cb7d13c12a97693448b82c9574c2fd3e": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-js/1.9.22/95e0c81ba7ee3d36c7d7312a63f1b0bae454b3fe/kotlin-stdlib-js-1.9.22.klib"
+    "b83a16b8c8abee8cc772df4c102c795d": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-js/1.9.23/69fa6e9066cb370b7435f54b456ef055c55d5e65/kotlin-stdlib-js-1.9.23.klib"
     },
-    "623408c5d59a4f78e354570f50cfa6df": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.runtime/runtime-js/1.6.0/4a44c176faf0f08905f08cc22573f69f87af739/runtime-js-1.6.0.klib"
+    "3da937e110ad8ea82a97ae6495c6d07f": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.runtime/runtime-js/1.6.2/7df46fa6b78aecf9811595c3016ab4b4ae49f12/runtime-js-1.6.2.klib"
     },
-    "e34cb5d50be9e1e522bac8f6c93e4663": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-js/1.8.1-Beta/331902027915acebf74315620a81b597c12c5c8a/kotlinx-coroutines-core-js-1.8.1-Beta.klib"
+    "7863099849b1ae49e070fccd37807533": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.collection-internal/collection-js/1.6.2/e28bbce3d18fee707bf4579719dd2d98e4a59291/collection-js-1.6.2.klib"
+    },
+    "3a35b2fb850d3139a41cf98f108b6480": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.annotation-internal/annotation-js/1.6.2/c907e8a1049deda59de980941fb74c5eb6b79d68/annotation-js-1.6.2.klib"
     },
     "b50857453dcb30a49d765d6aca822dfe": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-dom-api-compat/1.9.22/3c0ac04445c1aeec4366d69e1791cd6ad31ddc07/kotlin-dom-api-compat-1.9.22.klib"
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-dom-api-compat/1.9.23/3c0ac04445c1aeec4366d69e1791cd6ad31ddc07/kotlin-dom-api-compat-1.9.23.klib"
     },
     "ba8177ecda3981427862b37308d71b44": {
       "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/atomicfu-js/0.23.2/e19f377f0dc24137414f5f3e1be730f60aeb9539/atomicfu-js-0.23.2.klib"
     },
+    "5f460de879b1311463aa4ad821c02375": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-js/1.8.0/15c3b0e757e1e31196d82616f47e66df3ecd7d5b/kotlinx-coroutines-core-js-1.8.0.klib"
+    },
     "e9306c2451bbe8784372b11cb78554d0": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlinx-atomicfu-runtime/1.9.22/373f8846d435f6e7f77453cefbb97c548ae4781e/kotlinx-atomicfu-runtime-1.9.22.klib"
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlinx-atomicfu-runtime/1.9.23/373f8846d435f6e7f77453cefbb97c548ae4781e/kotlinx-atomicfu-runtime-1.9.23.klib"
     },
-    "57cb9b5d7fe8011d2bd5b8ca1b692da3": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.collection-internal/collection-js/1.6.0/ed82d9358cedd8845b152a8eec13fa618e2e1e7e/collection-js-1.6.0.klib"
+    "6fa62b73ffa0904eba15ea87c9a7346e": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.html/html-core-js/1.6.2/4617b7cb1fafb28566755c408d19173c4fc27a13/html-core-js-1.6.2.klib",
+      "target": "html-core-js/1.6.2"
     },
-    "2a32f6f4bfc9f711d3db0d84838490c7": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.annotation-internal/annotation-js/1.6.0/87a5cd0e481612902d9ff8f7974ed2635b12d158/annotation-js-1.6.0.klib"
+    "5cfe4cfbcd6f15f29faebd70d2133e7a": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.html/internal-html-core-runtime-js/1.6.2/eb60e3896fd1c291da31f50c44136065d0260c24/internal-html-core-runtime-js-1.6.2.klib"
     },
-    "abe334e1630e0f9d8fab0d3b8b7a4e4e": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.foundation/foundation-js/1.6.0/c6745f19dc47e9efee1ec0876f5521a230f18497/foundation-js-1.6.0.klib"
+    "217944acd55fdef4fa8fa9bd376cb0d9": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-core/0.17.2/b5b8afc32a5042f138407ff0a070e5848c4fffbb/kobweb-core-js-0.17.2.klib"
     },
-    "0bac237e59c1e7e661090fc1da8657e8": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.animation/animation-js/1.6.0/347244324c4f7395782a3e1ab5dbe50f974e50eb/animation-js-1.6.0.klib"
+    "2b689ee966b44c0487f10b1fb4dae285": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/compose-html-ext/0.17.2/40e6fbd43238033e97e78d3a4084c5464e92a806/compose-html-ext-js-0.17.2.klib"
     },
-    "222438ae447a4ba74c3e9a30ae8c8122": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.foundation/foundation-layout-js/1.6.0/9e82553a86f992e37ddb42b82d9903c7c2c9df0d/foundation-layout-js-1.6.0.klib"
+    "b712e18087bf685526f29ad4a00e69d5": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/browser-ext/0.17.2/3379d4f0341238e37786485074545aa04119afd7/browser-ext-js-0.17.2.klib"
     },
-    "3e115bbd41f6251cb36089b33d9d2474": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-js/1.6.0/28c70a2b5559cebd704e243a8436bdef04d7f4a1/ui-js-1.6.0.klib"
+    "cf24d6a06127ee434bffb5ce6a5eb097": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-worker-interface/0.17.2/9ab151879534ce06ff795dd4021192fc6e9bf48d/kobweb-worker-interface-js-0.17.2.klib"
     },
-    "4da0b516ff00429d382108ac19f3c9f0": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-text-js/1.6.0/478b977968bf9d38d41239b71394ca20d1d6e708/ui-text-js-1.6.0.klib"
+    "0ffdceb4847380e2dcfbd909170a9a1d": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-js/1.6.0/8da0ad64ba616b5274fc5cdc07656912e1eea71d/kotlinx-serialization-json-js-1.6.0.klib"
     },
-    "341cca901b5db4e3856a35ad0d954b32": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-graphics-js/1.6.0/94f1cdb1ad585fa3418d4428a8f92bc6d40b3a41/ui-graphics-js-1.6.0.klib"
+    "d356df8ed21c63fbacf8d7ef87b6eaa0": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-js/1.6.0/bb589ecd997c9b459f15b06ff4639bc6cabf522d/kotlinx-serialization-core-js-1.6.0.klib"
     },
-    "8909d5a41347fde236b3be5304cfbf21": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-unit-js/1.6.0/96e9a1c95c2517f2bbaa902f399c4b12146426ae/ui-unit-js-1.6.0.klib"
+    "a2ad69cb6ebb2164c5552d0eb9d41f50": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-client-server-internal-js/0.17.2/2c0bd5cc83537519b20ab4d5ca7507331576e9c8/client-server-internal-js-0.17.2.klib"
     },
-    "fc2c7d40e09331b34e1b62ebfd4fb2a8": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-geometry-js/1.6.0/a05120dfdad1abbf260948c82b5f3eda9f94d6df/ui-geometry-js-1.6.0.klib"
+    "a04054b435b14f7b19ef37517e22afd9": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-silk/0.17.2/c5e69479a52ead676a46032ed7add0fc25d123ba/kobweb-silk-js-0.17.2.klib"
     },
-    "742a068ee4e4b3171ebdb368991b04d9": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.ui/ui-util-js/1.6.0/6820581426205a3cdb759b29e95c0dbd84647202/ui-util-js-1.6.0.klib"
+    "fe8ab746ff6d53947b41456450d0b409": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/silk-widgets-kobweb/0.17.2/8b5ae249f9616e670e830571ca66aa830003ab6c/silk-widgets-kobweb-js-0.17.2.klib"
     },
-    "93615e37e7cf5193931fbe1b9ed4492c": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.skiko/skiko-js/0.7.93/e0e825ed26f77f136add82375bda1a873df12edc/skiko-js-0.7.93.klib",
-      "target": "skiko-js/0.7.93"
+    "aca58e69eed9907ed092818c9159b3c0": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/silk-widgets/0.17.2/924bb0338ff657c22be846097e9c9b2ccb84274b/silk-widgets-js-0.17.2.klib"
     },
-    "1fe70b6fb65519a7ded7fa09c2b2ebb3": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.runtime/runtime-saveable-js/1.6.0/1c19eae8a85ece5f53f303521f223abce9624baa/runtime-saveable-js-1.6.0.klib"
+    "a99b3ded2d4233b8c92448c43e9b12fa": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/silk-foundation/0.17.2/a6cd7542686a1e4cbb077dbab2387396f2511c4b/silk-foundation-js-0.17.2.klib"
     },
-    "ca77f94e51cdc5a135f01815e3011142": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.animation/animation-core-js/1.6.0/40b10282daefac692731a69d90811d725f602fec/animation-core-js-1.6.0.klib"
+    "06cf96e8a733c68379595008ce5cc377": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-compose/0.17.2/b35717956004db2a0898740284a7e6e74d8e86cb/kobweb-compose-js-0.17.2.klib"
     },
-    "d882e87e194f21e72d0882e2ff5d52db": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material3/material3-js/1.6.0/3f1c60e90952d102315e480abd0c0fdc08503893/material3-js-1.6.0.klib"
-    },
-    "6b132a14a643ae4d8e906c397fc50e1f": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material/material-ripple-js/1.6.0/dc010132d4e5d05520456bb56cb2d3db96fdb5c1/material-ripple-js-1.6.0.klib"
-    },
-    "35e2801c1e345fa198c6f3381cc882dc": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.material/material-icons-core-js/1.6.0/9c7539ddbc1b3c3199c3b878d513233674650cdf/material-icons-core-js-1.6.0.klib"
-    },
-    "6935cda2029a2e293a4e15f7fc6095bf": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-datetime-js/0.5.0/979330c1b2d9033e6bdcb1adb4a950a04bed17f5/kotlinx-datetime-js-0.5.0.klib",
-      "target": "Kotlin-DateTime-library-kotlinx-datetime/0.5.0"
-    },
-    "aabd2f46fead63ab3b52bd090077097e": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-core-js/1.6.2/27bceec3b89d0eec8f951f8b25f16fffa0df214e/kotlinx-serialization-core-js-1.6.2.klib"
-    },
-    "ede10ea0af964d12403340164705161d": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.components/components-resources-js/1.6.0/f38641a7b35689a3b6dee251bca0fed9d7f26bd1/library-js-1.6.0.klib",
-      "target": "components-resources-js/1.6.0"
-    },
-    "00855e0e8a0e1a10f1dad5414a2473b8": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.compose.components/components-ui-tooling-preview-js/1.6.0/aead9bd5af2259d945a7ba69e2c39bdf49aab9e/library-js-1.6.0.klib"
-    },
-    "552ad6b316966cd6a6b0a2daaa074e4e": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.insert-koin/koin-core-js/3.5.3/bf85b86605397b93676eec67225d8bbf551f4b05/koin-core-js-3.5.3.klib"
-    },
-    "07187a481f264e43b02402105cf082c4": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/co.touchlab/stately-concurrency-js/2.0.5/746dd5c7304813430dca41b603f0b53f92cb329/stately-concurrency-js-2.0.5.klib"
-    },
-    "e8dff326fbc24deed97392953d6d8f3d": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/co.touchlab/stately-strict-js/2.0.5/87751aeb596b71608024b00894c63071d7731c06/stately-strict-js-2.0.5.klib"
-    },
-    "96ddc3bf5faaecc48c494d861b7d7bc6": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-core-js/2.3.8/6c8454c443455641fb7f8b691cc5f5a9e6935d8f/ktor-client-core-js-2.3.8.klib",
-      "target": "ktor-ktor-client-core/2.3.8"
-    },
-    "d433bb0ebacdc5de7ac7e663e21dd21a": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-events-js/2.3.8/60cd92ddaffa2d4af4b441049180d3900c10aad8/ktor-events-js-2.3.8.klib"
-    },
-    "dd5a08117c55937c70a621713057099b": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-js/2.3.8/1ba5e8a965da83f54849a5d9dbc142dc9aacb73c/ktor-http-js-2.3.8.klib"
-    },
-    "050f0c9a26eb1f2e52e5d5fc5af38490": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-utils-js/2.3.8/172be79002d48c685582c980f029666d55ff0972/ktor-utils-js-2.3.8.klib"
-    },
-    "a9cd13410c283b8b8e116aa91d80962e": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-io-js/2.3.8/bb5e75510b2d0d683a291f7e2ba3f66a9b919e5b/ktor-io-js-2.3.8.klib"
-    },
-    "3b4683c14b863c94351cb66caef9f746": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-websocket-serialization-js/2.3.8/6870156058ecac4beb25185f83356dd576f539ac/ktor-websocket-serialization-js-2.3.8.klib"
-    },
-    "5dae8ea2686a8547b705dd7de7df7c94": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-js/2.3.8/c3be2be771aa8ba6ccb739b0f993f47a5cf7e772/ktor-serialization-js-2.3.8.klib"
-    },
-    "4cd4c026f062d504d36a2184a2981749": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-websockets-js/2.3.8/5e94d9bdc50a41c962cf26deee4dbaf1f29f3475/ktor-websockets-js-2.3.8.klib"
-    },
-    "05367f4a4fe3779d197a29c3f1dcdf41": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-content-negotiation-js/2.3.8/243fdb1fd73010cbebbf4fc1176151b7aadcda3e/ktor-client-content-negotiation-js-2.3.8.klib"
-    },
-    "c64120d092c826964ea8da709fd722cf": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-kotlinx-json-js/2.3.8/ef2dbf7e52559d9cd0312f331f857a60e785033e/ktor-serialization-kotlinx-json-js-2.3.8.klib"
-    },
-    "c986da494b7201f21e31ee171c664a06": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-serialization-kotlinx-js/2.3.8/5bc3852ea8d349326c81b20da3c9b99cb6853514/ktor-serialization-kotlinx-js-2.3.8.klib"
-    },
-    "b7bc52856121f16002463174c4cafebd": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-js/1.5.1/ab43222a1d2375bd8b2395f5af49d432c0f84343/kotlinx-serialization-json-jsir-1.5.1.klib"
-    },
-    "4f4915f4758d365d8ed2f05df40913c1": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-navigator-js/1.0.0/ec4bf557f116e470d1f1761e62b5dcd957da8a19/voyager-navigator-js-1.0.0.klib"
-    },
-    "a5e0f865a1b2bb9516bc15a58fc03ff8": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-core-js/1.0.0/d653adeae056268048c32ebc315f3fa2c7e195bb/voyager-core-js-1.0.0.klib"
-    },
-    "bc1c35a81a61b9db77ce9ae734ac3442": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.benasher44/uuid-js/0.8.1/227a86b42bc34188c729f29153731e415f46be7d/uuid-js-0.8.1.klib"
-    },
-    "23f61419d84a7ab33f88a74bb2dac3e1": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-koin-js/1.0.0/d4f9895e263e7c6678ac2a6f617e1d171c3d538f/voyager-koin-js-1.0.0.klib"
-    },
-    "b83852c7fa98a4129b1b262a33e0ee74": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.insert-koin/koin-compose-js/1.0.4/ed0f3cacfdd6312f48b2ee76019d60c80fec3ffa/koin-compose-js-1.0.4.klib"
-    },
-    "8c063330031eebf963fb226616366180": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/cafe.adriel.voyager/voyager-screenmodel-js/1.0.0/46af37f9c9696936beb0f5081361e0d96dc9d30/voyager-screenmodel-js-1.0.0.klib"
-    },
-    "ad654155bd4cf253c989ed62d4f72ff9": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-js-js/2.3.8/57d85763df23b1c851b668058ce93cd1bf170286/ktor-client-js-js-2.3.8.klib"
+    "743b508f4e16c2c57e6cda920124e82f": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobwebx/kobwebx-markdown/0.17.2/aff6af322a865ee7283d7fcfbb1c7ef9bb0aad62/kobwebx-markdown-js-0.17.2.klib"
     },
     "a66860f155cb10a237acb5f7d0f6d0e3": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js-runner/1.9.22/e9b1fc55af69eb09d63b271d17c217d9483241cc/kotlin-test-js-runner-1.9.22.jar",
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js-runner/1.9.23/e9b1fc55af69eb09d63b271d17c217d9483241cc/kotlin-test-js-runner-1.9.23.jar",
       "target": "kotlin-test-js-runner/0.0.1"
-    },
-    "b83a16b8c8abee8cc772df4c102c795d": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-js/1.9.23/69fa6e9066cb370b7435f54b456ef055c55d5e65/kotlin-stdlib-js-1.9.23.klib"
-    },
-    "2ee55dbd1944ed0f031d8374db912496": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.rickclephas.kmm/kmm-viewmodel-core-js/1.0.0-ALPHA-20/2fc7a19691cf350ba304b37657d7b05ecde391c8/kmm-viewmodel-core-js-1.0.0-ALPHA-20.klib"
-    },
-    "5f1dda5ef43cd29179d0b513345005cf": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-js/1.6.2/c0f0707839e391ab39f021fea5a2af045c29f147/kotlinx-serialization-json-js-1.6.2.klib"
     }
   }
 }

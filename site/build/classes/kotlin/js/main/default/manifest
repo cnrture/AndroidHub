@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=JS
+compiler_version=1.9.23
+depends=com.varabyte.kobweb\:kobweb-silk com.varabyte.kobweb\:kobweb-core com.varabyte.kobwebx\:kobwebx-markdown org.jetbrains.compose.runtime\:runtime org.jetbrains.compose.html\:html-core com.varabyte.kobweb\:silk-widgets-kobweb com.varabyte.kobweb\:silk-widgets com.varabyte.kobweb\:silk-foundation com.varabyte.kobweb\:kobweb-compose com.varabyte.kobweb\:compose-html-ext com.varabyte.kobweb\:kobweb-worker-interface com.varabyte.kobweb\:browser-ext org.jetbrains.compose.html\:internal-html-core-runtime org.jetbrains.kotlin\:kotlin-dom-api-compat org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+ir_signature_versions=1,2
+jsOutputName=androidhub
+metadata_version=1.4.1
+serializedIrFileFingerprints=36pz7j5j3gxho.rmztji6elrbd r02dt2jkdqxd.21lss30csbnqk 25quegncstzg6.2ivpm6apulojk 1ftxu2hc7tqrr.s2p9mh2fqqje 28rd8ae304uic.3codriei26ss1 4yz3rujzt3a7.isejhqy2exmb 2l28pqq10zt2y.2liojmfvmi3w 1qgnstgvr7626.3uiv16l1m4ahy 3tf9xssdadyeh.uf4qft2lofr2 7f4c1gk3c97n.ft369u2rwob1 5ncwjipj9diy.311kqkukgs4jn
+serializedKlibFingerprint=2738uhwzgh22d.dtrzzh0q7ssz
+unique_name=com.canerture.androidhub\:site
