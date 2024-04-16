@@ -9,9 +9,6 @@
   'use strict';
   //region block: pre-declaration
   //endregion
-  function get_strictMemoryModel() {
-    return strictMemoryModel;
-  }
   var strictMemoryModel;
   //region block: init
   strictMemoryModel = false;

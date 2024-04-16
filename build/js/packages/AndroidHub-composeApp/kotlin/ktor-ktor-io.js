@@ -19,378 +19,188 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.cf;
-  var interfaceMeta = kotlin_kotlin.$_$.ge;
-  var setMetadataFor = kotlin_kotlin.$_$.df;
+  var ensureNotNull = kotlin_kotlin.$_$.fh;
+  var Unit_instance = kotlin_kotlin.$_$.k5;
+  var toString = kotlin_kotlin.$_$.nc;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.v1;
+  var toLong = kotlin_kotlin.$_$.lc;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.a2;
+  var CoroutineImpl = kotlin_kotlin.$_$.ja;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.v9;
+  var protoOf = kotlin_kotlin.$_$.ic;
+  var classMeta = kotlin_kotlin.$_$.xa;
+  var setMetadataFor = kotlin_kotlin.$_$.jc;
+  var Long = kotlin_kotlin.$_$.gg;
   var VOID = kotlin_kotlin.$_$.g;
-  var CoroutineImpl = kotlin_kotlin.$_$.zc;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.kc;
-  var Unit_getInstance = kotlin_kotlin.$_$.v5;
-  var classMeta = kotlin_kotlin.$_$.qd;
-  var ensureNotNull = kotlin_kotlin.$_$.wk;
-  var toString = kotlin_kotlin.$_$.hf;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.b2;
-  var toLong = kotlin_kotlin.$_$.ff;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.h2;
-  var THROW_CCE = kotlin_kotlin.$_$.ck;
-  var isInterface = kotlin_kotlin.$_$.pe;
-  var Long = kotlin_kotlin.$_$.vj;
-  var coerceAtMost = kotlin_kotlin.$_$.xf;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.l1;
   var atomic$ref$1 = kotlin_org_jetbrains_kotlinx_atomicfu.$_$.d;
   var atomic$long$1 = kotlin_org_jetbrains_kotlinx_atomicfu.$_$.c;
   var atomic$int$1 = kotlin_org_jetbrains_kotlinx_atomicfu.$_$.e;
-  var CancellationException_init_$Create$ = kotlin_kotlin.$_$.f1;
-  var KMutableProperty1 = kotlin_kotlin.$_$.kg;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.ce;
-  var SuspendFunction1 = kotlin_kotlin.$_$.bd;
-  var Companion_getInstance = kotlin_kotlin.$_$.p5;
-  var CancellationException = kotlin_kotlin.$_$.jc;
-  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.e1;
-  var captureStack = kotlin_kotlin.$_$.kd;
-  var Job = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a2;
-  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.b5;
-  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.v1;
-  var cancel$default = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q;
-  var cancel$default_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r;
-  var invokeOnCompletion$default = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.s;
-  var Key_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.w;
-  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n2;
-  var Key_getInstance_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.a1;
-  var Dispatchers_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.y;
-  var equals = kotlin_kotlin.$_$.ud;
-  var toByte = kotlin_kotlin.$_$.ef;
-  var toShort = kotlin_kotlin.$_$.gf;
-  var IntCompanionObject_getInstance = kotlin_kotlin.$_$.h5;
-  var StringBuilder_init_$Create$_0 = kotlin_kotlin.$_$.k1;
-  var charSequenceLength = kotlin_kotlin.$_$.od;
-  var objectMeta = kotlin_kotlin.$_$.bf;
-  var hashCode = kotlin_kotlin.$_$.ee;
-  var toString_0 = kotlin_kotlin.$_$.wi;
-  var objectCreate = kotlin_kotlin.$_$.af;
-  var Exception = kotlin_kotlin.$_$.sj;
-  var Exception_init_$Init$ = kotlin_kotlin.$_$.t1;
-  var numberToLong = kotlin_kotlin.$_$.ze;
-  var numberToChar = kotlin_kotlin.$_$.xe;
-  var charSequenceGet = kotlin_kotlin.$_$.nd;
-  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.w2;
-  var Appendable = kotlin_kotlin.$_$.ah;
-  var coerceAtLeast = kotlin_kotlin.$_$.tf;
-  var coerceAtMost_0 = kotlin_kotlin.$_$.yf;
-  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.i3;
-  var toRawBits = kotlin_kotlin.$_$.pl;
-  var toRawBits_0 = kotlin_kotlin.$_$.ql;
-  var encodeToByteArray = kotlin_kotlin.$_$.gh;
-  var _UShort___get_data__impl__g0245 = kotlin_kotlin.$_$.s4;
-  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.l2;
-  var CharSequence = kotlin_kotlin.$_$.jj;
-  var UnsupportedOperationException_init_$Create$_0 = kotlin_kotlin.$_$.x2;
-  var _UShort___init__impl__jigrne = kotlin_kotlin.$_$.r4;
-  var Char = kotlin_kotlin.$_$.kj;
-  var Companion_getInstance_0 = kotlin_kotlin.$_$.u5;
-  var isLowSurrogate = kotlin_kotlin.$_$.qh;
-  var isHighSurrogate = kotlin_kotlin.$_$.oh;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.c3;
-  var Job_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.z1;
-  var lazy = kotlin_kotlin.$_$.el;
-  var KProperty1 = kotlin_kotlin.$_$.mg;
-  var replace = kotlin_kotlin.$_$.ci;
-  var getStringHashCode = kotlin_kotlin.$_$.de;
-  var extendThrowable = kotlin_kotlin.$_$.vd;
-  var charSequenceSubSequence = kotlin_kotlin.$_$.pd;
-  var THROW_IAE = kotlin_kotlin.$_$.dk;
-  var Enum = kotlin_kotlin.$_$.qj;
-  var IndexOutOfBoundsException_init_$Create$_0 = kotlin_kotlin.$_$.k2;
-  var Exception_init_$Init$_0 = kotlin_kotlin.$_$.v1;
-  var isCharSequence = kotlin_kotlin.$_$.le;
-  var trim = kotlin_kotlin.$_$.ej;
-  var decodeToString = kotlin_kotlin.$_$.fh;
-  var setOf = kotlin_kotlin.$_$.bb;
-  var fillArrayVal = kotlin_kotlin.$_$.wd;
+  var THROW_CCE = kotlin_kotlin.$_$.ng;
+  var CancellationException_init_$Create$ = kotlin_kotlin.$_$.c1;
+  var CancellationException = kotlin_kotlin.$_$.u9;
+  var CancellationException_init_$Init$ = kotlin_kotlin.$_$.b1;
+  var captureStack = kotlin_kotlin.$_$.ra;
+  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.s4;
+  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.d1;
+  var interfaceMeta = kotlin_kotlin.$_$.mb;
+  var cancel$default = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.h;
+  var invokeOnCompletion$default = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.i;
+  var Job = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.h1;
+  var Key_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.l;
+  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.t1;
+  var isInterface = kotlin_kotlin.$_$.vb;
+  var Key_instance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.p;
+  var Dispatchers_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n;
+  var equals = kotlin_kotlin.$_$.ab;
+  var IntCompanionObject_instance = kotlin_kotlin.$_$.x4;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.h1;
+  var charSequenceLength = kotlin_kotlin.$_$.va;
+  var objectMeta = kotlin_kotlin.$_$.hc;
+  var hashCode = kotlin_kotlin.$_$.kb;
+  var toString_0 = kotlin_kotlin.$_$.jf;
+  var objectCreate = kotlin_kotlin.$_$.gc;
+  var Exception = kotlin_kotlin.$_$.dg;
+  var Exception_init_$Init$ = kotlin_kotlin.$_$.p1;
+  var numberToChar = kotlin_kotlin.$_$.dc;
+  var coerceAtLeast = kotlin_kotlin.$_$.wc;
+  var coerceAtMost = kotlin_kotlin.$_$.yc;
+  var Companion_getInstance = kotlin_kotlin.$_$.e5;
+  var Char__toInt_impl_vasixd = kotlin_kotlin.$_$.z2;
+  var toByte = kotlin_kotlin.$_$.kc;
+  var _UShort___get_data__impl__g0245 = kotlin_kotlin.$_$.j4;
+  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.q2;
+  var toShort = kotlin_kotlin.$_$.mc;
+  var _UShort___init__impl__jigrne = kotlin_kotlin.$_$.i4;
+  var Companion_getInstance_0 = kotlin_kotlin.$_$.j5;
+  var charSequenceGet = kotlin_kotlin.$_$.ua;
+  var isLowSurrogate = kotlin_kotlin.$_$.ie;
+  var isHighSurrogate = kotlin_kotlin.$_$.he;
+  var Job_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.g1;
+  var coerceAtMost_0 = kotlin_kotlin.$_$.xc;
+  var lazy = kotlin_kotlin.$_$.mh;
+  var KProperty1 = kotlin_kotlin.$_$.kd;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.ib;
+  var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.e2;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.t2;
+  var replace = kotlin_kotlin.$_$.re;
+  var getStringHashCode = kotlin_kotlin.$_$.jb;
+  var extendThrowable = kotlin_kotlin.$_$.bb;
+  var charSequenceSubSequence = kotlin_kotlin.$_$.wa;
+  var IndexOutOfBoundsException_init_$Create$_0 = kotlin_kotlin.$_$.d2;
+  var Exception_init_$Init$_0 = kotlin_kotlin.$_$.r1;
+  var isCharSequence = kotlin_kotlin.$_$.rb;
+  var trim = kotlin_kotlin.$_$.rf;
+  var decodeToString = kotlin_kotlin.$_$.yd;
+  var setOf = kotlin_kotlin.$_$.c9;
+  var fillArrayVal = kotlin_kotlin.$_$.cb;
   //endregion
   //region block: pre-declaration
-  function readRemaining$default(limit, $completion, $super) {
-    limit = limit === VOID ? Companion_getInstance().get_MAX_VALUE_54a9lf_k$() : limit;
-    return $super === VOID ? this.readRemaining_nblam0_k$(limit, $completion) : $super.readRemaining_nblam0_k$.call(this, limit, $completion);
-  }
-  function peekTo$default(destination, destinationOffset, offset, min, max, $completion, $super) {
-    offset = offset === VOID ? new Long(0, 0) : offset;
-    min = min === VOID ? new Long(1, 0) : min;
-    max = max === VOID ? Companion_getInstance().get_MAX_VALUE_54a9lf_k$() : max;
-    return $super === VOID ? this.peekTo_ypcho2_k$(destination, destinationOffset, offset, min, max, $completion) : $super.peekTo_ypcho2_k$.call(this, destination, destinationOffset, offset, min, max, $completion);
-  }
-  setMetadataFor(ByteReadChannel_1, 'ByteReadChannel', interfaceMeta, VOID, VOID, VOID, VOID, VOID, [3, 1, 2, 0, 5]);
-  setMetadataFor(ByteWriteChannel, 'ByteWriteChannel', interfaceMeta, VOID, VOID, VOID, VOID, VOID, [3, 1, 0]);
-  setMetadataFor(ByteChannel, 'ByteChannel', interfaceMeta, VOID, [ByteReadChannel_1, ByteWriteChannel], VOID, VOID, VOID, [3, 1, 2, 0, 5]);
-  setMetadataFor($tryAwaitCOROUTINE$49, '$tryAwaitCOROUTINE$49', classMeta, CoroutineImpl);
-  setMetadataFor(WriterSession, 'WriterSession', interfaceMeta);
-  setMetadataFor(WriterSuspendSession, 'WriterSuspendSession', interfaceMeta, VOID, [WriterSession], VOID, VOID, VOID, [1]);
-  setMetadataFor(ByteChannelSequentialBase$beginWriteSession$1, VOID, classMeta, VOID, [WriterSuspendSession], VOID, VOID, VOID, [1]);
-  setMetadataFor(ByteChannelSequentialBase$readUTF8LineTo$slambda, 'ByteChannelSequentialBase$readUTF8LineTo$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(ByteChannelSequentialBase$peekTo$slambda, 'ByteChannelSequentialBase$peekTo$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor($awaitAtLeastNBytesAvailableForWriteCOROUTINE$0, '$awaitAtLeastNBytesAvailableForWriteCOROUTINE$0', classMeta, CoroutineImpl);
   setMetadataFor($awaitAtLeastNBytesAvailableForReadCOROUTINE$1, '$awaitAtLeastNBytesAvailableForReadCOROUTINE$1', classMeta, CoroutineImpl);
-  setMetadataFor($writeByteCOROUTINE$2, '$writeByteCOROUTINE$2', classMeta, CoroutineImpl);
-  setMetadataFor($writeShortCOROUTINE$3, '$writeShortCOROUTINE$3', classMeta, CoroutineImpl);
-  setMetadataFor($writeIntCOROUTINE$4, '$writeIntCOROUTINE$4', classMeta, CoroutineImpl);
-  setMetadataFor($writeLongCOROUTINE$5, '$writeLongCOROUTINE$5', classMeta, CoroutineImpl);
-  setMetadataFor($writeFloatCOROUTINE$6, '$writeFloatCOROUTINE$6', classMeta, CoroutineImpl);
-  setMetadataFor($writeDoubleCOROUTINE$7, '$writeDoubleCOROUTINE$7', classMeta, CoroutineImpl);
-  setMetadataFor($writePacketCOROUTINE$8, '$writePacketCOROUTINE$8', classMeta, CoroutineImpl);
   setMetadataFor($writeFullyCOROUTINE$9, '$writeFullyCOROUTINE$9', classMeta, CoroutineImpl);
   setMetadataFor($writeFullyCOROUTINE$10, '$writeFullyCOROUTINE$10', classMeta, CoroutineImpl);
-  setMetadataFor($writeFullyCOROUTINE$11, '$writeFullyCOROUTINE$11', classMeta, CoroutineImpl);
-  setMetadataFor($writeAvailableCOROUTINE$12, '$writeAvailableCOROUTINE$12', classMeta, CoroutineImpl);
-  setMetadataFor($writeAvailableCOROUTINE$13, '$writeAvailableCOROUTINE$13', classMeta, CoroutineImpl);
-  setMetadataFor($readByteCOROUTINE$14, '$readByteCOROUTINE$14', classMeta, CoroutineImpl);
-  setMetadataFor($readByteSlowCOROUTINE$15, '$readByteSlowCOROUTINE$15', classMeta, CoroutineImpl);
-  setMetadataFor($readShortCOROUTINE$16, '$readShortCOROUTINE$16', classMeta, CoroutineImpl);
-  setMetadataFor($readShortSlowCOROUTINE$17, '$readShortSlowCOROUTINE$17', classMeta, CoroutineImpl);
-  setMetadataFor($readIntCOROUTINE$18, '$readIntCOROUTINE$18', classMeta, CoroutineImpl);
-  setMetadataFor($readIntSlowCOROUTINE$19, '$readIntSlowCOROUTINE$19', classMeta, CoroutineImpl);
-  setMetadataFor($readLongCOROUTINE$20, '$readLongCOROUTINE$20', classMeta, CoroutineImpl);
-  setMetadataFor($readLongSlowCOROUTINE$21, '$readLongSlowCOROUTINE$21', classMeta, CoroutineImpl);
-  setMetadataFor($readFloatCOROUTINE$22, '$readFloatCOROUTINE$22', classMeta, CoroutineImpl);
-  setMetadataFor($readFloatSlowCOROUTINE$23, '$readFloatSlowCOROUTINE$23', classMeta, CoroutineImpl);
-  setMetadataFor($readDoubleCOROUTINE$24, '$readDoubleCOROUTINE$24', classMeta, CoroutineImpl);
-  setMetadataFor($readDoubleSlowCOROUTINE$25, '$readDoubleSlowCOROUTINE$25', classMeta, CoroutineImpl);
   setMetadataFor($readRemainingCOROUTINE$26, '$readRemainingCOROUTINE$26', classMeta, CoroutineImpl);
   setMetadataFor($readRemainingSuspendCOROUTINE$27, '$readRemainingSuspendCOROUTINE$27', classMeta, CoroutineImpl);
-  setMetadataFor($readPacketCOROUTINE$28, '$readPacketCOROUTINE$28', classMeta, CoroutineImpl);
-  setMetadataFor($readPacketSuspendCOROUTINE$29, '$readPacketSuspendCOROUTINE$29', classMeta, CoroutineImpl);
   setMetadataFor($readAvailableCOROUTINE$30, '$readAvailableCOROUTINE$30', classMeta, CoroutineImpl);
-  setMetadataFor($readFullyCOROUTINE$31, '$readFullyCOROUTINE$31', classMeta, CoroutineImpl);
-  setMetadataFor($readFullySuspendCOROUTINE$32, '$readFullySuspendCOROUTINE$32', classMeta, CoroutineImpl);
   setMetadataFor($readAvailableCOROUTINE$33, '$readAvailableCOROUTINE$33', classMeta, CoroutineImpl);
-  setMetadataFor($readFullyCOROUTINE$34, '$readFullyCOROUTINE$34', classMeta, CoroutineImpl);
-  setMetadataFor($readFullySuspendCOROUTINE$35, '$readFullySuspendCOROUTINE$35', classMeta, CoroutineImpl);
-  setMetadataFor($readBooleanCOROUTINE$36, '$readBooleanCOROUTINE$36', classMeta, CoroutineImpl);
-  setMetadataFor($readBooleanSlowCOROUTINE$37, '$readBooleanSlowCOROUTINE$37', classMeta, CoroutineImpl);
   setMetadataFor($awaitInternalAtLeast1COROUTINE$38, '$awaitInternalAtLeast1COROUTINE$38', classMeta, CoroutineImpl);
   setMetadataFor($awaitSuspendCOROUTINE$39, '$awaitSuspendCOROUTINE$39', classMeta, CoroutineImpl);
-  setMetadataFor($discardCOROUTINE$40, '$discardCOROUTINE$40', classMeta, CoroutineImpl);
-  setMetadataFor($discardSuspendCOROUTINE$41, '$discardSuspendCOROUTINE$41', classMeta, CoroutineImpl);
-  setMetadataFor($readSuspendableSessionCOROUTINE$42, '$readSuspendableSessionCOROUTINE$42', classMeta, CoroutineImpl);
-  setMetadataFor($readUTF8LineCOROUTINE$43, '$readUTF8LineCOROUTINE$43', classMeta, CoroutineImpl);
-  setMetadataFor($writeAvailableSuspendCOROUTINE$44, '$writeAvailableSuspendCOROUTINE$44', classMeta, CoroutineImpl);
-  setMetadataFor($writeAvailableSuspendCOROUTINE$45, '$writeAvailableSuspendCOROUTINE$45', classMeta, CoroutineImpl);
-  setMetadataFor($awaitFreeSpaceCOROUTINE$46, '$awaitFreeSpaceCOROUTINE$46', classMeta, CoroutineImpl);
-  setMetadataFor($awaitContentCOROUTINE$47, '$awaitContentCOROUTINE$47', classMeta, CoroutineImpl);
-  setMetadataFor($peekToCOROUTINE$48, '$peekToCOROUTINE$48', classMeta, CoroutineImpl);
-  function request$default(atLeast, $super) {
-    atLeast = atLeast === VOID ? 1 : atLeast;
-    return $super === VOID ? this.request_oh1f6f_k$(atLeast) : $super.request_oh1f6f_k$.call(this, atLeast);
+  function readRemaining$default(limit, $completion, $super) {
+    var tmp;
+    if (limit === VOID) {
+      Companion_getInstance();
+      tmp = new Long(-1, 2147483647);
+    } else {
+      tmp = limit;
+    }
+    limit = tmp;
+    return $super === VOID ? this.h7j(limit, $completion) : $super.h7j.call(this, limit, $completion);
   }
-  setMetadataFor(ReadSession, 'ReadSession', interfaceMeta);
-  function await$default(atLeast, $completion, $super) {
-    atLeast = atLeast === VOID ? 1 : atLeast;
-    return $super === VOID ? this.await_wm3xku_k$(atLeast, $completion) : $super.await_wm3xku_k$.call(this, atLeast, $completion);
-  }
-  setMetadataFor(SuspendableReadSession, 'SuspendableReadSession', interfaceMeta, VOID, [ReadSession], VOID, VOID, VOID, [1]);
-  setMetadataFor(HasReadSession, 'HasReadSession', interfaceMeta);
-  setMetadataFor(HasWriteSession, 'HasWriteSession', interfaceMeta);
-  setMetadataFor(ByteChannelSequentialBase, 'ByteChannelSequentialBase', classMeta, VOID, [ByteChannel, ByteReadChannel_1, ByteWriteChannel, SuspendableReadSession, HasReadSession, HasWriteSession], VOID, VOID, VOID, [1, 3, 0, 2, 5]);
-  setMetadataFor($copyAndCloseCOROUTINE$50, '$copyAndCloseCOROUTINE$50', classMeta, CoroutineImpl);
+  setMetadataFor(ByteReadChannel_1, 'ByteReadChannel', interfaceMeta, VOID, VOID, VOID, VOID, VOID, [3, 1, 2, 0, 5]);
+  setMetadataFor(ByteChannelSequentialBase, 'ByteChannelSequentialBase', classMeta, VOID, [ByteReadChannel_1], VOID, VOID, VOID, [1, 3, 0, 2, 5]);
   setMetadataFor(ClosedWriteChannelException, 'ClosedWriteChannelException', classMeta, CancellationException);
   setMetadataFor(CloseElement, 'CloseElement', classMeta);
-  setMetadataFor(WriterJob, 'WriterJob', interfaceMeta, VOID, [Job], VOID, VOID, VOID, [0]);
   setMetadataFor(WriterScope, 'WriterScope', interfaceMeta, VOID, [CoroutineScope]);
-  setMetadataFor(ReaderJob, 'ReaderJob', interfaceMeta, VOID, [Job], VOID, VOID, VOID, [0]);
-  setMetadataFor(ChannelJob, 'ChannelJob', classMeta, VOID, [ReaderJob, WriterJob, Job], VOID, VOID, VOID, [0]);
-  setMetadataFor(ReaderScope, 'ReaderScope', interfaceMeta, VOID, [CoroutineScope]);
-  setMetadataFor(ChannelScope, 'ChannelScope', classMeta, VOID, [ReaderScope, WriterScope, CoroutineScope]);
-  setMetadataFor(launchChannel$slambda, 'launchChannel$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(Allocator, 'Allocator', interfaceMeta);
-  setMetadataFor(MalformedInputException, 'MalformedInputException', classMeta, Error);
-  setMetadataFor(TooLongLineException, 'TooLongLineException', classMeta, MalformedInputException);
+  setMetadataFor(ChannelJob, 'ChannelJob', classMeta, VOID, [Job], VOID, VOID, VOID, [0]);
+  setMetadataFor(ChannelScope, 'ChannelScope', classMeta, VOID, [CoroutineScope, WriterScope]);
+  setMetadataFor(launchChannel$slambda, 'launchChannel$slambda', classMeta, CoroutineImpl, VOID, VOID, VOID, VOID, [1]);
   setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(Buffer, 'Buffer', classMeta);
   setMetadataFor(InsufficientSpaceException, 'InsufficientSpaceException', classMeta, Exception, VOID, InsufficientSpaceException);
-  setMetadataFor(Closeable, 'Closeable', interfaceMeta);
-  function close() {
-    this.dispose_3nnxhr_k$();
-  }
-  setMetadataFor(ObjectPool, 'ObjectPool', interfaceMeta, VOID, [Closeable]);
-  setMetadataFor(DefaultPool, 'DefaultPool', classMeta, VOID, [ObjectPool]);
+  setMetadataFor(DefaultPool, 'DefaultPool', classMeta);
   setMetadataFor(DefaultBufferPool, 'DefaultBufferPool', classMeta, DefaultPool, VOID, DefaultBufferPool);
-  setMetadataFor(Output, 'Output', classMeta, VOID, [Appendable, Closeable]);
+  setMetadataFor(Output, 'Output', classMeta);
   setMetadataFor(BytePacketBuilder, 'BytePacketBuilder', classMeta, Output, VOID, BytePacketBuilder);
   setMetadataFor(Companion_0, 'Companion', objectMeta);
-  setMetadataFor(Input, 'Input', classMeta, VOID, [Closeable]);
+  setMetadataFor(Input, 'Input', classMeta);
   setMetadataFor(ByteReadPacket, 'ByteReadPacket', classMeta, Input);
   setMetadataFor(Companion_1, 'Companion', objectMeta);
-  setMetadataFor(Input$readAvailableCharacters$out$1, VOID, classMeta, VOID, [Appendable]);
-  setMetadataFor(CharArraySequence, 'CharArraySequence', classMeta, VOID, [CharSequence]);
-  setMetadataFor(ChunkBuffer$Companion$EmptyPool$1, VOID, classMeta, VOID, [ObjectPool]);
-  setMetadataFor(NoPoolImpl, 'NoPoolImpl', classMeta, VOID, [ObjectPool]);
+  setMetadataFor(ChunkBuffer$Companion$EmptyPool$1, VOID, classMeta);
+  setMetadataFor(NoPoolImpl, 'NoPoolImpl', classMeta);
   setMetadataFor(ChunkBuffer$Companion$NoPool$1, VOID, classMeta, NoPoolImpl);
   setMetadataFor(ChunkBuffer$Companion$NoPoolManuallyManaged$1, VOID, classMeta, NoPoolImpl);
   setMetadataFor(Companion_2, 'Companion', objectMeta);
   setMetadataFor(ChunkBuffer, 'ChunkBuffer', classMeta, Buffer);
-  setMetadataFor(EncodeResult, 'EncodeResult', classMeta);
   setMetadataFor(MalformedUTF8InputException, 'MalformedUTF8InputException', classMeta, Exception);
-  setMetadataFor($decodeUTF8LineLoopSuspendCOROUTINE$51, '$decodeUTF8LineLoopSuspendCOROUTINE$51', classMeta, CoroutineImpl);
   setMetadataFor($sleepCOROUTINE$52, '$sleepCOROUTINE$52', classMeta, CoroutineImpl);
   setMetadataFor($trySuspendCOROUTINE$53, '$trySuspendCOROUTINE$53', classMeta, CoroutineImpl);
   setMetadataFor(AwaitingSlot, 'AwaitingSlot', classMeta, VOID, VOID, AwaitingSlot, VOID, VOID, [1]);
   setMetadataFor($copyToSequentialImplCOROUTINE$54, '$copyToSequentialImplCOROUTINE$54', classMeta, CoroutineImpl);
   setMetadataFor($copyToTailCOROUTINE$55, '$copyToTailCOROUTINE$55', classMeta, CoroutineImpl);
   setMetadataFor(ByteArrayPool$1, VOID, classMeta, DefaultPool);
-  setMetadataFor($readAvailableCOROUTINE$56, '$readAvailableCOROUTINE$56', classMeta, CoroutineImpl);
-  setMetadataFor($readAvailableSuspendCOROUTINE$57, '$readAvailableSuspendCOROUTINE$57', classMeta, CoroutineImpl);
-  setMetadataFor($readFullySuspendCOROUTINE$58, '$readFullySuspendCOROUTINE$58', classMeta, CoroutineImpl);
   setMetadataFor(ByteChannelJS, 'ByteChannelJS', classMeta, ByteChannelSequentialBase, VOID, VOID, VOID, VOID, [3, 1, 0, 2, 5]);
   setMetadataFor(Companion_3, 'Companion', objectMeta);
-  setMetadataFor(DefaultAllocator, 'DefaultAllocator', objectMeta, VOID, [Allocator]);
+  setMetadataFor(DefaultAllocator, 'DefaultAllocator', objectMeta);
   setMetadataFor(Companion_4, 'Companion', objectMeta);
   setMetadataFor(Memory, 'Memory', classMeta);
   setMetadataFor(Companion_5, 'Companion', objectMeta);
   setMetadataFor(Charset, 'Charset', classMeta);
   setMetadataFor(Charsets, 'Charsets', objectMeta);
+  setMetadataFor(MalformedInputException, 'MalformedInputException', classMeta, Error);
   setMetadataFor(CharsetDecoder, 'CharsetDecoder', classMeta);
   setMetadataFor(CharsetEncoder, 'CharsetEncoder', classMeta);
   setMetadataFor(CharsetImpl, 'CharsetImpl', classMeta, Charset);
   setMetadataFor(CharsetEncoderImpl, 'CharsetEncoderImpl', classMeta, CharsetEncoder);
   setMetadataFor(CharsetDecoderImpl, 'CharsetDecoderImpl', classMeta, CharsetDecoder);
   setMetadataFor(DecodeBufferResult, 'DecodeBufferResult', classMeta);
-  setMetadataFor(Companion_6, 'Companion', objectMeta);
-  setMetadataFor(ByteOrder, 'ByteOrder', classMeta, Enum);
   setMetadataFor(IOException, 'IOException', classMeta, Exception);
   setMetadataFor(EOFException, 'EOFException', classMeta, IOException);
-  setMetadataFor(Decoder, 'Decoder', interfaceMeta);
-  setMetadataFor(toKtor$1, VOID, classMeta, VOID, [Decoder]);
-  setMetadataFor(TextDecoderFallback, 'TextDecoderFallback', classMeta, VOID, [Decoder]);
+  setMetadataFor(toKtor$1, VOID, classMeta);
+  setMetadataFor(TextDecoderFallback, 'TextDecoderFallback', classMeta);
   //endregion
-  function ByteChannel() {
-  }
   function ByteReadChannel(content) {
     return ByteReadChannel_0(content, 0, content.length);
   }
-  function $tryAwaitCOROUTINE$49(_this__u8e3s4, n, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.n_1 = n;
-  }
-  protoOf($tryAwaitCOROUTINE$49).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this._this__u8e3s4__1.this$0__1.get_availableForWrite_22rgeu_k$() < this.n_1) {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = this._this__u8e3s4__1.this$0__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(this.n_1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            }
-
-          case 1:
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return Unit_getInstance();
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function _get__lastReadView__ij231d($this) {
-    return $this._lastReadView_1;
-  }
-  function _get__totalBytesRead__ypqfud($this) {
-    return $this._totalBytesRead_1;
-  }
-  function _get__totalBytesWritten__yty2ze($this) {
-    return $this._totalBytesWritten_1;
-  }
-  function _get__availableForRead__1rfsys($this) {
-    return $this._availableForRead_1;
-  }
-  function _get_channelSize__ptruy5($this) {
-    return $this.channelSize_1;
-  }
-  function _get__closed__hglk9y($this) {
-    return $this._closed_1;
-  }
   function _get_isCancelled__nhbn6y($this) {
-    var tmp0_safe_receiver = $this._closed_1.get_kotlinx$atomicfu$value_vi2am5_k$();
-    return !((tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_cause_iplhs0_k$()) == null);
-  }
-  function _set_lastReadAvailable__98ukjs($this, _set____db54di) {
-    var this_0 = $this.lastReadAvailable$delegate_1;
-    lastReadAvailable$factory();
-    this_0.set_kotlinx$atomicfu$value_nm6d3_k$(_set____db54di);
-    return Unit_getInstance();
-  }
-  function _get_lastReadAvailable__cgybqk($this) {
-    // Inline function 'kotlinx.atomicfu.AtomicInt.getValue' call
-    var this_0 = $this.lastReadAvailable$delegate_1;
-    lastReadAvailable$factory_0();
-    return this_0.get_kotlinx$atomicfu$value_vi2am5_k$();
-  }
-  function _set_lastReadView__2y3peu($this, _set____db54di) {
-    var this_0 = $this.lastReadView$delegate_1;
-    lastReadView$factory();
-    this_0.set_kotlinx$atomicfu$value_508e3y_k$(_set____db54di);
-    return Unit_getInstance();
-  }
-  function _get_lastReadView__ihufyy($this) {
-    // Inline function 'kotlinx.atomicfu.AtomicRef.getValue' call
-    var this_0 = $this.lastReadView$delegate_1;
-    lastReadView$factory_0();
-    return this_0.get_kotlinx$atomicfu$value_vi2am5_k$();
-  }
-  function _get_slot__ddq6fh($this) {
-    return $this.slot_1;
-  }
-  function _get_flushMutex__shnjf4($this) {
-    return $this.flushMutex_1;
-  }
-  function _get_flushBuffer__b837ot($this) {
-    return $this.flushBuffer_1;
+    var tmp0_safe_receiver = $this.l7c_1.kotlinx$atomicfu$value;
+    return !((tmp0_safe_receiver == null ? null : tmp0_safe_receiver.t7c_1) == null);
   }
   function flushImpl($this) {
-    if ($this.writable_1.get_isEmpty_zauvru_k$()) {
-      $this.slot_1.resume_2o15jx_k$();
+    if ($this.m7c_1.o1o()) {
+      $this.q7c_1.v7c();
       return false;
     }
     flushWrittenBytes($this);
-    $this.slot_1.resume_2o15jx_k$();
+    $this.q7c_1.v7c();
     return true;
   }
   function flushWrittenBytes($this) {
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.flushMutex_1;
+    $this.r7c_1;
     // Inline function 'io.ktor.utils.io.ByteChannelSequentialBase.flushWrittenBytes.<anonymous>' call
-    var size = $this.writable_1.get_size_woubt6_k$();
-    var buffer = ensureNotNull($this.writable_1.stealAll_nensgi_k$());
-    $this.flushBuffer_1.writeChunkBuffer_f0a6fc_k$(buffer);
-    $this._availableForRead_1.atomicfu$addAndGet(size);
+    var size = $this.m7c_1.m();
+    var buffer = ensureNotNull($this.m7c_1.m7d());
+    $this.s7c_1.n7d(buffer);
+    $this.j7c_1.atomicfu$addAndGet(size);
   }
   function ensureNotClosed($this) {
-    if ($this.get_closed_byjrzp_k$()) {
-      var tmp0_elvis_lhs = $this.get_closedCause_o1qcj8_k$();
+    if ($this.p7d()) {
+      var tmp0_elvis_lhs = $this.o7d();
       throw tmp0_elvis_lhs == null ? new ClosedWriteChannelException('Channel ' + $this + ' is already closed') : tmp0_elvis_lhs;
     }
   }
   function ensureNotFailed($this) {
-    var tmp0_safe_receiver = $this.get_closedCause_o1qcj8_k$();
+    var tmp0_safe_receiver = $this.o7d();
     if (tmp0_safe_receiver == null)
       null;
     else {
@@ -400,163 +210,21 @@
     }
   }
   function ensureNotFailed_0($this, closeable) {
-    var tmp0_safe_receiver = $this.get_closedCause_o1qcj8_k$();
+    var tmp0_safe_receiver = $this.o7d();
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      closeable.release_wu5yyf_k$();
+      closeable.mv();
       throw tmp0_safe_receiver;
     }
-  }
-  function checkClosed($this, remaining, closeable) {
-    var tmp0_safe_receiver = $this.get_closedCause_o1qcj8_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      if (closeable == null)
-        null;
-      else {
-        closeable.close_yn9xrc_k$();
-      }
-      throw tmp0_safe_receiver;
-    }
-    if ($this.get_closed_byjrzp_k$() ? $this.get_availableForRead_tq0sox_k$() < remaining : false) {
-      if (closeable == null)
-        null;
-      else {
-        closeable.close_yn9xrc_k$();
-      }
-      throw new EOFException('' + remaining + ' bytes required but EOF reached');
-    }
-  }
-  function checkClosed$default($this, remaining, closeable, $super) {
-    closeable = closeable === VOID ? null : closeable;
-    return checkClosed($this, remaining, closeable);
-  }
-  function readByteSlow($this, $completion) {
-    var tmp = new $readByteSlowCOROUTINE$15($this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readShortSlow($this, $completion) {
-    var tmp = new $readShortSlowCOROUTINE$17($this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readIntSlow($this, $completion) {
-    var tmp = new $readIntSlowCOROUTINE$19($this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readLongSlow($this, $completion) {
-    var tmp = new $readLongSlowCOROUTINE$21($this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readFloatSlow($this, $completion) {
-    var tmp = new $readFloatSlowCOROUTINE$23($this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readDoubleSlow($this, $completion) {
-    var tmp = new $readDoubleSlowCOROUTINE$25($this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
   }
   function readRemainingSuspend($this, builder, limit, $completion) {
     var tmp = new $readRemainingSuspendCOROUTINE$27($this, builder, limit, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readPacketSuspend($this, builder, size, $completion) {
-    var tmp = new $readPacketSuspendCOROUTINE$29($this, builder, size, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readFully($this, dst, n, $completion) {
-    var tmp = new $readFullyCOROUTINE$31($this, dst, n, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readFullySuspend($this, dst, n, $completion) {
-    var tmp = new $readFullySuspendCOROUTINE$32($this, dst, n, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readFullySuspend_0($this, dst, offset, length, $completion) {
-    var tmp = new $readFullySuspendCOROUTINE$35($this, dst, offset, length, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readBooleanSlow($this, $completion) {
-    var tmp = new $readBooleanSlowCOROUTINE$37($this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function completeReading($this) {
-    // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var this_0 = _get_lastReadView__ihufyy($this);
-    var remaining = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
-    var delta = _get_lastReadAvailable__cgybqk($this) - remaining | 0;
-    if (!(_get_lastReadView__ihufyy($this) === Companion_getInstance_1().get_Empty_i9b85g_k$())) {
-      completeReadHead($this.readable_1, _get_lastReadView__ihufyy($this));
-    }
-    if (delta > 0) {
-      $this.afterRead_biie6i_k$(delta);
-    }
-    _set_lastReadAvailable__98ukjs($this, 0);
-    _set_lastReadView__2y3peu($this, Companion_getInstance_4().get_Empty_i9b85g_k$());
-  }
-  function requestNextView($this, atLeast) {
-    // Inline function 'io.ktor.utils.io.core.isEmpty' call
-    if ($this.readable_1.get_endOfInput_skegkh_k$()) {
-      $this.prepareFlushedBytes_jiu201_k$();
-    }
-    var view = $this.readable_1.prepareReadHead_dk94or_k$(atLeast);
-    if (view == null) {
-      _set_lastReadView__2y3peu($this, Companion_getInstance_4().get_Empty_i9b85g_k$());
-      _set_lastReadAvailable__98ukjs($this, 0);
-    } else {
-      _set_lastReadView__2y3peu($this, view);
-      // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      var tmp$ret$1 = view.get_writePosition_jdt81t_k$() - view.get_readPosition_70qxnc_k$() | 0;
-      _set_lastReadAvailable__98ukjs($this, tmp$ret$1);
-    }
-    return view;
-  }
-  function discardSuspend($this, max, discarded0, $completion) {
-    var tmp = new $discardSuspendCOROUTINE$41($this, max, discarded0, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function writeAvailableSuspend($this, src, $completion) {
-    var tmp = new $writeAvailableSuspendCOROUTINE$44($this, src, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function writeAvailableSuspend_0($this, src, offset, length, $completion) {
-    var tmp = new $writeAvailableSuspendCOROUTINE$45($this, src, offset, length, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   }
   function addBytesRead($this, count) {
     // Inline function 'kotlin.require' call
@@ -567,22 +235,22 @@
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlinx.atomicfu.AtomicInt.minusAssign' call
-    $this.channelSize_1.atomicfu$getAndAdd(-count | 0);
-    $this._totalBytesRead_1.atomicfu$addAndGet$long(toLong(count));
+    $this.k7c_1.atomicfu$getAndAdd(-count | 0);
+    $this.h7c_1.atomicfu$addAndGet$long(toLong(count));
     // Inline function 'kotlinx.atomicfu.AtomicInt.minusAssign' call
-    $this._availableForRead_1.atomicfu$getAndAdd(-count | 0);
+    $this.j7c_1.atomicfu$getAndAdd(-count | 0);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!($this.channelSize_1.get_kotlinx$atomicfu$value_vi2am5_k$() >= 0)) {
+    if (!($this.k7c_1.kotlinx$atomicfu$value >= 0)) {
       // Inline function 'io.ktor.utils.io.ByteChannelSequentialBase.addBytesRead.<anonymous>' call
-      var message_0 = 'Readable bytes count is negative: ' + $this.get_availableForRead_tq0sox_k$() + ', ' + count + ' in ' + $this;
+      var message_0 = 'Readable bytes count is negative: ' + $this.c7e() + ', ' + count + ' in ' + $this;
       throw IllegalStateException_init_$Create$(toString(message_0));
     }
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!($this.get_availableForRead_tq0sox_k$() >= 0)) {
+    if (!($this.c7e() >= 0)) {
       // Inline function 'io.ktor.utils.io.ByteChannelSequentialBase.addBytesRead.<anonymous>' call
-      var message_1 = 'Readable bytes count is negative: ' + $this.get_availableForRead_tq0sox_k$() + ', ' + count + ' in ' + $this;
+      var message_1 = 'Readable bytes count is negative: ' + $this.c7e() + ', ' + count + ' in ' + $this;
       throw IllegalStateException_init_$Create$(toString(message_1));
     }
   }
@@ -595,1396 +263,259 @@
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlinx.atomicfu.AtomicInt.plusAssign' call
-    $this.channelSize_1.atomicfu$getAndAdd(count);
-    $this._totalBytesWritten_1.atomicfu$addAndGet$long(toLong(count));
+    $this.k7c_1.atomicfu$getAndAdd(count);
+    $this.i7c_1.atomicfu$addAndGet$long(toLong(count));
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!($this.channelSize_1.get_kotlinx$atomicfu$value_vi2am5_k$() >= 0)) {
+    if (!($this.k7c_1.kotlinx$atomicfu$value >= 0)) {
       // Inline function 'io.ktor.utils.io.ByteChannelSequentialBase.addBytesWritten.<anonymous>' call
-      var message_0 = 'Readable bytes count is negative: ' + $this.channelSize_1.get_kotlinx$atomicfu$value_vi2am5_k$() + ', ' + count + ' in ' + $this;
+      var message_0 = 'Readable bytes count is negative: ' + $this.k7c_1.kotlinx$atomicfu$value + ', ' + count + ' in ' + $this;
       throw IllegalStateException_init_$Create$(toString(message_0));
     }
   }
   function ByteChannelSequentialBase$awaitAtLeastNBytesAvailableForWrite$lambda(this$0, $count) {
     return function () {
-      return this$0.get_availableForWrite_22rgeu_k$() < $count ? !this$0.get_closed_byjrzp_k$() : false;
+      return this$0.d7e() < $count ? !this$0.p7d() : false;
     };
   }
   function ByteChannelSequentialBase$awaitAtLeastNBytesAvailableForRead$lambda(this$0, $count) {
     return function () {
-      return this$0.get_availableForRead_tq0sox_k$() < $count ? !this$0.get_isClosedForRead_ajcc1s_k$() : false;
+      return this$0.c7e() < $count ? !this$0.e7e() : false;
     };
-  }
-  function ByteChannelSequentialBase$beginWriteSession$1(this$0) {
-    this.this$0__1 = this$0;
-  }
-  protoOf(ByteChannelSequentialBase$beginWriteSession$1).request_oh1f6f_k$ = function (min) {
-    if (this.this$0__1.get_availableForWrite_22rgeu_k$() === 0)
-      return null;
-    return this.this$0__1.writable_1.prepareWriteHead_ugmxj4_k$(min);
-  };
-  protoOf(ByteChannelSequentialBase$beginWriteSession$1).written_ytagz3_k$ = function (n) {
-    this.this$0__1.writable_1.afterHeadWrite_dl47zh_k$();
-    this.this$0__1.afterWrite_qybsg5_k$(n);
-  };
-  protoOf(ByteChannelSequentialBase$beginWriteSession$1).flush_shahbo_k$ = function () {
-    this.this$0__1.flush_shahbo_k$();
-  };
-  protoOf(ByteChannelSequentialBase$beginWriteSession$1).tryAwait_wnywx2_k$ = function (n, $completion) {
-    var tmp = new $tryAwaitCOROUTINE$49(this, n, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  function ByteChannelSequentialBase$readUTF8LineTo$slambda(this$0, resultContinuation) {
-    this.this$0__1 = this$0;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(ByteChannelSequentialBase$readUTF8LineTo$slambda).invoke_yv7ll_k$ = function (size, $completion) {
-    var tmp = this.create_t6fi7n_k$(size, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase$readUTF8LineTo$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_yv7ll_k$((!(p1 == null) ? typeof p1 === 'number' : false) ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(ByteChannelSequentialBase$readUTF8LineTo$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this.this$0__1.await_wm3xku_k$(this.size_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            if (suspendResult) {
-              var tmp_0 = this;
-              tmp_0.WHEN_RESULT0__1 = this.this$0__1.readable_1;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            } else {
-              var tmp_1 = this;
-              tmp_1.WHEN_RESULT0__1 = null;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            }
-
-          case 2:
-            return this.WHEN_RESULT0__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  protoOf(ByteChannelSequentialBase$readUTF8LineTo$slambda).create_t6fi7n_k$ = function (size, completion) {
-    var i = new ByteChannelSequentialBase$readUTF8LineTo$slambda(this.this$0__1, completion);
-    i.size_1 = size;
-    return i;
-  };
-  protoOf(ByteChannelSequentialBase$readUTF8LineTo$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_t6fi7n_k$((!(value == null) ? typeof value === 'number' : false) ? value : THROW_CCE(), completion);
-  };
-  function ByteChannelSequentialBase$readUTF8LineTo$slambda_0(this$0, resultContinuation) {
-    var i = new ByteChannelSequentialBase$readUTF8LineTo$slambda(this$0, resultContinuation);
-    var l = function (size, $completion) {
-      return i.invoke_yv7ll_k$(size, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function ByteChannelSequentialBase$readUTF8LineTo$lambda(this$0) {
-    return function (it) {
-      this$0.afterRead_biie6i_k$(it);
-      return Unit_getInstance();
-    };
-  }
-  function ByteChannelSequentialBase$peekTo$slambda($min, $offset, $bytesCopied, $max, $destination, $destinationOffset, resultContinuation) {
-    this.$min_1 = $min;
-    this.$offset_1 = $offset;
-    this.$bytesCopied_1 = $bytesCopied;
-    this.$max_1 = $max;
-    this.$destination_1 = $destination;
-    this.$destinationOffset_1 = $destinationOffset;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(ByteChannelSequentialBase$peekTo$slambda).invoke_878vrs_k$ = function ($this$readSuspendableSession, $completion) {
-    var tmp = this.create_8rvjfw_k$($this$readSuspendableSession, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase$peekTo$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_878vrs_k$((!(p1 == null) ? isInterface(p1, SuspendableReadSession) : false) ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(ByteChannelSequentialBase$peekTo$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.desiredSize0__1 = coerceAtMost(this.$min_1.plus_r93sks_k$(this.$offset_1), new Long(4088, 0)).toInt_1tsl84_k$();
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this.$this$readSuspendableSession_1.await_wm3xku_k$(this.desiredSize0__1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            var tmp0_elvis_lhs = this.$this$readSuspendableSession_1.request_oh1f6f_k$(1);
-            var buffer = tmp0_elvis_lhs == null ? Companion_getInstance_4().get_Empty_i9b85g_k$() : tmp0_elvis_lhs;
-            if (toLong(buffer.get_writePosition_jdt81t_k$() - buffer.get_readPosition_70qxnc_k$() | 0).compareTo_9jj042_k$(this.$offset_1) > 0) {
-              var a = toLong(buffer.get_writePosition_jdt81t_k$() - buffer.get_readPosition_70qxnc_k$() | 0).minus_mfbszm_k$(this.$offset_1);
-              var b = this.$max_1;
-              var this_0 = this.$destination_1;
-              var b_0 = toLong(this_0.get_view_wow8a6_k$().byteLength).minus_mfbszm_k$(this.$destinationOffset_1);
-              var b_1 = b.compareTo_9jj042_k$(b_0) <= 0 ? b : b_0;
-              this.$bytesCopied_1._v = a.compareTo_9jj042_k$(b_1) <= 0 ? a : b_1;
-              buffer.get_memory_gl4362_k$().copyTo_ug0rjx_k$(this.$destination_1, this.$offset_1, this.$bytesCopied_1._v, this.$destinationOffset_1);
-            }
-
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  protoOf(ByteChannelSequentialBase$peekTo$slambda).create_8rvjfw_k$ = function ($this$readSuspendableSession, completion) {
-    var i = new ByteChannelSequentialBase$peekTo$slambda(this.$min_1, this.$offset_1, this.$bytesCopied_1, this.$max_1, this.$destination_1, this.$destinationOffset_1, completion);
-    i.$this$readSuspendableSession_1 = $this$readSuspendableSession;
-    return i;
-  };
-  protoOf(ByteChannelSequentialBase$peekTo$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_8rvjfw_k$((!(value == null) ? isInterface(value, SuspendableReadSession) : false) ? value : THROW_CCE(), completion);
-  };
-  function ByteChannelSequentialBase$peekTo$slambda_0($min, $offset, $bytesCopied, $max, $destination, $destinationOffset, resultContinuation) {
-    var i = new ByteChannelSequentialBase$peekTo$slambda($min, $offset, $bytesCopied, $max, $destination, $destinationOffset, resultContinuation);
-    var l = function ($this$readSuspendableSession, $completion) {
-      return i.invoke_878vrs_k$($this$readSuspendableSession, $completion);
-    };
-    l.$arity = 1;
-    return l;
   }
   function $awaitAtLeastNBytesAvailableForWriteCOROUTINE$0(_this__u8e3s4, count, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.count_1 = count;
+    this.n7e_1 = _this__u8e3s4;
+    this.o7e_1 = count;
   }
-  protoOf($awaitAtLeastNBytesAvailableForWriteCOROUTINE$0).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($awaitAtLeastNBytesAvailableForWriteCOROUTINE$0).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(4);
-            this.set_state_rjd8d0_k$(1);
+            this.bc_1 = 4;
+            this.ac_1 = 1;
             continue $sm;
           case 1:
-            if (!(this._this__u8e3s4__1.get_availableForWrite_22rgeu_k$() < this.count_1 ? !this._this__u8e3s4__1.get_closed_byjrzp_k$() : false)) {
-              this.set_state_rjd8d0_k$(5);
+            if (!(this.n7e_1.d7e() < this.o7e_1 ? !this.n7e_1.p7d() : false)) {
+              this.ac_1 = 5;
               continue $sm;
             }
 
-            if (!flushImpl(this._this__u8e3s4__1)) {
-              this.set_state_rjd8d0_k$(2);
-              suspendResult = this._this__u8e3s4__1.slot_1.sleep_nce3pz_k$(ByteChannelSequentialBase$awaitAtLeastNBytesAvailableForWrite$lambda(this._this__u8e3s4__1, this.count_1), this);
+            if (!flushImpl(this.n7e_1)) {
+              this.ac_1 = 2;
+              suspendResult = this.n7e_1.q7c_1.p7e(ByteChannelSequentialBase$awaitAtLeastNBytesAvailableForWrite$lambda(this.n7e_1, this.o7e_1), this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(3);
+              this.ac_1 = 3;
               continue $sm;
             }
 
           case 2:
-            this.set_state_rjd8d0_k$(3);
+            this.ac_1 = 3;
             continue $sm;
           case 3:
-            this.set_state_rjd8d0_k$(1);
+            this.ac_1 = 1;
             continue $sm;
           case 4:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
           case 5:
-            return Unit_getInstance();
+            return Unit_instance;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 4) {
+        if (this.bc_1 === 4) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $awaitAtLeastNBytesAvailableForReadCOROUTINE$1(_this__u8e3s4, count, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.count_1 = count;
+    this.y7e_1 = _this__u8e3s4;
+    this.z7e_1 = count;
   }
-  protoOf($awaitAtLeastNBytesAvailableForReadCOROUTINE$1).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($awaitAtLeastNBytesAvailableForReadCOROUTINE$1).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.set_state_rjd8d0_k$(1);
+            this.bc_1 = 3;
+            this.ac_1 = 1;
             continue $sm;
           case 1:
-            if (!(this._this__u8e3s4__1.get_availableForRead_tq0sox_k$() < this.count_1 ? !this._this__u8e3s4__1.get_isClosedForRead_ajcc1s_k$() : false)) {
-              this.set_state_rjd8d0_k$(4);
+            if (!(this.y7e_1.c7e() < this.z7e_1 ? !this.y7e_1.e7e() : false)) {
+              this.ac_1 = 4;
               continue $sm;
             }
 
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.slot_1.sleep_nce3pz_k$(ByteChannelSequentialBase$awaitAtLeastNBytesAvailableForRead$lambda(this._this__u8e3s4__1, this.count_1), this);
+            this.ac_1 = 2;
+            suspendResult = this.y7e_1.q7c_1.p7e(ByteChannelSequentialBase$awaitAtLeastNBytesAvailableForRead$lambda(this.y7e_1, this.z7e_1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 2:
-            this.set_state_rjd8d0_k$(1);
+            this.ac_1 = 1;
             continue $sm;
           case 3:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
           case 4:
-            return Unit_getInstance();
+            return Unit_instance;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
+        if (this.bc_1 === 3) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeByteCOROUTINE$2(_this__u8e3s4, b, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.b_1 = b;
-  }
-  protoOf($writeByteCOROUTINE$2).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            this._this__u8e3s4__1.writable_1.writeByte_9ih3z3_k$(this.b_1);
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(1);
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeShortCOROUTINE$3(_this__u8e3s4, s, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.s_1 = s;
-  }
-  protoOf($writeShortCOROUTINE$3).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(2, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            writeShort_0(this._this__u8e3s4__1.writable_1, this.s_1);
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(2);
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeIntCOROUTINE$4(_this__u8e3s4, i, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.i_1 = i;
-  }
-  protoOf($writeIntCOROUTINE$4).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(4, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            writeInt_0(this._this__u8e3s4__1.writable_1, this.i_1);
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(4);
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeLongCOROUTINE$5(_this__u8e3s4, l, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.l_1 = l;
-  }
-  protoOf($writeLongCOROUTINE$5).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(8, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            writeLong_0(this._this__u8e3s4__1.writable_1, this.l_1);
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(8);
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeFloatCOROUTINE$6(_this__u8e3s4, f, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.f_1 = f;
-  }
-  protoOf($writeFloatCOROUTINE$6).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(4, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            writeFloat(this._this__u8e3s4__1.writable_1, this.f_1);
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(4);
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeDoubleCOROUTINE$7(_this__u8e3s4, d, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.d_1 = d;
-  }
-  protoOf($writeDoubleCOROUTINE$7).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(8, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            writeDouble(this._this__u8e3s4__1.writable_1, this.d_1);
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(8);
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writePacketCOROUTINE$8(_this__u8e3s4, packet, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.packet_1 = packet;
-  }
-  protoOf($writePacketCOROUTINE$8).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            var size = this.packet_1.get_remaining_mwegr1_k$().toInt_1tsl84_k$();
-            this._this__u8e3s4__1.writable_1.writePacket_e1h3qk_k$(this.packet_1);
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(size);
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $writeFullyCOROUTINE$9(_this__u8e3s4, src, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.src_1 = src;
+    this.i7f_1 = _this__u8e3s4;
+    this.j7f_1 = src;
   }
-  protoOf($writeFullyCOROUTINE$9).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($writeFullyCOROUTINE$9).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(1, this);
+            this.bc_1 = 2;
+            this.ac_1 = 1;
+            suspendResult = this.i7f_1.k7f(1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 1:
-            var this_0 = this.src_1;
-            var count = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
-            writeFully_2(this._this__u8e3s4__1.writable_1, this.src_1);
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(count);
-            return Unit_getInstance();
+            var this_0 = this.j7f_1;
+            var count = this_0.n7f_1 - this_0.m7f_1 | 0;
+            writeFully_2(this.i7f_1.m7c_1, this.j7f_1);
+            this.i7f_1.r7f(count);
+            return Unit_instance;
           case 2:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
+        if (this.bc_1 === 2) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $writeFullyCOROUTINE$10(_this__u8e3s4, src, offset, length, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.src_1 = src;
-    this.offset_1 = offset;
-    this.length_1 = length;
+    this.a7g_1 = _this__u8e3s4;
+    this.b7g_1 = src;
+    this.c7g_1 = offset;
+    this.d7g_1 = length;
   }
-  protoOf($writeFullyCOROUTINE$10).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($writeFullyCOROUTINE$10).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(4);
-            this.currentIndex0__1 = this.offset_1;
-            this.endIndex1__1 = this.offset_1 + this.length_1 | 0;
-            this.set_state_rjd8d0_k$(1);
+            this.bc_1 = 4;
+            this.e7g_1 = this.c7g_1;
+            this.f7g_1 = this.c7g_1 + this.d7g_1 | 0;
+            this.ac_1 = 1;
             continue $sm;
           case 1:
-            if (!(this.currentIndex0__1 < this.endIndex1__1)) {
-              this.set_state_rjd8d0_k$(3);
+            if (!(this.e7g_1 < this.f7g_1)) {
+              this.ac_1 = 3;
               continue $sm;
             }
 
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(1, this);
+            this.ac_1 = 2;
+            suspendResult = this.a7g_1.k7f(1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 2:
-            var a = this._this__u8e3s4__1.get_availableForWrite_22rgeu_k$();
-            var b = this.endIndex1__1 - this.currentIndex0__1 | 0;
+            var a = this.a7g_1.d7e();
+            var b = this.f7g_1 - this.e7g_1 | 0;
             var bytesCount = Math.min(a, b);
-            writeFully_3(this._this__u8e3s4__1.writable_1, this.src_1, this.currentIndex0__1, bytesCount);
-            this.currentIndex0__1 = this.currentIndex0__1 + bytesCount | 0;
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(bytesCount);
-            this.set_state_rjd8d0_k$(1);
+            writeFully_3(this.a7g_1.m7c_1, this.b7g_1, this.e7g_1, bytesCount);
+            this.e7g_1 = this.e7g_1 + bytesCount | 0;
+            this.a7g_1.r7f(bytesCount);
+            this.ac_1 = 1;
             continue $sm;
           case 3:
-            return Unit_getInstance();
+            return Unit_instance;
           case 4:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 4) {
+        if (this.bc_1 === 4) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeFullyCOROUTINE$11(_this__u8e3s4, memory, startIndex, endIndex, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.memory_1 = memory;
-    this.startIndex_1 = startIndex;
-    this.endIndex_1 = endIndex;
-  }
-  protoOf($writeFullyCOROUTINE$11).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(4);
-            this.currentIndex0__1 = this.startIndex_1;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            if (!(this.currentIndex0__1 < this.endIndex_1)) {
-              this.set_state_rjd8d0_k$(3);
-              continue $sm;
-            }
-
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            var a = this._this__u8e3s4__1.get_availableForWrite_22rgeu_k$();
-            var b = this.endIndex_1 - this.currentIndex0__1 | 0;
-            var bytesCount = Math.min(a, b);
-            writeFully_4(this._this__u8e3s4__1.writable_1, this.memory_1, this.currentIndex0__1, bytesCount);
-            this.currentIndex0__1 = this.currentIndex0__1 + bytesCount | 0;
-            this._this__u8e3s4__1.afterWrite_qybsg5_k$(bytesCount);
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 3:
-            return Unit_getInstance();
-          case 4:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 4) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeAvailableCOROUTINE$12(_this__u8e3s4, src, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.src_1 = src;
-  }
-  protoOf($writeAvailableCOROUTINE$12).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            var tmp_0 = this;
-            var this_0 = this.src_1;
-            tmp_0.srcRemaining0__1 = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
-            if (this.srcRemaining0__1 === 0)
-              return 0;
-            var tmp_1 = this;
-            var a = this.srcRemaining0__1;
-            var b = this._this__u8e3s4__1.get_availableForWrite_22rgeu_k$();
-            tmp_1.size1__1 = Math.min(a, b);
-            if (this.size1__1 === 0) {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = writeAvailableSuspend(this._this__u8e3s4__1, this.src_1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            } else {
-              var tmp_2 = this;
-              writeFully_2(this._this__u8e3s4__1.writable_1, this.src_1, this.size1__1);
-              this._this__u8e3s4__1.afterWrite_qybsg5_k$(this.size1__1);
-              tmp_2.WHEN_RESULT2__1 = this.size1__1;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT2__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT2__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeAvailableCOROUTINE$13(_this__u8e3s4, src, offset, length, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.src_1 = src;
-    this.offset_1 = offset;
-    this.length_1 = length;
-  }
-  protoOf($writeAvailableCOROUTINE$13).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this.length_1 === 0)
-              return 0;
-            var tmp_0 = this;
-            var a = this.length_1;
-            var b = this._this__u8e3s4__1.get_availableForWrite_22rgeu_k$();
-            tmp_0.size0__1 = Math.min(a, b);
-            if (this.size0__1 === 0) {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = writeAvailableSuspend_0(this._this__u8e3s4__1, this.src_1, this.offset_1, this.length_1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            } else {
-              var tmp_1 = this;
-              writeFully_3(this._this__u8e3s4__1.writable_1, this.src_1, this.offset_1, this.size0__1);
-              this._this__u8e3s4__1.afterWrite_qybsg5_k$(this.size0__1);
-              tmp_1.WHEN_RESULT1__1 = this.size0__1;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT1__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT1__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readByteCOROUTINE$14(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readByteCOROUTINE$14).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            if (!this._this__u8e3s4__1.readable_1.get_endOfInput_skegkh_k$()) {
-              var tmp_0 = this;
-              var this_0 = this._this__u8e3s4__1.readable_1.readByte_ectjk2_k$();
-              this._this__u8e3s4__1.afterRead_biie6i_k$(1);
-              tmp_0.WHEN_RESULT0__1 = this_0;
-              this.set_state_rjd8d0_k$(3);
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readByteSlow(this._this__u8e3s4__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_rjd8d0_k$(3);
-            continue $sm;
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-          case 3:
-            return this.WHEN_RESULT0__1;
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readByteSlowCOROUTINE$15(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readByteSlowCOROUTINE$15).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(4);
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            if (!this._this__u8e3s4__1.readable_1.get_endOfInput_skegkh_k$()) {
-              var this_0 = this._this__u8e3s4__1.readable_1.readByte_ectjk2_k$();
-              this._this__u8e3s4__1.afterRead_biie6i_k$(1);
-              return this_0;
-            }
-
-            checkClosed$default(this._this__u8e3s4__1, 1);
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 3:
-            return Unit_getInstance();
-          case 4:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 4) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readShortCOROUTINE$16(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readShortCOROUTINE$16).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this._this__u8e3s4__1.readable_1.hasBytes_ly98p3_k$(2)) {
-              var tmp_0 = this;
-              var this_0 = readShort_0(this._this__u8e3s4__1.readable_1);
-              this._this__u8e3s4__1.afterRead_biie6i_k$(2);
-              tmp_0.WHEN_RESULT0__1 = this_0;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readShortSlow(this._this__u8e3s4__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT0__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readShortSlowCOROUTINE$17(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readShortSlowCOROUTINE$17).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(2, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            var result = readShort_0(this._this__u8e3s4__1.readable_1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(2);
-            return result;
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readIntCOROUTINE$18(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readIntCOROUTINE$18).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this._this__u8e3s4__1.readable_1.hasBytes_ly98p3_k$(4)) {
-              var tmp_0 = this;
-              var this_0 = readInt_0(this._this__u8e3s4__1.readable_1);
-              this._this__u8e3s4__1.afterRead_biie6i_k$(4);
-              tmp_0.WHEN_RESULT0__1 = this_0;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readIntSlow(this._this__u8e3s4__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT0__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readIntSlowCOROUTINE$19(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readIntSlowCOROUTINE$19).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(4, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            var result = readInt_0(this._this__u8e3s4__1.readable_1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(4);
-            return result;
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readLongCOROUTINE$20(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readLongCOROUTINE$20).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this._this__u8e3s4__1.readable_1.hasBytes_ly98p3_k$(8)) {
-              var tmp_0 = this;
-              var this_0 = readLong_0(this._this__u8e3s4__1.readable_1);
-              this._this__u8e3s4__1.afterRead_biie6i_k$(8);
-              tmp_0.WHEN_RESULT0__1 = this_0;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readLongSlow(this._this__u8e3s4__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT0__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readLongSlowCOROUTINE$21(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readLongSlowCOROUTINE$21).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(8, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            var result = readLong_0(this._this__u8e3s4__1.readable_1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(8);
-            return result;
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readFloatCOROUTINE$22(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readFloatCOROUTINE$22).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this._this__u8e3s4__1.readable_1.hasBytes_ly98p3_k$(4)) {
-              var tmp_0 = this;
-              var this_0 = readFloat_0(this._this__u8e3s4__1.readable_1);
-              this._this__u8e3s4__1.afterRead_biie6i_k$(4);
-              tmp_0.WHEN_RESULT0__1 = this_0;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readFloatSlow(this._this__u8e3s4__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT0__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readFloatSlowCOROUTINE$23(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readFloatSlowCOROUTINE$23).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(4, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            var result = readFloat_0(this._this__u8e3s4__1.readable_1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(4);
-            return result;
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readDoubleCOROUTINE$24(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readDoubleCOROUTINE$24).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this._this__u8e3s4__1.readable_1.hasBytes_ly98p3_k$(8)) {
-              var tmp_0 = this;
-              var this_0 = readDouble_0(this._this__u8e3s4__1.readable_1);
-              this._this__u8e3s4__1.afterRead_biie6i_k$(8);
-              tmp_0.WHEN_RESULT0__1 = this_0;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readDoubleSlow(this._this__u8e3s4__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT0__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readDoubleSlowCOROUTINE$25(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readDoubleSlowCOROUTINE$25).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(8, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            var result = readDouble_0(this._this__u8e3s4__1.readable_1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(8);
-            return result;
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $readRemainingCOROUTINE$26(_this__u8e3s4, limit, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.limit_1 = limit;
+    this.o7g_1 = _this__u8e3s4;
+    this.p7g_1 = limit;
   }
-  protoOf($readRemainingCOROUTINE$26).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($readRemainingCOROUTINE$26).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            ensureNotFailed(this._this__u8e3s4__1);
-            this.builder0__1 = new BytePacketBuilder();
+            this.bc_1 = 3;
+            ensureNotFailed(this.o7g_1);
+            this.q7g_1 = new BytePacketBuilder();
             var tmp_0 = this;
-            var a = this.limit_1;
-            var b = this._this__u8e3s4__1.readable_1.get_remaining_mwegr1_k$();
-            tmp_0.size1__1 = a.compareTo_9jj042_k$(b) <= 0 ? a : b;
-            this.builder0__1.writePacket_9o18u2_k$(this._this__u8e3s4__1.readable_1, this.size1__1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(this.size1__1.toInt_1tsl84_k$());
+            var a = this.p7g_1;
+            var b = this.o7g_1.n7c_1.b7h();
+            tmp_0.r7g_1 = a.x9(b) <= 0 ? a : b;
+            this.q7g_1.c7h(this.o7g_1.n7c_1, this.r7g_1);
+            this.o7g_1.d7h(this.r7g_1.fa());
             var tmp_1 = this;
-            var this_0 = this.limit_1;
-            var other = this.builder0__1.get_size_woubt6_k$();
-            tmp_1.newLimit2__1 = this_0.minus_mfbszm_k$(toLong(other));
-            if (this.newLimit2__1.equals(new Long(0, 0)) ? true : this._this__u8e3s4__1.get_isClosedForRead_ajcc1s_k$()) {
+            var this_0 = this.p7g_1;
+            var other = this.q7g_1.m();
+            tmp_1.s7g_1 = this_0.fb(toLong(other));
+            if (this.s7g_1.equals(new Long(0, 0)) ? true : this.o7g_1.e7e()) {
               var tmp_2 = this;
-              ensureNotFailed_0(this._this__u8e3s4__1, this.builder0__1);
-              tmp_2.WHEN_RESULT3__1 = this.builder0__1.build_1k0s4u_k$();
-              this.set_state_rjd8d0_k$(2);
+              ensureNotFailed_0(this.o7g_1, this.q7g_1);
+              tmp_2.t7g_1 = this.q7g_1.e3();
+              this.ac_1 = 2;
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readRemainingSuspend(this._this__u8e3s4__1, this.builder0__1, this.limit_1, this);
+              this.ac_1 = 1;
+              suspendResult = readRemainingSuspend(this.o7g_1, this.q7g_1, this.p7g_1, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
@@ -1992,675 +523,244 @@
             }
 
           case 1:
-            this.WHEN_RESULT3__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
+            this.t7g_1 = suspendResult;
+            this.ac_1 = 2;
             continue $sm;
           case 2:
-            return this.WHEN_RESULT3__1;
+            return this.t7g_1;
           case 3:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
+        if (this.bc_1 === 3) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $readRemainingSuspendCOROUTINE$27(_this__u8e3s4, builder, limit, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.builder_1 = builder;
-    this.limit_1 = limit;
+    this.y7d_1 = _this__u8e3s4;
+    this.z7d_1 = builder;
+    this.a7e_1 = limit;
   }
-  protoOf($readRemainingSuspendCOROUTINE$27).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($readRemainingSuspendCOROUTINE$27).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(5);
-            this.set_state_rjd8d0_k$(1);
+            this.bc_1 = 5;
+            this.ac_1 = 1;
             continue $sm;
           case 1:
-            if (!(toLong(this.builder_1.get_size_woubt6_k$()).compareTo_9jj042_k$(this.limit_1) < 0)) {
-              this.set_state_rjd8d0_k$(4);
+            if (!(toLong(this.z7d_1.m()).x9(this.a7e_1) < 0)) {
+              this.ac_1 = 4;
               continue $sm;
             }
 
             var tmp_0 = this;
-            var this_0 = this.limit_1;
-            var other = this.builder_1.get_size_woubt6_k$();
-            var a = this_0.minus_mfbszm_k$(toLong(other));
-            var b = this._this__u8e3s4__1.readable_1.get_remaining_mwegr1_k$();
-            tmp_0.partLimit0__1 = a.compareTo_9jj042_k$(b) <= 0 ? a : b;
-            this.builder_1.writePacket_9o18u2_k$(this._this__u8e3s4__1.readable_1, this.partLimit0__1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(this.partLimit0__1.toInt_1tsl84_k$());
-            ensureNotFailed_0(this._this__u8e3s4__1, this.builder_1);
-            if (this._this__u8e3s4__1.get_isClosedForRead_ajcc1s_k$() ? true : this.builder_1.get_size_woubt6_k$() === this.limit_1.toInt_1tsl84_k$()) {
-              this.set_state_rjd8d0_k$(4);
+            var this_0 = this.a7e_1;
+            var other = this.z7d_1.m();
+            var a = this_0.fb(toLong(other));
+            var b = this.y7d_1.n7c_1.b7h();
+            tmp_0.b7e_1 = a.x9(b) <= 0 ? a : b;
+            this.z7d_1.c7h(this.y7d_1.n7c_1, this.b7e_1);
+            this.y7d_1.d7h(this.b7e_1.fa());
+            ensureNotFailed_0(this.y7d_1, this.z7d_1);
+            if (this.y7d_1.e7e() ? true : this.z7d_1.m() === this.a7e_1.fa()) {
+              this.ac_1 = 4;
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(2);
+              this.ac_1 = 2;
               continue $sm;
             }
 
           case 2:
-            this.set_state_rjd8d0_k$(3);
-            suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(1, this);
+            this.ac_1 = 3;
+            suspendResult = this.y7d_1.e7h(1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 3:
-            this.set_state_rjd8d0_k$(1);
+            this.ac_1 = 1;
             continue $sm;
           case 4:
-            ensureNotFailed_0(this._this__u8e3s4__1, this.builder_1);
-            return this.builder_1.build_1k0s4u_k$();
+            ensureNotFailed_0(this.y7d_1, this.z7d_1);
+            return this.z7d_1.e3();
           case 5:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 5) {
+        if (this.bc_1 === 5) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readPacketCOROUTINE$28(_this__u8e3s4, size, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.size_1 = size;
-  }
-  protoOf($readPacketCOROUTINE$28).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            checkClosed$default(this._this__u8e3s4__1, this.size_1);
-            this.builder0__1 = new BytePacketBuilder();
-            this.remaining1__1 = this.size_1;
-            var tmp_0 = this;
-            var a = toLong(this.remaining1__1);
-            var b = this._this__u8e3s4__1.readable_1.get_remaining_mwegr1_k$();
-            tmp_0.partSize2__1 = (a.compareTo_9jj042_k$(b) <= 0 ? a : b).toInt_1tsl84_k$();
-            this.remaining1__1 = this.remaining1__1 - this.partSize2__1 | 0;
-            this.builder0__1.writePacket_3jtwmc_k$(this._this__u8e3s4__1.readable_1, this.partSize2__1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(this.partSize2__1);
-            checkClosed(this._this__u8e3s4__1, this.remaining1__1, this.builder0__1);
-            if (this.remaining1__1 > 0) {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readPacketSuspend(this._this__u8e3s4__1, this.builder0__1, this.remaining1__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            } else {
-              this.WHEN_RESULT3__1 = this.builder0__1.build_1k0s4u_k$();
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT3__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT3__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readPacketSuspendCOROUTINE$29(_this__u8e3s4, builder, size, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.builder_1 = builder;
-    this.size_1 = size;
-  }
-  protoOf($readPacketSuspendCOROUTINE$29).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(5);
-            this.remaining0__1 = this.size_1;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            if (!(this.remaining0__1 > 0)) {
-              this.set_state_rjd8d0_k$(4);
-              continue $sm;
-            }
-
-            var tmp_0 = this;
-            var a = toLong(this.remaining0__1);
-            var b = this._this__u8e3s4__1.readable_1.get_remaining_mwegr1_k$();
-            tmp_0.partSize1__1 = (a.compareTo_9jj042_k$(b) <= 0 ? a : b).toInt_1tsl84_k$();
-            this.remaining0__1 = this.remaining0__1 - this.partSize1__1 | 0;
-            this.builder_1.writePacket_3jtwmc_k$(this._this__u8e3s4__1.readable_1, this.partSize1__1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(this.partSize1__1);
-            checkClosed(this._this__u8e3s4__1, this.remaining0__1, this.builder_1);
-            if (this.remaining0__1 > 0) {
-              this.set_state_rjd8d0_k$(2);
-              suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(3);
-              continue $sm;
-            }
-
-          case 2:
-            this.set_state_rjd8d0_k$(3);
-            continue $sm;
-          case 3:
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 4:
-            checkClosed(this._this__u8e3s4__1, this.remaining0__1, this.builder_1);
-            return this.builder_1.build_1k0s4u_k$();
-          case 5:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 5) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $readAvailableCOROUTINE$30(_this__u8e3s4, dst, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
+    this.n7h_1 = _this__u8e3s4;
+    this.o7h_1 = dst;
   }
-  protoOf($readAvailableCOROUTINE$30).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($readAvailableCOROUTINE$30).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            var tmp0_safe_receiver = this._this__u8e3s4__1.get_closedCause_o1qcj8_k$();
+            this.bc_1 = 3;
+            var tmp0_safe_receiver = this.n7h_1.o7d();
             if (tmp0_safe_receiver == null)
               null;
             else {
               throw tmp0_safe_receiver;
             }
 
-            if (this._this__u8e3s4__1.get_closed_byjrzp_k$() ? this._this__u8e3s4__1.get_availableForRead_tq0sox_k$() === 0 : false)
+            if (this.n7h_1.p7d() ? this.n7h_1.c7e() === 0 : false)
               return -1;
-            var this_0 = this.dst_1;
-            if ((this_0.get_limit_iuokuq_k$() - this_0.get_writePosition_jdt81t_k$() | 0) === 0)
+            var this_0 = this.o7h_1;
+            if ((this_0.p7f_1 - this_0.n7f_1 | 0) === 0)
               return 0;
-            if (this._this__u8e3s4__1.get_availableForRead_tq0sox_k$() === 0) {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(1, this);
+            if (this.n7h_1.c7e() === 0) {
+              this.ac_1 = 1;
+              suspendResult = this.n7h_1.e7h(1, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(2);
+              this.ac_1 = 2;
               continue $sm;
             }
 
           case 1:
-            this.set_state_rjd8d0_k$(2);
+            this.ac_1 = 2;
             continue $sm;
           case 2:
-            if (!this._this__u8e3s4__1.readable_1.canRead_93a6bq_k$()) {
-              this._this__u8e3s4__1.prepareFlushedBytes_jiu201_k$();
+            if (!this.n7h_1.n7c_1.q7h()) {
+              this.n7h_1.p7h();
             }
 
-            var this_1 = this.dst_1;
-            var a = toLong(this_1.get_limit_iuokuq_k$() - this_1.get_writePosition_jdt81t_k$() | 0);
-            var b = this._this__u8e3s4__1.readable_1.get_remaining_mwegr1_k$();
-            var size = (a.compareTo_9jj042_k$(b) <= 0 ? a : b).toInt_1tsl84_k$();
-            readFully_4(this._this__u8e3s4__1.readable_1, this.dst_1, size);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(size);
+            var this_1 = this.o7h_1;
+            var a = toLong(this_1.p7f_1 - this_1.n7f_1 | 0);
+            var b = this.n7h_1.n7c_1.b7h();
+            var size = (a.x9(b) <= 0 ? a : b).fa();
+            readFully_2(this.n7h_1.n7c_1, this.o7h_1, size);
+            this.n7h_1.d7h(size);
             return size;
           case 3:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
+        if (this.bc_1 === 3) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readFullyCOROUTINE$31(_this__u8e3s4, dst, n, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.n_1 = n;
-  }
-  protoOf($readFullyCOROUTINE$31).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            var this_0 = this.dst_1;
-            if (!(this.n_1 <= (this_0.get_limit_iuokuq_k$() - this_0.get_writePosition_jdt81t_k$() | 0))) {
-              var message = 'Not enough space in the destination buffer to write ' + this.n_1 + ' bytes';
-              throw IllegalArgumentException_init_$Create$(toString(message));
-            }
-
-            if (!(this.n_1 >= 0)) {
-              var message_0 = "n shouldn't be negative";
-              throw IllegalArgumentException_init_$Create$(toString(message_0));
-            }
-
-            if (!(this._this__u8e3s4__1.get_closedCause_o1qcj8_k$() == null)) {
-              throw ensureNotNull(this._this__u8e3s4__1.get_closedCause_o1qcj8_k$());
-            } else {
-              if (this._this__u8e3s4__1.readable_1.get_remaining_mwegr1_k$().compareTo_9jj042_k$(toLong(this.n_1)) >= 0) {
-                readFully_4(this._this__u8e3s4__1.readable_1, this.dst_1, this.n_1);
-                this._this__u8e3s4__1.afterRead_biie6i_k$(this.n_1);
-                this.set_state_rjd8d0_k$(2);
-                continue $sm;
-              } else {
-                if (this._this__u8e3s4__1.get_closed_byjrzp_k$()) {
-                  throw new EOFException('Channel is closed and not enough bytes available: required ' + this.n_1 + ' but ' + this._this__u8e3s4__1.get_availableForRead_tq0sox_k$() + ' available');
-                } else {
-                  this.set_state_rjd8d0_k$(1);
-                  suspendResult = readFullySuspend(this._this__u8e3s4__1, this.dst_1, this.n_1, this);
-                  if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                    return suspendResult;
-                  }
-                  continue $sm;
-                }
-              }
-            }
-
-          case 1:
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return Unit_getInstance();
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readFullySuspendCOROUTINE$32(_this__u8e3s4, dst, n, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.n_1 = n;
-  }
-  protoOf($readFullySuspendCOROUTINE$32).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(this.n_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = readFully(this._this__u8e3s4__1, this.dst_1, this.n_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            return Unit_getInstance();
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $readAvailableCOROUTINE$33(_this__u8e3s4, dst, offset, length, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.offset_1 = offset;
-    this.length_1 = length;
+    this.z7h_1 = _this__u8e3s4;
+    this.a7i_1 = dst;
+    this.b7i_1 = offset;
+    this.c7i_1 = length;
   }
-  protoOf($readAvailableCOROUTINE$33).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($readAvailableCOROUTINE$33).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            var tmp0_safe_receiver = this._this__u8e3s4__1.get_closedCause_o1qcj8_k$();
+            this.bc_1 = 3;
+            var tmp0_safe_receiver = this.z7h_1.o7d();
             if (tmp0_safe_receiver == null)
               null;
             else {
               throw tmp0_safe_receiver;
             }
 
-            if (this._this__u8e3s4__1.get_closed_byjrzp_k$() ? this._this__u8e3s4__1.get_availableForRead_tq0sox_k$() === 0 : false)
+            if (this.z7h_1.p7d() ? this.z7h_1.c7e() === 0 : false)
               return -1;
-            if (this.length_1 === 0)
+            if (this.c7i_1 === 0)
               return 0;
-            if (this._this__u8e3s4__1.get_availableForRead_tq0sox_k$() === 0) {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(1, this);
+            if (this.z7h_1.c7e() === 0) {
+              this.ac_1 = 1;
+              suspendResult = this.z7h_1.e7h(1, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(2);
+              this.ac_1 = 2;
               continue $sm;
             }
 
           case 1:
-            this.set_state_rjd8d0_k$(2);
+            this.ac_1 = 2;
             continue $sm;
           case 2:
-            if (!this._this__u8e3s4__1.readable_1.canRead_93a6bq_k$()) {
-              this._this__u8e3s4__1.prepareFlushedBytes_jiu201_k$();
+            if (!this.z7h_1.n7c_1.q7h()) {
+              this.z7h_1.p7h();
             }
 
-            var a = toLong(this.length_1);
-            var b = this._this__u8e3s4__1.readable_1.get_remaining_mwegr1_k$();
-            var size = (a.compareTo_9jj042_k$(b) <= 0 ? a : b).toInt_1tsl84_k$();
-            readFully_3(this._this__u8e3s4__1.readable_1, this.dst_1, this.offset_1, size);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(size);
+            var a = toLong(this.c7i_1);
+            var b = this.z7h_1.n7c_1.b7h();
+            var size = (a.x9(b) <= 0 ? a : b).fa();
+            readFully_1(this.z7h_1.n7c_1, this.a7i_1, this.b7i_1, size);
+            this.z7h_1.d7h(size);
             return size;
           case 3:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
+        if (this.bc_1 === 3) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readFullyCOROUTINE$34(_this__u8e3s4, dst, offset, length, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.offset_1 = offset;
-    this.length_1 = length;
-  }
-  protoOf($readFullyCOROUTINE$34).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.readAvailable_xlipkq_k$(this.dst_1, this.offset_1, this.length_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            this.rc0__1 = suspendResult;
-            if (this.rc0__1 === this.length_1)
-              return Unit_getInstance();
-            if (this.rc0__1 === -1)
-              throw new EOFException('Unexpected end of stream');
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = readFullySuspend_0(this._this__u8e3s4__1, this.dst_1, this.offset_1 + this.rc0__1 | 0, this.length_1 - this.rc0__1 | 0, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            return Unit_getInstance();
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readFullySuspendCOROUTINE$35(_this__u8e3s4, dst, offset, length, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.offset_1 = offset;
-    this.length_1 = length;
-  }
-  protoOf($readFullySuspendCOROUTINE$35).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(4);
-            this.written0__1 = 0;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            if (!(this.written0__1 < this.length_1)) {
-              this.set_state_rjd8d0_k$(3);
-              continue $sm;
-            }
-
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.readAvailable_xlipkq_k$(this.dst_1, this.offset_1 + this.written0__1 | 0, this.length_1 - this.written0__1 | 0, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            var rc = suspendResult;
-            if (rc === -1)
-              throw new EOFException('Unexpected end of stream');
-            this.written0__1 = this.written0__1 + rc | 0;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 3:
-            return Unit_getInstance();
-          case 4:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 4) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readBooleanCOROUTINE$36(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readBooleanCOROUTINE$36).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this._this__u8e3s4__1.readable_1.canRead_93a6bq_k$()) {
-              var tmp_0 = this;
-              var this_0 = this._this__u8e3s4__1.readable_1.readByte_ectjk2_k$() === 1;
-              this._this__u8e3s4__1.afterRead_biie6i_k$(1);
-              tmp_0.WHEN_RESULT0__1 = this_0;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readBooleanSlow(this._this__u8e3s4__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT0__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readBooleanSlowCOROUTINE$37(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($readBooleanSlowCOROUTINE$37).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            checkClosed$default(this._this__u8e3s4__1, 1);
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.readBoolean_si96by_k$(this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            return suspendResult;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $awaitInternalAtLeast1COROUTINE$38(_this__u8e3s4, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
+    this.l7i_1 = _this__u8e3s4;
   }
-  protoOf($awaitInternalAtLeast1COROUTINE$38).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($awaitInternalAtLeast1COROUTINE$38).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            if (!this._this__u8e3s4__1.readable_1.get_endOfInput_skegkh_k$()) {
+            this.bc_1 = 2;
+            if (!this.l7i_1.n7c_1.n7i()) {
               var tmp_0 = this;
-              tmp_0.WHEN_RESULT0__1 = true;
-              this.set_state_rjd8d0_k$(3);
+              tmp_0.m7i_1 = true;
+              this.ac_1 = 3;
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = this._this__u8e3s4__1.awaitSuspend_e9hvgy_k$(1, this);
+              this.ac_1 = 1;
+              suspendResult = this.l7i_1.e7h(1, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
@@ -2668,1015 +768,244 @@
             }
 
           case 1:
-            this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_rjd8d0_k$(3);
+            this.m7i_1 = suspendResult;
+            this.ac_1 = 3;
             continue $sm;
           case 2:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
           case 3:
-            return this.WHEN_RESULT0__1;
+            return this.m7i_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
+        if (this.bc_1 === 2) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $awaitSuspendCOROUTINE$39(_this__u8e3s4, atLeast, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.atLeast_1 = atLeast;
+    this.w7i_1 = _this__u8e3s4;
+    this.x7i_1 = atLeast;
   }
-  protoOf($awaitSuspendCOROUTINE$39).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($awaitSuspendCOROUTINE$39).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            if (!(this.atLeast_1 >= 0)) {
+            this.bc_1 = 2;
+            if (!(this.x7i_1 >= 0)) {
               var message = 'Failed requirement.';
               throw IllegalArgumentException_init_$Create$(toString(message));
             }
 
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForRead_qvdw4u_k$(this.atLeast_1, this);
+            this.ac_1 = 1;
+            suspendResult = this.w7i_1.y7i(this.x7i_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 1:
-            this._this__u8e3s4__1.prepareFlushedBytes_jiu201_k$();
-            var tmp0_safe_receiver = this._this__u8e3s4__1.get_closedCause_o1qcj8_k$();
+            this.w7i_1.p7h();
+            var tmp0_safe_receiver = this.w7i_1.o7d();
             if (tmp0_safe_receiver == null)
               null;
             else {
               throw tmp0_safe_receiver;
             }
 
-            return !this._this__u8e3s4__1.get_isClosedForRead_ajcc1s_k$() ? this._this__u8e3s4__1.get_availableForRead_tq0sox_k$() >= this.atLeast_1 : false;
+            return !this.w7i_1.e7e() ? this.w7i_1.c7e() >= this.x7i_1 : false;
           case 2:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
+        if (this.bc_1 === 2) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $discardCOROUTINE$40(_this__u8e3s4, max, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.max_1 = max;
-  }
-  protoOf($discardCOROUTINE$40).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.discarded0__1 = this._this__u8e3s4__1.readable_1.discard_kxfhu8_k$(this.max_1);
-            this._this__u8e3s4__1.afterRead_biie6i_k$(this.discarded0__1.toInt_1tsl84_k$());
-            if (this.discarded0__1.equals(this.max_1) ? true : this._this__u8e3s4__1.get_isClosedForRead_ajcc1s_k$()) {
-              var tmp_0 = this;
-              ensureNotFailed(this._this__u8e3s4__1);
-              return this.discarded0__1;
-            } else {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = discardSuspend(this._this__u8e3s4__1, this.max_1, this.discarded0__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT1__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT1__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $discardSuspendCOROUTINE$41(_this__u8e3s4, max, discarded0, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.max_1 = max;
-    this.discarded0__1 = discarded0;
-  }
-  protoOf($discardSuspendCOROUTINE$41).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(5);
-            this.discarded0__2 = this.discarded0__1;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.await_wm3xku_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            var ARGUMENT = suspendResult;
-            if (!ARGUMENT) {
-              this.set_state_rjd8d0_k$(4);
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(3);
-              continue $sm;
-            }
-
-          case 3:
-            var count = this._this__u8e3s4__1.readable_1.discard_kxfhu8_k$(this.max_1.minus_mfbszm_k$(this.discarded0__2));
-            this._this__u8e3s4__1.afterRead_biie6i_k$(count.toInt_1tsl84_k$());
-            this.discarded0__2 = this.discarded0__2.plus_r93sks_k$(count);
-            if (this.discarded0__2.compareTo_9jj042_k$(this.max_1) < 0 ? !this._this__u8e3s4__1.get_isClosedForRead_ajcc1s_k$() : false) {
-              this.set_state_rjd8d0_k$(1);
-              continue $sm;
-            }
-
-            this.set_state_rjd8d0_k$(4);
-            continue $sm;
-          case 4:
-            ensureNotFailed(this._this__u8e3s4__1);
-            return this.discarded0__2;
-          case 5:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 5) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readSuspendableSessionCOROUTINE$42(_this__u8e3s4, consumer, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.consumer_1 = consumer;
-  }
-  protoOf($readSuspendableSessionCOROUTINE$42).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(5);
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            this.set_exceptionState_fex74n_k$(4);
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this.consumer_1(this._this__u8e3s4__1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            this.tmp$ret$00__1 = suspendResult;
-            this.set_exceptionState_fex74n_k$(5);
-            this.set_state_rjd8d0_k$(3);
-            continue $sm;
-          case 3:
-            this.set_exceptionState_fex74n_k$(5);
-            completeReading(this._this__u8e3s4__1);
-            return Unit_getInstance();
-          case 4:
-            this.set_exceptionState_fex74n_k$(5);
-            var t = this.get_exception_x0n6w6_k$();
-            completeReading(this._this__u8e3s4__1);
-            throw t;
-          case 5:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 5) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readUTF8LineCOROUTINE$43(_this__u8e3s4, limit, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.limit_1 = limit;
-  }
-  protoOf($readUTF8LineCOROUTINE$43).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.builder0__1 = StringBuilder_init_$Create$();
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.readUTF8LineTo_ve1u75_k$(this.builder0__1, this.limit_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            var ARGUMENT = suspendResult;
-            if (!ARGUMENT) {
-              return null;
-            } else {
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            }
-
-          case 2:
-            return this.builder0__1.toString();
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeAvailableSuspendCOROUTINE$44(_this__u8e3s4, src, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.src_1 = src;
-  }
-  protoOf($writeAvailableSuspendCOROUTINE$44).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.writeAvailable_uozx97_k$(this.src_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            return suspendResult;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $writeAvailableSuspendCOROUTINE$45(_this__u8e3s4, src, offset, length, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.src_1 = src;
-    this.offset_1 = offset;
-    this.length_1 = length;
-  }
-  protoOf($writeAvailableSuspendCOROUTINE$45).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.writeAvailable_ly4hch_k$(this.src_1, this.offset_1, this.length_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            return suspendResult;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $awaitFreeSpaceCOROUTINE$46(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($awaitFreeSpaceCOROUTINE$46).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this._this__u8e3s4__1.flush_shahbo_k$();
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            ensureNotClosed(this._this__u8e3s4__1);
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $awaitContentCOROUTINE$47(_this__u8e3s4, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-  }
-  protoOf($awaitContentCOROUTINE$47).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.await_wm3xku_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $peekToCOROUTINE$48(_this__u8e3s4, destination, destinationOffset, offset, min, max, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.destination_1 = destination;
-    this.destinationOffset_1 = destinationOffset;
-    this.offset_1 = offset;
-    this.min_1 = min;
-    this.max_1 = max;
-  }
-  protoOf($peekToCOROUTINE$48).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.bytesCopied0__1 = {_v: new Long(0, 0)};
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.readSuspendableSession_59oqw3_k$(ByteChannelSequentialBase$peekTo$slambda_0(this.min_1, this.offset_1, this.bytesCopied0__1, this.max_1, this.destination_1, this.destinationOffset_1, null), this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            return this.bytesCopied0__1._v;
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function ByteChannelSequentialBase(initial, autoFlush, pool) {
-    pool = pool === VOID ? Companion_getInstance_4().get_Pool_wo83gl_k$() : pool;
-    this.autoFlush_1 = autoFlush;
-    this._lastReadView_1 = atomic$ref$1(Companion_getInstance_4().get_Empty_i9b85g_k$());
-    this._totalBytesRead_1 = atomic$long$1(new Long(0, 0));
-    this._totalBytesWritten_1 = atomic$long$1(new Long(0, 0));
-    this._availableForRead_1 = atomic$int$1(0);
-    this.channelSize_1 = atomic$int$1(0);
-    this._closed_1 = atomic$ref$1(null);
-    this.writable_1 = new BytePacketBuilder(pool);
-    this.readable_1 = ByteReadPacket_init_$Create$(initial, pool);
-    this.lastReadAvailable$delegate_1 = atomic$int$1(0);
-    this.lastReadView$delegate_1 = atomic$ref$1(Companion_getInstance_4().get_Empty_i9b85g_k$());
-    this.slot_1 = new AwaitingSlot();
-    this.flushMutex_1 = new Object();
-    this.flushBuffer_1 = new BytePacketBuilder();
-    var count = remainingAll(initial).toInt_1tsl84_k$();
-    this.afterWrite_qybsg5_k$(count);
-    this._availableForRead_1.atomicfu$addAndGet(count);
+    pool = pool === VOID ? Companion_getInstance_4().d7j() : pool;
+    this.f7c_1 = autoFlush;
+    this.g7c_1 = atomic$ref$1(Companion_getInstance_4().a7j_1);
+    this.h7c_1 = atomic$long$1(new Long(0, 0));
+    this.i7c_1 = atomic$long$1(new Long(0, 0));
+    this.j7c_1 = atomic$int$1(0);
+    this.k7c_1 = atomic$int$1(0);
+    this.l7c_1 = atomic$ref$1(null);
+    this.m7c_1 = new BytePacketBuilder(pool);
+    this.n7c_1 = ByteReadPacket_init_$Create$(initial, pool);
+    this.o7c_1 = atomic$int$1(0);
+    this.p7c_1 = atomic$ref$1(Companion_getInstance_4().a7j_1);
+    this.q7c_1 = new AwaitingSlot();
+    this.r7c_1 = new Object();
+    this.s7c_1 = new BytePacketBuilder();
+    var count = remainingAll(initial).fa();
+    this.r7f(count);
+    this.j7c_1.atomicfu$addAndGet(count);
   }
-  protoOf(ByteChannelSequentialBase).get_autoFlush_zfdl3o_k$ = function () {
-    return this.autoFlush_1;
+  protoOf(ByteChannelSequentialBase).e7j = function () {
+    return this.f7c_1;
   };
-  protoOf(ByteChannelSequentialBase).set_closed_z8zuoc_k$ = function (_anonymous_parameter_0__qggqh8) {
-    // Inline function 'kotlin.error' call
-    var message = 'Setting is not allowed for closed';
-    throw IllegalStateException_init_$Create$(toString(message));
+  protoOf(ByteChannelSequentialBase).p7d = function () {
+    return !(this.l7c_1.kotlinx$atomicfu$value == null);
   };
-  protoOf(ByteChannelSequentialBase).get_closed_byjrzp_k$ = function () {
-    return !(this._closed_1.get_kotlinx$atomicfu$value_vi2am5_k$() == null);
+  protoOf(ByteChannelSequentialBase).c7e = function () {
+    return this.j7c_1.kotlinx$atomicfu$value;
   };
-  protoOf(ByteChannelSequentialBase).get_writable_8ork2x_k$ = function () {
-    return this.writable_1;
-  };
-  protoOf(ByteChannelSequentialBase).get_readable_ovw33t_k$ = function () {
-    return this.readable_1;
-  };
-  protoOf(ByteChannelSequentialBase).get_availableForRead_tq0sox_k$ = function () {
-    return this._availableForRead_1.get_kotlinx$atomicfu$value_vi2am5_k$();
-  };
-  protoOf(ByteChannelSequentialBase).get_availableForWrite_22rgeu_k$ = function () {
+  protoOf(ByteChannelSequentialBase).d7e = function () {
     // Inline function 'kotlin.comparisons.maxOf' call
-    var b = 4088 - this.channelSize_1.get_kotlinx$atomicfu$value_vi2am5_k$() | 0;
+    var b = 4088 - this.k7c_1.kotlinx$atomicfu$value | 0;
     return Math.max(0, b);
   };
-  protoOf(ByteChannelSequentialBase).get_isClosedForRead_ajcc1s_k$ = function () {
-    return _get_isCancelled__nhbn6y(this) ? true : this.get_closed_byjrzp_k$() ? this.channelSize_1.get_kotlinx$atomicfu$value_vi2am5_k$() === 0 : false;
+  protoOf(ByteChannelSequentialBase).e7e = function () {
+    return _get_isCancelled__nhbn6y(this) ? true : this.p7d() ? this.k7c_1.kotlinx$atomicfu$value === 0 : false;
   };
-  protoOf(ByteChannelSequentialBase).get_isClosedForWrite_seyg5n_k$ = function () {
-    return this.get_closed_byjrzp_k$();
+  protoOf(ByteChannelSequentialBase).o7d = function () {
+    var tmp0_safe_receiver = this.l7c_1.kotlinx$atomicfu$value;
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.t7c_1;
   };
-  protoOf(ByteChannelSequentialBase).get_totalBytesRead_dai8jq_k$ = function () {
-    return this._totalBytesRead_1.get_kotlinx$atomicfu$value_vi2am5_k$();
-  };
-  protoOf(ByteChannelSequentialBase).get_totalBytesWritten_b5quc9_k$ = function () {
-    return this._totalBytesWritten_1.get_kotlinx$atomicfu$value_vi2am5_k$();
-  };
-  protoOf(ByteChannelSequentialBase).set_closedCause_q9zp46_k$ = function (_anonymous_parameter_0__qggqh8) {
-    // Inline function 'kotlin.error' call
-    var message = "Closed cause shouldn't be changed directly";
-    throw IllegalStateException_init_$Create$(toString(message));
-  };
-  protoOf(ByteChannelSequentialBase).get_closedCause_o1qcj8_k$ = function () {
-    var tmp0_safe_receiver = this._closed_1.get_kotlinx$atomicfu$value_vi2am5_k$();
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_cause_iplhs0_k$();
-  };
-  protoOf(ByteChannelSequentialBase).awaitAtLeastNBytesAvailableForWrite_cfus3l_k$ = function (count, $completion) {
+  protoOf(ByteChannelSequentialBase).k7f = function (count, $completion) {
     var tmp = new $awaitAtLeastNBytesAvailableForWriteCOROUTINE$0(this, count, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(ByteChannelSequentialBase).awaitAtLeastNBytesAvailableForRead_qvdw4u_k$ = function (count, $completion) {
+  protoOf(ByteChannelSequentialBase).y7i = function (count, $completion) {
     var tmp = new $awaitAtLeastNBytesAvailableForReadCOROUTINE$1(this, count, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(ByteChannelSequentialBase).flush_shahbo_k$ = function () {
+  protoOf(ByteChannelSequentialBase).p6 = function () {
     flushImpl(this);
   };
-  protoOf(ByteChannelSequentialBase).prepareFlushedBytes_jiu201_k$ = function () {
+  protoOf(ByteChannelSequentialBase).p7h = function () {
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.flushMutex_1;
+    this.r7c_1;
     // Inline function 'io.ktor.utils.io.ByteChannelSequentialBase.prepareFlushedBytes.<anonymous>' call
-    unsafeAppend(this.readable_1, this.flushBuffer_1);
+    unsafeAppend(this.n7c_1, this.s7c_1);
   };
-  protoOf(ByteChannelSequentialBase).writeByte_9xy8oq_k$ = function (b, $completion) {
-    var tmp = new $writeByteCOROUTINE$2(this, b, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writeShort_zcdxvo_k$ = function (s, $completion) {
-    var tmp = new $writeShortCOROUTINE$3(this, s, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writeInt_ft1dn3_k$ = function (i, $completion) {
-    var tmp = new $writeIntCOROUTINE$4(this, i, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writeLong_xdmqak_k$ = function (l, $completion) {
-    var tmp = new $writeLongCOROUTINE$5(this, l, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writeFloat_2bveak_k$ = function (f, $completion) {
-    var tmp = new $writeFloatCOROUTINE$6(this, f, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writeDouble_cydqap_k$ = function (d, $completion) {
-    var tmp = new $writeDoubleCOROUTINE$7(this, d, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writePacket_9x2akt_k$ = function (packet, $completion) {
-    var tmp = new $writePacketCOROUTINE$8(this, packet, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writeFully_hz8k55_k$ = function (src, $completion) {
+  protoOf(ByteChannelSequentialBase).f7j = function (src, $completion) {
     var tmp = new $writeFullyCOROUTINE$9(this, src, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(ByteChannelSequentialBase).writeFully_c7wsd0_k$ = function (src, offset, length, $completion) {
+  protoOf(ByteChannelSequentialBase).g7j = function (src, offset, length, $completion) {
     var tmp = new $writeFullyCOROUTINE$10(this, src, offset, length, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(ByteChannelSequentialBase).writeFully_q2upa9_k$ = function (memory, startIndex, endIndex, $completion) {
-    var tmp = new $writeFullyCOROUTINE$11(this, memory, startIndex, endIndex, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writeAvailable_uozx97_k$ = function (src, $completion) {
-    var tmp = new $writeAvailableCOROUTINE$12(this, src, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writeAvailable_ly4hch_k$ = function (src, offset, length, $completion) {
-    var tmp = new $writeAvailableCOROUTINE$13(this, src, offset, length, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).writeSuspendSession_95tk3h_k$ = function (visitor, $completion) {
-    var session = this.beginWriteSession_k7m9kw_k$();
-    return visitor(session, $completion);
-  };
-  protoOf(ByteChannelSequentialBase).beginWriteSession_k7m9kw_k$ = function () {
-    return new ByteChannelSequentialBase$beginWriteSession$1(this);
-  };
-  protoOf(ByteChannelSequentialBase).endWriteSession_g3xxii_k$ = function (written) {
-    this.writable_1.afterHeadWrite_dl47zh_k$();
-    this.afterWrite_qybsg5_k$(written);
-  };
-  protoOf(ByteChannelSequentialBase).readByte_rqxxpg_k$ = function ($completion) {
-    var tmp = new $readByteCOROUTINE$14(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).readShort_l1xcq_k$ = function ($completion) {
-    var tmp = new $readShortCOROUTINE$16(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).afterRead_biie6i_k$ = function (count) {
+  protoOf(ByteChannelSequentialBase).d7h = function (count) {
     addBytesRead(this, count);
-    this.slot_1.resume_2o15jx_k$();
+    this.q7c_1.v7c();
   };
-  protoOf(ByteChannelSequentialBase).readInt_494lj4_k$ = function ($completion) {
-    var tmp = new $readIntCOROUTINE$18(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).readLong_53tz8d_k$ = function ($completion) {
-    var tmp = new $readLongCOROUTINE$20(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).readFloat_kzegx2_k$ = function ($completion) {
-    var tmp = new $readFloatCOROUTINE$22(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).readDouble_xgmyys_k$ = function ($completion) {
-    var tmp = new $readDoubleCOROUTINE$24(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).readRemaining_nblam0_k$ = function (limit, $completion) {
+  protoOf(ByteChannelSequentialBase).h7j = function (limit, $completion) {
     var tmp = new $readRemainingCOROUTINE$26(this, limit, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(ByteChannelSequentialBase).readPacket_kk8dng_k$ = function (size, $completion) {
-    var tmp = new $readPacketCOROUTINE$28(this, size, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+  protoOf(ByteChannelSequentialBase).j7j = function (dst, $completion) {
+    return this.k7j(dst instanceof Buffer ? dst : THROW_CCE(), $completion);
   };
-  protoOf(ByteChannelSequentialBase).readAvailableClosed_uidty9_k$ = function () {
-    var tmp0_safe_receiver = this.get_closedCause_o1qcj8_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      throw tmp0_safe_receiver;
-    }
-    if (this.get_availableForRead_tq0sox_k$() > 0) {
-      this.prepareFlushedBytes_jiu201_k$();
-    }
-    return -1;
-  };
-  protoOf(ByteChannelSequentialBase).readAvailable_wzcy2k_k$ = function (dst, $completion) {
-    return this.readAvailable_jtpslb_k$(dst instanceof Buffer ? dst : THROW_CCE(), $completion);
-  };
-  protoOf(ByteChannelSequentialBase).readAvailable_jtpslb_k$ = function (dst, $completion) {
+  protoOf(ByteChannelSequentialBase).k7j = function (dst, $completion) {
     var tmp = new $readAvailableCOROUTINE$30(this, dst, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(ByteChannelSequentialBase).readFully_wl4e2l_k$ = function (dst, n, $completion) {
-    return readFully(this, dst instanceof Buffer ? dst : THROW_CCE(), n, $completion);
-  };
-  protoOf(ByteChannelSequentialBase).readAvailable_xlipkq_k$ = function (dst, offset, length, $completion) {
+  protoOf(ByteChannelSequentialBase).l7j = function (dst, offset, length, $completion) {
     var tmp = new $readAvailableCOROUTINE$33(this, dst, offset, length, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(ByteChannelSequentialBase).readFully_sgvmxv_k$ = function (dst, offset, length, $completion) {
-    var tmp = new $readFullyCOROUTINE$34(this, dst, offset, length, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).readBoolean_si96by_k$ = function ($completion) {
-    var tmp = new $readBooleanCOROUTINE$36(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).await_wm3xku_k$ = function (atLeast, $completion) {
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!(atLeast >= 0)) {
-      // Inline function 'io.ktor.utils.io.ByteChannelSequentialBase.await.<anonymous>' call
-      var message = "atLeast parameter shouldn't be negative: " + atLeast;
-      throw IllegalArgumentException_init_$Create$(toString(message));
-    }
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!(toLong(atLeast).compareTo_9jj042_k$(new Long(4088, 0)) <= 0)) {
-      // Inline function 'io.ktor.utils.io.ByteChannelSequentialBase.await.<anonymous>' call
-      var message_0 = "atLeast parameter shouldn't be larger than max buffer size of 4088: " + atLeast;
-      throw IllegalArgumentException_init_$Create$(toString(message_0));
-    }
-    completeReading(this);
-    if (atLeast === 0)
-      return !this.get_isClosedForRead_ajcc1s_k$();
-    if (this.readable_1.get_remaining_mwegr1_k$().compareTo_9jj042_k$(toLong(atLeast)) >= 0)
-      return true;
-    return this.awaitSuspend_e9hvgy_k$(atLeast, $completion);
-  };
-  protoOf(ByteChannelSequentialBase).awaitInternalAtLeast1_fno9ji_k$ = function ($completion) {
+  protoOf(ByteChannelSequentialBase).m7j = function ($completion) {
     var tmp = new $awaitInternalAtLeast1COROUTINE$38(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(ByteChannelSequentialBase).awaitSuspend_e9hvgy_k$ = function (atLeast, $completion) {
+  protoOf(ByteChannelSequentialBase).e7h = function (atLeast, $completion) {
     var tmp = new $awaitSuspendCOROUTINE$39(this, atLeast, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(ByteChannelSequentialBase).discard_6fulfq_k$ = function (n) {
-    var tmp0_safe_receiver = this.get_closedCause_o1qcj8_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      throw tmp0_safe_receiver;
-    }
-    if (n === 0) {
-      return 0;
-    }
-    // Inline function 'kotlin.also' call
-    var this_0 = this.readable_1.discard_6fulfq_k$(n);
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.ByteChannelSequentialBase.discard.<anonymous>' call
-    this.afterRead_biie6i_k$(n);
-    requestNextView(this, 1);
-    return this_0;
-  };
-  protoOf(ByteChannelSequentialBase).request_oh1f6f_k$ = function (atLeast) {
-    var tmp0_safe_receiver = this.get_closedCause_o1qcj8_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      throw tmp0_safe_receiver;
-    }
-    completeReading(this);
-    return requestNextView(this, atLeast);
-  };
-  protoOf(ByteChannelSequentialBase).discard_tkcvlt_k$ = function (max, $completion) {
-    var tmp = new $discardCOROUTINE$40(this, max, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).readSession_9fsihs_k$ = function (consumer) {
-    try {
-      consumer(this);
-    }finally {
-      completeReading(this);
-    }
-  };
-  protoOf(ByteChannelSequentialBase).startReadSession_et8im_k$ = function () {
-    return this;
-  };
-  protoOf(ByteChannelSequentialBase).endReadSession_r81zlh_k$ = function () {
-    completeReading(this);
-  };
-  protoOf(ByteChannelSequentialBase).readSuspendableSession_59oqw3_k$ = function (consumer, $completion) {
-    var tmp = new $readSuspendableSessionCOROUTINE$42(this, consumer, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).readUTF8LineTo_ve1u75_k$ = function (out, limit, $completion) {
-    if (this.get_isClosedForRead_ajcc1s_k$()) {
-      var cause = this.get_closedCause_o1qcj8_k$();
-      if (!(cause == null)) {
-        throw cause;
-      }
+  protoOf(ByteChannelSequentialBase).es = function (cause) {
+    if (!(this.o7d() == null) ? true : this.p7d()) {
       return false;
     }
-    var tmp = ByteChannelSequentialBase$readUTF8LineTo$slambda_0(this, null);
-    return decodeUTF8LineLoopSuspend(out, limit, tmp, ByteChannelSequentialBase$readUTF8LineTo$lambda(this), $completion);
+    return this.n16(cause == null ? CancellationException_init_$Create$('Channel cancelled') : cause);
   };
-  protoOf(ByteChannelSequentialBase).readUTF8Line_vxfv4t_k$ = function (limit, $completion) {
-    var tmp = new $readUTF8LineCOROUTINE$43(this, limit, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).cancel_e74who_k$ = function (cause) {
-    if (!(this.get_closedCause_o1qcj8_k$() == null) ? true : this.get_closed_byjrzp_k$()) {
-      return false;
-    }
-    return this.close_ukldxa_k$(cause == null ? CancellationException_init_$Create$('Channel cancelled') : cause);
-  };
-  protoOf(ByteChannelSequentialBase).close_ukldxa_k$ = function (cause) {
+  protoOf(ByteChannelSequentialBase).n16 = function (cause) {
     var closeElement = cause == null ? get_CLOSED_SUCCESS() : new CloseElement(cause);
-    if (!this._closed_1.atomicfu$compareAndSet(null, closeElement))
+    if (!this.l7c_1.atomicfu$compareAndSet(null, closeElement))
       return false;
     if (!(cause == null)) {
-      this.readable_1.release_wu5yyf_k$();
-      this.writable_1.release_wu5yyf_k$();
-      this.flushBuffer_1.release_wu5yyf_k$();
+      this.n7c_1.mv();
+      this.m7c_1.mv();
+      this.s7c_1.mv();
     } else {
-      this.flush_shahbo_k$();
-      this.writable_1.release_wu5yyf_k$();
+      this.p6();
+      this.m7c_1.mv();
     }
-    this.slot_1.cancel_9i2dv0_k$(cause);
+    this.q7c_1.f56(cause);
     return true;
   };
-  protoOf(ByteChannelSequentialBase).transferTo_rz8sl2_k$ = function (dst, limit) {
-    var size = this.readable_1.get_remaining_mwegr1_k$();
+  protoOf(ByteChannelSequentialBase).n7j = function (dst, limit) {
+    var size = this.n7c_1.b7h();
     var tmp;
-    if (size.compareTo_9jj042_k$(limit) <= 0) {
-      dst.writable_1.writePacket_e1h3qk_k$(this.readable_1);
-      dst.afterWrite_qybsg5_k$(size.toInt_1tsl84_k$());
-      this.afterRead_biie6i_k$(size.toInt_1tsl84_k$());
+    if (size.x9(limit) <= 0) {
+      dst.m7c_1.o7j(this.n7c_1);
+      dst.r7f(size.fa());
+      this.d7h(size.fa());
       tmp = size;
     } else {
       tmp = new Long(0, 0);
     }
     return tmp;
   };
-  protoOf(ByteChannelSequentialBase).afterWrite_qybsg5_k$ = function (count) {
+  protoOf(ByteChannelSequentialBase).r7f = function (count) {
     addBytesWritten(this, count);
-    if (this.get_closed_byjrzp_k$()) {
-      this.writable_1.release_wu5yyf_k$();
+    if (this.p7d()) {
+      this.m7c_1.mv();
       ensureNotClosed(this);
     }
-    if (this.get_autoFlush_zfdl3o_k$() ? true : this.get_availableForWrite_22rgeu_k$() === 0) {
-      this.flush_shahbo_k$();
+    if (this.e7j() ? true : this.d7e() === 0) {
+      this.p6();
     }
   };
-  protoOf(ByteChannelSequentialBase).awaitFreeSpace_pdr1rh_k$ = function ($completion) {
-    var tmp = new $awaitFreeSpaceCOROUTINE$46(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).awaitContent_64bnuc_k$ = function ($completion) {
-    var tmp = new $awaitContentCOROUTINE$47(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelSequentialBase).peekTo_ypcho2_k$ = function (destination, destinationOffset, offset, min, max, $completion) {
-    var tmp = new $peekToCOROUTINE$48(this, destination, destinationOffset, offset, min, max, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  function get_EXPECTED_CAPACITY() {
-    return EXPECTED_CAPACITY;
-  }
-  var EXPECTED_CAPACITY;
-  function lastReadAvailable$factory() {
-    return getPropertyCallableRef('lastReadAvailable', 1, KMutableProperty1, function (receiver) {
-      return _get_lastReadAvailable__cgybqk(receiver);
-    }, function (receiver, value) {
-      return _set_lastReadAvailable__98ukjs(receiver, value);
-    });
-  }
-  function lastReadAvailable$factory_0() {
-    return getPropertyCallableRef('lastReadAvailable', 1, KMutableProperty1, function (receiver) {
-      return _get_lastReadAvailable__cgybqk(receiver);
-    }, function (receiver, value) {
-      return _set_lastReadAvailable__98ukjs(receiver, value);
-    });
-  }
-  function lastReadView$factory() {
-    return getPropertyCallableRef('lastReadView', 1, KMutableProperty1, function (receiver) {
-      return _get_lastReadView__ihufyy(receiver);
-    }, function (receiver, value) {
-      return _set_lastReadView__2y3peu(receiver, value);
-    });
-  }
-  function lastReadView$factory_0() {
-    return getPropertyCallableRef('lastReadView', 1, KMutableProperty1, function (receiver) {
-      return _get_lastReadView__ihufyy(receiver);
-    }, function (receiver, value) {
-      return _set_lastReadView__2y3peu(receiver, value);
-    });
-  }
-  function copyAndClose(_this__u8e3s4, dst, limit, $completion) {
-    limit = limit === VOID ? Companion_getInstance().get_MAX_VALUE_54a9lf_k$() : limit;
-    var tmp = new $copyAndCloseCOROUTINE$50(_this__u8e3s4, dst, limit, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
   function cancel(_this__u8e3s4) {
-    return _this__u8e3s4.cancel_e74who_k$(null);
+    return _this__u8e3s4.es(null);
   }
   function readAvailable(_this__u8e3s4, dst, $completion) {
-    return _this__u8e3s4.readAvailable_xlipkq_k$(dst, 0, dst.length, $completion);
+    return _this__u8e3s4.l7j(dst, 0, dst.length, $completion);
   }
-  function $copyAndCloseCOROUTINE$50(_this__u8e3s4, dst, limit, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.limit_1 = limit;
-  }
-  protoOf($copyAndCloseCOROUTINE$50).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = copyTo(this._this__u8e3s4__1, this.dst_1, this.limit_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            var count = suspendResult;
-            close_0(this.dst_1);
-            return count;
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function close_0(_this__u8e3s4) {
-    return _this__u8e3s4.close_ukldxa_k$(null);
+  function close(_this__u8e3s4) {
+    return _this__u8e3s4.n16(null);
   }
   function ClosedWriteChannelException(message) {
     CancellationException_init_$Init$(message, this);
     captureStack(this, ClosedWriteChannelException);
   }
   function writeFully(_this__u8e3s4, src, $completion) {
-    return _this__u8e3s4.writeFully_c7wsd0_k$(src, 0, src.length, $completion);
+    return _this__u8e3s4.g7j(src, 0, src.length, $completion);
   }
   function get_CLOSED_SUCCESS() {
     _init_properties_CloseElement_kt__5e72ik();
@@ -3684,11 +1013,8 @@
   }
   var CLOSED_SUCCESS;
   function CloseElement(cause) {
-    this.cause_1 = cause;
+    this.t7c_1 = cause;
   }
-  protoOf(CloseElement).get_cause_iplhs0_k$ = function () {
-    return this.cause_1;
-  };
   var properties_initialized_CloseElement_kt_clkism;
   function _init_properties_CloseElement_kt__5e72ik() {
     if (!properties_initialized_CloseElement_kt_clkism) {
@@ -3696,206 +1022,170 @@
       CLOSED_SUCCESS = new CloseElement(null);
     }
   }
-  function WriterJob() {
-  }
   function writer(_this__u8e3s4, coroutineContext, autoFlush, block) {
     coroutineContext = coroutineContext === VOID ? EmptyCoroutineContext_getInstance() : coroutineContext;
     autoFlush = autoFlush === VOID ? false : autoFlush;
-    return launchChannel(_this__u8e3s4, coroutineContext, ByteChannel_0(autoFlush), true, block);
+    return launchChannel(_this__u8e3s4, coroutineContext, ByteChannel(autoFlush), true, block);
   }
   function WriterScope() {
   }
-  function _get_delegate__idh0py($this) {
-    return $this.delegate_1;
-  }
   function ChannelJob(delegate, channel) {
-    this.delegate_1 = delegate;
-    this.channel_1 = channel;
+    this.q7j_1 = delegate;
+    this.r7j_1 = channel;
   }
-  protoOf(ChannelJob).get_channel_dhi7tm_k$ = function () {
-    return this.channel_1;
+  protoOf(ChannelJob).b12 = function () {
+    return this.r7j_1;
   };
-  protoOf(ChannelJob).get_children_4cwbp4_k$ = function () {
-    return this.delegate_1.get_children_4cwbp4_k$();
+  protoOf(ChannelJob).wo = function () {
+    return this.q7j_1.wo();
   };
-  protoOf(ChannelJob).get_isActive_quafmh_k$ = function () {
-    return this.delegate_1.get_isActive_quafmh_k$();
+  protoOf(ChannelJob).p2 = function () {
+    return this.q7j_1.p2();
   };
-  protoOf(ChannelJob).get_isCancelled_trk8pu_k$ = function () {
-    return this.delegate_1.get_isCancelled_trk8pu_k$();
+  protoOf(ChannelJob).pp = function () {
+    return this.q7j_1.pp();
   };
-  protoOf(ChannelJob).get_isCompleted_a6j6c8_k$ = function () {
-    return this.delegate_1.get_isCompleted_a6j6c8_k$();
+  protoOf(ChannelJob).lq = function (child) {
+    return this.q7j_1.lq(child);
   };
-  protoOf(ChannelJob).get_key_18j28a_k$ = function () {
-    return this.delegate_1.get_key_18j28a_k$();
+  protoOf(ChannelJob).dq = function (cause) {
+    this.q7j_1.dq(cause);
   };
-  protoOf(ChannelJob).get_onJoin_hnj4j6_k$ = function () {
-    return this.delegate_1.get_onJoin_hnj4j6_k$();
+  protoOf(ChannelJob).xf = function (initial, operation) {
+    return this.q7j_1.xf(initial, operation);
   };
-  protoOf(ChannelJob).get_parent_hy4reb_k$ = function () {
-    return this.delegate_1.get_parent_hy4reb_k$();
+  protoOf(ChannelJob).hc = function (key) {
+    return this.q7j_1.hc(key);
   };
-  protoOf(ChannelJob).attachChild_314ws0_k$ = function (child) {
-    return this.delegate_1.attachChild_314ws0_k$(child);
+  protoOf(ChannelJob).up = function () {
+    return this.q7j_1.up();
   };
-  protoOf(ChannelJob).cancel_2l89ey_k$ = function () {
-    this.delegate_1.cancel_2l89ey_k$();
+  protoOf(ChannelJob).yp = function (onCancelling, invokeImmediately, handler) {
+    return this.q7j_1.yp(onCancelling, invokeImmediately, handler);
   };
-  protoOf(ChannelJob).cancel_e74who_k$ = function (cause) {
-    return this.delegate_1.cancel_e74who_k$(cause);
+  protoOf(ChannelJob).xp = function (handler) {
+    return this.q7j_1.xp(handler);
   };
-  protoOf(ChannelJob).cancel_hkmm2i_k$ = function (cause) {
-    this.delegate_1.cancel_hkmm2i_k$(cause);
+  protoOf(ChannelJob).wf = function (key) {
+    return this.q7j_1.wf(key);
   };
-  protoOf(ChannelJob).fold_j2vaxd_k$ = function (initial, operation) {
-    return this.delegate_1.fold_j2vaxd_k$(initial, operation);
+  protoOf(ChannelJob).yf = function (context) {
+    return this.q7j_1.yf(context);
   };
-  protoOf(ChannelJob).get_y2st91_k$ = function (key) {
-    return this.delegate_1.get_y2st91_k$(key);
-  };
-  protoOf(ChannelJob).getCancellationException_8i1q6u_k$ = function () {
-    return this.delegate_1.getCancellationException_8i1q6u_k$();
-  };
-  protoOf(ChannelJob).invokeOnCompletion_sct3wq_k$ = function (onCancelling, invokeImmediately, handler) {
-    return this.delegate_1.invokeOnCompletion_sct3wq_k$(onCancelling, invokeImmediately, handler);
-  };
-  protoOf(ChannelJob).invokeOnCompletion_n6cffu_k$ = function (handler) {
-    return this.delegate_1.invokeOnCompletion_n6cffu_k$(handler);
-  };
-  protoOf(ChannelJob).join_o20dar_k$ = function ($completion) {
-    return this.delegate_1.join_o20dar_k$($completion);
-  };
-  protoOf(ChannelJob).minusKey_9i5ggf_k$ = function (key) {
-    return this.delegate_1.minusKey_9i5ggf_k$(key);
-  };
-  protoOf(ChannelJob).plus_s13ygv_k$ = function (context) {
-    return this.delegate_1.plus_s13ygv_k$(context);
-  };
-  protoOf(ChannelJob).plus_x16axj_k$ = function (other) {
-    return this.delegate_1.plus_x16axj_k$(other);
-  };
-  protoOf(ChannelJob).start_1tchgi_k$ = function () {
-    return this.delegate_1.start_1tchgi_k$();
+  protoOf(ChannelJob).sp = function () {
+    return this.q7j_1.sp();
   };
   protoOf(ChannelJob).toString = function () {
-    return 'ChannelJob[' + this.delegate_1 + ']';
+    return 'ChannelJob[' + this.q7j_1 + ']';
   };
   function launchChannel(_this__u8e3s4, context, channel, attachJob, block) {
-    var dispatcher = _this__u8e3s4.get_coroutineContext_115oqo_k$().get_y2st91_k$(Key_getInstance());
+    var dispatcher = _this__u8e3s4.vo().hc(Key_getInstance());
     var job = launch(_this__u8e3s4, context, VOID, launchChannel$slambda_0(attachJob, channel, block, dispatcher, null));
-    job.invokeOnCompletion_n6cffu_k$(launchChannel$lambda(channel));
+    job.xp(launchChannel$lambda(channel));
     return new ChannelJob(job, channel);
   }
-  function ReaderJob() {
-  }
   function ChannelScope(delegate, channel) {
-    this.channel_1 = channel;
-    this.$$delegate_0__1 = delegate;
+    this.s7j_1 = channel;
+    this.t7j_1 = delegate;
   }
-  protoOf(ChannelScope).get_channel_dhi7tm_k$ = function () {
-    return this.channel_1;
+  protoOf(ChannelScope).b12 = function () {
+    return this.s7j_1;
   };
-  protoOf(ChannelScope).get_coroutineContext_115oqo_k$ = function () {
-    return this.$$delegate_0__1.get_coroutineContext_115oqo_k$();
+  protoOf(ChannelScope).vo = function () {
+    return this.t7j_1.vo();
   };
-  function ReaderScope() {
-  }
   function launchChannel$slambda($attachJob, $channel, $block, $dispatcher, resultContinuation) {
-    this.$attachJob_1 = $attachJob;
-    this.$channel_1 = $channel;
-    this.$block_1 = $block;
-    this.$dispatcher_1 = $dispatcher;
+    this.c7k_1 = $attachJob;
+    this.d7k_1 = $channel;
+    this.e7k_1 = $block;
+    this.f7k_1 = $dispatcher;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(launchChannel$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+  protoOf(launchChannel$slambda).j20 = function ($this$launch, $completion) {
+    var tmp = this.k20($this$launch, $completion);
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(launchChannel$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
+  protoOf(launchChannel$slambda).yc = function (p1, $completion) {
+    return this.j20((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
-  protoOf(launchChannel$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf(launchChannel$slambda).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this.$attachJob_1) {
-              this.$channel_1.attachJob_s2t2tl_k$(ensureNotNull(this.$this$launch_1.get_coroutineContext_115oqo_k$().get_y2st91_k$(Key_getInstance_0())));
+            this.bc_1 = 3;
+            if (this.c7k_1) {
+              this.d7k_1.p7j(ensureNotNull(this.g7k_1.vo().hc(Key_instance)));
             }
 
             var tmp_0 = this;
-            var tmp_1 = new ChannelScope(this.$this$launch_1, this.$channel_1);
-            tmp_0.scope0__1 = isInterface(tmp_1, CoroutineScope) ? tmp_1 : THROW_CCE();
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this.$block_1(this.scope0__1, this);
+            var tmp_1 = new ChannelScope(this.g7k_1, this.d7k_1);
+            tmp_0.h7k_1 = isInterface(tmp_1, CoroutineScope) ? tmp_1 : THROW_CCE();
+            this.bc_1 = 2;
+            this.ac_1 = 1;
+            suspendResult = this.e7k_1(this.h7k_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 1:
-            this.set_exceptionState_fex74n_k$(3);
-            this.set_state_rjd8d0_k$(4);
+            this.bc_1 = 3;
+            this.ac_1 = 4;
             continue $sm;
           case 2:
-            this.set_exceptionState_fex74n_k$(3);
-            var tmp_2 = this.get_exception_x0n6w6_k$();
+            this.bc_1 = 3;
+            var tmp_2 = this.dc_1;
             if (tmp_2 instanceof Error) {
-              var cause = this.get_exception_x0n6w6_k$();
-              if (!equals(this.$dispatcher_1, Dispatchers_getInstance().get_Unconfined_sfvx0q_k$()) ? !(this.$dispatcher_1 == null) : false) {
+              var cause = this.dc_1;
+              if (!equals(this.f7k_1, Dispatchers_getInstance().t10_1) ? !(this.f7k_1 == null) : false) {
                 throw cause;
               }
-              this.$channel_1.cancel_e74who_k$(cause);
-              this.set_state_rjd8d0_k$(4);
+              this.d7k_1.es(cause);
+              this.ac_1 = 4;
               continue $sm;
             } else {
-              throw this.get_exception_x0n6w6_k$();
+              throw this.dc_1;
             }
 
           case 3:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
           case 4:
-            this.set_exceptionState_fex74n_k$(3);
-            return Unit_getInstance();
+            this.bc_1 = 3;
+            return Unit_instance;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
+        if (this.bc_1 === 3) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
-  protoOf(launchChannel$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
-    var i = new launchChannel$slambda(this.$attachJob_1, this.$channel_1, this.$block_1, this.$dispatcher_1, completion);
-    i.$this$launch_1 = $this$launch;
+  protoOf(launchChannel$slambda).k20 = function ($this$launch, completion) {
+    var i = new launchChannel$slambda(this.c7k_1, this.d7k_1, this.e7k_1, this.f7k_1, completion);
+    i.g7k_1 = $this$launch;
     return i;
-  };
-  protoOf(launchChannel$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function launchChannel$slambda_0($attachJob, $channel, $block, $dispatcher, resultContinuation) {
     var i = new launchChannel$slambda($attachJob, $channel, $block, $dispatcher, resultContinuation);
     var l = function ($this$launch, $completion) {
-      return i.invoke_d9fzmj_k$($this$launch, $completion);
+      return i.j20($this$launch, $completion);
     };
     l.$arity = 1;
     return l;
   }
   function launchChannel$lambda($channel) {
     return function (cause) {
-      $channel.close_ukldxa_k$(cause);
-      return Unit_getInstance();
+      $channel.n16(cause);
+      return Unit_instance;
     };
   }
   function unwrapCancellationException(_this__u8e3s4) {
@@ -3915,70 +1205,16 @@
     }
     return exception;
   }
-  function ReadSession() {
-  }
-  function SuspendableReadSession() {
-  }
-  function HasReadSession() {
-  }
-  function WriterSuspendSession() {
-  }
-  function HasWriteSession() {
-  }
-  function WriterSession() {
-  }
-  function get_highByte(_this__u8e3s4) {
-    return toByte(_this__u8e3s4 >>> 8 | 0);
-  }
-  function get_lowByte(_this__u8e3s4) {
-    return toByte(_this__u8e3s4 & 255);
-  }
-  function get_highInt(_this__u8e3s4) {
-    return _this__u8e3s4.ushr_z7nmq8_k$(32).toInt_1tsl84_k$();
-  }
-  function get_lowInt(_this__u8e3s4) {
-    return _this__u8e3s4.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$();
-  }
-  function get_highShort(_this__u8e3s4) {
-    return toShort(_this__u8e3s4 >>> 16 | 0);
-  }
-  function get_lowShort(_this__u8e3s4) {
-    return toShort(_this__u8e3s4 & 65535);
-  }
-  function get(_this__u8e3s4, index) {
-    // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-    return _this__u8e3s4.get_view_wow8a6_k$().getInt8(index);
-  }
-  function set(_this__u8e3s4, index, value) {
-    _this__u8e3s4.get_view_wow8a6_k$().setInt8(index, value);
-    return Unit_getInstance();
-  }
-  function Allocator() {
-  }
-  function storeByteArray(_this__u8e3s4, offset, source, sourceOffset, count) {
-    sourceOffset = sourceOffset === VOID ? 0 : sourceOffset;
-    count = count === VOID ? source.length - sourceOffset | 0 : count;
-    // Inline function 'io.ktor.utils.io.bits.useMemory' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    of(Companion_getInstance_6(), source, sourceOffset, count).copyTo_fgxuoj_k$(_this__u8e3s4, 0, count, offset);
-  }
-  function loadByteArray(_this__u8e3s4, offset, destination, destinationOffset, count) {
-    destinationOffset = destinationOffset === VOID ? 0 : destinationOffset;
-    count = count === VOID ? destination.length - destinationOffset | 0 : count;
-    copyTo_2(_this__u8e3s4, destination, offset, count, destinationOffset);
-  }
   function decode(_this__u8e3s4, input, max) {
-    max = max === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : max;
+    max = max === VOID ? IntCompanionObject_instance.MAX_VALUE : max;
     // Inline function 'kotlin.text.buildString' call
     // Inline function 'kotlin.comparisons.minOf' call
     var a = toLong(max);
     var b = sizeEstimate(input);
-    var capacity = (a.compareTo_9jj042_k$(b) <= 0 ? a : b).toInt_1tsl84_k$();
+    var capacity = (a.x9(b) <= 0 ? a : b).fa();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.apply' call
-    var this_0 = StringBuilder_init_$Create$_0(capacity);
+    var this_0 = StringBuilder_init_$Create$(capacity);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.charsets.decode.<anonymous>' call
     decode_0(_this__u8e3s4, input, this_0, max);
@@ -3997,7 +1233,7 @@
         // Inline function 'io.ktor.utils.io.charsets.encodeToImpl.<anonymous>' call
         var view = tail;
         // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-        var before = view.get_limit_iuokuq_k$() - view.get_writePosition_jdt81t_k$() | 0;
+        var before = view.p7f_1 - view.n7f_1 | 0;
         var rc = encodeImpl(_this__u8e3s4, input, start, toIndex, view);
         // Inline function 'kotlin.check' call
         // Inline function 'kotlin.contracts.contract' call
@@ -4011,14 +1247,14 @@
         start = start + rc | 0;
         var tmp = bytesWritten;
         // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-        bytesWritten = tmp + (before - (view.get_limit_iuokuq_k$() - view.get_writePosition_jdt81t_k$() | 0) | 0) | 0;
+        bytesWritten = tmp + (before - (view.p7f_1 - view.n7f_1 | 0) | 0) | 0;
         size = start >= toIndex ? 0 : rc === 0 ? 8 : 1;
         if (size <= 0)
           break $l$loop;
         tail = prepareWriteHead(destination, size, tail);
       }
     }finally {
-      destination.afterHeadWrite_dl47zh_k$();
+      destination.i7k();
     }
     bytesWritten = bytesWritten + encodeCompleteImpl(_this__u8e3s4, destination) | 0;
     return bytesWritten;
@@ -4026,12 +1262,12 @@
   function sizeEstimate(_this__u8e3s4) {
     var tmp;
     if (_this__u8e3s4 instanceof ByteReadPacket) {
-      tmp = _this__u8e3s4.get_remaining_mwegr1_k$();
+      tmp = _this__u8e3s4.b7h();
     } else {
       // Inline function 'kotlin.comparisons.maxOf' call
-      var a = _this__u8e3s4.get_remaining_mwegr1_k$();
+      var a = _this__u8e3s4.b7h();
       var b = new Long(16, 0);
-      tmp = a.compareTo_9jj042_k$(b) >= 0 ? a : b;
+      tmp = a.x9(b) >= 0 ? a : b;
     }
     return tmp;
   }
@@ -4045,7 +1281,7 @@
         // Inline function 'io.ktor.utils.io.charsets.encodeCompleteImpl.<anonymous>' call
         var view = tail;
         // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-        var before = view.get_limit_iuokuq_k$() - view.get_writePosition_jdt81t_k$() | 0;
+        var before = view.p7f_1 - view.n7f_1 | 0;
         if (encodeComplete(_this__u8e3s4, view)) {
           size = 0;
         } else {
@@ -4053,57 +1289,17 @@
         }
         var tmp = bytesWritten;
         // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-        bytesWritten = tmp + (before - (view.get_limit_iuokuq_k$() - view.get_writePosition_jdt81t_k$() | 0) | 0) | 0;
+        bytesWritten = tmp + (before - (view.p7f_1 - view.n7f_1 | 0) | 0) | 0;
         if (!(size > 0))
           break $l$loop;
         tail = prepareWriteHead(dst, 1, tail);
       }
     }finally {
-      dst.afterHeadWrite_dl47zh_k$();
+      dst.i7k();
     }
     return bytesWritten;
   }
-  function TooLongLineException(message) {
-    MalformedInputException.call(this, message);
-    captureStack(this, TooLongLineException);
-  }
-  function encode(_this__u8e3s4, input, fromIndex, toIndex, dst) {
-    var start = fromIndex;
-    if (start >= toIndex)
-      return Unit_getInstance();
-    // Inline function 'io.ktor.utils.io.core.writeWhileSize' call
-    var tail = prepareWriteHead(dst, 1, null);
-    try {
-      var size;
-      $l$loop: while (true) {
-        // Inline function 'io.ktor.utils.io.charsets.encode.<anonymous>' call
-        var view = tail;
-        var rc = encodeArrayImpl(_this__u8e3s4, input, start, toIndex, view);
-        // Inline function 'kotlin.check' call
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'kotlin.check' call
-        // Inline function 'kotlin.contracts.contract' call
-        if (!(rc >= 0)) {
-          // Inline function 'kotlin.check.<anonymous>' call
-          var message = 'Check failed.';
-          throw IllegalStateException_init_$Create$(toString(message));
-        }
-        start = start + rc | 0;
-        size = start >= toIndex ? 0 : rc === 0 ? 8 : 1;
-        if (size <= 0)
-          break $l$loop;
-        tail = prepareWriteHead(dst, size, tail);
-      }
-    }finally {
-      dst.afterHeadWrite_dl47zh_k$();
-    }
-    encodeCompleteImpl(_this__u8e3s4, dst);
-  }
-  function encodeArrayImpl(_this__u8e3s4, input, fromIndex, toIndex, dst) {
-    var length = toIndex - fromIndex | 0;
-    return encodeImpl(_this__u8e3s4, new CharArraySequence(input, fromIndex, length), 0, length, dst);
-  }
-  function encode_0(_this__u8e3s4, input, fromIndex, toIndex) {
+  function encode(_this__u8e3s4, input, fromIndex, toIndex) {
     fromIndex = fromIndex === VOID ? 0 : fromIndex;
     toIndex = toIndex === VOID ? charSequenceLength(input) : toIndex;
     var tmp$ret$0;
@@ -4114,12 +1310,12 @@
       try {
         // Inline function 'io.ktor.utils.io.charsets.encode.<anonymous>' call
         encodeToImpl(_this__u8e3s4, builder, input, fromIndex, toIndex);
-        tmp$ret$0 = builder.build_1k0s4u_k$();
+        tmp$ret$0 = builder.e3();
         break $l$block;
       } catch ($p) {
         if ($p instanceof Error) {
           var t = $p;
-          builder.release_wu5yyf_k$();
+          builder.mv();
           throw t;
         } else {
           throw $p;
@@ -4128,163 +1324,88 @@
     }
     return tmp$ret$0;
   }
-  function _set_readPosition__n6qkdk($this, _set____db54di) {
-    $this.readPosition_1 = _set____db54di;
-  }
-  function _set_writePosition__sxej31($this, _set____db54di) {
-    $this.writePosition_1 = _set____db54di;
-  }
-  function _set_startGap__236j43($this, _set____db54di) {
-    $this.startGap_1 = _set____db54di;
-  }
-  function _set_limit__hazgmi($this, _set____db54di) {
-    $this.limit_1 = _set____db54di;
-  }
   function Companion() {
-    Companion_instance = this;
-    this.ReservedSize_1 = 8;
+    this.j7k_1 = 8;
   }
-  protoOf(Companion).get_ReservedSize_b4jt5a_k$ = function () {
-    return this.ReservedSize_1;
-  };
-  protoOf(Companion).get_Empty_i9b85g_k$ = function () {
-    return Companion_getInstance_4().get_Empty_i9b85g_k$();
+  protoOf(Companion).k7k = function () {
+    return Companion_getInstance_4().a7j_1;
   };
   var Companion_instance;
   function Companion_getInstance_1() {
-    if (Companion_instance == null)
-      new Companion();
     return Companion_instance;
   }
   function Buffer(memory) {
-    Companion_getInstance_1();
-    this.memory_1 = memory;
-    this.readPosition_1 = 0;
-    this.writePosition_1 = 0;
-    this.startGap_1 = 0;
+    this.l7f_1 = memory;
+    this.m7f_1 = 0;
+    this.n7f_1 = 0;
+    this.o7f_1 = 0;
     var tmp = this;
     // Inline function 'io.ktor.utils.io.bits.Memory.size32' call
-    tmp.limit_1 = this.memory_1.get_view_wow8a6_k$().byteLength;
+    tmp.p7f_1 = this.l7f_1.l7k_1.byteLength;
     var tmp_0 = this;
     // Inline function 'io.ktor.utils.io.bits.Memory.size32' call
-    tmp_0.capacity_1 = this.memory_1.get_view_wow8a6_k$().byteLength;
+    tmp_0.q7f_1 = this.l7f_1.l7k_1.byteLength;
   }
-  protoOf(Buffer).get_memory_gl4362_k$ = function () {
-    return this.memory_1;
-  };
-  protoOf(Buffer).get_readPosition_70qxnc_k$ = function () {
-    return this.readPosition_1;
-  };
-  protoOf(Buffer).get_writePosition_jdt81t_k$ = function () {
-    return this.writePosition_1;
-  };
-  protoOf(Buffer).get_startGap_a0yplv_k$ = function () {
-    return this.startGap_1;
-  };
-  protoOf(Buffer).get_limit_iuokuq_k$ = function () {
-    return this.limit_1;
-  };
-  protoOf(Buffer).get_endGap_cxioec_k$ = function () {
-    return this.capacity_1 - this.limit_1 | 0;
-  };
-  protoOf(Buffer).get_capacity_wxbgcd_k$ = function () {
-    return this.capacity_1;
-  };
-  protoOf(Buffer).get_readRemaining_ieclyh_k$ = function () {
-    return this.writePosition_1 - this.readPosition_1 | 0;
-  };
-  protoOf(Buffer).get_writeRemaining_ojcrfk_k$ = function () {
-    return this.limit_1 - this.writePosition_1 | 0;
-  };
-  protoOf(Buffer).discardExact_11sae1_k$ = function (count) {
+  protoOf(Buffer).m7k = function (count) {
     if (count === 0)
-      return Unit_getInstance();
-    var newReadPosition = this.readPosition_1 + count | 0;
-    if (count < 0 ? true : newReadPosition > this.writePosition_1) {
+      return Unit_instance;
+    var newReadPosition = this.m7f_1 + count | 0;
+    if (count < 0 ? true : newReadPosition > this.n7f_1) {
       // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      var tmp$ret$1 = this.writePosition_1 - this.readPosition_1 | 0;
+      var tmp$ret$1 = this.n7f_1 - this.m7f_1 | 0;
       discardFailed(count, tmp$ret$1);
     }
-    this.readPosition_1 = newReadPosition;
+    this.m7f_1 = newReadPosition;
   };
-  protoOf(Buffer).discardExact$default_ilucj7_k$ = function (count, $super) {
-    var tmp;
-    if (count === VOID) {
-      // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      tmp = this.writePosition_1 - this.readPosition_1 | 0;
-    } else {
-      tmp = count;
-    }
-    count = tmp;
-    var tmp_0;
-    if ($super === VOID) {
-      this.discardExact_11sae1_k$(count);
-      tmp_0 = Unit_getInstance();
-    } else {
-      tmp_0 = $super.discardExact_11sae1_k$.call(this, count);
-    }
-    return tmp_0;
-  };
-  protoOf(Buffer).commitWritten_tkztjs_k$ = function (count) {
-    var newWritePosition = this.writePosition_1 + count | 0;
-    if (count < 0 ? true : newWritePosition > this.limit_1) {
+  protoOf(Buffer).n7k = function (count) {
+    var newWritePosition = this.n7f_1 + count | 0;
+    if (count < 0 ? true : newWritePosition > this.p7f_1) {
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      var tmp$ret$0 = this.limit_1 - this.writePosition_1 | 0;
+      var tmp$ret$0 = this.p7f_1 - this.n7f_1 | 0;
       commitWrittenFailed(count, tmp$ret$0);
     }
-    this.writePosition_1 = newWritePosition;
+    this.n7f_1 = newWritePosition;
   };
-  protoOf(Buffer).commitWrittenUntilIndex_umptfg_k$ = function (position) {
-    var limit = this.limit_1;
-    if (position < this.writePosition_1) {
-      var tmp = position - this.writePosition_1 | 0;
+  protoOf(Buffer).o7k = function (position) {
+    var limit = this.p7f_1;
+    if (position < this.n7f_1) {
+      var tmp = position - this.n7f_1 | 0;
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      var tmp$ret$0 = this.limit_1 - this.writePosition_1 | 0;
+      var tmp$ret$0 = this.p7f_1 - this.n7f_1 | 0;
       commitWrittenFailed(tmp, tmp$ret$0);
     }
     if (position >= limit) {
       if (position === limit) {
-        this.writePosition_1 = position;
+        this.n7f_1 = position;
         return false;
       }
-      var tmp_0 = position - this.writePosition_1 | 0;
+      var tmp_0 = position - this.n7f_1 | 0;
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      var tmp$ret$1 = this.limit_1 - this.writePosition_1 | 0;
+      var tmp$ret$1 = this.p7f_1 - this.n7f_1 | 0;
       commitWrittenFailed(tmp_0, tmp$ret$1);
     }
-    this.writePosition_1 = position;
+    this.n7f_1 = position;
     return true;
   };
-  protoOf(Buffer).discardUntilIndex_z86prq_k$ = function (position) {
-    if (position < 0 ? true : position > this.writePosition_1) {
-      var tmp = position - this.readPosition_1 | 0;
+  protoOf(Buffer).p7k = function (position) {
+    if (position < 0 ? true : position > this.n7f_1) {
+      var tmp = position - this.m7f_1 | 0;
       // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      var tmp$ret$0 = this.writePosition_1 - this.readPosition_1 | 0;
+      var tmp$ret$0 = this.n7f_1 - this.m7f_1 | 0;
       discardFailed(tmp, tmp$ret$0);
     }
-    if (!(this.readPosition_1 === position)) {
-      this.readPosition_1 = position;
+    if (!(this.m7f_1 === position)) {
+      this.m7f_1 = position;
     }
   };
-  protoOf(Buffer).rewind_gfqr1p_k$ = function (count) {
-    var newReadPosition = this.readPosition_1 - count | 0;
-    if (newReadPosition < this.startGap_1) {
-      rewindFailed(count, this.readPosition_1 - this.startGap_1 | 0);
+  protoOf(Buffer).q7k = function (count) {
+    var newReadPosition = this.m7f_1 - count | 0;
+    if (newReadPosition < this.o7f_1) {
+      rewindFailed(count, this.m7f_1 - this.o7f_1 | 0);
     }
-    this.readPosition_1 = newReadPosition;
+    this.m7f_1 = newReadPosition;
   };
-  protoOf(Buffer).rewind$default_x2qhrh_k$ = function (count, $super) {
-    count = count === VOID ? this.readPosition_1 - this.startGap_1 | 0 : count;
-    var tmp;
-    if ($super === VOID) {
-      this.rewind_gfqr1p_k$(count);
-      tmp = Unit_getInstance();
-    } else {
-      tmp = $super.rewind_gfqr1p_k$.call(this, count);
-    }
-    return tmp;
-  };
-  protoOf(Buffer).reserveStartGap_819mco_k$ = function (startGap) {
+  protoOf(Buffer).r7k = function (startGap) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(startGap >= 0)) {
@@ -4292,22 +1413,22 @@
       var message = "startGap shouldn't be negative: " + startGap;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    if (this.readPosition_1 >= startGap) {
-      this.startGap_1 = startGap;
-      return Unit_getInstance();
+    if (this.m7f_1 >= startGap) {
+      this.o7f_1 = startGap;
+      return Unit_instance;
     }
-    if (this.readPosition_1 === this.writePosition_1) {
-      if (startGap > this.limit_1) {
+    if (this.m7f_1 === this.n7f_1) {
+      if (startGap > this.p7f_1) {
         startGapReservationFailedDueToLimit(this, startGap);
       }
-      this.writePosition_1 = startGap;
-      this.readPosition_1 = startGap;
-      this.startGap_1 = startGap;
-      return Unit_getInstance();
+      this.n7f_1 = startGap;
+      this.m7f_1 = startGap;
+      this.o7f_1 = startGap;
+      return Unit_instance;
     }
     startGapReservationFailed(this, startGap);
   };
-  protoOf(Buffer).reserveEndGap_i4z3fz_k$ = function (endGap) {
+  protoOf(Buffer).s7k = function (endGap) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(endGap >= 0)) {
@@ -4315,48 +1436,48 @@
       var message = "endGap shouldn't be negative: " + endGap;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    var newLimit = this.capacity_1 - endGap | 0;
-    if (newLimit >= this.writePosition_1) {
-      this.limit_1 = newLimit;
-      return Unit_getInstance();
+    var newLimit = this.q7f_1 - endGap | 0;
+    if (newLimit >= this.n7f_1) {
+      this.p7f_1 = newLimit;
+      return Unit_instance;
     }
     if (newLimit < 0) {
       endGapReservationFailedDueToCapacity(this, endGap);
     }
-    if (newLimit < this.startGap_1) {
+    if (newLimit < this.o7f_1) {
       endGapReservationFailedDueToStartGap(this, endGap);
     }
-    if (this.readPosition_1 === this.writePosition_1) {
-      this.limit_1 = newLimit;
-      this.readPosition_1 = newLimit;
-      this.writePosition_1 = newLimit;
-      return Unit_getInstance();
+    if (this.m7f_1 === this.n7f_1) {
+      this.p7f_1 = newLimit;
+      this.m7f_1 = newLimit;
+      this.n7f_1 = newLimit;
+      return Unit_instance;
     }
     endGapReservationFailedDueToContent(this, endGap);
   };
-  protoOf(Buffer).resetForRead_c5oulc_k$ = function () {
-    this.startGap_1 = 0;
-    this.readPosition_1 = 0;
-    var capacity = this.capacity_1;
-    this.writePosition_1 = capacity;
+  protoOf(Buffer).t7k = function () {
+    this.o7f_1 = 0;
+    this.m7f_1 = 0;
+    var capacity = this.q7f_1;
+    this.n7f_1 = capacity;
   };
-  protoOf(Buffer).resetForWrite_2oalv9_k$ = function () {
-    this.resetForWrite_c461wd_k$(this.capacity_1 - this.startGap_1 | 0);
+  protoOf(Buffer).u7k = function () {
+    this.v7k(this.q7f_1 - this.o7f_1 | 0);
   };
-  protoOf(Buffer).resetForWrite_c461wd_k$ = function (limit) {
-    var startGap = this.startGap_1;
-    this.readPosition_1 = startGap;
-    this.writePosition_1 = startGap;
-    this.limit_1 = limit;
+  protoOf(Buffer).v7k = function (limit) {
+    var startGap = this.o7f_1;
+    this.m7f_1 = startGap;
+    this.n7f_1 = startGap;
+    this.p7f_1 = limit;
   };
-  protoOf(Buffer).releaseGaps_35izt8_k$ = function () {
-    this.releaseStartGap_da07al_k$(0);
-    this.releaseEndGap_v6rgnm_k$();
+  protoOf(Buffer).w7k = function () {
+    this.x7k(0);
+    this.y7k();
   };
-  protoOf(Buffer).releaseEndGap_v6rgnm_k$ = function () {
-    this.limit_1 = this.capacity_1;
+  protoOf(Buffer).y7k = function () {
+    this.p7f_1 = this.q7f_1;
   };
-  protoOf(Buffer).releaseStartGap_da07al_k$ = function (newReadPosition) {
+  protoOf(Buffer).x7k = function (newReadPosition) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(newReadPosition >= 0)) {
@@ -4366,79 +1487,54 @@
     }
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(newReadPosition <= this.readPosition_1)) {
+    if (!(newReadPosition <= this.m7f_1)) {
       // Inline function 'io.ktor.utils.io.core.Buffer.releaseStartGap.<anonymous>' call
-      var message_0 = "newReadPosition shouldn't be ahead of the read position: " + newReadPosition + ' > ' + this.readPosition_1;
+      var message_0 = "newReadPosition shouldn't be ahead of the read position: " + newReadPosition + ' > ' + this.m7f_1;
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
-    this.readPosition_1 = newReadPosition;
-    if (this.startGap_1 > newReadPosition) {
-      this.startGap_1 = newReadPosition;
+    this.m7f_1 = newReadPosition;
+    if (this.o7f_1 > newReadPosition) {
+      this.o7f_1 = newReadPosition;
     }
   };
-  protoOf(Buffer).duplicateTo_5gqm85_k$ = function (copy) {
-    copy.limit_1 = this.limit_1;
-    copy.startGap_1 = this.startGap_1;
-    copy.readPosition_1 = this.readPosition_1;
-    copy.writePosition_1 = this.writePosition_1;
+  protoOf(Buffer).z7k = function (copy) {
+    copy.p7f_1 = this.p7f_1;
+    copy.o7f_1 = this.o7f_1;
+    copy.m7f_1 = this.m7f_1;
+    copy.n7f_1 = this.n7f_1;
   };
-  protoOf(Buffer).duplicate_jvgc97_k$ = function () {
-    // Inline function 'kotlin.apply' call
-    var this_0 = new Buffer(this.memory_1);
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.Buffer.duplicate.<anonymous>' call
-    this_0.duplicateTo_5gqm85_k$(this_0);
-    return this_0;
-  };
-  protoOf(Buffer).tryPeekByte_ple8ke_k$ = function () {
-    var readPosition = this.readPosition_1;
-    if (readPosition === this.writePosition_1)
-      return -1;
-    // Inline function 'io.ktor.utils.io.bits.get' call
-    // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-    return this.memory_1.get_view_wow8a6_k$().getInt8(readPosition) & 255;
-  };
-  protoOf(Buffer).tryReadByte_a7i2zd_k$ = function () {
-    var readPosition = this.readPosition_1;
-    if (readPosition === this.writePosition_1)
-      return -1;
-    this.readPosition_1 = readPosition + 1 | 0;
-    // Inline function 'io.ktor.utils.io.bits.get' call
-    // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-    return this.memory_1.get_view_wow8a6_k$().getInt8(readPosition) & 255;
-  };
-  protoOf(Buffer).readByte_ectjk2_k$ = function () {
-    var readPosition = this.readPosition_1;
-    if (readPosition === this.writePosition_1) {
+  protoOf(Buffer).a7l = function () {
+    var readPosition = this.m7f_1;
+    if (readPosition === this.n7f_1) {
       throw new EOFException('No readable bytes available.');
     }
-    this.readPosition_1 = readPosition + 1 | 0;
+    this.m7f_1 = readPosition + 1 | 0;
     // Inline function 'io.ktor.utils.io.bits.get' call
     // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-    return this.memory_1.get_view_wow8a6_k$().getInt8(readPosition);
+    return this.l7f_1.l7k_1.getInt8(readPosition);
   };
-  protoOf(Buffer).writeByte_9ih3z3_k$ = function (value) {
-    var writePosition = this.writePosition_1;
-    if (writePosition === this.limit_1) {
+  protoOf(Buffer).b7l = function (value) {
+    var writePosition = this.n7f_1;
+    if (writePosition === this.p7f_1) {
       throw new InsufficientSpaceException('No free space in the buffer to write a byte');
     }
     // Inline function 'io.ktor.utils.io.bits.set' call
-    this.memory_1.get_view_wow8a6_k$().setInt8(writePosition, value);
-    this.writePosition_1 = writePosition + 1 | 0;
+    this.l7f_1.l7k_1.setInt8(writePosition, value);
+    this.n7f_1 = writePosition + 1 | 0;
   };
-  protoOf(Buffer).reset_5u6xz3_k$ = function () {
-    this.releaseGaps_35izt8_k$();
-    this.resetForWrite_2oalv9_k$();
+  protoOf(Buffer).a26 = function () {
+    this.w7k();
+    this.u7k();
   };
   protoOf(Buffer).toString = function () {
     var tmp = 'Buffer[0x' + toString_0(hashCode(this), 16) + ']';
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var tmp_0 = this.writePosition_1 - this.readPosition_1 | 0;
+    var tmp_0 = this.n7f_1 - this.m7f_1 | 0;
     // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-    var tmp_1 = this.limit_1 - this.writePosition_1 | 0;
-    var tmp_2 = this.startGap_1;
+    var tmp_1 = this.p7f_1 - this.n7f_1 | 0;
+    var tmp_2 = this.o7f_1;
     // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
-    return tmp + ('(' + tmp_0 + ' used, ' + tmp_1 + ' free, ' + (tmp_2 + (this.capacity_1 - this.limit_1 | 0) | 0) + ' reserved of ' + this.capacity_1 + ')');
+    return tmp + ('(' + tmp_0 + ' used, ' + tmp_1 + ' free, ' + (tmp_2 + (this.q7f_1 - this.p7f_1 | 0) | 0) + ' reserved of ' + this.q7f_1 + ')');
   };
   function discardFailed(count, readRemaining) {
     throw new EOFException('Unable to discard ' + count + ' bytes: only ' + readRemaining + ' available for reading');
@@ -4450,56 +1546,38 @@
     throw IllegalArgumentException_init_$Create$('Unable to rewind ' + count + ' bytes: only ' + rewindRemaining + ' could be rewinded');
   }
   function startGapReservationFailedDueToLimit(_this__u8e3s4, startGap) {
-    if (startGap > _this__u8e3s4.capacity_1) {
-      throw IllegalArgumentException_init_$Create$('Start gap ' + startGap + ' is bigger than the capacity ' + _this__u8e3s4.capacity_1);
+    if (startGap > _this__u8e3s4.q7f_1) {
+      throw IllegalArgumentException_init_$Create$('Start gap ' + startGap + ' is bigger than the capacity ' + _this__u8e3s4.q7f_1);
     }
     // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
-    var tmp$ret$0 = _this__u8e3s4.capacity_1 - _this__u8e3s4.limit_1 | 0;
+    var tmp$ret$0 = _this__u8e3s4.q7f_1 - _this__u8e3s4.p7f_1 | 0;
     throw IllegalStateException_init_$Create$('Unable to reserve ' + startGap + ' start gap: there are already ' + tmp$ret$0 + ' bytes reserved in the end');
   }
   function startGapReservationFailed(_this__u8e3s4, startGap) {
     var tmp = 'Unable to reserve ' + startGap + ' start gap: ';
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var tmp$ret$0 = _this__u8e3s4.writePosition_1 - _this__u8e3s4.readPosition_1 | 0;
-    throw IllegalStateException_init_$Create$(tmp + ('there are already ' + tmp$ret$0 + ' content bytes starting at offset ' + _this__u8e3s4.readPosition_1));
+    var tmp$ret$0 = _this__u8e3s4.n7f_1 - _this__u8e3s4.m7f_1 | 0;
+    throw IllegalStateException_init_$Create$(tmp + ('there are already ' + tmp$ret$0 + ' content bytes starting at offset ' + _this__u8e3s4.m7f_1));
   }
   function endGapReservationFailedDueToCapacity(_this__u8e3s4, endGap) {
-    throw IllegalArgumentException_init_$Create$('End gap ' + endGap + ' is too big: capacity is ' + _this__u8e3s4.capacity_1);
+    throw IllegalArgumentException_init_$Create$('End gap ' + endGap + ' is too big: capacity is ' + _this__u8e3s4.q7f_1);
   }
   function endGapReservationFailedDueToStartGap(_this__u8e3s4, endGap) {
-    throw IllegalArgumentException_init_$Create$('End gap ' + endGap + ' is too big: there are already ' + _this__u8e3s4.startGap_1 + ' bytes reserved in the beginning');
+    throw IllegalArgumentException_init_$Create$('End gap ' + endGap + ' is too big: there are already ' + _this__u8e3s4.o7f_1 + ' bytes reserved in the beginning');
   }
   function endGapReservationFailedDueToContent(_this__u8e3s4, endGap) {
     var tmp = 'Unable to reserve end gap ' + endGap + ':';
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var tmp$ret$0 = _this__u8e3s4.writePosition_1 - _this__u8e3s4.readPosition_1 | 0;
-    throw IllegalArgumentException_init_$Create$(tmp + (' there are already ' + tmp$ret$0 + ' content bytes at offset ' + _this__u8e3s4.readPosition_1));
+    var tmp$ret$0 = _this__u8e3s4.n7f_1 - _this__u8e3s4.m7f_1 | 0;
+    throw IllegalArgumentException_init_$Create$(tmp + (' there are already ' + tmp$ret$0 + ' content bytes at offset ' + _this__u8e3s4.m7f_1));
   }
-  function InsufficientSpaceException_init_$Init$(size, availableSpace, $this) {
-    InsufficientSpaceException.call($this, 'Not enough free space to write ' + size + ' bytes, available ' + availableSpace + ' bytes.');
-    return $this;
-  }
-  function InsufficientSpaceException_init_$Create$(size, availableSpace) {
-    var tmp = InsufficientSpaceException_init_$Init$(size, availableSpace, objectCreate(protoOf(InsufficientSpaceException)));
-    captureStack(tmp, InsufficientSpaceException_init_$Create$);
-    return tmp;
-  }
-  function InsufficientSpaceException_init_$Init$_0(name, size, availableSpace, $this) {
+  function InsufficientSpaceException_init_$Init$(name, size, availableSpace, $this) {
     InsufficientSpaceException.call($this, 'Not enough free space to write ' + name + ' of ' + size + ' bytes, available ' + availableSpace + ' bytes.');
     return $this;
   }
-  function InsufficientSpaceException_init_$Create$_0(name, size, availableSpace) {
-    var tmp = InsufficientSpaceException_init_$Init$_0(name, size, availableSpace, objectCreate(protoOf(InsufficientSpaceException)));
-    captureStack(tmp, InsufficientSpaceException_init_$Create$_0);
-    return tmp;
-  }
-  function InsufficientSpaceException_init_$Init$_1(size, availableSpace, $this) {
-    InsufficientSpaceException.call($this, 'Not enough free space to write ' + size.toString() + ' bytes, available ' + availableSpace.toString() + ' bytes.');
-    return $this;
-  }
-  function InsufficientSpaceException_init_$Create$_1(size, availableSpace) {
-    var tmp = InsufficientSpaceException_init_$Init$_1(size, availableSpace, objectCreate(protoOf(InsufficientSpaceException)));
-    captureStack(tmp, InsufficientSpaceException_init_$Create$_1);
+  function InsufficientSpaceException_init_$Create$(name, size, availableSpace) {
+    var tmp = InsufficientSpaceException_init_$Init$(name, size, availableSpace, objectCreate(protoOf(InsufficientSpaceException)));
+    captureStack(tmp, InsufficientSpaceException_init_$Create$);
     return tmp;
   }
   function InsufficientSpaceException(message) {
@@ -4508,75 +1586,60 @@
     captureStack(this, InsufficientSpaceException);
   }
   function restoreStartGap(_this__u8e3s4, size) {
-    _this__u8e3s4.releaseStartGap_da07al_k$(_this__u8e3s4.readPosition_1 - size | 0);
-  }
-  function canRead(_this__u8e3s4) {
-    return _this__u8e3s4.writePosition_1 > _this__u8e3s4.readPosition_1;
-  }
-  function write(_this__u8e3s4, block) {
-    // Inline function 'kotlin.contracts.contract' call
-    var rc = block(_this__u8e3s4.memory_1, _this__u8e3s4.writePosition_1, _this__u8e3s4.limit_1);
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc);
-    return rc;
-  }
-  function read(_this__u8e3s4, block) {
-    // Inline function 'kotlin.contracts.contract' call
-    var rc = block(_this__u8e3s4.memory_1, _this__u8e3s4.readPosition_1, _this__u8e3s4.writePosition_1);
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-    return rc;
+    _this__u8e3s4.x7k(_this__u8e3s4.m7f_1 - size | 0);
   }
   function writeBufferAppend(_this__u8e3s4, other, maxSize) {
     // Inline function 'kotlin.comparisons.minOf' call
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var a = other.get_writePosition_jdt81t_k$() - other.get_readPosition_70qxnc_k$() | 0;
+    var a = other.n7f_1 - other.m7f_1 | 0;
     var size = Math.min(a, maxSize);
     // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-    if ((_this__u8e3s4.get_limit_iuokuq_k$() - _this__u8e3s4.get_writePosition_jdt81t_k$() | 0) <= size) {
+    if ((_this__u8e3s4.p7f_1 - _this__u8e3s4.n7f_1 | 0) <= size) {
       writeBufferAppendUnreserve(_this__u8e3s4, size);
     }
     // Inline function 'io.ktor.utils.io.core.write' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.writeBufferAppend.<anonymous>' call
-    var dst = _this__u8e3s4.get_memory_gl4362_k$();
-    var dstOffset = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    _this__u8e3s4.get_limit_iuokuq_k$();
+    var dst = _this__u8e3s4.l7f_1;
+    var dstOffset = _this__u8e3s4.n7f_1;
+    _this__u8e3s4.p7f_1;
     // Inline function 'io.ktor.utils.io.core.read' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.writeBufferAppend.<anonymous>.<anonymous>' call
-    var src = other.get_memory_gl4362_k$();
-    var srcOffset = other.get_readPosition_70qxnc_k$();
-    other.get_writePosition_jdt81t_k$();
-    src.copyTo_fgxuoj_k$(dst, srcOffset, size, dstOffset);
+    var src = other.l7f_1;
+    var srcOffset = other.m7f_1;
+    other.n7f_1;
+    src.c7l(dst, srcOffset, size, dstOffset);
     var rc = size;
-    other.discardExact_11sae1_k$(rc);
+    other.m7k(rc);
     var rc_0 = rc;
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc_0);
+    _this__u8e3s4.n7k(rc_0);
     return rc_0;
   }
   function writeBufferAppendUnreserve(_this__u8e3s4, writeSize) {
     // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-    var tmp = _this__u8e3s4.get_limit_iuokuq_k$() - _this__u8e3s4.get_writePosition_jdt81t_k$() | 0;
+    var tmp = _this__u8e3s4.p7f_1 - _this__u8e3s4.n7f_1 | 0;
     // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
-    if ((tmp + (_this__u8e3s4.get_capacity_wxbgcd_k$() - _this__u8e3s4.get_limit_iuokuq_k$() | 0) | 0) < writeSize) {
+    if ((tmp + (_this__u8e3s4.q7f_1 - _this__u8e3s4.p7f_1 | 0) | 0) < writeSize) {
       throw IllegalArgumentException_init_$Create$("Can't append buffer: not enough free space at the end");
     }
-    var newWritePosition = _this__u8e3s4.get_writePosition_jdt81t_k$() + writeSize | 0;
-    var overrunSize = newWritePosition - _this__u8e3s4.get_limit_iuokuq_k$() | 0;
+    var newWritePosition = _this__u8e3s4.n7f_1 + writeSize | 0;
+    var overrunSize = newWritePosition - _this__u8e3s4.p7f_1 | 0;
     if (overrunSize > 0) {
-      _this__u8e3s4.releaseEndGap_v6rgnm_k$();
+      _this__u8e3s4.y7k();
     }
   }
   function writeBufferPrepend(_this__u8e3s4, other) {
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var size = other.get_writePosition_jdt81t_k$() - other.get_readPosition_70qxnc_k$() | 0;
-    var readPosition = _this__u8e3s4.get_readPosition_70qxnc_k$();
+    var size = other.n7f_1 - other.m7f_1 | 0;
+    var readPosition = _this__u8e3s4.m7f_1;
     if (readPosition < size) {
       throw IllegalArgumentException_init_$Create$('Not enough space in the beginning to prepend bytes');
     }
     var newReadPosition = readPosition - size | 0;
-    other.get_memory_gl4362_k$().copyTo_fgxuoj_k$(_this__u8e3s4.get_memory_gl4362_k$(), other.get_readPosition_70qxnc_k$(), size, newReadPosition);
-    other.discardExact_11sae1_k$(size);
-    _this__u8e3s4.releaseStartGap_da07al_k$(newReadPosition);
+    other.l7f_1.c7l(_this__u8e3s4.l7f_1, other.m7f_1, size, newReadPosition);
+    other.m7k(size);
+    _this__u8e3s4.x7k(newReadPosition);
     return size;
   }
   function get_DefaultChunkedBufferPool() {
@@ -4584,95 +1647,89 @@
     return DefaultChunkedBufferPool;
   }
   var DefaultChunkedBufferPool;
-  function _get_bufferSize__mp12kq($this) {
-    return $this.bufferSize_1;
-  }
-  function _get_allocator__hrvkpy($this) {
-    return $this.allocator_1;
-  }
   function DefaultBufferPool(bufferSize, capacity, allocator) {
     bufferSize = bufferSize === VOID ? 4096 : bufferSize;
     capacity = capacity === VOID ? 1000 : capacity;
-    allocator = allocator === VOID ? DefaultAllocator_getInstance() : allocator;
+    allocator = allocator === VOID ? DefaultAllocator_instance : allocator;
     DefaultPool.call(this, capacity);
-    this.bufferSize_1 = bufferSize;
-    this.allocator_1 = allocator;
+    this.g7l_1 = bufferSize;
+    this.h7l_1 = allocator;
   }
-  protoOf(DefaultBufferPool).produceInstance_xswihh_k$ = function () {
-    return new ChunkBuffer(this.allocator_1.alloc_l8bx4z_k$(this.bufferSize_1), null, this);
+  protoOf(DefaultBufferPool).i7l = function () {
+    return new ChunkBuffer(this.h7l_1.j7l(this.g7l_1), null, this);
   };
-  protoOf(DefaultBufferPool).disposeInstance_w21bki_k$ = function (instance) {
-    this.allocator_1.free_r48ke1_k$(instance.get_memory_gl4362_k$());
-    protoOf(DefaultPool).disposeInstance_6ek0a2_k$.call(this, instance);
-    instance.unlink_ie9ubh_k$();
+  protoOf(DefaultBufferPool).k7l = function (instance) {
+    this.h7l_1.l7l(instance.l7f_1);
+    protoOf(DefaultPool).p7l.call(this, instance);
+    instance.a7m();
   };
-  protoOf(DefaultBufferPool).disposeInstance_6ek0a2_k$ = function (instance) {
-    return this.disposeInstance_w21bki_k$(instance instanceof ChunkBuffer ? instance : THROW_CCE());
+  protoOf(DefaultBufferPool).p7l = function (instance) {
+    return this.k7l(instance instanceof ChunkBuffer ? instance : THROW_CCE());
   };
-  protoOf(DefaultBufferPool).validateInstance_bdsdgl_k$ = function (instance) {
-    protoOf(DefaultPool).validateInstance_6mwbhp_k$.call(this, instance);
+  protoOf(DefaultBufferPool).b7m = function (instance) {
+    protoOf(DefaultPool).c7m.call(this, instance);
     // Inline function 'kotlin.check' call
     // Inline function 'io.ktor.utils.io.bits.Memory.size' call
-    var this_0 = instance.get_memory_gl4362_k$();
+    var this_0 = instance.l7f_1;
     // Inline function 'kotlin.contracts.contract' call
-    if (!toLong(this_0.get_view_wow8a6_k$().byteLength).equals(toLong(this.bufferSize_1))) {
+    if (!toLong(this_0.l7k_1.byteLength).equals(toLong(this.g7l_1))) {
       // Inline function 'io.ktor.utils.io.core.DefaultBufferPool.validateInstance.<anonymous>' call
       // Inline function 'io.ktor.utils.io.bits.Memory.size' call
-      var this_1 = instance.get_memory_gl4362_k$();
-      var tmp$ret$1 = toLong(this_1.get_view_wow8a6_k$().byteLength);
-      var message = 'Buffer size mismatch. Expected: ' + this.bufferSize_1 + ', actual: ' + tmp$ret$1.toString();
+      var this_1 = instance.l7f_1;
+      var tmp$ret$1 = toLong(this_1.l7k_1.byteLength);
+      var message = 'Buffer size mismatch. Expected: ' + this.g7l_1 + ', actual: ' + tmp$ret$1.toString();
       throw IllegalStateException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!(instance === Companion_getInstance_4().get_Empty_i9b85g_k$())) {
+    if (!!(instance === Companion_getInstance_4().a7j_1)) {
       // Inline function 'io.ktor.utils.io.core.DefaultBufferPool.validateInstance.<anonymous>' call
       var message_0 = "ChunkBuffer.Empty couldn't be recycled";
       throw IllegalStateException_init_$Create$(toString(message_0));
     }
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!(instance === Companion_getInstance_1().get_Empty_i9b85g_k$())) {
+    if (!!(instance === Companion_instance.k7k())) {
       // Inline function 'io.ktor.utils.io.core.DefaultBufferPool.validateInstance.<anonymous>' call
       var message_1 = "Empty instance couldn't be recycled";
       throw IllegalStateException_init_$Create$(toString(message_1));
     }
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(instance.get_referenceCount_1ialcd_k$() === 0)) {
+    if (!(instance.d7m() === 0)) {
       // Inline function 'io.ktor.utils.io.core.DefaultBufferPool.validateInstance.<anonymous>' call
       var message_2 = 'Unable to clear buffer: it is still in use.';
       throw IllegalStateException_init_$Create$(toString(message_2));
     }
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(instance.get_next_wor1vg_k$() == null)) {
+    if (!(instance.f13() == null)) {
       // Inline function 'io.ktor.utils.io.core.DefaultBufferPool.validateInstance.<anonymous>' call
       var message_3 = "Recycled instance shouldn't be a part of a chain.";
       throw IllegalStateException_init_$Create$(toString(message_3));
     }
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(instance.get_origin_hq9xkf_k$() == null)) {
+    if (!(instance.z7l_1 == null)) {
       // Inline function 'io.ktor.utils.io.core.DefaultBufferPool.validateInstance.<anonymous>' call
       var message_4 = "Recycled instance shouldn't be a view or another buffer.";
       throw IllegalStateException_init_$Create$(toString(message_4));
     }
   };
-  protoOf(DefaultBufferPool).validateInstance_6mwbhp_k$ = function (instance) {
-    return this.validateInstance_bdsdgl_k$(instance instanceof ChunkBuffer ? instance : THROW_CCE());
+  protoOf(DefaultBufferPool).c7m = function (instance) {
+    return this.b7m(instance instanceof ChunkBuffer ? instance : THROW_CCE());
   };
-  protoOf(DefaultBufferPool).clearInstance_c8rk5w_k$ = function (instance) {
+  protoOf(DefaultBufferPool).e7m = function (instance) {
     // Inline function 'kotlin.apply' call
-    var this_0 = protoOf(DefaultPool).clearInstance_nfz4jw_k$.call(this, instance);
+    var this_0 = protoOf(DefaultPool).f7m.call(this, instance);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.DefaultBufferPool.clearInstance.<anonymous>' call
-    this_0.unpark_bsw1f_k$();
-    this_0.reset_5u6xz3_k$();
+    this_0.g7m();
+    this_0.a26();
     return this_0;
   };
-  protoOf(DefaultBufferPool).clearInstance_nfz4jw_k$ = function (instance) {
-    return this.clearInstance_c8rk5w_k$(instance instanceof ChunkBuffer ? instance : THROW_CCE());
+  protoOf(DefaultBufferPool).f7m = function (instance) {
+    return this.e7m(instance instanceof ChunkBuffer ? instance : THROW_CCE());
   };
   function get_DEFAULT_BUFFER_SIZE() {
     return DEFAULT_BUFFER_SIZE;
@@ -4694,11 +1751,11 @@
     // Inline function 'io.ktor.utils.io.core.write' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.writeExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var writeRemaining = _this__u8e3s4.get_limit_iuokuq_k$() - start | 0;
+    var memory = _this__u8e3s4.l7f_1;
+    var start = _this__u8e3s4.n7f_1;
+    var writeRemaining = _this__u8e3s4.p7f_1 - start | 0;
     if (writeRemaining < length) {
-      throw InsufficientSpaceException_init_$Create$_0(name, length, writeRemaining);
+      throw InsufficientSpaceException_init_$Create$(name, length, writeRemaining);
     }
     // Inline function 'io.ktor.utils.io.core.writeFully.<anonymous>' call
     // Inline function 'io.ktor.utils.io.bits.storeByteArray' call
@@ -4706,9 +1763,9 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
-    of(Companion_getInstance_6(), source, offset, length).copyTo_fgxuoj_k$(memory, 0, length, start);
+    of(Companion_getInstance_6(), source, offset, length).c7l(memory, 0, length, start);
     var rc = length;
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc);
+    _this__u8e3s4.n7k(rc);
   }
   function writeFully_1(_this__u8e3s4, src, length) {
     // Inline function 'kotlin.require' call
@@ -4721,19 +1778,19 @@
     // Inline function 'kotlin.require' call
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(length <= (src.get_writePosition_jdt81t_k$() - src.get_readPosition_70qxnc_k$() | 0))) {
+    if (!(length <= (src.n7f_1 - src.m7f_1 | 0))) {
       // Inline function 'io.ktor.utils.io.core.writeFully.<anonymous>' call
       // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      var message_0 = "length shouldn't be greater than the source read remaining: " + length + ' > ' + (src.get_writePosition_jdt81t_k$() - src.get_readPosition_70qxnc_k$() | 0);
+      var message_0 = "length shouldn't be greater than the source read remaining: " + length + ' > ' + (src.n7f_1 - src.m7f_1 | 0);
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
     // Inline function 'kotlin.require' call
     // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(length <= (_this__u8e3s4.get_limit_iuokuq_k$() - _this__u8e3s4.get_writePosition_jdt81t_k$() | 0))) {
+    if (!(length <= (_this__u8e3s4.p7f_1 - _this__u8e3s4.n7f_1 | 0))) {
       // Inline function 'io.ktor.utils.io.core.writeFully.<anonymous>' call
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      var message_1 = "length shouldn't be greater than the destination write remaining space: " + length + ' > ' + (_this__u8e3s4.get_limit_iuokuq_k$() - _this__u8e3s4.get_writePosition_jdt81t_k$() | 0);
+      var message_1 = "length shouldn't be greater than the destination write remaining space: " + length + ' > ' + (_this__u8e3s4.p7f_1 - _this__u8e3s4.n7f_1 | 0);
       throw IllegalArgumentException_init_$Create$(toString(message_1));
     }
     // Inline function 'io.ktor.utils.io.core.writeExact' call
@@ -4742,39 +1799,19 @@
     // Inline function 'io.ktor.utils.io.core.write' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.writeExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var writeRemaining = _this__u8e3s4.get_limit_iuokuq_k$() - start | 0;
+    var memory = _this__u8e3s4.l7f_1;
+    var start = _this__u8e3s4.n7f_1;
+    var writeRemaining = _this__u8e3s4.p7f_1 - start | 0;
     if (writeRemaining < length) {
-      throw InsufficientSpaceException_init_$Create$_0(name, length, writeRemaining);
+      throw InsufficientSpaceException_init_$Create$(name, length, writeRemaining);
     }
     // Inline function 'io.ktor.utils.io.core.writeFully.<anonymous>' call
-    src.get_memory_gl4362_k$().copyTo_fgxuoj_k$(memory, src.get_readPosition_70qxnc_k$(), length, start);
-    src.discardExact_11sae1_k$(length);
+    src.l7f_1.c7l(memory, src.m7f_1, length, start);
+    src.m7k(length);
     var rc = length;
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc);
+    _this__u8e3s4.n7k(rc);
   }
-  function readFully_0(_this__u8e3s4, destination, offset, length) {
-    offset = offset === VOID ? 0 : offset;
-    length = length === VOID ? destination.length - offset | 0 : length;
-    readFully_1(_this__u8e3s4 instanceof Buffer ? _this__u8e3s4 : THROW_CCE(), destination, offset, length);
-  }
-  function writeExact(_this__u8e3s4, size, name, block) {
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.write' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.writeExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var writeRemaining = _this__u8e3s4.get_limit_iuokuq_k$() - start | 0;
-    if (writeRemaining < size) {
-      throw InsufficientSpaceException_init_$Create$_0(name, size, writeRemaining);
-    }
-    block(memory, start);
-    var rc = size;
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc);
-  }
-  function readFully_1(_this__u8e3s4, destination, offset, length) {
+  function readFully(_this__u8e3s4, destination, offset, length) {
     offset = offset === VOID ? 0 : offset;
     length = length === VOID ? destination.length - offset | 0 : length;
     // Inline function 'io.ktor.utils.io.core.readExact' call
@@ -4784,37 +1821,21 @@
     // Inline function 'io.ktor.utils.io.core.read' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.readExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    if ((_this__u8e3s4.get_writePosition_jdt81t_k$() - start | 0) < length) {
+    var memory = _this__u8e3s4.l7f_1;
+    var start = _this__u8e3s4.m7f_1;
+    if ((_this__u8e3s4.n7f_1 - start | 0) < length) {
       throw new EOFException('Not enough bytes to read a ' + name + ' of size ' + length + '.');
     }
-    copyTo_2(memory, destination, start, length, offset);
-    value = Unit_getInstance();
+    copyTo_1(memory, destination, start, length, offset);
+    value = Unit_instance;
     var rc = length;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
+    _this__u8e3s4.m7k(rc);
   }
-  function readExact(_this__u8e3s4, size, name, block) {
-    // Inline function 'kotlin.contracts.contract' call
-    var value;
-    // Inline function 'io.ktor.utils.io.core.read' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.readExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    if ((_this__u8e3s4.get_writePosition_jdt81t_k$() - start | 0) < size) {
-      throw new EOFException('Not enough bytes to read a ' + name + ' of size ' + size + '.');
-    }
-    value = block(memory, start);
-    var rc = size;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-    return value;
-  }
-  function readFully_2(_this__u8e3s4, dst, length) {
+  function readFully_0(_this__u8e3s4, dst, length) {
     var tmp;
     if (length === VOID) {
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      tmp = dst.get_limit_iuokuq_k$() - dst.get_writePosition_jdt81t_k$() | 0;
+      tmp = dst.p7f_1 - dst.n7f_1 | 0;
     } else {
       tmp = length;
     }
@@ -4833,7 +1854,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(length <= (dst.get_limit_iuokuq_k$() - dst.get_writePosition_jdt81t_k$() | 0))) {
+    if (!(length <= (dst.p7f_1 - dst.n7f_1 | 0))) {
       // Inline function 'kotlin.require.<anonymous>' call
       var message_0 = 'Failed requirement.';
       throw IllegalArgumentException_init_$Create$(toString(message_0));
@@ -4845,16 +1866,16 @@
     // Inline function 'io.ktor.utils.io.core.read' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.readExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    if ((_this__u8e3s4.get_writePosition_jdt81t_k$() - start | 0) < length) {
+    var memory = _this__u8e3s4.l7f_1;
+    var start = _this__u8e3s4.m7f_1;
+    if ((_this__u8e3s4.n7f_1 - start | 0) < length) {
       throw new EOFException('Not enough bytes to read a ' + name + ' of size ' + length + '.');
     }
-    memory.copyTo_fgxuoj_k$(dst.get_memory_gl4362_k$(), start, length, dst.get_writePosition_jdt81t_k$());
-    dst.commitWritten_tkztjs_k$(length);
-    value = Unit_getInstance();
+    memory.c7l(dst.l7f_1, start, length, dst.n7f_1);
+    dst.n7k(length);
+    value = Unit_instance;
     var rc = length;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
+    _this__u8e3s4.m7k(rc);
     return length;
   }
   function writeShort(_this__u8e3s4, value) {
@@ -4863,57 +1884,18 @@
     // Inline function 'io.ktor.utils.io.core.write' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.writeExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var writeRemaining = _this__u8e3s4.get_limit_iuokuq_k$() - start | 0;
+    var memory = _this__u8e3s4.l7f_1;
+    var start = _this__u8e3s4.n7f_1;
+    var writeRemaining = _this__u8e3s4.p7f_1 - start | 0;
     if (writeRemaining < 2) {
-      throw InsufficientSpaceException_init_$Create$_0(name, 2, writeRemaining);
+      throw InsufficientSpaceException_init_$Create$(name, 2, writeRemaining);
     }
     // Inline function 'io.ktor.utils.io.core.writeShort.<anonymous>' call
     // Inline function 'io.ktor.utils.io.bits.storeShortAt' call
-    memory.get_view_wow8a6_k$().setInt16(start, value, false);
+    memory.l7k_1.setInt16(start, value, false);
     var rc = 2;
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc);
-    return Unit_getInstance();
-  }
-  function writeInt(_this__u8e3s4, value) {
-    var name = 'regular integer';
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.write' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.writeExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var writeRemaining = _this__u8e3s4.get_limit_iuokuq_k$() - start | 0;
-    if (writeRemaining < 4) {
-      throw InsufficientSpaceException_init_$Create$_0(name, 4, writeRemaining);
-    }
-    // Inline function 'io.ktor.utils.io.core.writeInt.<anonymous>' call
-    // Inline function 'io.ktor.utils.io.bits.storeIntAt' call
-    memory.get_view_wow8a6_k$().setInt32(start, value, false);
-    var rc = 4;
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc);
-    return Unit_getInstance();
-  }
-  function writeLong(_this__u8e3s4, value) {
-    var name = 'long integer';
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.write' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.writeExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var writeRemaining = _this__u8e3s4.get_limit_iuokuq_k$() - start | 0;
-    if (writeRemaining < 8) {
-      throw InsufficientSpaceException_init_$Create$_0(name, 8, writeRemaining);
-    }
-    // Inline function 'io.ktor.utils.io.core.writeLong.<anonymous>' call
-    // Inline function 'io.ktor.utils.io.bits.storeLongAt' call
-    memory.get_view_wow8a6_k$().setInt32(start, value.shr_9fl3wl_k$(32).toInt_1tsl84_k$(), false);
-    memory.get_view_wow8a6_k$().setInt32(start + 4 | 0, value.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$(), false);
-    var rc = 8;
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc);
-    return Unit_getInstance();
+    _this__u8e3s4.n7k(rc);
+    return Unit_instance;
   }
   function readShort(_this__u8e3s4) {
     // Inline function 'io.ktor.utils.io.core.readExact' call
@@ -4923,123 +1905,26 @@
     // Inline function 'io.ktor.utils.io.core.read' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.readExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    if ((_this__u8e3s4.get_writePosition_jdt81t_k$() - start | 0) < 2) {
+    var memory = _this__u8e3s4.l7f_1;
+    var start = _this__u8e3s4.m7f_1;
+    if ((_this__u8e3s4.n7f_1 - start | 0) < 2) {
       throw new EOFException('Not enough bytes to read a ' + name + ' of size ' + 2 + '.');
     }
     // Inline function 'io.ktor.utils.io.core.readShort.<anonymous>' call
     // Inline function 'io.ktor.utils.io.bits.loadShortAt' call
-    value = memory.get_view_wow8a6_k$().getInt16(start, false);
+    value = memory.l7k_1.getInt16(start, false);
     var rc = 2;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
+    _this__u8e3s4.m7k(rc);
     return value;
-  }
-  function readInt(_this__u8e3s4) {
-    // Inline function 'io.ktor.utils.io.core.readExact' call
-    var name = 'regular integer';
-    // Inline function 'kotlin.contracts.contract' call
-    var value;
-    // Inline function 'io.ktor.utils.io.core.read' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.readExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    if ((_this__u8e3s4.get_writePosition_jdt81t_k$() - start | 0) < 4) {
-      throw new EOFException('Not enough bytes to read a ' + name + ' of size ' + 4 + '.');
-    }
-    // Inline function 'io.ktor.utils.io.core.readInt.<anonymous>' call
-    // Inline function 'io.ktor.utils.io.bits.loadIntAt' call
-    value = memory.get_view_wow8a6_k$().getInt32(start, false);
-    var rc = 4;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-    return value;
-  }
-  function readLong(_this__u8e3s4) {
-    // Inline function 'io.ktor.utils.io.core.readExact' call
-    var name = 'long integer';
-    // Inline function 'kotlin.contracts.contract' call
-    var value;
-    // Inline function 'io.ktor.utils.io.core.read' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.readExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    if ((_this__u8e3s4.get_writePosition_jdt81t_k$() - start | 0) < 8) {
-      throw new EOFException('Not enough bytes to read a ' + name + ' of size ' + 8 + '.');
-    }
-    // Inline function 'io.ktor.utils.io.core.readLong.<anonymous>' call
-    // Inline function 'io.ktor.utils.io.bits.loadLongAt' call
-    value = toLong(memory.get_view_wow8a6_k$().getUint32(start, false)).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(memory.get_view_wow8a6_k$().getUint32(start + 4 | 0, false)));
-    var rc = 8;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-    return value;
-  }
-  function readFloat(_this__u8e3s4) {
-    // Inline function 'io.ktor.utils.io.core.readExact' call
-    var name = 'floating point number';
-    // Inline function 'kotlin.contracts.contract' call
-    var value;
-    // Inline function 'io.ktor.utils.io.core.read' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.readExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    if ((_this__u8e3s4.get_writePosition_jdt81t_k$() - start | 0) < 4) {
-      throw new EOFException('Not enough bytes to read a ' + name + ' of size ' + 4 + '.');
-    }
-    // Inline function 'io.ktor.utils.io.core.readFloat.<anonymous>' call
-    // Inline function 'io.ktor.utils.io.bits.loadFloatAt' call
-    value = memory.get_view_wow8a6_k$().getFloat32(start, false);
-    var rc = 4;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-    return value;
-  }
-  function readDouble(_this__u8e3s4) {
-    // Inline function 'io.ktor.utils.io.core.readExact' call
-    var name = 'long floating point number';
-    // Inline function 'kotlin.contracts.contract' call
-    var value;
-    // Inline function 'io.ktor.utils.io.core.read' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.readExact.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    if ((_this__u8e3s4.get_writePosition_jdt81t_k$() - start | 0) < 8) {
-      throw new EOFException('Not enough bytes to read a ' + name + ' of size ' + 8 + '.');
-    }
-    // Inline function 'io.ktor.utils.io.core.readDouble.<anonymous>' call
-    // Inline function 'io.ktor.utils.io.bits.loadDoubleAt' call
-    value = memory.get_view_wow8a6_k$().getFloat64(start, false);
-    var rc = 8;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-    return value;
-  }
-  function coerceAtMostMaxIntOrFail(_this__u8e3s4, message) {
-    if (_this__u8e3s4.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) > 0)
-      throw IllegalArgumentException_init_$Create$(message);
-    return _this__u8e3s4.toInt_1tsl84_k$();
   }
   function remainingAll(_this__u8e3s4) {
     return remainingAll_0(_this__u8e3s4, new Long(0, 0));
-  }
-  function copyAll(_this__u8e3s4) {
-    var copied = _this__u8e3s4.duplicate_jvgc97_k$();
-    var tmp0_elvis_lhs = _this__u8e3s4.get_next_wor1vg_k$();
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      return copied;
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var next = tmp;
-    return copyAll_0(next, copied, copied);
   }
   function findTail(_this__u8e3s4) {
     var $this = _this__u8e3s4;
     $l$1: do {
       $l$0: do {
-        var tmp0_elvis_lhs = $this.get_next_wor1vg_k$();
+        var tmp0_elvis_lhs = $this.f13();
         var tmp;
         if (tmp0_elvis_lhs == null) {
           return $this;
@@ -5057,8 +1942,8 @@
   function releaseAll(_this__u8e3s4, pool) {
     var current = _this__u8e3s4;
     while (!(current == null)) {
-      var next = current.cleanNext_l2yy3o_k$();
-      current.release_vbevvg_k$(pool);
+      var next = current.j7m();
+      current.k7m(pool);
       current = next;
     }
   }
@@ -5069,9 +1954,9 @@
       $l$0: do {
         // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
         var this_0 = $this;
-        var tmp$ret$0 = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
-        var rem = toLong(tmp$ret$0).plus_r93sks_k$(n_0);
-        var tmp0_elvis_lhs = $this.get_next_wor1vg_k$();
+        var tmp$ret$0 = this_0.n7f_1 - this_0.m7f_1 | 0;
+        var rem = toLong(tmp$ret$0).eb(n_0);
+        var tmp0_elvis_lhs = $this.f13();
         var tmp;
         if (tmp0_elvis_lhs == null) {
           return rem;
@@ -5087,99 +1972,36 @@
     }
      while (true);
   }
-  function copyAll_0(_this__u8e3s4, head, prev) {
-    var $this = _this__u8e3s4;
-    var head_0 = head;
-    var prev_0 = prev;
-    $l$1: do {
-      $l$0: do {
-        var copied = $this.duplicate_jvgc97_k$();
-        prev_0.set_next_v483mr_k$(copied);
-        var tmp0_elvis_lhs = $this.get_next_wor1vg_k$();
-        var tmp;
-        if (tmp0_elvis_lhs == null) {
-          return head_0;
-        } else {
-          tmp = tmp0_elvis_lhs;
-        }
-        var next = tmp;
-        $this = next;
-        head_0 = head_0;
-        prev_0 = copied;
-        continue $l$0;
-      }
-       while (false);
-    }
-     while (true);
-  }
-  function forEachChunk(_this__u8e3s4, block) {
-    // Inline function 'kotlin.contracts.contract' call
-    var current = _this__u8e3s4;
-    $l$loop: do {
-      block(current);
-      var tmp0_elvis_lhs = current.get_next_wor1vg_k$();
-      var tmp;
-      if (tmp0_elvis_lhs == null) {
-        break $l$loop;
-      } else {
-        tmp = tmp0_elvis_lhs;
-      }
-      current = tmp;
-    }
-     while (true);
-  }
-  function buildPacket(block) {
-    // Inline function 'kotlin.contracts.contract' call
-    var builder = new BytePacketBuilder();
-    try {
-      block(builder);
-      return builder.build_1k0s4u_k$();
-    } catch ($p) {
-      if ($p instanceof Error) {
-        var t = $p;
-        builder.release_wu5yyf_k$();
-        throw t;
-      } else {
-        throw $p;
-      }
-    }
-  }
   function BytePacketBuilder(pool) {
-    pool = pool === VOID ? Companion_getInstance_4().get_Pool_wo83gl_k$() : pool;
+    pool = pool === VOID ? Companion_getInstance_4().d7j() : pool;
     Output.call(this, pool);
   }
-  protoOf(BytePacketBuilder).get_size_woubt6_k$ = function () {
-    return this.get__size_inpkfr_k$();
+  protoOf(BytePacketBuilder).m = function () {
+    return this.l7m();
   };
-  protoOf(BytePacketBuilder).get_isEmpty_zauvru_k$ = function () {
-    return this.get__size_inpkfr_k$() === 0;
+  protoOf(BytePacketBuilder).o1o = function () {
+    return this.l7m() === 0;
   };
-  protoOf(BytePacketBuilder).get_isNotEmpty_7mbqpf_k$ = function () {
-    return this.get__size_inpkfr_k$() > 0;
+  protoOf(BytePacketBuilder).m7m = function () {
   };
-  protoOf(BytePacketBuilder).get__pool_innro2_k$ = function () {
-    return this.get_pool_wosj1h_k$();
+  protoOf(BytePacketBuilder).n7m = function (source, offset, length) {
   };
-  protoOf(BytePacketBuilder).closeDestination_mr1i3e_k$ = function () {
-  };
-  protoOf(BytePacketBuilder).flush_sux9un_k$ = function (source, offset, length) {
-  };
-  protoOf(BytePacketBuilder).append_am5a4z_k$ = function (value) {
-    var tmp = protoOf(Output).append_am5a4z_k$.call(this, value);
+  protoOf(BytePacketBuilder).y5 = function (value) {
+    var tmp = protoOf(Output).y5.call(this, value);
     return tmp instanceof BytePacketBuilder ? tmp : THROW_CCE();
   };
-  protoOf(BytePacketBuilder).append_jgojdo_k$ = function (value) {
-    var tmp = protoOf(Output).append_jgojdo_k$.call(this, value);
+  protoOf(BytePacketBuilder).m8 = function (value) {
+    var tmp = protoOf(Output).m8.call(this, value);
     return tmp instanceof BytePacketBuilder ? tmp : THROW_CCE();
   };
-  protoOf(BytePacketBuilder).append_xdc1zw_k$ = function (value, startIndex, endIndex) {
-    var tmp = protoOf(Output).append_xdc1zw_k$.call(this, value, startIndex, endIndex);
+  protoOf(BytePacketBuilder).n8 = function (value, startIndex, endIndex) {
+    var tmp = protoOf(Output).n8.call(this, value, startIndex, endIndex);
     return tmp instanceof BytePacketBuilder ? tmp : THROW_CCE();
   };
-  protoOf(BytePacketBuilder).build_1k0s4u_k$ = function () {
-    var size = this.get_size_woubt6_k$();
-    var head = this.stealAll_nensgi_k$();
-    return head == null ? Companion_getInstance_2().get_Empty_i9b85g_k$() : new ByteReadPacket(head, toLong(size), this.get_pool_wosj1h_k$());
+  protoOf(BytePacketBuilder).e3 = function () {
+    var size = this.m();
+    var head = this.m7d();
+    return head == null ? Companion_getInstance_2().o7m_1 : new ByteReadPacket(head, toLong(size), this.e7d_1);
   };
   protoOf(BytePacketBuilder).toString = function () {
     return 'BytePacketBuilder[0x' + hashCode(this) + ']';
@@ -5193,11 +2015,8 @@
   }
   function Companion_0() {
     Companion_instance_0 = this;
-    this.Empty_1 = new ByteReadPacket(Companion_getInstance_4().get_Empty_i9b85g_k$(), new Long(0, 0), Companion_getInstance_4().get_EmptyPool_i65buo_k$());
+    this.o7m_1 = new ByteReadPacket(Companion_getInstance_4().a7j_1, new Long(0, 0), Companion_getInstance_4().z7i_1);
   }
-  protoOf(Companion_0).get_Empty_i9b85g_k$ = function () {
-    return this.Empty_1;
-  };
   var Companion_instance_0;
   function Companion_getInstance_2() {
     if (Companion_instance_0 == null)
@@ -5207,99 +2026,27 @@
   function ByteReadPacket(head, remaining, pool) {
     Companion_getInstance_2();
     Input.call(this, head, remaining, pool);
-    this.markNoMoreChunksAvailable_j25xf4_k$();
+    this.u7m();
   }
-  protoOf(ByteReadPacket).copy_1tks5_k$ = function () {
-    return new ByteReadPacket(copyAll(this.get_head_won7e1_k$()), this.get_remaining_mwegr1_k$(), this.get_pool_wosj1h_k$());
-  };
-  protoOf(ByteReadPacket).fill_1vd6r_k$ = function () {
+  protoOf(ByteReadPacket).c7n = function () {
     return null;
   };
-  protoOf(ByteReadPacket).fill_3bipm6_k$ = function (destination, offset, length) {
+  protoOf(ByteReadPacket).d7n = function (destination, offset, length) {
     return 0;
-  };
-  protoOf(ByteReadPacket).closeSource_lb1mzh_k$ = function () {
   };
   protoOf(ByteReadPacket).toString = function () {
     return 'ByteReadPacket[' + hashCode(this) + ']';
   };
-  function _set_idx__4w7ld4($this, _set____db54di) {
-    $this.idx_1 = _set____db54di;
-  }
-  function _get_idx__e6a6ic($this) {
-    return $this.idx_1;
-  }
   function _set__head__b4pap2($this, newHead) {
-    $this._head_1 = newHead;
-    $this.headMemory_1 = newHead.get_memory_gl4362_k$();
-    $this.headPosition_1 = newHead.get_readPosition_70qxnc_k$();
-    $this.headEndExclusive_1 = newHead.get_writePosition_jdt81t_k$();
-  }
-  function _get__head__kwf5se($this) {
-    return $this._head_1;
-  }
-  function doPrefetch($this, min) {
-    var tail = findTail($this._head_1);
-    // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-    var tmp$ret$0 = $this.headEndExclusive_1 - $this.headPosition_1 | 0;
-    var available = numberToLong(tmp$ret$0).plus_r93sks_k$($this.tailRemaining_1);
-    do {
-      var next = $this.fill_1vd6r_k$();
-      if (next == null) {
-        $this.noMoreChunksAvailable_1 = true;
-        return false;
-      }
-      // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      var chunkSize = next.get_writePosition_jdt81t_k$() - next.get_readPosition_70qxnc_k$() | 0;
-      if (tail === Companion_getInstance_4().get_Empty_i9b85g_k$()) {
-        _set__head__b4pap2($this, next);
-        tail = next;
-      } else {
-        tail.set_next_v483mr_k$(next);
-        // Inline function 'kotlin.Long.plus' call
-        var tmp$ret$2 = $this.tailRemaining_1.plus_r93sks_k$(toLong(chunkSize));
-        $this.set_tailRemaining_frnwob_k$(tmp$ret$2);
-      }
-      // Inline function 'kotlin.Long.plus' call
-      available = available.plus_r93sks_k$(toLong(chunkSize));
-    }
-     while (available.compareTo_9jj042_k$(min) < 0);
-    return true;
-  }
-  function _set_noMoreChunksAvailable__phi5hk($this, _set____db54di) {
-    $this.noMoreChunksAvailable_1 = _set____db54di;
-  }
-  function _get_noMoreChunksAvailable__vn4hx8($this) {
-    return $this.noMoreChunksAvailable_1;
-  }
-  function readByteSlow_0($this) {
-    var index = $this.headPosition_1;
-    if (index < $this.headEndExclusive_1) {
-      // Inline function 'io.ktor.utils.io.bits.get' call
-      // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-      var value = $this.headMemory_1.get_view_wow8a6_k$().getInt8(index);
-      $this.headPosition_1 = index;
-      var head = $this._head_1;
-      head.discardUntilIndex_z86prq_k$(index);
-      $this.ensureNext_39ripn_k$(head);
-      return value;
-    }
-    var tmp0_elvis_lhs = $this.prepareRead_yxo41n_k$(1);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      prematureEndOfStream(1);
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var head_0 = tmp;
-    var byte = head_0.readByte_ectjk2_k$();
-    completeReadHead($this, head_0);
-    return byte;
+    $this.v7g_1 = newHead;
+    $this.w7g_1 = newHead.l7f_1;
+    $this.x7g_1 = newHead.m7f_1;
+    $this.y7g_1 = newHead.n7f_1;
   }
   function readASCII($this, out, min, max) {
     if (max === 0 ? min === 0 : false)
       return 0;
-    else if ($this.get_endOfInput_skegkh_k$())
+    else if ($this.n7i())
       if (min === 0)
         return 0;
       else {
@@ -5331,9 +2078,9 @@
             // Inline function 'io.ktor.utils.io.core.read' call
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'io.ktor.utils.io.core.internal.decodeASCII.<anonymous>' call
-            var memory = buffer.get_memory_gl4362_k$();
-            var start = buffer.get_readPosition_70qxnc_k$();
-            var endExclusive = buffer.get_writePosition_jdt81t_k$();
+            var memory = buffer.l7f_1;
+            var start = buffer.m7f_1;
+            var endExclusive = buffer.n7f_1;
             var inductionVariable = start;
             if (inductionVariable < endExclusive)
               do {
@@ -5341,7 +2088,7 @@
                 inductionVariable = inductionVariable + 1 | 0;
                 // Inline function 'io.ktor.utils.io.bits.get' call
                 // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-                var codepoint = memory.get_view_wow8a6_k$().getInt8(index) & 255;
+                var codepoint = memory.l7k_1.getInt8(index) & 255;
                 var tmp_0;
                 if ((codepoint & 128) === 128) {
                   tmp_0 = true;
@@ -5352,21 +2099,21 @@
                   if (copied === max) {
                     tmp_1 = false;
                   } else {
-                    out.append_am5a4z_k$(it);
+                    out.y5(it);
                     copied = copied + 1 | 0;
                     tmp_1 = true;
                   }
                   tmp_0 = !tmp_1;
                 }
                 if (tmp_0) {
-                  buffer.discardExact_11sae1_k$(index - start | 0);
+                  buffer.m7k(index - start | 0);
                   tmp$ret$4 = false;
                   break $l$block_0;
                 }
               }
                while (inductionVariable < endExclusive);
             var rc = endExclusive - start | 0;
-            buffer.discardExact_11sae1_k$(rc);
+            buffer.m7k(rc);
             tmp$ret$4 = true;
           }
           var rc_0 = tmp$ret$4;
@@ -5436,7 +2183,7 @@
         $l$loop_0: do {
           // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
           var this_0 = current;
-          var before = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
+          var before = this_0.n7f_1 - this_0.m7f_1 | 0;
           var after;
           if (before >= size) {
             try {
@@ -5451,9 +2198,9 @@
                 // Inline function 'io.ktor.utils.io.core.read' call
                 // Inline function 'kotlin.contracts.contract' call
                 // Inline function 'io.ktor.utils.io.core.internal.decodeUTF8.<anonymous>' call
-                var memory = buffer.get_memory_gl4362_k$();
-                var start = buffer.get_readPosition_70qxnc_k$();
-                var endExclusive = buffer.get_writePosition_jdt81t_k$();
+                var memory = buffer.l7f_1;
+                var start = buffer.m7f_1;
+                var endExclusive = buffer.n7f_1;
                 var inductionVariable = start;
                 if (inductionVariable < endExclusive)
                   do {
@@ -5461,7 +2208,7 @@
                     inductionVariable = inductionVariable + 1 | 0;
                     // Inline function 'io.ktor.utils.io.bits.get' call
                     // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-                    var v = memory.get_view_wow8a6_k$().getInt8(index) & 255;
+                    var v = memory.l7k_1.getInt8(index) & 255;
                     if ((v & 128) === 0) {
                       if (!(byteCount === 0)) {
                         malformedByteCount(byteCount);
@@ -5472,12 +2219,12 @@
                       if (copied === max) {
                         tmp_0 = false;
                       } else {
-                        out.append_am5a4z_k$(it);
+                        out.y5(it);
                         copied = copied + 1 | 0;
                         tmp_0 = true;
                       }
                       if (!tmp_0) {
-                        buffer.discardExact_11sae1_k$(index - start | 0);
+                        buffer.m7k(index - start | 0);
                         tmp$ret$5 = -1;
                         break $l$block_3;
                       }
@@ -5501,7 +2248,7 @@
                       lastByteCount = byteCount;
                       byteCount = byteCount - 1 | 0;
                       if (lastByteCount > (endExclusive - index | 0)) {
-                        buffer.discardExact_11sae1_k$(index - start | 0);
+                        buffer.m7k(index - start | 0);
                         tmp$ret$5 = lastByteCount;
                         break $l$block_3;
                       }
@@ -5516,12 +2263,12 @@
                           if (copied === max) {
                             tmp_1 = false;
                           } else {
-                            out.append_am5a4z_k$(it_0);
+                            out.y5(it_0);
                             copied = copied + 1 | 0;
                             tmp_1 = true;
                           }
                           if (!tmp_1) {
-                            buffer.discardExact_11sae1_k$(((index - start | 0) - lastByteCount | 0) + 1 | 0);
+                            buffer.m7k(((index - start | 0) - lastByteCount | 0) + 1 | 0);
                             tmp$ret$5 = -1;
                             break $l$block_3;
                           }
@@ -5535,7 +2282,7 @@
                           if (copied === max) {
                             tmp_3 = false;
                           } else {
-                            out.append_am5a4z_k$(it_1);
+                            out.y5(it_1);
                             copied = copied + 1 | 0;
                             tmp_3 = true;
                           }
@@ -5548,14 +2295,14 @@
                             if (copied === max) {
                               tmp_4 = false;
                             } else {
-                              out.append_am5a4z_k$(it_2);
+                              out.y5(it_2);
                               copied = copied + 1 | 0;
                               tmp_4 = true;
                             }
                             tmp_2 = !tmp_4;
                           }
                           if (tmp_2) {
-                            buffer.discardExact_11sae1_k$(((index - start | 0) - lastByteCount | 0) + 1 | 0);
+                            buffer.m7k(((index - start | 0) - lastByteCount | 0) + 1 | 0);
                             tmp$ret$5 = -1;
                             break $l$block_3;
                           }
@@ -5566,7 +2313,7 @@
                   }
                    while (inductionVariable < endExclusive);
                 var rc = endExclusive - start | 0;
-                buffer.discardExact_11sae1_k$(rc);
+                buffer.m7k(rc);
                 tmp$ret$5 = 0;
               }
               var size_0 = tmp$ret$5;
@@ -5574,7 +2321,7 @@
             }finally {
               // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
               var this_1 = current;
-              after = this_1.get_writePosition_jdt81t_k$() - this_1.get_readPosition_70qxnc_k$() | 0;
+              after = this_1.n7f_1 - this_1.m7f_1 | 0;
             }
           } else {
             after = before;
@@ -5590,7 +2337,8 @@
             } else {
               // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
               var this_2 = current;
-              tmp_6 = (this_2.get_capacity_wxbgcd_k$() - this_2.get_limit_iuokuq_k$() | 0) < Companion_getInstance_1().get_ReservedSize_b4jt5a_k$();
+              var tmp_7 = this_2.q7f_1 - this_2.p7f_1 | 0;
+              tmp_6 = tmp_7 < 8;
             }
             if (tmp_6) {
               completeReadHead($this, current);
@@ -5600,13 +2348,13 @@
             }
           }
           var tmp1_elvis_lhs = tmp_5;
-          var tmp_7;
+          var tmp_8;
           if (tmp1_elvis_lhs == null) {
             break $l$loop_0;
           } else {
-            tmp_7 = tmp1_elvis_lhs;
+            tmp_8 = tmp1_elvis_lhs;
           }
-          var next = tmp_7;
+          var next = tmp_8;
           current = next;
           release = true;
         }
@@ -5630,7 +2378,7 @@
       $l$0: do {
         if (n_0.equals(new Long(0, 0)))
           return skipped_0;
-        var tmp0_elvis_lhs = $this_0.prepareRead_yxo41n_k$(1);
+        var tmp0_elvis_lhs = $this_0.q7n(1);
         var tmp;
         if (tmp0_elvis_lhs == null) {
           return skipped_0;
@@ -5640,19 +2388,19 @@
         var current = tmp;
         // Inline function 'kotlin.comparisons.minOf' call
         // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-        var tmp$ret$0 = current.get_writePosition_jdt81t_k$() - current.get_readPosition_70qxnc_k$() | 0;
+        var tmp$ret$0 = current.n7f_1 - current.m7f_1 | 0;
         var a = toLong(tmp$ret$0);
         var b = n_0;
-        var size = (a.compareTo_9jj042_k$(b) <= 0 ? a : b).toInt_1tsl84_k$();
-        current.discardExact_11sae1_k$(size);
+        var size = (a.x9(b) <= 0 ? a : b).fa();
+        current.m7k(size);
         var tmp1_this = $this_0;
-        tmp1_this.headPosition_1 = tmp1_this.headPosition_1 + size | 0;
+        tmp1_this.x7g_1 = tmp1_this.x7g_1 + size | 0;
         afterRead($this_0, current);
         // Inline function 'kotlin.Long.minus' call
         // Inline function 'kotlin.Long.plus' call
         $this_0 = $this_0;
-        n_0 = n_0.minus_mfbszm_k$(toLong(size));
-        skipped_0 = skipped_0.plus_r93sks_k$(toLong(size));
+        n_0 = n_0.fb(toLong(size));
+        skipped_0 = skipped_0.eb(toLong(size));
         continue $l$0;
       }
        while (false);
@@ -5666,7 +2414,7 @@
       if (currentCount === 0) {
         return currentSkipped;
       }
-      var tmp0_elvis_lhs = $this.prepareRead_yxo41n_k$(1);
+      var tmp0_elvis_lhs = $this.q7n(1);
       var tmp;
       if (tmp0_elvis_lhs == null) {
         return currentSkipped;
@@ -5676,108 +2424,51 @@
       var current = tmp;
       // Inline function 'kotlin.comparisons.minOf' call
       // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      var a = current.get_writePosition_jdt81t_k$() - current.get_readPosition_70qxnc_k$() | 0;
+      var a = current.n7f_1 - current.m7f_1 | 0;
       var b = currentCount;
       var size = Math.min(a, b);
-      current.discardExact_11sae1_k$(size);
-      $this.headPosition_1 = $this.headPosition_1 + size | 0;
+      current.m7k(size);
+      $this.x7g_1 = $this.x7g_1 + size | 0;
       afterRead($this, current);
       currentCount = currentCount - size | 0;
       currentSkipped = currentSkipped + size | 0;
     }
   }
-  function readAsMuchAsPossible($this, array, offset, length, copied) {
-    var $this_0 = $this;
-    var array_0 = array;
-    var offset_0 = offset;
-    var length_0 = length;
-    var copied_0 = copied;
-    $l$1: do {
-      $l$0: do {
-        if (length_0 === 0)
-          return copied_0;
-        var tmp0_elvis_lhs = $this_0.prepareRead_yxo41n_k$(1);
-        var tmp;
-        if (tmp0_elvis_lhs == null) {
-          return copied_0;
-        } else {
-          tmp = tmp0_elvis_lhs;
-        }
-        var current = tmp;
-        // Inline function 'kotlin.comparisons.minOf' call
-        var a = length_0;
-        // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-        var b = current.get_writePosition_jdt81t_k$() - current.get_readPosition_70qxnc_k$() | 0;
-        var size = Math.min(a, b);
-        // Inline function 'io.ktor.utils.io.core.readFully' call
-        var destination = array_0;
-        var offset_1 = offset_0;
-        readFully_1(current instanceof Buffer ? current : THROW_CCE(), destination, offset_1, size);
-        $this_0.headPosition_1 = current.get_readPosition_70qxnc_k$();
-        var tmp_0;
-        var tmp_1;
-        if (!(size === length_0)) {
-          tmp_1 = true;
-        } else {
-          // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-          tmp_1 = (current.get_writePosition_jdt81t_k$() - current.get_readPosition_70qxnc_k$() | 0) === 0;
-        }
-        if (tmp_1) {
-          afterRead($this_0, current);
-          $this_0 = $this_0;
-          array_0 = array_0;
-          offset_0 = offset_0 + size | 0;
-          length_0 = length_0 - size | 0;
-          copied_0 = copied_0 + size | 0;
-          continue $l$0;
-        } else {
-          tmp_0 = copied_0 + size | 0;
-        }
-        return tmp_0;
-      }
-       while (false);
-    }
-     while (true);
-  }
-  function notEnoughBytesAvailable($this, n) {
-    throw new EOFException('Not enough data in packet (' + $this.get_remaining_mwegr1_k$().toString() + ') to read ' + n + ' byte(s)');
-  }
   function fixGapAfterReadFallback($this, current) {
-    if ($this.noMoreChunksAvailable_1 ? current.get_next_wor1vg_k$() == null : false) {
-      $this.headPosition_1 = current.get_readPosition_70qxnc_k$();
-      $this.headEndExclusive_1 = current.get_writePosition_jdt81t_k$();
-      $this.set_tailRemaining_frnwob_k$(new Long(0, 0));
-      return Unit_getInstance();
+    if ($this.a7h_1 ? current.f13() == null : false) {
+      $this.x7g_1 = current.m7f_1;
+      $this.y7g_1 = current.n7f_1;
+      $this.e7n(new Long(0, 0));
+      return Unit_instance;
     }
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var size = current.get_writePosition_jdt81t_k$() - current.get_readPosition_70qxnc_k$() | 0;
+    var size = current.n7f_1 - current.m7f_1 | 0;
     // Inline function 'kotlin.comparisons.minOf' call
-    var tmp = Companion_getInstance_1().get_ReservedSize_b4jt5a_k$();
     // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
-    var b = tmp - (current.get_capacity_wxbgcd_k$() - current.get_limit_iuokuq_k$() | 0) | 0;
+    var b = 8 - (current.q7f_1 - current.p7f_1 | 0) | 0;
     var overrun = Math.min(size, b);
     if (size > overrun) {
       fixGapAfterReadFallbackUnreserved($this, current, size, overrun);
     } else {
-      var new_0 = $this.pool_1.borrow_mvkpor_k$();
-      new_0.reserveEndGap_i4z3fz_k$(Companion_getInstance_1().get_ReservedSize_b4jt5a_k$());
-      new_0.set_next_v483mr_k$(current.cleanNext_l2yy3o_k$());
+      var new_0 = $this.u7g_1.h7m();
+      new_0.s7k(8);
+      new_0.s7n(current.j7m());
       writeBufferAppend(new_0, current, size);
       _set__head__b4pap2($this, new_0);
     }
-    current.release_vbevvg_k$($this.pool_1);
+    current.k7m($this.u7g_1);
   }
   function fixGapAfterReadFallbackUnreserved($this, current, size, overrun) {
-    var chunk1 = $this.pool_1.borrow_mvkpor_k$();
-    var chunk2 = $this.pool_1.borrow_mvkpor_k$();
-    chunk1.reserveEndGap_i4z3fz_k$(Companion_getInstance_1().get_ReservedSize_b4jt5a_k$());
-    chunk2.reserveEndGap_i4z3fz_k$(Companion_getInstance_1().get_ReservedSize_b4jt5a_k$());
-    chunk1.set_next_v483mr_k$(chunk2);
-    chunk2.set_next_v483mr_k$(current.cleanNext_l2yy3o_k$());
+    var chunk1 = $this.u7g_1.h7m();
+    var chunk2 = $this.u7g_1.h7m();
+    chunk1.s7k(8);
+    chunk2.s7k(8);
+    chunk1.s7n(chunk2);
+    chunk2.s7n(current.j7m());
     writeBufferAppend(chunk1, current, size - overrun | 0);
     writeBufferAppend(chunk2, current, overrun);
     _set__head__b4pap2($this, chunk1);
-    $this.set_tailRemaining_frnwob_k$(remainingAll(chunk2));
+    $this.e7n(remainingAll(chunk2));
   }
   function ensureNext($this, current, empty) {
     var $this_0 = $this;
@@ -5788,27 +2479,27 @@
         if (current_0 === empty_0) {
           return doFill($this_0);
         }
-        var next = current_0.cleanNext_l2yy3o_k$();
-        current_0.release_vbevvg_k$($this_0.pool_1);
+        var next = current_0.j7m();
+        current_0.k7m($this_0.u7g_1);
         var tmp;
         if (next == null) {
           _set__head__b4pap2($this_0, empty_0);
-          $this_0.set_tailRemaining_frnwob_k$(new Long(0, 0));
+          $this_0.e7n(new Long(0, 0));
           $this_0 = $this_0;
           current_0 = empty_0;
           empty_0 = empty_0;
           continue $l$0;
         } else {
           // Inline function 'io.ktor.utils.io.core.canRead' call
-          if (next.get_writePosition_jdt81t_k$() > next.get_readPosition_70qxnc_k$()) {
+          if (next.n7f_1 > next.m7f_1) {
             _set__head__b4pap2($this_0, next);
             var tmp0_this = $this_0;
             // Inline function 'kotlin.Long.minus' call
-            var this_0 = tmp0_this.tailRemaining_1;
+            var this_0 = tmp0_this.z7g_1;
             // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-            var other = next.get_writePosition_jdt81t_k$() - next.get_readPosition_70qxnc_k$() | 0;
-            var tmp$ret$2 = this_0.minus_mfbszm_k$(toLong(other));
-            tmp0_this.set_tailRemaining_frnwob_k$(tmp$ret$2);
+            var other = next.n7f_1 - next.m7f_1 | 0;
+            var tmp$ret$2 = this_0.fb(toLong(other));
+            tmp0_this.e7n(tmp$ret$2);
             tmp = next;
           } else {
             $this_0 = $this_0;
@@ -5824,31 +2515,31 @@
      while (true);
   }
   function doFill($this) {
-    if ($this.noMoreChunksAvailable_1)
+    if ($this.a7h_1)
       return null;
-    var chunk = $this.fill_1vd6r_k$();
+    var chunk = $this.c7n();
     if (chunk == null) {
-      $this.noMoreChunksAvailable_1 = true;
+      $this.a7h_1 = true;
       return null;
     }
     appendView($this, chunk);
     return chunk;
   }
   function appendView($this, chunk) {
-    var tail = findTail($this._head_1);
-    if (tail === Companion_getInstance_4().get_Empty_i9b85g_k$()) {
+    var tail = findTail($this.v7g_1);
+    if (tail === Companion_getInstance_4().a7j_1) {
       _set__head__b4pap2($this, chunk);
       // Inline function 'kotlin.require' call
       // Inline function 'kotlin.contracts.contract' call
-      if (!$this.tailRemaining_1.equals(new Long(0, 0))) {
+      if (!$this.z7g_1.equals(new Long(0, 0))) {
         throw IllegalStateException_init_$Create$('It should be no tail remaining bytes if current tail is EmptyBuffer');
       }
-      var tmp0_safe_receiver = chunk.get_next_wor1vg_k$();
+      var tmp0_safe_receiver = chunk.f13();
       var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : remainingAll(tmp0_safe_receiver);
-      $this.set_tailRemaining_frnwob_k$(tmp1_elvis_lhs == null ? new Long(0, 0) : tmp1_elvis_lhs);
+      $this.e7n(tmp1_elvis_lhs == null ? new Long(0, 0) : tmp1_elvis_lhs);
     } else {
-      tail.set_next_v483mr_k$(chunk);
-      $this.set_tailRemaining_frnwob_k$($this.tailRemaining_1.plus_r93sks_k$(remainingAll(chunk)));
+      tail.s7n(chunk);
+      $this.e7n($this.z7g_1.eb(remainingAll(chunk)));
     }
   }
   function prepareReadLoop($this, minSize, head) {
@@ -5859,10 +2550,10 @@
       $l$0: do {
         // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
         var this_0 = $this_0;
-        var headSize = this_0.headEndExclusive_1 - this_0.headPosition_1 | 0;
+        var headSize = this_0.y7g_1 - this_0.x7g_1 | 0;
         if (headSize >= minSize_0)
           return head_0;
-        var tmp0_elvis_lhs = head_0.get_next_wor1vg_k$();
+        var tmp0_elvis_lhs = head_0.f13();
         var tmp1_elvis_lhs = tmp0_elvis_lhs == null ? doFill($this_0) : tmp0_elvis_lhs;
         var tmp;
         if (tmp1_elvis_lhs == null) {
@@ -5872,8 +2563,8 @@
         }
         var next = tmp;
         if (headSize === 0) {
-          if (!(head_0 === Companion_getInstance_4().get_Empty_i9b85g_k$())) {
-            $this_0.releaseHead_6d62j3_k$(head_0);
+          if (!(head_0 === Companion_getInstance_4().a7j_1)) {
+            $this_0.r7n(head_0);
           }
           $this_0 = $this_0;
           minSize_0 = minSize_0;
@@ -5882,25 +2573,26 @@
         } else {
           var desiredExtraBytes = minSize_0 - headSize | 0;
           var copied = writeBufferAppend(head_0, next, desiredExtraBytes);
-          $this_0.headEndExclusive_1 = head_0.get_writePosition_jdt81t_k$();
+          $this_0.y7g_1 = head_0.n7f_1;
           var tmp2_this = $this_0;
           // Inline function 'kotlin.Long.minus' call
-          var tmp$ret$1 = tmp2_this.tailRemaining_1.minus_mfbszm_k$(toLong(copied));
-          tmp2_this.set_tailRemaining_frnwob_k$(tmp$ret$1);
+          var tmp$ret$1 = tmp2_this.z7g_1.fb(toLong(copied));
+          tmp2_this.e7n(tmp$ret$1);
           // Inline function 'io.ktor.utils.io.core.canRead' call
-          if (!(next.get_writePosition_jdt81t_k$() > next.get_readPosition_70qxnc_k$())) {
-            head_0.set_next_v483mr_k$(null);
-            head_0.set_next_v483mr_k$(next.cleanNext_l2yy3o_k$());
-            next.release_vbevvg_k$($this_0.pool_1);
+          if (!(next.n7f_1 > next.m7f_1)) {
+            head_0.s7n(null);
+            head_0.s7n(next.j7m());
+            next.k7m($this_0.u7g_1);
           } else {
-            next.reserveStartGap_819mco_k$(copied);
+            next.r7k(copied);
           }
         }
         // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
         var this_1 = head_0;
-        if ((this_1.get_writePosition_jdt81t_k$() - this_1.get_readPosition_70qxnc_k$() | 0) >= minSize_0)
+        if ((this_1.n7f_1 - this_1.m7f_1 | 0) >= minSize_0)
           return head_0;
-        if (minSize_0 > Companion_getInstance_1().get_ReservedSize_b4jt5a_k$()) {
+        var tmp_0 = minSize_0;
+        if (tmp_0 > 8) {
           minSizeIsTooBig($this_0, minSize_0);
         }
         $this_0 = $this_0;
@@ -5913,297 +2605,156 @@
      while (true);
   }
   function minSizeIsTooBig($this, minSize) {
-    throw IllegalStateException_init_$Create$('minSize of ' + minSize + ' is too big (should be less than ' + Companion_getInstance_1().get_ReservedSize_b4jt5a_k$() + ')');
+    throw IllegalStateException_init_$Create$('minSize of ' + minSize + ' is too big (should be less than ' + 8 + ')');
   }
   function afterRead($this, head) {
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    if ((head.get_writePosition_jdt81t_k$() - head.get_readPosition_70qxnc_k$() | 0) === 0) {
-      $this.releaseHead_6d62j3_k$(head);
+    if ((head.n7f_1 - head.m7f_1 | 0) === 0) {
+      $this.r7n(head);
     }
   }
   function Companion_1() {
-    Companion_instance_1 = this;
   }
   var Companion_instance_1;
   function Companion_getInstance_3() {
-    if (Companion_instance_1 == null)
-      new Companion_1();
     return Companion_instance_1;
   }
-  function Input$readAvailableCharacters$out$1($off, $destination) {
-    this.$destination_1 = $destination;
-    this.idx_1 = $off;
-  }
-  protoOf(Input$readAvailableCharacters$out$1).append_am5a4z_k$ = function (value) {
-    var tmp1 = this.idx_1;
-    this.idx_1 = tmp1 + 1 | 0;
-    this.$destination_1[tmp1] = value;
-    return this;
-  };
-  protoOf(Input$readAvailableCharacters$out$1).append_jgojdo_k$ = function (value) {
-    if (!(value == null) ? typeof value === 'string' : false) {
-      getCharsInternal(value, this.$destination_1, this.idx_1);
-      this.idx_1 = this.idx_1 + charSequenceLength(value) | 0;
-    } else {
-      if (!(value == null)) {
-        var inductionVariable = 0;
-        var last = charSequenceLength(value);
-        if (inductionVariable < last)
-          do {
-            var i = inductionVariable;
-            inductionVariable = inductionVariable + 1 | 0;
-            var tmp3 = this.idx_1;
-            this.idx_1 = tmp3 + 1 | 0;
-            this.$destination_1[tmp3] = charSequenceGet(value, i);
-          }
-           while (inductionVariable < last);
-      }
-    }
-    return this;
-  };
-  protoOf(Input$readAvailableCharacters$out$1).append_xdc1zw_k$ = function (value, startIndex, endIndex) {
-    throw UnsupportedOperationException_init_$Create$();
-  };
   function Input(head, remaining, pool) {
-    Companion_getInstance_3();
-    head = head === VOID ? Companion_getInstance_4().get_Empty_i9b85g_k$() : head;
+    head = head === VOID ? Companion_getInstance_4().a7j_1 : head;
     remaining = remaining === VOID ? remainingAll(head) : remaining;
-    pool = pool === VOID ? Companion_getInstance_4().get_Pool_wo83gl_k$() : pool;
-    this.pool_1 = pool;
-    this._head_1 = head;
-    this.headMemory_1 = head.get_memory_gl4362_k$();
-    this.headPosition_1 = head.get_readPosition_70qxnc_k$();
-    this.headEndExclusive_1 = head.get_writePosition_jdt81t_k$();
+    pool = pool === VOID ? Companion_getInstance_4().d7j() : pool;
+    this.u7g_1 = pool;
+    this.v7g_1 = head;
+    this.w7g_1 = head.l7f_1;
+    this.x7g_1 = head.m7f_1;
+    this.y7g_1 = head.n7f_1;
     var tmp = this;
     // Inline function 'kotlin.Long.minus' call
-    var other = this.headEndExclusive_1 - this.headPosition_1 | 0;
-    tmp.tailRemaining_1 = remaining.minus_mfbszm_k$(toLong(other));
-    this.noMoreChunksAvailable_1 = false;
+    var other = this.y7g_1 - this.x7g_1 | 0;
+    tmp.z7g_1 = remaining.fb(toLong(other));
+    this.a7h_1 = false;
   }
-  protoOf(Input).get_pool_wosj1h_k$ = function () {
-    return this.pool_1;
-  };
-  protoOf(Input).get_endOfInput_skegkh_k$ = function () {
+  protoOf(Input).n7i = function () {
     var tmp;
     var tmp_0;
     // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-    if ((this.headEndExclusive_1 - this.headPosition_1 | 0) === 0) {
-      tmp_0 = this.tailRemaining_1.equals(new Long(0, 0));
+    if ((this.y7g_1 - this.x7g_1 | 0) === 0) {
+      tmp_0 = this.z7g_1.equals(new Long(0, 0));
     } else {
       tmp_0 = false;
     }
     if (tmp_0) {
-      tmp = this.noMoreChunksAvailable_1 ? true : doFill(this) == null;
+      tmp = this.a7h_1 ? true : doFill(this) == null;
     } else {
       tmp = false;
     }
     return tmp;
   };
-  protoOf(Input).get_head_won7e1_k$ = function () {
+  protoOf(Input).p7m = function () {
     // Inline function 'kotlin.also' call
-    var this_0 = this._head_1;
+    var this_0 = this.v7g_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.Input.<get-head>.<anonymous>' call
-    this_0.discardUntilIndex_z86prq_k$(this.headPosition_1);
+    this_0.p7k(this.x7g_1);
     return this_0;
   };
-  protoOf(Input).set_headMemory_9wgvc7_k$ = function (_set____db54di) {
-    this.headMemory_1 = _set____db54di;
-  };
-  protoOf(Input).get_headMemory_zbxxm_k$ = function () {
-    return this.headMemory_1;
-  };
-  protoOf(Input).set_headPosition_cd3vm_k$ = function (_set____db54di) {
-    this.headPosition_1 = _set____db54di;
-  };
-  protoOf(Input).get_headPosition_sd9ua6_k$ = function () {
-    return this.headPosition_1;
-  };
-  protoOf(Input).set_headEndExclusive_qglm4o_k$ = function (_set____db54di) {
-    this.headEndExclusive_1 = _set____db54di;
-  };
-  protoOf(Input).get_headEndExclusive_yba4hg_k$ = function () {
-    return this.headEndExclusive_1;
-  };
-  protoOf(Input).set_tailRemaining_frnwob_k$ = function (newValue) {
+  protoOf(Input).e7n = function (newValue) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(newValue.compareTo_9jj042_k$(new Long(0, 0)) >= 0)) {
+    if (!(newValue.x9(new Long(0, 0)) >= 0)) {
       // Inline function 'io.ktor.utils.io.core.Input.<set-tailRemaining>.<anonymous>' call
       var message = "tailRemaining shouldn't be negative: " + newValue.toString();
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    this.tailRemaining_1 = newValue;
+    this.z7g_1 = newValue;
   };
-  protoOf(Input).get_tailRemaining_g9jelf_k$ = function () {
-    return this.tailRemaining_1;
-  };
-  protoOf(Input).get_headRemaining_u4hu4t_k$ = function () {
-    return this.headEndExclusive_1 - this.headPosition_1 | 0;
-  };
-  protoOf(Input).prefetch_xde53_k$ = function (min) {
-    if (min.compareTo_9jj042_k$(new Long(0, 0)) <= 0)
-      return true;
+  protoOf(Input).b7h = function () {
     // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-    var headRemaining = this.headEndExclusive_1 - this.headPosition_1 | 0;
-    if (toLong(headRemaining).compareTo_9jj042_k$(min) >= 0 ? true : numberToLong(headRemaining).plus_r93sks_k$(this.tailRemaining_1).compareTo_9jj042_k$(min) >= 0)
-      return true;
-    return doPrefetch(this, min);
+    var tmp$ret$0 = this.y7g_1 - this.x7g_1 | 0;
+    return toLong(tmp$ret$0).eb(this.z7g_1);
   };
-  protoOf(Input).peekTo_gzft5t_k$ = function (destination, destinationOffset, offset, min, max) {
-    this.prefetch_xde53_k$(min.plus_r93sks_k$(offset));
-    var current = this.get_head_won7e1_k$();
-    var copied = new Long(0, 0);
-    var skip = offset;
-    var writePosition = destinationOffset;
-    // Inline function 'kotlin.comparisons.minOf' call
-    // Inline function 'io.ktor.utils.io.bits.Memory.size' call
-    var b = toLong(destination.get_view_wow8a6_k$().byteLength).minus_mfbszm_k$(destinationOffset);
-    var maxCopySize = max.compareTo_9jj042_k$(b) <= 0 ? max : b;
-    $l$loop: while (copied.compareTo_9jj042_k$(min) < 0 ? copied.compareTo_9jj042_k$(maxCopySize) < 0 : false) {
-      // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      var this_0 = current;
-      var chunkSize = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
-      if (toLong(chunkSize).compareTo_9jj042_k$(skip) > 0) {
-        // Inline function 'kotlin.comparisons.minOf' call
-        var a = numberToLong(chunkSize).minus_mfbszm_k$(skip);
-        var b_0 = maxCopySize.minus_mfbszm_k$(copied);
-        var size = a.compareTo_9jj042_k$(b_0) <= 0 ? a : b_0;
-        current.get_memory_gl4362_k$().copyTo_ug0rjx_k$(destination, numberToLong(current.get_readPosition_70qxnc_k$()).plus_r93sks_k$(skip), size, writePosition);
-        skip = new Long(0, 0);
-        copied = copied.plus_r93sks_k$(size);
-        writePosition = writePosition.plus_r93sks_k$(size);
-      } else {
-        // Inline function 'kotlin.Long.minus' call
-        skip = skip.minus_mfbszm_k$(toLong(chunkSize));
-      }
-      var tmp0_elvis_lhs = current.get_next_wor1vg_k$();
-      var tmp;
-      if (tmp0_elvis_lhs == null) {
-        break $l$loop;
-      } else {
-        tmp = tmp0_elvis_lhs;
-      }
-      current = tmp;
-    }
-    return copied;
+  protoOf(Input).q7h = function () {
+    return !(this.x7g_1 === this.y7g_1) ? true : !this.z7g_1.equals(new Long(0, 0));
   };
-  protoOf(Input).peekTo$default_b22lr3_k$ = function (destination, destinationOffset, offset, min, max, $super) {
-    offset = offset === VOID ? new Long(0, 0) : offset;
-    min = min === VOID ? new Long(1, 0) : min;
-    max = max === VOID ? Companion_getInstance().get_MAX_VALUE_54a9lf_k$() : max;
-    return $super === VOID ? this.peekTo_gzft5t_k$(destination, destinationOffset, offset, min, max) : $super.peekTo_gzft5t_k$.call(this, destination, destinationOffset, offset, min, max);
-  };
-  protoOf(Input).get_remaining_mwegr1_k$ = function () {
-    // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-    var tmp$ret$0 = this.headEndExclusive_1 - this.headPosition_1 | 0;
-    return toLong(tmp$ret$0).plus_r93sks_k$(this.tailRemaining_1);
-  };
-  protoOf(Input).canRead_93a6bq_k$ = function () {
-    return !(this.headPosition_1 === this.headEndExclusive_1) ? true : !this.tailRemaining_1.equals(new Long(0, 0));
-  };
-  protoOf(Input).hasBytes_ly98p3_k$ = function (n) {
-    // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-    var tmp$ret$0 = this.headEndExclusive_1 - this.headPosition_1 | 0;
-    return numberToLong(tmp$ret$0).plus_r93sks_k$(this.tailRemaining_1).compareTo_9jj042_k$(toLong(n)) >= 0;
-  };
-  protoOf(Input).release_wu5yyf_k$ = function () {
-    var head = this.get_head_won7e1_k$();
-    var empty = Companion_getInstance_4().get_Empty_i9b85g_k$();
+  protoOf(Input).mv = function () {
+    var head = this.p7m();
+    var empty = Companion_getInstance_4().a7j_1;
     if (!(head === empty)) {
       _set__head__b4pap2(this, empty);
-      this.set_tailRemaining_frnwob_k$(new Long(0, 0));
-      releaseAll(head, this.pool_1);
+      this.e7n(new Long(0, 0));
+      releaseAll(head, this.u7g_1);
     }
   };
-  protoOf(Input).close_yn9xrc_k$ = function () {
-    this.release_wu5yyf_k$();
-    if (!this.noMoreChunksAvailable_1) {
-      this.noMoreChunksAvailable_1 = true;
-    }
-    this.closeSource_lb1mzh_k$();
-  };
-  protoOf(Input).stealAll_nensgi_k$ = function () {
-    var head = this.get_head_won7e1_k$();
-    var empty = Companion_getInstance_4().get_Empty_i9b85g_k$();
+  protoOf(Input).m7d = function () {
+    var head = this.p7m();
+    var empty = Companion_getInstance_4().a7j_1;
     if (head === empty)
       return null;
     _set__head__b4pap2(this, empty);
-    this.set_tailRemaining_frnwob_k$(new Long(0, 0));
+    this.e7n(new Long(0, 0));
     return head;
   };
-  protoOf(Input).steal_1tck0f_k$ = function () {
-    var head = this.get_head_won7e1_k$();
-    var next = head.get_next_wor1vg_k$();
-    var empty = Companion_getInstance_4().get_Empty_i9b85g_k$();
+  protoOf(Input).f7n = function () {
+    var head = this.p7m();
+    var next = head.f13();
+    var empty = Companion_getInstance_4().a7j_1;
     if (head === empty)
       return null;
     if (next == null) {
       _set__head__b4pap2(this, empty);
-      this.set_tailRemaining_frnwob_k$(new Long(0, 0));
+      this.e7n(new Long(0, 0));
     } else {
       _set__head__b4pap2(this, next);
       // Inline function 'kotlin.Long.minus' call
-      var this_0 = this.tailRemaining_1;
+      var this_0 = this.z7g_1;
       // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      var other = next.get_writePosition_jdt81t_k$() - next.get_readPosition_70qxnc_k$() | 0;
-      var tmp$ret$1 = this_0.minus_mfbszm_k$(toLong(other));
-      this.set_tailRemaining_frnwob_k$(tmp$ret$1);
+      var other = next.n7f_1 - next.m7f_1 | 0;
+      var tmp$ret$1 = this_0.fb(toLong(other));
+      this.e7n(tmp$ret$1);
     }
-    head.set_next_v483mr_k$(null);
+    head.s7n(null);
     return head;
   };
-  protoOf(Input).append_qgrwjw_k$ = function (chain) {
-    if (chain === Companion_getInstance_4().get_Empty_i9b85g_k$())
-      return Unit_getInstance();
+  protoOf(Input).g7n = function (chain) {
+    if (chain === Companion_getInstance_4().a7j_1)
+      return Unit_instance;
     var size = remainingAll(chain);
-    if (this._head_1 === Companion_getInstance_4().get_Empty_i9b85g_k$()) {
+    if (this.v7g_1 === Companion_getInstance_4().a7j_1) {
       _set__head__b4pap2(this, chain);
       // Inline function 'kotlin.Long.minus' call
       // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-      var other = this.headEndExclusive_1 - this.headPosition_1 | 0;
-      var tmp$ret$1 = size.minus_mfbszm_k$(toLong(other));
-      this.set_tailRemaining_frnwob_k$(tmp$ret$1);
+      var other = this.y7g_1 - this.x7g_1 | 0;
+      var tmp$ret$1 = size.fb(toLong(other));
+      this.e7n(tmp$ret$1);
     } else {
-      findTail(this._head_1).set_next_v483mr_k$(chain);
-      this.set_tailRemaining_frnwob_k$(this.tailRemaining_1.plus_r93sks_k$(size));
+      findTail(this.v7g_1).s7n(chain);
+      this.e7n(this.z7g_1.eb(size));
     }
   };
-  protoOf(Input).tryWriteAppend_szyatk_k$ = function (chain) {
-    var tail = findTail(this.get_head_won7e1_k$());
+  protoOf(Input).h7n = function (chain) {
+    var tail = findTail(this.p7m());
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var size = chain.get_writePosition_jdt81t_k$() - chain.get_readPosition_70qxnc_k$() | 0;
+    var size = chain.n7f_1 - chain.m7f_1 | 0;
     var tmp;
     if (size === 0) {
       tmp = true;
     } else {
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      tmp = (tail.get_limit_iuokuq_k$() - tail.get_writePosition_jdt81t_k$() | 0) < size;
+      tmp = (tail.p7f_1 - tail.n7f_1 | 0) < size;
     }
     if (tmp)
       return false;
     writeBufferAppend(tail, chain, size);
-    if (this.get_head_won7e1_k$() === tail) {
-      this.headEndExclusive_1 = tail.get_writePosition_jdt81t_k$();
+    if (this.p7m() === tail) {
+      this.y7g_1 = tail.n7f_1;
     } else {
       // Inline function 'kotlin.Long.plus' call
-      var tmp$ret$2 = this.tailRemaining_1.plus_r93sks_k$(toLong(size));
-      this.set_tailRemaining_frnwob_k$(tmp$ret$2);
+      var tmp$ret$2 = this.z7g_1.eb(toLong(size));
+      this.e7n(tmp$ret$2);
     }
     return true;
   };
-  protoOf(Input).readByte_ectjk2_k$ = function () {
-    var index = this.headPosition_1;
-    var nextIndex = index + 1 | 0;
-    if (nextIndex < this.headEndExclusive_1) {
-      this.headPosition_1 = nextIndex;
-      // Inline function 'io.ktor.utils.io.bits.get' call
-      // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-      return this.headMemory_1.get_view_wow8a6_k$().getInt8(index);
-    }
-    return readByteSlow_0(this);
-  };
-  protoOf(Input).discard_6fulfq_k$ = function (n) {
+  protoOf(Input).i7n = function (n) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(n >= 0)) {
@@ -6213,102 +2764,47 @@
     }
     return discardAsMuchAsPossible_0(this, n, 0);
   };
-  protoOf(Input).discardExact_11sae1_k$ = function (n) {
-    if (!(this.discard_6fulfq_k$(n) === n))
+  protoOf(Input).m7k = function (n) {
+    if (!(this.i7n(n) === n))
       throw new EOFException('Unable to discard ' + n + ' bytes due to end of packet');
   };
-  protoOf(Input).tryPeek_han6fe_k$ = function () {
-    var head = this.get_head_won7e1_k$();
-    // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-    if ((this.headEndExclusive_1 - this.headPosition_1 | 0) > 0) {
-      return head.tryPeekByte_ple8ke_k$();
-    }
-    if (this.tailRemaining_1.equals(new Long(0, 0)) ? this.noMoreChunksAvailable_1 : false)
-      return -1;
-    var tmp0_safe_receiver = prepareReadLoop(this, 1, head);
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.tryPeekByte_ple8ke_k$();
-    return tmp1_elvis_lhs == null ? -1 : tmp1_elvis_lhs;
-  };
-  protoOf(Input).peekTo_wjzs0w_k$ = function (buffer) {
-    var tmp0_elvis_lhs = this.prepareReadHead_dk94or_k$(1);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      return -1;
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var head = tmp;
-    // Inline function 'kotlin.comparisons.minOf' call
-    // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-    var a = buffer.get_limit_iuokuq_k$() - buffer.get_writePosition_jdt81t_k$() | 0;
-    // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var b = head.get_writePosition_jdt81t_k$() - head.get_readPosition_70qxnc_k$() | 0;
-    var size = Math.min(a, b);
-    writeFully_1(buffer instanceof Buffer ? buffer : THROW_CCE(), head, size);
-    return size;
-  };
-  protoOf(Input).discard_kxfhu8_k$ = function (n) {
-    if (n.compareTo_9jj042_k$(new Long(0, 0)) <= 0)
+  protoOf(Input).j7n = function (n) {
+    if (n.x9(new Long(0, 0)) <= 0)
       return new Long(0, 0);
     return discardAsMuchAsPossible(this, n, new Long(0, 0));
   };
-  protoOf(Input).readAvailableCharacters_f5kb2j_k$ = function (destination, off, len) {
-    if (this.get_endOfInput_skegkh_k$())
-      return -1;
-    var out = new Input$readAvailableCharacters$out$1(off, destination);
-    return this.readText_4d4a81_k$(out, 0, len);
-  };
-  protoOf(Input).readText_4d4a81_k$ = function (out, min, max) {
-    if (toLong(max).compareTo_9jj042_k$(this.get_remaining_mwegr1_k$()) >= 0) {
-      var s = readTextExactBytes(this, this.get_remaining_mwegr1_k$().toInt_1tsl84_k$());
-      out.append_jgojdo_k$(s);
-      return s.length;
-    }
-    return readASCII(this, out, min, max);
-  };
-  protoOf(Input).readText$default_9behzc_k$ = function (out, min, max, $super) {
-    min = min === VOID ? 0 : min;
-    max = max === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : max;
-    return $super === VOID ? this.readText_4d4a81_k$(out, min, max) : $super.readText_4d4a81_k$.call(this, out, min, max);
-  };
-  protoOf(Input).readTextExact_6e10eo_k$ = function (out, exactCharacters) {
-    this.readText_4d4a81_k$(out, exactCharacters, exactCharacters);
-  };
-  protoOf(Input).readText_rdpd43_k$ = function (min, max) {
-    if (min === 0 ? max === 0 ? true : this.get_endOfInput_skegkh_k$() : false)
+  protoOf(Input).k7n = function (min, max) {
+    if (min === 0 ? max === 0 ? true : this.n7i() : false)
       return '';
-    var remaining = this.get_remaining_mwegr1_k$();
-    if (remaining.compareTo_9jj042_k$(new Long(0, 0)) > 0 ? toLong(max).compareTo_9jj042_k$(remaining) >= 0 : false)
-      return readTextExactBytes(this, remaining.toInt_1tsl84_k$());
+    var remaining = this.b7h();
+    if (remaining.x9(new Long(0, 0)) > 0 ? toLong(max).x9(remaining) >= 0 : false)
+      return readTextExactBytes(this, remaining.fa());
     // Inline function 'kotlin.text.buildString' call
-    var capacity = coerceAtMost_0(coerceAtLeast(min, 16), max);
+    var capacity = coerceAtMost(coerceAtLeast(min, 16), max);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.apply' call
-    var this_0 = StringBuilder_init_$Create$_0(capacity);
+    var this_0 = StringBuilder_init_$Create$(capacity);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.Input.readText.<anonymous>' call
     readASCII(this, this_0, min, max);
     return this_0.toString();
   };
-  protoOf(Input).readText$default_grxas_k$ = function (min, max, $super) {
+  protoOf(Input).l7n = function (min, max, $super) {
     min = min === VOID ? 0 : min;
-    max = max === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : max;
-    return $super === VOID ? this.readText_rdpd43_k$(min, max) : $super.readText_rdpd43_k$.call(this, min, max);
+    max = max === VOID ? IntCompanionObject_instance.MAX_VALUE : max;
+    return $super === VOID ? this.k7n(min, max) : $super.k7n.call(this, min, max);
   };
-  protoOf(Input).readTextExact_dnvzzw_k$ = function (exactCharacters) {
-    return this.readText_rdpd43_k$(exactCharacters, exactCharacters);
+  protoOf(Input).m7n = function (minSize) {
+    return prepareReadLoop(this, minSize, this.p7m());
   };
-  protoOf(Input).prepareReadHead_dk94or_k$ = function (minSize) {
-    return prepareReadLoop(this, minSize, this.get_head_won7e1_k$());
+  protoOf(Input).n7n = function (current) {
+    return this.o7n(current);
   };
-  protoOf(Input).ensureNextHead_oerbph_k$ = function (current) {
-    return this.ensureNext_39ripn_k$(current);
+  protoOf(Input).o7n = function (current) {
+    return ensureNext(this, current, Companion_getInstance_4().a7j_1);
   };
-  protoOf(Input).ensureNext_39ripn_k$ = function (current) {
-    return ensureNext(this, current, Companion_getInstance_4().get_Empty_i9b85g_k$());
-  };
-  protoOf(Input).fixGapAfterRead_yrc9kb_k$ = function (current) {
-    var tmp0_elvis_lhs = current.get_next_wor1vg_k$();
+  protoOf(Input).p7n = function (current) {
+    var tmp0_elvis_lhs = current.f13();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return fixGapAfterReadFallback(this, current);
@@ -6317,194 +2813,90 @@
     }
     var next = tmp;
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var remaining = current.get_writePosition_jdt81t_k$() - current.get_readPosition_70qxnc_k$() | 0;
+    var remaining = current.n7f_1 - current.m7f_1 | 0;
     // Inline function 'kotlin.comparisons.minOf' call
-    var tmp_0 = Companion_getInstance_1().get_ReservedSize_b4jt5a_k$();
     // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
-    var b = tmp_0 - (current.get_capacity_wxbgcd_k$() - current.get_limit_iuokuq_k$() | 0) | 0;
+    var b = 8 - (current.q7f_1 - current.p7f_1 | 0) | 0;
     var overrunSize = Math.min(remaining, b);
-    if (next.get_startGap_a0yplv_k$() < overrunSize) {
+    if (next.o7f_1 < overrunSize) {
       return fixGapAfterReadFallback(this, current);
     }
     restoreStartGap(next, overrunSize);
     if (remaining > overrunSize) {
-      current.releaseEndGap_v6rgnm_k$();
-      this.headEndExclusive_1 = current.get_writePosition_jdt81t_k$();
+      current.y7k();
+      this.y7g_1 = current.n7f_1;
       // Inline function 'kotlin.Long.plus' call
-      var tmp$ret$3 = this.tailRemaining_1.plus_r93sks_k$(toLong(overrunSize));
-      this.set_tailRemaining_frnwob_k$(tmp$ret$3);
+      var tmp$ret$3 = this.z7g_1.eb(toLong(overrunSize));
+      this.e7n(tmp$ret$3);
     } else {
       _set__head__b4pap2(this, next);
       // Inline function 'kotlin.Long.minus' call
-      var this_0 = this.tailRemaining_1;
+      var this_0 = this.z7g_1;
       // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      var other = (next.get_writePosition_jdt81t_k$() - next.get_readPosition_70qxnc_k$() | 0) - overrunSize | 0;
-      var tmp$ret$5 = this_0.minus_mfbszm_k$(toLong(other));
-      this.set_tailRemaining_frnwob_k$(tmp$ret$5);
-      current.cleanNext_l2yy3o_k$();
-      current.release_vbevvg_k$(this.pool_1);
+      var other = (next.n7f_1 - next.m7f_1 | 0) - overrunSize | 0;
+      var tmp$ret$5 = this_0.fb(toLong(other));
+      this.e7n(tmp$ret$5);
+      current.j7m();
+      current.k7m(this.u7g_1);
     }
   };
-  protoOf(Input).fill_1vd6r_k$ = function () {
-    var buffer = this.pool_1.borrow_mvkpor_k$();
+  protoOf(Input).c7n = function () {
+    var buffer = this.u7g_1.h7m();
     try {
-      buffer.reserveEndGap_i4z3fz_k$(Companion_getInstance_1().get_ReservedSize_b4jt5a_k$());
-      var tmp = buffer.get_memory_gl4362_k$();
-      var tmp_0 = buffer.get_writePosition_jdt81t_k$();
+      buffer.s7k(8);
+      var tmp = buffer.n7f_1;
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      var tmp$ret$0 = buffer.get_limit_iuokuq_k$() - buffer.get_writePosition_jdt81t_k$() | 0;
-      var copied = this.fill_3bipm6_k$(tmp, tmp_0, tmp$ret$0);
+      var tmp$ret$0 = buffer.p7f_1 - buffer.n7f_1 | 0;
+      var copied = this.d7n(buffer.l7f_1, tmp, tmp$ret$0);
       if (copied === 0) {
-        this.noMoreChunksAvailable_1 = true;
+        this.a7h_1 = true;
         // Inline function 'io.ktor.utils.io.core.canRead' call
-        if (!(buffer.get_writePosition_jdt81t_k$() > buffer.get_readPosition_70qxnc_k$())) {
-          buffer.release_vbevvg_k$(this.pool_1);
+        if (!(buffer.n7f_1 > buffer.m7f_1)) {
+          buffer.k7m(this.u7g_1);
           return null;
         }
       }
-      buffer.commitWritten_tkztjs_k$(copied);
+      buffer.n7k(copied);
       return buffer;
     } catch ($p) {
       if ($p instanceof Error) {
         var t = $p;
-        buffer.release_vbevvg_k$(this.pool_1);
+        buffer.k7m(this.u7g_1);
         throw t;
       } else {
         throw $p;
       }
     }
   };
-  protoOf(Input).markNoMoreChunksAvailable_j25xf4_k$ = function () {
-    if (!this.noMoreChunksAvailable_1) {
-      this.noMoreChunksAvailable_1 = true;
+  protoOf(Input).u7m = function () {
+    if (!this.a7h_1) {
+      this.a7h_1 = true;
     }
   };
-  protoOf(Input).prepareRead_yxo41n_k$ = function (minSize) {
-    var head = this.get_head_won7e1_k$();
-    if ((this.headEndExclusive_1 - this.headPosition_1 | 0) >= minSize)
+  protoOf(Input).q7n = function (minSize) {
+    var head = this.p7m();
+    if ((this.y7g_1 - this.x7g_1 | 0) >= minSize)
       return head;
     return prepareReadLoop(this, minSize, head);
   };
-  protoOf(Input).prepareRead_tus4v9_k$ = function (minSize, head) {
-    if ((this.headEndExclusive_1 - this.headPosition_1 | 0) >= minSize)
-      return head;
-    return prepareReadLoop(this, minSize, head);
-  };
-  protoOf(Input).releaseHead_6d62j3_k$ = function (head) {
-    var tmp0_elvis_lhs = head.cleanNext_l2yy3o_k$();
-    var next = tmp0_elvis_lhs == null ? Companion_getInstance_4().get_Empty_i9b85g_k$() : tmp0_elvis_lhs;
+  protoOf(Input).r7n = function (head) {
+    var tmp0_elvis_lhs = head.j7m();
+    var next = tmp0_elvis_lhs == null ? Companion_getInstance_4().a7j_1 : tmp0_elvis_lhs;
     _set__head__b4pap2(this, next);
     // Inline function 'kotlin.Long.minus' call
-    var this_0 = this.tailRemaining_1;
+    var this_0 = this.z7g_1;
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var other = next.get_writePosition_jdt81t_k$() - next.get_readPosition_70qxnc_k$() | 0;
-    var tmp$ret$1 = this_0.minus_mfbszm_k$(toLong(other));
-    this.set_tailRemaining_frnwob_k$(tmp$ret$1);
-    head.release_vbevvg_k$(this.pool_1);
+    var other = next.n7f_1 - next.m7f_1 | 0;
+    var tmp$ret$1 = this_0.fb(toLong(other));
+    this.e7n(tmp$ret$1);
+    head.k7m(this.u7g_1);
     return next;
   };
-  function takeWhile(_this__u8e3s4, block) {
-    var release = true;
-    var tmp0_elvis_lhs = prepareReadFirstHead(_this__u8e3s4, 1);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      return Unit_getInstance();
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var current = tmp;
-    try {
-      $l$loop_0: do {
-        release = false;
-        var tmp1_elvis_lhs = prepareReadNextHead(_this__u8e3s4, current);
-        var tmp_0;
-        if (tmp1_elvis_lhs == null) {
-          break $l$loop_0;
-        } else {
-          tmp_0 = tmp1_elvis_lhs;
-        }
-        var next = tmp_0;
-        current = next;
-        release = true;
-      }
-       while (block(current));
-    }finally {
-      if (release) {
-        completeReadHead(_this__u8e3s4, current);
-      }
-    }
-  }
-  function takeWhileSize(_this__u8e3s4, initialSize, block) {
-    initialSize = initialSize === VOID ? 1 : initialSize;
-    var release = true;
-    var tmp0_elvis_lhs = prepareReadFirstHead(_this__u8e3s4, initialSize);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      return Unit_getInstance();
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var current = tmp;
-    var size = initialSize;
-    try {
-      $l$loop: do {
-        // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-        var this_0 = current;
-        var before = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
-        var after;
-        if (before >= size) {
-          try {
-            size = block(current);
-          }finally {
-            // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-            var this_1 = current;
-            after = this_1.get_writePosition_jdt81t_k$() - this_1.get_readPosition_70qxnc_k$() | 0;
-          }
-        } else {
-          after = before;
-        }
-        release = false;
-        var tmp_0;
-        if (after === 0) {
-          tmp_0 = prepareReadNextHead(_this__u8e3s4, current);
-        } else {
-          var tmp_1;
-          if (after < size) {
-            tmp_1 = true;
-          } else {
-            // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
-            var this_2 = current;
-            tmp_1 = (this_2.get_capacity_wxbgcd_k$() - this_2.get_limit_iuokuq_k$() | 0) < Companion_getInstance_1().get_ReservedSize_b4jt5a_k$();
-          }
-          if (tmp_1) {
-            completeReadHead(_this__u8e3s4, current);
-            tmp_0 = prepareReadFirstHead(_this__u8e3s4, size);
-          } else {
-            tmp_0 = current;
-          }
-        }
-        var tmp1_elvis_lhs = tmp_0;
-        var tmp_2;
-        if (tmp1_elvis_lhs == null) {
-          break $l$loop;
-        } else {
-          tmp_2 = tmp1_elvis_lhs;
-        }
-        var next = tmp_2;
-        current = next;
-        release = true;
-      }
-       while (size > 0);
-    }finally {
-      if (release) {
-        completeReadHead(_this__u8e3s4, current);
-      }
-    }
-  }
   function discard(_this__u8e3s4) {
-    return _this__u8e3s4.discard_kxfhu8_k$(Companion_getInstance().get_MAX_VALUE_54a9lf_k$());
+    Companion_getInstance();
+    return _this__u8e3s4.j7n(new Long(-1, 2147483647));
   }
-  function readFully_3(_this__u8e3s4, dst, offset, length) {
+  function readFully_1(_this__u8e3s4, dst, offset, length) {
     offset = offset === VOID ? 0 : offset;
     length = length === VOID ? dst.length - offset | 0 : length;
     // Inline function 'io.ktor.utils.io.core.requireNoRemaining' call
@@ -6529,11 +2921,11 @@
           // Inline function 'kotlin.comparisons.minOf' call
           var a = remaining;
           // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-          var b = buffer.get_writePosition_jdt81t_k$() - buffer.get_readPosition_70qxnc_k$() | 0;
+          var b = buffer.n7f_1 - buffer.m7f_1 | 0;
           var count = Math.min(a, b);
           // Inline function 'io.ktor.utils.io.core.readFully.<anonymous>' call
           var dstOffset_0 = dstOffset;
-          readFully_1(buffer, dst, dstOffset_0, count);
+          readFully(buffer, dst, dstOffset_0, count);
           remaining = remaining - count | 0;
           dstOffset = dstOffset + count | 0;
           if (!(remaining > 0)) {
@@ -6563,11 +2955,11 @@
       prematureEndOfStream(this_0);
     }
   }
-  function readFully_4(_this__u8e3s4, dst, length) {
+  function readFully_2(_this__u8e3s4, dst, length) {
     var tmp;
     if (length === VOID) {
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      tmp = dst.get_limit_iuokuq_k$() - dst.get_writePosition_jdt81t_k$() | 0;
+      tmp = dst.p7f_1 - dst.n7f_1 | 0;
     } else {
       tmp = length;
     }
@@ -6594,10 +2986,10 @@
           // Inline function 'kotlin.comparisons.minOf' call
           var a = remaining;
           // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-          var b = buffer.get_writePosition_jdt81t_k$() - buffer.get_readPosition_70qxnc_k$() | 0;
+          var b = buffer.n7f_1 - buffer.m7f_1 | 0;
           var count = Math.min(a, b);
           // Inline function 'io.ktor.utils.io.core.readFully.<anonymous>' call
-          readFully_2(buffer, dst, count);
+          readFully_0(buffer, dst, count);
           remaining = remaining - count | 0;
           dstOffset = dstOffset + count | 0;
           if (!(remaining > 0)) {
@@ -6627,160 +3019,23 @@
       prematureEndOfStream(this_0);
     }
   }
-  function requireNoRemaining(_this__u8e3s4) {
-    if (_this__u8e3s4 > 0) {
-      prematureEndOfStream(_this__u8e3s4);
-    }
-  }
-  function readFullyBytesTemplate(_this__u8e3s4, initialDstOffset, length, readBlock) {
-    var remaining = length;
-    var dstOffset = initialDstOffset;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.takeWhile' call
-      var release = true;
-      var tmp0_elvis_lhs = prepareReadFirstHead(_this__u8e3s4, 1);
-      var tmp;
-      if (tmp0_elvis_lhs == null) {
-        break $l$block;
-      } else {
-        tmp = tmp0_elvis_lhs;
-      }
-      var current = tmp;
-      try {
-        $l$loop_0: do {
-          // Inline function 'io.ktor.utils.io.core.readFullyBytesTemplate.<anonymous>' call
-          var buffer = current;
-          // Inline function 'kotlin.comparisons.minOf' call
-          var a = remaining;
-          // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-          var b = buffer.get_writePosition_jdt81t_k$() - buffer.get_readPosition_70qxnc_k$() | 0;
-          var count = Math.min(a, b);
-          readBlock(buffer, dstOffset, count);
-          remaining = remaining - count | 0;
-          dstOffset = dstOffset + count | 0;
-          if (!(remaining > 0)) {
-            break $l$loop_0;
-          }
-          release = false;
-          var tmp1_elvis_lhs = prepareReadNextHead(_this__u8e3s4, current);
-          var tmp_0;
-          if (tmp1_elvis_lhs == null) {
-            break $l$loop_0;
-          } else {
-            tmp_0 = tmp1_elvis_lhs;
-          }
-          var next = tmp_0;
-          current = next;
-          release = true;
-        }
-         while (true);
-      }finally {
-        if (release) {
-          completeReadHead(_this__u8e3s4, current);
-        }
-      }
-    }
-    return remaining;
-  }
   function readShort_0(_this__u8e3s4) {
     var tmp$ret$3;
     $l$block: {
       // Inline function 'io.ktor.utils.io.core.readPrimitive' call
       // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-      if ((_this__u8e3s4.get_headEndExclusive_yba4hg_k$() - _this__u8e3s4.get_headPosition_sd9ua6_k$() | 0) > 2) {
-        var index = _this__u8e3s4.get_headPosition_sd9ua6_k$();
-        _this__u8e3s4.set_headPosition_cd3vm_k$(index + 2 | 0);
+      if ((_this__u8e3s4.y7g_1 - _this__u8e3s4.x7g_1 | 0) > 2) {
+        var index = _this__u8e3s4.x7g_1;
+        _this__u8e3s4.x7g_1 = index + 2 | 0;
         // Inline function 'io.ktor.utils.io.core.readShort.<anonymous>' call
         // Inline function 'io.ktor.utils.io.bits.loadShortAt' call
-        tmp$ret$3 = _this__u8e3s4.get_headMemory_zbxxm_k$().get_view_wow8a6_k$().getInt16(index, false);
+        tmp$ret$3 = _this__u8e3s4.w7g_1.l7k_1.getInt16(index, false);
         break $l$block;
       }
       // Inline function 'io.ktor.utils.io.core.readShort.<anonymous>' call
       tmp$ret$3 = readShortFallback(_this__u8e3s4);
     }
     return tmp$ret$3;
-  }
-  function readInt_0(_this__u8e3s4) {
-    var tmp$ret$3;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.readPrimitive' call
-      // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-      if ((_this__u8e3s4.get_headEndExclusive_yba4hg_k$() - _this__u8e3s4.get_headPosition_sd9ua6_k$() | 0) > 4) {
-        var index = _this__u8e3s4.get_headPosition_sd9ua6_k$();
-        _this__u8e3s4.set_headPosition_cd3vm_k$(index + 4 | 0);
-        // Inline function 'io.ktor.utils.io.core.readInt.<anonymous>' call
-        // Inline function 'io.ktor.utils.io.bits.loadIntAt' call
-        tmp$ret$3 = _this__u8e3s4.get_headMemory_zbxxm_k$().get_view_wow8a6_k$().getInt32(index, false);
-        break $l$block;
-      }
-      // Inline function 'io.ktor.utils.io.core.readInt.<anonymous>' call
-      tmp$ret$3 = readIntFallback(_this__u8e3s4);
-    }
-    return tmp$ret$3;
-  }
-  function readLong_0(_this__u8e3s4) {
-    var tmp$ret$3;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.readPrimitive' call
-      // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-      if ((_this__u8e3s4.get_headEndExclusive_yba4hg_k$() - _this__u8e3s4.get_headPosition_sd9ua6_k$() | 0) > 8) {
-        var index = _this__u8e3s4.get_headPosition_sd9ua6_k$();
-        _this__u8e3s4.set_headPosition_cd3vm_k$(index + 8 | 0);
-        // Inline function 'io.ktor.utils.io.core.readLong.<anonymous>' call
-        // Inline function 'io.ktor.utils.io.bits.loadLongAt' call
-        var this_0 = _this__u8e3s4.get_headMemory_zbxxm_k$();
-        tmp$ret$3 = toLong(this_0.get_view_wow8a6_k$().getUint32(index, false)).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(this_0.get_view_wow8a6_k$().getUint32(index + 4 | 0, false)));
-        break $l$block;
-      }
-      // Inline function 'io.ktor.utils.io.core.readLong.<anonymous>' call
-      tmp$ret$3 = readLongFallback(_this__u8e3s4);
-    }
-    return tmp$ret$3;
-  }
-  function readFloat_0(_this__u8e3s4) {
-    var tmp$ret$3;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.readPrimitive' call
-      // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-      if ((_this__u8e3s4.get_headEndExclusive_yba4hg_k$() - _this__u8e3s4.get_headPosition_sd9ua6_k$() | 0) > 4) {
-        var index = _this__u8e3s4.get_headPosition_sd9ua6_k$();
-        _this__u8e3s4.set_headPosition_cd3vm_k$(index + 4 | 0);
-        // Inline function 'io.ktor.utils.io.core.readFloat.<anonymous>' call
-        // Inline function 'io.ktor.utils.io.bits.loadFloatAt' call
-        tmp$ret$3 = _this__u8e3s4.get_headMemory_zbxxm_k$().get_view_wow8a6_k$().getFloat32(index, false);
-        break $l$block;
-      }
-      // Inline function 'io.ktor.utils.io.core.readFloat.<anonymous>' call
-      tmp$ret$3 = readFloatFallback(_this__u8e3s4);
-    }
-    return tmp$ret$3;
-  }
-  function readDouble_0(_this__u8e3s4) {
-    var tmp$ret$3;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.readPrimitive' call
-      // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-      if ((_this__u8e3s4.get_headEndExclusive_yba4hg_k$() - _this__u8e3s4.get_headPosition_sd9ua6_k$() | 0) > 8) {
-        var index = _this__u8e3s4.get_headPosition_sd9ua6_k$();
-        _this__u8e3s4.set_headPosition_cd3vm_k$(index + 8 | 0);
-        // Inline function 'io.ktor.utils.io.core.readDouble.<anonymous>' call
-        // Inline function 'io.ktor.utils.io.bits.loadDoubleAt' call
-        tmp$ret$3 = _this__u8e3s4.get_headMemory_zbxxm_k$().get_view_wow8a6_k$().getFloat64(index, false);
-        break $l$block;
-      }
-      // Inline function 'io.ktor.utils.io.core.readDouble.<anonymous>' call
-      tmp$ret$3 = readDoubleFallback(_this__u8e3s4);
-    }
-    return tmp$ret$3;
-  }
-  function readPrimitive(_this__u8e3s4, size, main, fallback) {
-    // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-    if ((_this__u8e3s4.get_headEndExclusive_yba4hg_k$() - _this__u8e3s4.get_headPosition_sd9ua6_k$() | 0) > size) {
-      var index = _this__u8e3s4.get_headPosition_sd9ua6_k$();
-      _this__u8e3s4.set_headPosition_cd3vm_k$(index + size | 0);
-      return main(_this__u8e3s4.get_headMemory_zbxxm_k$(), index);
-    }
-    return fallback();
   }
   function readShortFallback(_this__u8e3s4) {
     // Inline function 'io.ktor.utils.io.core.readPrimitiveFallback' call
@@ -6797,115 +3052,11 @@
     completeReadHead(_this__u8e3s4, head);
     return value;
   }
-  function readIntFallback(_this__u8e3s4) {
-    // Inline function 'io.ktor.utils.io.core.readPrimitiveFallback' call
-    var tmp0_elvis_lhs = prepareReadFirstHead(_this__u8e3s4, 4);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      prematureEndOfStream(4);
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var head = tmp;
-    // Inline function 'io.ktor.utils.io.core.readIntFallback.<anonymous>' call
-    var value = readInt(head);
-    completeReadHead(_this__u8e3s4, head);
-    return value;
-  }
-  function readLongFallback(_this__u8e3s4) {
-    // Inline function 'io.ktor.utils.io.core.readPrimitiveFallback' call
-    var tmp0_elvis_lhs = prepareReadFirstHead(_this__u8e3s4, 8);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      prematureEndOfStream(8);
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var head = tmp;
-    // Inline function 'io.ktor.utils.io.core.readLongFallback.<anonymous>' call
-    var value = readLong(head);
-    completeReadHead(_this__u8e3s4, head);
-    return value;
-  }
-  function readFloatFallback(_this__u8e3s4) {
-    // Inline function 'io.ktor.utils.io.core.readPrimitiveFallback' call
-    var tmp0_elvis_lhs = prepareReadFirstHead(_this__u8e3s4, 4);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      prematureEndOfStream(4);
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var head = tmp;
-    // Inline function 'io.ktor.utils.io.core.readFloatFallback.<anonymous>' call
-    var value = readFloat(head);
-    completeReadHead(_this__u8e3s4, head);
-    return value;
-  }
-  function readDoubleFallback(_this__u8e3s4) {
-    // Inline function 'io.ktor.utils.io.core.readPrimitiveFallback' call
-    var tmp0_elvis_lhs = prepareReadFirstHead(_this__u8e3s4, 8);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      prematureEndOfStream(8);
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var head = tmp;
-    // Inline function 'io.ktor.utils.io.core.readDoubleFallback.<anonymous>' call
-    var value = readDouble(head);
-    completeReadHead(_this__u8e3s4, head);
-    return value;
-  }
-  function readPrimitiveFallback(_this__u8e3s4, size, read) {
-    var tmp0_elvis_lhs = prepareReadFirstHead(_this__u8e3s4, size);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      prematureEndOfStream(size);
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var head = tmp;
-    var value = read(head);
-    completeReadHead(_this__u8e3s4, head);
-    return value;
-  }
-  function Output_init_$Init$($this) {
-    Output.call($this, Companion_getInstance_4().get_Pool_wo83gl_k$());
-    return $this;
-  }
-  function Output_init_$Create$() {
-    return Output_init_$Init$(objectCreate(protoOf(Output)));
-  }
-  function _set__head__b4pap2_0($this, _set____db54di) {
-    $this._head_1 = _set____db54di;
-  }
-  function _get__head__kwf5se_0($this) {
-    return $this._head_1;
-  }
-  function _set__tail__bb8fzq($this, _set____db54di) {
-    $this._tail_1 = _set____db54di;
-  }
-  function _get__tail__kpw0hq($this) {
-    return $this._tail_1;
-  }
-  function _set_tailInitialPosition__matoco($this, _set____db54di) {
-    $this.tailInitialPosition_1 = _set____db54di;
-  }
-  function _get_tailInitialPosition__zfk4q4($this) {
-    return $this.tailInitialPosition_1;
-  }
-  function _set_chainedSize__unajg($this, _set____db54di) {
-    $this.chainedSize_1 = _set____db54di;
-  }
-  function _get_chainedSize__tfqvsg($this) {
-    return $this.chainedSize_1;
-  }
   function flushChain($this) {
-    var tmp0_elvis_lhs = $this.stealAll_nensgi_k$();
+    var tmp0_elvis_lhs = $this.m7d();
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      return Unit_getInstance();
+      return Unit_instance;
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -6917,114 +3068,113 @@
       $l$loop: do {
         // Inline function 'io.ktor.utils.io.core.Output.flushChain.<anonymous>' call
         var chunk = current;
-        var tmp_0 = chunk.get_memory_gl4362_k$();
-        var tmp_1 = chunk.get_readPosition_70qxnc_k$();
+        var tmp_0 = chunk.m7f_1;
         // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-        var tmp$ret$0 = chunk.get_writePosition_jdt81t_k$() - chunk.get_readPosition_70qxnc_k$() | 0;
-        $this.flush_sux9un_k$(tmp_0, tmp_1, tmp$ret$0);
-        var tmp0_elvis_lhs_0 = current.get_next_wor1vg_k$();
-        var tmp_2;
+        var tmp$ret$0 = chunk.n7f_1 - chunk.m7f_1 | 0;
+        $this.n7m(chunk.l7f_1, tmp_0, tmp$ret$0);
+        var tmp0_elvis_lhs_0 = current.f13();
+        var tmp_1;
         if (tmp0_elvis_lhs_0 == null) {
           break $l$loop;
         } else {
-          tmp_2 = tmp0_elvis_lhs_0;
+          tmp_1 = tmp0_elvis_lhs_0;
         }
-        current = tmp_2;
+        current = tmp_1;
       }
        while (true);
     }finally {
-      releaseAll(oldTail, $this.pool_1);
+      releaseAll(oldTail, $this.e7d_1);
     }
   }
   function appendNewChunk($this) {
-    var new_0 = $this.pool_1.borrow_mvkpor_k$();
-    new_0.reserveEndGap_i4z3fz_k$(Companion_getInstance_1().get_ReservedSize_b4jt5a_k$());
-    $this.appendSingleChunk_7rbwf9_k$(new_0);
+    var new_0 = $this.e7d_1.h7m();
+    new_0.s7k(8);
+    $this.q7m(new_0);
     return new_0;
   }
   function appendChainImpl($this, head, newTail, chainedSizeDelta) {
-    var _tail = $this._tail_1;
+    var _tail = $this.g7d_1;
     if (_tail == null) {
-      $this._head_1 = head;
-      $this.chainedSize_1 = 0;
+      $this.f7d_1 = head;
+      $this.l7d_1 = 0;
     } else {
-      _tail.set_next_v483mr_k$(head);
-      var tailPosition = $this.tailPosition_1;
-      _tail.commitWrittenUntilIndex_umptfg_k$(tailPosition);
-      $this.chainedSize_1 = $this.chainedSize_1 + (tailPosition - $this.tailInitialPosition_1 | 0) | 0;
+      _tail.s7n(head);
+      var tailPosition = $this.i7d_1;
+      _tail.o7k(tailPosition);
+      $this.l7d_1 = $this.l7d_1 + (tailPosition - $this.k7d_1 | 0) | 0;
     }
-    $this._tail_1 = newTail;
-    $this.chainedSize_1 = $this.chainedSize_1 + chainedSizeDelta | 0;
-    $this.tailMemory_1 = newTail.get_memory_gl4362_k$();
-    $this.tailPosition_1 = newTail.get_writePosition_jdt81t_k$();
-    $this.tailInitialPosition_1 = newTail.get_readPosition_70qxnc_k$();
-    $this.tailEndExclusive_1 = newTail.get_limit_iuokuq_k$();
+    $this.g7d_1 = newTail;
+    $this.l7d_1 = $this.l7d_1 + chainedSizeDelta | 0;
+    $this.h7d_1 = newTail.l7f_1;
+    $this.i7d_1 = newTail.n7f_1;
+    $this.k7d_1 = newTail.m7f_1;
+    $this.j7d_1 = newTail.p7f_1;
   }
   function writeByteFallback($this, v) {
-    appendNewChunk($this).writeByte_9ih3z3_k$(v);
-    $this.tailPosition_1 = $this.tailPosition_1 + 1 | 0;
+    appendNewChunk($this).b7l(v);
+    $this.i7d_1 = $this.i7d_1 + 1 | 0;
   }
   function appendCharFallback($this, c) {
     $l$block: {
       // Inline function 'io.ktor.utils.io.core.Output.write' call
-      var buffer = $this.prepareWriteHead_ugmxj4_k$(3);
+      var buffer = $this.s7m(3);
       try {
         // Inline function 'io.ktor.utils.io.core.Output.appendCharFallback.<anonymous>' call
         // Inline function 'io.ktor.utils.io.core.internal.putUtf8Char' call
-        var this_0 = buffer.get_memory_gl4362_k$();
-        var offset = buffer.get_writePosition_jdt81t_k$();
+        var this_0 = buffer.l7f_1;
+        var offset = buffer.n7f_1;
         // Inline function 'kotlin.code' call
         var v = Char__toInt_impl_vasixd(c);
         var tmp;
         if (0 <= v ? v <= 127 : false) {
           // Inline function 'io.ktor.utils.io.bits.Memory.storeAt' call
           var value = toByte(v);
-          this_0.get_view_wow8a6_k$().setInt8(offset, value);
+          this_0.l7k_1.setInt8(offset, value);
           tmp = 1;
         } else if (128 <= v ? v <= 2047 : false) {
           // Inline function 'io.ktor.utils.io.bits.set' call
           var value_0 = toByte(192 | v >> 6 & 31);
-          this_0.get_view_wow8a6_k$().setInt8(offset, value_0);
+          this_0.l7k_1.setInt8(offset, value_0);
           // Inline function 'io.ktor.utils.io.bits.set' call
           var index = offset + 1 | 0;
           var value_1 = toByte(128 | v & 63);
-          this_0.get_view_wow8a6_k$().setInt8(index, value_1);
+          this_0.l7k_1.setInt8(index, value_1);
           tmp = 2;
         } else if (2048 <= v ? v <= 65535 : false) {
           // Inline function 'io.ktor.utils.io.bits.set' call
           var value_2 = toByte(224 | v >> 12 & 15);
-          this_0.get_view_wow8a6_k$().setInt8(offset, value_2);
+          this_0.l7k_1.setInt8(offset, value_2);
           // Inline function 'io.ktor.utils.io.bits.set' call
           var index_0 = offset + 1 | 0;
           var value_3 = toByte(128 | v >> 6 & 63);
-          this_0.get_view_wow8a6_k$().setInt8(index_0, value_3);
+          this_0.l7k_1.setInt8(index_0, value_3);
           // Inline function 'io.ktor.utils.io.bits.set' call
           var index_1 = offset + 2 | 0;
           var value_4 = toByte(128 | v & 63);
-          this_0.get_view_wow8a6_k$().setInt8(index_1, value_4);
+          this_0.l7k_1.setInt8(index_1, value_4);
           tmp = 3;
         } else if (65536 <= v ? v <= 1114111 : false) {
           // Inline function 'io.ktor.utils.io.bits.set' call
           var value_5 = toByte(240 | v >> 18 & 7);
-          this_0.get_view_wow8a6_k$().setInt8(offset, value_5);
+          this_0.l7k_1.setInt8(offset, value_5);
           // Inline function 'io.ktor.utils.io.bits.set' call
           var index_2 = offset + 1 | 0;
           var value_6 = toByte(128 | v >> 12 & 63);
-          this_0.get_view_wow8a6_k$().setInt8(index_2, value_6);
+          this_0.l7k_1.setInt8(index_2, value_6);
           // Inline function 'io.ktor.utils.io.bits.set' call
           var index_3 = offset + 2 | 0;
           var value_7 = toByte(128 | v >> 6 & 63);
-          this_0.get_view_wow8a6_k$().setInt8(index_3, value_7);
+          this_0.l7k_1.setInt8(index_3, value_7);
           // Inline function 'io.ktor.utils.io.bits.set' call
           var index_4 = offset + 3 | 0;
           var value_8 = toByte(128 | v & 63);
-          this_0.get_view_wow8a6_k$().setInt8(index_4, value_8);
+          this_0.l7k_1.setInt8(index_4, value_8);
           tmp = 4;
         } else {
           malformedCodePoint(v);
         }
         var size = tmp;
-        buffer.commitWritten_tkztjs_k$(size);
+        buffer.n7k(size);
         var result = size;
         // Inline function 'kotlin.check' call
         // Inline function 'kotlin.contracts.contract' call
@@ -7035,24 +3185,24 @@
         }
         break $l$block;
       }finally {
-        $this.afterHeadWrite_dl47zh_k$();
+        $this.i7k();
       }
     }
   }
   function writePacketMerging($this, tail, foreignStolen, pool) {
-    tail.commitWrittenUntilIndex_umptfg_k$($this.tailPosition_1);
+    tail.o7k($this.i7d_1);
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var lastSize = tail.get_writePosition_jdt81t_k$() - tail.get_readPosition_70qxnc_k$() | 0;
+    var lastSize = tail.n7f_1 - tail.m7f_1 | 0;
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var nextSize = foreignStolen.get_writePosition_jdt81t_k$() - foreignStolen.get_readPosition_70qxnc_k$() | 0;
+    var nextSize = foreignStolen.n7f_1 - foreignStolen.m7f_1 | 0;
     var maxCopySize = get_PACKET_MAX_COPY_SIZE();
     var tmp;
     var tmp_0;
     if (nextSize < maxCopySize) {
       // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
-      var tmp_1 = tail.get_capacity_wxbgcd_k$() - tail.get_limit_iuokuq_k$() | 0;
+      var tmp_1 = tail.q7f_1 - tail.p7f_1 | 0;
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      tmp_0 = nextSize <= (tmp_1 + (tail.get_limit_iuokuq_k$() - tail.get_writePosition_jdt81t_k$() | 0) | 0);
+      tmp_0 = nextSize <= (tmp_1 + (tail.p7f_1 - tail.n7f_1 | 0) | 0);
     } else {
       tmp_0 = false;
     }
@@ -7063,30 +3213,30 @@
     }
     var appendSize = tmp;
     var tmp_2;
-    if ((lastSize < maxCopySize ? lastSize <= foreignStolen.get_startGap_a0yplv_k$() : false) ? isExclusivelyOwned(foreignStolen) : false) {
+    if ((lastSize < maxCopySize ? lastSize <= foreignStolen.o7f_1 : false) ? isExclusivelyOwned(foreignStolen) : false) {
       tmp_2 = lastSize;
     } else {
       tmp_2 = -1;
     }
     var prependSize = tmp_2;
     if (appendSize === -1 ? prependSize === -1 : false) {
-      $this.appendChain_ca5xr5_k$(foreignStolen);
+      $this.r7m(foreignStolen);
     } else if (prependSize === -1 ? true : appendSize <= prependSize) {
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-      var tmp_3 = tail.get_limit_iuokuq_k$() - tail.get_writePosition_jdt81t_k$() | 0;
+      var tmp_3 = tail.p7f_1 - tail.n7f_1 | 0;
       // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
-      var tmp$ret$5 = tail.get_capacity_wxbgcd_k$() - tail.get_limit_iuokuq_k$() | 0;
+      var tmp$ret$5 = tail.q7f_1 - tail.p7f_1 | 0;
       writeBufferAppend(tail, foreignStolen, tmp_3 + tmp$ret$5 | 0);
-      $this.afterHeadWrite_dl47zh_k$();
-      var tmp0_safe_receiver = foreignStolen.cleanNext_l2yy3o_k$();
+      $this.i7k();
+      var tmp0_safe_receiver = foreignStolen.j7m();
       if (tmp0_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        $this.appendChain_ca5xr5_k$(tmp0_safe_receiver);
+        $this.r7m(tmp0_safe_receiver);
       }
-      foreignStolen.release_vbevvg_k$(pool);
+      foreignStolen.k7m(pool);
     } else if (appendSize === -1 ? true : prependSize < appendSize) {
       writePacketSlowPrepend($this, foreignStolen, tail);
     } else {
@@ -7095,7 +3245,7 @@
   }
   function writePacketSlowPrepend($this, foreignStolen, tail) {
     writeBufferPrepend(foreignStolen, tail);
-    var tmp0_elvis_lhs = $this._head_1;
+    var tmp0_elvis_lhs = $this.f7d_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       var message = "head should't be null since it is already handled in the fast-path";
@@ -7105,66 +3255,42 @@
     }
     var _head = tmp;
     if (_head === tail) {
-      $this._head_1 = foreignStolen;
+      $this.f7d_1 = foreignStolen;
     } else {
       var pre = _head;
       $l$loop: while (true) {
-        var next = ensureNotNull(pre.get_next_wor1vg_k$());
+        var next = ensureNotNull(pre.f13());
         if (next === tail)
           break $l$loop;
         pre = next;
       }
-      pre.set_next_v483mr_k$(foreignStolen);
+      pre.s7n(foreignStolen);
     }
-    tail.release_vbevvg_k$($this.pool_1);
-    $this._tail_1 = findTail(foreignStolen);
+    tail.k7m($this.e7d_1);
+    $this.g7d_1 = findTail(foreignStolen);
   }
   function Output(pool) {
-    this.pool_1 = pool;
-    this._head_1 = null;
-    this._tail_1 = null;
-    this.tailMemory_1 = Companion_getInstance_6().get_Empty_i9b85g_k$();
-    this.tailPosition_1 = 0;
-    this.tailEndExclusive_1 = 0;
-    this.tailInitialPosition_1 = 0;
-    this.chainedSize_1 = 0;
+    this.e7d_1 = pool;
+    this.f7d_1 = null;
+    this.g7d_1 = null;
+    this.h7d_1 = Companion_getInstance_6().t7n_1;
+    this.i7d_1 = 0;
+    this.j7d_1 = 0;
+    this.k7d_1 = 0;
+    this.l7d_1 = 0;
   }
-  protoOf(Output).get_pool_wosj1h_k$ = function () {
-    return this.pool_1;
+  protoOf(Output).l7m = function () {
+    return this.l7d_1 + (this.i7d_1 - this.k7d_1 | 0) | 0;
   };
-  protoOf(Output).get__size_inpkfr_k$ = function () {
-    return this.chainedSize_1 + (this.tailPosition_1 - this.tailInitialPosition_1 | 0) | 0;
+  protoOf(Output).p7m = function () {
+    var tmp0_elvis_lhs = this.f7d_1;
+    return tmp0_elvis_lhs == null ? Companion_getInstance_4().a7j_1 : tmp0_elvis_lhs;
   };
-  protoOf(Output).get_head_won7e1_k$ = function () {
-    var tmp0_elvis_lhs = this._head_1;
-    return tmp0_elvis_lhs == null ? Companion_getInstance_4().get_Empty_i9b85g_k$() : tmp0_elvis_lhs;
-  };
-  protoOf(Output).set_tailMemory_d24lhl_k$ = function (_set____db54di) {
-    this.tailMemory_1 = _set____db54di;
-  };
-  protoOf(Output).get_tailMemory_3da60q_k$ = function () {
-    return this.tailMemory_1;
-  };
-  protoOf(Output).set_tailPosition_5ggwhe_k$ = function (_set____db54di) {
-    this.tailPosition_1 = _set____db54di;
-  };
-  protoOf(Output).get_tailPosition_6y9qfy_k$ = function () {
-    return this.tailPosition_1;
-  };
-  protoOf(Output).set_tailEndExclusive_ww532w_k$ = function (_set____db54di) {
-    this.tailEndExclusive_1 = _set____db54di;
-  };
-  protoOf(Output).get_tailEndExclusive_e33hh8_k$ = function () {
-    return this.tailEndExclusive_1;
-  };
-  protoOf(Output).get_tailRemaining_g9jelf_k$ = function () {
-    return this.tailEndExclusive_1 - this.tailPosition_1 | 0;
-  };
-  protoOf(Output).flush_shahbo_k$ = function () {
+  protoOf(Output).p6 = function () {
     flushChain(this);
   };
-  protoOf(Output).stealAll_nensgi_k$ = function () {
-    var tmp0_elvis_lhs = this._head_1;
+  protoOf(Output).m7d = function () {
+    var tmp0_elvis_lhs = this.f7d_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return null;
@@ -7172,225 +3298,180 @@
       tmp = tmp0_elvis_lhs;
     }
     var head = tmp;
-    var tmp1_safe_receiver = this._tail_1;
+    var tmp1_safe_receiver = this.g7d_1;
     if (tmp1_safe_receiver == null)
       null;
     else
-      tmp1_safe_receiver.commitWrittenUntilIndex_umptfg_k$(this.tailPosition_1);
-    this._head_1 = null;
-    this._tail_1 = null;
-    this.tailPosition_1 = 0;
-    this.tailEndExclusive_1 = 0;
-    this.tailInitialPosition_1 = 0;
-    this.chainedSize_1 = 0;
-    this.tailMemory_1 = Companion_getInstance_6().get_Empty_i9b85g_k$();
+      tmp1_safe_receiver.o7k(this.i7d_1);
+    this.f7d_1 = null;
+    this.g7d_1 = null;
+    this.i7d_1 = 0;
+    this.j7d_1 = 0;
+    this.k7d_1 = 0;
+    this.l7d_1 = 0;
+    this.h7d_1 = Companion_getInstance_6().t7n_1;
     return head;
   };
-  protoOf(Output).appendSingleChunk_7rbwf9_k$ = function (buffer) {
+  protoOf(Output).q7m = function (buffer) {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(buffer.get_next_wor1vg_k$() == null)) {
+    if (!(buffer.f13() == null)) {
       // Inline function 'io.ktor.utils.io.core.Output.appendSingleChunk.<anonymous>' call
       var message = 'It should be a single buffer chunk.';
       throw IllegalStateException_init_$Create$(toString(message));
     }
     appendChainImpl(this, buffer, buffer, 0);
   };
-  protoOf(Output).appendChain_ca5xr5_k$ = function (head) {
+  protoOf(Output).r7m = function (head) {
     var tail = findTail(head);
     // Inline function 'io.ktor.utils.io.core.internal.toIntOrFail' call
     // Inline function 'kotlin.Long.minus' call
     var this_0 = remainingAll(head);
     // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var other = tail.get_writePosition_jdt81t_k$() - tail.get_readPosition_70qxnc_k$() | 0;
-    var this_1 = this_0.minus_mfbszm_k$(toLong(other));
+    var other = tail.n7f_1 - tail.m7f_1 | 0;
+    var this_1 = this_0.fb(toLong(other));
     var name = 'total size increase';
-    if (this_1.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
+    if (this_1.x9(toLong(IntCompanionObject_instance.MAX_VALUE)) >= 0) {
       failLongToIntConversion(this_1, name);
     }
-    var chainedSizeDelta = this_1.toInt_1tsl84_k$();
+    var chainedSizeDelta = this_1.fa();
     appendChainImpl(this, head, tail, chainedSizeDelta);
   };
-  protoOf(Output).writeByte_9ih3z3_k$ = function (v) {
-    var index = this.tailPosition_1;
-    if (index < this.tailEndExclusive_1) {
-      this.tailPosition_1 = index + 1 | 0;
+  protoOf(Output).b7l = function (v) {
+    var index = this.i7d_1;
+    if (index < this.j7d_1) {
+      this.i7d_1 = index + 1 | 0;
       // Inline function 'io.ktor.utils.io.bits.set' call
-      this.tailMemory_1.get_view_wow8a6_k$().setInt8(index, v);
-      return Unit_getInstance();
+      this.h7d_1.l7k_1.setInt8(index, v);
+      return Unit_instance;
     }
     return writeByteFallback(this, v);
   };
-  protoOf(Output).close_yn9xrc_k$ = function () {
+  protoOf(Output).y1k = function () {
     try {
-      this.flush_shahbo_k$();
+      this.p6();
     }finally {
-      this.closeDestination_mr1i3e_k$();
+      this.m7m();
     }
   };
-  protoOf(Output).append_am5a4z_k$ = function (value) {
-    var tailPosition = this.tailPosition_1;
-    if ((this.tailEndExclusive_1 - tailPosition | 0) >= 3) {
+  protoOf(Output).y5 = function (value) {
+    var tailPosition = this.i7d_1;
+    if ((this.j7d_1 - tailPosition | 0) >= 3) {
       // Inline function 'io.ktor.utils.io.core.internal.putUtf8Char' call
-      var this_0 = this.tailMemory_1;
+      var this_0 = this.h7d_1;
       // Inline function 'kotlin.code' call
       var v = Char__toInt_impl_vasixd(value);
       var tmp;
       if (0 <= v ? v <= 127 : false) {
         // Inline function 'io.ktor.utils.io.bits.Memory.storeAt' call
         var value_0 = toByte(v);
-        this_0.get_view_wow8a6_k$().setInt8(tailPosition, value_0);
+        this_0.l7k_1.setInt8(tailPosition, value_0);
         tmp = 1;
       } else if (128 <= v ? v <= 2047 : false) {
         // Inline function 'io.ktor.utils.io.bits.set' call
         var value_1 = toByte(192 | v >> 6 & 31);
-        this_0.get_view_wow8a6_k$().setInt8(tailPosition, value_1);
+        this_0.l7k_1.setInt8(tailPosition, value_1);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index = tailPosition + 1 | 0;
         var value_2 = toByte(128 | v & 63);
-        this_0.get_view_wow8a6_k$().setInt8(index, value_2);
+        this_0.l7k_1.setInt8(index, value_2);
         tmp = 2;
       } else if (2048 <= v ? v <= 65535 : false) {
         // Inline function 'io.ktor.utils.io.bits.set' call
         var value_3 = toByte(224 | v >> 12 & 15);
-        this_0.get_view_wow8a6_k$().setInt8(tailPosition, value_3);
+        this_0.l7k_1.setInt8(tailPosition, value_3);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_0 = tailPosition + 1 | 0;
         var value_4 = toByte(128 | v >> 6 & 63);
-        this_0.get_view_wow8a6_k$().setInt8(index_0, value_4);
+        this_0.l7k_1.setInt8(index_0, value_4);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_1 = tailPosition + 2 | 0;
         var value_5 = toByte(128 | v & 63);
-        this_0.get_view_wow8a6_k$().setInt8(index_1, value_5);
+        this_0.l7k_1.setInt8(index_1, value_5);
         tmp = 3;
       } else if (65536 <= v ? v <= 1114111 : false) {
         // Inline function 'io.ktor.utils.io.bits.set' call
         var value_6 = toByte(240 | v >> 18 & 7);
-        this_0.get_view_wow8a6_k$().setInt8(tailPosition, value_6);
+        this_0.l7k_1.setInt8(tailPosition, value_6);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_2 = tailPosition + 1 | 0;
         var value_7 = toByte(128 | v >> 12 & 63);
-        this_0.get_view_wow8a6_k$().setInt8(index_2, value_7);
+        this_0.l7k_1.setInt8(index_2, value_7);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_3 = tailPosition + 2 | 0;
         var value_8 = toByte(128 | v >> 6 & 63);
-        this_0.get_view_wow8a6_k$().setInt8(index_3, value_8);
+        this_0.l7k_1.setInt8(index_3, value_8);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_4 = tailPosition + 3 | 0;
         var value_9 = toByte(128 | v & 63);
-        this_0.get_view_wow8a6_k$().setInt8(index_4, value_9);
+        this_0.l7k_1.setInt8(index_4, value_9);
         tmp = 4;
       } else {
         malformedCodePoint(v);
       }
       var size = tmp;
-      this.tailPosition_1 = tailPosition + size | 0;
+      this.i7d_1 = tailPosition + size | 0;
       return this;
     }
     appendCharFallback(this, value);
     return this;
   };
-  protoOf(Output).append_jgojdo_k$ = function (value) {
+  protoOf(Output).m8 = function (value) {
     if (value == null) {
-      this.append_xdc1zw_k$('null', 0, 4);
+      this.n8('null', 0, 4);
     } else {
-      this.append_xdc1zw_k$(value, 0, charSequenceLength(value));
+      this.n8(value, 0, charSequenceLength(value));
     }
     return this;
   };
-  protoOf(Output).append_xdc1zw_k$ = function (value, startIndex, endIndex) {
+  protoOf(Output).n8 = function (value, startIndex, endIndex) {
     if (value == null) {
-      return this.append_xdc1zw_k$('null', startIndex, endIndex);
+      return this.n8('null', startIndex, endIndex);
     }
-    writeText(this, value, startIndex, endIndex, Charsets_getInstance().get_UTF_8_ihn39z_k$());
+    writeText(this, value, startIndex, endIndex, Charsets_getInstance().u7n_1);
     return this;
   };
-  protoOf(Output).writePacket_e1h3qk_k$ = function (packet) {
-    var foreignStolen = packet.stealAll_nensgi_k$();
+  protoOf(Output).o7j = function (packet) {
+    var foreignStolen = packet.m7d();
     if (foreignStolen == null) {
-      packet.release_wu5yyf_k$();
-      return Unit_getInstance();
+      packet.mv();
+      return Unit_instance;
     }
-    var tail = this._tail_1;
+    var tail = this.g7d_1;
     if (tail == null) {
-      this.appendChain_ca5xr5_k$(foreignStolen);
-      return Unit_getInstance();
+      this.r7m(foreignStolen);
+      return Unit_instance;
     }
-    writePacketMerging(this, tail, foreignStolen, packet.get_pool_wosj1h_k$());
+    writePacketMerging(this, tail, foreignStolen, packet.u7g_1);
   };
-  protoOf(Output).writeChunkBuffer_f0a6fc_k$ = function (chunkBuffer) {
-    var _tail = this._tail_1;
+  protoOf(Output).n7d = function (chunkBuffer) {
+    var _tail = this.g7d_1;
     if (_tail == null) {
-      this.appendChain_ca5xr5_k$(chunkBuffer);
-      return Unit_getInstance();
+      this.r7m(chunkBuffer);
+      return Unit_instance;
     }
-    writePacketMerging(this, _tail, chunkBuffer, this.pool_1);
+    writePacketMerging(this, _tail, chunkBuffer, this.e7d_1);
   };
-  protoOf(Output).writePacket_3jtwmc_k$ = function (p, n) {
+  protoOf(Output).c7h = function (p, n) {
     var remaining = n;
-    $l$loop: while (remaining > 0) {
+    $l$loop: while (remaining.x9(new Long(0, 0)) > 0) {
       // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-      var headRemaining = p.get_headEndExclusive_yba4hg_k$() - p.get_headPosition_sd9ua6_k$() | 0;
-      if (headRemaining <= remaining) {
-        remaining = remaining - headRemaining | 0;
-        var tmp0_elvis_lhs = p.steal_1tck0f_k$();
-        var tmp;
-        if (tmp0_elvis_lhs == null) {
-          throw new EOFException('Unexpected end of packet');
-        } else {
-          tmp = tmp0_elvis_lhs;
-        }
-        this.appendSingleChunk_7rbwf9_k$(tmp);
-      } else {
-        // Inline function 'io.ktor.utils.io.core.read' call
-        // Inline function 'kotlin.contracts.contract' call
-        var tmp0_elvis_lhs_0 = p.prepareRead_yxo41n_k$(1);
-        var tmp_0;
-        if (tmp0_elvis_lhs_0 == null) {
-          prematureEndOfStream(1);
-        } else {
-          tmp_0 = tmp0_elvis_lhs_0;
-        }
-        var buffer = tmp_0;
-        var positionBefore = buffer.get_readPosition_70qxnc_k$();
-        try {
-          // Inline function 'io.ktor.utils.io.core.Output.writePacket.<anonymous>' call
-          writeFully_2(this, buffer, remaining);
-        }finally {
-          var positionAfter = buffer.get_readPosition_70qxnc_k$();
-          if (positionAfter < positionBefore) {
-            throw IllegalStateException_init_$Create$("Buffer's position shouldn't be rewinded");
-          }
-          if (positionAfter === buffer.get_writePosition_jdt81t_k$()) {
-            p.ensureNext_39ripn_k$(buffer);
-          } else {
-            p.set_headPosition_cd3vm_k$(positionAfter);
-          }
-        }
-        break $l$loop;
-      }
-    }
-  };
-  protoOf(Output).writePacket_9o18u2_k$ = function (p, n) {
-    var remaining = n;
-    $l$loop: while (remaining.compareTo_9jj042_k$(new Long(0, 0)) > 0) {
-      // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-      var tmp$ret$0 = p.get_headEndExclusive_yba4hg_k$() - p.get_headPosition_sd9ua6_k$() | 0;
+      var tmp$ret$0 = p.y7g_1 - p.x7g_1 | 0;
       var headRemaining = toLong(tmp$ret$0);
-      if (headRemaining.compareTo_9jj042_k$(remaining) <= 0) {
-        remaining = remaining.minus_mfbszm_k$(headRemaining);
-        var tmp0_elvis_lhs = p.steal_1tck0f_k$();
+      if (headRemaining.x9(remaining) <= 0) {
+        remaining = remaining.fb(headRemaining);
+        var tmp0_elvis_lhs = p.f7n();
         var tmp;
         if (tmp0_elvis_lhs == null) {
           throw new EOFException('Unexpected end of packet');
         } else {
           tmp = tmp0_elvis_lhs;
         }
-        this.appendSingleChunk_7rbwf9_k$(tmp);
+        this.q7m(tmp);
       } else {
         // Inline function 'io.ktor.utils.io.core.read' call
         // Inline function 'kotlin.contracts.contract' call
-        var tmp0_elvis_lhs_0 = p.prepareRead_yxo41n_k$(1);
+        var tmp0_elvis_lhs_0 = p.q7n(1);
         var tmp_0;
         if (tmp0_elvis_lhs_0 == null) {
           prematureEndOfStream(1);
@@ -7398,125 +3479,77 @@
           tmp_0 = tmp0_elvis_lhs_0;
         }
         var buffer = tmp_0;
-        var positionBefore = buffer.get_readPosition_70qxnc_k$();
+        var positionBefore = buffer.m7f_1;
         try {
           // Inline function 'io.ktor.utils.io.core.Output.writePacket.<anonymous>' call
-          writeFully_2(this, buffer, remaining.toInt_1tsl84_k$());
+          writeFully_2(this, buffer, remaining.fa());
         }finally {
-          var positionAfter = buffer.get_readPosition_70qxnc_k$();
+          var positionAfter = buffer.m7f_1;
           if (positionAfter < positionBefore) {
             throw IllegalStateException_init_$Create$("Buffer's position shouldn't be rewinded");
           }
-          if (positionAfter === buffer.get_writePosition_jdt81t_k$()) {
-            p.ensureNext_39ripn_k$(buffer);
+          if (positionAfter === buffer.n7f_1) {
+            p.o7n(buffer);
           } else {
-            p.set_headPosition_cd3vm_k$(positionAfter);
+            p.x7g_1 = positionAfter;
           }
         }
         break $l$loop;
       }
     }
   };
-  protoOf(Output).append_nldnbc_k$ = function (csq, start, end) {
-    writeText_0(this, csq, start, end, Charsets_getInstance().get_UTF_8_ihn39z_k$());
-    return this;
+  protoOf(Output).mv = function () {
+    this.y1k();
   };
-  protoOf(Output).release_wu5yyf_k$ = function () {
-    this.close_yn9xrc_k$();
-  };
-  protoOf(Output).prepareWriteHead_ugmxj4_k$ = function (n) {
+  protoOf(Output).s7m = function (n) {
     // Inline function 'io.ktor.utils.io.core.Output.tailRemaining' call
-    if ((this.tailEndExclusive_1 - this.tailPosition_1 | 0) >= n) {
-      var tmp0_safe_receiver = this._tail_1;
+    if ((this.j7d_1 - this.i7d_1 | 0) >= n) {
+      var tmp0_safe_receiver = this.g7d_1;
       if (tmp0_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        tmp0_safe_receiver.commitWrittenUntilIndex_umptfg_k$(this.tailPosition_1);
+        tmp0_safe_receiver.o7k(this.i7d_1);
         return tmp0_safe_receiver;
       }
     }
     return appendNewChunk(this);
   };
-  protoOf(Output).afterHeadWrite_dl47zh_k$ = function () {
-    var tmp0_safe_receiver = this._tail_1;
+  protoOf(Output).i7k = function () {
+    var tmp0_safe_receiver = this.g7d_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      this.tailPosition_1 = tmp0_safe_receiver.get_writePosition_jdt81t_k$();
+      this.i7d_1 = tmp0_safe_receiver.n7f_1;
     }
   };
-  protoOf(Output).write_foiksz_k$ = function (size, block) {
-    var buffer = this.prepareWriteHead_ugmxj4_k$(size);
-    try {
-      var result = block(buffer);
-      // Inline function 'kotlin.check' call
-      // Inline function 'kotlin.contracts.contract' call
-      if (!(result >= 0)) {
-        // Inline function 'io.ktor.utils.io.core.Output.write.<anonymous>' call
-        var message = "The returned value shouldn't be negative";
-        throw IllegalStateException_init_$Create$(toString(message));
-      }
-      return result;
-    }finally {
-      this.afterHeadWrite_dl47zh_k$();
-    }
-  };
-  protoOf(Output).last_7ebqo_k$ = function (buffer) {
-    this.appendSingleChunk_7rbwf9_k$(buffer);
-  };
-  protoOf(Output).afterBytesStolen_t0d06e_k$ = function () {
-    var head = this.get_head_won7e1_k$();
-    if (!(head === Companion_getInstance_4().get_Empty_i9b85g_k$())) {
+  protoOf(Output).t7m = function () {
+    var head = this.p7m();
+    if (!(head === Companion_getInstance_4().a7j_1)) {
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
-      if (!(head.get_next_wor1vg_k$() == null)) {
+      if (!(head.f13() == null)) {
         // Inline function 'kotlin.check.<anonymous>' call
         var message = 'Check failed.';
         throw IllegalStateException_init_$Create$(toString(message));
       }
-      head.resetForWrite_2oalv9_k$();
-      head.reserveEndGap_i4z3fz_k$(Companion_getInstance_1().get_ReservedSize_b4jt5a_k$());
-      this.tailPosition_1 = head.get_writePosition_jdt81t_k$();
-      this.tailInitialPosition_1 = this.tailPosition_1;
-      this.tailEndExclusive_1 = head.get_limit_iuokuq_k$();
+      head.u7k();
+      head.s7k(8);
+      this.i7d_1 = head.n7f_1;
+      this.k7d_1 = this.i7d_1;
+      this.j7d_1 = head.p7f_1;
     }
   };
-  function writeWhileSize(_this__u8e3s4, initialSize, block) {
-    initialSize = initialSize === VOID ? 1 : initialSize;
-    var tail = prepareWriteHead(_this__u8e3s4, initialSize, null);
-    try {
-      var size;
-      $l$loop: while (true) {
-        size = block(tail);
-        if (size <= 0)
-          break $l$loop;
-        tail = prepareWriteHead(_this__u8e3s4, size, tail);
-      }
-    }finally {
-      _this__u8e3s4.afterHeadWrite_dl47zh_k$();
-    }
-  }
-  function writeWhile(_this__u8e3s4, block) {
-    var tail = prepareWriteHead(_this__u8e3s4, 1, null);
-    try {
-      $l$loop: while (block(tail)) {
-        tail = prepareWriteHead(_this__u8e3s4, 1, tail);
-      }
-    }finally {
-      _this__u8e3s4.afterHeadWrite_dl47zh_k$();
-    }
-  }
   function writeFully_2(_this__u8e3s4, src, length) {
     var tmp;
     if (length === VOID) {
       // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-      tmp = src.get_writePosition_jdt81t_k$() - src.get_readPosition_70qxnc_k$() | 0;
+      tmp = src.n7f_1 - src.m7f_1 | 0;
     } else {
       tmp = length;
     }
@@ -7533,7 +3566,7 @@
         // Inline function 'kotlin.comparisons.minOf' call
         var a = remaining;
         // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-        var b = buffer.get_limit_iuokuq_k$() - buffer.get_writePosition_jdt81t_k$() | 0;
+        var b = buffer.p7f_1 - buffer.n7f_1 | 0;
         var size = Math.min(a, b);
         // Inline function 'io.ktor.utils.io.core.writeFully.<anonymous>' call
         writeFully_1(buffer, src, size);
@@ -7544,7 +3577,7 @@
         tail = prepareWriteHead(_this__u8e3s4, 1, tail);
       }
     }finally {
-      _this__u8e3s4.afterHeadWrite_dl47zh_k$();
+      _this__u8e3s4.i7k();
     }
   }
   function writeFully_3(_this__u8e3s4, src, offset, length) {
@@ -7562,7 +3595,7 @@
         // Inline function 'kotlin.comparisons.minOf' call
         var a = remaining;
         // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-        var b = buffer.get_limit_iuokuq_k$() - buffer.get_writePosition_jdt81t_k$() | 0;
+        var b = buffer.p7f_1 - buffer.n7f_1 | 0;
         var size = Math.min(a, b);
         // Inline function 'io.ktor.utils.io.core.writeFully.<anonymous>' call
         var currentOffset_0 = currentOffset;
@@ -7574,106 +3607,19 @@
         tail = prepareWriteHead(_this__u8e3s4, 1, tail);
       }
     }finally {
-      _this__u8e3s4.afterHeadWrite_dl47zh_k$();
-    }
-  }
-  function writeFully_4(_this__u8e3s4, src, offset, length) {
-    writeFully_5(_this__u8e3s4, src, toLong(offset), toLong(length));
-  }
-  function writeFullyBytesTemplate(_this__u8e3s4, offset, length, block) {
-    var currentOffset = offset;
-    var remaining = length;
-    // Inline function 'io.ktor.utils.io.core.writeWhile' call
-    var tail = prepareWriteHead(_this__u8e3s4, 1, null);
-    try {
-      $l$loop: while (true) {
-        // Inline function 'io.ktor.utils.io.core.writeFullyBytesTemplate.<anonymous>' call
-        var buffer = tail;
-        // Inline function 'kotlin.comparisons.minOf' call
-        var a = remaining;
-        // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-        var b = buffer.get_limit_iuokuq_k$() - buffer.get_writePosition_jdt81t_k$() | 0;
-        var size = Math.min(a, b);
-        block(buffer, currentOffset, size);
-        currentOffset = currentOffset + size | 0;
-        remaining = remaining - size | 0;
-        if (!(remaining > 0))
-          break $l$loop;
-        tail = prepareWriteHead(_this__u8e3s4, 1, tail);
-      }
-    }finally {
-      _this__u8e3s4.afterHeadWrite_dl47zh_k$();
-    }
-  }
-  function writeFully_5(_this__u8e3s4, src, offset, length) {
-    // Inline function 'io.ktor.utils.io.core.writeFullyBytesTemplate' call
-    var currentOffset = offset;
-    var remaining = length;
-    // Inline function 'io.ktor.utils.io.core.writeWhile' call
-    var tail = prepareWriteHead(_this__u8e3s4, 1, null);
-    try {
-      $l$loop: while (true) {
-        // Inline function 'io.ktor.utils.io.core.writeFullyBytesTemplate.<anonymous>' call
-        var buffer = tail;
-        // Inline function 'kotlin.comparisons.minOf' call
-        var a = remaining;
-        // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-        var tmp$ret$0 = buffer.get_limit_iuokuq_k$() - buffer.get_writePosition_jdt81t_k$() | 0;
-        var b = toLong(tmp$ret$0);
-        var size = a.compareTo_9jj042_k$(b) <= 0 ? a : b;
-        // Inline function 'io.ktor.utils.io.core.writeFully.<anonymous>' call
-        var memory = buffer.get_memory_gl4362_k$();
-        var destinationOffset = toLong(buffer.get_writePosition_jdt81t_k$());
-        var sourceOffset = currentOffset;
-        src.copyTo_ug0rjx_k$(memory, sourceOffset, size, destinationOffset);
-        buffer.commitWritten_tkztjs_k$(size.toInt_1tsl84_k$());
-        currentOffset = currentOffset.plus_r93sks_k$(size);
-        remaining = remaining.minus_mfbszm_k$(size);
-        if (!(remaining.compareTo_9jj042_k$(new Long(0, 0)) > 0))
-          break $l$loop;
-        tail = prepareWriteHead(_this__u8e3s4, 1, tail);
-      }
-    }finally {
-      _this__u8e3s4.afterHeadWrite_dl47zh_k$();
-    }
-  }
-  function writeFullyBytesTemplate_0(_this__u8e3s4, initialOffset, length, block) {
-    var currentOffset = initialOffset;
-    var remaining = length;
-    // Inline function 'io.ktor.utils.io.core.writeWhile' call
-    var tail = prepareWriteHead(_this__u8e3s4, 1, null);
-    try {
-      $l$loop: while (true) {
-        // Inline function 'io.ktor.utils.io.core.writeFullyBytesTemplate.<anonymous>' call
-        var buffer = tail;
-        // Inline function 'kotlin.comparisons.minOf' call
-        var a = remaining;
-        // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-        var tmp$ret$0 = buffer.get_limit_iuokuq_k$() - buffer.get_writePosition_jdt81t_k$() | 0;
-        var b = toLong(tmp$ret$0);
-        var size = a.compareTo_9jj042_k$(b) <= 0 ? a : b;
-        block(buffer.get_memory_gl4362_k$(), toLong(buffer.get_writePosition_jdt81t_k$()), currentOffset, size);
-        buffer.commitWritten_tkztjs_k$(size.toInt_1tsl84_k$());
-        currentOffset = currentOffset.plus_r93sks_k$(size);
-        remaining = remaining.minus_mfbszm_k$(size);
-        if (!(remaining.compareTo_9jj042_k$(new Long(0, 0)) > 0))
-          break $l$loop;
-        tail = prepareWriteHead(_this__u8e3s4, 1, tail);
-      }
-    }finally {
-      _this__u8e3s4.afterHeadWrite_dl47zh_k$();
+      _this__u8e3s4.i7k();
     }
   }
   function writeShort_0(_this__u8e3s4, value) {
     var tmp$ret$0;
     $l$block: {
       // Inline function 'io.ktor.utils.io.core.writePrimitiveTemplate' call
-      var index = _this__u8e3s4.get_tailPosition_6y9qfy_k$();
-      if ((_this__u8e3s4.get_tailEndExclusive_e33hh8_k$() - index | 0) > 2) {
-        _this__u8e3s4.set_tailPosition_5ggwhe_k$(index + 2 | 0);
+      var index = _this__u8e3s4.i7d_1;
+      if ((_this__u8e3s4.j7d_1 - index | 0) > 2) {
+        _this__u8e3s4.i7d_1 = index + 2 | 0;
         // Inline function 'io.ktor.utils.io.core.writeShort.<anonymous>' call
         // Inline function 'io.ktor.utils.io.bits.storeShortAt' call
-        _this__u8e3s4.get_tailMemory_3da60q_k$().get_view_wow8a6_k$().setInt16(index, value, false);
+        _this__u8e3s4.h7d_1.l7k_1.setInt16(index, value, false);
         tmp$ret$0 = true;
         break $l$block;
       }
@@ -7683,213 +3629,35 @@
       writeShortFallback(_this__u8e3s4, value);
     }
   }
-  function writeInt_0(_this__u8e3s4, value) {
-    var tmp$ret$0;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.writePrimitiveTemplate' call
-      var index = _this__u8e3s4.get_tailPosition_6y9qfy_k$();
-      if ((_this__u8e3s4.get_tailEndExclusive_e33hh8_k$() - index | 0) > 4) {
-        _this__u8e3s4.set_tailPosition_5ggwhe_k$(index + 4 | 0);
-        // Inline function 'io.ktor.utils.io.core.writeInt.<anonymous>' call
-        // Inline function 'io.ktor.utils.io.bits.storeIntAt' call
-        _this__u8e3s4.get_tailMemory_3da60q_k$().get_view_wow8a6_k$().setInt32(index, value, false);
-        tmp$ret$0 = true;
-        break $l$block;
-      }
-      tmp$ret$0 = false;
-    }
-    if (!tmp$ret$0) {
-      writeIntFallback(_this__u8e3s4, value);
-    }
-  }
-  function writeLong_0(_this__u8e3s4, value) {
-    var tmp$ret$0;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.writePrimitiveTemplate' call
-      var index = _this__u8e3s4.get_tailPosition_6y9qfy_k$();
-      if ((_this__u8e3s4.get_tailEndExclusive_e33hh8_k$() - index | 0) > 8) {
-        _this__u8e3s4.set_tailPosition_5ggwhe_k$(index + 8 | 0);
-        // Inline function 'io.ktor.utils.io.core.writeLong.<anonymous>' call
-        // Inline function 'io.ktor.utils.io.bits.storeLongAt' call
-        var this_0 = _this__u8e3s4.get_tailMemory_3da60q_k$();
-        this_0.get_view_wow8a6_k$().setInt32(index, value.shr_9fl3wl_k$(32).toInt_1tsl84_k$(), false);
-        this_0.get_view_wow8a6_k$().setInt32(index + 4 | 0, value.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$(), false);
-        tmp$ret$0 = true;
-        break $l$block;
-      }
-      tmp$ret$0 = false;
-    }
-    if (!tmp$ret$0) {
-      writeLongFallback(_this__u8e3s4, value);
-    }
-  }
-  function writeFloat(_this__u8e3s4, value) {
-    var tmp$ret$0;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.writePrimitiveTemplate' call
-      var index = _this__u8e3s4.get_tailPosition_6y9qfy_k$();
-      if ((_this__u8e3s4.get_tailEndExclusive_e33hh8_k$() - index | 0) > 4) {
-        _this__u8e3s4.set_tailPosition_5ggwhe_k$(index + 4 | 0);
-        // Inline function 'io.ktor.utils.io.core.writeFloat.<anonymous>' call
-        // Inline function 'io.ktor.utils.io.bits.storeFloatAt' call
-        _this__u8e3s4.get_tailMemory_3da60q_k$().get_view_wow8a6_k$().setFloat32(index, value, false);
-        tmp$ret$0 = true;
-        break $l$block;
-      }
-      tmp$ret$0 = false;
-    }
-    if (!tmp$ret$0) {
-      writeIntFallback(_this__u8e3s4, toRawBits(value));
-    }
-  }
-  function writeDouble(_this__u8e3s4, value) {
-    var tmp$ret$0;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.writePrimitiveTemplate' call
-      var index = _this__u8e3s4.get_tailPosition_6y9qfy_k$();
-      if ((_this__u8e3s4.get_tailEndExclusive_e33hh8_k$() - index | 0) > 8) {
-        _this__u8e3s4.set_tailPosition_5ggwhe_k$(index + 8 | 0);
-        // Inline function 'io.ktor.utils.io.core.writeDouble.<anonymous>' call
-        // Inline function 'io.ktor.utils.io.bits.storeDoubleAt' call
-        _this__u8e3s4.get_tailMemory_3da60q_k$().get_view_wow8a6_k$().setFloat64(index, value, false);
-        tmp$ret$0 = true;
-        break $l$block;
-      }
-      tmp$ret$0 = false;
-    }
-    if (!tmp$ret$0) {
-      writeLongFallback(_this__u8e3s4, toRawBits_0(value));
-    }
-  }
-  function writePrimitiveTemplate(_this__u8e3s4, componentSize, block) {
-    var index = _this__u8e3s4.get_tailPosition_6y9qfy_k$();
-    if ((_this__u8e3s4.get_tailEndExclusive_e33hh8_k$() - index | 0) > componentSize) {
-      _this__u8e3s4.set_tailPosition_5ggwhe_k$(index + componentSize | 0);
-      block(_this__u8e3s4.get_tailMemory_3da60q_k$(), index);
-      return true;
-    }
-    return false;
-  }
   function writeShortFallback(_this__u8e3s4, value) {
     // Inline function 'io.ktor.utils.io.core.writePrimitiveFallbackTemplate' call
-    var tail = _this__u8e3s4.prepareWriteHead_ugmxj4_k$(2);
+    var tail = _this__u8e3s4.s7m(2);
     // Inline function 'io.ktor.utils.io.core.writeShortFallback.<anonymous>' call
     writeShort(tail, value);
-    _this__u8e3s4.afterHeadWrite_dl47zh_k$();
+    _this__u8e3s4.i7k();
     if (!true) {
       // Inline function 'io.ktor.utils.io.bits.highByte' call
       var tmp$ret$1 = toByte(value >>> 8 | 0);
-      _this__u8e3s4.writeByte_9ih3z3_k$(tmp$ret$1);
+      _this__u8e3s4.b7l(tmp$ret$1);
       // Inline function 'io.ktor.utils.io.bits.lowByte' call
       var tmp$ret$2 = toByte(value & 255);
-      _this__u8e3s4.writeByte_9ih3z3_k$(tmp$ret$2);
+      _this__u8e3s4.b7l(tmp$ret$2);
     }
-  }
-  function writeIntFallback(_this__u8e3s4, value) {
-    // Inline function 'io.ktor.utils.io.core.writePrimitiveFallbackTemplate' call
-    var tail = _this__u8e3s4.prepareWriteHead_ugmxj4_k$(4);
-    // Inline function 'io.ktor.utils.io.core.writeIntFallback.<anonymous>' call
-    writeInt(tail, value);
-    _this__u8e3s4.afterHeadWrite_dl47zh_k$();
-    if (!true) {
-      writeIntByteByByte(_this__u8e3s4, value);
-    }
-  }
-  function writeLongFallback(_this__u8e3s4, value) {
-    // Inline function 'io.ktor.utils.io.core.writePrimitiveFallbackTemplate' call
-    var tail = _this__u8e3s4.prepareWriteHead_ugmxj4_k$(8);
-    // Inline function 'io.ktor.utils.io.core.writeLongFallback.<anonymous>' call
-    writeLong(tail, value);
-    _this__u8e3s4.afterHeadWrite_dl47zh_k$();
-    if (!true) {
-      // Inline function 'io.ktor.utils.io.bits.highInt' call
-      var tmp$ret$1 = value.ushr_z7nmq8_k$(32).toInt_1tsl84_k$();
-      writeIntByteByByte(_this__u8e3s4, tmp$ret$1);
-      // Inline function 'io.ktor.utils.io.bits.lowInt' call
-      var tmp$ret$2 = value.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$();
-      writeIntByteByByte(_this__u8e3s4, tmp$ret$2);
-    }
-  }
-  function writePrimitiveFallbackTemplate(_this__u8e3s4, componentSize, writeOperation) {
-    var tail = _this__u8e3s4.prepareWriteHead_ugmxj4_k$(componentSize);
-    writeOperation(tail);
-    _this__u8e3s4.afterHeadWrite_dl47zh_k$();
-    return true;
-  }
-  function writeIntByteByByte(_this__u8e3s4, value) {
-    // Inline function 'kotlin.let' call
-    // Inline function 'io.ktor.utils.io.bits.highShort' call
-    // Inline function 'kotlin.contracts.contract' call
-    var it = toShort(value >>> 16 | 0);
-    // Inline function 'io.ktor.utils.io.bits.highByte' call
-    var tmp$ret$1 = toByte(it >>> 8 | 0);
-    _this__u8e3s4.writeByte_9ih3z3_k$(tmp$ret$1);
-    // Inline function 'io.ktor.utils.io.bits.lowByte' call
-    var tmp$ret$2 = toByte(it & 255);
-    _this__u8e3s4.writeByte_9ih3z3_k$(tmp$ret$2);
-    // Inline function 'kotlin.let' call
-    // Inline function 'io.ktor.utils.io.bits.lowShort' call
-    // Inline function 'kotlin.contracts.contract' call
-    var it_0 = toShort(value & 65535);
-    // Inline function 'io.ktor.utils.io.bits.highByte' call
-    var tmp$ret$5 = toByte(it_0 >>> 8 | 0);
-    _this__u8e3s4.writeByte_9ih3z3_k$(tmp$ret$5);
-    // Inline function 'io.ktor.utils.io.bits.lowByte' call
-    var tmp$ret$6 = toByte(it_0 & 255);
-    _this__u8e3s4.writeByte_9ih3z3_k$(tmp$ret$6);
-  }
-  function get_isEmpty(_this__u8e3s4) {
-    return _this__u8e3s4.get_endOfInput_skegkh_k$();
-  }
-  function get_isNotEmpty(_this__u8e3s4) {
-    return !_this__u8e3s4.get_endOfInput_skegkh_k$();
-  }
-  function read_0(_this__u8e3s4, n, block) {
-    n = n === VOID ? 1 : n;
-    // Inline function 'kotlin.contracts.contract' call
-    var tmp0_elvis_lhs = _this__u8e3s4.prepareRead_yxo41n_k$(n);
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      prematureEndOfStream(n);
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    var buffer = tmp;
-    var positionBefore = buffer.get_readPosition_70qxnc_k$();
-    try {
-      block(buffer);
-    }finally {
-      var positionAfter = buffer.get_readPosition_70qxnc_k$();
-      if (positionAfter < positionBefore) {
-        throw IllegalStateException_init_$Create$("Buffer's position shouldn't be rewinded");
-      }
-      if (positionAfter === buffer.get_writePosition_jdt81t_k$()) {
-        _this__u8e3s4.ensureNext_39ripn_k$(buffer);
-      } else {
-        _this__u8e3s4.set_headPosition_cd3vm_k$(positionAfter);
-      }
-    }
-  }
-  function toByteArray(_this__u8e3s4, charset) {
-    charset = charset === VOID ? Charsets_getInstance().get_UTF_8_ihn39z_k$() : charset;
-    if (charset.equals(Charsets_getInstance().get_UTF_8_ihn39z_k$()))
-      return encodeToByteArray(_this__u8e3s4);
-    return encodeToByteArray_0(charset.newEncoder_gqwcdg_k$(), _this__u8e3s4, 0, _this__u8e3s4.length);
   }
   function readText(_this__u8e3s4, charset, max) {
-    charset = charset === VOID ? Charsets_getInstance().get_UTF_8_ihn39z_k$() : charset;
-    max = max === VOID ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : max;
-    return decode(charset.newDecoder_zcettw_k$(), _this__u8e3s4, max);
+    charset = charset === VOID ? Charsets_getInstance().u7n_1 : charset;
+    max = max === VOID ? IntCompanionObject_instance.MAX_VALUE : max;
+    return decode(charset.x7n(), _this__u8e3s4, max);
   }
   function readBytes(_this__u8e3s4, n) {
     var tmp;
     if (n === VOID) {
       // Inline function 'io.ktor.utils.io.core.coerceAtMostMaxIntOrFail' call
-      var this_0 = _this__u8e3s4.get_remaining_mwegr1_k$();
+      var this_0 = _this__u8e3s4.b7h();
       var message = 'Unable to convert to a ByteArray: packet is too big';
-      if (this_0.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) > 0)
+      if (this_0.x9(toLong(IntCompanionObject_instance.MAX_VALUE)) > 0)
         throw IllegalArgumentException_init_$Create$(message);
-      tmp = this_0.toInt_1tsl84_k$();
+      tmp = this_0.fa();
     } else {
       tmp = n;
     }
@@ -7900,7 +3668,7 @@
       var this_1 = new Int8Array(n);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'io.ktor.utils.io.core.readBytes.<anonymous>' call
-      readFully_3(_this__u8e3s4, this_1, 0, n);
+      readFully_1(_this__u8e3s4, this_1, 0, n);
       tmp_0 = this_1;
     } else {
       tmp_0 = get_EmptyByteArray();
@@ -7911,26 +3679,17 @@
     throw new EOFException('Premature end of stream: expected ' + size + ' bytes');
   }
   function readTextExactBytes(_this__u8e3s4, bytesCount, charset) {
-    charset = charset === VOID ? Charsets_getInstance().get_UTF_8_ihn39z_k$() : charset;
-    return decodeExactBytes(charset.newDecoder_zcettw_k$(), _this__u8e3s4, bytesCount);
+    charset = charset === VOID ? Charsets_getInstance().u7n_1 : charset;
+    return decodeExactBytes(charset.x7n(), _this__u8e3s4, bytesCount);
   }
   function writeText(_this__u8e3s4, text, fromIndex, toIndex, charset) {
     fromIndex = fromIndex === VOID ? 0 : fromIndex;
     toIndex = toIndex === VOID ? charSequenceLength(text) : toIndex;
-    charset = charset === VOID ? Charsets_getInstance().get_UTF_8_ihn39z_k$() : charset;
-    if (charset === Charsets_getInstance().get_UTF_8_ihn39z_k$()) {
+    charset = charset === VOID ? Charsets_getInstance().u7n_1 : charset;
+    if (charset === Charsets_getInstance().u7n_1) {
       return writeTextUtf8(_this__u8e3s4, text, fromIndex, toIndex);
     }
-    encodeToImpl(charset.newEncoder_gqwcdg_k$(), _this__u8e3s4, text, fromIndex, toIndex);
-  }
-  function writeText_0(_this__u8e3s4, text, fromIndex, toIndex, charset) {
-    fromIndex = fromIndex === VOID ? 0 : fromIndex;
-    toIndex = toIndex === VOID ? text.length : toIndex;
-    charset = charset === VOID ? Charsets_getInstance().get_UTF_8_ihn39z_k$() : charset;
-    if (charset === Charsets_getInstance().get_UTF_8_ihn39z_k$()) {
-      return writeTextUtf8(_this__u8e3s4, new CharArraySequence(text, 0, text.length), fromIndex, toIndex);
-    }
-    encode(charset.newEncoder_gqwcdg_k$(), text, fromIndex, toIndex, _this__u8e3s4);
+    encodeToImpl(charset.y7n(), _this__u8e3s4, text, fromIndex, toIndex);
   }
   function writeTextUtf8(_this__u8e3s4, text, fromIndex, toIndex) {
     var index = fromIndex;
@@ -7941,9 +3700,9 @@
       $l$loop: while (true) {
         // Inline function 'io.ktor.utils.io.core.writeTextUtf8.<anonymous>' call
         var buffer = tail;
-        var memory = buffer.get_memory_gl4362_k$();
-        var dstOffset = buffer.get_writePosition_jdt81t_k$();
-        var dstLimit = buffer.get_limit_iuokuq_k$();
+        var memory = buffer.l7f_1;
+        var dstOffset = buffer.n7f_1;
+        var dstLimit = buffer.p7f_1;
         var tmp0_container = encodeUTF8(memory, text, index, toIndex, dstOffset, dstLimit);
         var characters = EncodeResult__component1_impl_36tlhi(tmp0_container);
         var bytes = EncodeResult__component2_impl_3nv7vp(tmp0_container);
@@ -7952,7 +3711,7 @@
         index = tmp + (_UShort___get_data__impl__g0245(characters) & 65535) | 0;
         // Inline function 'kotlin.UShort.toInt' call
         var tmp$ret$1 = _UShort___get_data__impl__g0245(bytes) & 65535;
-        buffer.commitWritten_tkztjs_k$(tmp$ret$1);
+        buffer.n7k(tmp$ret$1);
         var tmp_0;
         var tmp_1;
         // Inline function 'kotlin.UShort.toInt' call
@@ -7976,146 +3735,66 @@
         tail = prepareWriteHead(_this__u8e3s4, size, tail);
       }
     }finally {
-      _this__u8e3s4.afterHeadWrite_dl47zh_k$();
+      _this__u8e3s4.i7k();
     }
   }
-  function _get_array__jslnqg($this) {
-    return $this.array_1;
-  }
-  function _get_offset__c6qzmg($this) {
-    return $this.offset_1;
-  }
-  function indexOutOfBounds($this, index) {
-    throw IndexOutOfBoundsException_init_$Create$('String index out of bounds: ' + index + ' > ' + $this.length_1);
-  }
-  function CharArraySequence(array, offset, length) {
-    this.array_1 = array;
-    this.offset_1 = offset;
-    this.length_1 = length;
-  }
-  protoOf(CharArraySequence).get_length_g42xv3_k$ = function () {
-    return this.length_1;
-  };
-  protoOf(CharArraySequence).get_kdzpvg_k$ = function (index) {
-    if (index >= this.length_1) {
-      indexOutOfBounds(this, index);
-    }
-    return this.array_1[index + this.offset_1 | 0];
-  };
-  protoOf(CharArraySequence).subSequence_hm5hnj_k$ = function (startIndex, endIndex) {
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!(startIndex >= 0)) {
-      // Inline function 'io.ktor.utils.io.core.internal.CharArraySequence.subSequence.<anonymous>' call
-      var message = "startIndex shouldn't be negative: " + startIndex;
-      throw IllegalArgumentException_init_$Create$(toString(message));
-    }
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!(startIndex <= this.length_1)) {
-      // Inline function 'io.ktor.utils.io.core.internal.CharArraySequence.subSequence.<anonymous>' call
-      var message_0 = 'startIndex is too large: ' + startIndex + ' > ' + this.length_1;
-      throw IllegalArgumentException_init_$Create$(toString(message_0));
-    }
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!((startIndex + endIndex | 0) <= this.length_1)) {
-      // Inline function 'io.ktor.utils.io.core.internal.CharArraySequence.subSequence.<anonymous>' call
-      var message_1 = 'endIndex is too large: ' + endIndex + ' > ' + this.length_1;
-      throw IllegalArgumentException_init_$Create$(toString(message_1));
-    }
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!(endIndex >= startIndex)) {
-      // Inline function 'io.ktor.utils.io.core.internal.CharArraySequence.subSequence.<anonymous>' call
-      var message_2 = 'endIndex should be greater or equal to startIndex: ' + startIndex + ' > ' + endIndex;
-      throw IllegalArgumentException_init_$Create$(toString(message_2));
-    }
-    return new CharArraySequence(this.array_1, this.offset_1 + startIndex | 0, endIndex - startIndex | 0);
-  };
   function ChunkBuffer$Companion$EmptyPool$1() {
   }
-  protoOf(ChunkBuffer$Companion$EmptyPool$1).get_capacity_wxbgcd_k$ = function () {
-    return 1;
+  protoOf(ChunkBuffer$Companion$EmptyPool$1).h7m = function () {
+    return Companion_getInstance_4().a7j_1;
   };
-  protoOf(ChunkBuffer$Companion$EmptyPool$1).borrow_mvkpor_k$ = function () {
-    return Companion_getInstance_4().Empty_1;
-  };
-  protoOf(ChunkBuffer$Companion$EmptyPool$1).recycle_2vlm99_k$ = function (instance) {
+  protoOf(ChunkBuffer$Companion$EmptyPool$1).z7n = function (instance) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(instance === Companion_getInstance_4().Empty_1)) {
+    if (!(instance === Companion_getInstance_4().a7j_1)) {
       // Inline function 'io.ktor.utils.io.core.internal.<no name provided>.recycle.<anonymous>' call
       var message = 'Only ChunkBuffer.Empty instance could be recycled.';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChunkBuffer$Companion$EmptyPool$1).recycle_d2xv5h_k$ = function (instance) {
-    return this.recycle_2vlm99_k$(instance instanceof ChunkBuffer ? instance : THROW_CCE());
-  };
-  protoOf(ChunkBuffer$Companion$EmptyPool$1).dispose_3nnxhr_k$ = function () {
+  protoOf(ChunkBuffer$Companion$EmptyPool$1).i7m = function (instance) {
+    return this.z7n(instance instanceof ChunkBuffer ? instance : THROW_CCE());
   };
   function ChunkBuffer$Companion$NoPool$1() {
     NoPoolImpl.call(this);
   }
-  protoOf(ChunkBuffer$Companion$NoPool$1).borrow_mvkpor_k$ = function () {
-    return new ChunkBuffer(DefaultAllocator_getInstance().alloc_l8bx4z_k$(get_DEFAULT_BUFFER_SIZE()), null, this);
+  protoOf(ChunkBuffer$Companion$NoPool$1).h7m = function () {
+    return new ChunkBuffer(DefaultAllocator_instance.j7l(get_DEFAULT_BUFFER_SIZE()), null, this);
   };
-  protoOf(ChunkBuffer$Companion$NoPool$1).recycle_2vlm99_k$ = function (instance) {
-    DefaultAllocator_getInstance().free_r48ke1_k$(instance.get_memory_gl4362_k$());
+  protoOf(ChunkBuffer$Companion$NoPool$1).z7n = function (instance) {
+    DefaultAllocator_instance.l7l(instance.l7f_1);
   };
-  protoOf(ChunkBuffer$Companion$NoPool$1).recycle_d2xv5h_k$ = function (instance) {
-    return this.recycle_2vlm99_k$(instance instanceof ChunkBuffer ? instance : THROW_CCE());
+  protoOf(ChunkBuffer$Companion$NoPool$1).i7m = function (instance) {
+    return this.z7n(instance instanceof ChunkBuffer ? instance : THROW_CCE());
   };
   function ChunkBuffer$Companion$NoPoolManuallyManaged$1() {
     NoPoolImpl.call(this);
   }
-  protoOf(ChunkBuffer$Companion$NoPoolManuallyManaged$1).borrow_mvkpor_k$ = function () {
-    throw UnsupportedOperationException_init_$Create$_0("This pool doesn't support borrow");
+  protoOf(ChunkBuffer$Companion$NoPoolManuallyManaged$1).h7m = function () {
+    throw UnsupportedOperationException_init_$Create$("This pool doesn't support borrow");
   };
-  protoOf(ChunkBuffer$Companion$NoPoolManuallyManaged$1).recycle_2vlm99_k$ = function (instance) {
+  protoOf(ChunkBuffer$Companion$NoPoolManuallyManaged$1).z7n = function (instance) {
   };
-  protoOf(ChunkBuffer$Companion$NoPoolManuallyManaged$1).recycle_d2xv5h_k$ = function (instance) {
-    return this.recycle_2vlm99_k$(instance instanceof ChunkBuffer ? instance : THROW_CCE());
+  protoOf(ChunkBuffer$Companion$NoPoolManuallyManaged$1).i7m = function (instance) {
+    return this.z7n(instance instanceof ChunkBuffer ? instance : THROW_CCE());
   };
-  function _get_nextRef__cbbs0f($this) {
-    return $this.nextRef_1;
-  }
-  function _get_refCount__6xgqup($this) {
-    return $this.refCount_1;
-  }
-  function _set_origin__gfzohd($this, _set____db54di) {
-    $this.origin_1 = _set____db54di;
-  }
   function appendNext($this, chunk) {
-    if (!$this.nextRef_1.atomicfu$compareAndSet(null, chunk)) {
+    if (!$this.x7l_1.atomicfu$compareAndSet(null, chunk)) {
       throw IllegalStateException_init_$Create$('This chunk has already a next chunk.');
     }
   }
   function Companion_2() {
     Companion_instance_2 = this;
     var tmp = this;
-    tmp.EmptyPool_1 = new ChunkBuffer$Companion$EmptyPool$1();
-    this.Empty_1 = new ChunkBuffer(Companion_getInstance_6().get_Empty_i9b85g_k$(), null, this.EmptyPool_1);
+    tmp.z7i_1 = new ChunkBuffer$Companion$EmptyPool$1();
+    this.a7j_1 = new ChunkBuffer(Companion_getInstance_6().t7n_1, null, this.z7i_1);
     var tmp_0 = this;
-    tmp_0.NoPool_1 = new ChunkBuffer$Companion$NoPool$1();
+    tmp_0.b7j_1 = new ChunkBuffer$Companion$NoPool$1();
     var tmp_1 = this;
-    tmp_1.NoPoolManuallyManaged_1 = new ChunkBuffer$Companion$NoPoolManuallyManaged$1();
+    tmp_1.c7j_1 = new ChunkBuffer$Companion$NoPoolManuallyManaged$1();
   }
-  protoOf(Companion_2).get_Pool_wo83gl_k$ = function () {
+  protoOf(Companion_2).d7j = function () {
     return get_DefaultChunkedBufferPool();
-  };
-  protoOf(Companion_2).get_EmptyPool_i65buo_k$ = function () {
-    return this.EmptyPool_1;
-  };
-  protoOf(Companion_2).get_Empty_i9b85g_k$ = function () {
-    return this.Empty_1;
-  };
-  protoOf(Companion_2).get_NoPool_21p86e_k$ = function () {
-    return this.NoPool_1;
-  };
-  protoOf(Companion_2).get_NoPoolManuallyManaged_qxqaiu_k$ = function () {
-    return this.NoPoolManuallyManaged_1;
   };
   var Companion_instance_2;
   function Companion_getInstance_4() {
@@ -8126,7 +3805,7 @@
   function ChunkBuffer(memory, origin, parentPool) {
     Companion_getInstance_4();
     Buffer.call(this, memory);
-    this.parentPool_1 = parentPool;
+    this.w7l_1 = parentPool;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!!(origin === this)) {
@@ -8134,72 +3813,66 @@
       var message = "A chunk couldn't be a view of itself.";
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    this.nextRef_1 = atomic$ref$1(null);
-    this.refCount_1 = atomic$int$1(1);
-    this.origin_1 = origin;
+    this.x7l_1 = atomic$ref$1(null);
+    this.y7l_1 = atomic$int$1(1);
+    this.z7l_1 = origin;
   }
-  protoOf(ChunkBuffer).get_parentPool_o7zxjl_k$ = function () {
-    return this.parentPool_1;
-  };
-  protoOf(ChunkBuffer).get_origin_hq9xkf_k$ = function () {
-    return this.origin_1;
-  };
-  protoOf(ChunkBuffer).set_next_v483mr_k$ = function (newValue) {
+  protoOf(ChunkBuffer).s7n = function (newValue) {
     if (newValue == null) {
-      this.cleanNext_l2yy3o_k$();
+      this.j7m();
     } else {
       appendNext(this, newValue);
     }
   };
-  protoOf(ChunkBuffer).get_next_wor1vg_k$ = function () {
-    return this.nextRef_1.get_kotlinx$atomicfu$value_vi2am5_k$();
+  protoOf(ChunkBuffer).f13 = function () {
+    return this.x7l_1.kotlinx$atomicfu$value;
   };
-  protoOf(ChunkBuffer).get_referenceCount_1ialcd_k$ = function () {
-    return this.refCount_1.get_kotlinx$atomicfu$value_vi2am5_k$();
+  protoOf(ChunkBuffer).d7m = function () {
+    return this.y7l_1.kotlinx$atomicfu$value;
   };
-  protoOf(ChunkBuffer).cleanNext_l2yy3o_k$ = function () {
-    return this.nextRef_1.atomicfu$getAndSet(null);
+  protoOf(ChunkBuffer).j7m = function () {
+    return this.x7l_1.atomicfu$getAndSet(null);
   };
-  protoOf(ChunkBuffer).duplicate_jvgc97_k$ = function () {
+  protoOf(ChunkBuffer).a7o = function () {
     // Inline function 'kotlin.let' call
-    var tmp0_elvis_lhs = this.origin_1;
+    var tmp0_elvis_lhs = this.z7l_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.internal.ChunkBuffer.duplicate.<anonymous>' call
     var newOrigin = tmp0_elvis_lhs == null ? this : tmp0_elvis_lhs;
-    newOrigin.acquire_9gxgqi_k$();
+    newOrigin.b7o();
     // Inline function 'kotlin.also' call
-    var this_0 = new ChunkBuffer(this.get_memory_gl4362_k$(), newOrigin, this.parentPool_1);
+    var this_0 = new ChunkBuffer(this.l7f_1, newOrigin, this.w7l_1);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.internal.ChunkBuffer.duplicate.<anonymous>.<anonymous>' call
-    this.duplicateTo_5gqm85_k$(this_0);
+    this.z7k(this_0);
     return this_0;
   };
-  protoOf(ChunkBuffer).release_vbevvg_k$ = function (pool) {
-    if (this.release_i1b8cn_k$()) {
-      var origin = this.origin_1;
+  protoOf(ChunkBuffer).k7m = function (pool) {
+    if (this.c7o()) {
+      var origin = this.z7l_1;
       if (!(origin == null)) {
-        this.unlink_ie9ubh_k$();
-        origin.release_vbevvg_k$(pool);
+        this.a7m();
+        origin.k7m(pool);
       } else {
-        var tmp0_elvis_lhs = this.parentPool_1;
+        var tmp0_elvis_lhs = this.w7l_1;
         var poolToUse = tmp0_elvis_lhs == null ? pool : tmp0_elvis_lhs;
-        poolToUse.recycle_d2xv5h_k$(this);
+        poolToUse.i7m(this);
       }
     }
   };
-  protoOf(ChunkBuffer).unlink_ie9ubh_k$ = function () {
-    if (!this.refCount_1.atomicfu$compareAndSet(0, -1)) {
+  protoOf(ChunkBuffer).a7m = function () {
+    if (!this.y7l_1.atomicfu$compareAndSet(0, -1)) {
       throw IllegalStateException_init_$Create$('Unable to unlink: buffer is in use.');
     }
-    this.cleanNext_l2yy3o_k$();
-    this.origin_1 = null;
+    this.j7m();
+    this.z7l_1 = null;
   };
-  protoOf(ChunkBuffer).acquire_9gxgqi_k$ = function () {
+  protoOf(ChunkBuffer).b7o = function () {
     $l$block: {
       // Inline function 'kotlinx.atomicfu.update' call
-      var this_0 = this.refCount_1;
+      var this_0 = this.y7l_1;
       while (true) {
-        var cur = this_0.get_kotlinx$atomicfu$value_vi2am5_k$();
+        var cur = this_0.kotlinx$atomicfu$value;
         // Inline function 'io.ktor.utils.io.core.internal.ChunkBuffer.acquire.<anonymous>' call
         if (cur <= 0)
           throw IllegalStateException_init_$Create$('Unable to acquire chunk: it is already released.');
@@ -8210,12 +3883,12 @@
       }
     }
   };
-  protoOf(ChunkBuffer).unpark_bsw1f_k$ = function () {
+  protoOf(ChunkBuffer).g7m = function () {
     $l$block: {
       // Inline function 'kotlinx.atomicfu.update' call
-      var this_0 = this.refCount_1;
+      var this_0 = this.y7l_1;
       while (true) {
-        var cur = this_0.get_kotlinx$atomicfu$value_vi2am5_k$();
+        var cur = this_0.kotlinx$atomicfu$value;
         // Inline function 'io.ktor.utils.io.core.internal.ChunkBuffer.unpark.<anonymous>' call
         if (cur < 0) {
           throw IllegalStateException_init_$Create$("This instance is already disposed and couldn't be borrowed.");
@@ -8230,13 +3903,13 @@
       }
     }
   };
-  protoOf(ChunkBuffer).release_i1b8cn_k$ = function () {
+  protoOf(ChunkBuffer).c7o = function () {
     var tmp$ret$1;
     $l$block: {
       // Inline function 'kotlinx.atomicfu.updateAndGet' call
-      var this_0 = this.refCount_1;
+      var this_0 = this.y7l_1;
       while (true) {
-        var cur = this_0.get_kotlinx$atomicfu$value_vi2am5_k$();
+        var cur = this_0.kotlinx$atomicfu$value;
         // Inline function 'io.ktor.utils.io.core.internal.ChunkBuffer.release.<anonymous>' call
         if (cur <= 0)
           throw IllegalStateException_init_$Create$('Unable to release: it is already released.');
@@ -8249,19 +3922,19 @@
     }
     return tmp$ret$1 === 0;
   };
-  protoOf(ChunkBuffer).reset_5u6xz3_k$ = function () {
+  protoOf(ChunkBuffer).a26 = function () {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this.origin_1 == null)) {
+    if (!(this.z7l_1 == null)) {
       // Inline function 'io.ktor.utils.io.core.internal.ChunkBuffer.reset.<anonymous>' call
       var message = 'Unable to reset buffer with origin';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    protoOf(Buffer).reset_5u6xz3_k$.call(this);
-    this.nextRef_1.set_kotlinx$atomicfu$value_508e3y_k$(null);
+    protoOf(Buffer).a26.call(this);
+    this.x7l_1.kotlinx$atomicfu$value = null;
   };
   function isExclusivelyOwned(_this__u8e3s4) {
-    return _this__u8e3s4.get_referenceCount_1ialcd_k$() === 1;
+    return _this__u8e3s4.d7m() === 1;
   }
   function _EncodeResult___init__impl__vkc0cy(value) {
     return value;
@@ -8296,149 +3969,12 @@
   function EncodeResult__component2_impl_3nv7vp($this) {
     return _EncodeResult___get_bytes__impl__bt0kq0($this);
   }
-  function EncodeResult__toString_impl_ck9qjy($this) {
-    return 'EncodeResult(value=' + $this + ')';
-  }
-  function EncodeResult__hashCode_impl_96w68x($this) {
-    return $this;
-  }
-  function EncodeResult__equals_impl_szairf($this, other) {
-    if (!(other instanceof EncodeResult))
-      return false;
-    if (!($this === (other instanceof EncodeResult ? other.value_1 : THROW_CCE())))
-      return false;
-    return true;
-  }
-  function EncodeResult(value) {
-    this.value_1 = value;
-  }
-  protoOf(EncodeResult).toString = function () {
-    return EncodeResult__toString_impl_ck9qjy(this.value_1);
-  };
-  protoOf(EncodeResult).hashCode = function () {
-    return EncodeResult__hashCode_impl_96w68x(this.value_1);
-  };
-  protoOf(EncodeResult).equals = function (other) {
-    return EncodeResult__equals_impl_szairf(this.value_1, other);
-  };
-  function toIntOrFail(_this__u8e3s4, name) {
-    if (_this__u8e3s4.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
-      failLongToIntConversion(_this__u8e3s4, name);
-    }
-    return _this__u8e3s4.toInt_1tsl84_k$();
-  }
   function failLongToIntConversion(value, name) {
     throw IllegalArgumentException_init_$Create$('Long value ' + value.toString() + ' of ' + name + " doesn't fit into 32-bit integer");
-  }
-  function decodeASCII(_this__u8e3s4, consumer) {
-    // Inline function 'io.ktor.utils.io.core.read' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.internal.decodeASCII.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    var endExclusive = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var inductionVariable = start;
-    if (inductionVariable < endExclusive)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'io.ktor.utils.io.bits.get' call
-        // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-        var codepoint = memory.get_view_wow8a6_k$().getInt8(index) & 255;
-        if ((codepoint & 128) === 128 ? true : !consumer(new Char(numberToChar(codepoint)))) {
-          _this__u8e3s4.discardExact_11sae1_k$(index - start | 0);
-          return false;
-        }
-      }
-       while (inductionVariable < endExclusive);
-    var rc = endExclusive - start | 0;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-    return true;
   }
   function MalformedUTF8InputException(message) {
     Exception_init_$Init$(message, this);
     captureStack(this, MalformedUTF8InputException);
-  }
-  function decodeUTF8(_this__u8e3s4, consumer) {
-    var byteCount = 0;
-    var value = 0;
-    var lastByteCount = 0;
-    // Inline function 'io.ktor.utils.io.core.read' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.internal.decodeUTF8.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    var endExclusive = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var inductionVariable = start;
-    if (inductionVariable < endExclusive)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'io.ktor.utils.io.bits.get' call
-        // Inline function 'io.ktor.utils.io.bits.Memory.loadAt' call
-        var v = memory.get_view_wow8a6_k$().getInt8(index) & 255;
-        if ((v & 128) === 0) {
-          if (!(byteCount === 0)) {
-            malformedByteCount(byteCount);
-          }
-          if (!consumer(new Char(numberToChar(v)))) {
-            _this__u8e3s4.discardExact_11sae1_k$(index - start | 0);
-            return -1;
-          }
-        } else if (byteCount === 0) {
-          var mask = 128;
-          value = v;
-          var inductionVariable_0 = 1;
-          if (inductionVariable_0 <= 6)
-            $l$loop: do {
-              var i = inductionVariable_0;
-              inductionVariable_0 = inductionVariable_0 + 1 | 0;
-              if (!((value & mask) === 0)) {
-                value = value & ~mask;
-                mask = mask >> 1;
-                byteCount = byteCount + 1 | 0;
-              } else {
-                break $l$loop;
-              }
-            }
-             while (inductionVariable_0 <= 6);
-          lastByteCount = byteCount;
-          byteCount = byteCount - 1 | 0;
-          if (lastByteCount > (endExclusive - index | 0)) {
-            _this__u8e3s4.discardExact_11sae1_k$(index - start | 0);
-            return lastByteCount;
-          }
-        } else {
-          value = value << 6 | v & 127;
-          byteCount = byteCount - 1 | 0;
-          if (byteCount === 0) {
-            if (isBmpCodePoint(value)) {
-              if (!consumer(new Char(numberToChar(value)))) {
-                _this__u8e3s4.discardExact_11sae1_k$(((index - start | 0) - lastByteCount | 0) + 1 | 0);
-                return -1;
-              }
-            } else if (!isValidCodePoint(value)) {
-              malformedCodePoint(value);
-            } else {
-              if (!consumer(new Char(numberToChar(highSurrogate(value)))) ? true : !consumer(new Char(numberToChar(lowSurrogate(value))))) {
-                _this__u8e3s4.discardExact_11sae1_k$(((index - start | 0) - lastByteCount | 0) + 1 | 0);
-                return -1;
-              }
-            }
-            value = 0;
-          }
-        }
-      }
-       while (inductionVariable < endExclusive);
-    var rc = endExclusive - start | 0;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-    return 0;
-  }
-  function decodeUTF8LineLoopSuspend(out, limit, nextChunk, afterRead, $completion) {
-    var tmp = new $decodeUTF8LineLoopSuspendCOROUTINE$51(out, limit, nextChunk, afterRead, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
   }
   function malformedByteCount(byteCount) {
     throw new MalformedUTF8InputException('Expected ' + byteCount + ' more character bytes');
@@ -8458,82 +3994,18 @@
   function lowSurrogate(cp) {
     return (cp & 1023) + 56320 | 0;
   }
-  function prematureEndOfStreamUtf(size) {
-    throw new EOFException('Premature end of stream: expected ' + size + ' bytes to decode UTF-8 char');
-  }
-  function get_MaxCodePoint() {
-    return MaxCodePoint;
-  }
-  var MaxCodePoint;
-  function get_HighSurrogateMagic() {
-    return HighSurrogateMagic;
-  }
-  var HighSurrogateMagic;
-  function get_MinLowSurrogate() {
-    return MinLowSurrogate;
-  }
-  var MinLowSurrogate;
-  function putUtf8Char(_this__u8e3s4, offset, v) {
-    var tmp;
-    if (0 <= v ? v <= 127 : false) {
-      // Inline function 'io.ktor.utils.io.bits.Memory.storeAt' call
-      var value = toByte(v);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value);
-      tmp = 1;
-    } else if (128 <= v ? v <= 2047 : false) {
-      // Inline function 'io.ktor.utils.io.bits.set' call
-      var value_0 = toByte(192 | v >> 6 & 31);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value_0);
-      // Inline function 'io.ktor.utils.io.bits.set' call
-      var index = offset + 1 | 0;
-      var value_1 = toByte(128 | v & 63);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(index, value_1);
-      tmp = 2;
-    } else if (2048 <= v ? v <= 65535 : false) {
-      // Inline function 'io.ktor.utils.io.bits.set' call
-      var value_2 = toByte(224 | v >> 12 & 15);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value_2);
-      // Inline function 'io.ktor.utils.io.bits.set' call
-      var index_0 = offset + 1 | 0;
-      var value_3 = toByte(128 | v >> 6 & 63);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_0, value_3);
-      // Inline function 'io.ktor.utils.io.bits.set' call
-      var index_1 = offset + 2 | 0;
-      var value_4 = toByte(128 | v & 63);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_1, value_4);
-      tmp = 3;
-    } else if (65536 <= v ? v <= 1114111 : false) {
-      // Inline function 'io.ktor.utils.io.bits.set' call
-      var value_5 = toByte(240 | v >> 18 & 7);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value_5);
-      // Inline function 'io.ktor.utils.io.bits.set' call
-      var index_2 = offset + 1 | 0;
-      var value_6 = toByte(128 | v >> 12 & 63);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_2, value_6);
-      // Inline function 'io.ktor.utils.io.bits.set' call
-      var index_3 = offset + 2 | 0;
-      var value_7 = toByte(128 | v >> 6 & 63);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_3, value_7);
-      // Inline function 'io.ktor.utils.io.bits.set' call
-      var index_4 = offset + 3 | 0;
-      var value_8 = toByte(128 | v & 63);
-      _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_4, value_8);
-      tmp = 4;
-    } else {
-      malformedCodePoint(v);
-    }
-    return tmp;
-  }
   function encodeUTF8(_this__u8e3s4, text, from, to, dstOffset, dstLimit) {
     // Inline function 'kotlin.comparisons.minOf' call
     // Inline function 'kotlin.UShort.toInt' call
-    var this_0 = Companion_getInstance_0().get_MAX_VALUE_gfkyu8_k$();
+    Companion_getInstance_0();
+    var this_0 = _UShort___init__impl__jigrne(-1);
     var b = from + (_UShort___get_data__impl__g0245(this_0) & 65535) | 0;
     var lastCharIndex = Math.min(to, b);
     // Inline function 'kotlin.UShort.toInt' call
-    var this_1 = Companion_getInstance_0().get_MAX_VALUE_gfkyu8_k$();
+    Companion_getInstance_0();
+    var this_1 = _UShort___init__impl__jigrne(-1);
     var tmp$ret$2 = _UShort___get_data__impl__g0245(this_1) & 65535;
-    var resultLimit = coerceAtMost_0(dstLimit, tmp$ret$2);
+    var resultLimit = coerceAtMost(dstLimit, tmp$ret$2);
     var resultPosition = dstOffset;
     var index = from;
     $l$loop: do {
@@ -8556,7 +4028,7 @@
         var tmp1 = resultPosition;
         resultPosition = tmp1 + 1 | 0;
         var value = toByte(character);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(tmp1, value);
+        _this__u8e3s4.l7k_1.setInt8(tmp1, value);
       } else {
         break $l$loop;
       }
@@ -8599,46 +4071,46 @@
       if (0 <= codepoint ? codepoint <= 127 : false) {
         // Inline function 'io.ktor.utils.io.bits.Memory.storeAt' call
         var value = toByte(codepoint);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value);
+        _this__u8e3s4.l7k_1.setInt8(offset, value);
         tmp_1 = 1;
       } else if (128 <= codepoint ? codepoint <= 2047 : false) {
         // Inline function 'io.ktor.utils.io.bits.set' call
         var value_0 = toByte(192 | codepoint >> 6 & 31);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value_0);
+        _this__u8e3s4.l7k_1.setInt8(offset, value_0);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_0 = offset + 1 | 0;
         var value_1 = toByte(128 | codepoint & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_0, value_1);
+        _this__u8e3s4.l7k_1.setInt8(index_0, value_1);
         tmp_1 = 2;
       } else if (2048 <= codepoint ? codepoint <= 65535 : false) {
         // Inline function 'io.ktor.utils.io.bits.set' call
         var value_2 = toByte(224 | codepoint >> 12 & 15);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value_2);
+        _this__u8e3s4.l7k_1.setInt8(offset, value_2);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_1 = offset + 1 | 0;
         var value_3 = toByte(128 | codepoint >> 6 & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_1, value_3);
+        _this__u8e3s4.l7k_1.setInt8(index_1, value_3);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_2 = offset + 2 | 0;
         var value_4 = toByte(128 | codepoint & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_2, value_4);
+        _this__u8e3s4.l7k_1.setInt8(index_2, value_4);
         tmp_1 = 3;
       } else if (65536 <= codepoint ? codepoint <= 1114111 : false) {
         // Inline function 'io.ktor.utils.io.bits.set' call
         var value_5 = toByte(240 | codepoint >> 18 & 7);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value_5);
+        _this__u8e3s4.l7k_1.setInt8(offset, value_5);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_3 = offset + 1 | 0;
         var value_6 = toByte(128 | codepoint >> 12 & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_3, value_6);
+        _this__u8e3s4.l7k_1.setInt8(index_3, value_6);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_4 = offset + 2 | 0;
         var value_7 = toByte(128 | codepoint >> 6 & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_4, value_7);
+        _this__u8e3s4.l7k_1.setInt8(index_4, value_7);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_5 = offset + 3 | 0;
         var value_8 = toByte(128 | codepoint & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_5, value_8);
+        _this__u8e3s4.l7k_1.setInt8(index_5, value_8);
         tmp_1 = 4;
       } else {
         malformedCodePoint(codepoint);
@@ -8715,46 +4187,46 @@
       if (0 <= codepoint ? codepoint <= 127 : false) {
         // Inline function 'io.ktor.utils.io.bits.Memory.storeAt' call
         var value = toByte(codepoint);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value);
+        _this__u8e3s4.l7k_1.setInt8(offset, value);
         tmp_2 = 1;
       } else if (128 <= codepoint ? codepoint <= 2047 : false) {
         // Inline function 'io.ktor.utils.io.bits.set' call
         var value_0 = toByte(192 | codepoint >> 6 & 31);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value_0);
+        _this__u8e3s4.l7k_1.setInt8(offset, value_0);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_0 = offset + 1 | 0;
         var value_1 = toByte(128 | codepoint & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_0, value_1);
+        _this__u8e3s4.l7k_1.setInt8(index_0, value_1);
         tmp_2 = 2;
       } else if (2048 <= codepoint ? codepoint <= 65535 : false) {
         // Inline function 'io.ktor.utils.io.bits.set' call
         var value_2 = toByte(224 | codepoint >> 12 & 15);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value_2);
+        _this__u8e3s4.l7k_1.setInt8(offset, value_2);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_1 = offset + 1 | 0;
         var value_3 = toByte(128 | codepoint >> 6 & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_1, value_3);
+        _this__u8e3s4.l7k_1.setInt8(index_1, value_3);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_2 = offset + 2 | 0;
         var value_4 = toByte(128 | codepoint & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_2, value_4);
+        _this__u8e3s4.l7k_1.setInt8(index_2, value_4);
         tmp_2 = 3;
       } else if (65536 <= codepoint ? codepoint <= 1114111 : false) {
         // Inline function 'io.ktor.utils.io.bits.set' call
         var value_5 = toByte(240 | codepoint >> 18 & 7);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(offset, value_5);
+        _this__u8e3s4.l7k_1.setInt8(offset, value_5);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_3 = offset + 1 | 0;
         var value_6 = toByte(128 | codepoint >> 12 & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_3, value_6);
+        _this__u8e3s4.l7k_1.setInt8(index_3, value_6);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_4 = offset + 2 | 0;
         var value_7 = toByte(128 | codepoint >> 6 & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_4, value_7);
+        _this__u8e3s4.l7k_1.setInt8(index_4, value_7);
         // Inline function 'io.ktor.utils.io.bits.set' call
         var index_5 = offset + 3 | 0;
         var value_8 = toByte(128 | codepoint & 63);
-        _this__u8e3s4.get_view_wow8a6_k$().setInt8(index_5, value_8);
+        _this__u8e3s4.l7k_1.setInt8(index_5, value_8);
         tmp_2 = 4;
       } else {
         malformedCodePoint(codepoint);
@@ -8771,396 +4243,6 @@
     var tmp$ret$13 = _UShort___init__impl__jigrne(toShort(this_1));
     return _EncodeResult___init__impl__vkc0cy_0(tmp_3, tmp$ret$13);
   }
-  function charactersSize(v) {
-    var tmp;
-    if (1 <= v ? v <= 127 : false) {
-      tmp = 1;
-    } else if (128 <= v ? v <= 2047 : false) {
-      tmp = 2;
-    } else if (2048 <= v ? v <= 65535 : false) {
-      tmp = 3;
-    } else if (65536 <= v ? v <= 1114111 : false) {
-      tmp = 4;
-    } else {
-      malformedCodePoint(v);
-    }
-    return tmp;
-  }
-  function $decodeUTF8LineLoopSuspendCOROUTINE$51(out, limit, nextChunk, afterRead, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this.out_1 = out;
-    this.limit_1 = limit;
-    this.nextChunk_1 = nextChunk;
-    this.afterRead_1 = afterRead;
-  }
-  protoOf($decodeUTF8LineLoopSuspendCOROUTINE$51).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(4);
-            this.decoded0__1 = 0;
-            this.size1__1 = 1;
-            this.cr2__1 = false;
-            this.end3__1 = false;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            if (!(!this.end3__1 ? !(this.size1__1 === 0) : false)) {
-              this.set_state_rjd8d0_k$(5);
-              continue $sm;
-            }
-
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this.nextChunk_1(this.size1__1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            var tmp0_elvis_lhs = suspendResult;
-            var WHEN_RESULT;
-            if (tmp0_elvis_lhs == null) {
-              this.set_state_rjd8d0_k$(5);
-              continue $sm;
-            } else {
-              WHEN_RESULT = tmp0_elvis_lhs;
-              this.set_state_rjd8d0_k$(3);
-              continue $sm;
-            }
-
-          case 3:
-            var chunk = WHEN_RESULT;
-            var totalBytes = chunk.get_remaining_mwegr1_k$();
-            l$ret$1: do {
-              var release = true;
-              var tmp0_elvis_lhs_0 = prepareReadFirstHead(chunk, 1);
-              var tmp_0;
-              if (tmp0_elvis_lhs_0 == null) {
-                break l$ret$1;
-              } else {
-                tmp_0 = tmp0_elvis_lhs_0;
-              }
-              var current = tmp_0;
-              var size = 1;
-              l$ret$15: do {
-                try {
-                  $l$loop_0: do {
-                    var this_0 = current;
-                    var before = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
-                    var after;
-                    if (before >= size) {
-                      l$ret$13: do {
-                        try {
-                          var buffer = current;
-                          var skip = 0;
-                          var tmp_1 = this;
-                          var tmp$ret$4;
-                          l$ret$5: do {
-                            var byteCount = 0;
-                            var value = 0;
-                            var lastByteCount = 0;
-                            var memory = buffer.get_memory_gl4362_k$();
-                            var start = buffer.get_readPosition_70qxnc_k$();
-                            var endExclusive = buffer.get_writePosition_jdt81t_k$();
-                            var inductionVariable = start;
-                            if (inductionVariable < endExclusive)
-                              do {
-                                var index = inductionVariable;
-                                inductionVariable = inductionVariable + 1 | 0;
-                                var v = memory.get_view_wow8a6_k$().getInt8(index) & 255;
-                                if ((v & 128) === 0) {
-                                  if (!(byteCount === 0)) {
-                                    malformedByteCount(byteCount);
-                                  }
-                                  var tmp$ret$2;
-                                  l$ret$3: do {
-                                    var ch = numberToChar(v);
-                                    var tmp_2;
-                                    if (ch === _Char___init__impl__6a9atx(13)) {
-                                      if (this.cr2__1) {
-                                        this.end3__1 = true;
-                                        tmp$ret$2 = false;
-                                        break l$ret$3;
-                                      }
-                                      this.cr2__1 = true;
-                                      tmp_2 = true;
-                                    } else if (ch === _Char___init__impl__6a9atx(10)) {
-                                      this.end3__1 = true;
-                                      skip = 1;
-                                      tmp_2 = false;
-                                    } else {
-                                      if (this.cr2__1) {
-                                        this.end3__1 = true;
-                                        tmp$ret$2 = false;
-                                        break l$ret$3;
-                                      }
-                                      if (this.decoded0__1 === this.limit_1) {
-                                        throw new TooLongLineException('Too many characters in line: limit ' + this.limit_1 + ' exceeded');
-                                      }
-                                      this.decoded0__1 = this.decoded0__1 + 1 | 0;
-                                      this.out_1.append_am5a4z_k$(ch);
-                                      tmp_2 = true;
-                                    }
-                                    tmp$ret$2 = tmp_2;
-                                  }
-                                   while (false);
-                                  if (!tmp$ret$2) {
-                                    buffer.discardExact_11sae1_k$(index - start | 0);
-                                    tmp$ret$4 = -1;
-                                    break l$ret$5;
-                                  }
-                                } else if (byteCount === 0) {
-                                  var mask = 128;
-                                  value = v;
-                                  var inductionVariable_0 = 1;
-                                  if (inductionVariable_0 <= 6)
-                                    $l$loop: do {
-                                      var i = inductionVariable_0;
-                                      inductionVariable_0 = inductionVariable_0 + 1 | 0;
-                                      if (!((value & mask) === 0)) {
-                                        value = value & ~mask;
-                                        mask = mask >> 1;
-                                        byteCount = byteCount + 1 | 0;
-                                      } else {
-                                        break $l$loop;
-                                      }
-                                    }
-                                     while (inductionVariable_0 <= 6);
-                                  lastByteCount = byteCount;
-                                  byteCount = byteCount - 1 | 0;
-                                  if (lastByteCount > (endExclusive - index | 0)) {
-                                    buffer.discardExact_11sae1_k$(index - start | 0);
-                                    tmp$ret$4 = lastByteCount;
-                                    break l$ret$5;
-                                  }
-                                } else {
-                                  value = value << 6 | v & 127;
-                                  byteCount = byteCount - 1 | 0;
-                                  if (byteCount === 0) {
-                                    if (isBmpCodePoint(value)) {
-                                      var tmp$ret$6;
-                                      l$ret$7: do {
-                                        var ch_0 = numberToChar(value);
-                                        var tmp_3;
-                                        if (ch_0 === _Char___init__impl__6a9atx(13)) {
-                                          if (this.cr2__1) {
-                                            this.end3__1 = true;
-                                            tmp$ret$6 = false;
-                                            break l$ret$7;
-                                          }
-                                          this.cr2__1 = true;
-                                          tmp_3 = true;
-                                        } else if (ch_0 === _Char___init__impl__6a9atx(10)) {
-                                          this.end3__1 = true;
-                                          skip = 1;
-                                          tmp_3 = false;
-                                        } else {
-                                          if (this.cr2__1) {
-                                            this.end3__1 = true;
-                                            tmp$ret$6 = false;
-                                            break l$ret$7;
-                                          }
-                                          if (this.decoded0__1 === this.limit_1) {
-                                            throw new TooLongLineException('Too many characters in line: limit ' + this.limit_1 + ' exceeded');
-                                          }
-                                          this.decoded0__1 = this.decoded0__1 + 1 | 0;
-                                          this.out_1.append_am5a4z_k$(ch_0);
-                                          tmp_3 = true;
-                                        }
-                                        tmp$ret$6 = tmp_3;
-                                      }
-                                       while (false);
-                                      if (!tmp$ret$6) {
-                                        buffer.discardExact_11sae1_k$(((index - start | 0) - lastByteCount | 0) + 1 | 0);
-                                        tmp$ret$4 = -1;
-                                        break l$ret$5;
-                                      }
-                                    } else if (!isValidCodePoint(value)) {
-                                      malformedCodePoint(value);
-                                    } else {
-                                      var tmp_4;
-                                      var tmp$ret$8;
-                                      l$ret$9: do {
-                                        var ch_1 = numberToChar(highSurrogate(value));
-                                        var tmp_5;
-                                        if (ch_1 === _Char___init__impl__6a9atx(13)) {
-                                          if (this.cr2__1) {
-                                            this.end3__1 = true;
-                                            tmp$ret$8 = false;
-                                            break l$ret$9;
-                                          }
-                                          this.cr2__1 = true;
-                                          tmp_5 = true;
-                                        } else if (ch_1 === _Char___init__impl__6a9atx(10)) {
-                                          this.end3__1 = true;
-                                          skip = 1;
-                                          tmp_5 = false;
-                                        } else {
-                                          if (this.cr2__1) {
-                                            this.end3__1 = true;
-                                            tmp$ret$8 = false;
-                                            break l$ret$9;
-                                          }
-                                          if (this.decoded0__1 === this.limit_1) {
-                                            throw new TooLongLineException('Too many characters in line: limit ' + this.limit_1 + ' exceeded');
-                                          }
-                                          this.decoded0__1 = this.decoded0__1 + 1 | 0;
-                                          this.out_1.append_am5a4z_k$(ch_1);
-                                          tmp_5 = true;
-                                        }
-                                        tmp$ret$8 = tmp_5;
-                                      }
-                                       while (false);
-                                      if (!tmp$ret$8) {
-                                        tmp_4 = true;
-                                      } else {
-                                        var tmp$ret$10;
-                                        l$ret$11: do {
-                                          var ch_2 = numberToChar(lowSurrogate(value));
-                                          var tmp_6;
-                                          if (ch_2 === _Char___init__impl__6a9atx(13)) {
-                                            if (this.cr2__1) {
-                                              this.end3__1 = true;
-                                              tmp$ret$10 = false;
-                                              break l$ret$11;
-                                            }
-                                            this.cr2__1 = true;
-                                            tmp_6 = true;
-                                          } else if (ch_2 === _Char___init__impl__6a9atx(10)) {
-                                            this.end3__1 = true;
-                                            skip = 1;
-                                            tmp_6 = false;
-                                          } else {
-                                            if (this.cr2__1) {
-                                              this.end3__1 = true;
-                                              tmp$ret$10 = false;
-                                              break l$ret$11;
-                                            }
-                                            if (this.decoded0__1 === this.limit_1) {
-                                              throw new TooLongLineException('Too many characters in line: limit ' + this.limit_1 + ' exceeded');
-                                            }
-                                            this.decoded0__1 = this.decoded0__1 + 1 | 0;
-                                            this.out_1.append_am5a4z_k$(ch_2);
-                                            tmp_6 = true;
-                                          }
-                                          tmp$ret$10 = tmp_6;
-                                        }
-                                         while (false);
-                                        tmp_4 = !tmp$ret$10;
-                                      }
-                                      if (tmp_4) {
-                                        buffer.discardExact_11sae1_k$(((index - start | 0) - lastByteCount | 0) + 1 | 0);
-                                        tmp$ret$4 = -1;
-                                        break l$ret$5;
-                                      }
-                                    }
-                                    value = 0;
-                                  }
-                                }
-                              }
-                               while (inductionVariable < endExclusive);
-                            var rc = endExclusive - start | 0;
-                            buffer.discardExact_11sae1_k$(rc);
-                            tmp$ret$4 = 0;
-                          }
-                           while (false);
-                          tmp_1.size1__1 = tmp$ret$4;
-                          if (skip > 0) {
-                            buffer.discardExact_11sae1_k$(skip);
-                          }
-                          this.size1__1 = this.end3__1 ? 0 : coerceAtLeast(this.size1__1, 1);
-                          size = this.size1__1;
-                          break l$ret$13;
-                        } catch ($p) {
-                          var t = $p;
-                          var this_1 = current;
-                          after = this_1.get_writePosition_jdt81t_k$() - this_1.get_readPosition_70qxnc_k$() | 0;
-                          throw t;
-                        }
-                      }
-                       while (false);
-                      var this_2 = current;
-                      after = this_2.get_writePosition_jdt81t_k$() - this_2.get_readPosition_70qxnc_k$() | 0;
-                    } else {
-                      after = before;
-                    }
-                    release = false;
-                    var tmp_7;
-                    if (after === 0) {
-                      tmp_7 = prepareReadNextHead(chunk, current);
-                    } else {
-                      var tmp_8;
-                      if (after < size) {
-                        tmp_8 = true;
-                      } else {
-                        var this_3 = current;
-                        tmp_8 = (this_3.get_capacity_wxbgcd_k$() - this_3.get_limit_iuokuq_k$() | 0) < Companion_getInstance_1().get_ReservedSize_b4jt5a_k$();
-                      }
-                      if (tmp_8) {
-                        completeReadHead(chunk, current);
-                        tmp_7 = prepareReadFirstHead(chunk, size);
-                      } else {
-                        tmp_7 = current;
-                      }
-                    }
-                    var tmp1_elvis_lhs = tmp_7;
-                    var tmp_9;
-                    if (tmp1_elvis_lhs == null) {
-                      break $l$loop_0;
-                    } else {
-                      tmp_9 = tmp1_elvis_lhs;
-                    }
-                    var next = tmp_9;
-                    current = next;
-                    release = true;
-                  }
-                   while (size > 0);
-                  break l$ret$15;
-                } catch ($p) {
-                  var t_0 = $p;
-                  if (release) {
-                    completeReadHead(chunk, current);
-                  }
-                  throw t_0;
-                }
-              }
-               while (false);
-              if (release) {
-                completeReadHead(chunk, current);
-              }
-            }
-             while (false);
-            this.afterRead_1(totalBytes.minus_mfbszm_k$(chunk.get_remaining_mwegr1_k$()).toInt_1tsl84_k$());
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 4:
-            throw this.get_exception_x0n6w6_k$();
-          case 5:
-            if (this.size1__1 > 1) {
-              prematureEndOfStreamUtf(this.size1__1);
-            }
-
-            if (this.cr2__1) {
-              this.end3__1 = true;
-            }
-
-            return this.decoded0__1 > 0 ? true : this.end3__1;
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 4) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
   function get_EmptyByteArray() {
     _init_properties_Unsafe_kt__orlvcq();
     return EmptyByteArray;
@@ -9169,36 +4251,37 @@
   function completeReadHead(_this__u8e3s4, current) {
     _init_properties_Unsafe_kt__orlvcq();
     if (current === _this__u8e3s4)
-      return Unit_getInstance();
+      return Unit_instance;
     else {
       // Inline function 'io.ktor.utils.io.core.canRead' call
-      if (!(current.get_writePosition_jdt81t_k$() > current.get_readPosition_70qxnc_k$())) {
-        _this__u8e3s4.ensureNext_39ripn_k$(current);
+      if (!(current.n7f_1 > current.m7f_1)) {
+        _this__u8e3s4.o7n(current);
       } else {
         // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
-        if ((current.get_capacity_wxbgcd_k$() - current.get_limit_iuokuq_k$() | 0) < Companion_getInstance_1().get_ReservedSize_b4jt5a_k$()) {
-          _this__u8e3s4.fixGapAfterRead_yrc9kb_k$(current);
+        var tmp = current.q7f_1 - current.p7f_1 | 0;
+        if (tmp < 8) {
+          _this__u8e3s4.p7n(current);
         } else {
-          _this__u8e3s4.set_headPosition_cd3vm_k$(current.get_readPosition_70qxnc_k$());
+          _this__u8e3s4.x7g_1 = current.m7f_1;
         }
       }
     }
   }
   function prepareReadFirstHead(_this__u8e3s4, minSize) {
     _init_properties_Unsafe_kt__orlvcq();
-    return _this__u8e3s4.prepareReadHead_dk94or_k$(minSize);
+    return _this__u8e3s4.m7n(minSize);
   }
   function prepareReadNextHead(_this__u8e3s4, current) {
     _init_properties_Unsafe_kt__orlvcq();
     if (current === _this__u8e3s4) {
-      return _this__u8e3s4.canRead_93a6bq_k$() ? _this__u8e3s4 : null;
+      return _this__u8e3s4.q7h() ? _this__u8e3s4 : null;
     }
-    return _this__u8e3s4.ensureNextHead_oerbph_k$(current);
+    return _this__u8e3s4.n7n(current);
   }
   function unsafeAppend(_this__u8e3s4, builder) {
     _init_properties_Unsafe_kt__orlvcq();
-    var builderSize = builder.get_size_woubt6_k$();
-    var tmp0_elvis_lhs = builder.stealAll_nensgi_k$();
+    var builderSize = builder.m();
+    var tmp0_elvis_lhs = builder.m7d();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return 0;
@@ -9206,19 +4289,19 @@
       tmp = tmp0_elvis_lhs;
     }
     var builderHead = tmp;
-    if ((builderSize <= get_PACKET_MAX_COPY_SIZE() ? builderHead.get_next_wor1vg_k$() == null : false) ? _this__u8e3s4.tryWriteAppend_szyatk_k$(builderHead) : false) {
-      builder.afterBytesStolen_t0d06e_k$();
+    if ((builderSize <= get_PACKET_MAX_COPY_SIZE() ? builderHead.f13() == null : false) ? _this__u8e3s4.h7n(builderHead) : false) {
+      builder.t7m();
       return builderSize;
     }
-    _this__u8e3s4.append_qgrwjw_k$(builderHead);
+    _this__u8e3s4.g7n(builderHead);
     return builderSize;
   }
   function prepareWriteHead(_this__u8e3s4, capacity, current) {
     _init_properties_Unsafe_kt__orlvcq();
     if (!(current == null)) {
-      _this__u8e3s4.afterHeadWrite_dl47zh_k$();
+      _this__u8e3s4.i7k();
     }
-    return _this__u8e3s4.prepareWriteHead_ugmxj4_k$(capacity);
+    return _this__u8e3s4.s7m(capacity);
   }
   var properties_initialized_Unsafe_kt_o5mw48;
   function _init_properties_Unsafe_kt__orlvcq() {
@@ -9227,30 +4310,27 @@
       EmptyByteArray = new Int8Array(0);
     }
   }
-  function _get_suspension__g1gp0y($this) {
-    return $this.suspension_1;
-  }
   function trySuspend($this, sleepCondition, $completion) {
     var tmp = new $trySuspendCOROUTINE$53($this, sleepCondition, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   }
   function $sleepCOROUTINE$52(_this__u8e3s4, sleepCondition, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.sleepCondition_1 = sleepCondition;
+    this.x7o_1 = _this__u8e3s4;
+    this.y7o_1 = sleepCondition;
   }
-  protoOf($sleepCOROUTINE$52).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($sleepCOROUTINE$52).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = trySuspend(this._this__u8e3s4__1, this.sleepCondition_1, this);
+            this.bc_1 = 3;
+            this.ac_1 = 1;
+            suspendResult = trySuspend(this.x7o_1, this.y7o_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -9258,319 +4338,319 @@
             continue $sm;
           case 1:
             if (suspendResult) {
-              return Unit_getInstance();
+              return Unit_instance;
             } else {
-              this.set_state_rjd8d0_k$(2);
+              this.ac_1 = 2;
               continue $sm;
             }
 
           case 2:
-            this._this__u8e3s4__1.resume_2o15jx_k$();
-            return Unit_getInstance();
+            this.x7o_1.v7c();
+            return Unit_instance;
           case 3:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
+        if (this.bc_1 === 3) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $trySuspendCOROUTINE$53(_this__u8e3s4, sleepCondition, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.sleepCondition_1 = sleepCondition;
+    this.l7o_1 = _this__u8e3s4;
+    this.m7o_1 = sleepCondition;
   }
-  protoOf($trySuspendCOROUTINE$53).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($trySuspendCOROUTINE$53).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            this.suspended0__1 = false;
-            this.job1__1 = Job_0();
-            if (this._this__u8e3s4__1.suspension_1.atomicfu$compareAndSet(null, this.job1__1) ? this.sleepCondition_1() : false) {
-              this.suspended0__1 = true;
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = this.job1__1.join_o20dar_k$(this);
+            this.bc_1 = 3;
+            this.n7o_1 = false;
+            this.o7o_1 = Job_0();
+            if (this.l7o_1.u7c_1.atomicfu$compareAndSet(null, this.o7o_1) ? this.m7o_1() : false) {
+              this.n7o_1 = true;
+              this.ac_1 = 1;
+              suspendResult = this.o7o_1.ev(this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(2);
+              this.ac_1 = 2;
               continue $sm;
             }
 
           case 1:
-            this.set_state_rjd8d0_k$(2);
+            this.ac_1 = 2;
             continue $sm;
           case 2:
-            return this.suspended0__1;
+            return this.n7o_1;
           case 3:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
+        if (this.bc_1 === 3) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function AwaitingSlot() {
-    this.suspension_1 = atomic$ref$1(null);
+    this.u7c_1 = atomic$ref$1(null);
   }
-  protoOf(AwaitingSlot).sleep_nce3pz_k$ = function (sleepCondition, $completion) {
+  protoOf(AwaitingSlot).p7e = function (sleepCondition, $completion) {
     var tmp = new $sleepCOROUTINE$52(this, sleepCondition, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   };
-  protoOf(AwaitingSlot).resume_2o15jx_k$ = function () {
-    var tmp0_safe_receiver = this.suspension_1.atomicfu$getAndSet(null);
+  protoOf(AwaitingSlot).v7c = function () {
+    var tmp0_safe_receiver = this.u7c_1.atomicfu$getAndSet(null);
     if (tmp0_safe_receiver == null)
       null;
     else
-      tmp0_safe_receiver.complete_9ww6vb_k$();
+      tmp0_safe_receiver.cv();
   };
-  protoOf(AwaitingSlot).cancel_9i2dv0_k$ = function (cause) {
-    var tmp0_elvis_lhs = this.suspension_1.atomicfu$getAndSet(null);
+  protoOf(AwaitingSlot).f56 = function (cause) {
+    var tmp0_elvis_lhs = this.u7c_1.atomicfu$getAndSet(null);
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      return Unit_getInstance();
+      return Unit_instance;
     } else {
       tmp = tmp0_elvis_lhs;
     }
     var continuation = tmp;
     if (!(cause == null)) {
-      continuation.completeExceptionally_xyzekf_k$(cause);
+      continuation.bv(cause);
     } else {
-      continuation.complete_9ww6vb_k$();
+      continuation.cv();
     }
   };
   function copyToSequentialImpl(_this__u8e3s4, dst, limit, $completion) {
     var tmp = new $copyToSequentialImplCOROUTINE$54(_this__u8e3s4, dst, limit, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   }
   function copyToTail(_this__u8e3s4, dst, limit, $completion) {
     var tmp = new $copyToTailCOROUTINE$55(_this__u8e3s4, dst, limit, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
+    tmp.cc_1 = Unit_instance;
+    tmp.dc_1 = null;
+    return tmp.mc();
   }
   function $copyToSequentialImplCOROUTINE$54(_this__u8e3s4, dst, limit, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.limit_1 = limit;
+    this.h7p_1 = _this__u8e3s4;
+    this.i7p_1 = dst;
+    this.j7p_1 = limit;
   }
-  protoOf($copyToSequentialImplCOROUTINE$54).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($copyToSequentialImplCOROUTINE$54).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(10);
-            if (!!(this._this__u8e3s4__1 === this.dst_1)) {
+            this.bc_1 = 10;
+            if (!!(this.h7p_1 === this.i7p_1)) {
               var message = 'Failed requirement.';
               throw IllegalArgumentException_init_$Create$(toString(message));
             }
 
-            if (!(this._this__u8e3s4__1.get_closedCause_o1qcj8_k$() == null)) {
-              this.dst_1.close_ukldxa_k$(this._this__u8e3s4__1.get_closedCause_o1qcj8_k$());
+            if (!(this.h7p_1.o7d() == null)) {
+              this.i7p_1.n16(this.h7p_1.o7d());
               return new Long(0, 0);
             }
 
-            this.remainingLimit0__1 = this.limit_1;
-            this.set_state_rjd8d0_k$(1);
+            this.k7p_1 = this.j7p_1;
+            this.ac_1 = 1;
             continue $sm;
           case 1:
-            if (!(this.remainingLimit0__1.compareTo_9jj042_k$(new Long(0, 0)) > 0)) {
-              this.set_state_rjd8d0_k$(9);
+            if (!(this.k7p_1.x9(new Long(0, 0)) > 0)) {
+              this.ac_1 = 9;
               continue $sm;
             }
 
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.awaitInternalAtLeast1_fno9ji_k$(this);
+            this.ac_1 = 2;
+            suspendResult = this.h7p_1.m7j(this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 2:
-            this.ARGUMENT1__1 = suspendResult;
-            if (!this.ARGUMENT1__1) {
-              this.set_state_rjd8d0_k$(9);
+            this.l7p_1 = suspendResult;
+            if (!this.l7p_1) {
+              this.ac_1 = 9;
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(3);
+              this.ac_1 = 3;
               continue $sm;
             }
 
           case 3:
-            this.transferred2__1 = this._this__u8e3s4__1.transferTo_rz8sl2_k$(this.dst_1, this.remainingLimit0__1);
-            if (this.transferred2__1.equals(new Long(0, 0))) {
-              this.set_state_rjd8d0_k$(6);
-              suspendResult = copyToTail(this._this__u8e3s4__1, this.dst_1, this.remainingLimit0__1, this);
+            this.m7p_1 = this.h7p_1.n7j(this.i7p_1, this.k7p_1);
+            if (this.m7p_1.equals(new Long(0, 0))) {
+              this.ac_1 = 6;
+              suspendResult = copyToTail(this.h7p_1, this.i7p_1, this.k7p_1, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
               continue $sm;
             } else {
-              if (this.dst_1.get_availableForWrite_22rgeu_k$() === 0) {
-                this.set_state_rjd8d0_k$(4);
-                suspendResult = this.dst_1.awaitAtLeastNBytesAvailableForWrite_cfus3l_k$(1, this);
+              if (this.i7p_1.d7e() === 0) {
+                this.ac_1 = 4;
+                suspendResult = this.i7p_1.k7f(1, this);
                 if (suspendResult === get_COROUTINE_SUSPENDED()) {
                   return suspendResult;
                 }
                 continue $sm;
               } else {
-                this.set_state_rjd8d0_k$(5);
+                this.ac_1 = 5;
                 continue $sm;
               }
             }
 
           case 4:
-            this.set_state_rjd8d0_k$(5);
+            this.ac_1 = 5;
             continue $sm;
           case 5:
-            this.WHEN_RESULT3__1 = this.transferred2__1;
-            this.set_state_rjd8d0_k$(8);
+            this.n7p_1 = this.m7p_1;
+            this.ac_1 = 8;
             continue $sm;
           case 6:
             var tail = suspendResult;
             if (tail.equals(new Long(0, 0))) {
-              this.set_state_rjd8d0_k$(9);
+              this.ac_1 = 9;
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(7);
+              this.ac_1 = 7;
               continue $sm;
             }
 
           case 7:
-            this.WHEN_RESULT3__1 = tail;
-            this.set_state_rjd8d0_k$(8);
+            this.n7p_1 = tail;
+            this.ac_1 = 8;
             continue $sm;
           case 8:
-            var copied = this.WHEN_RESULT3__1;
-            this.remainingLimit0__1 = this.remainingLimit0__1.minus_mfbszm_k$(copied);
-            if (copied.compareTo_9jj042_k$(new Long(0, 0)) > 0) {
-              this.dst_1.flush_shahbo_k$();
+            var copied = this.n7p_1;
+            this.k7p_1 = this.k7p_1.fb(copied);
+            if (copied.x9(new Long(0, 0)) > 0) {
+              this.i7p_1.p6();
             }
 
-            this.set_state_rjd8d0_k$(1);
+            this.ac_1 = 1;
             continue $sm;
           case 9:
-            return this.limit_1.minus_mfbszm_k$(this.remainingLimit0__1);
+            return this.j7p_1.fb(this.k7p_1);
           case 10:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 10) {
+        if (this.bc_1 === 10) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
   };
   function $copyToTailCOROUTINE$55(_this__u8e3s4, dst, limit, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.limit_1 = limit;
+    this.w7p_1 = _this__u8e3s4;
+    this.x7p_1 = dst;
+    this.y7p_1 = limit;
   }
-  protoOf($copyToTailCOROUTINE$55).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
+  protoOf($copyToTailCOROUTINE$55).mc = function () {
+    var suspendResult = this.cc_1;
     $sm: do
       try {
-        var tmp = this.get_state_iypx7s_k$();
+        var tmp = this.ac_1;
         switch (tmp) {
           case 0:
-            this.set_exceptionState_fex74n_k$(9);
-            this.lastPiece0__1 = Companion_getInstance_4().get_Pool_wo83gl_k$().borrow_mvkpor_k$();
-            this.set_state_rjd8d0_k$(1);
+            this.bc_1 = 9;
+            this.z7p_1 = Companion_getInstance_4().d7j().h7m();
+            this.ac_1 = 1;
             continue $sm;
           case 1:
-            this.set_state_rjd8d0_k$(2);
+            this.ac_1 = 2;
             continue $sm;
           case 2:
-            this.set_exceptionState_fex74n_k$(8);
-            this.lastPiece0__1.resetForWrite_c461wd_k$(coerceAtMost(this.limit_1, toLong(this.lastPiece0__1.get_capacity_wxbgcd_k$())).toInt_1tsl84_k$());
-            this.set_state_rjd8d0_k$(3);
-            suspendResult = this._this__u8e3s4__1.readAvailable_wzcy2k_k$(this.lastPiece0__1, this);
+            this.bc_1 = 8;
+            this.z7p_1.v7k(coerceAtMost_0(this.y7p_1, toLong(this.z7p_1.q7f_1)).fa());
+            this.ac_1 = 3;
+            suspendResult = this.w7p_1.j7j(this.z7p_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 3:
-            this.rc3__1 = suspendResult;
-            if (this.rc3__1 === -1) {
-              this.lastPiece0__1.release_vbevvg_k$(Companion_getInstance_4().get_Pool_wo83gl_k$());
-              this.tmp$ret$02__1 = new Long(0, 0);
-              this.set_exceptionState_fex74n_k$(9);
-              this.set_state_rjd8d0_k$(6);
+            this.b7q_1 = suspendResult;
+            if (this.b7q_1 === -1) {
+              this.z7p_1.k7m(Companion_getInstance_4().d7j());
+              this.a7q_1 = new Long(0, 0);
+              this.bc_1 = 9;
+              this.ac_1 = 6;
               continue $sm;
             } else {
-              this.set_state_rjd8d0_k$(4);
+              this.ac_1 = 4;
               continue $sm;
             }
 
           case 4:
-            this.set_state_rjd8d0_k$(5);
-            suspendResult = this.dst_1.writeFully_hz8k55_k$(this.lastPiece0__1, this);
+            this.ac_1 = 5;
+            suspendResult = this.x7p_1.f7j(this.z7p_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 5:
-            this.tmp$ret$02__1 = toLong(this.rc3__1);
-            this.set_exceptionState_fex74n_k$(9);
-            this.set_state_rjd8d0_k$(6);
+            this.a7q_1 = toLong(this.b7q_1);
+            this.bc_1 = 9;
+            this.ac_1 = 6;
             var tmp_0 = this;
             continue $sm;
           case 6:
-            var tmp_1 = this.tmp$ret$02__1;
-            this.set_exceptionState_fex74n_k$(9);
-            this.lastPiece0__1.release_vbevvg_k$(Companion_getInstance_4().get_Pool_wo83gl_k$());
+            var tmp_1 = this.a7q_1;
+            this.bc_1 = 9;
+            this.z7p_1.k7m(Companion_getInstance_4().d7j());
             return tmp_1;
           case 7:
-            this.set_exceptionState_fex74n_k$(9);
-            this.lastPiece0__1.release_vbevvg_k$(Companion_getInstance_4().get_Pool_wo83gl_k$());
-            return Unit_getInstance();
+            this.bc_1 = 9;
+            this.z7p_1.k7m(Companion_getInstance_4().d7j());
+            return Unit_instance;
           case 8:
-            this.set_exceptionState_fex74n_k$(9);
-            var t = this.get_exception_x0n6w6_k$();
-            this.lastPiece0__1.release_vbevvg_k$(Companion_getInstance_4().get_Pool_wo83gl_k$());
+            this.bc_1 = 9;
+            var t = this.dc_1;
+            this.z7p_1.k7m(Companion_getInstance_4().d7j());
             throw t;
           case 9:
-            throw this.get_exception_x0n6w6_k$();
+            throw this.dc_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 9) {
+        if (this.bc_1 === 9) {
           throw e;
         } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
+          this.ac_1 = this.bc_1;
+          this.dc_1 = e;
         }
       }
      while (true);
@@ -9583,7 +4663,7 @@
   function ByteArrayPool$1() {
     DefaultPool.call(this, 128);
   }
-  protoOf(ByteArrayPool$1).produceInstance_xswihh_k$ = function () {
+  protoOf(ByteArrayPool$1).i7l = function () {
     return new Int8Array(4096);
   };
   var properties_initialized_ByteArrayPool_kt_td6pfh;
@@ -9593,28 +4673,13 @@
       ByteArrayPool = new ByteArrayPool$1();
     }
   }
-  function ObjectPool() {
-  }
   function NoPoolImpl() {
   }
-  protoOf(NoPoolImpl).get_capacity_wxbgcd_k$ = function () {
-    return 0;
+  protoOf(NoPoolImpl).i7m = function (instance) {
   };
-  protoOf(NoPoolImpl).recycle_d2xv5h_k$ = function (instance) {
-  };
-  protoOf(NoPoolImpl).dispose_3nnxhr_k$ = function () {
-  };
-  function useInstance(_this__u8e3s4, block) {
-    var instance = _this__u8e3s4.borrow_mvkpor_k$();
-    try {
-      return block(instance);
-    }finally {
-      _this__u8e3s4.recycle_d2xv5h_k$(instance);
-    }
-  }
-  function ByteChannel_0(autoFlush) {
+  function ByteChannel(autoFlush) {
     autoFlush = autoFlush === VOID ? false : autoFlush;
-    return new ByteChannelJS(Companion_getInstance_4().get_Empty_i9b85g_k$(), autoFlush);
+    return new ByteChannelJS(Companion_getInstance_4().a7j_1, autoFlush);
   }
   function copyTo(_this__u8e3s4, dst, limit, $completion) {
     var tmp = _this__u8e3s4 instanceof ByteChannelSequentialBase ? _this__u8e3s4 : THROW_CCE();
@@ -9623,289 +4688,80 @@
   function ByteReadChannel_0(content, offset, length) {
     // Inline function 'kotlin.collections.isEmpty' call
     if (content.length === 0)
-      return Companion_getInstance_5().get_Empty_i9b85g_k$();
-    var head = Companion_getInstance_4().get_Pool_wo83gl_k$().borrow_mvkpor_k$();
+      return Companion_getInstance_5().k7k();
+    var head = Companion_getInstance_4().d7j().h7m();
     var tail = head;
     var start = offset;
     var end = start + length | 0;
     $l$loop: while (true) {
-      tail.reserveEndGap_i4z3fz_k$(8);
+      tail.s7k(8);
       // Inline function 'kotlin.comparisons.minOf' call
       var a = end - start | 0;
       // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
       var this_0 = tail;
-      var b = this_0.get_limit_iuokuq_k$() - this_0.get_writePosition_jdt81t_k$() | 0;
+      var b = this_0.p7f_1 - this_0.n7f_1 | 0;
       var size = Math.min(a, b);
       writeFully_0(tail instanceof Buffer ? tail : THROW_CCE(), content, start, size);
       start = start + size | 0;
       if (start === end)
         break $l$loop;
       var current = tail;
-      tail = Companion_getInstance_4().get_Pool_wo83gl_k$().borrow_mvkpor_k$();
-      current.set_next_v483mr_k$(tail);
+      tail = Companion_getInstance_4().d7j().h7m();
+      current.s7n(tail);
     }
     // Inline function 'kotlin.apply' call
     var this_1 = new ByteChannelJS(head, false);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.ByteReadChannel.<anonymous>' call
-    close_0(this_1);
+    close(this_1);
     return this_1;
-  }
-  function _set_attachedJob__ugwmz8($this, _set____db54di) {
-    $this.attachedJob_1 = _set____db54di;
-  }
-  function _get_attachedJob__6ignc($this) {
-    return $this.attachedJob_1;
-  }
-  function readAvailableSuspend($this, dst, offset, length, $completion) {
-    var tmp = new $readAvailableSuspendCOROUTINE$57($this, dst, offset, length, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  }
-  function readFullySuspend_1($this, dst, offset, length, $completion) {
-    var tmp = new $readFullySuspendCOROUTINE$58($this, dst, offset, length, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
   }
   function ByteChannelJS$attachJob$lambda(this$0) {
     return function (cause) {
-      this$0.attachedJob_1 = null;
+      this$0.u7q_1 = null;
       var tmp;
       if (!(cause == null)) {
-        this$0.cancel_e74who_k$(unwrapCancellationException(cause));
-        tmp = Unit_getInstance();
+        this$0.es(unwrapCancellationException(cause));
+        tmp = Unit_instance;
       }
-      return Unit_getInstance();
+      return Unit_instance;
     };
   }
-  function $readAvailableCOROUTINE$56(_this__u8e3s4, dst, offset, length, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.offset_1 = offset;
-    this.length_1 = length;
-  }
-  protoOf($readAvailableCOROUTINE$56).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            if (this._this__u8e3s4__1.get_readable_ovw33t_k$().get_endOfInput_skegkh_k$()) {
-              this.set_state_rjd8d0_k$(1);
-              suspendResult = readAvailableSuspend(this._this__u8e3s4__1, this.dst_1, this.offset_1, this.length_1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            } else {
-              var tmp_0 = this;
-              var tmp0_safe_receiver = this._this__u8e3s4__1.get_closedCause_o1qcj8_k$();
-              if (tmp0_safe_receiver == null)
-                null;
-              else {
-                throw tmp0_safe_receiver;
-              }
-              var count = readAvailable_1(this._this__u8e3s4__1.get_readable_ovw33t_k$(), this.dst_1, this.offset_1, this.length_1);
-              this._this__u8e3s4__1.afterRead_biie6i_k$(count);
-              tmp_0.WHEN_RESULT0__1 = count;
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            }
-
-          case 1:
-            this.WHEN_RESULT0__1 = suspendResult;
-            this.set_state_rjd8d0_k$(2);
-            continue $sm;
-          case 2:
-            return this.WHEN_RESULT0__1;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readAvailableSuspendCOROUTINE$57(_this__u8e3s4, dst, offset, length, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.offset_1 = offset;
-    this.length_1 = length;
-  }
-  protoOf($readAvailableSuspendCOROUTINE$57).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(4);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.await_wm3xku_k$(1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            this.ARGUMENT0__1 = suspendResult;
-            if (!this.ARGUMENT0__1) {
-              return -1;
-            } else {
-              this.set_state_rjd8d0_k$(2);
-              continue $sm;
-            }
-
-          case 2:
-            this.set_state_rjd8d0_k$(3);
-            suspendResult = this._this__u8e3s4__1.readAvailable_w0u1jn_k$(this.dst_1, this.offset_1, this.length_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 3:
-            return suspendResult;
-          case 4:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 4) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function $readFullySuspendCOROUTINE$58(_this__u8e3s4, dst, offset, length, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.dst_1 = dst;
-    this.offset_1 = offset;
-    this.length_1 = length;
-  }
-  protoOf($readFullySuspendCOROUTINE$58).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(4);
-            this.start0__1 = this.offset_1;
-            this.end1__1 = this.offset_1 + this.length_1 | 0;
-            this.remaining2__1 = this.length_1;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            if (!(this.start0__1 < this.end1__1)) {
-              this.set_state_rjd8d0_k$(3);
-              continue $sm;
-            }
-
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this._this__u8e3s4__1.readAvailable_w0u1jn_k$(this.dst_1, this.start0__1, this.remaining2__1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            var rc = suspendResult;
-            if (rc === -1)
-              throw new EOFException('Premature end of stream: required ' + this.remaining2__1 + ' more bytes');
-            this.start0__1 = this.start0__1 + rc | 0;
-            this.remaining2__1 = this.remaining2__1 - rc | 0;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 3:
-            return Unit_getInstance();
-          case 4:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 4) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
   function ByteChannelJS(initial, autoFlush) {
     ByteChannelSequentialBase.call(this, initial, autoFlush);
-    this.attachedJob_1 = null;
+    this.u7q_1 = null;
   }
-  protoOf(ByteChannelJS).attachJob_s2t2tl_k$ = function (job) {
-    var tmp0_safe_receiver = this.attachedJob_1;
+  protoOf(ByteChannelJS).p7j = function (job) {
+    var tmp0_safe_receiver = this.u7q_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.cancel$default_8haxne_k$();
+      tmp0_safe_receiver.eq();
     }
-    this.attachedJob_1 = job;
-    job.invokeOnCompletion$default_1v3utx_k$(true, VOID, ByteChannelJS$attachJob$lambda(this));
-  };
-  protoOf(ByteChannelJS).readAvailable_w0u1jn_k$ = function (dst, offset, length, $completion) {
-    var tmp = new $readAvailableCOROUTINE$56(this, dst, offset, length, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ByteChannelJS).readFully_oc61qm_k$ = function (dst, offset, length, $completion) {
-    if (this.get_availableForRead_tq0sox_k$() >= length) {
-      var tmp0_safe_receiver = this.get_closedCause_o1qcj8_k$();
-      if (tmp0_safe_receiver == null)
-        null;
-      else {
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        throw tmp0_safe_receiver;
-      }
-      readFully_6(this.get_readable_ovw33t_k$(), dst, offset, length);
-      this.afterRead_biie6i_k$(length - offset | 0);
-      return Unit_getInstance();
-    }
-    return readFullySuspend_1(this, dst, offset, length, $completion);
+    this.u7q_1 = job;
+    job.zp(true, VOID, ByteChannelJS$attachJob$lambda(this));
   };
   protoOf(ByteChannelJS).toString = function () {
-    return 'ByteChannel[' + this.attachedJob_1 + ', ' + hashCode(this) + ']';
+    return 'ByteChannel[' + this.u7q_1 + ', ' + hashCode(this) + ']';
   };
   function ByteReadChannel$Companion$Empty$delegate$lambda() {
     // Inline function 'kotlin.apply' call
-    var this_0 = new ByteChannelJS(Companion_getInstance_4().get_Empty_i9b85g_k$(), false);
+    var this_0 = new ByteChannelJS(Companion_getInstance_4().a7j_1, false);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.Companion.Empty$delegate.<anonymous>.<anonymous>' call
-    this_0.close_ukldxa_k$(null);
+    this_0.n16(null);
     return this_0;
   }
   function Companion_3() {
     Companion_instance_3 = this;
     var tmp = this;
-    tmp.Empty$delegate_1 = lazy(ByteReadChannel$Companion$Empty$delegate$lambda);
+    tmp.f7q_1 = lazy(ByteReadChannel$Companion$Empty$delegate$lambda);
   }
-  protoOf(Companion_3).get_Empty_i9b85g_k$ = function () {
+  protoOf(Companion_3).k7k = function () {
     // Inline function 'kotlin.getValue' call
-    var this_0 = this.Empty$delegate_1;
+    var this_0 = this.f7q_1;
     Empty$factory();
-    return this_0.get_value_j01efc_k$();
+    return this_0.q2();
   };
   var Companion_instance_3;
   function Companion_getInstance_5() {
@@ -9917,39 +4773,19 @@
   }
   function Empty$factory() {
     return getPropertyCallableRef('Empty', 1, KProperty1, function (receiver) {
-      return receiver.get_Empty_i9b85g_k$();
+      return receiver.k7k();
     }, null);
   }
-  function ByteWriteChannel() {
-  }
   function DefaultAllocator() {
-    DefaultAllocator_instance = this;
   }
-  protoOf(DefaultAllocator).alloc_l8bx4z_k$ = function (size) {
+  protoOf(DefaultAllocator).j7l = function (size) {
     return new Memory(new DataView(new ArrayBuffer(size)));
   };
-  protoOf(DefaultAllocator).alloc_n5v8h3_k$ = function (size) {
-    // Inline function 'io.ktor.utils.io.core.internal.toIntOrFail' call
-    if (size.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
-      failLongToIntConversion(size, 'size');
-    }
-    var tmp$ret$0 = size.toInt_1tsl84_k$();
-    return new Memory(new DataView(new ArrayBuffer(tmp$ret$0)));
-  };
-  protoOf(DefaultAllocator).free_r48ke1_k$ = function (instance) {
+  protoOf(DefaultAllocator).l7l = function (instance) {
   };
   var DefaultAllocator_instance;
   function DefaultAllocator_getInstance() {
-    if (DefaultAllocator_instance == null)
-      new DefaultAllocator();
     return DefaultAllocator_instance;
-  }
-  function useMemory(_this__u8e3s4, offset, length, block) {
-    offset = offset === VOID ? 0 : offset;
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    return block(of(Companion_getInstance_6(), _this__u8e3s4, offset, length));
   }
   function of(_this__u8e3s4, array, offset, length) {
     offset = offset === VOID ? 0 : offset;
@@ -9970,11 +4806,8 @@
   }
   function Companion_4() {
     Companion_instance_4 = this;
-    this.Empty_1 = new Memory(new DataView(new ArrayBuffer(0)));
+    this.t7n_1 = new Memory(new DataView(new ArrayBuffer(0)));
   }
-  protoOf(Companion_4).get_Empty_i9b85g_k$ = function () {
-    return this.Empty_1;
-  };
   var Companion_instance_4;
   function Companion_getInstance_6() {
     if (Companion_instance_4 == null)
@@ -9983,40 +4816,9 @@
   }
   function Memory(view) {
     Companion_getInstance_6();
-    this.view_1 = view;
+    this.l7k_1 = view;
   }
-  protoOf(Memory).get_view_wow8a6_k$ = function () {
-    return this.view_1;
-  };
-  protoOf(Memory).get_size_woubt6_k$ = function () {
-    return toLong(this.view_1.byteLength);
-  };
-  protoOf(Memory).get_size32_jht1rd_k$ = function () {
-    return this.view_1.byteLength;
-  };
-  protoOf(Memory).loadAt_z9xu2n_k$ = function (index) {
-    return this.view_1.getInt8(index);
-  };
-  protoOf(Memory).loadAt_m39h2j_k$ = function (index) {
-    // Inline function 'io.ktor.utils.io.core.internal.toIntOrFail' call
-    if (index.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
-      failLongToIntConversion(index, 'index');
-    }
-    var tmp$ret$0 = index.toInt_1tsl84_k$();
-    return this.view_1.getInt8(tmp$ret$0);
-  };
-  protoOf(Memory).storeAt_xwc3rw_k$ = function (index, value) {
-    this.view_1.setInt8(index, value);
-  };
-  protoOf(Memory).storeAt_g4s8oi_k$ = function (index, value) {
-    // Inline function 'io.ktor.utils.io.core.internal.toIntOrFail' call
-    if (index.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
-      failLongToIntConversion(index, 'index');
-    }
-    var tmp$ret$0 = index.toInt_1tsl84_k$();
-    this.view_1.setInt8(tmp$ret$0, value);
-  };
-  protoOf(Memory).slice_bze60e_k$ = function (offset, length) {
+  protoOf(Memory).v7q = function (offset, length) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(offset >= 0)) {
@@ -10033,123 +4835,42 @@
     }
     var tmp = toLong(offset + length | 0);
     // Inline function 'io.ktor.utils.io.bits.Memory.size' call
-    var tmp$ret$2 = toLong(this.view_1.byteLength);
-    if (tmp.compareTo_9jj042_k$(tmp$ret$2) > 0) {
+    var tmp$ret$2 = toLong(this.l7k_1.byteLength);
+    if (tmp.x9(tmp$ret$2) > 0) {
       // Inline function 'io.ktor.utils.io.bits.Memory.size' call
-      var tmp$ret$3 = toLong(this.view_1.byteLength);
+      var tmp$ret$3 = toLong(this.l7k_1.byteLength);
       throw IndexOutOfBoundsException_init_$Create$('offset + length > size: ' + offset + ' + ' + length + ' > ' + tmp$ret$3.toString());
     }
-    return new Memory(new DataView(this.view_1.buffer, this.view_1.byteOffset + offset | 0, length));
+    return new Memory(new DataView(this.l7k_1.buffer, this.l7k_1.byteOffset + offset | 0, length));
   };
-  protoOf(Memory).slice_4fjajy_k$ = function (offset, length) {
-    // Inline function 'io.ktor.utils.io.core.internal.toIntOrFail' call
-    if (offset.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
-      failLongToIntConversion(offset, 'offset');
-    }
-    var tmp = offset.toInt_1tsl84_k$();
-    // Inline function 'io.ktor.utils.io.core.internal.toIntOrFail' call
-    if (length.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
-      failLongToIntConversion(length, 'length');
-    }
-    var tmp$ret$1 = length.toInt_1tsl84_k$();
-    return this.slice_bze60e_k$(tmp, tmp$ret$1);
-  };
-  protoOf(Memory).copyTo_fgxuoj_k$ = function (destination, offset, length, destinationOffset) {
-    var src = new Int8Array(this.view_1.buffer, this.view_1.byteOffset + offset | 0, length);
-    var dst = new Int8Array(destination.view_1.buffer, destination.view_1.byteOffset + destinationOffset | 0, length);
+  protoOf(Memory).c7l = function (destination, offset, length, destinationOffset) {
+    var src = new Int8Array(this.l7k_1.buffer, this.l7k_1.byteOffset + offset | 0, length);
+    var dst = new Int8Array(destination.l7k_1.buffer, destination.l7k_1.byteOffset + destinationOffset | 0, length);
     dst.set(src);
   };
-  protoOf(Memory).copyTo_ug0rjx_k$ = function (destination, offset, length, destinationOffset) {
-    // Inline function 'io.ktor.utils.io.core.internal.toIntOrFail' call
-    if (offset.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
-      failLongToIntConversion(offset, 'offset');
-    }
-    var tmp = offset.toInt_1tsl84_k$();
-    // Inline function 'io.ktor.utils.io.core.internal.toIntOrFail' call
-    if (length.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
-      failLongToIntConversion(length, 'length');
-    }
-    var tmp_0 = length.toInt_1tsl84_k$();
-    // Inline function 'io.ktor.utils.io.core.internal.toIntOrFail' call
-    var name = 'destinationOffset';
-    if (destinationOffset.compareTo_9jj042_k$(toLong(IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$())) >= 0) {
-      failLongToIntConversion(destinationOffset, name);
-    }
-    var tmp$ret$2 = destinationOffset.toInt_1tsl84_k$();
-    this.copyTo_fgxuoj_k$(destination, tmp, tmp_0, tmp$ret$2);
-  };
   function copyTo_0(_this__u8e3s4, destination, offset, length, destinationOffset) {
-    copyTo_3(_this__u8e3s4.buffer, destination, offset + _this__u8e3s4.byteOffset | 0, length, destinationOffset);
+    copyTo_2(_this__u8e3s4.buffer, destination, offset + _this__u8e3s4.byteOffset | 0, length, destinationOffset);
   }
   function copyTo_1(_this__u8e3s4, destination, offset, length, destinationOffset) {
-    var to = new Int8Array(destination, destinationOffset, length);
-    var from = new Int8Array(_this__u8e3s4.view_1.buffer, _this__u8e3s4.view_1.byteOffset + offset | 0, length);
-    to.set(from, 0);
-  }
-  function copyTo_2(_this__u8e3s4, destination, offset, length, destinationOffset) {
     // Inline function 'kotlin.js.asDynamic' call
     var to = destination;
-    var from = new Int8Array(_this__u8e3s4.view_1.buffer, _this__u8e3s4.view_1.byteOffset + offset | 0, length);
+    var from = new Int8Array(_this__u8e3s4.l7k_1.buffer, _this__u8e3s4.l7k_1.byteOffset + offset | 0, length);
     to.set(from, destinationOffset);
   }
-  function copyTo_3(_this__u8e3s4, destination, offset, length, destinationOffset) {
+  function copyTo_2(_this__u8e3s4, destination, offset, length, destinationOffset) {
     var from = new Int8Array(_this__u8e3s4, offset, length);
-    var to = new Int8Array(destination.view_1.buffer, destination.view_1.byteOffset + destinationOffset | 0, length);
+    var to = new Int8Array(destination.l7k_1.buffer, destination.l7k_1.byteOffset + destinationOffset | 0, length);
     to.set(from, 0);
   }
-  function storeShortAt(_this__u8e3s4, offset, value) {
-    _this__u8e3s4.get_view_wow8a6_k$().setInt16(offset, value, false);
-  }
-  function storeIntAt(_this__u8e3s4, offset, value) {
-    _this__u8e3s4.get_view_wow8a6_k$().setInt32(offset, value, false);
-  }
-  function storeLongAt(_this__u8e3s4, offset, value) {
-    _this__u8e3s4.get_view_wow8a6_k$().setInt32(offset, value.shr_9fl3wl_k$(32).toInt_1tsl84_k$(), false);
-    _this__u8e3s4.get_view_wow8a6_k$().setInt32(offset + 4 | 0, value.and_4spn93_k$(new Long(-1, 0)).toInt_1tsl84_k$(), false);
-  }
-  function storeFloatAt(_this__u8e3s4, offset, value) {
-    _this__u8e3s4.get_view_wow8a6_k$().setFloat32(offset, value, false);
-  }
-  function storeDoubleAt(_this__u8e3s4, offset, value) {
-    _this__u8e3s4.get_view_wow8a6_k$().setFloat64(offset, value, false);
-  }
-  function loadShortAt(_this__u8e3s4, offset) {
-    return _this__u8e3s4.get_view_wow8a6_k$().getInt16(offset, false);
-  }
-  function loadIntAt(_this__u8e3s4, offset) {
-    return _this__u8e3s4.get_view_wow8a6_k$().getInt32(offset, false);
-  }
-  function loadLongAt(_this__u8e3s4, offset) {
-    return toLong(_this__u8e3s4.get_view_wow8a6_k$().getUint32(offset, false)).shl_bg8if3_k$(32).or_v7fvkl_k$(toLong(_this__u8e3s4.get_view_wow8a6_k$().getUint32(offset + 4 | 0, false)));
-  }
-  function loadFloatAt(_this__u8e3s4, offset) {
-    return _this__u8e3s4.get_view_wow8a6_k$().getFloat32(offset, false);
-  }
-  function loadDoubleAt(_this__u8e3s4, offset) {
-    return _this__u8e3s4.get_view_wow8a6_k$().getFloat64(offset, false);
-  }
-  function get_isLittleEndianPlatform() {
-    _init_properties_PrimitiveArraysJs_kt__3i7vt4();
-    return isLittleEndianPlatform;
-  }
-  var isLittleEndianPlatform;
-  var properties_initialized_PrimitiveArraysJs_kt_2zxjae;
-  function _init_properties_PrimitiveArraysJs_kt__3i7vt4() {
-    if (!properties_initialized_PrimitiveArraysJs_kt_2zxjae) {
-      properties_initialized_PrimitiveArraysJs_kt_2zxjae = true;
-      isLittleEndianPlatform = Companion_getInstance_8().nativeOrder_spqstz_k$() === ByteOrder_LITTLE_ENDIAN_getInstance();
-    }
-  }
   function Companion_5() {
-    Companion_instance_5 = this;
   }
-  protoOf(Companion_5).forName_etcah2_k$ = function (name) {
+  protoOf(Companion_5).w7q = function (name) {
     switch (name) {
       case 'UTF-8':
       case 'utf-8':
       case 'UTF8':
       case 'utf8':
-        return Charsets_getInstance().UTF_8__1;
+        return Charsets_getInstance().u7n_1;
     }
     var tmp;
     var tmp_0;
@@ -10190,11 +4911,11 @@
       tmp = name === 'Latin1';
     }
     if (tmp) {
-      return Charsets_getInstance().ISO_8859_1__1;
+      return Charsets_getInstance().v7n_1;
     }
     throw IllegalArgumentException_init_$Create$('Charset ' + name + ' is not supported');
   };
-  protoOf(Companion_5).isSupported_c9nas6_k$ = function (charset) {
+  protoOf(Companion_5).x7q = function (charset) {
     var tmp;
     switch (charset) {
       case 'UTF-8':
@@ -10250,17 +4971,11 @@
   };
   var Companion_instance_5;
   function Companion_getInstance_7() {
-    if (Companion_instance_5 == null)
-      new Companion_5();
     return Companion_instance_5;
   }
   function Charset(_name) {
-    Companion_getInstance_7();
-    this._name_1 = _name;
+    this.w7n_1 = _name;
   }
-  protoOf(Charset).get__name_inm79d_k$ = function () {
-    return this._name_1;
-  };
   protoOf(Charset).equals = function (other) {
     if (this === other)
       return true;
@@ -10268,30 +4983,24 @@
       return false;
     if (!(other instanceof Charset))
       THROW_CCE();
-    if (!(this._name_1 === other._name_1))
+    if (!(this.w7n_1 === other.w7n_1))
       return false;
     return true;
   };
   protoOf(Charset).hashCode = function () {
-    return getStringHashCode(this._name_1);
+    return getStringHashCode(this.w7n_1);
   };
   protoOf(Charset).toString = function () {
-    return this._name_1;
+    return this.w7n_1;
   };
   function get_name(_this__u8e3s4) {
-    return _this__u8e3s4._name_1;
+    return _this__u8e3s4.w7n_1;
   }
   function Charsets() {
     Charsets_instance = this;
-    this.UTF_8__1 = new CharsetImpl('UTF-8');
-    this.ISO_8859_1__1 = new CharsetImpl('ISO-8859-1');
+    this.u7n_1 = new CharsetImpl('UTF-8');
+    this.v7n_1 = new CharsetImpl('ISO-8859-1');
   }
-  protoOf(Charsets).get_UTF_8_ihn39z_k$ = function () {
-    return this.UTF_8__1;
-  };
-  protoOf(Charsets).get_ISO_8859_1_y3qebr_k$ = function () {
-    return this.ISO_8859_1__1;
-  };
   var Charsets_instance;
   function Charsets_getInstance() {
     if (Charsets_instance == null)
@@ -10303,50 +5012,31 @@
     captureStack(this, MalformedInputException);
   }
   function CharsetDecoder(_charset) {
-    this._charset_1 = _charset;
+    this.y7q_1 = _charset;
   }
-  protoOf(CharsetDecoder).get__charset_jf44ie_k$ = function () {
-    return this._charset_1;
-  };
-  function encodeToByteArray_0(_this__u8e3s4, input, fromIndex, toIndex) {
+  function encodeToByteArray(_this__u8e3s4, input, fromIndex, toIndex) {
     fromIndex = fromIndex === VOID ? 0 : fromIndex;
     toIndex = toIndex === VOID ? charSequenceLength(input) : toIndex;
     return encodeToByteArrayImpl1(_this__u8e3s4, input, fromIndex, toIndex);
   }
   function CharsetEncoder(_charset) {
-    this._charset_1 = _charset;
+    this.z7q_1 = _charset;
   }
-  protoOf(CharsetEncoder).get__charset_jf44ie_k$ = function () {
-    return this._charset_1;
-  };
   function CharsetImpl(name) {
     Charset.call(this, name);
-    this.name_1 = name;
+    this.b7r_1 = name;
   }
-  protoOf(CharsetImpl).get_name_woqyms_k$ = function () {
-    return this.name_1;
-  };
-  protoOf(CharsetImpl).newEncoder_gqwcdg_k$ = function () {
+  protoOf(CharsetImpl).y7n = function () {
     return new CharsetEncoderImpl(this);
   };
-  protoOf(CharsetImpl).newDecoder_zcettw_k$ = function () {
+  protoOf(CharsetImpl).x7n = function () {
     return new CharsetDecoderImpl(this);
   };
-  protoOf(CharsetImpl).component1_7eebsc_k$ = function () {
-    return this.name_1;
-  };
-  protoOf(CharsetImpl).copy_a35qlh_k$ = function (name) {
-    return new CharsetImpl(name);
-  };
-  protoOf(CharsetImpl).copy$default_l07wt9_k$ = function (name, $super) {
-    name = name === VOID ? this.name_1 : name;
-    return $super === VOID ? this.copy_a35qlh_k$(name) : $super.copy_a35qlh_k$.call(this, name);
-  };
   protoOf(CharsetImpl).toString = function () {
-    return 'CharsetImpl(name=' + this.name_1 + ')';
+    return 'CharsetImpl(name=' + this.b7r_1 + ')';
   };
   protoOf(CharsetImpl).hashCode = function () {
-    return getStringHashCode(this.name_1);
+    return getStringHashCode(this.b7r_1);
   };
   protoOf(CharsetImpl).equals = function (other) {
     if (this === other)
@@ -10354,7 +5044,7 @@
     if (!(other instanceof CharsetImpl))
       return false;
     var tmp0_other_with_cast = other instanceof CharsetImpl ? other : THROW_CCE();
-    if (!(this.name_1 === tmp0_other_with_cast.name_1))
+    if (!(this.b7r_1 === tmp0_other_with_cast.b7r_1))
       return false;
     return true;
   };
@@ -10364,17 +5054,17 @@
     var start = fromIndex;
     if (start >= toIndex)
       return get_EmptyByteArray();
-    var single = Companion_getInstance_4().get_Pool_wo83gl_k$().borrow_mvkpor_k$();
+    var single = Companion_getInstance_4().d7j().h7m();
     try {
       var rc = encodeImpl(_this__u8e3s4, input, start, toIndex, single);
       start = start + rc | 0;
       if (start === toIndex) {
         // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-        var tmp$ret$0 = single.get_writePosition_jdt81t_k$() - single.get_readPosition_70qxnc_k$() | 0;
+        var tmp$ret$0 = single.n7f_1 - single.m7f_1 | 0;
         var result = new Int8Array(tmp$ret$0);
         // Inline function 'io.ktor.utils.io.core.readFully' call
         var length = result.length - 0 | 0;
-        readFully_1(single instanceof Buffer ? single : THROW_CCE(), result, 0, length);
+        readFully(single instanceof Buffer ? single : THROW_CCE(), result, 0, length);
         return result;
       }
       var tmp$ret$1;
@@ -10384,14 +5074,14 @@
         var builder = new BytePacketBuilder();
         try {
           // Inline function 'io.ktor.utils.io.charsets.encodeToByteArrayImpl1.<anonymous>' call
-          builder.appendSingleChunk_7rbwf9_k$(single.duplicate_jvgc97_k$());
+          builder.q7m(single.a7o());
           encodeToImpl(_this__u8e3s4, builder, input, start, toIndex);
-          tmp$ret$1 = builder.build_1k0s4u_k$();
+          tmp$ret$1 = builder.e3();
           break $l$block;
         } catch ($p) {
           if ($p instanceof Error) {
             var t = $p;
-            builder.release_wu5yyf_k$();
+            builder.mv();
             throw t;
           } else {
             throw $p;
@@ -10400,31 +5090,18 @@
       }
       return readBytes(tmp$ret$1);
     }finally {
-      single.release_vbevvg_k$(Companion_getInstance_4().get_Pool_wo83gl_k$());
+      single.k7m(Companion_getInstance_4().d7j());
     }
-  }
-  function _get_charset__c43qgr($this) {
-    return $this.charset_1;
-  }
-  function component1($this) {
-    return $this.charset_1;
   }
   function CharsetEncoderImpl(charset) {
     CharsetEncoder.call(this, charset);
-    this.charset_1 = charset;
+    this.d7r_1 = charset;
   }
-  protoOf(CharsetEncoderImpl).copy_2crzso_k$ = function (charset) {
-    return new CharsetEncoderImpl(charset);
-  };
-  protoOf(CharsetEncoderImpl).copy$default_73mtqm_k$ = function (charset, $super) {
-    charset = charset === VOID ? this.charset_1 : charset;
-    return $super === VOID ? this.copy_2crzso_k$(charset) : $super.copy_2crzso_k$.call(this, charset);
-  };
   protoOf(CharsetEncoderImpl).toString = function () {
-    return 'CharsetEncoderImpl(charset=' + this.charset_1 + ')';
+    return 'CharsetEncoderImpl(charset=' + this.d7r_1 + ')';
   };
   protoOf(CharsetEncoderImpl).hashCode = function () {
-    return this.charset_1.hashCode();
+    return this.d7r_1.hashCode();
   };
   protoOf(CharsetEncoderImpl).equals = function (other) {
     if (this === other)
@@ -10432,32 +5109,19 @@
     if (!(other instanceof CharsetEncoderImpl))
       return false;
     var tmp0_other_with_cast = other instanceof CharsetEncoderImpl ? other : THROW_CCE();
-    if (!this.charset_1.equals(tmp0_other_with_cast.charset_1))
+    if (!this.d7r_1.equals(tmp0_other_with_cast.d7r_1))
       return false;
     return true;
   };
-  function _get_charset__c43qgr_0($this) {
-    return $this.charset_1;
-  }
-  function component1_0($this) {
-    return $this.charset_1;
-  }
   function CharsetDecoderImpl(charset) {
     CharsetDecoder.call(this, charset);
-    this.charset_1 = charset;
+    this.f7r_1 = charset;
   }
-  protoOf(CharsetDecoderImpl).copy_2crzso_k$ = function (charset) {
-    return new CharsetDecoderImpl(charset);
-  };
-  protoOf(CharsetDecoderImpl).copy$default_ng4zhe_k$ = function (charset, $super) {
-    charset = charset === VOID ? this.charset_1 : charset;
-    return $super === VOID ? this.copy_2crzso_k$(charset) : $super.copy_2crzso_k$.call(this, charset);
-  };
   protoOf(CharsetDecoderImpl).toString = function () {
-    return 'CharsetDecoderImpl(charset=' + this.charset_1 + ')';
+    return 'CharsetDecoderImpl(charset=' + this.f7r_1 + ')';
   };
   protoOf(CharsetDecoderImpl).hashCode = function () {
-    return this.charset_1.hashCode();
+    return this.f7r_1.hashCode();
   };
   protoOf(CharsetDecoderImpl).equals = function (other) {
     if (this === other)
@@ -10465,7 +5129,7 @@
     if (!(other instanceof CharsetDecoderImpl))
       return false;
     var tmp0_other_with_cast = other instanceof CharsetDecoderImpl ? other : THROW_CCE();
-    if (!this.charset_1.equals(tmp0_other_with_cast.charset_1))
+    if (!this.f7r_1.equals(tmp0_other_with_cast.f7r_1))
       return false;
     return true;
   };
@@ -10479,12 +5143,12 @@
       var message = 'Failed requirement.';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    if (get_charset(_this__u8e3s4).equals(Charsets_getInstance().ISO_8859_1__1)) {
+    if (get_charset(_this__u8e3s4).equals(Charsets_getInstance().v7n_1)) {
       return encodeISO88591(input, fromIndex, toIndex, dst);
     }
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(get_charset(_this__u8e3s4) === Charsets_getInstance().UTF_8__1)) {
+    if (!(get_charset(_this__u8e3s4) === Charsets_getInstance().u7n_1)) {
       // Inline function 'io.ktor.utils.io.charsets.encodeImpl.<anonymous>' call
       var message_0 = 'Only UTF-8 encoding is supported in JS';
       throw IllegalArgumentException_init_$Create$(toString(message_0));
@@ -10492,7 +5156,7 @@
     var encoder = new TextEncoder();
     var start = fromIndex;
     // Inline function 'io.ktor.utils.io.core.Buffer.writeRemaining' call
-    var dstRemaining = dst.get_limit_iuokuq_k$() - dst.get_writePosition_jdt81t_k$() | 0;
+    var dstRemaining = dst.p7f_1 - dst.n7f_1 | 0;
     $l$loop: while (start < toIndex ? dstRemaining > 0 : false) {
       // Inline function 'kotlin.comparisons.minOf' call
       var a = toIndex - start | 0;
@@ -10507,17 +5171,17 @@
       var array1 = encoder.encode(tmp$ret$4);
       if (array1.length > dstRemaining)
         break $l$loop;
-      writeFully_6(dst, array1);
+      writeFully_4(dst, array1);
       start = endIndexExclusive;
       dstRemaining = dstRemaining - array1.length | 0;
     }
     return start - fromIndex | 0;
   }
   function get_charset(_this__u8e3s4) {
-    return _this__u8e3s4._charset_1;
+    return _this__u8e3s4.z7q_1;
   }
   function decode_0(_this__u8e3s4, input, dst, max) {
-    var decoder = Decoder_0(get_name(get_charset_0(_this__u8e3s4)), true);
+    var decoder = Decoder(get_name(get_charset_0(_this__u8e3s4)), true);
     var charactersCopied = 0;
     $l$block: {
       // Inline function 'io.ktor.utils.io.core.takeWhileSize' call
@@ -10535,7 +5199,7 @@
         $l$loop: do {
           // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
           var this_0 = current;
-          var before = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
+          var before = this_0.n7f_1 - this_0.m7f_1 | 0;
           var after;
           if (before >= size) {
             try {
@@ -10545,7 +5209,7 @@
                 var buffer = current;
                 var rem = max - charactersCopied | 0;
                 // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-                var bufferSize = buffer.get_writePosition_jdt81t_k$() - buffer.get_readPosition_70qxnc_k$() | 0;
+                var bufferSize = buffer.n7f_1 - buffer.m7f_1 | 0;
                 if (rem < bufferSize) {
                   tmp$ret$3 = 0;
                   break $l$block_0;
@@ -10555,11 +5219,11 @@
                 // Inline function 'io.ktor.utils.io.core.read' call
                 // Inline function 'kotlin.contracts.contract' call
                 // Inline function 'io.ktor.utils.io.core.readDirectInt8Array.<anonymous>' call
-                var memory = buffer.get_memory_gl4362_k$();
-                var start = buffer.get_readPosition_70qxnc_k$();
-                var endExclusive = buffer.get_writePosition_jdt81t_k$();
+                var memory = buffer.l7f_1;
+                var start = buffer.m7f_1;
+                var endExclusive = buffer.n7f_1;
                 // Inline function 'io.ktor.utils.io.charsets.decode.<anonymous>.<anonymous>' call
-                var view = new Int8Array(memory.get_view_wow8a6_k$().buffer, memory.get_view_wow8a6_k$().byteOffset + start | 0, endExclusive - start | 0);
+                var view = new Int8Array(memory.l7k_1.buffer, memory.l7k_1.byteOffset + start | 0, endExclusive - start | 0);
                 $l$block_2: {
                   // Inline function 'io.ktor.utils.io.js.decodeWrap' call
                   try {
@@ -10569,7 +5233,7 @@
                       // Inline function 'io.ktor.utils.io.js.decodeStream' call
                       // Inline function 'io.ktor.utils.io.js.decodeWrap' call
                       try {
-                        tmp$ret$4 = decoder.decode_mvpnei_k$(view, decodeOptions(true));
+                        tmp$ret$4 = decoder.g7r(view, decodeOptions(true));
                         break $l$block_1;
                       } catch ($p) {
                         if ($p instanceof Error) {
@@ -10593,15 +5257,15 @@
                   }
                 }
                 var decodedText = tmp$ret$4;
-                dst.append_jgojdo_k$(decodedText);
+                dst.m8(decodedText);
                 charactersCopied = charactersCopied + decodedText.length | 0;
                 var rc = view.byteLength;
-                buffer.discardExact_11sae1_k$(rc);
+                buffer.m7k(rc);
                 var tmp_0;
                 if (charactersCopied === max) {
                   var tmp_1;
                   try {
-                    tmp_1 = decoder.decode_m3924y_k$();
+                    tmp_1 = decoder.h7r();
                   } catch ($p) {
                     var tmp_2;
                     var _ = $p;
@@ -10611,7 +5275,7 @@
                   var tail = tmp_1;
                   // Inline function 'kotlin.text.isNotEmpty' call
                   if (charSequenceLength(tail) > 0) {
-                    buffer.rewind_gfqr1p_k$(bufferSize);
+                    buffer.q7k(bufferSize);
                   }
                   tmp_0 = 0;
                 } else if (charactersCopied < max) {
@@ -10625,7 +5289,7 @@
             }finally {
               // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
               var this_1 = current;
-              after = this_1.get_writePosition_jdt81t_k$() - this_1.get_readPosition_70qxnc_k$() | 0;
+              after = this_1.n7f_1 - this_1.m7f_1 | 0;
             }
           } else {
             after = before;
@@ -10641,7 +5305,8 @@
             } else {
               // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
               var this_2 = current;
-              tmp_4 = (this_2.get_capacity_wxbgcd_k$() - this_2.get_limit_iuokuq_k$() | 0) < Companion_getInstance_1().get_ReservedSize_b4jt5a_k$();
+              var tmp_5 = this_2.q7f_1 - this_2.p7f_1 | 0;
+              tmp_4 = tmp_5 < 8;
             }
             if (tmp_4) {
               completeReadHead(input, current);
@@ -10651,13 +5316,13 @@
             }
           }
           var tmp1_elvis_lhs = tmp_3;
-          var tmp_5;
+          var tmp_6;
           if (tmp1_elvis_lhs == null) {
             break $l$loop;
           } else {
-            tmp_5 = tmp1_elvis_lhs;
+            tmp_6 = tmp1_elvis_lhs;
           }
-          var next = tmp_5;
+          var next = tmp_6;
           current = next;
           release = true;
         }
@@ -10674,19 +5339,19 @@
         // Inline function 'io.ktor.utils.io.core.takeWhileSize' call
         var release_0 = true;
         var tmp0_elvis_lhs_2 = prepareReadFirstHead(input, 1);
-        var tmp_6;
+        var tmp_7;
         if (tmp0_elvis_lhs_2 == null) {
           break $l$block_3;
         } else {
-          tmp_6 = tmp0_elvis_lhs_2;
+          tmp_7 = tmp0_elvis_lhs_2;
         }
-        var current_0 = tmp_6;
+        var current_0 = tmp_7;
         var size_1 = 1;
         try {
           $l$loop_0: do {
             // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
             var this_3 = current_0;
-            var before_0 = this_3.get_writePosition_jdt81t_k$() - this_3.get_readPosition_70qxnc_k$() | 0;
+            var before_0 = this_3.n7f_1 - this_3.m7f_1 | 0;
             var after_0;
             if (before_0 >= size_1) {
               try {
@@ -10697,16 +5362,16 @@
                 var this_4 = current_0;
                 // Inline function 'kotlin.contracts.contract' call
                 // Inline function 'io.ktor.utils.io.core.readDirectInt8Array.<anonymous>' call
-                var memory_0 = this_4.get_memory_gl4362_k$();
-                var start_0 = this_4.get_readPosition_70qxnc_k$();
-                var endExclusive_0 = this_4.get_writePosition_jdt81t_k$();
+                var memory_0 = this_4.l7f_1;
+                var start_0 = this_4.m7f_1;
+                var endExclusive_0 = this_4.n7f_1;
                 // Inline function 'io.ktor.utils.io.charsets.decode.<anonymous>.<anonymous>' call
-                var view_0 = new Int8Array(memory_0.get_view_wow8a6_k$().buffer, memory_0.get_view_wow8a6_k$().byteOffset + start_0 | 0, endExclusive_0 - start_0 | 0);
+                var view_0 = new Int8Array(memory_0.l7k_1.buffer, memory_0.l7k_1.byteOffset + start_0 | 0, endExclusive_0 - start_0 | 0);
                 var result = decodeBufferImpl(view_0, decoder, max - charactersCopied | 0);
-                dst.append_jgojdo_k$(result.get_charactersDecoded_mdwn5p_k$());
-                charactersCopied = charactersCopied + result.get_charactersDecoded_mdwn5p_k$().length | 0;
-                var rc_0 = result.get_bytesConsumed_ic9jre_k$();
-                this_4.discardExact_11sae1_k$(rc_0);
+                dst.m8(result.i7r_1);
+                charactersCopied = charactersCopied + result.i7r_1.length | 0;
+                var rc_0 = result.j7r_1;
+                this_4.m7k(rc_0);
                 var rc_1 = rc_0;
                 if (rc_1 > 0)
                   size_0 = 1;
@@ -10719,39 +5384,40 @@
               }finally {
                 // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
                 var this_5 = current_0;
-                after_0 = this_5.get_writePosition_jdt81t_k$() - this_5.get_readPosition_70qxnc_k$() | 0;
+                after_0 = this_5.n7f_1 - this_5.m7f_1 | 0;
               }
             } else {
               after_0 = before_0;
             }
             release_0 = false;
-            var tmp_7;
+            var tmp_8;
             if (after_0 === 0) {
-              tmp_7 = prepareReadNextHead(input, current_0);
+              tmp_8 = prepareReadNextHead(input, current_0);
             } else {
-              var tmp_8;
+              var tmp_9;
               if (after_0 < size_1) {
-                tmp_8 = true;
+                tmp_9 = true;
               } else {
                 // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
                 var this_6 = current_0;
-                tmp_8 = (this_6.get_capacity_wxbgcd_k$() - this_6.get_limit_iuokuq_k$() | 0) < Companion_getInstance_1().get_ReservedSize_b4jt5a_k$();
+                var tmp_10 = this_6.q7f_1 - this_6.p7f_1 | 0;
+                tmp_9 = tmp_10 < 8;
               }
-              if (tmp_8) {
+              if (tmp_9) {
                 completeReadHead(input, current_0);
-                tmp_7 = prepareReadFirstHead(input, size_1);
+                tmp_8 = prepareReadFirstHead(input, size_1);
               } else {
-                tmp_7 = current_0;
+                tmp_8 = current_0;
               }
             }
-            var tmp1_elvis_lhs_0 = tmp_7;
-            var tmp_9;
+            var tmp1_elvis_lhs_0 = tmp_8;
+            var tmp_11;
             if (tmp1_elvis_lhs_0 == null) {
               break $l$loop_0;
             } else {
-              tmp_9 = tmp1_elvis_lhs_0;
+              tmp_11 = tmp1_elvis_lhs_0;
             }
-            var next_0 = tmp_9;
+            var next_0 = tmp_11;
             current_0 = next_0;
             release_0 = true;
           }
@@ -10772,17 +5438,17 @@
     if (inputLength === 0)
       return '';
     // Inline function 'io.ktor.utils.io.core.Input.headRemaining' call
-    if ((input.get_headEndExclusive_yba4hg_k$() - input.get_headPosition_sd9ua6_k$() | 0) >= inputLength) {
-      var decoder = Decoder_0(get_charset_0(_this__u8e3s4)._name_1, true);
-      var head = input.get_head_won7e1_k$();
-      var view = input.get_headMemory_zbxxm_k$().get_view_wow8a6_k$();
+    if ((input.y7g_1 - input.x7g_1 | 0) >= inputLength) {
+      var decoder = Decoder(get_charset_0(_this__u8e3s4).w7n_1, true);
+      var head = input.p7m();
+      var view = input.w7g_1.l7k_1;
       var tmp$ret$2;
       $l$block: {
         // Inline function 'io.ktor.utils.io.js.decodeWrap' call
         try {
           // Inline function 'io.ktor.utils.io.charsets.decodeExactBytes.<anonymous>' call
-          var subView = (head.get_readPosition_70qxnc_k$() === 0 ? inputLength === view.byteLength : false) ? view : new DataView(view.buffer, view.byteOffset + head.get_readPosition_70qxnc_k$() | 0, inputLength);
-          tmp$ret$2 = decoder.decode_hpap4q_k$(subView);
+          var subView = (head.m7f_1 === 0 ? inputLength === view.byteLength : false) ? view : new DataView(view.buffer, view.byteOffset + head.m7f_1 | 0, inputLength);
+          tmp$ret$2 = decoder.k7r(subView);
           break $l$block;
         } catch ($p) {
           if ($p instanceof Error) {
@@ -10795,18 +5461,18 @@
         }
       }
       var text = tmp$ret$2;
-      input.discardExact_11sae1_k$(inputLength);
+      input.m7k(inputLength);
       return text;
     }
     return decodeExactBytesSlow(_this__u8e3s4, input, inputLength);
   }
   function get_charset_0(_this__u8e3s4) {
-    return _this__u8e3s4._charset_1;
+    return _this__u8e3s4.y7q_1;
   }
   function decodeExactBytesSlow(_this__u8e3s4, input, inputLength) {
-    var decoder = Decoder_0(get_name(get_charset_0(_this__u8e3s4)), true);
+    var decoder = Decoder(get_name(get_charset_0(_this__u8e3s4)), true);
     var inputRemaining = inputLength;
-    var sb = StringBuilder_init_$Create$_0(inputLength);
+    var sb = StringBuilder_init_$Create$(inputLength);
     $l$block_4: {
       // Inline function 'io.ktor.utils.io.js.decodeWrap' call
       try {
@@ -10827,26 +5493,26 @@
             $l$loop: do {
               // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
               var this_0 = current;
-              var before = this_0.get_writePosition_jdt81t_k$() - this_0.get_readPosition_70qxnc_k$() | 0;
+              var before = this_0.n7f_1 - this_0.m7f_1 | 0;
               var after;
               if (before >= size) {
                 try {
                   // Inline function 'io.ktor.utils.io.charsets.decodeExactBytesSlow.<anonymous>.<anonymous>' call
                   var buffer = current;
                   // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-                  var chunkSize = buffer.get_writePosition_jdt81t_k$() - buffer.get_readPosition_70qxnc_k$() | 0;
+                  var chunkSize = buffer.n7f_1 - buffer.m7f_1 | 0;
                   // Inline function 'kotlin.comparisons.minOf' call
                   var b = inputRemaining;
                   var size_0 = Math.min(chunkSize, b);
                   var tmp_0;
-                  if (buffer.get_readPosition_70qxnc_k$() === 0 ? buffer.get_memory_gl4362_k$().get_view_wow8a6_k$().byteLength === size_0 : false) {
+                  if (buffer.m7f_1 === 0 ? buffer.l7f_1.l7k_1.byteLength === size_0 : false) {
                     var tmp$ret$4;
                     $l$block_0: {
                       // Inline function 'io.ktor.utils.io.js.decodeStream' call
-                      var buffer_0 = buffer.get_memory_gl4362_k$().get_view_wow8a6_k$();
+                      var buffer_0 = buffer.l7f_1.l7k_1;
                       // Inline function 'io.ktor.utils.io.js.decodeWrap' call
                       try {
-                        tmp$ret$4 = decoder.decode_mvpnei_k$(buffer_0, decodeOptions(true));
+                        tmp$ret$4 = decoder.g7r(buffer_0, decodeOptions(true));
                         break $l$block_0;
                       } catch ($p) {
                         if ($p instanceof Error) {
@@ -10863,10 +5529,10 @@
                     var tmp$ret$6;
                     $l$block_1: {
                       // Inline function 'io.ktor.utils.io.js.decodeStream' call
-                      var buffer_1 = new Int8Array(buffer.get_memory_gl4362_k$().get_view_wow8a6_k$().buffer, buffer.get_memory_gl4362_k$().get_view_wow8a6_k$().byteOffset + buffer.get_readPosition_70qxnc_k$() | 0, size_0);
+                      var buffer_1 = new Int8Array(buffer.l7f_1.l7k_1.buffer, buffer.l7f_1.l7k_1.byteOffset + buffer.m7f_1 | 0, size_0);
                       // Inline function 'io.ktor.utils.io.js.decodeWrap' call
                       try {
-                        tmp$ret$6 = decoder.decode_mvpnei_k$(buffer_1, decodeOptions(true));
+                        tmp$ret$6 = decoder.g7r(buffer_1, decodeOptions(true));
                         break $l$block_1;
                       } catch ($p) {
                         if ($p instanceof Error) {
@@ -10881,14 +5547,14 @@
                     tmp_0 = tmp$ret$6;
                   }
                   var text = tmp_0;
-                  sb.append_22ad7x_k$(text);
-                  buffer.discardExact_11sae1_k$(size_0);
+                  sb.x5(text);
+                  buffer.m7k(size_0);
                   inputRemaining = inputRemaining - size_0 | 0;
                   size = inputRemaining > 0 ? 6 : 0;
                 }finally {
                   // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
                   var this_1 = current;
-                  after = this_1.get_writePosition_jdt81t_k$() - this_1.get_readPosition_70qxnc_k$() | 0;
+                  after = this_1.n7f_1 - this_1.m7f_1 | 0;
                 }
               } else {
                 after = before;
@@ -10904,7 +5570,8 @@
                 } else {
                   // Inline function 'io.ktor.utils.io.core.Buffer.endGap' call
                   var this_2 = current;
-                  tmp_2 = (this_2.get_capacity_wxbgcd_k$() - this_2.get_limit_iuokuq_k$() | 0) < Companion_getInstance_1().get_ReservedSize_b4jt5a_k$();
+                  var tmp_3 = this_2.q7f_1 - this_2.p7f_1 | 0;
+                  tmp_2 = tmp_3 < 8;
                 }
                 if (tmp_2) {
                   completeReadHead(input, current);
@@ -10914,13 +5581,13 @@
                 }
               }
               var tmp1_elvis_lhs = tmp_1;
-              var tmp_3;
+              var tmp_4;
               if (tmp1_elvis_lhs == null) {
                 break $l$loop;
               } else {
-                tmp_3 = tmp1_elvis_lhs;
+                tmp_4 = tmp1_elvis_lhs;
               }
-              var next = tmp_3;
+              var next = tmp_4;
               current = next;
               release = true;
             }
@@ -10936,33 +5603,33 @@
             // Inline function 'io.ktor.utils.io.core.takeWhile' call
             var release_0 = true;
             var tmp0_elvis_lhs_2 = prepareReadFirstHead(input, 1);
-            var tmp_4;
+            var tmp_5;
             if (tmp0_elvis_lhs_2 == null) {
               break $l$block_2;
             } else {
-              tmp_4 = tmp0_elvis_lhs_2;
+              tmp_5 = tmp0_elvis_lhs_2;
             }
-            var current_0 = tmp_4;
+            var current_0 = tmp_5;
             try {
               $l$loop_1: do {
                 // Inline function 'io.ktor.utils.io.charsets.decodeExactBytesSlow.<anonymous>.<anonymous>' call
                 var buffer_2 = current_0;
                 // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-                var chunkSize_0 = buffer_2.get_writePosition_jdt81t_k$() - buffer_2.get_readPosition_70qxnc_k$() | 0;
+                var chunkSize_0 = buffer_2.n7f_1 - buffer_2.m7f_1 | 0;
                 // Inline function 'kotlin.comparisons.minOf' call
                 var b_0 = inputRemaining;
                 var size_1 = Math.min(chunkSize_0, b_0);
-                var tmp_5;
-                if (buffer_2.get_readPosition_70qxnc_k$() === 0 ? buffer_2.get_memory_gl4362_k$().get_view_wow8a6_k$().byteLength === size_1 : false) {
-                  tmp_5 = decoder.decode_hpap4q_k$(buffer_2.get_memory_gl4362_k$().get_view_wow8a6_k$());
+                var tmp_6;
+                if (buffer_2.m7f_1 === 0 ? buffer_2.l7f_1.l7k_1.byteLength === size_1 : false) {
+                  tmp_6 = decoder.k7r(buffer_2.l7f_1.l7k_1);
                 } else {
                   var tmp$ret$14;
                   $l$block_3: {
                     // Inline function 'io.ktor.utils.io.js.decodeStream' call
-                    var buffer_3 = new Int8Array(buffer_2.get_memory_gl4362_k$().get_view_wow8a6_k$().buffer, buffer_2.get_memory_gl4362_k$().get_view_wow8a6_k$().byteOffset + buffer_2.get_readPosition_70qxnc_k$() | 0, size_1);
+                    var buffer_3 = new Int8Array(buffer_2.l7f_1.l7k_1.buffer, buffer_2.l7f_1.l7k_1.byteOffset + buffer_2.m7f_1 | 0, size_1);
                     // Inline function 'io.ktor.utils.io.js.decodeWrap' call
                     try {
-                      tmp$ret$14 = decoder.decode_mvpnei_k$(buffer_3, decodeOptions(true));
+                      tmp$ret$14 = decoder.g7r(buffer_3, decodeOptions(true));
                       break $l$block_3;
                     } catch ($p) {
                       if ($p instanceof Error) {
@@ -10974,24 +5641,24 @@
                       }
                     }
                   }
-                  tmp_5 = tmp$ret$14;
+                  tmp_6 = tmp$ret$14;
                 }
-                var text_0 = tmp_5;
-                sb.append_22ad7x_k$(text_0);
-                buffer_2.discardExact_11sae1_k$(size_1);
+                var text_0 = tmp_6;
+                sb.x5(text_0);
+                buffer_2.m7k(size_1);
                 inputRemaining = inputRemaining - size_1 | 0;
                 if (!true) {
                   break $l$loop_1;
                 }
                 release_0 = false;
                 var tmp1_elvis_lhs_0 = prepareReadNextHead(input, current_0);
-                var tmp_6;
+                var tmp_7;
                 if (tmp1_elvis_lhs_0 == null) {
                   break $l$loop_1;
                 } else {
-                  tmp_6 = tmp1_elvis_lhs_0;
+                  tmp_7 = tmp1_elvis_lhs_0;
                 }
-                var next_0 = tmp_6;
+                var next_0 = tmp_7;
                 current_0 = next_0;
                 release_0 = true;
               }
@@ -11003,7 +5670,7 @@
             }
           }
         }
-        sb.append_22ad7x_k$(decoder.decode_m3924y_k$());
+        sb.x5(decoder.h7r());
         break $l$block_4;
       } catch ($p) {
         if ($p instanceof Error) {
@@ -11025,35 +5692,15 @@
   }
   var MAX_CHARACTERS_SIZE_IN_BYTES;
   function DecodeBufferResult(charactersDecoded, bytesConsumed) {
-    this.charactersDecoded_1 = charactersDecoded;
-    this.bytesConsumed_1 = bytesConsumed;
+    this.i7r_1 = charactersDecoded;
+    this.j7r_1 = bytesConsumed;
   }
-  protoOf(DecodeBufferResult).get_charactersDecoded_mdwn5p_k$ = function () {
-    return this.charactersDecoded_1;
-  };
-  protoOf(DecodeBufferResult).get_bytesConsumed_ic9jre_k$ = function () {
-    return this.bytesConsumed_1;
-  };
-  protoOf(DecodeBufferResult).component1_7eebsc_k$ = function () {
-    return this.charactersDecoded_1;
-  };
-  protoOf(DecodeBufferResult).component2_7eebsb_k$ = function () {
-    return this.bytesConsumed_1;
-  };
-  protoOf(DecodeBufferResult).copy_1yzwer_k$ = function (charactersDecoded, bytesConsumed) {
-    return new DecodeBufferResult(charactersDecoded, bytesConsumed);
-  };
-  protoOf(DecodeBufferResult).copy$default_m09cqh_k$ = function (charactersDecoded, bytesConsumed, $super) {
-    charactersDecoded = charactersDecoded === VOID ? this.charactersDecoded_1 : charactersDecoded;
-    bytesConsumed = bytesConsumed === VOID ? this.bytesConsumed_1 : bytesConsumed;
-    return $super === VOID ? this.copy_1yzwer_k$(charactersDecoded, bytesConsumed) : $super.copy_1yzwer_k$.call(this, charactersDecoded, bytesConsumed);
-  };
   protoOf(DecodeBufferResult).toString = function () {
-    return 'DecodeBufferResult(charactersDecoded=' + this.charactersDecoded_1 + ', bytesConsumed=' + this.bytesConsumed_1 + ')';
+    return 'DecodeBufferResult(charactersDecoded=' + this.i7r_1 + ', bytesConsumed=' + this.j7r_1 + ')';
   };
   protoOf(DecodeBufferResult).hashCode = function () {
-    var result = getStringHashCode(this.charactersDecoded_1);
-    result = imul(result, 31) + this.bytesConsumed_1 | 0;
+    var result = getStringHashCode(this.i7r_1);
+    result = imul(result, 31) + this.j7r_1 | 0;
     return result;
   };
   protoOf(DecodeBufferResult).equals = function (other) {
@@ -11062,9 +5709,9 @@
     if (!(other instanceof DecodeBufferResult))
       return false;
     var tmp0_other_with_cast = other instanceof DecodeBufferResult ? other : THROW_CCE();
-    if (!(this.charactersDecoded_1 === tmp0_other_with_cast.charactersDecoded_1))
+    if (!(this.i7r_1 === tmp0_other_with_cast.i7r_1))
       return false;
-    if (!(this.bytesConsumed_1 === tmp0_other_with_cast.bytesConsumed_1))
+    if (!(this.j7r_1 === tmp0_other_with_cast.j7r_1))
       return false;
     return true;
   };
@@ -11073,8 +5720,8 @@
       return new DecodeBufferResult('', 0);
     }
     try {
-      var sizeInBytes = coerceAtMost_0(maxCharacters, _this__u8e3s4.byteLength);
-      var text = nativeDecoder.decode_hpap4q_k$(_this__u8e3s4.subarray(0, sizeInBytes));
+      var sizeInBytes = coerceAtMost(maxCharacters, _this__u8e3s4.byteLength);
+      var text = nativeDecoder.k7r(_this__u8e3s4.subarray(0, sizeInBytes));
       if (text.length <= maxCharacters) {
         return new DecodeBufferResult(text, sizeInBytes);
       }
@@ -11084,11 +5731,11 @@
     return decodeBufferImplSlow(_this__u8e3s4, nativeDecoder, maxCharacters);
   }
   function decodeBufferImplSlow(_this__u8e3s4, nativeDecoder, maxCharacters) {
-    var maxBytes = coerceAtMost_0(maxCharacters >= 268435455 ? IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$() : imul(maxCharacters, 8), _this__u8e3s4.byteLength);
+    var maxBytes = coerceAtMost(maxCharacters >= 268435455 ? IntCompanionObject_instance.MAX_VALUE : imul(maxCharacters, 8), _this__u8e3s4.byteLength);
     var sizeInBytes = maxBytes;
     while (sizeInBytes > 8) {
       try {
-        var text = nativeDecoder.decode_hpap4q_k$(_this__u8e3s4.subarray(0, sizeInBytes));
+        var text = nativeDecoder.k7r(_this__u8e3s4.subarray(0, sizeInBytes));
         if (text.length <= maxCharacters) {
           return new DecodeBufferResult(text, sizeInBytes);
         }
@@ -11100,7 +5747,7 @@
     sizeInBytes = 8;
     while (sizeInBytes > 0) {
       try {
-        var text_0 = nativeDecoder.decode_hpap4q_k$(_this__u8e3s4.subarray(0, sizeInBytes));
+        var text_0 = nativeDecoder.k7r(_this__u8e3s4.subarray(0, sizeInBytes));
         if (text_0.length <= maxCharacters) {
           return new DecodeBufferResult(text_0, sizeInBytes);
         }
@@ -11113,7 +5760,7 @@
       // Inline function 'io.ktor.utils.io.js.decodeWrap' call
       try {
         // Inline function 'io.ktor.utils.io.charsets.decodeBufferImplSlow.<anonymous>' call
-        nativeDecoder.decode_hpap4q_k$(_this__u8e3s4);
+        nativeDecoder.k7r(_this__u8e3s4);
         break $l$block;
       } catch ($p) {
         if ($p instanceof Error) {
@@ -11127,10 +5774,6 @@
     }
     throw new MalformedInputException('Unable to decode buffer');
   }
-  function get_MAX_CHARACTERS_COUNT() {
-    return MAX_CHARACTERS_COUNT;
-  }
-  var MAX_CHARACTERS_COUNT;
   function encodeISO88591(input, fromIndex, toIndex, dst) {
     if (fromIndex >= toIndex)
       return 0;
@@ -11139,11 +5782,11 @@
     // Inline function 'io.ktor.utils.io.core.write' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.writeDirect.<anonymous>' call
-    var memory = dst.get_memory_gl4362_k$();
-    var start = dst.get_writePosition_jdt81t_k$();
-    var endExclusive = dst.get_limit_iuokuq_k$();
+    var memory = dst.l7f_1;
+    var start = dst.n7f_1;
+    var endExclusive = dst.p7f_1;
     // Inline function 'io.ktor.utils.io.charsets.encodeISO88591.<anonymous>' call
-    var view = memory.slice_bze60e_k$(start, endExclusive - start | 0).get_view_wow8a6_k$();
+    var view = memory.v7q(start, endExclusive - start | 0).l7k_1;
     var i8 = new Int8Array(view.buffer, view.byteOffset, view.byteLength);
     var writeIndex = 0;
     var inductionVariable = fromIndex;
@@ -11165,232 +5808,35 @@
       }
        while (inductionVariable < toIndex);
     var rc = writeIndex;
-    dst.commitWritten_tkztjs_k$(rc);
+    dst.n7k(rc);
     return toIndex - fromIndex | 0;
   }
   function failedToMapError(ch) {
     throw new MalformedInputException('The character with unicode point ' + ch + " couldn't be mapped to ISO-8859-1 character");
   }
-  function writeFully_6(_this__u8e3s4, src, offset, length) {
+  function writeFully_4(_this__u8e3s4, src, offset, length) {
     offset = offset === VOID ? 0 : offset;
     length = length === VOID ? src.byteLength - offset | 0 : length;
     // Inline function 'io.ktor.utils.io.core.write' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'io.ktor.utils.io.core.writeFully.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var dstOffset = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    if ((_this__u8e3s4.get_limit_iuokuq_k$() - dstOffset | 0) < length) {
+    var memory = _this__u8e3s4.l7f_1;
+    var dstOffset = _this__u8e3s4.n7f_1;
+    if ((_this__u8e3s4.p7f_1 - dstOffset | 0) < length) {
       throw new InsufficientSpaceException('Not enough free space to write ' + length + ' bytes');
     }
     copyTo_0(src, memory, offset, length, dstOffset);
     var rc = length;
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc);
-  }
-  function readAvailable_0(_this__u8e3s4, dst, offset, length) {
-    offset = offset === VOID ? 0 : offset;
-    length = length === VOID ? dst.byteLength - offset | 0 : length;
-    // Inline function 'io.ktor.utils.io.core.canRead' call
-    if (!(_this__u8e3s4.get_writePosition_jdt81t_k$() > _this__u8e3s4.get_readPosition_70qxnc_k$()))
-      return -1;
-    // Inline function 'kotlin.comparisons.minOf' call
-    // Inline function 'io.ktor.utils.io.core.Buffer.readRemaining' call
-    var b = _this__u8e3s4.get_writePosition_jdt81t_k$() - _this__u8e3s4.get_readPosition_70qxnc_k$() | 0;
-    var readSize = Math.min(length, b);
-    readFully_5(_this__u8e3s4, dst, offset, readSize);
-    return readSize;
-  }
-  function writeDirect(_this__u8e3s4, block) {
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.write' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.writeDirect.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var endExclusive = _this__u8e3s4.get_limit_iuokuq_k$();
-    var rc = block(memory.slice_bze60e_k$(start, endExclusive - start | 0).get_view_wow8a6_k$());
-    _this__u8e3s4.commitWritten_tkztjs_k$(rc);
-    return rc;
-  }
-  function readFully_5(_this__u8e3s4, dst, offset, length) {
-    offset = offset === VOID ? 0 : offset;
-    length = length === VOID ? dst.byteLength - offset | 0 : length;
-    // Inline function 'io.ktor.utils.io.core.read' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.readFully.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    if ((_this__u8e3s4.get_writePosition_jdt81t_k$() - start | 0) < length) {
-      throw new EOFException('Not enough bytes available to read ' + length + ' bytes');
-    }
-    copyTo_1(memory, dst, start, length, offset);
-    var rc = length;
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-  }
-  function readDirectInt8Array(_this__u8e3s4, block) {
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.read' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'io.ktor.utils.io.core.readDirectInt8Array.<anonymous>' call
-    var memory = _this__u8e3s4.get_memory_gl4362_k$();
-    var start = _this__u8e3s4.get_readPosition_70qxnc_k$();
-    var endExclusive = _this__u8e3s4.get_writePosition_jdt81t_k$();
-    var rc = block(new Int8Array(memory.get_view_wow8a6_k$().buffer, memory.get_view_wow8a6_k$().byteOffset + start | 0, endExclusive - start | 0));
-    _this__u8e3s4.discardExact_11sae1_k$(rc);
-    return rc;
-  }
-  function _get_native__4ncbvw($this) {
-    return $this.native_1;
-  }
-  var ByteOrder_BIG_ENDIAN_instance;
-  var ByteOrder_LITTLE_ENDIAN_instance;
-  function Companion_6() {
-    Companion_instance_6 = this;
-    var buffer = new ArrayBuffer(4);
-    var arr = new Int32Array(buffer);
-    var view = new DataView(buffer);
-    // Inline function 'org.khronos.webgl.set' call
-    // Inline function 'kotlin.js.asDynamic' call
-    arr[0] = 287454020;
-    this.native_1 = view.getInt32(0, true) === 287454020 ? ByteOrder_LITTLE_ENDIAN_getInstance() : ByteOrder_BIG_ENDIAN_getInstance();
-  }
-  protoOf(Companion_6).nativeOrder_spqstz_k$ = function () {
-    return this.native_1;
-  };
-  var Companion_instance_6;
-  function Companion_getInstance_8() {
-    ByteOrder_initEntries();
-    if (Companion_instance_6 == null)
-      new Companion_6();
-    return Companion_instance_6;
-  }
-  function values() {
-    return [ByteOrder_BIG_ENDIAN_getInstance(), ByteOrder_LITTLE_ENDIAN_getInstance()];
-  }
-  function valueOf(value) {
-    switch (value) {
-      case 'BIG_ENDIAN':
-        return ByteOrder_BIG_ENDIAN_getInstance();
-      case 'LITTLE_ENDIAN':
-        return ByteOrder_LITTLE_ENDIAN_getInstance();
-      default:
-        ByteOrder_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  var ByteOrder_entriesInitialized;
-  function ByteOrder_initEntries() {
-    if (ByteOrder_entriesInitialized)
-      return Unit_getInstance();
-    ByteOrder_entriesInitialized = true;
-    ByteOrder_BIG_ENDIAN_instance = new ByteOrder('BIG_ENDIAN', 0);
-    ByteOrder_LITTLE_ENDIAN_instance = new ByteOrder('LITTLE_ENDIAN', 1);
-    Companion_getInstance_8();
-  }
-  function ByteOrder(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  function ByteOrder_BIG_ENDIAN_getInstance() {
-    ByteOrder_initEntries();
-    return ByteOrder_BIG_ENDIAN_instance;
-  }
-  function ByteOrder_LITTLE_ENDIAN_getInstance() {
-    ByteOrder_initEntries();
-    return ByteOrder_LITTLE_ENDIAN_instance;
-  }
-  function Closeable() {
-  }
-  function readAvailable_1(_this__u8e3s4, dst, offset, length) {
-    offset = offset === VOID ? 0 : offset;
-    length = length === VOID ? dst.byteLength - offset | 0 : length;
-    var remaining = _this__u8e3s4.get_remaining_mwegr1_k$();
-    if (remaining.equals(new Long(0, 0)))
-      return -1;
-    // Inline function 'kotlin.comparisons.minOf' call
-    var b = toLong(length);
-    var size = (remaining.compareTo_9jj042_k$(b) <= 0 ? remaining : b).toInt_1tsl84_k$();
-    readFully_6(_this__u8e3s4, dst, offset, size);
-    return size;
-  }
-  function readFully_6(_this__u8e3s4, dst, offset, length) {
-    offset = offset === VOID ? 0 : offset;
-    length = length === VOID ? dst.byteLength - offset | 0 : length;
-    if (_this__u8e3s4.get_remaining_mwegr1_k$().compareTo_9jj042_k$(toLong(length)) < 0) {
-      throw IllegalArgumentException_init_$Create$('Not enough bytes available (' + _this__u8e3s4.get_remaining_mwegr1_k$().toString() + ') to read ' + length + ' bytes');
-    }
-    var copied = 0;
-    $l$block: {
-      // Inline function 'io.ktor.utils.io.core.takeWhile' call
-      var release = true;
-      var tmp0_elvis_lhs = prepareReadFirstHead(_this__u8e3s4, 1);
-      var tmp;
-      if (tmp0_elvis_lhs == null) {
-        break $l$block;
-      } else {
-        tmp = tmp0_elvis_lhs;
-      }
-      var current = tmp;
-      try {
-        $l$loop_0: do {
-          // Inline function 'io.ktor.utils.io.core.readFully.<anonymous>' call
-          var buffer = current;
-          var rc = readAvailable_0(buffer, dst, offset + copied | 0, length - copied | 0);
-          if (rc > 0)
-            copied = copied + rc | 0;
-          if (!(copied < length)) {
-            break $l$loop_0;
-          }
-          release = false;
-          var tmp1_elvis_lhs = prepareReadNextHead(_this__u8e3s4, current);
-          var tmp_0;
-          if (tmp1_elvis_lhs == null) {
-            break $l$loop_0;
-          } else {
-            tmp_0 = tmp1_elvis_lhs;
-          }
-          var next = tmp_0;
-          current = next;
-          release = true;
-        }
-         while (true);
-      }finally {
-        if (release) {
-          completeReadHead(_this__u8e3s4, current);
-        }
-      }
-    }
+    _this__u8e3s4.n7k(rc);
   }
   function get_PACKET_MAX_COPY_SIZE() {
     return PACKET_MAX_COPY_SIZE;
   }
   var PACKET_MAX_COPY_SIZE;
-  function getCharsInternal(_this__u8e3s4, dst, dstOffset) {
-    var length = _this__u8e3s4.length;
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!((dstOffset + length | 0) <= dst.length)) {
-      // Inline function 'kotlin.require.<anonymous>' call
-      var message = 'Failed requirement.';
-      throw IllegalArgumentException_init_$Create$(toString(message));
-    }
-    var dstIndex = dstOffset;
-    var inductionVariable = 0;
-    if (inductionVariable < length)
-      do {
-        var srcIndex = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        var tmp1 = dstIndex;
-        dstIndex = tmp1 + 1 | 0;
-        dst[tmp1] = charSequenceGet(_this__u8e3s4, srcIndex);
-      }
-       while (inductionVariable < length);
-  }
   function String_0(bytes, offset, length, charset) {
     offset = offset === VOID ? 0 : offset;
     length = length === VOID ? bytes.length : length;
-    charset = charset === VOID ? Charsets_getInstance().get_UTF_8_ihn39z_k$() : charset;
+    charset = charset === VOID ? Charsets_getInstance().u7n_1 : charset;
     if ((offset < 0 ? true : length < 0) ? true : (offset + length | 0) > bytes.length) {
       checkIndices(offset, length, bytes);
     }
@@ -11398,10 +5844,10 @@
     var i8 = bytes;
     var bufferOffset = i8.byteOffset + offset | 0;
     var buffer = i8.buffer.slice(bufferOffset, bufferOffset + length | 0);
-    var view = new ChunkBuffer(of_1(Companion_getInstance_6(), buffer), null, Companion_getInstance_4().get_NoPool_21p86e_k$());
-    view.resetForRead_c5oulc_k$();
-    var packet = ByteReadPacket_init_$Create$(view, Companion_getInstance_4().get_NoPoolManuallyManaged_qxqaiu_k$());
-    return decode(charset.newDecoder_zcettw_k$(), packet, IntCompanionObject_getInstance().get_MAX_VALUE_54a9lf_k$());
+    var view = new ChunkBuffer(of_1(Companion_getInstance_6(), buffer), null, Companion_getInstance_4().b7j_1);
+    view.t7k();
+    var packet = ByteReadPacket_init_$Create$(view, Companion_getInstance_4().c7j_1);
+    return decode(charset.x7n(), packet, IntCompanionObject_instance.MAX_VALUE);
   }
   function checkIndices(offset, length, bytes) {
     // Inline function 'kotlin.require' call
@@ -11429,18 +5875,11 @@
     IOException.call($this, message, null);
     return $this;
   }
-  function IOException_init_$Create$(message) {
-    var tmp = IOException_init_$Init$(message, objectCreate(protoOf(IOException)));
-    captureStack(tmp, IOException_init_$Create$);
-    return tmp;
-  }
   function IOException(message, cause) {
     Exception_init_$Init$_0(message, cause, this);
     captureStack(this, IOException);
   }
-  function Decoder() {
-  }
-  function Decoder_0(encoding, fatal) {
+  function Decoder(encoding, fatal) {
     fatal = fatal === VOID ? true : fatal;
     var tmp;
     try {
@@ -11456,20 +5895,6 @@
       tmp = tmp_0;
     }
     return tmp;
-  }
-  function decodeStream(_this__u8e3s4, buffer, stream) {
-    // Inline function 'io.ktor.utils.io.js.decodeWrap' call
-    try {
-      return _this__u8e3s4.decode_mvpnei_k$(buffer, decodeOptions(stream));
-    } catch ($p) {
-      if ($p instanceof Error) {
-        var t = $p;
-        var tmp0_elvis_lhs = t.message;
-        throw new MalformedInputException('Failed to decode bytes: ' + (tmp0_elvis_lhs == null ? 'no cause provided' : tmp0_elvis_lhs));
-      } else {
-        throw $p;
-      }
-    }
   }
   function decodeOptions(stream) {
     // Inline function 'kotlin.apply' call
@@ -11498,16 +5923,16 @@
     return this_0;
   }
   function toKtor$1($this_toKtor) {
-    this.$this_toKtor_1 = $this_toKtor;
+    this.l7r_1 = $this_toKtor;
   }
-  protoOf(toKtor$1).decode_m3924y_k$ = function () {
-    return this.$this_toKtor_1.decode();
+  protoOf(toKtor$1).h7r = function () {
+    return this.l7r_1.decode();
   };
-  protoOf(toKtor$1).decode_hpap4q_k$ = function (buffer) {
-    return this.$this_toKtor_1.decode(buffer);
+  protoOf(toKtor$1).k7r = function (buffer) {
+    return this.l7r_1.decode(buffer);
   };
-  protoOf(toKtor$1).decode_mvpnei_k$ = function (buffer, options) {
-    return this.$this_toKtor_1.decode(buffer, options);
+  protoOf(toKtor$1).g7r = function (buffer, options) {
+    return this.l7r_1.decode(buffer, options);
   };
   function get_ENCODING_ALIASES() {
     _init_properties_TextDecoderFallback_kt__nrrftl();
@@ -11520,26 +5945,23 @@
   }
   var REPLACEMENT;
   function TextDecoderFallback(encoding, fatal) {
-    this.fatal_1 = fatal;
+    this.m7r_1 = fatal;
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.text.trim' call
     // Inline function 'kotlin.js.asDynamic' call
     var requestedEncoding = toString(trim(isCharSequence(encoding) ? encoding : THROW_CCE())).toLowerCase();
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!get_ENCODING_ALIASES().contains_aljjnj_k$(requestedEncoding)) {
+    if (!get_ENCODING_ALIASES().s(requestedEncoding)) {
       // Inline function 'io.ktor.utils.io.js.TextDecoderFallback.<anonymous>' call
       var message = encoding + ' is not supported.';
       throw IllegalStateException_init_$Create$(toString(message));
     }
   }
-  protoOf(TextDecoderFallback).get_fatal_ir8ue3_k$ = function () {
-    return this.fatal_1;
-  };
-  protoOf(TextDecoderFallback).decode_m3924y_k$ = function () {
+  protoOf(TextDecoderFallback).h7r = function () {
     return '';
   };
-  protoOf(TextDecoderFallback).decode_hpap4q_k$ = function (buffer) {
+  protoOf(TextDecoderFallback).k7r = function (buffer) {
     var tmp$ret$3;
     $l$block: {
       // Inline function 'io.ktor.utils.io.core.buildPacket' call
@@ -11561,7 +5983,7 @@
             if (point < 0) {
               // Inline function 'kotlin.check' call
               // Inline function 'kotlin.contracts.contract' call
-              if (!!this.fatal_1) {
+              if (!!this.m7r_1) {
                 // Inline function 'io.ktor.utils.io.js.TextDecoderFallback.decode.<anonymous>.<anonymous>' call
                 var message = 'Invalid character: ' + point;
                 throw IllegalStateException_init_$Create$(toString(message));
@@ -11570,17 +5992,17 @@
               continue $l$loop;
             }
             if (point > 255) {
-              builder.writeByte_9ih3z3_k$(toByte(point >> 8));
+              builder.b7l(toByte(point >> 8));
             }
-            builder.writeByte_9ih3z3_k$(toByte(point & 255));
+            builder.b7l(toByte(point & 255));
           }
            while (inductionVariable < last);
-        tmp$ret$3 = builder.build_1k0s4u_k$();
+        tmp$ret$3 = builder.e3();
         break $l$block;
       } catch ($p) {
         if ($p instanceof Error) {
           var t = $p;
-          builder.release_wu5yyf_k$();
+          builder.mv();
           throw t;
         } else {
           throw $p;
@@ -11589,8 +6011,8 @@
     }
     return decodeToString(readBytes(tmp$ret$3));
   };
-  protoOf(TextDecoderFallback).decode_mvpnei_k$ = function (buffer, options) {
-    return this.decode_hpap4q_k$(buffer);
+  protoOf(TextDecoderFallback).g7r = function (buffer, options) {
+    return this.k7r(buffer);
   };
   function toCodePoint(_this__u8e3s4) {
     _init_properties_TextDecoderFallback_kt__nrrftl();
@@ -11613,19 +6035,6 @@
       REPLACEMENT = new Int8Array([-17, -65, -67]);
     }
   }
-  function decodeWrap(block) {
-    try {
-      return block();
-    } catch ($p) {
-      if ($p instanceof Error) {
-        var t = $p;
-        var tmp0_elvis_lhs = t.message;
-        throw new MalformedInputException('Failed to decode bytes: ' + (tmp0_elvis_lhs == null ? 'no cause provided' : tmp0_elvis_lhs));
-      } else {
-        throw $p;
-      }
-    }
-  }
   function get_WIN1252_TABLE() {
     _init_properties_Win1252Table_kt__tl0v64();
     return WIN1252_TABLE;
@@ -11639,128 +6048,90 @@
       WIN1252_TABLE = new Int32Array([8364, -1, 8218, 402, 8222, 8230, 8224, 8225, 710, 8240, 352, 8249, 338, -1, 381, -1, -1, 8216, 8217, 8220, 8221, 8226, 8211, 8212, 732, 8482, 353, 8250, 339, -1, 382, 376, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255]);
     }
   }
-  function _get_instances__6pklt9($this) {
-    return $this.instances_1;
-  }
-  function _set_size__9twho6($this, _set____db54di) {
-    $this.size_1 = _set____db54di;
-  }
-  function _get_size__ddoh9m($this) {
-    return $this.size_1;
-  }
   function DefaultPool(capacity) {
-    this.capacity_1 = capacity;
+    this.m7l_1 = capacity;
     var tmp = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    var size = this.capacity_1;
-    tmp.instances_1 = fillArrayVal(Array(size), null);
-    this.size_1 = 0;
+    var size = this.m7l_1;
+    tmp.n7l_1 = fillArrayVal(Array(size), null);
+    this.o7l_1 = 0;
   }
-  protoOf(DefaultPool).get_capacity_wxbgcd_k$ = function () {
-    return this.capacity_1;
+  protoOf(DefaultPool).p7l = function (instance) {
   };
-  protoOf(DefaultPool).disposeInstance_6ek0a2_k$ = function (instance) {
-  };
-  protoOf(DefaultPool).clearInstance_nfz4jw_k$ = function (instance) {
+  protoOf(DefaultPool).f7m = function (instance) {
     return instance;
   };
-  protoOf(DefaultPool).validateInstance_6mwbhp_k$ = function (instance) {
+  protoOf(DefaultPool).c7m = function (instance) {
   };
-  protoOf(DefaultPool).borrow_mvkpor_k$ = function () {
-    if (this.size_1 === 0)
-      return this.produceInstance_xswihh_k$();
-    this.size_1 = this.size_1 - 1 | 0;
-    var idx = this.size_1;
-    var tmp = this.instances_1[idx];
+  protoOf(DefaultPool).h7m = function () {
+    if (this.o7l_1 === 0)
+      return this.i7l();
+    this.o7l_1 = this.o7l_1 - 1 | 0;
+    var idx = this.o7l_1;
+    var tmp = this.n7l_1[idx];
     var instance = !(tmp == null) ? tmp : THROW_CCE();
-    this.instances_1[idx] = null;
-    return this.clearInstance_nfz4jw_k$(instance);
+    this.n7l_1[idx] = null;
+    return this.f7m(instance);
   };
-  protoOf(DefaultPool).recycle_d2xv5h_k$ = function (instance) {
-    this.validateInstance_6mwbhp_k$(instance);
-    if (this.size_1 === this.capacity_1) {
-      this.disposeInstance_6ek0a2_k$(instance);
+  protoOf(DefaultPool).i7m = function (instance) {
+    this.c7m(instance);
+    if (this.o7l_1 === this.m7l_1) {
+      this.p7l(instance);
     } else {
-      var tmp1 = this.size_1;
-      this.size_1 = tmp1 + 1 | 0;
-      this.instances_1[tmp1] = instance;
+      var tmp1 = this.o7l_1;
+      this.o7l_1 = tmp1 + 1 | 0;
+      this.n7l_1[tmp1] = instance;
     }
   };
-  protoOf(DefaultPool).dispose_3nnxhr_k$ = function () {
-    var inductionVariable = 0;
-    var last = this.size_1;
-    if (inductionVariable < last)
-      do {
-        var i = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        var tmp = this.instances_1[i];
-        var instance = !(tmp == null) ? tmp : THROW_CCE();
-        this.instances_1[i] = null;
-        this.disposeInstance_6ek0a2_k$(instance);
-      }
-       while (inductionVariable < last);
-    this.size_1 = 0;
-  };
   //region block: post-declaration
-  protoOf(ByteChannelSequentialBase).readRemaining$default_g3e7gf_k$ = readRemaining$default;
-  protoOf(ByteChannelSequentialBase).await$default_nvzrqu_k$ = await$default;
-  protoOf(ByteChannelSequentialBase).request$default_hh99dt_k$ = request$default;
-  protoOf(ByteChannelSequentialBase).peekTo$default_lcbot1_k$ = peekTo$default;
-  protoOf(ChannelJob).cancel$default_w08z00_k$ = cancel$default;
-  protoOf(ChannelJob).cancel$default_8haxne_k$ = cancel$default_0;
-  protoOf(ChannelJob).invokeOnCompletion$default_1v3utx_k$ = invokeOnCompletion$default;
-  protoOf(DefaultPool).close_yn9xrc_k$ = close;
-  protoOf(ChunkBuffer$Companion$EmptyPool$1).close_yn9xrc_k$ = close;
-  protoOf(NoPoolImpl).close_yn9xrc_k$ = close;
+  protoOf(ByteChannelSequentialBase).i7j = readRemaining$default;
+  protoOf(ChannelJob).eq = cancel$default;
+  protoOf(ChannelJob).zp = invokeOnCompletion$default;
   //endregion
   //region block: init
-  EXPECTED_CAPACITY = new Long(4088, 0);
+  Companion_instance = new Companion();
   DEFAULT_BUFFER_SIZE = 4096;
-  MaxCodePoint = 1114111;
-  HighSurrogateMagic = 55232;
-  MinLowSurrogate = 56320;
+  Companion_instance_1 = new Companion_1();
+  DefaultAllocator_instance = new DefaultAllocator();
+  Companion_instance_5 = new Companion_5();
   MAX_CHARACTERS_SIZE_IN_BYTES = 8;
-  MAX_CHARACTERS_COUNT = 268435455;
   PACKET_MAX_COPY_SIZE = 200;
   //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
-  _.$_$.a = copyAndClose;
-  _.$_$.b = copyTo;
-  _.$_$.c = readAvailable;
-  _.$_$.d = writeFully;
-  _.$_$.e = IOException_init_$Init$;
-  _.$_$.f = Companion_getInstance_7;
-  _.$_$.g = Charsets_getInstance;
-  _.$_$.h = Companion_getInstance_5;
-  _.$_$.i = MalformedInputException;
-  _.$_$.j = decode;
-  _.$_$.k = encodeToByteArray_0;
-  _.$_$.l = encode_0;
-  _.$_$.m = get_name;
-  _.$_$.n = completeReadHead;
-  _.$_$.o = prepareReadFirstHead;
-  _.$_$.p = prepareReadNextHead;
-  _.$_$.q = BytePacketBuilder;
-  _.$_$.r = ByteReadPacket;
-  _.$_$.s = Closeable;
-  _.$_$.t = Input;
-  _.$_$.u = String_0;
-  _.$_$.v = discard;
-  _.$_$.w = readBytes;
-  _.$_$.x = readShort_0;
-  _.$_$.y = readText;
-  _.$_$.z = writeFully_3;
-  _.$_$.a1 = writeShort_0;
-  _.$_$.b1 = writeText;
-  _.$_$.c1 = IOException;
-  _.$_$.d1 = get_ByteArrayPool;
-  _.$_$.e1 = ByteChannel_0;
-  _.$_$.f1 = ByteReadChannel;
-  _.$_$.g1 = ByteReadChannel_1;
-  _.$_$.h1 = WriterScope;
-  _.$_$.i1 = cancel;
-  _.$_$.j1 = writer;
+  _.$_$.a = copyTo;
+  _.$_$.b = readAvailable;
+  _.$_$.c = writeFully;
+  _.$_$.d = IOException_init_$Init$;
+  _.$_$.e = Companion_instance_5;
+  _.$_$.f = Charsets_getInstance;
+  _.$_$.g = Companion_getInstance_5;
+  _.$_$.h = MalformedInputException;
+  _.$_$.i = decode;
+  _.$_$.j = encodeToByteArray;
+  _.$_$.k = encode;
+  _.$_$.l = get_name;
+  _.$_$.m = completeReadHead;
+  _.$_$.n = prepareReadFirstHead;
+  _.$_$.o = prepareReadNextHead;
+  _.$_$.p = BytePacketBuilder;
+  _.$_$.q = ByteReadPacket;
+  _.$_$.r = Input;
+  _.$_$.s = String_0;
+  _.$_$.t = discard;
+  _.$_$.u = readBytes;
+  _.$_$.v = readShort_0;
+  _.$_$.w = readText;
+  _.$_$.x = writeFully_3;
+  _.$_$.y = writeShort_0;
+  _.$_$.z = writeText;
+  _.$_$.a1 = IOException;
+  _.$_$.b1 = get_ByteArrayPool;
+  _.$_$.c1 = ByteReadChannel;
+  _.$_$.d1 = ByteReadChannel_1;
+  _.$_$.e1 = WriterScope;
+  _.$_$.f1 = cancel;
+  _.$_$.g1 = writer;
   //endregion
   return _;
 }));

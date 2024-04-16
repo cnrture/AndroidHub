@@ -12,37 +12,28 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.cf;
-  var classMeta = kotlin_kotlin.$_$.qd;
-  var setMetadataFor = kotlin_kotlin.$_$.df;
+  var protoOf = kotlin_kotlin.$_$.ic;
+  var classMeta = kotlin_kotlin.$_$.xa;
+  var setMetadataFor = kotlin_kotlin.$_$.jc;
   var VOID = kotlin_kotlin.$_$.g;
   //endregion
   //region block: pre-declaration
   setMetadataFor(ThreadLocalRef, 'ThreadLocalRef', classMeta, VOID, VOID, ThreadLocalRef);
   //endregion
   function set_value(_this__u8e3s4, value) {
-    _this__u8e3s4.set_bjwkek_k$(value);
-  }
-  function get_value(_this__u8e3s4) {
-    return _this__u8e3s4.get_26vq_k$();
-  }
-  function _set_localValue__8fhs41($this, _set____db54di) {
-    $this.localValue_1 = _set____db54di;
-  }
-  function _get_localValue__6mqt17($this) {
-    return $this.localValue_1;
+    _this__u8e3s4.p1z(value);
   }
   function ThreadLocalRef() {
-    this.localValue_1 = null;
+    this.i78_1 = null;
   }
-  protoOf(ThreadLocalRef).remove_ldkf9o_k$ = function () {
+  protoOf(ThreadLocalRef).e1 = function () {
     set_value(this, null);
   };
-  protoOf(ThreadLocalRef).get_26vq_k$ = function () {
-    return this.localValue_1;
+  protoOf(ThreadLocalRef).hw = function () {
+    return this.i78_1;
   };
-  protoOf(ThreadLocalRef).set_bjwkek_k$ = function (value) {
-    this.localValue_1 = value;
+  protoOf(ThreadLocalRef).p1z = function (value) {
+    this.i78_1 = value;
   };
   //region block: exports
   _.$_$ = _.$_$ || {};

@@ -161,6 +161,9 @@
     },
     "2ee55dbd1944ed0f031d8374db912496": {
       "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.rickclephas.kmm/kmm-viewmodel-core-js/1.0.0-ALPHA-20/2fc7a19691cf350ba304b37657d7b05ecde391c8/kmm-viewmodel-core-js-1.0.0-ALPHA-20.klib"
+    },
+    "5f1dda5ef43cd29179d0b513345005cf": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-json-js/1.6.2/c0f0707839e391ab39f021fea5a2af045c29f147/kotlinx-serialization-json-js-1.6.2.klib"
     }
   }
 }

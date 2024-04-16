@@ -12,9 +12,9 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.cf;
-  var classMeta = kotlin_kotlin.$_$.qd;
-  var setMetadataFor = kotlin_kotlin.$_$.df;
+  var protoOf = kotlin_kotlin.$_$.ic;
+  var classMeta = kotlin_kotlin.$_$.xa;
+  var setMetadataFor = kotlin_kotlin.$_$.jc;
   //endregion
   //region block: pre-declaration
   setMetadataFor(EventListenerHandler, 'EventListenerHandler', classMeta);
@@ -22,48 +22,18 @@
   function EventListener(handler) {
     return new EventListenerHandler(handler);
   }
-  function _get_handler__z70553($this) {
-    return $this.handler_1;
-  }
   function EventListenerHandler(handler) {
-    this.handler_1 = handler;
+    this.sk_1 = handler;
   }
-  protoOf(EventListenerHandler).handleEvent_zcjn50_k$ = function (event) {
-    this.handler_1(event);
+  protoOf(EventListenerHandler).tk = function (event) {
+    this.sk_1(event);
   };
   protoOf(EventListenerHandler).handleEvent = function (event) {
-    return this.handleEvent_zcjn50_k$(event);
+    return this.tk(event);
   };
   protoOf(EventListenerHandler).toString = function () {
-    return 'EventListenerHandler(' + this.handler_1 + ')';
+    return 'EventListenerHandler(' + this.sk_1 + ')';
   };
-  function set(_this__u8e3s4, index, value) {
-    // Inline function 'kotlin.js.asDynamic' call
-    _this__u8e3s4[index] = value;
-  }
-  function set_0(_this__u8e3s4, index, value) {
-    // Inline function 'kotlin.js.asDynamic' call
-    _this__u8e3s4[index] = value;
-  }
-  function get(_this__u8e3s4, index) {
-    // Inline function 'kotlin.js.asDynamic' call
-    return _this__u8e3s4[index];
-  }
-  function get_ARRAYBUFFER(_this__u8e3s4) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'arraybuffer';
-  }
-  function get_FOLLOW(_this__u8e3s4) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'follow';
-  }
-  function get_MANUAL(_this__u8e3s4) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'manual';
-  }
   //region block: exports
   _.$_$ = _.$_$ || {};
   _.$_$.a = EventListener;

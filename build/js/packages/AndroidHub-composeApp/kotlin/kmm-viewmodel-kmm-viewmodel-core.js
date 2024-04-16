@@ -15,42 +15,28 @@
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.cf;
-  var cancel = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.g2;
-  var classMeta = kotlin_kotlin.$_$.qd;
-  var setMetadataFor = kotlin_kotlin.$_$.df;
-  var THROW_CCE = kotlin_kotlin.$_$.ck;
-  var interfaceMeta = kotlin_kotlin.$_$.ge;
-  var SupervisorJob = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.e2;
-  var Dispatchers_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.y;
-  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.u1;
+  var protoOf = kotlin_kotlin.$_$.ic;
+  var classMeta = kotlin_kotlin.$_$.xa;
+  var setMetadataFor = kotlin_kotlin.$_$.jc;
+  var THROW_CCE = kotlin_kotlin.$_$.ng;
+  var SupervisorJob = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k1;
+  var Dispatchers_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n;
+  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.c1;
   var VOID = kotlin_kotlin.$_$.g;
   //endregion
   //region block: pre-declaration
   setMetadataFor(KMMViewModel, 'KMMViewModel', classMeta);
-  setMetadataFor(ViewModelScope, 'ViewModelScope', interfaceMeta);
-  setMetadataFor(ViewModelScopeImpl, 'ViewModelScopeImpl', classMeta, VOID, [ViewModelScope], ViewModelScopeImpl);
+  setMetadataFor(ViewModelScopeImpl, 'ViewModelScopeImpl', classMeta, VOID, VOID, ViewModelScopeImpl);
   //endregion
   function KMMViewModel() {
-    this.viewModelScope_1 = new ViewModelScopeImpl();
+    this.g78_1 = new ViewModelScopeImpl();
   }
-  protoOf(KMMViewModel).get_viewModelScope_ryv1dz_k$ = function () {
-    return this.viewModelScope_1;
-  };
-  protoOf(KMMViewModel).onCleared_hwiuwz_k$ = function () {
-    cancel(get_coroutineScope(this.viewModelScope_1));
-  };
   function get_coroutineScope(_this__u8e3s4) {
-    return (_this__u8e3s4 instanceof ViewModelScopeImpl ? _this__u8e3s4 : THROW_CCE()).coroutineScope_1;
-  }
-  function ViewModelScope() {
+    return (_this__u8e3s4 instanceof ViewModelScopeImpl ? _this__u8e3s4 : THROW_CCE()).h78_1;
   }
   function ViewModelScopeImpl() {
-    this.coroutineScope_1 = CoroutineScope(SupervisorJob().plus_s13ygv_k$(Dispatchers_getInstance().get_Main_wo5vz6_k$()));
+    this.h78_1 = CoroutineScope(SupervisorJob().yf(Dispatchers_getInstance().w10()));
   }
-  protoOf(ViewModelScopeImpl).get_coroutineScope_5k7h45_k$ = function () {
-    return this.coroutineScope_1;
-  };
   //region block: exports
   _.$_$ = _.$_$ || {};
   _.$_$.a = KMMViewModel;

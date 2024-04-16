@@ -24,7 +24,7 @@
   var VOID = kotlin_kotlin.$_$.g;
   var Application_getInstance = kotlin_io_ktor_ktor_http.$_$.b;
   var serialization = kotlin_io_ktor_ktor_serialization_kotlinx.$_$.a;
-  var Unit_getInstance = kotlin_kotlin.$_$.v5;
+  var Unit_instance = kotlin_kotlin.$_$.k5;
   var Json = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_json.$_$.a;
   //endregion
   //region block: pre-declaration
@@ -36,19 +36,19 @@
   var DefaultJson;
   function json(_this__u8e3s4, json, contentType) {
     json = json === VOID ? get_DefaultJson() : json;
-    contentType = contentType === VOID ? Application_getInstance().get_Json_wo4ci9_k$() : contentType;
+    contentType = contentType === VOID ? Application_getInstance().r7x_1 : contentType;
     _init_properties_JsonSupport_kt__yf438r();
     serialization(_this__u8e3s4, contentType, json);
   }
   function DefaultJson$lambda($this$Json) {
     _init_properties_JsonSupport_kt__yf438r();
-    $this$Json.set_encodeDefaults_c5evsg_k$(true);
-    $this$Json.set_isLenient_kuajk5_k$(true);
-    $this$Json.set_allowSpecialFloatingPointValues_xyc2ru_k$(true);
-    $this$Json.set_allowStructuredMapKeys_sxzxe_k$(true);
-    $this$Json.set_prettyPrint_v2gnff_k$(false);
-    $this$Json.set_useArrayPolymorphism_54w3tr_k$(false);
-    return Unit_getInstance();
+    $this$Json.r90_1 = true;
+    $this$Json.u90_1 = true;
+    $this$Json.b91_1 = true;
+    $this$Json.v90_1 = true;
+    $this$Json.w90_1 = false;
+    $this$Json.z90_1 = false;
+    return Unit_instance;
   }
   var properties_initialized_JsonSupport_kt_9cgd93;
   function _init_properties_JsonSupport_kt__yf438r() {
