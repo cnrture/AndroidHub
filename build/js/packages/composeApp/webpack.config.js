@@ -1,5 +1,5 @@
 let config = {
-  mode: 'production',
+  mode: 'development',
   resolve: {
     modules: [
       "node_modules"
@@ -25,22 +25,29 @@ config.output = {
     libraryTarget: "umd",
     globalObject: "this"
 };
-config.output.path = require('path').resolve(__dirname, "../../../../composeApp/build/dist/wasmJs/productionExecutable")
     // source maps
     config.module.rules.push({
             test: /\.js$/,
             use: ["source-map-loader"],
             enforce: "pre"
     });
-    config.devtool = 'source-map';
+    config.devtool = 'eval-source-map';
 config.ignoreWarnings = [/Failed to parse source map/]
     
 // dev server
 config.devServer = {
   "open": true,
   "static": [
+    "kotlin",
+    "../../../../composeApp/build/processedResources/wasmJs/main",
     "/Users/canerture/Documents/GitHub/AndroidHub/composeApp"
-  ]
+  ],
+  "client": {
+    "overlay": {
+      "errors": true,
+      "warnings": false
+    }
+  }
 };
 
 // Report progress to console
