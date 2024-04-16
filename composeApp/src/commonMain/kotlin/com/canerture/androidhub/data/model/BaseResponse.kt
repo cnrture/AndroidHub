@@ -1,4 +1,6 @@
-package com.canerture.valorantcmp.data.model
+package com.canerture.androidhub.data.model
+
+import kotlinx.serialization.Serializable
 
 @Serializable
 open class BaseResponse<T>(

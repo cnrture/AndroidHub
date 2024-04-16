@@ -1,9 +1,0 @@
-builtins_platform=JS
-unique_name=co.touchlab\:stately-concurrency
-compiler_version=1.9.10
-depends=co.touchlab\:stately-strict org.jetbrains.kotlin\:kotlin-dom-api-compat kotlin
-serializedKlibFingerprint=29efc7s3jrz6l.2rdxlzq4hb3tq
-serializedIrFileFingerprints=33zq23lmk93x0.r9bsr4r3c4n2 xpw4j25c2jt6.2iwapt1bqyeu1 1dnnzd66a3mve.1xh71howui6ua 1ucu46d6km2or.lshyvce1x7n5 2vxbeccdwrckm.1f5tnf6hgua84 39drulcxah051.1rt06kmlt0gea 6qqljjkzwpmi.1js7wr0zg79qj 1p8vsjlw1kx4n.2r33dhxh3fnf8 1xggr8ecfaesf.3o181jz77rvjd cvn6rrkzn2we.3m3ad0wcsoqsq 1ktg6hdbl22u5.1nrpujwvyfb85 1sr3dyx7g7vm3.193cscn4c8vx1 i9vyzbbn8zmy.7m7ewea6zvau xzsq1ec11k9u.mcfbk8q33n5a 13con75jbo9fh.1u6v7pcefsuhb
-jsOutputName=Stately-stately-concurrency
-abi_version=1.8.0
-metadata_version=1.4.1

@@ -161,15 +161,6 @@
     },
     "2ee55dbd1944ed0f031d8374db912496": {
       "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.rickclephas.kmm/kmm-viewmodel-core-js/1.0.0-ALPHA-20/2fc7a19691cf350ba304b37657d7b05ecde391c8/kmm-viewmodel-core-js-1.0.0-ALPHA-20.klib"
-    },
-    "c7f8e428c4ae462afbeed299b2379d13": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/dev.icerock.moko/mvvm-core-js/0.16.1/7536cc84fd4fb60e44fbcbdda115475d63fc3a36/mvvm-core-js-0.16.1.klib"
-    },
-    "c004d817124ac56d03d280cc4daaf87b": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/dev.icerock.moko/mvvm-internal-js/0.16.1/4cb6e477054aa71072aec7d90021cea62d1d7be4/mvvm-internal-js-0.16.1.klib"
-    },
-    "c8089d2e451863e5b46adf82d549cd08": {
-      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/dev.icerock.moko/mvvm-compose-js/0.16.1/529587be08558b3161b91af53f7fdb50e1ccecf0/mvvm-compose-js-0.16.1.klib"
     }
   }
 }

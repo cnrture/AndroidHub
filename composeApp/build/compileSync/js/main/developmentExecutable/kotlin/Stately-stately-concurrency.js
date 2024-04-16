@@ -12,9 +12,9 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.bf;
-  var classMeta = kotlin_kotlin.$_$.pd;
-  var setMetadataFor = kotlin_kotlin.$_$.cf;
+  var protoOf = kotlin_kotlin.$_$.cf;
+  var classMeta = kotlin_kotlin.$_$.qd;
+  var setMetadataFor = kotlin_kotlin.$_$.df;
   var VOID = kotlin_kotlin.$_$.g;
   //endregion
   //region block: pre-declaration

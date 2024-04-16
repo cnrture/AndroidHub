@@ -1,7 +1,7 @@
 package com.canerture.androidhub.data.remote
 
-import com.canerture.androidhub.data.model.agents.Agent
-import com.canerture.valorantcmp.data.model.BaseResponse
+import com.canerture.androidhub.data.model.Agent
+import com.canerture.androidhub.data.model.BaseResponse
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 

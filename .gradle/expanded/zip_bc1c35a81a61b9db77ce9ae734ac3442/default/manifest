@@ -1,9 +1,0 @@
-unique_name=com.benasher44\:uuid
-depends=org.jetbrains.kotlin\:kotlin-dom-api-compat kotlin
-metadata_version=1.4.1
-serializedKlibFingerprint=arj2hrzq9hm5.j67u9s5xjjuw
-builtins_platform=JS
-compiler_version=1.9.0
-serializedIrFileFingerprints=dk8s5rocuorx.289wacz8tgde4 221h6583uru1x.1z76vdou80g3r 30h8bx2s66mg.33fvadgssvntw 1tv3u4x9fmakj.1zrpoy925441v 1bh7uolm3vruu.c8c560qqs3om
-abi_version=1.8.0
-jsOutputName=uuid

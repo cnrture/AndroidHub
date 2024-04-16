@@ -31,16 +31,16 @@
   var _Dp___init__impl__ms3zkb = kotlin_org_jetbrains_compose_ui_ui_unit.$_$.g2;
   var luminance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.i1;
   var Companion_getInstance = kotlin_org_jetbrains_compose_ui_ui_graphics.$_$.l3;
-  var protoOf = kotlin_kotlin.$_$.bf;
-  var objectMeta = kotlin_kotlin.$_$.af;
-  var setMetadataFor = kotlin_kotlin.$_$.cf;
-  var interfaceMeta = kotlin_kotlin.$_$.fe;
+  var protoOf = kotlin_kotlin.$_$.cf;
+  var objectMeta = kotlin_kotlin.$_$.bf;
+  var setMetadataFor = kotlin_kotlin.$_$.df;
+  var interfaceMeta = kotlin_kotlin.$_$.ge;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s1;
   var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w1;
   var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.f1;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v1;
-  var getNumberHashCode = kotlin_kotlin.$_$.zd;
-  var classMeta = kotlin_kotlin.$_$.pd;
+  var getNumberHashCode = kotlin_kotlin.$_$.ae;
+  var classMeta = kotlin_kotlin.$_$.qd;
   var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t1;
   //endregion
   //region block: pre-declaration

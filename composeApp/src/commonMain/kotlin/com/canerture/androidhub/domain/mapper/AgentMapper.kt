@@ -1,12 +1,12 @@
 package com.canerture.androidhub.domain.mapper
 
-import com.canerture.androidhub.data.model.agents.Agent
+import com.canerture.androidhub.data.model.Agent
 import com.canerture.androidhub.domain.model.AbilityUI
 import com.canerture.androidhub.domain.model.AgentGroupUI
 import com.canerture.androidhub.domain.model.AgentUI
 import com.canerture.androidhub.domain.model.RoleUI
-import com.canerture.valorantcmp.data.model.agents.Ability
-import com.canerture.valorantcmp.data.model.agents.Role
+import com.canerture.androidhub.data.model.Ability
+import com.canerture.androidhub.data.model.Role
 
 fun List<Agent>?.mapToAgentRoleUI(): List<AgentGroupUI> {
     val agents = this?.mapToAgentUI().orEmpty()

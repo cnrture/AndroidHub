@@ -2,7 +2,7 @@ package com.canerture.androidhub.data.repository
 
 import com.canerture.androidhub.data.remote.ValorantService
 import com.canerture.androidhub.domain.repository.ValorantRepository
-import com.canerture.valorantcmp.data.model.BaseResponse
+import com.canerture.androidhub.data.model.BaseResponse
 
 class ValorantRepositoryImpl(private val valorantService: ValorantService) : ValorantRepository {
 

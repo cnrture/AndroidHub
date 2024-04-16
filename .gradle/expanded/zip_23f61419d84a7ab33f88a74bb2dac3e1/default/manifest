@@ -1,9 +1,0 @@
-builtins_platform=JS
-unique_name=voyager\:voyager-koin
-compiler_version=1.9.10
-depends=voyager\:voyager-screenmodel voyager\:voyager-navigator voyager\:voyager-core org.jetbrains.compose.runtime\:runtime-saveable org.jetbrains.compose.runtime\:runtime org.jetbrains.kotlin\:kotlin-dom-api-compat org.jetbrains.kotlinx\:kotlinx-coroutines-core io.insert-koin\:koin-compose org.jetbrains.kotlinx\:atomicfu io.insert-koin\:koin-core kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
-serializedKlibFingerprint=21a4656kz4iyo.3tiwod2c1a62g
-serializedIrFileFingerprints=p9h06tlg1bzr.1jhxax1r9gbqc
-jsOutputName=voyager-voyager-koin
-abi_version=1.8.0
-metadata_version=1.4.1

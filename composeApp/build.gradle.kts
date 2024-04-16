@@ -41,7 +41,8 @@ kotlin {
 
             implementation(libs.ktorClientCore)
             implementation(libs.ktorClientContentNegotiation)
-            implementation(libs.ktorSerializationKotlinxJson)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
 
             implementation(libs.kotlinx.coroutines.core)
         }

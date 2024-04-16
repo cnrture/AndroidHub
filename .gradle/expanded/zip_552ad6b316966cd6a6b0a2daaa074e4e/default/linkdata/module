@@ -1,2 +1,0 @@
-
-<io.insert-koin:koin-core>:org.koin.core:org.koin.core.annotation:org.koin.core.component:org.koin.core.context:org.koin.core.definition:org.koin.core.error:org.koin.core.extension:org.koin.core.instance:org.koin.core.logger:org.koin.core.module:org.koin.core.module.dsl:org.koin.core.parameter:org.koin.core.qualifier:org.koin.core.registry:org.koin.core.scope:org.koin.core.time:org.koin.dsl:org.koin.ext:org.koin.mp

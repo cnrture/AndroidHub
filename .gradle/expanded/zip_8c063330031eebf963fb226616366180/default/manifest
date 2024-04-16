@@ -1,9 +1,0 @@
-builtins_platform=JS
-unique_name=voyager\:voyager-screenmodel
-compiler_version=1.9.10
-depends=voyager\:voyager-navigator voyager\:voyager-core org.jetbrains.compose.runtime\:runtime-saveable org.jetbrains.compose.runtime\:runtime org.jetbrains.kotlin\:kotlin-dom-api-compat org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
-serializedKlibFingerprint=3cg21r50otl7j.2lxnfqh9wpv9x
-serializedIrFileFingerprints=2bb91wszuhry1.7e0duswg6to2 3l2nkmb9iiob0.1cu3yfev9ewqp 1m3wrt9bqc3qx.3jble2ozdvb9i
-jsOutputName=voyager-voyager-screenmodel
-abi_version=1.8.0
-metadata_version=1.4.1
