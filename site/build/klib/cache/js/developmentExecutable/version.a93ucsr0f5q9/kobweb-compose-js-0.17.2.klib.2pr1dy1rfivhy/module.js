@@ -32,51 +32,51 @@
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var THROW_CCE = kotlin_kotlin.$_$.re;
-  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.q5;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
+  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.n5;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
-  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m2;
+  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l2;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var Annotation = kotlin_kotlin.$_$.de;
+  var Annotation = kotlin_kotlin.$_$.fe;
   var classMeta = kotlin_kotlin.$_$.ea;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.nf;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.pf;
   var equals = kotlin_kotlin.$_$.ha;
   var isInterface = kotlin_kotlin.$_$.za;
   var grid = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f1;
-  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.f5;
+  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
   var get_fr = kotlin_org_jetbrains_compose_html_html_core.$_$.c4;
   var gridArea = kotlin_org_jetbrains_compose_html_html_core.$_$.e4;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.c;
   var alignItems = kotlin_org_jetbrains_compose_html_html_core.$_$.h3;
-  var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.a3;
+  var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.z2;
   var justifyItems = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h1;
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_html_html_core.$_$.d;
   var alignSelf = kotlin_org_jetbrains_compose_html_html_core.$_$.i3;
-  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b3;
+  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.a3;
   var justifySelf = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i1;
   var Companion_getInstance_4 = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
   var display = kotlin_org_jetbrains_compose_html_html_core.$_$.v3;
   var Companion_getInstance_5 = kotlin_org_jetbrains_compose_html_html_core.$_$.l;
   var flexDirection = kotlin_org_jetbrains_compose_html_html_core.$_$.x3;
   var Companion_getInstance_6 = kotlin_org_jetbrains_compose_html_html_core.$_$.m;
-  var justifyContent = kotlin_org_jetbrains_compose_html_html_core.$_$.o4;
+  var justifyContent = kotlin_org_jetbrains_compose_html_html_core.$_$.l4;
   var flexGrow = kotlin_org_jetbrains_compose_html_html_core.$_$.y3;
   var StyleSheet = kotlin_org_jetbrains_compose_html_html_core.$_$.g3;
   var StyleSheet_init_$Init$ = kotlin_org_jetbrains_compose_html_html_core.$_$.b;
   var hashCode = kotlin_kotlin.$_$.oa;
   var ComparableStyleScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d;
-  var ComparableAttrsScope_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t2;
-  var Long = kotlin_kotlin.$_$.le;
-  var toString = kotlin_kotlin.$_$.wd;
+  var ComparableAttrsScope_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s2;
+  var Long = kotlin_kotlin.$_$.ne;
+  var toString = kotlin_kotlin.$_$.yd;
   var toString_0 = kotlin_kotlin.$_$.rb;
   var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.r1;
   var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m1;
   var numberToInt = kotlin_kotlin.$_$.lb;
   var roundToInt = kotlin_kotlin.$_$.tb;
   var getNumberHashCode = kotlin_kotlin.$_$.la;
-  var toDegrees = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.w1;
+  var toDegrees = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.v1;
   var coerceIn = kotlin_kotlin.$_$.xb;
   var ariaHidden = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m;
   var ariaDisabled = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l;
@@ -105,7 +105,7 @@
   var borderRadius_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.k3;
   var boxShadow = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.z;
   var boxSizing = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.a1;
-  var opacity = kotlin_org_jetbrains_compose_html_html_core.$_$.b5;
+  var opacity = kotlin_org_jetbrains_compose_html_html_core.$_$.y4;
   var color = kotlin_org_jetbrains_compose_html_html_core.$_$.t3;
   var appearance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k;
   var gap = kotlin_org_jetbrains_compose_html_html_core.$_$.d4;
@@ -115,46 +115,42 @@
   var fontWeight_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.b4;
   var gridTemplateColumns = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d1;
   var gridTemplateRows = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e1;
-  var gridRow = kotlin_org_jetbrains_compose_html_html_core.$_$.k4;
-  var gridRowStart = kotlin_org_jetbrains_compose_html_html_core.$_$.j4;
-  var gridColumnStart = kotlin_org_jetbrains_compose_html_html_core.$_$.h4;
-  var gridColumn = kotlin_org_jetbrains_compose_html_html_core.$_$.i4;
-  var userSelect = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.z1;
+  var gridRow = kotlin_org_jetbrains_compose_html_html_core.$_$.h4;
+  var userSelect = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.y1;
   var cursor = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b1;
   var overflowX = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.n1;
   var overflowY = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.o1;
-  var marginLeft = kotlin_org_jetbrains_compose_html_html_core.$_$.s4;
-  var marginRight = kotlin_org_jetbrains_compose_html_html_core.$_$.t4;
-  var marginTop = kotlin_org_jetbrains_compose_html_html_core.$_$.u4;
-  var marginBottom = kotlin_org_jetbrains_compose_html_html_core.$_$.r4;
+  var marginLeft = kotlin_org_jetbrains_compose_html_html_core.$_$.p4;
+  var marginRight = kotlin_org_jetbrains_compose_html_html_core.$_$.q4;
+  var marginTop = kotlin_org_jetbrains_compose_html_html_core.$_$.r4;
+  var marginBottom = kotlin_org_jetbrains_compose_html_html_core.$_$.o4;
   var overflow = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p1;
-  var padding = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
+  var padding = kotlin_org_jetbrains_compose_html_html_core.$_$.z4;
   var paddingInline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.q1;
-  var margin = kotlin_org_jetbrains_compose_html_html_core.$_$.v4;
-  var verticalAlign = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.a2;
-  var lineHeight = kotlin_org_jetbrains_compose_html_html_core.$_$.q4;
+  var margin = kotlin_org_jetbrains_compose_html_html_core.$_$.s4;
+  var verticalAlign = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.z1;
+  var lineHeight = kotlin_org_jetbrains_compose_html_html_core.$_$.n4;
   var overflowWrap = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m1;
   var listStyle = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j1;
   var objectFit = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k1;
   var outline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l1;
-  var position = kotlin_org_jetbrains_compose_html_html_core.$_$.e5;
-  var top = kotlin_org_jetbrains_compose_html_html_core.$_$.i5;
-  var left = kotlin_org_jetbrains_compose_html_html_core.$_$.p4;
-  var right = kotlin_org_jetbrains_compose_html_html_core.$_$.g5;
+  var position = kotlin_org_jetbrains_compose_html_html_core.$_$.b5;
+  var top = kotlin_org_jetbrains_compose_html_html_core.$_$.f5;
+  var left = kotlin_org_jetbrains_compose_html_html_core.$_$.m4;
+  var right = kotlin_org_jetbrains_compose_html_html_core.$_$.d5;
   var bottom = kotlin_org_jetbrains_compose_html_html_core.$_$.q3;
   var scrollBehavior = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r1;
-  var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.d5;
-  var height = kotlin_org_jetbrains_compose_html_html_core.$_$.n4;
-  var width = kotlin_org_jetbrains_compose_html_html_core.$_$.l5;
-  var minWidth = kotlin_org_jetbrains_compose_html_html_core.$_$.z4;
-  var minHeight = kotlin_org_jetbrains_compose_html_html_core.$_$.y4;
-  var maxWidth = kotlin_org_jetbrains_compose_html_html_core.$_$.w4;
-  var whiteSpace = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b2;
-  var textAlign = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t1;
+  var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.a5;
+  var height = kotlin_org_jetbrains_compose_html_html_core.$_$.k4;
+  var width = kotlin_org_jetbrains_compose_html_html_core.$_$.i5;
+  var minWidth = kotlin_org_jetbrains_compose_html_html_core.$_$.w4;
+  var minHeight = kotlin_org_jetbrains_compose_html_html_core.$_$.v4;
+  var maxWidth = kotlin_org_jetbrains_compose_html_html_core.$_$.t4;
+  var whiteSpace = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.a2;
   var textDecorationLine = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.u1;
-  var textShadow = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.v1;
-  var translateX = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.y1;
-  var transition = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.x1;
+  var textAlign = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t1;
+  var translateX = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.x1;
+  var transition = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.w1;
   var setVariable = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s1;
   //endregion
   //region block: pre-declaration
@@ -2734,19 +2730,18 @@
   }
   function Color_0() {
   }
+  function get_isBright(_this__u8e3s4) {
+    return get_luminance(_this__u8e3s4) > 0.5;
+  }
+  function lightened(_this__u8e3s4, byPercent) {
+    byPercent = byPercent === VOID ? 0.3 : byPercent;
+    return _this__u8e3s4.inverted_adp911_k$().darkened_iwrtmu_k$(byPercent).inverted_adp911_k$();
+  }
   function toColorFloat(_this__u8e3s4) {
     return (_this__u8e3s4 & 255) / 255.0;
   }
   function toColorInt(_this__u8e3s4) {
     return numberToInt(coerceIn(_this__u8e3s4, 0.0, 1.0) * 255.0);
-  }
-  var com_varabyte_kobweb_compose_ui_graphics_Color_Rgb$stable;
-  function lightened(_this__u8e3s4, byPercent) {
-    byPercent = byPercent === VOID ? 0.3 : byPercent;
-    return _this__u8e3s4.inverted_adp911_k$().darkened_iwrtmu_k$(byPercent).inverted_adp911_k$();
-  }
-  function get_isBright(_this__u8e3s4) {
-    return get_luminance(_this__u8e3s4) > 0.5;
   }
   function get_luminance(_this__u8e3s4) {
     // Inline function 'kotlin.let' call
@@ -3310,14 +3305,6 @@
     end = end === VOID ? start + 1 | 0 : end;
     return styleModifier(_this__u8e3s4, gridRow$lambda(start, end));
   }
-  function gridItem(_this__u8e3s4, row, column, width, height) {
-    width = width === VOID ? null : width;
-    height = height === VOID ? null : height;
-    return styleModifier(_this__u8e3s4, gridItem$lambda(height, row, width, column));
-  }
-  function grid_0(_this__u8e3s4, block) {
-    return styleModifier(_this__u8e3s4, grid$lambda(block));
-  }
   function gridTemplateColumns$lambda($block) {
     return function ($this$styleModifier) {
       gridTemplateColumns($this$styleModifier, $block);
@@ -3333,47 +3320,6 @@
   function gridRow$lambda($start, $end) {
     return function ($this$styleModifier) {
       gridRow($this$styleModifier, $start, $end);
-      return Unit_getInstance();
-    };
-  }
-  function gridItem$lambda($height, $row, $width, $column) {
-    return function ($this$styleModifier) {
-      var tmp;
-      if (!($height == null)) {
-        // Inline function 'kotlin.check' call
-        // Inline function 'kotlin.contracts.contract' call
-        if (!($height > 0)) {
-          // Inline function 'com.varabyte.kobweb.compose.ui.modifiers.gridItem.<anonymous>.<anonymous>' call
-          var message = 'Grid item height must be > 0, got ' + $height;
-          throw IllegalStateException_init_$Create$(toString_0(message));
-        }
-        gridRow($this$styleModifier, $row, $row + $height | 0);
-        tmp = Unit_getInstance();
-      } else {
-        gridRowStart($this$styleModifier, $row);
-        tmp = Unit_getInstance();
-      }
-      var tmp_0;
-      if (!($width == null)) {
-        // Inline function 'kotlin.check' call
-        // Inline function 'kotlin.contracts.contract' call
-        if (!($width > 0)) {
-          // Inline function 'com.varabyte.kobweb.compose.ui.modifiers.gridItem.<anonymous>.<anonymous>' call
-          var message_0 = 'Grid item width must be > 0, got ' + $width;
-          throw IllegalStateException_init_$Create$(toString_0(message_0));
-        }
-        gridColumn($this$styleModifier, $column, $column + $width | 0);
-        tmp_0 = Unit_getInstance();
-      } else {
-        gridColumnStart($this$styleModifier, $column);
-        tmp_0 = Unit_getInstance();
-      }
-      return Unit_getInstance();
-    };
-  }
-  function grid$lambda($block) {
-    return function ($this$styleModifier) {
-      grid($this$styleModifier, $block);
       return Unit_getInstance();
     };
   }
@@ -3789,26 +3735,15 @@
   function whiteSpace_0(_this__u8e3s4, whiteSpace) {
     return styleModifier(_this__u8e3s4, whiteSpace$lambda(whiteSpace));
   }
-  function textAlign_0(_this__u8e3s4, textAlign) {
-    return styleModifier(_this__u8e3s4, textAlign$lambda(textAlign));
-  }
   function textDecorationLine_0(_this__u8e3s4, textDecorationLine) {
     return styleModifier(_this__u8e3s4, textDecorationLine$lambda(textDecorationLine));
   }
-  function textShadow_0(_this__u8e3s4, offsetX, offsetY, blurRadius, color) {
-    blurRadius = blurRadius === VOID ? null : blurRadius;
-    color = color === VOID ? null : color;
-    return styleModifier(_this__u8e3s4, textShadow$lambda(offsetX, offsetY, blurRadius, color));
+  function textAlign_0(_this__u8e3s4, textAlign) {
+    return styleModifier(_this__u8e3s4, textAlign$lambda(textAlign));
   }
   function whiteSpace$lambda($whiteSpace) {
     return function ($this$styleModifier) {
       whiteSpace($this$styleModifier, $whiteSpace);
-      return Unit_getInstance();
-    };
-  }
-  function textAlign$lambda($textAlign) {
-    return function ($this$styleModifier) {
-      textAlign($this$styleModifier, $textAlign);
       return Unit_getInstance();
     };
   }
@@ -3818,9 +3753,9 @@
       return Unit_getInstance();
     };
   }
-  function textShadow$lambda($offsetX, $offsetY, $blurRadius, $color) {
+  function textAlign$lambda($textAlign) {
     return function ($this$styleModifier) {
-      textShadow($this$styleModifier, $offsetX, $offsetY, $blurRadius, $color);
+      textAlign($this$styleModifier, $textAlign);
       return Unit_getInstance();
     };
   }
@@ -3888,7 +3823,6 @@
   com_varabyte_kobweb_compose_ui_Alignment_Center$stable = 0;
   com_varabyte_kobweb_compose_ui_Alignment_CenterVertically$stable = 0;
   com_varabyte_kobweb_compose_ui_Alignment_End$stable = 0;
-  com_varabyte_kobweb_compose_ui_graphics_Color_Rgb$stable = 0;
   //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
@@ -3927,70 +3861,67 @@
   _.$_$.g1 = fontWeight_1;
   _.$_$.h1 = fontWeight_2;
   _.$_$.i1 = gap_0;
-  _.$_$.j1 = gridItem;
-  _.$_$.k1 = gridRow_0;
-  _.$_$.l1 = gridTemplateColumns_0;
-  _.$_$.m1 = gridTemplateRows_0;
-  _.$_$.n1 = grid_0;
-  _.$_$.o1 = height_0;
-  _.$_$.p1 = left_0;
-  _.$_$.q1 = lineHeight_0;
-  _.$_$.r1 = listStyle_0;
-  _.$_$.s1 = margin_2;
-  _.$_$.t1 = margin_1;
-  _.$_$.u1 = margin_4;
-  _.$_$.v1 = margin_3;
-  _.$_$.w1 = margin_0;
-  _.$_$.x1 = maxWidth_0;
-  _.$_$.y1 = minHeight_0;
-  _.$_$.z1 = minWidth_0;
-  _.$_$.a2 = objectFit_0;
-  _.$_$.b2 = onAnimationEnd;
-  _.$_$.c2 = onClick;
-  _.$_$.d2 = opacity_0;
-  _.$_$.e2 = outline_0;
-  _.$_$.f2 = overflowWrap_0;
-  _.$_$.g2 = overflow_1;
-  _.$_$.h2 = overflow_0;
-  _.$_$.i2 = paddingInline_0;
-  _.$_$.j2 = padding_3;
-  _.$_$.k2 = padding_0;
-  _.$_$.l2 = padding_2;
-  _.$_$.m2 = padding_1;
-  _.$_$.n2 = position_0;
-  _.$_$.o2 = right_0;
-  _.$_$.p2 = scrollBehavior_0;
-  _.$_$.q2 = setVariable_0;
-  _.$_$.r2 = size;
-  _.$_$.s2 = tabIndex;
-  _.$_$.t2 = textAlign_0;
-  _.$_$.u2 = textDecorationLine_0;
-  _.$_$.v2 = textShadow_0;
-  _.$_$.w2 = top_0;
-  _.$_$.x2 = transition_0;
-  _.$_$.y2 = transition_1;
-  _.$_$.z2 = translateX_0;
-  _.$_$.a3 = userSelect_0;
-  _.$_$.b3 = verticalAlign_0;
-  _.$_$.c3 = whiteSpace_0;
-  _.$_$.d3 = width_0;
-  _.$_$.e3 = styleModifier;
-  _.$_$.f3 = thenIf_0;
-  _.$_$.g3 = toAttrs;
-  _.$_$.h3 = toStyles;
-  _.$_$.i3 = Center_getInstance;
-  _.$_$.j3 = KobwebComposeStyleSheet_getInstance;
-  _.$_$.k3 = Companion_getInstance_9;
-  _.$_$.l3 = Colors_getInstance;
-  _.$_$.m3 = CenterEnd_getInstance;
-  _.$_$.n3 = CenterHorizontally_getInstance;
-  _.$_$.o3 = CenterVertically_getInstance;
-  _.$_$.p3 = Center_getInstance_0;
-  _.$_$.q3 = End_getInstance_0;
-  _.$_$.r3 = Start_getInstance_0;
-  _.$_$.s3 = TopCenter_getInstance;
-  _.$_$.t3 = TopStart_getInstance;
-  _.$_$.u3 = Companion_getInstance_8;
+  _.$_$.j1 = gridRow_0;
+  _.$_$.k1 = gridTemplateColumns_0;
+  _.$_$.l1 = gridTemplateRows_0;
+  _.$_$.m1 = height_0;
+  _.$_$.n1 = left_0;
+  _.$_$.o1 = lineHeight_0;
+  _.$_$.p1 = listStyle_0;
+  _.$_$.q1 = margin_2;
+  _.$_$.r1 = margin_1;
+  _.$_$.s1 = margin_4;
+  _.$_$.t1 = margin_3;
+  _.$_$.u1 = margin_0;
+  _.$_$.v1 = maxWidth_0;
+  _.$_$.w1 = minHeight_0;
+  _.$_$.x1 = minWidth_0;
+  _.$_$.y1 = objectFit_0;
+  _.$_$.z1 = onAnimationEnd;
+  _.$_$.a2 = onClick;
+  _.$_$.b2 = opacity_0;
+  _.$_$.c2 = outline_0;
+  _.$_$.d2 = overflowWrap_0;
+  _.$_$.e2 = overflow_1;
+  _.$_$.f2 = overflow_0;
+  _.$_$.g2 = paddingInline_0;
+  _.$_$.h2 = padding_3;
+  _.$_$.i2 = padding_0;
+  _.$_$.j2 = padding_2;
+  _.$_$.k2 = padding_1;
+  _.$_$.l2 = position_0;
+  _.$_$.m2 = right_0;
+  _.$_$.n2 = scrollBehavior_0;
+  _.$_$.o2 = setVariable_0;
+  _.$_$.p2 = size;
+  _.$_$.q2 = tabIndex;
+  _.$_$.r2 = textAlign_0;
+  _.$_$.s2 = textDecorationLine_0;
+  _.$_$.t2 = top_0;
+  _.$_$.u2 = transition_0;
+  _.$_$.v2 = transition_1;
+  _.$_$.w2 = translateX_0;
+  _.$_$.x2 = userSelect_0;
+  _.$_$.y2 = verticalAlign_0;
+  _.$_$.z2 = whiteSpace_0;
+  _.$_$.a3 = width_0;
+  _.$_$.b3 = styleModifier;
+  _.$_$.c3 = thenIf_0;
+  _.$_$.d3 = toAttrs;
+  _.$_$.e3 = toStyles;
+  _.$_$.f3 = Center_getInstance;
+  _.$_$.g3 = KobwebComposeStyleSheet_getInstance;
+  _.$_$.h3 = Companion_getInstance_9;
+  _.$_$.i3 = Colors_getInstance;
+  _.$_$.j3 = CenterEnd_getInstance;
+  _.$_$.k3 = CenterHorizontally_getInstance;
+  _.$_$.l3 = CenterVertically_getInstance;
+  _.$_$.m3 = Center_getInstance_0;
+  _.$_$.n3 = End_getInstance_0;
+  _.$_$.o3 = Start_getInstance_0;
+  _.$_$.p3 = TopCenter_getInstance;
+  _.$_$.q3 = TopStart_getInstance;
+  _.$_$.r3 = Companion_getInstance_8;
   //endregion
   return _;
 }));

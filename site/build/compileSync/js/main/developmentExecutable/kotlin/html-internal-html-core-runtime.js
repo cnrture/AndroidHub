@@ -24,11 +24,11 @@
   var protoOf = kotlin_kotlin.$_$.ob;
   var interfaceMeta = kotlin_kotlin.$_$.qa;
   var setMetadataFor = kotlin_kotlin.$_$.pb;
-  var THROW_CCE = kotlin_kotlin.$_$.re;
-  var Annotation = kotlin_kotlin.$_$.de;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
+  var Annotation = kotlin_kotlin.$_$.fe;
   var classMeta = kotlin_kotlin.$_$.ea;
   var VOID = kotlin_kotlin.$_$.e;
-  var ensureNotNull = kotlin_kotlin.$_$.kf;
+  var ensureNotNull = kotlin_kotlin.$_$.mf;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
   var AbstractApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c;
   var clear = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.b;

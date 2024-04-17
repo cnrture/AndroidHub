@@ -21,32 +21,16 @@ import org.jetbrains.compose.web.dom.Span
 import com.canerture.androidhub.getSitePalette
 
 val FooterStyle by ComponentStyle.base {
-    Modifier
-        .backgroundColor(getSitePalette().nearBackground)
-        .padding(topBottom = 1.5.cssRem, leftRight = 10.percent)
+    Modifier.padding(topBottom = 1.5.cssRem, leftRight = 10.percent)
 }
 
 @Composable
 fun Footer(modifier: Modifier = Modifier) {
     Box(FooterStyle.toModifier().then(modifier), contentAlignment = Alignment.Center) {
         Span(Modifier.textAlign(TextAlign.Center).toAttrs()) {
-            val sitePalette = getSitePalette()
-            SpanText("Built with ")
-            Link(
-                "https://github.com/varabyte/kobweb",
-                "Kobweb",
-                Modifier.setVariable(ColorVar, sitePalette.brand.primary),
-                variant = UncoloredLinkVariant
-            )
-            SpanText(", template designed by ")
-
-            // Huge thanks to UI Rocket (https://ui-rocket.com) for putting this great template design together for us!
-            // If you like what you see here and want help building your own site, consider checking out their services.
-            Link(
-                "https://ui-rocket.com",
-                "UI Rocket",
-                Modifier.setVariable(ColorVar, sitePalette.brand.accent).whiteSpace(WhiteSpace.NoWrap),
-                variant = UncoloredLinkVariant
+            SpanText(
+                text = "2024 - Caner Ture",
+                modifier = Modifier.color(getSitePalette().green)
             )
         }
     }

@@ -55,7 +55,7 @@ fun PageLayout(title: String, content: @Composable ColumnScope.() -> Unit) {
             ) {
                 content()
             }
+            Footer(Modifier.fillMaxWidth().gridRow(2))
         }
-        Footer(Modifier.fillMaxWidth().gridRow(2))
     }
 }

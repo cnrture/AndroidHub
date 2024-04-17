@@ -9,34 +9,38 @@ import androidx.compose.runtime.setValue
 import com.canerture.androidhub.components.widgets.IconButton
 import com.canerture.androidhub.getSitePalette
 import com.varabyte.kobweb.compose.css.functions.clamp
+import com.varabyte.kobweb.compose.dom.svg.Circle
+import com.varabyte.kobweb.compose.dom.svg.Line
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
-import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.animation
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
-import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
+import com.varabyte.kobweb.compose.ui.modifiers.boxShadow
+import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.display
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxHeight
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.gap
-import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.onAnimationEnd
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.setVariable
 import com.varabyte.kobweb.compose.ui.modifiers.translateX
 import com.varabyte.kobweb.compose.ui.modifiers.width
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.animation.Keyframes
 import com.varabyte.kobweb.silk.components.animation.toAnimation
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.CloseIcon
 import com.varabyte.kobweb.silk.components.icons.HamburgerIcon
+import com.varabyte.kobweb.silk.components.icons.IconRenderStyle
+import com.varabyte.kobweb.silk.components.icons.createIcon
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.components.navigation.Link
@@ -53,14 +57,13 @@ import org.jetbrains.compose.web.css.AnimationFillMode
 import org.jetbrains.compose.web.css.AnimationTimingFunction
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.DisplayStyle
-import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 val NavHeaderStyle by ComponentStyle.base {
-    Modifier.fillMaxWidth().padding(3.cssRem)
+    Modifier.fillMaxWidth().padding(top = 4.cssRem, leftRight = 3.cssRem)
 }
 
 @Composable
@@ -68,7 +71,7 @@ private fun NavLink(path: String, text: String) {
     Link(
         path,
         text,
-        Modifier.setVariable(ColorVar, Color.black),
+        Modifier.fontSize(1.cssRem).setVariable(ColorVar, Color.black),
         UncoloredLinkVariant
     )
 }
@@ -76,11 +79,11 @@ private fun NavLink(path: String, text: String) {
 @Composable
 private fun MenuItems() {
     NavLink("/", "Articles")
-    NavLink("/about", "Projects")
-    NavLink("/about", "Extensions")
-    NavLink("/about", "Plugins")
-    NavLink("/about", "Library")
-    NavLink("/about", "Resources")
+    NavLink("/", "Projects")
+    NavLink("/", "Extensions")
+    NavLink("/", "Plugins")
+    NavLink("/", "Library")
+    NavLink("/", "Resources")
 }
 
 @Composable
@@ -97,6 +100,25 @@ private fun CloseButton(onClick: () -> Unit) {
     }
 }
 
+@Composable
+private fun SearchButton(onClick: () -> Unit) {
+    IconButton(onClick) {
+        createIcon(renderStyle = IconRenderStyle.Stroke(3), attrs = Modifier.color(getSitePalette().blue).toAttrs()) {
+            Circle {
+                cx(12)
+                cy(12)
+                r(8)
+            }
+            Line {
+                x1(19)
+                y1(19)
+                x2(56)
+                y2(56)
+            }
+        }
+    }
+}
+
 val SideMenuSlideInAnim by Keyframes {
     from {
         Modifier.translateX(100.percent)
@@ -107,8 +129,6 @@ val SideMenuSlideInAnim by Keyframes {
     }
 }
 
-// Note: When the user closes the side menu, we don't immediately stop rendering it (at which point it would disappear
-// abruptly). Instead, we start animating it out and only stop rendering it when the animation is complete.
 enum class SideMenuState {
     CLOSED,
     OPEN,
@@ -131,13 +151,12 @@ fun NavHeader() {
         horizontalArrangement = Arrangement.Center
     ) {
         Link("https://androidhub.dev") {
-            Image("/androidhub-logo.png", "AndroidHub Logo", Modifier.height(5.cssRem).display(DisplayStyle.Block))
+            Image("/androidhub-logo.png", "AndroidHub Logo", Modifier.width(28.cssRem).display(DisplayStyle.Block))
         }
 
         Row(
             Modifier
                 .fontSize(1.5.cssRem)
-                .gap(1.cssRem)
                 .displayUntil(Breakpoint.MD),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -153,8 +172,6 @@ fun NavHeader() {
         }
     }
 
-    Spacer()
-
     Row(
         modifier = NavHeaderStyle.toModifier(),
         verticalAlignment = Alignment.CenterVertically,
@@ -162,12 +179,14 @@ fun NavHeader() {
     ) {
         Row(
             modifier = Modifier.gap(1.5.cssRem).displayIfAtLeast(Breakpoint.MD)
-                .border(2.px, LineStyle.Solid, Color.black)
-                .borderRadius(1.cssRem)
-                .padding(topBottom = 1.cssRem, leftRight = 3.cssRem),
+                .backgroundColor(getSitePalette().nearBackground)
+                .borderRadius(5.cssRem)
+                .boxShadow(0.px, 0.px, 5.px, 0.px, Color.lightgray)
+                .padding(topBottom = 0.5.cssRem, leftRight = 3.cssRem),
             verticalAlignment = Alignment.CenterVertically
         ) {
             MenuItems()
+            SearchButton(onClick = {})
         }
     }
 }
@@ -179,14 +198,12 @@ private fun SideMenu(menuState: SideMenuState, close: () -> Unit, onAnimationEnd
             .setVariable(OverlayVars.BackgroundColor, Colors.Transparent)
             .onClick { close() }
     ) {
-        key(menuState) { // Force recompute animation parameters when close button is clicked
+        key(menuState) {
             Column(
                 Modifier
                     .fillMaxHeight()
                     .width(clamp(8.cssRem, 33.percent, 10.cssRem))
                     .align(Alignment.CenterEnd)
-                    // Close button will appear roughly over the hamburger button, so the user can close
-                    // things without moving their finger / cursor much.
                     .padding(top = 1.cssRem, leftRight = 1.cssRem)
                     .gap(1.5.cssRem)
                     .backgroundColor(getSitePalette().nearBackground)

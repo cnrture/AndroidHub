@@ -27,7 +27,7 @@
   var imul = Math.imul;
   var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.f2;
   var charArrayOf = kotlin_kotlin.$_$.aa;
-  var trimStart = kotlin_kotlin.$_$.yd;
+  var trimStart = kotlin_kotlin.$_$.ae;
   var get_http = kotlin_com_varabyte_kobweb_browser_ext.$_$.a;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
   var protoOf = kotlin_kotlin.$_$.ob;
@@ -38,22 +38,22 @@
   var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
   var KMutableProperty0 = kotlin_kotlin.$_$.cc;
   var KMutableProperty1 = kotlin_kotlin.$_$.dc;
-  var lazy = kotlin_kotlin.$_$.mf;
-  var THROW_CCE = kotlin_kotlin.$_$.re;
-  var Annotation = kotlin_kotlin.$_$.de;
+  var lazy = kotlin_kotlin.$_$.of;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
+  var Annotation = kotlin_kotlin.$_$.fe;
   var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
   var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
-  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.d6;
+  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.a6;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
-  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.f5;
-  var padding = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
-  var margin = kotlin_org_jetbrains_compose_html_html_core.$_$.v4;
+  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
+  var padding = kotlin_org_jetbrains_compose_html_html_core.$_$.z4;
+  var margin = kotlin_org_jetbrains_compose_html_html_core.$_$.s4;
   var boxSizing = kotlin_org_jetbrains_compose_html_html_core.$_$.r3;
   var StyleSheet = kotlin_org_jetbrains_compose_html_html_core.$_$.g3;
   var StyleSheet_init_$Init$ = kotlin_org_jetbrains_compose_html_html_core.$_$.b;
   var objectMeta = kotlin_kotlin.$_$.nb;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.tf;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.vf;
   var toString = kotlin_kotlin.$_$.rb;
   var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.r1;
   var getValue = kotlin_kotlin.$_$.a7;
@@ -67,10 +67,10 @@
   var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
   var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
   var interfaceMeta = kotlin_kotlin.$_$.qa;
-  var A = kotlin_org_jetbrains_compose_html_html_core.$_$.n5;
-  var THROW_IAE = kotlin_kotlin.$_$.se;
+  var A = kotlin_org_jetbrains_compose_html_html_core.$_$.k5;
+  var THROW_IAE = kotlin_kotlin.$_$.ue;
   var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.ge;
+  var Enum = kotlin_kotlin.$_$.ie;
   var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.d1;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
   var charSequenceLength = kotlin_kotlin.$_$.da;
@@ -83,11 +83,11 @@
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.t;
   var split = kotlin_kotlin.$_$.jd;
   var getOrNull = kotlin_kotlin.$_$.z6;
-  var Exception = kotlin_kotlin.$_$.ie;
+  var Exception = kotlin_kotlin.$_$.ke;
   var Exception_init_$Init$ = kotlin_kotlin.$_$.i1;
   var captureStack = kotlin_kotlin.$_$.z9;
   var substringAfterLast_0 = kotlin_kotlin.$_$.od;
-  var ensureNotNull = kotlin_kotlin.$_$.kf;
+  var ensureNotNull = kotlin_kotlin.$_$.mf;
   var isBlank = kotlin_kotlin.$_$.xc;
   var startsWith_0 = kotlin_kotlin.$_$.md;
   var endsWith = kotlin_kotlin.$_$.sc;
@@ -112,11 +112,11 @@
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.q5;
-  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.f6;
+  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.n5;
+  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.c6;
   var SuspendFunction1 = kotlin_kotlin.$_$.r9;
   var substringBefore = kotlin_kotlin.$_$.sd;
-  var to = kotlin_kotlin.$_$.vf;
+  var to = kotlin_kotlin.$_$.xf;
   var CompositionLocalProvider = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
   var listOf = kotlin_kotlin.$_$.n7;
   var removeSuffix = kotlin_kotlin.$_$.ed;
@@ -125,7 +125,7 @@
   var substringAfter = kotlin_kotlin.$_$.pd;
   var Companion_getInstance_0 = kotlin_kotlin.$_$.d4;
   var DurationUnit_MILLISECONDS_getInstance = kotlin_kotlin.$_$.f;
-  var toDuration = kotlin_kotlin.$_$.ce;
+  var toDuration = kotlin_kotlin.$_$.ee;
   var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_browser_ext.$_$.h;
   var setInterval = kotlin_com_varabyte_kobweb_browser_ext.$_$.e;
   var toMutableMap = kotlin_kotlin.$_$.w8;
@@ -165,9 +165,9 @@
   setMetadataFor(ComposableSingletons$RouteTreeKt, 'ComposableSingletons$RouteTreeKt', objectMeta);
   setMetadataFor(LegacyRouteRedirectStrategy, 'LegacyRouteRedirectStrategy', classMeta, Enum);
   setMetadataFor(Router, 'Router', classMeta, VOID, VOID, Router);
+  setMetadataFor(UpdateHistoryMode, 'UpdateHistoryMode', classMeta, Enum);
   setMetadataFor(RouteInterceptorScope, 'RouteInterceptorScope', classMeta);
   setMetadataFor(ComposableSingletons$RouterKt, 'ComposableSingletons$RouterKt', objectMeta);
-  setMetadataFor(UpdateHistoryMode, 'UpdateHistoryMode', classMeta, Enum);
   //endregion
   function get_api(_this__u8e3s4) {
     _init_properties_ApiFetcher_kt__epxlpv();
@@ -2286,6 +2286,40 @@
     }
     return tmp;
   };
+  var UpdateHistoryMode_PUSH_instance;
+  var UpdateHistoryMode_REPLACE_instance;
+  function values_1() {
+    return [UpdateHistoryMode_PUSH_getInstance(), UpdateHistoryMode_REPLACE_getInstance()];
+  }
+  function valueOf_1(value) {
+    switch (value) {
+      case 'PUSH':
+        return UpdateHistoryMode_PUSH_getInstance();
+      case 'REPLACE':
+        return UpdateHistoryMode_REPLACE_getInstance();
+      default:
+        UpdateHistoryMode_initEntries();
+        THROW_IAE('No enum constant value.');
+        break;
+    }
+  }
+  function get_entries_1() {
+    if ($ENTRIES_1 == null)
+      $ENTRIES_1 = enumEntries(values_1());
+    return $ENTRIES_1;
+  }
+  var UpdateHistoryMode_entriesInitialized;
+  function UpdateHistoryMode_initEntries() {
+    if (UpdateHistoryMode_entriesInitialized)
+      return Unit_getInstance();
+    UpdateHistoryMode_entriesInitialized = true;
+    UpdateHistoryMode_PUSH_instance = new UpdateHistoryMode('PUSH', 0);
+    UpdateHistoryMode_REPLACE_instance = new UpdateHistoryMode('REPLACE', 1);
+  }
+  var $ENTRIES_1;
+  function UpdateHistoryMode(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
   function _get_route__bsf68o_0($this) {
     return $this.route_1;
   }
@@ -2316,6 +2350,7 @@
   protoOf(RouteInterceptorScope).get_pathQueryAndFragment_8mv2zx_k$ = function () {
     return Route_init_$Create$(this.path_1, this.queryParams_1, this.fragment_1).toString();
   };
+  var com_varabyte_kobweb_navigation_Router$stable;
   function ComposableLambda$invoke$ref_4($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
@@ -2353,41 +2388,6 @@
       new ComposableSingletons$RouterKt();
     return ComposableSingletons$RouterKt_instance;
   }
-  var UpdateHistoryMode_PUSH_instance;
-  var UpdateHistoryMode_REPLACE_instance;
-  function values_1() {
-    return [UpdateHistoryMode_PUSH_getInstance(), UpdateHistoryMode_REPLACE_getInstance()];
-  }
-  function valueOf_1(value) {
-    switch (value) {
-      case 'PUSH':
-        return UpdateHistoryMode_PUSH_getInstance();
-      case 'REPLACE':
-        return UpdateHistoryMode_REPLACE_getInstance();
-      default:
-        UpdateHistoryMode_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries_1() {
-    if ($ENTRIES_1 == null)
-      $ENTRIES_1 = enumEntries(values_1());
-    return $ENTRIES_1;
-  }
-  var UpdateHistoryMode_entriesInitialized;
-  function UpdateHistoryMode_initEntries() {
-    if (UpdateHistoryMode_entriesInitialized)
-      return Unit_getInstance();
-    UpdateHistoryMode_entriesInitialized = true;
-    UpdateHistoryMode_PUSH_instance = new UpdateHistoryMode('PUSH', 0);
-    UpdateHistoryMode_REPLACE_instance = new UpdateHistoryMode('REPLACE', 1);
-  }
-  var $ENTRIES_1;
-  function UpdateHistoryMode(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  var com_varabyte_kobweb_navigation_Router$stable;
   function UpdateHistoryMode_PUSH_getInstance() {
     UpdateHistoryMode_initEntries();
     return UpdateHistoryMode_PUSH_instance;
@@ -2415,16 +2415,17 @@
   //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
-  _.$_$.a = initKobweb;
-  _.$_$.b = KobwebApp;
-  _.$_$.c = rememberPageContext;
-  _.$_$.d = Anchor;
-  _.$_$.e = Router;
-  _.$_$.f = prependIf;
-  _.$_$.g = LegacyRouteRedirectStrategy_DISALLOW_getInstance;
-  _.$_$.h = UpdateHistoryMode_REPLACE_getInstance;
-  _.$_$.i = AppGlobals_getInstance;
-  _.$_$.j = Companion_getInstance_5;
+  _.$_$.a = get_api;
+  _.$_$.b = initKobweb;
+  _.$_$.c = KobwebApp;
+  _.$_$.d = rememberPageContext;
+  _.$_$.e = Anchor;
+  _.$_$.f = Router;
+  _.$_$.g = prependIf;
+  _.$_$.h = LegacyRouteRedirectStrategy_DISALLOW_getInstance;
+  _.$_$.i = UpdateHistoryMode_REPLACE_getInstance;
+  _.$_$.j = AppGlobals_getInstance;
+  _.$_$.k = Companion_getInstance_5;
   //endregion
   return _;
 }));

@@ -1,23 +1,26 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kobweb-frontend-kobweb-core.js', './kobweb-frontend-silk-foundation.js', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-compose-runtime-runtime.js', './html-internal-html-core-runtime.js', './kobweb-frontend-silk-widgets.js', './kobweb-frontend-silk-widgets-kobweb.js', './html-html-core.js', './kobweb-frontend-compose-html-ext.js', './kobweb-frontend-kobweb-silk.js', './kotlinx-coroutines-core.js', './kobweb-frontend-kobweb-compose.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './kobweb-frontend-kobweb-core.js', './kobweb-frontend-silk-foundation.js', './compose-multiplatform-core-compose-runtime-runtime.js', './html-internal-html-core-runtime.js', './kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js', './kobweb-frontend-silk-widgets.js', './kobweb-frontend-silk-widgets-kobweb.js', './html-html-core.js', './kobweb-frontend-compose-html-ext.js', './kobweb-frontend-kobweb-silk.js', './kotlinx-coroutines-core.js', './kobweb-frontend-kobweb-compose.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kobweb-frontend-kobweb-core.js'), require('./kobweb-frontend-silk-foundation.js'), require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./html-internal-html-core-runtime.js'), require('./kobweb-frontend-silk-widgets.js'), require('./kobweb-frontend-silk-widgets-kobweb.js'), require('./html-html-core.js'), require('./kobweb-frontend-compose-html-ext.js'), require('./kobweb-frontend-kobweb-silk.js'), require('./kotlinx-coroutines-core.js'), require('./kobweb-frontend-kobweb-compose.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kobweb-frontend-kobweb-core.js'), require('./kobweb-frontend-silk-foundation.js'), require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./html-internal-html-core-runtime.js'), require('./kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js'), require('./kobweb-frontend-silk-widgets.js'), require('./kobweb-frontend-silk-widgets-kobweb.js'), require('./html-html-core.js'), require('./kobweb-frontend-compose-html-ext.js'), require('./kobweb-frontend-kobweb-silk.js'), require('./kotlinx-coroutines-core.js'), require('./kobweb-frontend-kobweb-compose.js'));
   else {
+    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
+      throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'com.canerture.androidhub:site'.");
+    }
     if (typeof this['kobweb-frontend-kobweb-core'] === 'undefined') {
       throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kobweb-frontend-kobweb-core' was not found. Please, check whether 'kobweb-frontend-kobweb-core' is loaded prior to 'com.canerture.androidhub:site'.");
     }
     if (typeof this['kobweb-frontend-silk-foundation'] === 'undefined') {
       throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kobweb-frontend-silk-foundation' was not found. Please, check whether 'kobweb-frontend-silk-foundation' is loaded prior to 'com.canerture.androidhub:site'.");
     }
-    if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
-      throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'com.canerture.androidhub:site'.");
-    }
     if (typeof this['compose-multiplatform-core-compose-runtime-runtime'] === 'undefined') {
       throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'compose-multiplatform-core-compose-runtime-runtime' was not found. Please, check whether 'compose-multiplatform-core-compose-runtime-runtime' is loaded prior to 'com.canerture.androidhub:site'.");
     }
     if (typeof this['html-internal-html-core-runtime'] === 'undefined') {
       throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'html-internal-html-core-runtime' was not found. Please, check whether 'html-internal-html-core-runtime' is loaded prior to 'com.canerture.androidhub:site'.");
+    }
+    if (typeof kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat === 'undefined') {
+      throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat' was not found. Please, check whether 'kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat' is loaded prior to 'com.canerture.androidhub:site'.");
     }
     if (typeof this['kobweb-frontend-silk-widgets'] === 'undefined') {
       throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kobweb-frontend-silk-widgets' was not found. Please, check whether 'kobweb-frontend-silk-widgets' is loaded prior to 'com.canerture.androidhub:site'.");
@@ -40,21 +43,22 @@
     if (typeof this['kobweb-frontend-kobweb-compose'] === 'undefined') {
       throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kobweb-frontend-kobweb-compose' was not found. Please, check whether 'kobweb-frontend-kobweb-compose' is loaded prior to 'com.canerture.androidhub:site'.");
     }
-    root['com.canerture.androidhub:site'] = factory(typeof this['com.canerture.androidhub:site'] === 'undefined' ? {} : this['com.canerture.androidhub:site'], this['kobweb-frontend-kobweb-core'], this['kobweb-frontend-silk-foundation'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-compose-runtime-runtime'], this['html-internal-html-core-runtime'], this['kobweb-frontend-silk-widgets'], this['kobweb-frontend-silk-widgets-kobweb'], this['html-html-core'], this['kobweb-frontend-compose-html-ext'], this['kobweb-frontend-kobweb-silk'], this['kotlinx-coroutines-core'], this['kobweb-frontend-kobweb-compose']);
+    root['com.canerture.androidhub:site'] = factory(typeof this['com.canerture.androidhub:site'] === 'undefined' ? {} : this['com.canerture.androidhub:site'], this['kotlin-kotlin-stdlib'], this['kobweb-frontend-kobweb-core'], this['kobweb-frontend-silk-foundation'], this['compose-multiplatform-core-compose-runtime-runtime'], this['html-internal-html-core-runtime'], kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat, this['kobweb-frontend-silk-widgets'], this['kobweb-frontend-silk-widgets-kobweb'], this['html-html-core'], this['kobweb-frontend-compose-html-ext'], this['kobweb-frontend-kobweb-silk'], this['kotlinx-coroutines-core'], this['kobweb-frontend-kobweb-compose']);
   }
-}(this, function (_, kotlin_com_varabyte_kobweb_kobweb_core, kotlin_com_varabyte_kobweb_silk_foundation, kotlin_kotlin, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_html_internal_html_core_runtime, kotlin_com_varabyte_kobweb_silk_widgets, kotlin_com_varabyte_kobweb_silk_widgets_kobweb, kotlin_org_jetbrains_compose_html_html_core, kotlin_com_varabyte_kobweb_compose_html_ext, kotlin_com_varabyte_kobweb_kobweb_silk, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_com_varabyte_kobweb_kobweb_compose) {
+}(this, function (_, kotlin_kotlin, kotlin_com_varabyte_kobweb_kobweb_core, kotlin_com_varabyte_kobweb_silk_foundation, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_html_internal_html_core_runtime, kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat, kotlin_com_varabyte_kobweb_silk_widgets, kotlin_com_varabyte_kobweb_silk_widgets_kobweb, kotlin_org_jetbrains_compose_html_html_core, kotlin_com_varabyte_kobweb_compose_html_ext, kotlin_com_varabyte_kobweb_kobweb_silk, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_com_varabyte_kobweb_kobweb_compose) {
   'use strict';
   //region block: imports
-  var Companion_getInstance = kotlin_com_varabyte_kobweb_kobweb_core.$_$.j;
-  var Router = kotlin_com_varabyte_kobweb_kobweb_core.$_$.e;
-  var initKobweb = kotlin_com_varabyte_kobweb_kobweb_core.$_$.a;
-  var LegacyRouteRedirectStrategy_DISALLOW_getInstance = kotlin_com_varabyte_kobweb_kobweb_core.$_$.g;
-  var set_additionalSilkInitialization = kotlin_com_varabyte_kobweb_silk_foundation.$_$.c1;
+  var ensureNotNull = kotlin_kotlin.$_$.mf;
+  var get_api = kotlin_com_varabyte_kobweb_kobweb_core.$_$.a;
+  var Companion_getInstance = kotlin_com_varabyte_kobweb_kobweb_core.$_$.k;
+  var Router = kotlin_com_varabyte_kobweb_kobweb_core.$_$.f;
+  var initKobweb = kotlin_com_varabyte_kobweb_kobweb_core.$_$.b;
+  var LegacyRouteRedirectStrategy_DISALLOW_getInstance = kotlin_com_varabyte_kobweb_kobweb_core.$_$.h;
+  var set_additionalSilkInitialization = kotlin_com_varabyte_kobweb_silk_foundation.$_$.b1;
   var removePrefix = kotlin_kotlin.$_$.dd;
-  var UpdateHistoryMode_REPLACE_getInstance = kotlin_com_varabyte_kobweb_kobweb_core.$_$.h;
-  var ensureNotNull = kotlin_kotlin.$_$.kf;
-  var AppGlobals_getInstance = kotlin_com_varabyte_kobweb_kobweb_core.$_$.i;
-  var to = kotlin_kotlin.$_$.vf;
+  var UpdateHistoryMode_REPLACE_getInstance = kotlin_com_varabyte_kobweb_kobweb_core.$_$.i;
+  var AppGlobals_getInstance = kotlin_com_varabyte_kobweb_kobweb_core.$_$.j;
+  var to = kotlin_kotlin.$_$.xf;
   var mapOf = kotlin_kotlin.$_$.p7;
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
   var renderComposable = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.e;
@@ -65,172 +69,174 @@
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var THROW_CCE = kotlin_kotlin.$_$.re;
-  var renderWithDeferred = kotlin_com_varabyte_kobweb_silk_foundation.$_$.b1;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
+  var renderWithDeferred = kotlin_com_varabyte_kobweb_silk_foundation.$_$.a1;
   var protoOf = kotlin_kotlin.$_$.ob;
   var objectMeta = kotlin_kotlin.$_$.nb;
   var setMetadataFor = kotlin_kotlin.$_$.pb;
+  var removeClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.d;
+  var hasClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.c;
+  var toString = kotlin_kotlin.$_$.wf;
+  var toInt = kotlin_kotlin.$_$.vd;
+  var charSequenceLength = kotlin_kotlin.$_$.da;
+  var toBoolean = kotlin_kotlin.$_$.td;
+  var isBlank = kotlin_kotlin.$_$.xc;
   var VOID = kotlin_kotlin.$_$.e;
   var removeSuffix = kotlin_kotlin.$_$.ed;
-  var initSilkWidgets = kotlin_com_varabyte_kobweb_silk_widgets.$_$.m;
+  var initSilkWidgets = kotlin_com_varabyte_kobweb_silk_widgets.$_$.o;
   var initSilkWidgetsKobweb = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.e;
   var registerKeyframes = kotlin_com_varabyte_kobweb_silk_foundation.$_$.b;
-  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.f6;
-  var Code = kotlin_org_jetbrains_compose_html_html_core.$_$.p5;
-  var GenericTag = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j2;
-  var Li = kotlin_org_jetbrains_compose_html_html_core.$_$.z5;
-  var Em = kotlin_org_jetbrains_compose_html_html_core.$_$.s5;
+  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.c6;
+  var Code = kotlin_org_jetbrains_compose_html_html_core.$_$.m5;
+  var GenericTag = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i2;
+  var Li = kotlin_org_jetbrains_compose_html_html_core.$_$.w5;
+  var Em = kotlin_org_jetbrains_compose_html_html_core.$_$.p5;
   var Link = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.b;
-  var H1 = kotlin_org_jetbrains_compose_html_html_core.$_$.t5;
-  var P = kotlin_org_jetbrains_compose_html_html_core.$_$.b6;
-  var HorizontalDivider = kotlin_com_varabyte_kobweb_silk_widgets.$_$.f;
-  var H2 = kotlin_org_jetbrains_compose_html_html_core.$_$.u5;
-  var H3 = kotlin_org_jetbrains_compose_html_html_core.$_$.v5;
-  var H4 = kotlin_org_jetbrains_compose_html_html_core.$_$.w5;
-  var Ul = kotlin_org_jetbrains_compose_html_html_core.$_$.g6;
-  var Pre = kotlin_org_jetbrains_compose_html_html_core.$_$.a6;
+  var H1 = kotlin_org_jetbrains_compose_html_html_core.$_$.q5;
+  var P = kotlin_org_jetbrains_compose_html_html_core.$_$.y5;
+  var HorizontalDivider = kotlin_com_varabyte_kobweb_silk_widgets.$_$.h;
+  var H2 = kotlin_org_jetbrains_compose_html_html_core.$_$.r5;
+  var H3 = kotlin_org_jetbrains_compose_html_html_core.$_$.s5;
+  var H4 = kotlin_org_jetbrains_compose_html_html_core.$_$.t5;
+  var Ul = kotlin_org_jetbrains_compose_html_html_core.$_$.d6;
+  var Pre = kotlin_org_jetbrains_compose_html_html_core.$_$.x5;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var ColorMode_LIGHT_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n1;
+  var ColorMode_LIGHT_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.m1;
   var SilkApp = kotlin_com_varabyte_kobweb_kobweb_silk.$_$.a;
   var CoroutineImpl = kotlin_kotlin.$_$.q9;
   var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n;
   var isInterface = kotlin_kotlin.$_$.za;
   var classMeta = kotlin_kotlin.$_$.ea;
-  var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.q1;
+  var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p1;
   var LaunchedEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k;
-  var get_SmoothColorStyle = kotlin_com_varabyte_kobweb_silk_widgets.$_$.i;
-  var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.x;
-  var get_vh = kotlin_org_jetbrains_compose_html_html_core.$_$.k5;
-  var minHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y1;
-  var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g3;
-  var scrollBehavior = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p2;
-  var Surface = kotlin_com_varabyte_kobweb_silk_widgets.$_$.g;
+  var get_SmoothColorStyle = kotlin_com_varabyte_kobweb_silk_widgets.$_$.k;
+  var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.w;
+  var get_vh = kotlin_org_jetbrains_compose_html_html_core.$_$.h5;
+  var minHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w1;
+  var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f3;
+  var scrollBehavior = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n2;
+  var Surface = kotlin_com_varabyte_kobweb_silk_widgets.$_$.i;
   var SuspendFunction1 = kotlin_kotlin.$_$.r9;
-  var registerStyleBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.d1;
-  var get_HorizontalDividerStyle = kotlin_com_varabyte_kobweb_silk_widgets.$_$.e;
-  var modifyComponentStyleBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j1;
-  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u3;
+  var registerStyleBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.c1;
+  var get_HorizontalDividerStyle = kotlin_com_varabyte_kobweb_silk_widgets.$_$.g;
+  var modifyComponentStyleBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.i1;
+  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r3;
   var get_cssRem = kotlin_org_jetbrains_compose_html_html_core.$_$.u3;
   var fontSize = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f1;
-  var Companion_getInstance_4 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h3;
-  var textAlign = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t2;
-  var lineHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q1;
-  var toPalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g1;
-  var get_color = kotlin_com_varabyte_kobweb_silk_widgets.$_$.p;
+  var fontWeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h1;
+  var Companion_getInstance_4 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g3;
+  var textAlign = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r2;
+  var lineHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o1;
   var color = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x;
-  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.f5;
-  var padding = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k2;
-  var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.d5;
+  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
+  var padding = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i2;
+  var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.a5;
   var borderRadius = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p;
-  var ButtonVars_getInstance = kotlin_com_varabyte_kobweb_silk_widgets.$_$.r;
-  var Colors_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l3;
-  var setVariable = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q2;
+  var ButtonVars_getInstance = kotlin_com_varabyte_kobweb_silk_widgets.$_$.u;
+  var Colors_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i3;
+  var setVariable = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o2;
   var fontFamily = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e1;
   var fillMaxWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c1;
   var KProperty0 = kotlin_kotlin.$_$.ec;
   var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
-  var Companion_getInstance_5 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p1;
+  var Companion_getInstance_5 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o1;
   var base = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n;
   var get_ButtonStyle = kotlin_com_varabyte_kobweb_silk_widgets.$_$.a;
   var addVariantBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j;
-  var Companion_getInstance_6 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k3;
-  var set_background = kotlin_com_varabyte_kobweb_silk_widgets.$_$.o;
-  var set_color = kotlin_com_varabyte_kobweb_silk_widgets.$_$.q;
-  var fontWeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h1;
-  var margin = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w1;
-  var margin_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v1;
-  var Companion_getInstance_7 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.z2;
+  var Companion_getInstance_6 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h3;
+  var set_background = kotlin_com_varabyte_kobweb_silk_widgets.$_$.q;
+  var set_color = kotlin_com_varabyte_kobweb_silk_widgets.$_$.s;
+  var margin = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u1;
+  var margin_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t1;
+  var Companion_getInstance_7 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.y2;
   var fontWeight_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g1;
-  var Companion_getInstance_8 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f3;
-  var overflowWrap = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f2;
-  var Companion_getInstance_9 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e3;
+  var Companion_getInstance_8 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e3;
+  var overflowWrap = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d2;
+  var toPalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.f1;
+  var get_color = kotlin_com_varabyte_kobweb_silk_widgets.$_$.r;
+  var Companion_getInstance_9 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d3;
   var Companion_getInstance_10 = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
   var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z;
   var backgroundColor = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l;
   var Companion_getInstance_11 = kotlin_org_jetbrains_compose_html_html_core.$_$.n;
   var border = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r;
-  var overflow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g2;
+  var overflow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e2;
   var fillMaxSize = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b1;
-  var Start_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r3;
+  var Start_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o3;
   var Column = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b;
   var ComponentStyle = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g;
-  var gridTemplateRows = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m1;
-  var Center_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p3;
+  var gridTemplateRows = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l1;
+  var Center_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m3;
   var Box = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a;
-  var Breakpoint_MD_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l1;
-  var padding_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l2;
-  var maxWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x1;
+  var Breakpoint_MD_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.k1;
+  var padding_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j2;
+  var maxWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v1;
   var get_fr = kotlin_org_jetbrains_compose_html_html_core.$_$.c4;
-  var CenterHorizontally_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n3;
-  var gridRow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k1;
-  var SpanText = kotlin_com_varabyte_kobweb_silk_foundation.$_$.z;
-  var get_ColorVar = kotlin_com_varabyte_kobweb_silk_widgets.$_$.k;
-  var get_UncoloredLinkVariant = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.d;
-  var Link_0 = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.c;
-  var Companion_getInstance_12 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l3;
-  var whiteSpace = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c3;
-  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g3;
-  var Span = kotlin_org_jetbrains_compose_html_html_core.$_$.c6;
-  var padding_1 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m2;
+  var CenterHorizontally_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k3;
+  var gridRow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j1;
+  var SpanText = kotlin_com_varabyte_kobweb_silk_foundation.$_$.y;
+  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d3;
+  var Span = kotlin_org_jetbrains_compose_html_html_core.$_$.z5;
+  var padding_1 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k2;
+  var get_ColorVar = kotlin_com_varabyte_kobweb_silk_widgets.$_$.m;
   var Color_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.j;
   var Color = kotlin_org_jetbrains_compose_html_html_core.$_$.w2;
-  var THROW_IAE = kotlin_kotlin.$_$.se;
+  var get_UncoloredLinkVariant = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.d;
+  var Link_0 = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.c;
+  var THROW_IAE = kotlin_kotlin.$_$.ue;
   var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.ge;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.nf;
+  var Enum = kotlin_kotlin.$_$.ie;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.pf;
   var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
-  var CenterVertically_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o3;
-  var Center_getInstance_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i3;
+  var CenterVertically_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l3;
+  var Center_getInstance_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f3;
   var Row = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c;
-  var Spacer = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d;
-  var OverlayVars_getInstance = kotlin_com_varabyte_kobweb_silk_widgets.$_$.s;
-  var onClick = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c2;
-  var Overlay = kotlin_com_varabyte_kobweb_silk_widgets.$_$.h;
+  var OverlayVars_getInstance = kotlin_com_varabyte_kobweb_silk_widgets.$_$.v;
+  var onClick = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a2;
+  var Overlay = kotlin_com_varabyte_kobweb_silk_widgets.$_$.j;
   var HamburgerIcon = kotlin_com_varabyte_kobweb_silk_widgets.$_$.d;
   var CloseIcon = kotlin_com_varabyte_kobweb_silk_widgets.$_$.c;
-  var height = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o1;
+  var Circle = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b2;
+  var Line = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d2;
+  var Stroke = kotlin_com_varabyte_kobweb_silk_widgets.$_$.e;
+  var createIcon = kotlin_com_varabyte_kobweb_silk_widgets.$_$.f;
+  var width = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a3;
   var Image = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.a;
   var gap = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i1;
   var displayIfAtLeast = kotlin_com_varabyte_kobweb_silk_foundation.$_$.d;
+  var boxShadow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u;
   var KMutableProperty0 = kotlin_kotlin.$_$.cc;
-  var THROW_ISE = kotlin_kotlin.$_$.te;
+  var THROW_ISE = kotlin_kotlin.$_$.ve;
   var getLocalDelegateReference = kotlin_kotlin.$_$.ka;
-  var translateX = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z2;
+  var translateX = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w2;
   var displayUntil = kotlin_com_varabyte_kobweb_silk_foundation.$_$.e;
-  var padding_2 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j2;
-  var End_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q3;
+  var padding_2 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h2;
+  var End_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n3;
   var fillMaxHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a1;
   var clamp = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b;
-  var width = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d3;
-  var CenterEnd_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m3;
-  var get_ms = kotlin_org_jetbrains_compose_html_html_core.$_$.a5;
-  var Companion_getInstance_13 = kotlin_org_jetbrains_compose_html_html_core.$_$.g;
-  var Companion_getInstance_14 = kotlin_org_jetbrains_compose_html_html_core.$_$.e;
-  var Companion_getInstance_15 = kotlin_org_jetbrains_compose_html_html_core.$_$.f;
+  var CenterEnd_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j3;
+  var get_ms = kotlin_org_jetbrains_compose_html_html_core.$_$.x4;
+  var Companion_getInstance_12 = kotlin_org_jetbrains_compose_html_html_core.$_$.g;
+  var Companion_getInstance_13 = kotlin_org_jetbrains_compose_html_html_core.$_$.e;
+  var Companion_getInstance_14 = kotlin_org_jetbrains_compose_html_html_core.$_$.f;
   var toAnimation = kotlin_com_varabyte_kobweb_silk_foundation.$_$.c;
   var animation = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h;
   var borderRadius_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o;
-  var onAnimationEnd = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b2;
+  var onAnimationEnd = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z1;
   var Keyframes = kotlin_com_varabyte_kobweb_silk_foundation.$_$.a;
   var get_em = kotlin_org_jetbrains_compose_html_html_core.$_$.w3;
   var Button = kotlin_com_varabyte_kobweb_silk_widgets.$_$.b;
-  var gridItem = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j1;
-  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.q5;
-  var textShadow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v2;
-  var toAttrs_0 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.w;
-  var rememberPageContext = kotlin_com_varabyte_kobweb_kobweb_core.$_$.c;
-  var Blue_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.r1;
-  var Monochrome_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.t1;
-  var grid = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n1;
-  var margin_1 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u1;
-  var boxShadow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u;
-  var StyleVariable = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h;
+  var Spacer = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d;
+  var rememberPageContext = kotlin_com_varabyte_kobweb_kobweb_core.$_$.d;
+  var LG_getInstance = kotlin_com_varabyte_kobweb_silk_widgets.$_$.t;
+  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.n5;
+  var height = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m1;
+  var margin_1 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s1;
   //endregion
   //region block: pre-declaration
   setMetadataFor(ComposableSingletons$MainKt, 'ComposableSingletons$MainKt', objectMeta);
   setMetadataFor(ComposableSingletons$AboutKt, 'ComposableSingletons$AboutKt', objectMeta);
   setMetadataFor(AppEntry$lambda$slambda, 'AppEntry$lambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(Brand, 'Brand', classMeta, VOID, VOID, Brand);
   setMetadataFor(SitePalette, 'SitePalette', classMeta);
   setMetadataFor(SitePalettes, 'SitePalettes', objectMeta);
   setMetadataFor(PageLayout$slambda, 'PageLayout$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
@@ -239,7 +245,38 @@
   setMetadataFor(ComposableSingletons$NavHeaderKt, 'ComposableSingletons$NavHeaderKt', objectMeta);
   setMetadataFor(ComposableSingletons$IndexKt, 'ComposableSingletons$IndexKt', objectMeta);
   //endregion
+  function forceReloadNow() {
+    window.stop();
+    window.location.reload();
+  }
+  function handleServerStatusEvents() {
+    var status = ensureNotNull(document.getElementById('status'));
+    var lastVersion = {_v: null};
+    var shouldReload = {_v: false};
+    // Inline function 'org.w3c.dom.get' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$1 = status.children[0];
+    var warningIcon = ensureNotNull(tmp$ret$1);
+    // Inline function 'org.w3c.dom.get' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$3 = status.children[1];
+    var spinnerIcon = ensureNotNull(tmp$ret$3);
+    // Inline function 'org.w3c.dom.get' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp$ret$5 = status.children[2];
+    var statusText = ensureNotNull(tmp$ret$5);
+    status.addEventListener('transitionend', handleServerStatusEvents$lambda(status, shouldReload));
+    // Inline function 'org.w3c.dom.EventSourceInit' call
+    var o = {};
+    o['withCredentials'] = true;
+    var eventSource = new EventSource('/api/kobweb-status', o);
+    eventSource.addEventListener('version', handleServerStatusEvents$lambda_0(lastVersion, status, shouldReload));
+    eventSource.addEventListener('status', handleServerStatusEvents$lambda_1(warningIcon, spinnerIcon, statusText, status));
+    eventSource.onerror = handleServerStatusEvents$lambda_2(eventSource);
+  }
   function main() {
+    handleServerStatusEvents();
+    get_api(window).set_logOnError_wi584t_k$(true);
     Companion_getInstance().set_wjk6wo_k$('');
     var router = new Router();
     initKobweb(router, main$lambda);
@@ -263,7 +300,7 @@
     var $composer_0 = $composer;
     if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(-994802423, $changed, -1, 'ComposableSingletons$MainKt.lambda-1.<anonymous> (main.kt:15)');
+        traceEventStart(-994802423, $changed, -1, 'ComposableSingletons$MainKt.lambda-1.<anonymous> (main.kt:86)');
       }
       HomePage($composer_0, 0);
       if (isTraceInProgress()) {
@@ -283,7 +320,7 @@
     var $composer_0 = $composer;
     if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(-1296252800, $changed, -1, 'ComposableSingletons$MainKt.lambda-2.<anonymous> (main.kt:16)');
+        traceEventStart(-1296252800, $changed, -1, 'ComposableSingletons$MainKt.lambda-2.<anonymous> (main.kt:87)');
       }
       AboutPage($composer_0, 0);
       if (isTraceInProgress()) {
@@ -306,7 +343,7 @@
       $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(it) ? 4 : 2);
     if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(1940211355, $dirty, -1, 'ComposableSingletons$MainKt.lambda-3.<anonymous> (main.kt:57)');
+        traceEventStart(1940211355, $dirty, -1, 'ComposableSingletons$MainKt.lambda-3.<anonymous> (main.kt:126)');
       }
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
@@ -350,7 +387,7 @@
       var tmp;
       if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
         if (isTraceInProgress()) {
-          traceEventStart(2103839155, $changed, -1, 'ComposableSingletons$MainKt.lambda-3.<anonymous>.<anonymous> (main.kt:57)');
+          traceEventStart(2103839155, $changed, -1, 'ComposableSingletons$MainKt.lambda-3.<anonymous>.<anonymous> (main.kt:126)');
         }
         $it($composer_0, 0);
         var tmp_0;
@@ -395,6 +432,80 @@
       new ComposableSingletons$MainKt();
     return ComposableSingletons$MainKt_instance;
   }
+  function handleServerStatusEvents$lambda($status, $shouldReload) {
+    return function (it) {
+      var tmp;
+      if (hasClass($status, 'fade-out')) {
+        removeClass($status, ['fade-out']);
+        var tmp_0;
+        if ($shouldReload._v) {
+          forceReloadNow();
+          tmp_0 = Unit_getInstance();
+        }
+        tmp = tmp_0;
+      }
+      return Unit_getInstance();
+    };
+  }
+  function handleServerStatusEvents$lambda_0($lastVersion, $status, $shouldReload) {
+    return function (evt) {
+      var version = toInt(toString((evt instanceof MessageEvent ? evt : THROW_CCE()).data));
+      var tmp;
+      if ($lastVersion._v == null) {
+        $lastVersion._v = version;
+        tmp = Unit_getInstance();
+      }
+      var tmp_0;
+      if (!($lastVersion._v === version)) {
+        $lastVersion._v = version;
+        var tmp_1;
+        // Inline function 'kotlin.text.isNotEmpty' call
+        var this_0 = $status.className;
+        if (charSequenceLength(this_0) > 0) {
+          $shouldReload._v = true;
+          tmp_1 = Unit_getInstance();
+        } else {
+          forceReloadNow();
+          tmp_1 = Unit_getInstance();
+        }
+        tmp_0 = tmp_1;
+      }
+      return Unit_getInstance();
+    };
+  }
+  function handleServerStatusEvents$lambda_1($warningIcon, $spinnerIcon, $statusText, $status) {
+    return function (evt) {
+      var tmp = JSON;
+      var values = tmp.parse(toString((evt instanceof MessageEvent ? evt : THROW_CCE()).data));
+      var tmp_0 = values.text;
+      var text = (!(tmp_0 == null) ? typeof tmp_0 === 'string' : false) ? tmp_0 : THROW_CCE();
+      var tmp_1 = values.isError;
+      var isError = toBoolean((!(tmp_1 == null) ? typeof tmp_1 === 'string' : false) ? tmp_1 : THROW_CCE());
+      var tmp_2;
+      // Inline function 'kotlin.text.isNotBlank' call
+      if (!isBlank(text)) {
+        $warningIcon.className = isError ? 'visible' : 'hidden';
+        $spinnerIcon.className = isError ? 'hidden' : 'visible';
+        $statusText.innerHTML = '<i>' + text + '<\/i>';
+        $status.className = 'fade-in';
+        tmp_2 = Unit_getInstance();
+      } else {
+        var tmp_3;
+        if ($status.className === 'fade-in') {
+          $status.className = 'fade-out';
+          tmp_3 = Unit_getInstance();
+        }
+        tmp_2 = tmp_3;
+      }
+      return Unit_getInstance();
+    };
+  }
+  function handleServerStatusEvents$lambda_2($eventSource) {
+    return function (it) {
+      $eventSource.close();
+      return Unit_getInstance();
+    };
+  }
   function main$lambda(ctx) {
     ctx.get_router_j3zccy_k$().register$default_rn243d_k$('/', VOID, ComposableSingletons$MainKt_getInstance().lambda_1_r8sbbp_1);
     ctx.get_router_j3zccy_k$().register$default_rn243d_k$('/about', VOID, ComposableSingletons$MainKt_getInstance().lambda_2_r8sbbo_1);
@@ -414,8 +525,6 @@
     ctx.get_theme_iz24rk_k$().registerComponentStyle_covb7k_k$(get_FooterStyle());
     ctx.get_theme_iz24rk_k$().registerComponentStyle_covb7k_k$(get_NavHeaderStyle());
     ctx.get_theme_iz24rk_k$().registerComponentStyle_covb7k_k$(get_HeroContainerStyle());
-    ctx.get_theme_iz24rk_k$().registerComponentStyle_covb7k_k$(get_HomeGridStyle());
-    ctx.get_theme_iz24rk_k$().registerComponentStyle_covb7k_k$(get_HomeGridCellStyle());
     ctx.get_theme_iz24rk_k$().registerComponentVariants_gvd8pt_k$([get_CircleButtonVariant()]);
     ctx.get_theme_iz24rk_k$().registerComponentVariants_gvd8pt_k$([get_UncoloredButtonVariant()]);
     registerKeyframes(ctx.get_stylesheet_hk204p_k$(), get_SideMenuSlideInAnim());
@@ -435,7 +544,7 @@
       var tmp;
       if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
         if (isTraceInProgress()) {
-          traceEventStart(-1190994075, $changed, -1, 'main.<anonymous>.<anonymous> (main.kt:57)');
+          traceEventStart(-1190994075, $changed, -1, 'main.<anonymous>.<anonymous> (main.kt:126)');
         }
         $router.renderActivePage_fc13h0_k$(ComposableSingletons$MainKt_getInstance().lambda_3_r8sbbn_1, $composer_0, 70, 0);
         var tmp_0;
@@ -460,7 +569,7 @@
     return function ($this$renderComposable, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(1108811911, $changed, -1, 'main.<anonymous> (main.kt:56)');
+        traceEventStart(1108811911, $changed, -1, 'main.<anonymous> (main.kt:125)');
       }
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
@@ -2664,11 +2773,11 @@
   }
   function HeadlineTextStyle$delegate$lambda($this$base) {
     _init_properties_AppStyles_kt__9fg0zz();
-    return lineHeight(textAlign(fontSize(Companion_getInstance_3(), get_cssRem(3)), Companion_getInstance_4().get_Start_ih4i6x_k$()), 1.2);
+    return textAlign(fontWeight(fontSize(Companion_getInstance_3(), get_cssRem(2)), 700), Companion_getInstance_4().get_Start_ih4i6x_k$());
   }
   function SubheadlineTextStyle$delegate$lambda($this$base) {
     _init_properties_AppStyles_kt__9fg0zz();
-    return color(textAlign(fontSize(Companion_getInstance_3(), get_cssRem(1)), Companion_getInstance_4().get_Start_ih4i6x_k$()), get_color(toPalette($this$base.get_colorMode_trbg8z_k$())).toRgb_1tsrpu_k$().copyf$default_6pu18v_k$(VOID, VOID, VOID, 0.8));
+    return color(textAlign(lineHeight(fontSize(Companion_getInstance_3(), get_cssRem(1.25)), 2), Companion_getInstance_4().get_Start_ih4i6x_k$()), getSitePalette().get_blue_wojj4z_k$().toRgb_1tsrpu_k$());
   }
   function CircleButtonVariant$delegate$lambda($this$addVariantBase) {
     _init_properties_AppStyles_kt__9fg0zz();
@@ -2680,7 +2789,7 @@
   }
   function initSiteStyles$lambda() {
     _init_properties_AppStyles_kt__9fg0zz();
-    return lineHeight(fontSize(fontFamily(Companion_getInstance_3(), ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif']), get_px(18)), 1.5);
+    return lineHeight(fontSize(fontFamily(Companion_getInstance_3(), ['-apple-system', 'BlinkMacSystemFont', 'DM Sans', 'Urbanist']), get_px(18)), 1.5);
   }
   function initSiteStyles$lambda_0($this$modifyComponentStyleBase) {
     _init_properties_AppStyles_kt__9fg0zz();
@@ -2720,34 +2829,14 @@
       UncoloredButtonVariant$delegate = addVariantBase(tmp_2, VOID, UncoloredButtonVariant$delegate$lambda);
     }
   }
-  function Brand(primary, accent) {
-    primary = primary === VOID ? Companion_getInstance_6().rgb_6orfmz_k$(3965935) : primary;
-    accent = accent === VOID ? Companion_getInstance_6().rgb_6orfmz_k$(15981403) : accent;
-    this.primary_1 = primary;
-    this.accent_1 = accent;
-  }
-  protoOf(Brand).get_primary_3xuktj_k$ = function () {
-    return this.primary_1;
-  };
-  protoOf(Brand).get_accent_avafv7_k$ = function () {
-    return this.accent_1;
-  };
-  function SitePalette(nearBackground, cobweb, brand, green, white, blue) {
+  function SitePalette(nearBackground, green, white, blue) {
     this.nearBackground_1 = nearBackground;
-    this.cobweb_1 = cobweb;
-    this.brand_1 = brand;
     this.green_1 = green;
     this.white_1 = white;
     this.blue_1 = blue;
   }
   protoOf(SitePalette).get_nearBackground_c1s3l_k$ = function () {
     return this.nearBackground_1;
-  };
-  protoOf(SitePalette).get_cobweb_bzyxwn_k$ = function () {
-    return this.cobweb_1;
-  };
-  protoOf(SitePalette).get_brand_ipc50e_k$ = function () {
-    return this.brand_1;
   };
   protoOf(SitePalette).get_green_is36qi_k$ = function () {
     return this.green_1;
@@ -2760,7 +2849,7 @@
   };
   function SitePalettes() {
     SitePalettes_instance = this;
-    this.palette_1 = new SitePalette(Companion_getInstance_6().rgb_6orfmz_k$(16447743), Colors_getInstance().get_LightGray_i1h2r4_k$().inverted_adp911_k$(), new Brand(Companion_getInstance_6().rgb_6orfmz_k$(3965935), Companion_getInstance_6().rgb_6orfmz_k$(15981403)), Companion_getInstance_6().rgb_6orfmz_k$(6967017), Colors_getInstance().get_White_ij46ow_k$(), Companion_getInstance_6().rgb_6orfmz_k$(601922));
+    this.palette_1 = new SitePalette(Colors_getInstance().get_White_ij46ow_k$(), Companion_getInstance_6().rgb_6orfmz_k$(4053894), Colors_getInstance().get_White_ij46ow_k$(), Companion_getInstance_6().rgb_6orfmz_k$(601922));
   }
   protoOf(SitePalettes).get_palette_by3him_k$ = function () {
     return this.palette_1;
@@ -2775,10 +2864,9 @@
     return SitePalettes_getInstance().palette_1;
   }
   function initTheme(ctx) {
-    set_background(ctx.get_theme_iz24rk_k$().get_palettes_f7ft27_k$().get_light_iuogdp_k$(), Companion_getInstance_6().rgb_6orfmz_k$(16448250));
+    set_background(ctx.get_theme_iz24rk_k$().get_palettes_f7ft27_k$().get_light_iuogdp_k$(), Companion_getInstance_6().rgb_6orfmz_k$(16447743));
     set_color(ctx.get_theme_iz24rk_k$().get_palettes_f7ft27_k$().get_light_iuogdp_k$(), Colors_getInstance().get_White_ij46ow_k$());
   }
-  var com_canerture_androidhub_SitePalette_Brand$stable;
   var com_canerture_androidhub_SitePalette$stable;
   var com_canerture_androidhub_SitePalettes$stable;
   function get_MarkdownStyle() {
@@ -3232,6 +3320,7 @@
       var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
       $composer_1.endReplaceableGroup_ern0ak_k$();
       Column(tmp, null, tmp_0, null, tmp0, $composer_0, 24584, 10);
+      Footer(gridRow(fillMaxWidth(Companion_getInstance_3()), 2), $composer_0, 8, 0);
       var tmp_4;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -3281,7 +3370,6 @@
       var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
       $composer_1.endReplaceableGroup_ern0ak_k$();
       Column(tmp, null, tmp_0, null, tmp0, $composer_0, 24584, 10);
-      Footer(gridRow(fillMaxWidth(Companion_getInstance_3()), 2), $composer_0, 8, 0);
       var tmp_4;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -3331,7 +3419,7 @@
         modifier_0._v = Companion_getInstance_3();
       }
       if (isTraceInProgress()) {
-        traceEventStart(571317305, $dirty, -1, 'com.canerture.androidhub.components.sections.Footer (Footer.kt:29)');
+        traceEventStart(571317305, $dirty, -1, 'com.canerture.androidhub.components.sections.Footer (Footer.kt:27)');
       }
       var tmp = toModifier(get_FooterStyle(), [], $composer_0, 64).then_mmfvo6_k$(modifier_0._v);
       var tmp_0 = Center_getInstance();
@@ -3357,17 +3445,10 @@
   function ComposableSingletons$FooterKt$lambda_1$lambda_a73781($this$Span, $composer, $changed) {
     var $composer_0 = $composer;
     if (isTraceInProgress()) {
-      traceEventStart(-1858395691, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$FooterKt.lambda-1.<anonymous> (Footer.kt:32)');
+      traceEventStart(-1858395691, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$FooterKt.lambda-1.<anonymous> (Footer.kt:30)');
     }
-    var sitePalette = getSitePalette();
-    SpanText('Built with ', null, null, null, $composer_0, 6, 14);
-    var tmp = setVariable(Companion_getInstance_3(), get_ColorVar(), sitePalette.get_brand_ipc50e_k$().get_primary_3xuktj_k$());
-    var tmp_0 = get_UncoloredLinkVariant();
-    Link_0('https://github.com/varabyte/kobweb', 'Kobweb', tmp, tmp_0, null, null, false, null, $composer_0, 566, 240);
-    SpanText(', template designed by ', null, null, null, $composer_0, 6, 14);
-    var tmp_1 = whiteSpace(setVariable(Companion_getInstance_3(), get_ColorVar(), sitePalette.get_brand_ipc50e_k$().get_accent_avafv7_k$()), Companion_getInstance_12().get_NoWrap_21tqz8_k$());
-    var tmp_2 = get_UncoloredLinkVariant();
-    Link_0('https://ui-rocket.com', 'UI Rocket', tmp_1, tmp_2, null, null, false, null, $composer_0, 566, 240);
+    var tmp = color(Companion_getInstance_3(), getSitePalette().get_green_is36qi_k$());
+    SpanText('2024 - Caner Ture', tmp, null, null, $composer_0, 70, 12);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -3381,7 +3462,7 @@
   function ComposableSingletons$FooterKt$lambda_2$lambda_imj9u6($this$Box, $composer, $changed) {
     var $composer_0 = $composer;
     if (isTraceInProgress()) {
-      traceEventStart(-284662157, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$FooterKt.lambda-2.<anonymous> (Footer.kt:31)');
+      traceEventStart(-284662157, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$FooterKt.lambda-2.<anonymous> (Footer.kt:29)');
     }
     Span(toAttrs(textAlign(Companion_getInstance_3(), Companion_getInstance_4().get_Center_3arb0i_k$())), ComposableSingletons$FooterKt_getInstance().lambda_1_r8sbbp_1, $composer_0, 48, 0);
     if (isTraceInProgress()) {
@@ -3410,7 +3491,7 @@
   }
   function FooterStyle$delegate$lambda($this$base) {
     _init_properties_Footer_kt__fc6p2z();
-    return padding_1(backgroundColor(Companion_getInstance_3(), getSitePalette().get_nearBackground_c1s3l_k$()), get_cssRem(1.5), get_percent(10));
+    return padding_1(Companion_getInstance_3(), get_cssRem(1.5), get_percent(10));
   }
   function Footer$lambda($modifier, $$changed, $$default) {
     return function ($composer, $force) {
@@ -3452,9 +3533,9 @@
       $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(text) ? 32 : 16);
     if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(844555591, $dirty, -1, 'com.canerture.androidhub.components.sections.NavLink (NavHeader.kt:66)');
+        traceEventStart(844555591, $dirty, -1, 'com.canerture.androidhub.components.sections.NavLink (NavHeader.kt:69)');
       }
-      var tmp = Companion_getInstance_3();
+      var tmp = fontSize(Companion_getInstance_3(), get_cssRem(1));
       var tmp_0 = get_ColorVar();
       // Inline function 'org.jetbrains.compose.web.css.Color.black' call
       Color_getInstance();
@@ -3481,14 +3562,14 @@
     $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1327933143);
     if (!($changed === 0) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(-1327933143, $changed, -1, 'com.canerture.androidhub.components.sections.MenuItems (NavHeader.kt:76)');
+        traceEventStart(-1327933143, $changed, -1, 'com.canerture.androidhub.components.sections.MenuItems (NavHeader.kt:79)');
       }
       NavLink('/', 'Articles', $composer_0, 54);
-      NavLink('/about', 'Projects', $composer_0, 54);
-      NavLink('/about', 'Extensions', $composer_0, 54);
-      NavLink('/about', 'Plugins', $composer_0, 54);
-      NavLink('/about', 'Library', $composer_0, 54);
-      NavLink('/about', 'Resources', $composer_0, 54);
+      NavLink('/', 'Projects', $composer_0, 54);
+      NavLink('/', 'Extensions', $composer_0, 54);
+      NavLink('/', 'Plugins', $composer_0, 54);
+      NavLink('/', 'Library', $composer_0, 54);
+      NavLink('/', 'Resources', $composer_0, 54);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
@@ -3511,7 +3592,7 @@
       $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(onClick) ? 4 : 2);
     if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(1913630033, $dirty, -1, 'com.canerture.androidhub.components.sections.HamburgerButton (NavHeader.kt:86)');
+        traceEventStart(1913630033, $dirty, -1, 'com.canerture.androidhub.components.sections.HamburgerButton (NavHeader.kt:89)');
       }
       IconButton(onClick, ComposableSingletons$NavHeaderKt_getInstance().lambda_1_r8sbbp_1, $composer_0, 48 | 14 & $dirty);
       if (isTraceInProgress()) {
@@ -3536,7 +3617,7 @@
       $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(onClick) ? 4 : 2);
     if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(1136291648, $dirty, -1, 'com.canerture.androidhub.components.sections.CloseButton (NavHeader.kt:93)');
+        traceEventStart(1136291648, $dirty, -1, 'com.canerture.androidhub.components.sections.CloseButton (NavHeader.kt:96)');
       }
       IconButton(onClick, ComposableSingletons$NavHeaderKt_getInstance().lambda_2_r8sbbo_1, $composer_0, 48 | 14 & $dirty);
       if (isTraceInProgress()) {
@@ -3550,6 +3631,31 @@
       null;
     else {
       tmp0_safe_receiver.updateScope_t8jcf_k$(CloseButton$lambda(onClick, $changed));
+    }
+  }
+  function SearchButton(onClick, $composer, $changed) {
+    _init_properties_NavHeader_kt__vdotjy();
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-32044788);
+    var $dirty = $changed;
+    if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(onClick) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-32044788, $dirty, -1, 'com.canerture.androidhub.components.sections.SearchButton (NavHeader.kt:103)');
+      }
+      IconButton(onClick, ComposableSingletons$NavHeaderKt_getInstance().lambda_4_r8sbbm_1, $composer_0, 48 | 14 & $dirty);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(SearchButton$lambda(onClick, $changed));
     }
   }
   var SideMenuState_CLOSED_instance;
@@ -3614,9 +3720,9 @@
     $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1108811238);
     if (!($changed === 0) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(-1108811238, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader (NavHeader.kt:124)');
+        traceEventStart(-1108811238, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader (NavHeader.kt:144)');
       }
-      $composer_0.startReplaceableGroup_ip860b_k$(-1812890811);
+      $composer_0.startReplaceableGroup_ip860b_k$(-1812890401);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       // Inline function 'kotlin.let' call
@@ -3657,7 +3763,7 @@
       var tmp_2;
       if (invalid ? true : it_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
         // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous>' call
-        var value_0 = ComposableLambda$invoke$ref_90(dispatchReceiver);
+        var value_0 = ComposableLambda$invoke$ref_92(dispatchReceiver);
         $composer_1.updateRememberedValue_l1wh71_k$(value_0);
         tmp_2 = value_0;
       } else {
@@ -3667,11 +3773,10 @@
       var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
       $composer_1.endReplaceableGroup_ern0ak_k$();
       Row(tmp0_modifier, tmp2_horizontalArrangement, tmp1_verticalAlignment, null, tmp0, $composer_0, 24584, 8);
-      Spacer($composer_0, 0);
       var tmp3_modifier = toModifier(get_NavHeaderStyle(), [], $composer_0, 64);
       var tmp4_verticalAlignment = CenterVertically_getInstance();
       var tmp5_horizontalArrangement = Center_getInstance_0();
-      Row(tmp3_modifier, tmp5_horizontalArrangement, tmp4_verticalAlignment, null, ComposableSingletons$NavHeaderKt_getInstance().lambda_5_r8sbbl_1, $composer_0, 24584, 8);
+      Row(tmp3_modifier, tmp5_horizontalArrangement, tmp4_verticalAlignment, null, ComposableSingletons$NavHeaderKt_getInstance().lambda_7_r8sbbj_1, $composer_0, 24584, 8);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
@@ -3698,10 +3803,10 @@
       $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(onAnimationEnd) ? 256 : 128);
     if (!(($dirty & 731) === 146) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(1445021827, $dirty, -1, 'com.canerture.androidhub.components.sections.SideMenu (NavHeader.kt:175)');
+        traceEventStart(1445021827, $dirty, -1, 'com.canerture.androidhub.components.sections.SideMenu (NavHeader.kt:194)');
       }
       var tmp = setVariable(Companion_getInstance_3(), OverlayVars_getInstance().get_BackgroundColor_qhx06s_k$(), Colors_getInstance().get_Transparent_cxh4g9_k$());
-      $composer_0.startReplaceableGroup_ip860b_k$(-760353971);
+      $composer_0.startReplaceableGroup_ip860b_k$(-760353491);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       var invalid = ($dirty & 112) === 32;
@@ -3740,7 +3845,7 @@
       var tmp_4;
       if (invalid_0 ? true : it_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
         // Inline function 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>' call
-        var value_0 = ComposableLambda$invoke$ref_92(dispatchReceiver);
+        var value_0 = ComposableLambda$invoke$ref_94(dispatchReceiver);
         $composer_1.updateRememberedValue_l1wh71_k$(value_0);
         tmp_4 = value_0;
       } else {
@@ -3772,7 +3877,7 @@
     var $composer_0 = $composer;
     if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(1563565610, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-1.<anonymous> (NavHeader.kt:88)');
+        traceEventStart(1563565610, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-1.<anonymous> (NavHeader.kt:91)');
       }
       HamburgerIcon(null, $composer_0, 0, 1);
       if (isTraceInProgress()) {
@@ -3792,7 +3897,7 @@
     var $composer_0 = $composer;
     if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(1424045209, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-2.<anonymous> (NavHeader.kt:95)');
+        traceEventStart(1424045209, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-2.<anonymous> (NavHeader.kt:98)');
       }
       CloseIcon(null, $composer_0, 0, 1);
       if (isTraceInProgress()) {
@@ -3804,17 +3909,103 @@
     return Unit_getInstance();
   }
   function ComposableLambda$invoke$ref_85($boundThis) {
+    return function (p0, p1, p2) {
+      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
+    };
+  }
+  function ComposableSingletons$NavHeaderKt$lambda_3$lambda_ps7rms($this$createIcon, $composer, $changed) {
+    var $composer_0 = $composer;
+    if (isTraceInProgress()) {
+      traceEventStart(-1815233913, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-3.<anonymous> (NavHeader.kt:106)');
+    }
+    $composer_0.startReplaceableGroup_ip860b_k$(-1342297776);
+    // Inline function 'androidx.compose.runtime.cache' call
+    // Inline function 'kotlin.let' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_0.rememberedValue_4dg93v_k$();
+    var tmp;
+    if (false ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+      // Inline function 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-3.<anonymous>.<anonymous>' call
+      var value = ComposableSingletons$NavHeaderKt$lambda_3$lambda$lambda_kbp4qh;
+      $composer_0.updateRememberedValue_l1wh71_k$(value);
+      tmp = value;
+    } else {
+      tmp = it;
+    }
+    var tmp_0 = tmp;
+    var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    Circle($this$createIcon, tmp0_group, $composer_0, 56);
+    $composer_0.startReplaceableGroup_ip860b_k$(-1342297676);
+    // Inline function 'androidx.compose.runtime.cache' call
+    // Inline function 'kotlin.let' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it_0 = $composer_0.rememberedValue_4dg93v_k$();
+    var tmp_1;
+    if (false ? true : it_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+      // Inline function 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-3.<anonymous>.<anonymous>' call
+      var value_0 = ComposableSingletons$NavHeaderKt$lambda_3$lambda$lambda_kbp4qh_0;
+      $composer_0.updateRememberedValue_l1wh71_k$(value_0);
+      tmp_1 = value_0;
+    } else {
+      tmp_1 = it_0;
+    }
+    var tmp_2 = tmp_1;
+    var tmp1_group = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    Line($this$createIcon, tmp1_group, $composer_0, 56);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    return Unit_getInstance();
+  }
+  function ComposableSingletons$NavHeaderKt$lambda_3$lambda$lambda_kbp4qh($this$Circle) {
+    $this$Circle.cx_7c4b4q_k$(12);
+    $this$Circle.cy_5a8zln_k$(12);
+    $this$Circle.r_4ompmx_k$(8);
+    return Unit_getInstance();
+  }
+  function ComposableSingletons$NavHeaderKt$lambda_3$lambda$lambda_kbp4qh_0($this$Line) {
+    $this$Line.x1_oqfh9a_k$(19);
+    $this$Line.y1_w5klst_k$(19);
+    $this$Line.x2_mok5q7_k$(56);
+    $this$Line.y2_u3pa9q_k$(56);
+    return Unit_getInstance();
+  }
+  function ComposableLambda$invoke$ref_86($boundThis) {
     return function (p0, p1) {
       return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
   }
-  function ComposableSingletons$NavHeaderKt$lambda_3$lambda_ps7rms($composer, $changed) {
+  function ComposableSingletons$NavHeaderKt$lambda_4$lambda_gf9ta5($composer, $changed) {
     var $composer_0 = $composer;
     if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(61045801, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-3.<anonymous> (NavHeader.kt:133)');
+        traceEventStart(298381011, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-4.<anonymous> (NavHeader.kt:105)');
       }
-      var tmp = height(Companion_getInstance_3(), get_cssRem(5));
+      createIcon(null, null, new Stroke(3), toAttrs(color(Companion_getInstance_3(), getSitePalette().get_blue_wojj4z_k$())), ComposableSingletons$NavHeaderKt_getInstance().lambda_3_r8sbbn_1, $composer_0, 25088, 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    return Unit_getInstance();
+  }
+  function ComposableLambda$invoke$ref_87($boundThis) {
+    return function (p0, p1) {
+      return $boundThis.invoke_z8di7s_k$(p0, p1);
+    };
+  }
+  function ComposableSingletons$NavHeaderKt$lambda_5$lambda_cecns2($composer, $changed) {
+    var $composer_0 = $composer;
+    if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(61045801, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-5.<anonymous> (NavHeader.kt:153)');
+      }
+      var tmp = width(Companion_getInstance_3(), get_cssRem(28));
       // Inline function 'org.jetbrains.compose.web.css.Companion.Block' call
       Companion_getInstance_10();
       // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
@@ -3830,60 +4021,79 @@
     }
     return Unit_getInstance();
   }
-  function ComposableLambda$invoke$ref_86($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function ComposableSingletons$NavHeaderKt$lambda_4$lambda_gf9ta5($this$Row, $composer, $changed) {
-    var $composer_0 = $composer;
-    if (isTraceInProgress()) {
-      traceEventStart(-342585411, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-4.<anonymous> (NavHeader.kt:169)');
-    }
-    MenuItems($composer_0, 0);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    return Unit_getInstance();
-  }
-  function ComposableLambda$invoke$ref_87($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function ComposableSingletons$NavHeaderKt$lambda_5$lambda_cecns2($this$Row, $composer, $changed) {
-    var $composer_0 = $composer;
-    if (isTraceInProgress()) {
-      traceEventStart(-653953120, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-5.<anonymous> (NavHeader.kt:162)');
-    }
-    var tmp = displayIfAtLeast(gap(Companion_getInstance_3(), get_cssRem(1.5)), Breakpoint_MD_getInstance());
-    var tmp_0 = get_px(2);
-    // Inline function 'org.jetbrains.compose.web.css.Companion.Solid' call
-    Companion_getInstance_11();
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    var tmp_1 = 'solid';
-    // Inline function 'org.jetbrains.compose.web.css.Color.black' call
-    Color_getInstance();
-    var tmp$ret$4 = Color('black');
-    var tmp_2 = padding_1(borderRadius(border(tmp, tmp_0, tmp_1, tmp$ret$4), get_cssRem(1)), get_cssRem(1), get_cssRem(3));
-    var tmp_3 = CenterVertically_getInstance();
-    Row(tmp_2, null, tmp_3, null, ComposableSingletons$NavHeaderKt_getInstance().lambda_4_r8sbbm_1, $composer_0, 24584, 10);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    return Unit_getInstance();
-  }
   function ComposableLambda$invoke$ref_88($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
   }
-  function ComposableSingletons$NavHeaderKt$lambda_6$lambda_tt4x4v($this$Column, $composer, $changed) {
+  function ComposableSingletons$NavHeaderKt$lambda_6$lambda_tt4x4v($this$Row, $composer, $changed) {
     var $composer_0 = $composer;
     if (isTraceInProgress()) {
-      traceEventStart(1280507252, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-6.<anonymous> (NavHeader.kt:210)');
+      traceEventStart(-342585411, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-6.<anonymous> (NavHeader.kt:187)');
+    }
+    MenuItems($composer_0, 0);
+    $composer_0.startReplaceableGroup_ip860b_k$(1435995868);
+    // Inline function 'androidx.compose.runtime.cache' call
+    // Inline function 'kotlin.let' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_0.rememberedValue_4dg93v_k$();
+    var tmp;
+    if (false ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
+      // Inline function 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-6.<anonymous>.<anonymous>' call
+      var value = ComposableSingletons$NavHeaderKt$lambda_6$lambda$lambda_gk4zg6;
+      $composer_0.updateRememberedValue_l1wh71_k$(value);
+      tmp = value;
+    } else {
+      tmp = it;
+    }
+    var tmp_0 = tmp;
+    var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    SearchButton(tmp0_group, $composer_0, 6);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    return Unit_getInstance();
+  }
+  function ComposableSingletons$NavHeaderKt$lambda_6$lambda$lambda_gk4zg6() {
+    return Unit_getInstance();
+  }
+  function ComposableLambda$invoke$ref_89($boundThis) {
+    return function (p0, p1, p2) {
+      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
+    };
+  }
+  function ComposableSingletons$NavHeaderKt$lambda_7$lambda_zig2o($this$Row, $composer, $changed) {
+    var $composer_0 = $composer;
+    if (isTraceInProgress()) {
+      traceEventStart(-653953120, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-7.<anonymous> (NavHeader.kt:179)');
+    }
+    var tmp = borderRadius(backgroundColor(displayIfAtLeast(gap(Companion_getInstance_3(), get_cssRem(1.5)), Breakpoint_MD_getInstance()), getSitePalette().get_nearBackground_c1s3l_k$()), get_cssRem(5));
+    var tmp_0 = get_px(0);
+    var tmp_1 = get_px(0);
+    var tmp_2 = get_px(5);
+    var tmp_3 = get_px(0);
+    // Inline function 'org.jetbrains.compose.web.css.Color.lightgray' call
+    Color_getInstance();
+    var tmp$ret$0 = Color('lightgray');
+    var tmp_4 = padding_1(boxShadow(tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp$ret$0), get_cssRem(0.5), get_cssRem(3));
+    var tmp_5 = CenterVertically_getInstance();
+    Row(tmp_4, null, tmp_5, null, ComposableSingletons$NavHeaderKt_getInstance().lambda_6_r8sbbk_1, $composer_0, 24584, 10);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    return Unit_getInstance();
+  }
+  function ComposableLambda$invoke$ref_90($boundThis) {
+    return function (p0, p1, p2) {
+      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
+    };
+  }
+  function ComposableSingletons$NavHeaderKt$lambda_8$lambda_ru40zj($this$Column, $composer, $changed) {
+    var $composer_0 = $composer;
+    if (isTraceInProgress()) {
+      traceEventStart(1280507252, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-8.<anonymous> (NavHeader.kt:227)');
     }
     MenuItems($composer_0, 0);
     if (isTraceInProgress()) {
@@ -3898,13 +4108,17 @@
     var tmp_0 = this;
     tmp_0.lambda_2_r8sbbo_1 = ComposableLambda$invoke$ref_84(composableLambdaInstance(1424045209, false, ComposableSingletons$NavHeaderKt$lambda_2$lambda_31epff));
     var tmp_1 = this;
-    tmp_1.lambda_3_r8sbbn_1 = ComposableLambda$invoke$ref_85(composableLambdaInstance(61045801, false, ComposableSingletons$NavHeaderKt$lambda_3$lambda_ps7rms));
+    tmp_1.lambda_3_r8sbbn_1 = ComposableLambda$invoke$ref_85(composableLambdaInstance(-1815233913, false, ComposableSingletons$NavHeaderKt$lambda_3$lambda_ps7rms));
     var tmp_2 = this;
-    tmp_2.lambda_4_r8sbbm_1 = ComposableLambda$invoke$ref_86(composableLambdaInstance(-342585411, false, ComposableSingletons$NavHeaderKt$lambda_4$lambda_gf9ta5));
+    tmp_2.lambda_4_r8sbbm_1 = ComposableLambda$invoke$ref_86(composableLambdaInstance(298381011, false, ComposableSingletons$NavHeaderKt$lambda_4$lambda_gf9ta5));
     var tmp_3 = this;
-    tmp_3.lambda_5_r8sbbl_1 = ComposableLambda$invoke$ref_87(composableLambdaInstance(-653953120, false, ComposableSingletons$NavHeaderKt$lambda_5$lambda_cecns2));
+    tmp_3.lambda_5_r8sbbl_1 = ComposableLambda$invoke$ref_87(composableLambdaInstance(61045801, false, ComposableSingletons$NavHeaderKt$lambda_5$lambda_cecns2));
     var tmp_4 = this;
-    tmp_4.lambda_6_r8sbbk_1 = ComposableLambda$invoke$ref_88(composableLambdaInstance(1280507252, false, ComposableSingletons$NavHeaderKt$lambda_6$lambda_tt4x4v));
+    tmp_4.lambda_6_r8sbbk_1 = ComposableLambda$invoke$ref_88(composableLambdaInstance(-342585411, false, ComposableSingletons$NavHeaderKt$lambda_6$lambda_tt4x4v));
+    var tmp_5 = this;
+    tmp_5.lambda_7_r8sbbj_1 = ComposableLambda$invoke$ref_89(composableLambdaInstance(-653953120, false, ComposableSingletons$NavHeaderKt$lambda_7$lambda_zig2o));
+    var tmp_6 = this;
+    tmp_6.lambda_8_r8sbbi_1 = ComposableLambda$invoke$ref_90(composableLambdaInstance(1280507252, false, ComposableSingletons$NavHeaderKt$lambda_8$lambda_ru40zj));
   }
   protoOf(ComposableSingletons$NavHeaderKt).get_lambda_1_bzdzzo_k$ = function () {
     return this.lambda_1_r8sbbp_1;
@@ -3923,6 +4137,12 @@
   };
   protoOf(ComposableSingletons$NavHeaderKt).get_lambda_6_bzdzzt_k$ = function () {
     return this.lambda_6_r8sbbk_1;
+  };
+  protoOf(ComposableSingletons$NavHeaderKt).get_lambda_7_bzdzzu_k$ = function () {
+    return this.lambda_7_r8sbbj_1;
+  };
+  protoOf(ComposableSingletons$NavHeaderKt).get_lambda_8_bzdzzv_k$ = function () {
+    return this.lambda_8_r8sbbi_1;
   };
   var ComposableSingletons$NavHeaderKt_instance;
   function ComposableSingletons$NavHeaderKt_getInstance() {
@@ -3948,7 +4168,7 @@
   }
   function NavHeaderStyle$delegate$lambda($this$base) {
     _init_properties_NavHeader_kt__vdotjy();
-    return padding(fillMaxWidth(Companion_getInstance_3()), get_cssRem(3));
+    return padding_0(fillMaxWidth(Companion_getInstance_3()), get_cssRem(4), get_cssRem(3));
   }
   function SideMenuSlideInAnim$delegate$lambda($this$Keyframes) {
     _init_properties_NavHeader_kt__vdotjy();
@@ -3988,6 +4208,12 @@
       return Unit_getInstance();
     };
   }
+  function SearchButton$lambda($onClick, $$changed) {
+    return function ($composer, $force) {
+      SearchButton($onClick, $composer, updateChangedFlags($$changed | 1));
+      return Unit_getInstance();
+    };
+  }
   function NavHeader$lambda$lambda$lambda($menuState$delegate) {
     return function () {
       NavHeader$lambda_0($menuState$delegate, SideMenuState_OPEN_getInstance());
@@ -4014,9 +4240,9 @@
     return function ($this$Row, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(214303636, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous> (NavHeader.kt:143)');
+        traceEventStart(214303636, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous> (NavHeader.kt:162)');
       }
-      $composer_0.startReplaceableGroup_ip860b_k$(-1190398320);
+      $composer_0.startReplaceableGroup_ip860b_k$(-1190397941);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
@@ -4037,7 +4263,7 @@
       HamburgerButton(tmp0_group, $composer_0, 6);
       if (!NavHeader$lambda($menuState$delegate).equals(SideMenuState_CLOSED_getInstance())) {
         var tmp_1 = NavHeader$lambda($menuState$delegate);
-        $composer_0.startReplaceableGroup_ip860b_k$(-1190398145);
+        $composer_0.startReplaceableGroup_ip860b_k$(-1190397766);
         // Inline function 'androidx.compose.runtime.cache' call
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -4055,7 +4281,7 @@
         var tmp_3 = tmp_2;
         var tmp1_group = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
         $composer_0.endReplaceableGroup_ern0ak_k$();
-        $composer_0.startReplaceableGroup_ip860b_k$(-1190398073);
+        $composer_0.startReplaceableGroup_ip860b_k$(-1190397694);
         // Inline function 'androidx.compose.runtime.cache' call
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
@@ -4083,7 +4309,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_89($boundThis) {
+  function ComposableLambda$invoke$ref_91($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
@@ -4092,10 +4318,10 @@
     return function ($this$Row, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(-872052681, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader.<anonymous> (NavHeader.kt:132)');
+        traceEventStart(-872052681, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader.<anonymous> (NavHeader.kt:152)');
       }
-      Link('https://androidhub.dev', null, null, null, null, false, null, ComposableSingletons$NavHeaderKt_getInstance().lambda_3_r8sbbn_1, $composer_0, 12582918, 126);
-      var tmp = displayUntil(gap(fontSize(Companion_getInstance_3(), get_cssRem(1.5)), get_cssRem(1)), Breakpoint_MD_getInstance());
+      Link('https://androidhub.dev', null, null, null, null, false, null, ComposableSingletons$NavHeaderKt_getInstance().lambda_5_r8sbbl_1, $composer_0, 12582918, 126);
+      var tmp = displayUntil(fontSize(Companion_getInstance_3(), get_cssRem(1.5)), Breakpoint_MD_getInstance());
       var tmp_0 = CenterVertically_getInstance();
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
@@ -4115,7 +4341,7 @@
       var tmp_2;
       if (invalid ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
         // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-        var value = ComposableLambda$invoke$ref_89(dispatchReceiver);
+        var value = ComposableLambda$invoke$ref_91(dispatchReceiver);
         $composer_1.updateRememberedValue_l1wh71_k$(value);
         tmp_2 = value;
       } else {
@@ -4133,7 +4359,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_90($boundThis) {
+  function ComposableLambda$invoke$ref_92($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
@@ -4171,9 +4397,9 @@
     return function ($this$Column, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(-206915651, $changed, -1, 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>.<anonymous> (NavHeader.kt:205)');
+        traceEventStart(-206915651, $changed, -1, 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>.<anonymous> (NavHeader.kt:222)');
       }
-      $composer_0.startReplaceableGroup_ip860b_k$(-1518991120);
+      $composer_0.startReplaceableGroup_ip860b_k$(-1518990887);
       // Inline function 'androidx.compose.runtime.cache' call
       var invalid = $composer_0.changed_ga7h3f_k$($close);
       // Inline function 'kotlin.let' call
@@ -4195,7 +4421,7 @@
       CloseButton(tmp0_group, $composer_0, 0);
       var tmp_1 = fontSize(gap(padding_2(Companion_getInstance_3(), VOID, get_cssRem(0.75)), get_cssRem(1.5)), get_cssRem(1.4));
       var tmp_2 = End_getInstance();
-      Column(tmp_1, null, tmp_2, null, ComposableSingletons$NavHeaderKt_getInstance().lambda_6_r8sbbk_1, $composer_0, 24584, 10);
+      Column(tmp_1, null, tmp_2, null, ComposableSingletons$NavHeaderKt_getInstance().lambda_8_r8sbbi_1, $composer_0, 24584, 10);
       var tmp_3;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -4204,7 +4430,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_91($boundThis) {
+  function ComposableLambda$invoke$ref_93($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
@@ -4213,23 +4439,23 @@
     return function ($this$Overlay, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(-36487783, $changed, -1, 'com.canerture.androidhub.components.sections.SideMenu.<anonymous> (NavHeader.kt:181)');
+        traceEventStart(-36487783, $changed, -1, 'com.canerture.androidhub.components.sections.SideMenu.<anonymous> (NavHeader.kt:200)');
       }
-      $composer_0.startMovableGroup_clfloq_k$(629540746, $menuState);
+      $composer_0.startMovableGroup_clfloq_k$(629541226, $menuState);
       var tmp = backgroundColor(gap(padding_0($this$Overlay.align_s6rwef_k$(width(fillMaxHeight(Companion_getInstance_3()), clamp(get_cssRem(8), get_percent(33), get_cssRem(10))), CenterEnd_getInstance()), get_cssRem(1), get_cssRem(1)), get_cssRem(1.5)), getSitePalette().get_nearBackground_c1s3l_k$());
       var tmp_0 = get_SideMenuSlideInAnim();
       var tmp_1 = get_ms(200);
       var tmp_2;
       if ($menuState.equals(SideMenuState_OPEN_getInstance())) {
         // Inline function 'org.jetbrains.compose.web.css.Companion.EaseOut' call
-        Companion_getInstance_13();
+        Companion_getInstance_12();
         // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
         tmp_2 = 'ease-out';
       } else {
         // Inline function 'org.jetbrains.compose.web.css.Companion.EaseIn' call
-        Companion_getInstance_13();
+        Companion_getInstance_12();
         // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
@@ -4239,14 +4465,14 @@
       var tmp_4;
       if ($menuState.equals(SideMenuState_OPEN_getInstance())) {
         // Inline function 'org.jetbrains.compose.web.css.Companion.Normal' call
-        Companion_getInstance_14();
+        Companion_getInstance_13();
         // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
         tmp_4 = 'normal';
       } else {
         // Inline function 'org.jetbrains.compose.web.css.Companion.Reverse' call
-        Companion_getInstance_14();
+        Companion_getInstance_13();
         // Inline function 'org.jetbrains.compose.web.css.AnimationDirection' call
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
@@ -4254,13 +4480,13 @@
       }
       var tmp_5 = tmp_4;
       // Inline function 'org.jetbrains.compose.web.css.Companion.Forwards' call
-      Companion_getInstance_15();
+      Companion_getInstance_14();
       // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp_6 = 'forwards';
       var tmp_7 = borderRadius_0(animation(tmp, [toAnimation(tmp_0, tmp_1, tmp_3, null, null, tmp_5, tmp_6, null, $composer_0, 2359880, 76)]), get_cssRem(2));
-      $composer_0.startReplaceableGroup_ip860b_k$(629542001);
+      $composer_0.startReplaceableGroup_ip860b_k$(629542234);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
@@ -4279,7 +4505,7 @@
       var tmp0_group = (tmp_9 == null ? true : !(tmp_9 == null)) ? tmp_9 : THROW_CCE();
       $composer_0.endReplaceableGroup_ern0ak_k$();
       var tmp_10 = onClick(tmp_7, tmp0_group);
-      $composer_0.startReplaceableGroup_ip860b_k$(629542062);
+      $composer_0.startReplaceableGroup_ip860b_k$(629542295);
       // Inline function 'androidx.compose.runtime.cache' call
       var invalid = $composer_0.changed_ga7h3f_k$($onAnimationEnd);
       // Inline function 'kotlin.let' call
@@ -4318,7 +4544,7 @@
       var tmp_16;
       if (invalid_0 ? true : it_1 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
         // Inline function 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-        var value_1 = ComposableLambda$invoke$ref_91(dispatchReceiver);
+        var value_1 = ComposableLambda$invoke$ref_93(dispatchReceiver);
         $composer_1.updateRememberedValue_l1wh71_k$(value_1);
         tmp_16 = value_1;
       } else {
@@ -4337,7 +4563,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_92($boundThis) {
+  function ComposableLambda$invoke$ref_94($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
@@ -4431,7 +4657,7 @@
       var tmp_4;
       if (invalid_0 ? true : it_0 === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
         // Inline function 'com.canerture.androidhub.components.widgets.IconButton.<anonymous>.<anonymous>' call
-        var value_0 = ComposableLambda$invoke$ref_93(dispatchReceiver);
+        var value_0 = ComposableLambda$invoke$ref_95(dispatchReceiver);
         $composer_1.updateRememberedValue_l1wh71_k$(value_0);
         tmp_4 = value_0;
       } else {
@@ -4475,7 +4701,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_93($boundThis) {
+  function ComposableLambda$invoke$ref_95($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
@@ -4491,57 +4717,15 @@
     return HeroContainerStyle$delegate.getValue_fbnwi2_k$(null, HeroContainerStyle$factory());
   }
   var HeroContainerStyle$delegate;
-  function get_HomeGridStyle() {
-    _init_properties_Index_kt__ifxcv4();
-    return HomeGridStyle$delegate.getValue_fbnwi2_k$(null, HomeGridStyle$factory());
-  }
-  var HomeGridStyle$delegate;
-  function get_GridCellColorVar() {
-    _init_properties_Index_kt__ifxcv4();
-    return GridCellColorVar$delegate.getValue_fbnwi2_k$(null, GridCellColorVar$factory());
-  }
-  var GridCellColorVar$delegate;
-  function get_HomeGridCellStyle() {
-    _init_properties_Index_kt__ifxcv4();
-    return HomeGridCellStyle$delegate.getValue_fbnwi2_k$(null, HomeGridCellStyle$factory());
-  }
-  var HomeGridCellStyle$delegate;
-  function GridCell(color, row, column, width, height, $composer, $changed, $default) {
-    _init_properties_Index_kt__ifxcv4();
-    var width_0 = {_v: width};
-    var height_0 = {_v: height};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1898381357);
-    if (!(($default & 8) === 0)) {
-      width_0._v = null;
-    }
-    if (!(($default & 16) === 0)) {
-      height_0._v = null;
-    }
-    if (isTraceInProgress()) {
-      traceEventStart(1898381357, $changed, -1, 'com.canerture.androidhub.pages.GridCell (Index.kt:56)');
-    }
-    var tmp = toAttrs(gridItem(setVariable(toModifier(get_HomeGridCellStyle(), [], $composer_0, 64), get_GridCellColorVar(), color), row, column, width_0._v, height_0._v));
-    Div(tmp, null, $composer_0, 0, 2);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(GridCell$lambda(color, row, column, width_0, height_0, $changed, $default));
-    }
-  }
   function HomePage($composer, $changed) {
     _init_properties_Index_kt__ifxcv4();
     var $composer_0 = $composer;
     $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-763277764);
     if (!($changed === 0) ? true : !$composer_0.get_skipping_3owdve_k$()) {
       if (isTraceInProgress()) {
-        traceEventStart(-763277764, $changed, -1, 'com.canerture.androidhub.pages.HomePage (Index.kt:67)');
+        traceEventStart(-763277764, $changed, -1, 'com.canerture.androidhub.pages.HomePage (Index.kt:45)');
       }
-      PageLayout('Home', ComposableSingletons$IndexKt_getInstance().lambda_6_r8sbbk_1, $composer_0, 54);
+      PageLayout('Home', ComposableSingletons$IndexKt_getInstance().lambda_5_r8sbbl_1, $composer_0, 54);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
@@ -4555,174 +4739,52 @@
       tmp0_safe_receiver.updateScope_t8jcf_k$(HomePage$lambda($changed));
     }
   }
-  function ComposableLambda$invoke$ref_94($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function ComposableSingletons$IndexKt$lambda_1$lambda_5yb608($this$Div, $composer, $changed) {
-    var $composer_0 = $composer;
-    if (isTraceInProgress()) {
-      traceEventStart(1260269097, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-1.<anonymous> (Index.kt:93)');
-    }
-    SpanText('You can read the ', null, null, null, $composer_0, 6, 14);
-    Link_0('/about', 'About', null, null, null, null, false, null, $composer_0, 54, 252);
-    SpanText(' page for more information.', null, null, null, $composer_0, 6, 14);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    return Unit_getInstance();
-  }
-  function ComposableLambda$invoke$ref_95($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function ComposableSingletons$IndexKt$lambda_2$lambda_yrxn2f($this$Button, $composer, $changed) {
-    var $composer_0 = $composer;
-    if (isTraceInProgress()) {
-      traceEventStart(1692940003, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-2.<anonymous> (Index.kt:105)');
-    }
-    Text('This could be your CTA', $composer_0, 6);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    return Unit_getInstance();
-  }
   function ComposableLambda$invoke$ref_96($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
   }
-  function ComposableSingletons$IndexKt$lambda_3$lambda_7fjxui($this$Box, $composer, $changed) {
+  function ComposableSingletons$IndexKt$lambda_1$lambda_5yb608($this$Button, $composer, $changed) {
     var $composer_0 = $composer;
     if (isTraceInProgress()) {
-      traceEventStart(-596361092, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-3.<anonymous> (Index.kt:71)');
+      traceEventStart(-289882532, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-1.<anonymous> (Index.kt:74)');
     }
-    var sitePalette = getSitePalette();
-    var tmp = gap(Companion_getInstance_3(), get_cssRem(2));
-    // Inline function 'kotlin.run' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-3.<anonymous>.<anonymous>' call
-    var tmp_0 = $composer_0;
-    var dispatchReceiver = composableLambda(tmp_0, -2110878989, true, ComposableSingletons$IndexKt$lambda_3$lambda$lambda_h8z03p(sitePalette));
-    // Inline function 'androidx.compose.runtime.remember' call
-    var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
-    sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    var invalid = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_1.rememberedValue_4dg93v_k$();
-    var tmp_1;
-    if (invalid ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-3.<anonymous>.<anonymous>.<anonymous>' call
-      var value = ComposableLambda$invoke$ref_98(dispatchReceiver);
-      $composer_1.updateRememberedValue_l1wh71_k$(value);
-      tmp_1 = value;
-    } else {
-      tmp_1 = it;
-    }
-    var tmp_2 = tmp_1;
-    var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-    $composer_1.endReplaceableGroup_ern0ak_k$();
-    Column(tmp, null, null, null, tmp0, $composer_0, 24584, 14);
+    var tmp = color(textAlign(lineHeight(fontSize(Companion_getInstance_3(), get_cssRem(1.25)), 2), Companion_getInstance_4().get_Start_ih4i6x_k$()), getSitePalette().get_white_j0plog_k$());
+    SpanText('Apply to be an author', tmp, null, null, $composer_0, 70, 12);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
     return Unit_getInstance();
-  }
-  function ComposableSingletons$IndexKt$lambda_3$lambda$lambda$lambda_o3atbu($sitePalette) {
-    return function ($this$Div, $composer, $changed) {
-      var $composer_0 = $composer;
-      if (isTraceInProgress()) {
-        traceEventStart(-522564366, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-3.<anonymous>.<anonymous>.<anonymous> (Index.kt:75)');
-      }
-      var tmp = Companion_getInstance_3();
-      var tmp_0;
-      switch (Companion_getInstance_1().get_current_2iudd5_k$($composer_0, 8).get_ordinal_ip24qg_k$()) {
-        case 0:
-          tmp_0 = Colors_getInstance().get_Black_i7mvue_k$();
-          break;
-        case 1:
-          tmp_0 = Colors_getInstance().get_White_ij46ow_k$();
-          break;
-        default:
-          noWhenBranchMatchedException();
-          break;
-      }
-      var tmp_1 = color(tmp, tmp_0);
-      SpanText('Use this template as your starting point for ', tmp_1, null, null, $composer_0, 70, 12);
-      var tmp_2 = textShadow(color(Companion_getInstance_3(), $sitePalette.get_brand_ipc50e_k$().get_accent_avafv7_k$()), get_px(0), get_px(0), get_cssRem(0.5), Colors_getInstance().get_Gray_wo2eh8_k$());
-      SpanText('Kobweb', tmp_2, null, null, $composer_0, 70, 12);
-      var tmp_3;
-      if (isTraceInProgress()) {
-        traceEventEnd();
-        tmp_3 = Unit_getInstance();
-      }
-      return Unit_getInstance();
-    };
   }
   function ComposableLambda$invoke$ref_97($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
   }
-  function ComposableSingletons$IndexKt$lambda_3$lambda$lambda$lambda_o3atbu_0($ctx) {
+  function ComposableSingletons$IndexKt$lambda_2$lambda_yrxn2f($this$Div, $composer, $changed) {
+    var $composer_0 = $composer;
+    if (isTraceInProgress()) {
+      traceEventStart(-1718187412, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-2.<anonymous> (Index.kt:53)');
+    }
+    var tmp = color(toModifier(get_HeadlineTextStyle(), [], $composer_0, 64), getSitePalette().get_green_is36qi_k$());
+    SpanText('Hi \uD83D\uDC4B', tmp, null, null, $composer_0, 70, 12);
+    Spacer($composer_0, 0);
+    var tmp_0 = color(toModifier(get_SubheadlineTextStyle(), [], $composer_0, 64), getSitePalette().get_blue_wojj4z_k$());
+    SpanText('Let\u2019s explore everything about the exciting world of Android together. On this platform, you can delve into the vast opportunities offered by the Android operating system and examine the latest developments in the field. Come on, let\u2019s discover the limitless world of Android together!', tmp_0, null, null, $composer_0, 70, 12);
+    Spacer($composer_0, 0);
+    var ctx = rememberPageContext($composer_0, 0);
+    var tmp_1 = ComposableSingletons$IndexKt$lambda_2$lambda$lambda_7ol2bg(ctx);
+    var tmp_2 = setVariable(setVariable(margin(Companion_getInstance_3(), get_cssRem(1)), ButtonVars_getInstance().get_BackgroundDefaultColor_so3bvr_k$(), getSitePalette().get_green_is36qi_k$()), ButtonVars_getInstance().get_BackgroundHoverColor_qkbxz2_k$(), getSitePalette().get_blue_wojj4z_k$());
+    var tmp_3 = LG_getInstance();
+    Button(tmp_1, tmp_2, null, null, false, tmp_3, null, null, null, ComposableSingletons$IndexKt_getInstance().lambda_1_r8sbbp_1, $composer_0, 805568576, 476);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    return Unit_getInstance();
+  }
+  function ComposableSingletons$IndexKt$lambda_2$lambda$lambda_7ol2bg($ctx) {
     return function (it) {
       $ctx.get_router_j3zccy_k$().tryRoutingTo$default_gm9buu_k$('/about');
-      return Unit_getInstance();
-    };
-  }
-  function ComposableSingletons$IndexKt$lambda_3$lambda$lambda_h8z03p($sitePalette) {
-    return function ($this$Column, $composer, $changed) {
-      var $composer_0 = $composer;
-      if (isTraceInProgress()) {
-        traceEventStart(-2110878989, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-3.<anonymous>.<anonymous> (Index.kt:74)');
-      }
-      var tmp = get_HeadlineTextStyle();
-      var tmp_0 = toAttrs_0(tmp, [], null, $composer_0, 64, 2);
-      // Inline function 'kotlin.run' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-3.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-      var tmp_1 = $composer_0;
-      var dispatchReceiver = composableLambda(tmp_1, -522564366, true, ComposableSingletons$IndexKt$lambda_3$lambda$lambda$lambda_o3atbu($sitePalette));
-      // Inline function 'androidx.compose.runtime.remember' call
-      var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
-      sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
-      // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.rememberedValue_4dg93v_k$();
-      var tmp_2;
-      if (invalid ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
-        // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-3.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-        var value = ComposableLambda$invoke$ref_97(dispatchReceiver);
-        $composer_1.updateRememberedValue_l1wh71_k$(value);
-        tmp_2 = value;
-      } else {
-        tmp_2 = it;
-      }
-      var tmp_3 = tmp_2;
-      var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
-      $composer_1.endReplaceableGroup_ern0ak_k$();
-      Div(tmp_0, tmp0, $composer_0, 48, 0);
-      var tmp_4 = get_SubheadlineTextStyle();
-      Div(toAttrs_0(tmp_4, [], null, $composer_0, 64, 2), ComposableSingletons$IndexKt_getInstance().lambda_1_r8sbbp_1, $composer_0, 48, 0);
-      var ctx = rememberPageContext($composer_0, 0);
-      var tmp_5 = ComposableSingletons$IndexKt$lambda_3$lambda$lambda$lambda_o3atbu_0(ctx);
-      var tmp_6 = Blue_getInstance();
-      Button(tmp_5, null, null, null, false, null, tmp_6, null, null, ComposableSingletons$IndexKt_getInstance().lambda_2_r8sbbo_1, $composer_0, 805306368, 446);
-      var tmp_7;
-      if (isTraceInProgress()) {
-        traceEventEnd();
-        tmp_7 = Unit_getInstance();
-      }
       return Unit_getInstance();
     };
   }
@@ -4731,28 +4793,36 @@
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
   }
+  function ComposableSingletons$IndexKt$lambda_3$lambda_7fjxui($this$Column, $composer, $changed) {
+    var $composer_0 = $composer;
+    if (isTraceInProgress()) {
+      traceEventStart(1654665773, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-3.<anonymous> (Index.kt:52)');
+    }
+    Div(null, ComposableSingletons$IndexKt_getInstance().lambda_2_r8sbbo_1, $composer_0, 48, 1);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    return Unit_getInstance();
+  }
   function ComposableLambda$invoke$ref_99($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
   }
-  function ComposableSingletons$IndexKt$lambda_4$lambda_le2j7p($this$Div, $composer, $changed) {
+  function ComposableSingletons$IndexKt$lambda_4$lambda_le2j7p($this$Row, $composer, $changed) {
     var $composer_0 = $composer;
     if (isTraceInProgress()) {
-      traceEventStart(-1935791819, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-4.<anonymous> (Index.kt:119)');
+      traceEventStart(-197148810, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-4.<anonymous> (Index.kt:51)');
     }
-    var sitePalette = getSitePalette();
-    GridCell(sitePalette.get_brand_ipc50e_k$().get_primary_3xuktj_k$(), 1, 1, 2, 2, $composer_0, 28088, 0);
-    var tmp = Monochrome_getInstance().get__600_woggg0_k$();
-    GridCell(tmp, 1, 3, null, null, $composer_0, 432, 24);
-    var tmp_0 = Monochrome_getInstance().get__100_wogcqj_k$();
-    GridCell(tmp_0, 1, 4, 2, null, $composer_0, 3504, 16);
-    var tmp_1 = sitePalette.get_brand_ipc50e_k$().get_accent_avafv7_k$();
-    GridCell(tmp_1, 2, 3, 2, null, $composer_0, 3512, 16);
-    var tmp_2 = Monochrome_getInstance().get__300_woge7x_k$();
-    GridCell(tmp_2, 2, 5, null, null, $composer_0, 432, 24);
-    var tmp_3 = Monochrome_getInstance().get__800_woghxe_k$();
-    GridCell(tmp_3, 3, 1, 5, null, $composer_0, 3504, 16);
+    Column(null, null, null, null, ComposableSingletons$IndexKt_getInstance().lambda_3_r8sbbn_1, $composer_0, 24576, 15);
+    var tmp = height(Companion_getInstance_3(), get_cssRem(28));
+    // Inline function 'org.jetbrains.compose.web.css.Companion.Block' call
+    Companion_getInstance_10();
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    var tmp_0 = display(tmp, 'block');
+    Image('/android-figure.png', 'Android Figure', tmp_0, null, null, null, false, null, $composer_0, 566, 248);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -4763,70 +4833,14 @@
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
   }
-  function ComposableSingletons$IndexKt$lambda_5$lambda_ktf1p8($this$Row, $composer, $changed) {
+  function ComposableSingletons$IndexKt$lambda_5$lambda_ktf1p8($this$PageLayout, $composer, $changed) {
     var $composer_0 = $composer;
     if (isTraceInProgress()) {
-      traceEventStart(-197148810, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-5.<anonymous> (Index.kt:70)');
-    }
-    Box(null, null, null, ComposableSingletons$IndexKt_getInstance().lambda_3_r8sbbn_1, $composer_0, 3072, 7);
-    var tmp = displayIfAtLeast(toModifier(get_HomeGridStyle(), [], $composer_0, 64), Breakpoint_MD_getInstance());
-    $composer_0.startReplaceableGroup_ip860b_k$(16459822);
-    // Inline function 'androidx.compose.runtime.cache' call
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_0.rememberedValue_4dg93v_k$();
-    var tmp_0;
-    if (false ? true : it === Companion_getInstance_0().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-5.<anonymous>.<anonymous>' call
-      var value = ComposableSingletons$IndexKt$lambda_5$lambda$lambda_3x0x15;
-      $composer_0.updateRememberedValue_l1wh71_k$(value);
-      tmp_0 = value;
-    } else {
-      tmp_0 = it;
-    }
-    var tmp_1 = tmp_0;
-    var tmp0_group = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    Div(toAttrs(grid(tmp, tmp0_group)), ComposableSingletons$IndexKt_getInstance().lambda_4_r8sbbm_1, $composer_0, 48, 0);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    return Unit_getInstance();
-  }
-  function ComposableSingletons$IndexKt$lambda_5$lambda$lambda_3x0x15($this$grid) {
-    $this$grid.rows_c0wtyb_k$(ComposableSingletons$IndexKt$lambda_5$lambda$lambda$lambda_kgzzy4);
-    $this$grid.columns_o4h109_k$(ComposableSingletons$IndexKt$lambda_5$lambda$lambda$lambda_kgzzy4_0);
-    return Unit_getInstance();
-  }
-  function ComposableSingletons$IndexKt$lambda_5$lambda$lambda$lambda_kgzzy4($this$rows) {
-    $this$rows.repeat_n9ti1_k$(3, ComposableSingletons$IndexKt$lambda_5$lambda$lambda$lambda$lambda_o33jyx);
-    return Unit_getInstance();
-  }
-  function ComposableSingletons$IndexKt$lambda_5$lambda$lambda$lambda$lambda_o33jyx($this$repeat) {
-    $this$repeat.size_q03g6h_k$(get_fr(1));
-    return Unit_getInstance();
-  }
-  function ComposableSingletons$IndexKt$lambda_5$lambda$lambda$lambda_kgzzy4_0($this$columns) {
-    $this$columns.repeat_n9ti1_k$(5, ComposableSingletons$IndexKt$lambda_5$lambda$lambda$lambda$lambda_o33jyx_0);
-    return Unit_getInstance();
-  }
-  function ComposableSingletons$IndexKt$lambda_5$lambda$lambda$lambda$lambda_o33jyx_0($this$repeat) {
-    $this$repeat.size_q03g6h_k$(get_fr(1));
-    return Unit_getInstance();
-  }
-  function ComposableLambda$invoke$ref_101($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function ComposableSingletons$IndexKt$lambda_6$lambda_807fcz($this$PageLayout, $composer, $changed) {
-    var $composer_0 = $composer;
-    if (isTraceInProgress()) {
-      traceEventStart(-1997478029, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-6.<anonymous> (Index.kt:69)');
+      traceEventStart(-1997478029, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-5.<anonymous> (Index.kt:47)');
     }
     var tmp = toModifier(get_HeroContainerStyle(), [], $composer_0, 64);
-    Row(tmp, null, null, null, ComposableSingletons$IndexKt_getInstance().lambda_5_r8sbbl_1, $composer_0, 24584, 14);
+    var tmp_0 = CenterVertically_getInstance();
+    Row(tmp, null, tmp_0, null, ComposableSingletons$IndexKt_getInstance().lambda_4_r8sbbm_1, $composer_0, 24584, 10);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -4835,17 +4849,15 @@
   function ComposableSingletons$IndexKt() {
     ComposableSingletons$IndexKt_instance = this;
     var tmp = this;
-    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_94(composableLambdaInstance(1260269097, false, ComposableSingletons$IndexKt$lambda_1$lambda_5yb608));
+    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_96(composableLambdaInstance(-289882532, false, ComposableSingletons$IndexKt$lambda_1$lambda_5yb608));
     var tmp_0 = this;
-    tmp_0.lambda_2_r8sbbo_1 = ComposableLambda$invoke$ref_95(composableLambdaInstance(1692940003, false, ComposableSingletons$IndexKt$lambda_2$lambda_yrxn2f));
+    tmp_0.lambda_2_r8sbbo_1 = ComposableLambda$invoke$ref_97(composableLambdaInstance(-1718187412, false, ComposableSingletons$IndexKt$lambda_2$lambda_yrxn2f));
     var tmp_1 = this;
-    tmp_1.lambda_3_r8sbbn_1 = ComposableLambda$invoke$ref_96(composableLambdaInstance(-596361092, false, ComposableSingletons$IndexKt$lambda_3$lambda_7fjxui));
+    tmp_1.lambda_3_r8sbbn_1 = ComposableLambda$invoke$ref_98(composableLambdaInstance(1654665773, false, ComposableSingletons$IndexKt$lambda_3$lambda_7fjxui));
     var tmp_2 = this;
-    tmp_2.lambda_4_r8sbbm_1 = ComposableLambda$invoke$ref_99(composableLambdaInstance(-1935791819, false, ComposableSingletons$IndexKt$lambda_4$lambda_le2j7p));
+    tmp_2.lambda_4_r8sbbm_1 = ComposableLambda$invoke$ref_99(composableLambdaInstance(-197148810, false, ComposableSingletons$IndexKt$lambda_4$lambda_le2j7p));
     var tmp_3 = this;
-    tmp_3.lambda_5_r8sbbl_1 = ComposableLambda$invoke$ref_100(composableLambdaInstance(-197148810, false, ComposableSingletons$IndexKt$lambda_5$lambda_ktf1p8));
-    var tmp_4 = this;
-    tmp_4.lambda_6_r8sbbk_1 = ComposableLambda$invoke$ref_101(composableLambdaInstance(-1997478029, false, ComposableSingletons$IndexKt$lambda_6$lambda_807fcz));
+    tmp_3.lambda_5_r8sbbl_1 = ComposableLambda$invoke$ref_100(composableLambdaInstance(-1997478029, false, ComposableSingletons$IndexKt$lambda_5$lambda_ktf1p8));
   }
   protoOf(ComposableSingletons$IndexKt).get_lambda_1_bzdzzo_k$ = function () {
     return this.lambda_1_r8sbbp_1;
@@ -4862,9 +4874,6 @@
   protoOf(ComposableSingletons$IndexKt).get_lambda_5_bzdzzs_k$ = function () {
     return this.lambda_5_r8sbbl_1;
   };
-  protoOf(ComposableSingletons$IndexKt).get_lambda_6_bzdzzt_k$ = function () {
-    return this.lambda_6_r8sbbk_1;
-  };
   var ComposableSingletons$IndexKt_instance;
   function ComposableSingletons$IndexKt_getInstance() {
     if (ComposableSingletons$IndexKt_instance == null)
@@ -4880,7 +4889,7 @@
   }
   function HeroContainerStyle$delegate$lambda$lambda() {
     _init_properties_Index_kt__ifxcv4();
-    return gap(fillMaxWidth(Companion_getInstance_3()), get_cssRem(2));
+    return gap(fillMaxWidth(Companion_getInstance_3()), get_cssRem(1));
   }
   function HeroContainerStyle$delegate$lambda$lambda_0() {
     _init_properties_Index_kt__ifxcv4();
@@ -4889,22 +4898,8 @@
   }
   function HeroContainerStyle$delegate$lambda$lambda$lambda($this$margin) {
     _init_properties_Index_kt__ifxcv4();
-    $this$margin.top_1wurxj_k$(get_vh(20));
+    $this$margin.top_1wurxj_k$(get_vh(6));
     return Unit_getInstance();
-  }
-  function HomeGridStyle$delegate$lambda($this$base) {
-    _init_properties_Index_kt__ifxcv4();
-    return height(width(gap(Companion_getInstance_3(), get_cssRem(0.5)), get_cssRem(70)), get_cssRem(18));
-  }
-  function HomeGridCellStyle$delegate$lambda($this$base) {
-    _init_properties_Index_kt__ifxcv4();
-    return borderRadius(boxShadow(backgroundColor(Companion_getInstance_3(), get_GridCellColorVar().value$default_36t2hw_k$()), VOID, VOID, get_cssRem(0.6), VOID, get_GridCellColorVar().value$default_36t2hw_k$()), get_cssRem(1));
-  }
-  function GridCell$lambda($color, $row, $column, $width, $height, $$changed, $$default) {
-    return function ($composer, $force) {
-      GridCell($color, $row, $column, $width._v, $height._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
   }
   function HomePage$lambda($$changed) {
     return function ($composer, $force) {
@@ -4917,36 +4912,15 @@
       return get_HeroContainerStyle();
     }, null);
   }
-  function HomeGridStyle$factory() {
-    return getPropertyCallableRef('HomeGridStyle', 0, KProperty0, function () {
-      return get_HomeGridStyle();
-    }, null);
-  }
-  function GridCellColorVar$factory() {
-    return getPropertyCallableRef('GridCellColorVar', 0, KProperty0, function () {
-      return get_GridCellColorVar();
-    }, null);
-  }
-  function HomeGridCellStyle$factory() {
-    return getPropertyCallableRef('HomeGridCellStyle', 0, KProperty0, function () {
-      return get_HomeGridCellStyle();
-    }, null);
-  }
   var properties_initialized_Index_kt_nnboou;
   function _init_properties_Index_kt__ifxcv4() {
     if (!properties_initialized_Index_kt_nnboou) {
       properties_initialized_Index_kt_nnboou = true;
       HeroContainerStyle$delegate = ComponentStyle(VOID, VOID, HeroContainerStyle$delegate$lambda);
-      var tmp = Companion_getInstance_5();
-      HomeGridStyle$delegate = base(tmp, VOID, VOID, HomeGridStyle$delegate$lambda);
-      GridCellColorVar$delegate = StyleVariable();
-      var tmp_0 = Companion_getInstance_5();
-      HomeGridCellStyle$delegate = base(tmp_0, VOID, VOID, HomeGridCellStyle$delegate$lambda);
     }
   }
   //region block: init
   COLOR_MODE_KEY = 'androidhub:colorMode';
-  com_canerture_androidhub_SitePalette_Brand$stable = 8;
   com_canerture_androidhub_SitePalette$stable = 8;
   com_canerture_androidhub_SitePalettes$stable = 8;
   //endregion
