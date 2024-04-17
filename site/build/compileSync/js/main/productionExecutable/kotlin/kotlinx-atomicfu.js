@@ -12,44 +12,20 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var fillArrayVal = kotlin_kotlin.$_$.u5;
-  var protoOf = kotlin_kotlin.$_$.m6;
-  var defineProp = kotlin_kotlin.$_$.s5;
-  var classMeta = kotlin_kotlin.$_$.q5;
-  var setMetadataFor = kotlin_kotlin.$_$.n6;
-  var objectMeta = kotlin_kotlin.$_$.l6;
-  var toString = kotlin_kotlin.$_$.n9;
-  var VOID = kotlin_kotlin.$_$.d;
+  var protoOf = kotlin_kotlin.$_$.j6;
+  var objectMeta = kotlin_kotlin.$_$.i6;
+  var setMetadataFor = kotlin_kotlin.$_$.k6;
+  var classMeta = kotlin_kotlin.$_$.n5;
+  var toString = kotlin_kotlin.$_$.d9;
+  var VOID = kotlin_kotlin.$_$.c;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(atomicfu$AtomicRefArray$ref, 'AtomicArray', classMeta);
   setMetadataFor(atomicfu$TraceBase, 'TraceBase', classMeta);
   setMetadataFor(None, 'None', objectMeta, atomicfu$TraceBase);
   setMetadataFor(AtomicRef, 'AtomicRef', classMeta);
   setMetadataFor(AtomicBoolean, 'AtomicBoolean', classMeta);
   setMetadataFor(AtomicInt, 'AtomicInt', classMeta);
-  setMetadataFor(AtomicLong, 'AtomicLong', classMeta);
   //endregion
-  function atomicfu$AtomicRefArray$ref(size) {
-    var tmp = this;
-    var tmp_0 = 0;
-    // Inline function 'kotlin.arrayOfNulls' call
-    var tmp_1 = fillArrayVal(Array(size), null);
-    while (tmp_0 < size) {
-      tmp_1[tmp_0] = atomic$ref$1(null);
-      tmp_0 = tmp_0 + 1 | 0;
-    }
-    tmp.pg_1 = tmp_1;
-  }
-  protoOf(atomicfu$AtomicRefArray$ref).qg = function () {
-    return this.pg_1.length;
-  };
-  protoOf(atomicfu$AtomicRefArray$ref).atomicfu$get = function (index) {
-    return this.pg_1[index];
-  };
-  function atomicfu$AtomicRefArray$ofNulls(size) {
-    return new atomicfu$AtomicRefArray$ref(size);
-  }
   function None() {
     None_instance = this;
     atomicfu$TraceBase.call(this);
@@ -73,10 +49,10 @@
   function AtomicRef(value) {
     this.kotlinx$atomicfu$value = value;
   }
-  protoOf(AtomicRef).rg = function (_set____db54di) {
+  protoOf(AtomicRef).kg = function (_set____db54di) {
     this.kotlinx$atomicfu$value = _set____db54di;
   };
-  protoOf(AtomicRef).sg = function () {
+  protoOf(AtomicRef).lg = function () {
     return this.kotlinx$atomicfu$value;
   };
   protoOf(AtomicRef).atomicfu$compareAndSet = function (expect, update) {
@@ -99,10 +75,10 @@
   function AtomicBoolean(value) {
     this.kotlinx$atomicfu$value = value;
   }
-  protoOf(AtomicBoolean).tg = function (_set____db54di) {
+  protoOf(AtomicBoolean).mg = function (_set____db54di) {
     this.kotlinx$atomicfu$value = _set____db54di;
   };
-  protoOf(AtomicBoolean).sg = function () {
+  protoOf(AtomicBoolean).lg = function () {
     return this.kotlinx$atomicfu$value;
   };
   protoOf(AtomicBoolean).atomicfu$compareAndSet = function (expect, update) {
@@ -125,10 +101,10 @@
   function AtomicInt(value) {
     this.kotlinx$atomicfu$value = value;
   }
-  protoOf(AtomicInt).ug = function (_set____db54di) {
+  protoOf(AtomicInt).ng = function (_set____db54di) {
     this.kotlinx$atomicfu$value = _set____db54di;
   };
-  protoOf(AtomicInt).sg = function () {
+  protoOf(AtomicInt).lg = function () {
     return this.kotlinx$atomicfu$value;
   };
   protoOf(AtomicInt).atomicfu$compareAndSet = function (expect, update) {
@@ -175,59 +151,6 @@
   function atomic$int$1(initial) {
     return atomic$int$(initial, None_getInstance());
   }
-  function AtomicLong(value) {
-    this.kotlinx$atomicfu$value = value;
-  }
-  protoOf(AtomicLong).vg = function (_set____db54di) {
-    this.kotlinx$atomicfu$value = _set____db54di;
-  };
-  protoOf(AtomicLong).sg = function () {
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicLong).atomicfu$compareAndSet = function (expect, update) {
-    if (!this.kotlinx$atomicfu$value.equals(expect))
-      return false;
-    this.kotlinx$atomicfu$value = update;
-    return true;
-  };
-  protoOf(AtomicLong).atomicfu$getAndSet = function (value) {
-    var oldValue = this.kotlinx$atomicfu$value;
-    this.kotlinx$atomicfu$value = value;
-    return oldValue;
-  };
-  protoOf(AtomicLong).atomicfu$getAndIncrement$long = function () {
-    var tmp1 = this.kotlinx$atomicfu$value;
-    this.kotlinx$atomicfu$value = tmp1.hb();
-    return tmp1;
-  };
-  protoOf(AtomicLong).atomicfu$getAndDecrement$long = function () {
-    var tmp1 = this.kotlinx$atomicfu$value;
-    this.kotlinx$atomicfu$value = tmp1.ib();
-    return tmp1;
-  };
-  protoOf(AtomicLong).atomicfu$getAndAdd$long = function (delta) {
-    var oldValue = this.kotlinx$atomicfu$value;
-    this.kotlinx$atomicfu$value = this.kotlinx$atomicfu$value.eb(delta);
-    return oldValue;
-  };
-  protoOf(AtomicLong).atomicfu$addAndGet$long = function (delta) {
-    this.kotlinx$atomicfu$value = this.kotlinx$atomicfu$value.eb(delta);
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicLong).atomicfu$incrementAndGet$long = function () {
-    this.kotlinx$atomicfu$value = this.kotlinx$atomicfu$value.hb();
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicLong).atomicfu$decrementAndGet$long = function () {
-    this.kotlinx$atomicfu$value = this.kotlinx$atomicfu$value.ib();
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicLong).toString = function () {
-    return this.kotlinx$atomicfu$value.toString();
-  };
-  function atomic$long$1(initial) {
-    return atomic$long$(initial, None_getInstance());
-  }
   function atomic$ref$(initial, trace) {
     trace = trace === VOID ? None_getInstance() : trace;
     return new AtomicRef(initial);
@@ -240,20 +163,11 @@
     trace = trace === VOID ? None_getInstance() : trace;
     return new AtomicInt(initial);
   }
-  function atomic$long$(initial, trace) {
-    trace = trace === VOID ? None_getInstance() : trace;
-    return new AtomicLong(initial);
-  }
-  //region block: post-declaration
-  defineProp(protoOf(atomicfu$AtomicRefArray$ref), 'atomicfu$size', protoOf(atomicfu$AtomicRefArray$ref).qg);
-  //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
-  _.$_$.a = atomicfu$AtomicRefArray$ofNulls;
-  _.$_$.b = atomic$boolean$1;
-  _.$_$.c = atomic$long$1;
-  _.$_$.d = atomic$ref$1;
-  _.$_$.e = atomic$int$1;
+  _.$_$.a = atomic$boolean$1;
+  _.$_$.b = atomic$ref$1;
+  _.$_$.c = atomic$int$1;
   //endregion
   return _;
 }));

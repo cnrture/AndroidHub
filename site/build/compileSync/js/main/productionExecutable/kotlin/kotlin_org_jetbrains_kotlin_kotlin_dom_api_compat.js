@@ -12,31 +12,27 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.w;
-  var toSet = kotlin_kotlin.$_$.q4;
-  var THROW_CCE = kotlin_kotlin.$_$.w8;
-  var isCharSequence = kotlin_kotlin.$_$.d6;
-  var trim = kotlin_kotlin.$_$.l8;
-  var toString = kotlin_kotlin.$_$.p6;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.i;
-  var Unit_instance = kotlin_kotlin.$_$.g2;
-  var joinToString = kotlin_kotlin.$_$.o3;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.x;
-  var charSequenceLength = kotlin_kotlin.$_$.p5;
-  var joinTo = kotlin_kotlin.$_$.q3;
-  var protoOf = kotlin_kotlin.$_$.m6;
-  var classMeta = kotlin_kotlin.$_$.q5;
-  var setMetadataFor = kotlin_kotlin.$_$.n6;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.v;
+  var toSet = kotlin_kotlin.$_$.n4;
+  var THROW_CCE = kotlin_kotlin.$_$.p8;
+  var isCharSequence = kotlin_kotlin.$_$.a6;
+  var trim = kotlin_kotlin.$_$.f8;
+  var toString = kotlin_kotlin.$_$.m6;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.h;
+  var Unit_instance = kotlin_kotlin.$_$.d2;
+  var joinToString = kotlin_kotlin.$_$.l3;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.w;
+  var charSequenceLength = kotlin_kotlin.$_$.m5;
+  var joinTo = kotlin_kotlin.$_$.n3;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(EventListenerHandler, 'EventListenerHandler', classMeta);
   //endregion
   function hasClass(_this__u8e3s4, cssClass) {
     // Inline function 'kotlin.text.matches' call
     var this_0 = _this__u8e3s4.className;
     // Inline function 'kotlin.text.toRegex' call
     var this_1 = '(^|.*\\s+)' + cssClass + '($|\\s+.*)';
-    return Regex_init_$Create$(this_1).l8(this_0);
+    return Regex_init_$Create$(this_1).k8(this_0);
   }
   function removeClass(_this__u8e3s4, cssClasses) {
     var tmp$ret$1;
@@ -64,7 +60,7 @@
       var this_1 = toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
       // Inline function 'kotlin.text.toRegex' call
       // Inline function 'kotlin.collections.filterTo' call
-      var this_2 = Regex_init_$Create$('\\s+').p8(this_1, 0);
+      var this_2 = Regex_init_$Create$('\\s+').o8(this_1, 0);
       var destination = ArrayList_init_$Create$();
       var tmp0_iterator = this_2.k();
       while (tmp0_iterator.x()) {
@@ -116,27 +112,11 @@
     }
     return false;
   }
-  function EventListener(handler) {
-    return new EventListenerHandler(handler);
-  }
-  function EventListenerHandler(handler) {
-    this.ng_1 = handler;
-  }
-  protoOf(EventListenerHandler).og = function (event) {
-    this.ng_1(event);
-  };
-  protoOf(EventListenerHandler).handleEvent = function (event) {
-    return this.og(event);
-  };
-  protoOf(EventListenerHandler).toString = function () {
-    return 'EventListenerHandler(' + this.ng_1 + ')';
-  };
   //region block: exports
   _.$_$ = _.$_$ || {};
   _.$_$.a = addClass;
   _.$_$.b = hasClass;
   _.$_$.c = removeClass;
-  _.$_$.d = EventListener;
   //endregion
   return _;
 }));
