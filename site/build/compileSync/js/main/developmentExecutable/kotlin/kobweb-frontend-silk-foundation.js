@@ -29,12 +29,12 @@
   //region block: imports
   var imul = Math.imul;
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var THROW_CCE = kotlin_kotlin.$_$.ve;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
   var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
   var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var KobwebComposeStyleSheet_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m3;
-  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.e6;
+  var KobwebComposeStyleSheet_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j3;
+  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.d6;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
   var StyleSheet = kotlin_org_jetbrains_compose_html_html_core.$_$.g3;
@@ -47,17 +47,17 @@
   var collectionSizeOrDefault = kotlin_kotlin.$_$.a6;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
   var distinct = kotlin_kotlin.$_$.q6;
-  var lazy = kotlin_kotlin.$_$.qf;
+  var lazy = kotlin_kotlin.$_$.of;
   var classMeta = kotlin_kotlin.$_$.ea;
-  var removeSuffix = kotlin_kotlin.$_$.fd;
-  var titleCamelCaseToKebabCase = kotlin_com_varabyte_kobweb_browser_ext.$_$.g;
+  var removeSuffix = kotlin_kotlin.$_$.ed;
+  var titleCamelCaseToKebabCase = kotlin_com_varabyte_kobweb_browser_ext.$_$.f;
   var mapCapacity = kotlin_kotlin.$_$.o7;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.s;
-  var ComparableStyleScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e;
-  var toStyles = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k3;
+  var ComparableStyleScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d;
+  var toStyles = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h3;
   var LinkedHashMap_init_$Create$_0 = kotlin_kotlin.$_$.t;
   var From_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.h;
-  var to = kotlin_kotlin.$_$.zf;
+  var to = kotlin_kotlin.$_$.xf;
   var To_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.i;
   var Percentage = kotlin_org_jetbrains_compose_html_html_core.$_$.q2;
   var toList = kotlin_kotlin.$_$.s8;
@@ -69,65 +69,65 @@
   var CSSKeyframesRuleDeclaration = kotlin_org_jetbrains_compose_html_html_core.$_$.s2;
   var toString = kotlin_kotlin.$_$.rb;
   var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.r1;
-  var CSSAnimation = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d;
+  var CSSAnimation = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.c;
   var KProperty1 = kotlin_kotlin.$_$.fc;
   var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
   var Raw = kotlin_org_jetbrains_compose_html_html_core.$_$.u2;
-  var classNames = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y;
-  var Companion_getInstance_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x3;
+  var classNames = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w;
+  var Companion_getInstance_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u3;
   var Companion_getInstance_1 = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
-  var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b1;
+  var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z;
   var KProperty0 = kotlin_kotlin.$_$.ec;
   var getValue = kotlin_kotlin.$_$.a7;
   var objectCreate = kotlin_kotlin.$_$.mb;
   var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
   var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.b2;
-  var ComparableAttrsScope_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.y2;
-  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j3;
+  var ComparableAttrsScope_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t2;
+  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g3;
   var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.d1;
   var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.f2;
   var charSequenceLength = kotlin_kotlin.$_$.da;
   var charSequenceGet = kotlin_kotlin.$_$.ca;
-  var substringAfter = kotlin_kotlin.$_$.rd;
-  var substringBefore = kotlin_kotlin.$_$.sd;
-  var substringAfterLast = kotlin_kotlin.$_$.pd;
-  var removePrefix = kotlin_kotlin.$_$.ed;
-  var kebabCaseToTitleCamelCase = kotlin_com_varabyte_kobweb_browser_ext.$_$.e;
+  var substringAfter = kotlin_kotlin.$_$.qd;
+  var substringBefore = kotlin_kotlin.$_$.rd;
+  var substringAfterLast = kotlin_kotlin.$_$.od;
+  var removePrefix = kotlin_kotlin.$_$.dd;
+  var kebabCaseToTitleCamelCase = kotlin_com_varabyte_kobweb_browser_ext.$_$.d;
   var joinToString = kotlin_kotlin.$_$.e7;
-  var isNotEmpty = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h1;
+  var isNotEmpty = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g1;
   var media = kotlin_org_jetbrains_compose_html_html_core.$_$.x4;
   var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m1;
   var mutableListOf = kotlin_kotlin.$_$.s7;
   var plus = kotlin_kotlin.$_$.v7;
   var toSet = kotlin_kotlin.$_$.x8;
-  var endsWith = kotlin_kotlin.$_$.uc;
+  var endsWith = kotlin_kotlin.$_$.tc;
   var copyToArray = kotlin_kotlin.$_$.p6;
   var interfaceMeta = kotlin_kotlin.$_$.qa;
-  var substringAfterLast_0 = kotlin_kotlin.$_$.od;
+  var substringAfterLast_0 = kotlin_kotlin.$_$.nd;
   var plus_0 = kotlin_kotlin.$_$.x7;
   var emptyList = kotlin_kotlin.$_$.r6;
   var listOf_0 = kotlin_kotlin.$_$.m7;
   var plus_1 = kotlin_kotlin.$_$.y7;
   var getStringHashCode = kotlin_kotlin.$_$.na;
-  var isBlank = kotlin_kotlin.$_$.yc;
-  var first = kotlin_kotlin.$_$.vc;
-  var Char = kotlin_kotlin.$_$.ie;
+  var isBlank = kotlin_kotlin.$_$.xc;
+  var first = kotlin_kotlin.$_$.uc;
+  var Char = kotlin_kotlin.$_$.ge;
   var setOf = kotlin_kotlin.$_$.d8;
-  var THROW_IAE = kotlin_kotlin.$_$.we;
+  var THROW_IAE = kotlin_kotlin.$_$.ue;
   var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.ke;
+  var Enum = kotlin_kotlin.$_$.ie;
   var numberToDouble = kotlin_kotlin.$_$.kb;
   var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.f5;
-  var toIntOrNull = kotlin_kotlin.$_$.wd;
-  var endsWith_0 = kotlin_kotlin.$_$.tc;
-  var startsWith = kotlin_kotlin.$_$.nd;
-  var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r3;
-  var whiteSpace = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f3;
+  var toIntOrNull = kotlin_kotlin.$_$.ud;
+  var endsWith_0 = kotlin_kotlin.$_$.sc;
+  var startsWith = kotlin_kotlin.$_$.md;
+  var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l3;
+  var whiteSpace = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c3;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var Span = kotlin_org_jetbrains_compose_html_html_core.$_$.d6;
-  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r2;
-  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.g6;
+  var Span = kotlin_org_jetbrains_compose_html_html_core.$_$.c6;
+  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m2;
+  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.f6;
   var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
   var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
   var DisposableEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.j;
@@ -136,21 +136,21 @@
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
   var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
   var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
-  var invokeLater = kotlin_com_varabyte_kobweb_browser_ext.$_$.c;
-  var Annotation = kotlin_kotlin.$_$.he;
-  var asList = kotlin_kotlin.$_$.bg;
+  var invokeLater = kotlin_com_varabyte_kobweb_browser_ext.$_$.b;
+  var Annotation = kotlin_kotlin.$_$.fe;
+  var asList = kotlin_kotlin.$_$.zf;
   var Map = kotlin_kotlin.$_$.f5;
   var isInterface = kotlin_kotlin.$_$.za;
   var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.v;
   var get_cssRem = kotlin_org_jetbrains_compose_html_html_core.$_$.u3;
-  var trimIndent = kotlin_kotlin.$_$.be;
+  var trimIndent = kotlin_kotlin.$_$.zd;
   var MediaFeature = kotlin_org_jetbrains_compose_html_html_core.$_$.t2;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.rf;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.pf;
   var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
   var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p;
-  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n3;
-  var ensureNotNull = kotlin_kotlin.$_$.of;
-  var styleModifier = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h3;
+  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k3;
+  var ensureNotNull = kotlin_kotlin.$_$.mf;
+  var styleModifier = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e3;
   //endregion
   //region block: pre-declaration
   setMetadataFor(SilkStyleSheet, 'SilkStyleSheet', objectMeta, StyleSheet);
@@ -3737,6 +3737,12 @@
     return LocalColorMode;
   }
   var LocalColorMode;
+  function suffixedWith(_this__u8e3s4, colorMode) {
+    _init_properties_ColorMode_kt__lz79sc();
+    // Inline function 'kotlin.text.lowercase' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return _this__u8e3s4 + '_' + colorMode.get_name_woqyms_k$().toLowerCase();
+  }
   var ColorMode_LIGHT_instance;
   var ColorMode_DARK_instance;
   function Companion_5() {
@@ -3841,12 +3847,6 @@
   protoOf(ColorMode).provide_53xuu7_k$ = function () {
     return get_LocalColorMode().provides_3agxel_k$(mutableStateOf(this));
   };
-  function suffixedWith(_this__u8e3s4, colorMode) {
-    _init_properties_ColorMode_kt__lz79sc();
-    // Inline function 'kotlin.text.lowercase' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return _this__u8e3s4 + '_' + colorMode.get_name_woqyms_k$().toLowerCase();
-  }
   function rootColorModeState$delegate$lambda() {
     _init_properties_ColorMode_kt__lz79sc();
     return mutableStateOf(Companion_getInstance_9().get_Instance_ljxvgi_k$().get_initialColorMode_i1z52t_k$());
@@ -5119,21 +5119,20 @@
   _.$_$.e1 = ColorGroup;
   _.$_$.f1 = MutablePalette;
   _.$_$.g1 = toPalette;
-  _.$_$.h1 = valueOf_0;
-  _.$_$.i1 = suffixedWith;
-  _.$_$.j1 = clip;
-  _.$_$.k1 = modifyComponentStyleBase;
-  _.$_$.l1 = prepareSilkFoundation;
-  _.$_$.m1 = Breakpoint_MD_getInstance;
-  _.$_$.n1 = ColorMode_DARK_getInstance;
-  _.$_$.o1 = ColorMode_LIGHT_getInstance;
-  _.$_$.p1 = RectF_init_$Create$_2;
-  _.$_$.q1 = Companion_getInstance_5;
-  _.$_$.r1 = Companion_getInstance_10;
-  _.$_$.s1 = Blue_getInstance;
-  _.$_$.t1 = Gray_getInstance;
-  _.$_$.u1 = Monochrome_getInstance;
-  _.$_$.v1 = Red_getInstance;
+  _.$_$.h1 = suffixedWith;
+  _.$_$.i1 = clip;
+  _.$_$.j1 = modifyComponentStyleBase;
+  _.$_$.k1 = prepareSilkFoundation;
+  _.$_$.l1 = Breakpoint_MD_getInstance;
+  _.$_$.m1 = ColorMode_DARK_getInstance;
+  _.$_$.n1 = ColorMode_LIGHT_getInstance;
+  _.$_$.o1 = RectF_init_$Create$_2;
+  _.$_$.p1 = Companion_getInstance_5;
+  _.$_$.q1 = Companion_getInstance_10;
+  _.$_$.r1 = Blue_getInstance;
+  _.$_$.s1 = Gray_getInstance;
+  _.$_$.t1 = Monochrome_getInstance;
+  _.$_$.u1 = Red_getInstance;
   //endregion
   return _;
 }));

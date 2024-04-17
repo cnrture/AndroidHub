@@ -1,115 +1,84 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kotlin-kotlin-stdlib.js', './kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js', './kotlinx-coroutines-core.js'], factory);
+    define(['exports', './kotlin-kotlin-stdlib.js', './kotlinx-coroutines-core.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js'), require('./kotlinx-coroutines-core.js'));
+    factory(module.exports, require('./kotlin-kotlin-stdlib.js'), require('./kotlinx-coroutines-core.js'));
   else {
     if (typeof this['kotlin-kotlin-stdlib'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-browser-ext'. Its dependency 'kotlin-kotlin-stdlib' was not found. Please, check whether 'kotlin-kotlin-stdlib' is loaded prior to 'kobweb-frontend-browser-ext'.");
     }
-    if (typeof kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat === 'undefined') {
-      throw new Error("Error loading module 'kobweb-frontend-browser-ext'. Its dependency 'kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat' was not found. Please, check whether 'kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat' is loaded prior to 'kobweb-frontend-browser-ext'.");
-    }
     if (typeof this['kotlinx-coroutines-core'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-browser-ext'. Its dependency 'kotlinx-coroutines-core' was not found. Please, check whether 'kotlinx-coroutines-core' is loaded prior to 'kobweb-frontend-browser-ext'.");
     }
-    root['kobweb-frontend-browser-ext'] = factory(typeof this['kobweb-frontend-browser-ext'] === 'undefined' ? {} : this['kobweb-frontend-browser-ext'], this['kotlin-kotlin-stdlib'], kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat, this['kotlinx-coroutines-core']);
+    root['kobweb-frontend-browser-ext'] = factory(typeof this['kobweb-frontend-browser-ext'] === 'undefined' ? {} : this['kobweb-frontend-browser-ext'], this['kotlin-kotlin-stdlib'], this['kotlinx-coroutines-core']);
   }
-}(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core) {
+}(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.ob;
-  var classMeta = kotlin_kotlin.$_$.ea;
-  var setMetadataFor = kotlin_kotlin.$_$.pb;
-  var VOID = kotlin_kotlin.$_$.e;
-  var drop = kotlin_kotlin.$_$.jc;
-  var objectMeta = kotlin_kotlin.$_$.nb;
-  var interfaceMeta = kotlin_kotlin.$_$.qa;
-  var sequence = kotlin_kotlin.$_$.lc;
-  var CoroutineImpl = kotlin_kotlin.$_$.q9;
-  var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var THROW_CCE = kotlin_kotlin.$_$.ve;
-  var SequenceScope = kotlin_kotlin.$_$.hc;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.b9;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
   var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.f2;
   var Char__rangeTo_impl_tkncvp = kotlin_kotlin.$_$.g2;
   var plus = kotlin_kotlin.$_$.w7;
   var plus_0 = kotlin_kotlin.$_$.x7;
-  var SuspendFunction1 = kotlin_kotlin.$_$.r9;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.j;
-  var THROW_IAE = kotlin_kotlin.$_$.we;
-  var enumEntries = kotlin_kotlin.$_$.u9;
-  var objectCreate = kotlin_kotlin.$_$.mb;
-  var Enum = kotlin_kotlin.$_$.ke;
+  var VOID = kotlin_kotlin.$_$.e;
+  var CompletableDeferred = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k;
   var json = kotlin_kotlin.$_$.fb;
-  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.t;
-  var EventListener = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.e;
-  var CompletableDeferred = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.o;
-  var asCoroutineDispatcher = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.v;
-  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q;
-  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.y;
-  var Exception = kotlin_kotlin.$_$.me;
+  var Unit_getInstance = kotlin_kotlin.$_$.l4;
+  var THROW_IAE = kotlin_kotlin.$_$.ue;
+  var enumEntries = kotlin_kotlin.$_$.u9;
+  var Enum = kotlin_kotlin.$_$.ie;
+  var protoOf = kotlin_kotlin.$_$.ob;
+  var classMeta = kotlin_kotlin.$_$.ea;
+  var setMetadataFor = kotlin_kotlin.$_$.pb;
+  var asCoroutineDispatcher = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r;
+  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.m;
+  var launch = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.u;
+  var Exception = kotlin_kotlin.$_$.ke;
   var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.d1;
-  var decodeToString = kotlin_kotlin.$_$.qc;
+  var decodeToString = kotlin_kotlin.$_$.pc;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
   var isCharSequence = kotlin_kotlin.$_$.va;
-  var trim = kotlin_kotlin.$_$.de;
+  var trim = kotlin_kotlin.$_$.be;
   var toString = kotlin_kotlin.$_$.rb;
-  var isBlank = kotlin_kotlin.$_$.yc;
-  var split = kotlin_kotlin.$_$.ld;
+  var isBlank = kotlin_kotlin.$_$.xc;
+  var split = kotlin_kotlin.$_$.kd;
   var compareTo = kotlin_kotlin.$_$.fa;
-  var repeat = kotlin_kotlin.$_$.hd;
+  var repeat = kotlin_kotlin.$_$.gd;
   var Exception_init_$Init$ = kotlin_kotlin.$_$.i1;
   var captureStack = kotlin_kotlin.$_$.z9;
-  var CoroutineScope_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r;
+  var CoroutineImpl = kotlin_kotlin.$_$.q9;
+  var CoroutineScope_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n;
   var isInterface = kotlin_kotlin.$_$.za;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.b9;
   var Companion_getInstance = kotlin_kotlin.$_$.g4;
   var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.j2;
   var intercepted = kotlin_kotlin.$_$.d9;
   var SafeContinuation_init_$Create$ = kotlin_kotlin.$_$.b1;
   var returnIfSuspended = kotlin_kotlin.$_$.h;
+  var SuspendFunction1 = kotlin_kotlin.$_$.r9;
   var KProperty1 = kotlin_kotlin.$_$.fc;
   var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
-  var lazy = kotlin_kotlin.$_$.qf;
-  var decapitalize = kotlin_kotlin.$_$.pc;
+  var lazy = kotlin_kotlin.$_$.of;
+  var decapitalize = kotlin_kotlin.$_$.oc;
   var joinToString = kotlin_kotlin.$_$.e7;
   var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m1;
   var charSequenceLength = kotlin_kotlin.$_$.da;
   var charSequenceGet = kotlin_kotlin.$_$.ca;
-  var isUpperCase = kotlin_kotlin.$_$.ad;
-  var Char = kotlin_kotlin.$_$.ie;
-  var isLowerCase = kotlin_kotlin.$_$.zc;
-  var get_lastIndex = kotlin_kotlin.$_$.cd;
+  var isUpperCase = kotlin_kotlin.$_$.zc;
+  var Char = kotlin_kotlin.$_$.ge;
+  var isLowerCase = kotlin_kotlin.$_$.yc;
+  var get_lastIndex = kotlin_kotlin.$_$.bd;
   var toString_0 = kotlin_kotlin.$_$.i2;
-  var replace = kotlin_kotlin.$_$.id;
-  var last = kotlin_kotlin.$_$.dd;
-  var first = kotlin_kotlin.$_$.vc;
-  var capitalize = kotlin_kotlin.$_$.mc;
+  var replace = kotlin_kotlin.$_$.hd;
+  var last = kotlin_kotlin.$_$.cd;
+  var first = kotlin_kotlin.$_$.uc;
+  var capitalize = kotlin_kotlin.$_$.lc;
+  var objectMeta = kotlin_kotlin.$_$.nb;
   var _Duration___get_inWholeMilliseconds__impl__msfiry = kotlin_kotlin.$_$.c2;
   var Companion_getInstance_0 = kotlin_kotlin.$_$.d4;
   var DurationUnit_MILLISECONDS_getInstance = kotlin_kotlin.$_$.f;
-  var toDuration = kotlin_kotlin.$_$.ge;
+  var toDuration = kotlin_kotlin.$_$.ee;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(ElementTarget, 'ElementTarget', interfaceMeta);
-  setMetadataFor(ElementTarget$Companion$Parent$1, VOID, classMeta, VOID, [ElementTarget]);
-  setMetadataFor(ElementTarget$Companion$PreviousSibling$1, VOID, classMeta, VOID, [ElementTarget]);
-  setMetadataFor(ElementTarget$Companion$NextSibling$1, VOID, classMeta, VOID, [ElementTarget]);
-  setMetadataFor(ElementTarget$Companion$of$1, VOID, classMeta, VOID, [ElementTarget]);
-  setMetadataFor(ElementTarget$Companion$findAncestor$1, VOID, classMeta, VOID, [ElementTarget]);
-  setMetadataFor(ElementTarget$Companion$findDescendant$1, VOID, classMeta, VOID, [ElementTarget]);
-  setMetadataFor(ElementTarget$Companion$withId$1, VOID, classMeta, VOID, [ElementTarget]);
-  setMetadataFor(Companion, 'Companion', objectMeta);
-  setMetadataFor(_get_ancestors_$slambda_pfk3hj, '<get-ancestors>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(_get_descendantsBfs_$slambda_xfszpk, '<get-descendantsBfs>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(Companion_0, 'Companion', objectMeta);
-  setMetadataFor(Companion_1, 'Companion', objectMeta);
-  setMetadataFor(Size, 'Size', classMeta);
-  setMetadataFor(Entry, 'Entry', classMeta);
-  setMetadataFor(BoxType, 'BoxType', classMeta, Enum);
-  setMetadataFor(ObserveOptions, 'ObserveOptions', classMeta, VOID, VOID, ObserveOptions);
-  setMetadataFor(ResizeObserver_0, 'ResizeObserver', classMeta);
-  setMetadataFor(EventListenerManager, 'EventListenerManager', classMeta);
   setMetadataFor(HttpMethod, 'HttpMethod', classMeta, Enum);
   setMetadataFor(ResponseException, 'ResponseException', classMeta, Exception);
   setMetadataFor(getBodyBytesAsync$slambda, 'getBodyBytesAsync$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
@@ -117,314 +86,14 @@
   setMetadataFor($getBodyBytesCOROUTINE$1, '$getBodyBytesCOROUTINE$1', classMeta, CoroutineImpl);
   setMetadataFor(HttpFetcher, 'HttpFetcher', classMeta, VOID, VOID, VOID, VOID, VOID, [3, 4]);
   setMetadataFor(AbortController_0, 'AbortController', classMeta, VOID, VOID, AbortController_0);
-  setMetadataFor(Companion_2, 'Companion', objectMeta);
+  setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(CancellableActionHandle, 'CancellableActionHandle', classMeta);
   //endregion
-  function ElementTarget$Companion$Parent$1() {
-  }
-  protoOf(ElementTarget$Companion$Parent$1).invoke_eqenwi_k$ = function (startingFrom) {
-    var tmp = startingFrom.parentElement;
-    return tmp instanceof HTMLElement ? tmp : null;
-  };
-  function ElementTarget$Companion$PreviousSibling$1() {
-  }
-  protoOf(ElementTarget$Companion$PreviousSibling$1).invoke_eqenwi_k$ = function (startingFrom) {
-    var tmp = startingFrom.previousElementSibling;
-    return tmp instanceof HTMLElement ? tmp : null;
-  };
-  function ElementTarget$Companion$NextSibling$1() {
-  }
-  protoOf(ElementTarget$Companion$NextSibling$1).invoke_eqenwi_k$ = function (startingFrom) {
-    var tmp = startingFrom.nextElementSibling;
-    return tmp instanceof HTMLElement ? tmp : null;
-  };
-  function ElementTarget$Companion$of$1($element) {
-    this.$element_1 = $element;
-  }
-  protoOf(ElementTarget$Companion$of$1).invoke_eqenwi_k$ = function (startingFrom) {
-    return this.$element_1;
-  };
-  function ElementTarget$Companion$findAncestor$1($matching) {
-    this.$matching_1 = $matching;
-  }
-  protoOf(ElementTarget$Companion$findAncestor$1).invoke_eqenwi_k$ = function (startingFrom) {
-    var tmp$ret$1;
-    $l$block: {
-      // Inline function 'kotlin.sequences.firstOrNull' call
-      var tmp0_iterator = drop(get_ancestors(startingFrom), 1).iterator_jk1svi_k$();
-      while (tmp0_iterator.hasNext_bitz1p_k$()) {
-        var element = tmp0_iterator.next_20eer_k$();
-        // Inline function 'com.varabyte.kobweb.browser.dom.<no name provided>.invoke.<anonymous>' call
-        if (this.$matching_1(element)) {
-          tmp$ret$1 = element;
-          break $l$block;
-        }
-      }
-      tmp$ret$1 = null;
-    }
-    return tmp$ret$1;
-  };
-  function ElementTarget$Companion$findDescendant$1($root, $matching) {
-    this.$root_1 = $root;
-    this.$matching_1 = $matching;
-  }
-  protoOf(ElementTarget$Companion$findDescendant$1).invoke_eqenwi_k$ = function (startingFrom) {
-    var tmp0_safe_receiver = this.$root_1;
-    var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : get_descendantsBfs(tmp0_safe_receiver);
-    var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : drop(tmp1_safe_receiver, 1);
-    var tmp;
-    if (tmp2_safe_receiver == null) {
-      tmp = null;
-    } else {
-      var tmp$ret$1;
-      $l$block: {
-        // Inline function 'kotlin.sequences.firstOrNull' call
-        var tmp0_iterator = tmp2_safe_receiver.iterator_jk1svi_k$();
-        while (tmp0_iterator.hasNext_bitz1p_k$()) {
-          var element = tmp0_iterator.next_20eer_k$();
-          // Inline function 'com.varabyte.kobweb.browser.dom.<no name provided>.invoke.<anonymous>' call
-          if (this.$matching_1(element)) {
-            tmp$ret$1 = element;
-            break $l$block;
-          }
-        }
-        tmp$ret$1 = null;
-      }
-      tmp = tmp$ret$1;
-    }
-    return tmp;
-  };
-  function ElementTarget$Companion$withId$1($elementId) {
-    this.$elementId_1 = $elementId;
-  }
-  protoOf(ElementTarget$Companion$withId$1).invoke_eqenwi_k$ = function (startingFrom) {
-    var tmp = document.getElementById(this.$elementId_1);
-    return tmp instanceof HTMLElement ? tmp : null;
-  };
-  function Companion() {
-    Companion_instance = this;
-  }
-  protoOf(Companion).get_Parent_2sous3_k$ = function () {
-    return new ElementTarget$Companion$Parent$1();
-  };
-  protoOf(Companion).get_PreviousSibling_b9lu4i_k$ = function () {
-    return new ElementTarget$Companion$PreviousSibling$1();
-  };
-  protoOf(Companion).get_NextSibling_r9gnnq_k$ = function () {
-    return new ElementTarget$Companion$NextSibling$1();
-  };
-  protoOf(Companion).of_3l2l1d_k$ = function (element) {
-    return new ElementTarget$Companion$of$1(element);
-  };
-  protoOf(Companion).findAncestor_7l9m5i_k$ = function (matching) {
-    return new ElementTarget$Companion$findAncestor$1(matching);
-  };
-  protoOf(Companion).findDescendant_1jwbl1_k$ = function (root, matching) {
-    return new ElementTarget$Companion$findDescendant$1(root, matching);
-  };
-  protoOf(Companion).findDescendant$default_i86gkb_k$ = function (root, matching, $super) {
-    root = root === VOID ? document.body : root;
-    return $super === VOID ? this.findDescendant_1jwbl1_k$(root, matching) : $super.findDescendant_1jwbl1_k$.call(this, root, matching);
-  };
-  protoOf(Companion).withId_30dnix_k$ = function (elementId) {
-    return new ElementTarget$Companion$withId$1(elementId);
-  };
-  var Companion_instance;
-  function Companion_getInstance_1() {
-    if (Companion_instance == null)
-      new Companion();
-    return Companion_instance;
-  }
-  function ElementTarget() {
-  }
   function get_ALPHANUMERICS() {
     _init_properties_ElementUtils_kt__9yjtit();
     return ALPHANUMERICS;
   }
   var ALPHANUMERICS;
-  function get_ancestors(_this__u8e3s4) {
-    _init_properties_ElementUtils_kt__9yjtit();
-    return sequence(_get_ancestors_$slambda_pfk3hj_0(_this__u8e3s4, null));
-  }
-  function get_descendantsBfs(_this__u8e3s4) {
-    _init_properties_ElementUtils_kt__9yjtit();
-    return sequence(_get_descendantsBfs_$slambda_xfszpk_0(_this__u8e3s4, null));
-  }
-  function _get_ancestors_$slambda_pfk3hj($this_ancestors, resultContinuation) {
-    this.$this_ancestors_1 = $this_ancestors;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(_get_ancestors_$slambda_pfk3hj).invoke_c6zub9_k$ = function ($this$sequence, $completion) {
-    var tmp = this.create_hlhcav_k$($this$sequence, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(_get_ancestors_$slambda_pfk3hj).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_c6zub9_k$(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(_get_ancestors_$slambda_pfk3hj).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(5);
-            this.current0__1 = this.$this_ancestors_1;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            if (!!(this.current0__1 == null)) {
-              this.set_state_rjd8d0_k$(4);
-              continue $sm;
-            }
-
-            var tmp_0 = this.current0__1;
-            if (tmp_0 instanceof HTMLElement) {
-              this.set_state_rjd8d0_k$(2);
-              suspendResult = this.$this$sequence_1.yield_3xhcex_k$(this.current0__1, this);
-              if (suspendResult === get_COROUTINE_SUSPENDED()) {
-                return suspendResult;
-              }
-              continue $sm;
-            } else {
-              this.set_state_rjd8d0_k$(3);
-              continue $sm;
-            }
-
-          case 2:
-            this.set_state_rjd8d0_k$(3);
-            continue $sm;
-          case 3:
-            this.current0__1 = this.current0__1.parentElement;
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 4:
-            return Unit_getInstance();
-          case 5:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 5) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  protoOf(_get_ancestors_$slambda_pfk3hj).create_hlhcav_k$ = function ($this$sequence, completion) {
-    var i = new _get_ancestors_$slambda_pfk3hj(this.$this_ancestors_1, completion);
-    i.$this$sequence_1 = $this$sequence;
-    return i;
-  };
-  protoOf(_get_ancestors_$slambda_pfk3hj).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_hlhcav_k$(value instanceof SequenceScope ? value : THROW_CCE(), completion);
-  };
-  function _get_ancestors_$slambda_pfk3hj_0($this_ancestors, resultContinuation) {
-    var i = new _get_ancestors_$slambda_pfk3hj($this_ancestors, resultContinuation);
-    var l = function ($this$sequence, $completion) {
-      return i.invoke_c6zub9_k$($this$sequence, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function _get_descendantsBfs_$slambda_xfszpk($this_descendantsBfs, resultContinuation) {
-    this.$this_descendantsBfs_1 = $this_descendantsBfs;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(_get_descendantsBfs_$slambda_xfszpk).invoke_c6zub9_k$ = function ($this$sequence, $completion) {
-    var tmp = this.create_hlhcav_k$($this$sequence, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(_get_descendantsBfs_$slambda_xfszpk).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_c6zub9_k$(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(_get_descendantsBfs_$slambda_xfszpk).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            var tmp_0 = this;
-            tmp_0.queue0__1 = ArrayList_init_$Create$();
-            this.queue0__1.add_utx5q5_k$(this.$this_descendantsBfs_1);
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 1:
-            if (!!this.queue0__1.isEmpty_y1axqb_k$()) {
-              this.set_state_rjd8d0_k$(4);
-              continue $sm;
-            }
-
-            this.node1__1 = this.queue0__1.removeAt_6niowx_k$(0);
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this.$this$sequence_1.yield_3xhcex_k$(this.node1__1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            var inductionVariable = 0;
-            var last = this.node1__1.children.length;
-            if (inductionVariable < last)
-              $l$loop: do {
-                var i = inductionVariable;
-                inductionVariable = inductionVariable + 1 | 0;
-                var tmp_1 = this.node1__1.children[i];
-                var tmp1_elvis_lhs = tmp_1 instanceof HTMLElement ? tmp_1 : null;
-                var tmp_2;
-                if (tmp1_elvis_lhs == null) {
-                  continue $l$loop;
-                } else {
-                  tmp_2 = tmp1_elvis_lhs;
-                }
-                var child = tmp_2;
-                this.queue0__1.add_utx5q5_k$(child);
-              }
-               while (inductionVariable < last);
-            this.set_state_rjd8d0_k$(1);
-            continue $sm;
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-          case 4:
-            return Unit_getInstance();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  protoOf(_get_descendantsBfs_$slambda_xfszpk).create_hlhcav_k$ = function ($this$sequence, completion) {
-    var i = new _get_descendantsBfs_$slambda_xfszpk(this.$this_descendantsBfs_1, completion);
-    i.$this$sequence_1 = $this$sequence;
-    return i;
-  };
-  protoOf(_get_descendantsBfs_$slambda_xfszpk).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_hlhcav_k$(value instanceof SequenceScope ? value : THROW_CCE(), completion);
-  };
-  function _get_descendantsBfs_$slambda_xfszpk_0($this_descendantsBfs, resultContinuation) {
-    var i = new _get_descendantsBfs_$slambda_xfszpk($this_descendantsBfs, resultContinuation);
-    var l = function ($this$sequence, $completion) {
-      return i.invoke_c6zub9_k$($this$sequence, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
   var properties_initialized_ElementUtils_kt_gopq0n;
   function _init_properties_ElementUtils_kt__9yjtit() {
     if (!properties_initialized_ElementUtils_kt_gopq0n) {
@@ -432,261 +101,6 @@
       ALPHANUMERICS = plus_0(plus(Char__rangeTo_impl_tkncvp(_Char___init__impl__6a9atx(97), _Char___init__impl__6a9atx(122)), Char__rangeTo_impl_tkncvp(_Char___init__impl__6a9atx(65), _Char___init__impl__6a9atx(90))), Char__rangeTo_impl_tkncvp(_Char___init__impl__6a9atx(48), _Char___init__impl__6a9atx(57)));
     }
   }
-  function Companion_0() {
-    Companion_instance_0 = this;
-  }
-  protoOf(Companion_0).from_jt6ngh_k$ = function (actualSize) {
-    return new Size(actualSize.blockSize, actualSize.inlineSize);
-  };
-  var Companion_instance_0;
-  function Companion_getInstance_2() {
-    if (Companion_instance_0 == null)
-      new Companion_0();
-    return Companion_instance_0;
-  }
-  function Companion_1() {
-    Companion_instance_1 = this;
-  }
-  protoOf(Companion_1).from_jo53ki_k$ = function (actualEntry) {
-    var tmp = actualEntry.target;
-    // Inline function 'kotlin.collections.map' call
-    var this_0 = actualEntry.borderBoxSize;
-    // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList_init_$Create$_0(this_0.length);
-    var inductionVariable = 0;
-    var last = this_0.length;
-    while (inductionVariable < last) {
-      var item = this_0[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.browser.dom.observers.Companion.from.<anonymous>' call
-      var tmp$ret$0 = Companion_getInstance_2().from_jt6ngh_k$(item);
-      destination.add_utx5q5_k$(tmp$ret$0);
-    }
-    var tmp_0 = destination;
-    // Inline function 'kotlin.collections.map' call
-    var this_1 = actualEntry.contentBoxSize;
-    // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList_init_$Create$_0(this_1.length);
-    var inductionVariable_0 = 0;
-    var last_0 = this_1.length;
-    while (inductionVariable_0 < last_0) {
-      var item_0 = this_1[inductionVariable_0];
-      inductionVariable_0 = inductionVariable_0 + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.browser.dom.observers.Companion.from.<anonymous>' call
-      var tmp$ret$3 = Companion_getInstance_2().from_jt6ngh_k$(item_0);
-      destination_0.add_utx5q5_k$(tmp$ret$3);
-    }
-    var tmp_1 = destination_0;
-    var tmp_2 = actualEntry.contentRect;
-    // Inline function 'kotlin.collections.map' call
-    var this_2 = actualEntry.devicePixelContentBoxSize;
-    // Inline function 'kotlin.collections.mapTo' call
-    var destination_1 = ArrayList_init_$Create$_0(this_2.length);
-    var inductionVariable_1 = 0;
-    var last_1 = this_2.length;
-    while (inductionVariable_1 < last_1) {
-      var item_1 = this_2[inductionVariable_1];
-      inductionVariable_1 = inductionVariable_1 + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.browser.dom.observers.Companion.from.<anonymous>' call
-      var tmp$ret$6 = Companion_getInstance_2().from_jt6ngh_k$(item_1);
-      destination_1.add_utx5q5_k$(tmp$ret$6);
-    }
-    return new Entry(tmp, tmp_0, tmp_1, tmp_2, destination_1);
-  };
-  var Companion_instance_1;
-  function Companion_getInstance_3() {
-    if (Companion_instance_1 == null)
-      new Companion_1();
-    return Companion_instance_1;
-  }
-  var BoxType_ContentBox_instance;
-  var BoxType_BorderBox_instance;
-  var BoxType_DevicePixelContentBox_instance;
-  function values() {
-    return [BoxType_ContentBox_getInstance(), BoxType_BorderBox_getInstance(), BoxType_DevicePixelContentBox_getInstance()];
-  }
-  function valueOf(value) {
-    switch (value) {
-      case 'ContentBox':
-        return BoxType_ContentBox_getInstance();
-      case 'BorderBox':
-        return BoxType_BorderBox_getInstance();
-      case 'DevicePixelContentBox':
-        return BoxType_DevicePixelContentBox_getInstance();
-      default:
-        BoxType_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries() {
-    if ($ENTRIES == null)
-      $ENTRIES = enumEntries(values());
-    return $ENTRIES;
-  }
-  var BoxType_entriesInitialized;
-  function BoxType_initEntries() {
-    if (BoxType_entriesInitialized)
-      return Unit_getInstance();
-    BoxType_entriesInitialized = true;
-    BoxType_ContentBox_instance = new BoxType('ContentBox', 0);
-    BoxType_BorderBox_instance = new BoxType('BorderBox', 1);
-    BoxType_DevicePixelContentBox_instance = new BoxType('DevicePixelContentBox', 2);
-  }
-  var $ENTRIES;
-  function ResizeObserver_init_$Init$(resized, $this) {
-    ResizeObserver_0.call($this, ResizeObserver$_init_$lambda_4ha6n5(resized));
-    return $this;
-  }
-  function ResizeObserver_init_$Create$(resized) {
-    return ResizeObserver_init_$Init$(resized, objectCreate(protoOf(ResizeObserver_0)));
-  }
-  function _get__actualObserver__lxfsqa($this) {
-    return $this._actualObserver_1;
-  }
-  function Size(blockSize, inlineSize) {
-    Companion_getInstance_2();
-    this.blockSize_1 = blockSize;
-    this.inlineSize_1 = inlineSize;
-  }
-  protoOf(Size).get_blockSize_mxxr45_k$ = function () {
-    return this.blockSize_1;
-  };
-  protoOf(Size).get_inlineSize_7b0w1p_k$ = function () {
-    return this.inlineSize_1;
-  };
-  function Entry(target, borderBoxSize, contentBoxSize, contentRect, devicePixelContentBoxSize) {
-    Companion_getInstance_3();
-    this.target_1 = target;
-    this.borderBoxSize_1 = borderBoxSize;
-    this.contentBoxSize_1 = contentBoxSize;
-    this.contentRect_1 = contentRect;
-    this.devicePixelContentBoxSize_1 = devicePixelContentBoxSize;
-  }
-  protoOf(Entry).get_target_juba8q_k$ = function () {
-    return this.target_1;
-  };
-  protoOf(Entry).get_borderBoxSize_yn7wcp_k$ = function () {
-    return this.borderBoxSize_1;
-  };
-  protoOf(Entry).get_contentBoxSize_ull1z8_k$ = function () {
-    return this.contentBoxSize_1;
-  };
-  protoOf(Entry).get_contentRect_7gh40k_k$ = function () {
-    return this.contentRect_1;
-  };
-  protoOf(Entry).get_devicePixelContentBoxSize_wedm9m_k$ = function () {
-    return this.devicePixelContentBoxSize_1;
-  };
-  function BoxType(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  function ObserveOptions(boxType) {
-    boxType = boxType === VOID ? null : boxType;
-    this.boxType_1 = boxType;
-  }
-  protoOf(ObserveOptions).get_boxType_2gm6rg_k$ = function () {
-    return this.boxType_1;
-  };
-  protoOf(ObserveOptions).toJson_edh1bx_k$ = function () {
-    // Inline function 'kotlin.apply' call
-    var this_0 = json([]);
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.browser.dom.observers.ObserveOptions.toJson.<anonymous>' call
-    var tmp0_safe_receiver = this.boxType_1;
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      this_0['box'] = titleCamelCaseToKebabCase(tmp0_safe_receiver.get_name_woqyms_k$());
-    }
-    return this_0;
-  };
-  function ResizeObserver$_init_$lambda_4ha6n5($resized) {
-    return function (entries, _anonymous_parameter_1__qggqgd) {
-      $resized(entries);
-      return Unit_getInstance();
-    };
-  }
-  function ResizeObserver$_actualObserver$lambda($resized, this$0) {
-    return function (actualEntries, _anonymous_parameter_1__qggqgd) {
-      // Inline function 'kotlin.collections.map' call
-      // Inline function 'kotlin.collections.mapTo' call
-      var destination = ArrayList_init_$Create$_0(actualEntries.length);
-      var inductionVariable = 0;
-      var last = actualEntries.length;
-      while (inductionVariable < last) {
-        var item = actualEntries[inductionVariable];
-        inductionVariable = inductionVariable + 1 | 0;
-        // Inline function 'com.varabyte.kobweb.browser.dom.observers.ResizeObserver._actualObserver.<anonymous>.<anonymous>' call
-        var tmp$ret$0 = Companion_getInstance_3().from_jo53ki_k$(item);
-        destination.add_utx5q5_k$(tmp$ret$0);
-      }
-      $resized(destination, this$0);
-      return Unit_getInstance();
-    };
-  }
-  function BoxType_ContentBox_getInstance() {
-    BoxType_initEntries();
-    return BoxType_ContentBox_instance;
-  }
-  function BoxType_BorderBox_getInstance() {
-    BoxType_initEntries();
-    return BoxType_BorderBox_instance;
-  }
-  function BoxType_DevicePixelContentBox_getInstance() {
-    BoxType_initEntries();
-    return BoxType_DevicePixelContentBox_instance;
-  }
-  function ResizeObserver_0(resized) {
-    var tmp = this;
-    tmp._actualObserver_1 = new ResizeObserver(ResizeObserver$_actualObserver$lambda(resized, this));
-  }
-  protoOf(ResizeObserver_0).observe_kts85w_k$ = function (element) {
-    return this._actualObserver_1.observe(element);
-  };
-  protoOf(ResizeObserver_0).unobserve_r2e9az_k$ = function (element) {
-    return this._actualObserver_1.unobserve(element);
-  };
-  protoOf(ResizeObserver_0).disconnect_t9cc0c_k$ = function () {
-    return this._actualObserver_1.disconnect();
-  };
-  function _get_element__z0t21h($this) {
-    return $this.element_1;
-  }
-  function _get_listeners__760gzy($this) {
-    return $this.listeners_1;
-  }
-  function EventListenerManager(element) {
-    this.element_1 = element;
-    var tmp = this;
-    // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp.listeners_1 = LinkedHashMap_init_$Create$();
-  }
-  protoOf(EventListenerManager).addEventListener_t7ubij_k$ = function (type, listener) {
-    // Inline function 'kotlin.collections.set' call
-    this.listeners_1.put_4fpzoq_k$(type, listener);
-    this.element_1.addEventListener(type, listener);
-  };
-  protoOf(EventListenerManager).addEventListener_q0srgg_k$ = function (type, listener) {
-    this.addEventListener_t7ubij_k$(type, EventListener(listener));
-  };
-  protoOf(EventListenerManager).clearAllListeners_1m8p17_k$ = function () {
-    // Inline function 'kotlin.collections.forEach' call
-    // Inline function 'kotlin.collections.iterator' call
-    var tmp0_iterator = this.listeners_1.get_entries_p20ztl_k$().iterator_jk1svi_k$();
-    while (tmp0_iterator.hasNext_bitz1p_k$()) {
-      var element = tmp0_iterator.next_20eer_k$();
-      // Inline function 'com.varabyte.kobweb.browser.events.EventListenerManager.clearAllListeners.<anonymous>' call
-      // Inline function 'kotlin.collections.component1' call
-      var type = element.get_key_18j28a_k$();
-      // Inline function 'kotlin.collections.component2' call
-      var listener = element.get_value_j01efc_k$();
-      this.element_1.removeEventListener(type, listener);
-    }
-    this.listeners_1.clear_j9egeb_k$();
-  };
   function fetch(_this__u8e3s4, method, resource, headers, body, abortController, $completion) {
     headers = headers === VOID ? null : headers;
     body = body === VOID ? null : body;
@@ -773,10 +187,10 @@
   var HttpMethod_PATCH_instance;
   var HttpMethod_POST_instance;
   var HttpMethod_PUT_instance;
-  function values_0() {
+  function values() {
     return [HttpMethod_DELETE_getInstance(), HttpMethod_GET_getInstance(), HttpMethod_HEAD_getInstance(), HttpMethod_OPTIONS_getInstance(), HttpMethod_PATCH_getInstance(), HttpMethod_POST_getInstance(), HttpMethod_PUT_getInstance()];
   }
-  function valueOf_0(value) {
+  function valueOf(value) {
     switch (value) {
       case 'DELETE':
         return HttpMethod_DELETE_getInstance();
@@ -798,10 +212,10 @@
         break;
     }
   }
-  function get_entries_0() {
-    if ($ENTRIES_0 == null)
-      $ENTRIES_0 = enumEntries(values_0());
-    return $ENTRIES_0;
+  function get_entries() {
+    if ($ENTRIES == null)
+      $ENTRIES = enumEntries(values());
+    return $ENTRIES;
   }
   var HttpMethod_entriesInitialized;
   function HttpMethod_initEntries() {
@@ -816,7 +230,7 @@
     HttpMethod_POST_instance = new HttpMethod('POST', 5);
     HttpMethod_PUT_instance = new HttpMethod('PUT', 6);
   }
-  var $ENTRIES_0;
+  var $ENTRIES;
   function HttpMethod(name, ordinal) {
     Enum.call(this, name, ordinal);
   }
@@ -1434,24 +848,24 @@
   function _get_isInterval__3dx6sk($this) {
     return $this.isInterval_1;
   }
-  function Companion_2() {
-    Companion_instance_2 = this;
+  function Companion() {
+    Companion_instance = this;
     this.Stub_1 = new CancellableActionHandle(0);
   }
-  protoOf(Companion_2).get_Stub_woa49j_k$ = function () {
+  protoOf(Companion).get_Stub_woa49j_k$ = function () {
     return this.Stub_1;
   };
-  var Companion_instance_2;
-  function Companion_getInstance_4() {
-    if (Companion_instance_2 == null)
-      new Companion_2();
-    return Companion_instance_2;
+  var Companion_instance;
+  function Companion_getInstance_1() {
+    if (Companion_instance == null)
+      new Companion();
+    return Companion_instance;
   }
   function _set_id__dl8o4k($this, _set____db54di) {
     $this.id_1 = _set____db54di;
   }
   function CancellableActionHandle(id, isInterval) {
-    Companion_getInstance_4();
+    Companion_getInstance_1();
     isInterval = isInterval === VOID ? false : isInterval;
     this.isInterval_1 = isInterval;
     this.id_1 = id;
@@ -1487,17 +901,14 @@
   }
   //region block: exports
   _.$_$ = _.$_$ || {};
-  _.$_$.a = EventListenerManager;
-  _.$_$.b = get_http;
-  _.$_$.c = invokeLater;
-  _.$_$.d = kebabCaseToCamelCase;
-  _.$_$.e = kebabCaseToTitleCamelCase;
-  _.$_$.f = setInterval;
-  _.$_$.g = titleCamelCaseToKebabCase;
-  _.$_$.h = wrapQuotesIfNecessary;
-  _.$_$.i = ResizeObserver_init_$Create$;
-  _.$_$.j = Companion_getInstance_1;
-  _.$_$.k = Companion_getInstance_4;
+  _.$_$.a = get_http;
+  _.$_$.b = invokeLater;
+  _.$_$.c = kebabCaseToCamelCase;
+  _.$_$.d = kebabCaseToTitleCamelCase;
+  _.$_$.e = setInterval;
+  _.$_$.f = titleCamelCaseToKebabCase;
+  _.$_$.g = wrapQuotesIfNecessary;
+  _.$_$.h = Companion_getInstance_1;
   //endregion
   return _;
 }));

@@ -1,6 +1,7 @@
 package com.canerture.androidhub.components.layouts
 
 import androidx.compose.runtime.Composable
+import com.canerture.androidhub.getSitePalette
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.Overflow
 import com.varabyte.kobweb.compose.css.OverflowWrap
@@ -16,7 +17,6 @@ import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
-import com.canerture.androidhub.toSitePalette
 
 val MarkdownStyle by ComponentStyle {
     // The following rules apply to all descendant elements, indicated by the leading space.
@@ -79,7 +79,7 @@ val MarkdownStyle by ComponentStyle {
         Modifier
             .display(DisplayStyle.Block)
             .fillMaxWidth()
-            .backgroundColor(colorMode.toSitePalette().nearBackground)
+            .backgroundColor(getSitePalette().nearBackground)
             .border(1.px, LineStyle.Solid, colorMode.toPalette().color)
             .borderRadius(0.25.cssRem)
             .padding(0.5.cssRem)

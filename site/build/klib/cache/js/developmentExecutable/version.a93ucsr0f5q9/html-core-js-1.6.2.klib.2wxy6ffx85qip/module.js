@@ -20,8 +20,8 @@
   //region block: imports
   var imul = Math.imul;
   var protoOf = kotlin_kotlin.$_$.ob;
-  var THROW_CCE = kotlin_kotlin.$_$.ve;
-  var Annotation = kotlin_kotlin.$_$.he;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
+  var Annotation = kotlin_kotlin.$_$.fe;
   var classMeta = kotlin_kotlin.$_$.ea;
   var setMetadataFor = kotlin_kotlin.$_$.pb;
   var VOID = kotlin_kotlin.$_$.e;
@@ -29,18 +29,18 @@
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.t;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
   var addAll = kotlin_kotlin.$_$.p5;
-  var to = kotlin_kotlin.$_$.zf;
-  var Pair = kotlin_kotlin.$_$.se;
+  var to = kotlin_kotlin.$_$.xf;
+  var Pair = kotlin_kotlin.$_$.qe;
   var objectMeta = kotlin_kotlin.$_$.nb;
   var asList = kotlin_kotlin.$_$.x5;
   var interfaceMeta = kotlin_kotlin.$_$.qa;
-  var THROW_IAE = kotlin_kotlin.$_$.we;
+  var THROW_IAE = kotlin_kotlin.$_$.ue;
   var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.ke;
+  var Enum = kotlin_kotlin.$_$.ie;
   var NamedEventListener = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.d;
   var charSequenceLength = kotlin_kotlin.$_$.da;
   var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.v;
-  var ensureNotNull = kotlin_kotlin.$_$.of;
+  var ensureNotNull = kotlin_kotlin.$_$.mf;
   var toString = kotlin_kotlin.$_$.rb;
   var hashCode = kotlin_kotlin.$_$.oa;
   var equals = kotlin_kotlin.$_$.ha;
@@ -48,7 +48,7 @@
   var getStringHashCode = kotlin_kotlin.$_$.na;
   var objectCreate = kotlin_kotlin.$_$.mb;
   var toList = kotlin_kotlin.$_$.s8;
-  var toString_0 = kotlin_kotlin.$_$.yf;
+  var toString_0 = kotlin_kotlin.$_$.wf;
   var numberToDouble = kotlin_kotlin.$_$.kb;
   var getNumberHashCode = kotlin_kotlin.$_$.la;
   var defineProp = kotlin_kotlin.$_$.ga;
@@ -64,7 +64,7 @@
   var listOf_0 = kotlin_kotlin.$_$.m7;
   var listOfNotNull = kotlin_kotlin.$_$.l7;
   var joinToString_0 = kotlin_kotlin.$_$.f7;
-  var contains = kotlin_kotlin.$_$.nc;
+  var contains = kotlin_kotlin.$_$.mc;
   var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
   var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
@@ -80,14 +80,14 @@
   var emptyList = kotlin_kotlin.$_$.r6;
   var copyToArray = kotlin_kotlin.$_$.p6;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.xf;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.vf;
   var DOMScope = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.a;
   var SideEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
   var RememberObserver = kotlin_org_jetbrains_compose_runtime_runtime.$_$.m;
   var invalidApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
   var DomApplier = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.b;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
-  var lazy = kotlin_kotlin.$_$.qf;
+  var lazy = kotlin_kotlin.$_$.of;
   var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
   var DisposableEffect_0 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i;
   var KProperty1 = kotlin_kotlin.$_$.fc;
@@ -642,27 +642,27 @@
   setMetadataFor(StylePropertyEnum, 'StylePropertyEnum', interfaceMeta);
   setMetadataFor(Position, 'Position', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_2, 'Companion', objectMeta);
-  setMetadataFor(AlignItems, 'AlignItems', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(AnimationFillMode, 'AnimationFillMode', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_3, 'Companion', objectMeta);
-  setMetadataFor(JustifyContent, 'JustifyContent', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(AlignItems, 'AlignItems', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_4, 'Companion', objectMeta);
-  setMetadataFor(LineStyle, 'LineStyle', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(JustifyContent, 'JustifyContent', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_5, 'Companion', objectMeta);
-  setMetadataFor(DisplayStyle, 'DisplayStyle', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(LineStyle, 'LineStyle', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_6, 'Companion', objectMeta);
-  setMetadataFor(AnimationTimingFunction, 'AnimationTimingFunction', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(DisplayStyle, 'DisplayStyle', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_7, 'Companion', objectMeta);
-  setMetadataFor(FlexDirection, 'FlexDirection', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(AnimationTimingFunction, 'AnimationTimingFunction', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_8, 'Companion', objectMeta);
-  setMetadataFor(AlignSelf, 'AlignSelf', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(FlexDirection, 'FlexDirection', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_9, 'Companion', objectMeta);
-  setMetadataFor(StepPosition, 'StepPosition', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(AlignSelf, 'AlignSelf', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_10, 'Companion', objectMeta);
   setMetadataFor(AnimationDirection, 'AnimationDirection', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_11, 'Companion', objectMeta);
-  setMetadataFor(AnimationFillMode, 'AnimationFillMode', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(Companion_12, 'Companion', objectMeta);
   setMetadataFor(AnimationPlayState, 'AnimationPlayState', interfaceMeta, VOID, [StylePropertyEnum]);
+  setMetadataFor(Companion_12, 'Companion', objectMeta);
+  setMetadataFor(StepPosition, 'StepPosition', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(CSSKeyframe, 'CSSKeyframe', classMeta);
   setMetadataFor(From, 'From', objectMeta, CSSKeyframe);
   setMetadataFor(To, 'To', objectMeta, CSSKeyframe);
@@ -1929,91 +1929,32 @@
   }
   function Position() {
   }
-  function get_value(_this__u8e3s4) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return _this__u8e3s4;
-  }
   function Companion_2() {
     Companion_instance_2 = this;
   }
-  protoOf(Companion_2).get_Normal_22avww_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+  protoOf(Companion_2).get_None_wo6tgh_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'normal';
+    return 'none';
   };
-  protoOf(Companion_2).get_Stretch_2brthg_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+  protoOf(Companion_2).get_Forwards_mqp421_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'stretch';
+    return 'forwards';
   };
-  protoOf(Companion_2).get_Center_3arb0i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+  protoOf(Companion_2).get_Backwards_6xoxjt_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'center';
+    return 'backwards';
   };
-  protoOf(Companion_2).get_Start_ih4i6x_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+  protoOf(Companion_2).get_Both_wnz5re_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'start';
-  };
-  protoOf(Companion_2).get_End_18ju7i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'end';
-  };
-  protoOf(Companion_2).get_FlexStart_cfavq8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-start';
-  };
-  protoOf(Companion_2).get_FlexEnd_fz7iu1_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-end';
-  };
-  protoOf(Companion_2).get_Baseline_bu5gku_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'baseline';
-  };
-  protoOf(Companion_2).get_SafeCenter_caps7p_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'safe center';
-  };
-  protoOf(Companion_2).get_UnsafeCenter_h98ef8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unsafe center';
-  };
-  protoOf(Companion_2).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
-  };
-  protoOf(Companion_2).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
-  };
-  protoOf(Companion_2).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
+    return 'both';
   };
   var Companion_instance_2;
   function Companion_getInstance_3() {
@@ -2021,112 +1962,93 @@
       new Companion_2();
     return Companion_instance_2;
   }
-  function AlignItems() {
+  function AnimationFillMode() {
+  }
+  function get_value(_this__u8e3s4) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return _this__u8e3s4;
   }
   function Companion_3() {
     Companion_instance_3 = this;
   }
+  protoOf(Companion_3).get_Normal_22avww_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'normal';
+  };
+  protoOf(Companion_3).get_Stretch_2brthg_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'stretch';
+  };
   protoOf(Companion_3).get_Center_3arb0i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'center';
   };
   protoOf(Companion_3).get_Start_ih4i6x_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'start';
   };
   protoOf(Companion_3).get_End_18ju7i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'end';
   };
   protoOf(Companion_3).get_FlexStart_cfavq8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'flex-start';
   };
   protoOf(Companion_3).get_FlexEnd_fz7iu1_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'flex-end';
   };
-  protoOf(Companion_3).get_Left_wo5bw0_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+  protoOf(Companion_3).get_Baseline_bu5gku_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'left';
-  };
-  protoOf(Companion_3).get_Right_igdsyb_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'right';
-  };
-  protoOf(Companion_3).get_Normal_22avww_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'normal';
-  };
-  protoOf(Companion_3).get_SpaceBetween_5p3wqd_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'space-between';
-  };
-  protoOf(Companion_3).get_SpaceAround_1tvu22_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'space-around';
-  };
-  protoOf(Companion_3).get_SpaceEvenly_3s2yx0_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'space-evenly';
-  };
-  protoOf(Companion_3).get_Stretch_2brthg_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'stretch';
-  };
-  protoOf(Companion_3).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
-  };
-  protoOf(Companion_3).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
-  };
-  protoOf(Companion_3).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
+    return 'baseline';
   };
   protoOf(Companion_3).get_SafeCenter_caps7p_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'safe center';
   };
   protoOf(Companion_3).get_UnsafeCenter_h98ef8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'unsafe center';
+  };
+  protoOf(Companion_3).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_3).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_3).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignItems' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
   };
   var Companion_instance_3;
   function Companion_getInstance_4() {
@@ -2134,70 +2056,112 @@
       new Companion_3();
     return Companion_instance_3;
   }
-  function JustifyContent() {
+  function AlignItems() {
   }
   function Companion_4() {
     Companion_instance_4 = this;
   }
-  protoOf(Companion_4).get_None_wo6tgh_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_Center_3arb0i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'none';
+    return 'center';
   };
-  protoOf(Companion_4).get_Hidden_viqel_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_Start_ih4i6x_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'hidden';
+    return 'start';
   };
-  protoOf(Companion_4).get_Dotted_2o3wrx_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_End_18ju7i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'dotted';
+    return 'end';
   };
-  protoOf(Companion_4).get_Dashed_2vtwyu_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_FlexStart_cfavq8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'dashed';
+    return 'flex-start';
   };
-  protoOf(Companion_4).get_Solid_ih1j6q_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_FlexEnd_fz7iu1_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'solid';
+    return 'flex-end';
   };
-  protoOf(Companion_4).get_Double_2o3myu_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_Left_wo5bw0_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'double';
+    return 'left';
   };
-  protoOf(Companion_4).get_Groove_17ey1p_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_Right_igdsyb_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'groove';
+    return 'right';
   };
-  protoOf(Companion_4).get_Ridge_igdqoy_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_Normal_22avww_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ridge';
+    return 'normal';
   };
-  protoOf(Companion_4).get_Inset_ibj3dg_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_SpaceBetween_5p3wqd_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'inset';
+    return 'space-between';
   };
-  protoOf(Companion_4).get_Outset_2mooe5_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+  protoOf(Companion_4).get_SpaceAround_1tvu22_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'outset';
+    return 'space-around';
+  };
+  protoOf(Companion_4).get_SpaceEvenly_3s2yx0_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'space-evenly';
+  };
+  protoOf(Companion_4).get_Stretch_2brthg_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'stretch';
+  };
+  protoOf(Companion_4).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_4).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_4).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
+  };
+  protoOf(Companion_4).get_SafeCenter_caps7p_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'safe center';
+  };
+  protoOf(Companion_4).get_UnsafeCenter_h98ef8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.JustifyContent' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unsafe center';
   };
   var Companion_instance_4;
   function Companion_getInstance_5() {
@@ -2205,106 +2169,70 @@
       new Companion_4();
     return Companion_instance_4;
   }
-  function LineStyle() {
+  function JustifyContent() {
   }
   function Companion_5() {
     Companion_instance_5 = this;
   }
-  protoOf(Companion_5).get_Block_i7n684_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'block';
-  };
-  protoOf(Companion_5).get_Inline_bkx8e_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inline';
-  };
-  protoOf(Companion_5).get_InlineBlock_dx9ywb_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inline-block';
-  };
-  protoOf(Companion_5).get_Flex_wo1n4y_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex';
-  };
-  protoOf(Companion_5).get_LegacyInlineFlex_bx32c_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inline-flex';
-  };
-  protoOf(Companion_5).get_Grid_wo2enj_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'grid';
-  };
-  protoOf(Companion_5).get_LegacyInlineGrid_bxukx_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inline-grid';
-  };
-  protoOf(Companion_5).get_FlowRoot_2ttlax_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flow-root';
-  };
   protoOf(Companion_5).get_None_wo6tgh_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'none';
   };
-  protoOf(Companion_5).get_Contents_uww6pv_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_5).get_Hidden_viqel_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'contents';
+    return 'hidden';
   };
-  protoOf(Companion_5).get_Table_ihc6md_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_5).get_Dotted_2o3wrx_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'table';
+    return 'dotted';
   };
-  protoOf(Companion_5).get_TableRow_phjndh_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_5).get_Dashed_2vtwyu_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'table-row';
+    return 'dashed';
   };
-  protoOf(Companion_5).get_ListItem_8hh2km_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_5).get_Solid_ih1j6q_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'list-item';
+    return 'solid';
   };
-  protoOf(Companion_5).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_5).get_Double_2o3myu_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
+    return 'double';
   };
-  protoOf(Companion_5).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_5).get_Groove_17ey1p_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
+    return 'groove';
   };
-  protoOf(Companion_5).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+  protoOf(Companion_5).get_Ridge_igdqoy_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
+    return 'ridge';
+  };
+  protoOf(Companion_5).get_Inset_ibj3dg_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inset';
+  };
+  protoOf(Companion_5).get_Outset_2mooe5_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'outset';
   };
   var Companion_instance_5;
   function Companion_getInstance_6() {
@@ -2312,85 +2240,103 @@
       new Companion_5();
     return Companion_instance_5;
   }
-  function DisplayStyle() {
+  function LineStyle() {
   }
   function Companion_6() {
     Companion_instance_6 = this;
   }
-  protoOf(Companion_6).get_Ease_wo0sbb_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_Block_i7n684_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ease';
+    return 'block';
   };
-  protoOf(Companion_6).get_EaseIn_2esdgk_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_Inline_bkx8e_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ease-in';
+    return 'inline';
   };
-  protoOf(Companion_6).get_EaseOut_3pbekp_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_InlineBlock_dx9ywb_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ease-out';
+    return 'inline-block';
   };
-  protoOf(Companion_6).get_EaseInOut_7d98oe_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_Flex_wo1n4y_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'ease-in-out';
+    return 'flex';
   };
-  protoOf(Companion_6).get_Linear_10u5ou_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_LegacyInlineFlex_bx32c_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'linear';
+    return 'inline-flex';
   };
-  protoOf(Companion_6).get_StepStart_7bah8z_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_Grid_wo2enj_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'step-start';
+    return 'grid';
   };
-  protoOf(Companion_6).get_StepEnd_2ir2xm_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_LegacyInlineGrid_bxukx_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'step-end';
+    return 'inline-grid';
   };
-  protoOf(Companion_6).cubicBezier_lhi215_k$ = function (x1, y1, x2, y2) {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_FlowRoot_2ttlax_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'cubic-bezier(' + x1 + ', ' + y1 + ', ' + x2 + ', ' + y2 + ')';
+    return 'flow-root';
   };
-  protoOf(Companion_6).steps_fj33mi_k$ = function (count, stepPosition) {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_None_wo6tgh_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'steps(' + count + ', ' + stepPosition + ')';
+    return 'none';
   };
-  protoOf(Companion_6).steps_rhawfj_k$ = function (count) {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+  protoOf(Companion_6).get_Contents_uww6pv_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'steps(' + count + ')';
+    return 'contents';
+  };
+  protoOf(Companion_6).get_Table_ihc6md_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'table';
+  };
+  protoOf(Companion_6).get_TableRow_phjndh_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'table-row';
+  };
+  protoOf(Companion_6).get_ListItem_8hh2km_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'list-item';
   };
   protoOf(Companion_6).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'inherit';
   };
   protoOf(Companion_6).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'initial';
   };
   protoOf(Companion_6).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'unset';
@@ -2401,34 +2347,88 @@
       new Companion_6();
     return Companion_instance_6;
   }
-  function AnimationTimingFunction() {
+  function DisplayStyle() {
   }
   function Companion_7() {
     Companion_instance_7 = this;
   }
-  protoOf(Companion_7).get_Row_18jkj3_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
+  protoOf(Companion_7).get_Ease_wo0sbb_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'row';
+    return 'ease';
   };
-  protoOf(Companion_7).get_RowReverse_d0ukpd_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
+  protoOf(Companion_7).get_EaseIn_2esdgk_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'row-reverse';
+    return 'ease-in';
   };
-  protoOf(Companion_7).get_Column_35am4h_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
+  protoOf(Companion_7).get_EaseOut_3pbekp_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'column';
+    return 'ease-out';
   };
-  protoOf(Companion_7).get_ColumnReverse_rkbov1_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
+  protoOf(Companion_7).get_EaseInOut_7d98oe_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'column-reverse';
+    return 'ease-in-out';
+  };
+  protoOf(Companion_7).get_Linear_10u5ou_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'linear';
+  };
+  protoOf(Companion_7).get_StepStart_7bah8z_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'step-start';
+  };
+  protoOf(Companion_7).get_StepEnd_2ir2xm_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'step-end';
+  };
+  protoOf(Companion_7).cubicBezier_lhi215_k$ = function (x1, y1, x2, y2) {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'cubic-bezier(' + x1 + ', ' + y1 + ', ' + x2 + ', ' + y2 + ')';
+  };
+  protoOf(Companion_7).steps_fj33mi_k$ = function (count, stepPosition) {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'steps(' + count + ', ' + stepPosition + ')';
+  };
+  protoOf(Companion_7).steps_rhawfj_k$ = function (count) {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'steps(' + count + ')';
+  };
+  protoOf(Companion_7).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_7).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_7).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationTimingFunction' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
   };
   var Companion_instance_7;
   function Companion_getInstance_8() {
@@ -2436,106 +2436,34 @@
       new Companion_7();
     return Companion_instance_7;
   }
-  function FlexDirection() {
+  function AnimationTimingFunction() {
   }
   function Companion_8() {
     Companion_instance_8 = this;
   }
-  protoOf(Companion_8).get_Auto_wnyn88_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+  protoOf(Companion_8).get_Row_18jkj3_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'auto';
+    return 'row';
   };
-  protoOf(Companion_8).get_Normal_22avww_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+  protoOf(Companion_8).get_RowReverse_d0ukpd_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'normal';
+    return 'row-reverse';
   };
-  protoOf(Companion_8).get_Center_3arb0i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+  protoOf(Companion_8).get_Column_35am4h_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'center';
+    return 'column';
   };
-  protoOf(Companion_8).get_Start_ih4i6x_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+  protoOf(Companion_8).get_ColumnReverse_rkbov1_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.FlexDirection' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'start';
-  };
-  protoOf(Companion_8).get_End_18ju7i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'end';
-  };
-  protoOf(Companion_8).get_SelfStart_di8gbx_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'self-start';
-  };
-  protoOf(Companion_8).get_SelfEnd_9ir8ka_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'self-end';
-  };
-  protoOf(Companion_8).get_FlexStart_cfavq8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-start';
-  };
-  protoOf(Companion_8).get_FlexEnd_fz7iu1_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'flex-end';
-  };
-  protoOf(Companion_8).get_Baseline_bu5gku_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'baseline';
-  };
-  protoOf(Companion_8).get_Stretch_2brthg_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'stretch';
-  };
-  protoOf(Companion_8).get_SafeCenter_caps7p_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'safe center';
-  };
-  protoOf(Companion_8).get_UnsafeCenter_h98ef8_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unsafe center';
-  };
-  protoOf(Companion_8).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
-  };
-  protoOf(Companion_8).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
-  };
-  protoOf(Companion_8).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
+    return 'column-reverse';
   };
   var Companion_instance_8;
   function Companion_getInstance_9() {
@@ -2543,78 +2471,106 @@
       new Companion_8();
     return Companion_instance_8;
   }
-  function AlignSelf() {
-  }
-  function StylePropertyEnum() {
-  }
-  function Position_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function AlignItems_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function JustifyContent_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function LineStyle_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function DisplayStyle_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function AnimationTimingFunction_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
+  function FlexDirection() {
   }
   function Companion_9() {
     Companion_instance_9 = this;
   }
-  protoOf(Companion_9).get_JumpStart_i85v5h_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
+  protoOf(Companion_9).get_Auto_wnyn88_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'jump-start';
+    return 'auto';
   };
-  protoOf(Companion_9).get_JumpEnd_81cg5g_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
+  protoOf(Companion_9).get_Normal_22avww_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'jump-end';
+    return 'normal';
   };
-  protoOf(Companion_9).get_JumpNone_yykj9t_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
+  protoOf(Companion_9).get_Center_3arb0i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'jump-none';
-  };
-  protoOf(Companion_9).get_JumpBoth_yys6yw_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'jump-both';
+    return 'center';
   };
   protoOf(Companion_9).get_Start_ih4i6x_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'start';
   };
   protoOf(Companion_9).get_End_18ju7i_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'end';
+  };
+  protoOf(Companion_9).get_SelfStart_di8gbx_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'self-start';
+  };
+  protoOf(Companion_9).get_SelfEnd_9ir8ka_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'self-end';
+  };
+  protoOf(Companion_9).get_FlexStart_cfavq8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'flex-start';
+  };
+  protoOf(Companion_9).get_FlexEnd_fz7iu1_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'flex-end';
+  };
+  protoOf(Companion_9).get_Baseline_bu5gku_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'baseline';
+  };
+  protoOf(Companion_9).get_Stretch_2brthg_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'stretch';
+  };
+  protoOf(Companion_9).get_SafeCenter_caps7p_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'safe center';
+  };
+  protoOf(Companion_9).get_UnsafeCenter_h98ef8_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unsafe center';
+  };
+  protoOf(Companion_9).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_9).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_9).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
   };
   var Companion_instance_9;
   function Companion_getInstance_10() {
@@ -2622,22 +2578,7 @@
       new Companion_9();
     return Companion_instance_9;
   }
-  function StepPosition() {
-  }
-  function FlexDirection_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function AlignSelf_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
-  }
-  function StepPosition_0(value) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return value;
+  function AlignSelf() {
   }
   function Companion_10() {
     Companion_instance_10 = this;
@@ -2695,29 +2636,47 @@
   function Companion_11() {
     Companion_instance_11 = this;
   }
-  protoOf(Companion_11).get_None_wo6tgh_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+  protoOf(Companion_11).get_Running_gl64p6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'none';
+    return 'running';
   };
-  protoOf(Companion_11).get_Forwards_mqp421_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+  protoOf(Companion_11).get_Paused_2sr1w7_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'forwards';
+    return 'Paused';
   };
   protoOf(Companion_11).get_Backwards_6xoxjt_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'backwards';
   };
   protoOf(Companion_11).get_Both_wnz5re_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationFillMode' call
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return 'both';
+  };
+  protoOf(Companion_11).get_Inherit_a1a9e6_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'inherit';
+  };
+  protoOf(Companion_11).get_Initial_a0h2v9_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'initial';
+  };
+  protoOf(Companion_11).get_Unset_ii4mhs_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return 'unset';
   };
   var Companion_instance_11;
   function Companion_getInstance_12() {
@@ -2725,9 +2684,11 @@
       new Companion_11();
     return Companion_instance_11;
   }
-  function AnimationFillMode() {
+  function AnimationPlayState() {
   }
-  function AnimationDirection_0(value) {
+  function StylePropertyEnum() {
+  }
+  function Position_0(value) {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return value;
@@ -2737,50 +2698,69 @@
     // Inline function 'kotlin.js.asDynamic' call
     return value;
   }
+  function AlignItems_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function JustifyContent_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function LineStyle_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function DisplayStyle_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function AnimationTimingFunction_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
   function Companion_12() {
     Companion_instance_12 = this;
   }
-  protoOf(Companion_12).get_Running_gl64p6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
+  protoOf(Companion_12).get_JumpStart_i85v5h_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'running';
+    return 'jump-start';
   };
-  protoOf(Companion_12).get_Paused_2sr1w7_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
+  protoOf(Companion_12).get_JumpEnd_81cg5g_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'Paused';
+    return 'jump-end';
   };
-  protoOf(Companion_12).get_Backwards_6xoxjt_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
+  protoOf(Companion_12).get_JumpNone_yykj9t_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'backwards';
+    return 'jump-none';
   };
-  protoOf(Companion_12).get_Both_wnz5re_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
+  protoOf(Companion_12).get_JumpBoth_yys6yw_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'both';
+    return 'jump-both';
   };
-  protoOf(Companion_12).get_Inherit_a1a9e6_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
+  protoOf(Companion_12).get_Start_ih4i6x_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'inherit';
+    return 'start';
   };
-  protoOf(Companion_12).get_Initial_a0h2v9_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
+  protoOf(Companion_12).get_End_18ju7i_k$ = function () {
+    // Inline function 'org.jetbrains.compose.web.css.StepPosition' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return 'initial';
-  };
-  protoOf(Companion_12).get_Unset_ii4mhs_k$ = function () {
-    // Inline function 'org.jetbrains.compose.web.css.AnimationPlayState' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    return 'unset';
+    return 'end';
   };
   var Companion_instance_12;
   function Companion_getInstance_13() {
@@ -2788,9 +2768,29 @@
       new Companion_12();
     return Companion_instance_12;
   }
-  function AnimationPlayState() {
+  function StepPosition() {
+  }
+  function FlexDirection_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function AlignSelf_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function AnimationDirection_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
   }
   function AnimationPlayState_0(value) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return value;
+  }
+  function StepPosition_0(value) {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return value;
@@ -5809,9 +5809,6 @@
   function color_0(_this__u8e3s4, value) {
     _this__u8e3s4.property_npxg1h_k$('color', value);
   }
-  function flexGrow(_this__u8e3s4, value) {
-    _this__u8e3s4.property_jk9dw6_k$('flex-grow', value);
-  }
   function alignItems(_this__u8e3s4, alignItems) {
     // Inline function 'org.jetbrains.compose.web.css.value' call
     // Inline function 'kotlin.js.unsafeCast' call
@@ -5824,17 +5821,20 @@
     // Inline function 'kotlin.js.asDynamic' call
     _this__u8e3s4.property_wcrait_k$('align-self', alignSelf);
   }
-  function flexDirection(_this__u8e3s4, flexDirection) {
-    // Inline function 'org.jetbrains.compose.web.css.value' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    _this__u8e3s4.property_wcrait_k$('flex-direction', flexDirection);
+  function flexGrow(_this__u8e3s4, value) {
+    _this__u8e3s4.property_jk9dw6_k$('flex-grow', value);
   }
   function justifyContent(_this__u8e3s4, justifyContent) {
     // Inline function 'org.jetbrains.compose.web.css.value' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     _this__u8e3s4.property_wcrait_k$('justify-content', justifyContent);
+  }
+  function flexDirection(_this__u8e3s4, flexDirection) {
+    // Inline function 'org.jetbrains.compose.web.css.value' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    _this__u8e3s4.property_wcrait_k$('flex-direction', flexDirection);
   }
   function gap(_this__u8e3s4, value) {
     _this__u8e3s4.property_npxg1h_k$('gap', value);
@@ -7203,56 +7203,32 @@
     return Style_0;
   }
   var Style_0;
-  function Text_0(value, $composer, $changed) {
+  function H2_0(attrs, content, $composer, $changed, $default) {
     _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1813500779);
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(881063629);
     var $dirty = $changed;
-    if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(value) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
       if (isTraceInProgress()) {
-        traceEventStart(-1813500779, $dirty, -1, 'org.jetbrains.compose.web.dom.Text (Elements.kt:482)');
+        traceEventStart(881063629, $dirty, -1, 'org.jetbrains.compose.web.dom.H2 (Elements.kt:539)');
       }
-      // Inline function 'androidx.compose.runtime.ComposeNode' call
-      $composer_0.startReplaceableGroup_ip860b_k$(-671462136);
-      // Inline function 'androidx.compose.runtime.cache' call
-      var this_0 = $composer_0;
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.rememberedValue_4dg93v_k$();
-      var tmp;
-      if (false ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
-        // Inline function 'org.jetbrains.compose.web.dom.Text.<anonymous>' call
-        var value_0 = Text$lambda;
-        this_0.updateRememberedValue_l1wh71_k$(value_0);
-        tmp = value_0;
-      } else {
-        tmp = it;
-      }
-      var tmp_0 = tmp;
-      var tmpCache = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.endReplaceableGroup_ern0ak_k$();
-      var $composer_1 = $composer_0;
-      $composer_1.startReplaceableGroup_ip860b_k$(1886828752);
-      sourceInformation($composer_1, 'CC(ComposeNode):Composables.kt#9igjgp');
-      var tmp_1 = $composer_1.get_applier_bupu8u_k$();
-      if (!(tmp_1 instanceof DomApplier)) {
-        invalidApplier();
-      }
-      $composer_1.startNode_htvs8k_k$();
-      if ($composer_1.get_inserting_25mlsw_k$()) {
-        var tmp_2 = $composer_1;
-        tmp_2.createNode_ahrd54_k$(Text$lambda_0(tmpCache));
-      } else {
-        $composer_1.useNode_io5s9l_k$();
-      }
-      // Inline function 'org.jetbrains.compose.web.dom.Text.<anonymous>' call
-      var $this$ComposeNode = _Updater___init__impl__rbfxm8($composer_1);
-      Updater__set_impl_v7kwss($this$ComposeNode, value, Text$lambda_1);
-      $composer_1.endNode_3m0yfn_k$();
-      $composer_1.endReplaceableGroup_ern0ak_k$();
+      TagElement(get_H2(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
@@ -7263,7 +7239,202 @@
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Text$lambda_2(value, $changed));
+      tmp0_safe_receiver.updateScope_t8jcf_k$(H2$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function P_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-892332201);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-892332201, $dirty, -1, 'org.jetbrains.compose.web.dom.P (Elements.kt:569)');
+      }
+      TagElement(get_P(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(P$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Code_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(960073712);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(960073712, $dirty, -1, 'org.jetbrains.compose.web.dom.Code (Elements.kt:810)');
+      }
+      TagElement(get_Code(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Code$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function H1_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(867530828);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(867530828, $dirty, -1, 'org.jetbrains.compose.web.dom.H1 (Elements.kt:533)');
+      }
+      TagElement(get_H1(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(H1$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Span_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-606646835);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-606646835, $dirty, -1, 'org.jetbrains.compose.web.dom.Span (Elements.kt:617)');
+      }
+      TagElement(get_Span(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Span$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Pre_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1813332106);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(1813332106, $dirty, -1, 'org.jetbrains.compose.web.dom.Pre (Elements.kt:798)');
+      }
+      TagElement(get_Pre(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Pre$lambda(attrs_0, content_0, $changed, $default));
     }
   }
   function Div_0(attrs, content, $composer, $changed, $default) {
@@ -7303,6 +7474,84 @@
       null;
     else {
       tmp0_safe_receiver.updateScope_t8jcf_k$(Div$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function H3_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(894596430);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(894596430, $dirty, -1, 'org.jetbrains.compose.web.dom.H3 (Elements.kt:545)');
+      }
+      TagElement(get_H3(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(H3$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Li_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-991532288);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-991532288, $dirty, -1, 'org.jetbrains.compose.web.dom.Li (Elements.kt:639)');
+      }
+      TagElement(get_Li(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Li$lambda(attrs_0, content_0, $changed, $default));
     }
   }
   function Companion_16() {
@@ -7408,6 +7657,320 @@
       null;
     else {
       tmp0_safe_receiver.updateScope_t8jcf_k$(A$lambda_0(href_0, attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Img_0(src, alt, attrs, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var alt_0 = {_v: alt};
+    var attrs_0 = {_v: attrs};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(140604733);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(src) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(alt_0._v) ? 32 : 16);
+    if (!(($default & 4) === 0))
+      $dirty = $dirty | 384;
+    else if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 256 : 128);
+    if (!(($dirty & 731) === 146) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 2) === 0)) {
+        alt_0._v = '';
+      }
+      if (!(($default & 4) === 0)) {
+        attrs_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(140604733, $dirty, -1, 'org.jetbrains.compose.web.dom.Img (Elements.kt:646)');
+      }
+      var tmp = get_Img();
+      $composer_0.startReplaceableGroup_ip860b_k$(-671457079);
+      // Inline function 'androidx.compose.runtime.cache' call
+      var this_0 = $composer_0;
+      var invalid = !!(!!($composer_0.changed_ga7h3f_k$(src) | $composer_0.changed_ga7h3f_k$(alt_0._v)) | $composer_0.changedInstance_s1wkiy_k$(attrs_0._v));
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = this_0.rememberedValue_4dg93v_k$();
+      var tmp_0;
+      if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
+        // Inline function 'org.jetbrains.compose.web.dom.Img.<anonymous>' call
+        var value = Img$lambda(src, alt_0, attrs_0);
+        this_0.updateRememberedValue_l1wh71_k$(value);
+        tmp_0 = value;
+      } else {
+        tmp_0 = it;
+      }
+      var tmp_1 = tmp_0;
+      var tmpCache = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
+      TagElement(tmp, tmpCache, null, $composer_0, 384);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Img$lambda_0(src, alt_0, attrs_0, $changed, $default));
+    }
+  }
+  function Text_0(value, $composer, $changed) {
+    _init_properties_Elements_kt__eyv5nt();
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1813500779);
+    var $dirty = $changed;
+    if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(value) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-1813500779, $dirty, -1, 'org.jetbrains.compose.web.dom.Text (Elements.kt:482)');
+      }
+      // Inline function 'androidx.compose.runtime.ComposeNode' call
+      $composer_0.startReplaceableGroup_ip860b_k$(-671462136);
+      // Inline function 'androidx.compose.runtime.cache' call
+      var this_0 = $composer_0;
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = this_0.rememberedValue_4dg93v_k$();
+      var tmp;
+      if (false ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
+        // Inline function 'org.jetbrains.compose.web.dom.Text.<anonymous>' call
+        var value_0 = Text$lambda;
+        this_0.updateRememberedValue_l1wh71_k$(value_0);
+        tmp = value_0;
+      } else {
+        tmp = it;
+      }
+      var tmp_0 = tmp;
+      var tmpCache = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+      $composer_0.endReplaceableGroup_ern0ak_k$();
+      var $composer_1 = $composer_0;
+      $composer_1.startReplaceableGroup_ip860b_k$(1886828752);
+      sourceInformation($composer_1, 'CC(ComposeNode):Composables.kt#9igjgp');
+      var tmp_1 = $composer_1.get_applier_bupu8u_k$();
+      if (!(tmp_1 instanceof DomApplier)) {
+        invalidApplier();
+      }
+      $composer_1.startNode_htvs8k_k$();
+      if ($composer_1.get_inserting_25mlsw_k$()) {
+        var tmp_2 = $composer_1;
+        tmp_2.createNode_ahrd54_k$(Text$lambda_0(tmpCache));
+      } else {
+        $composer_1.useNode_io5s9l_k$();
+      }
+      // Inline function 'org.jetbrains.compose.web.dom.Text.<anonymous>' call
+      var $this$ComposeNode = _Updater___init__impl__rbfxm8($composer_1);
+      Updater__set_impl_v7kwss($this$ComposeNode, value, Text$lambda_1);
+      $composer_1.endNode_3m0yfn_k$();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Text$lambda_2(value, $changed));
+    }
+  }
+  function H4_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(908129231);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(908129231, $dirty, -1, 'org.jetbrains.compose.web.dom.H4 (Elements.kt:551)');
+      }
+      TagElement(get_H4(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(H4$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Ul_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1470249702);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-1470249702, $dirty, -1, 'org.jetbrains.compose.web.dom.Ul (Elements.kt:627)');
+      }
+      TagElement(get_Ul(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Ul$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Em_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(420948395);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(420948395, $dirty, -1, 'org.jetbrains.compose.web.dom.Em (Elements.kt:575)');
+      }
+      TagElement(get_Em(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Em$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Button_0(attrs, content, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var content_0 = {_v: content};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(17018421);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (!(($default & 2) === 0)) {
+        content_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(17018421, $dirty, -1, 'org.jetbrains.compose.web.dom.Button (Elements.kt:527)');
+      }
+      TagElement(get_Button(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Button$lambda(attrs_0, content_0, $changed, $default));
+    }
+  }
+  function Hr_0(attrs, $composer, $changed, $default) {
+    _init_properties_Elements_kt__eyv5nt();
+    var attrs_0 = {_v: attrs};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1499320512);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(1499320512, $dirty, -1, 'org.jetbrains.compose.web.dom.Hr (Elements.kt:845)');
+      }
+      TagElement(get_Hr(), attrs_0._v, null, $composer_0, 384 | 112 & $dirty << 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Hr$lambda(attrs_0, $changed, $default));
     }
   }
   function Style_1(applyAttrs, cssRules, $composer, $changed, $default) {
@@ -7531,599 +8094,95 @@
       }
        while (inductionVariable < times);
   }
-  function Code_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(960073712);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(960073712, $dirty, -1, 'org.jetbrains.compose.web.dom.Code (Elements.kt:810)');
-      }
-      TagElement(get_Code(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Code$lambda(attrs_0, content_0, $changed, $default));
-    }
+  function H2$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      H2_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
-  function Li_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-991532288);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-991532288, $dirty, -1, 'org.jetbrains.compose.web.dom.Li (Elements.kt:639)');
-      }
-      TagElement(get_Li(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Li$lambda(attrs_0, content_0, $changed, $default));
-    }
+  function P$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      P_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
-  function Em_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(420948395);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(420948395, $dirty, -1, 'org.jetbrains.compose.web.dom.Em (Elements.kt:575)');
-      }
-      TagElement(get_Em(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Em$lambda(attrs_0, content_0, $changed, $default));
-    }
+  function Code$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Code_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
-  function H1_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(867530828);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(867530828, $dirty, -1, 'org.jetbrains.compose.web.dom.H1 (Elements.kt:533)');
-      }
-      TagElement(get_H1(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(H1$lambda(attrs_0, content_0, $changed, $default));
-    }
+  function H1$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      H1_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
-  function P_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-892332201);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-892332201, $dirty, -1, 'org.jetbrains.compose.web.dom.P (Elements.kt:569)');
-      }
-      TagElement(get_P(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(P$lambda(attrs_0, content_0, $changed, $default));
-    }
+  function Span$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Span_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
-  function H2_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(881063629);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(881063629, $dirty, -1, 'org.jetbrains.compose.web.dom.H2 (Elements.kt:539)');
-      }
-      TagElement(get_H2(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(H2$lambda(attrs_0, content_0, $changed, $default));
-    }
+  function Pre$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Pre_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
-  function H3_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(894596430);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(894596430, $dirty, -1, 'org.jetbrains.compose.web.dom.H3 (Elements.kt:545)');
-      }
-      TagElement(get_H3(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(H3$lambda(attrs_0, content_0, $changed, $default));
-    }
+  function Div$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Div_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
-  function H4_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(908129231);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(908129231, $dirty, -1, 'org.jetbrains.compose.web.dom.H4 (Elements.kt:551)');
-      }
-      TagElement(get_H4(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(H4$lambda(attrs_0, content_0, $changed, $default));
-    }
+  function H3$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      H3_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
-  function Ul_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1470249702);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-1470249702, $dirty, -1, 'org.jetbrains.compose.web.dom.Ul (Elements.kt:627)');
-      }
-      TagElement(get_Ul(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Ul$lambda(attrs_0, content_0, $changed, $default));
-    }
+  function Li$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Li_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
-  function Pre_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1813332106);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
+  function A$lambda($href, $attrs) {
+    return function ($this$TagElement) {
+      var tmp;
+      if (!($href._v == null)) {
+        href($this$TagElement, $href._v);
+        tmp = Unit_getInstance();
       }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(1813332106, $dirty, -1, 'org.jetbrains.compose.web.dom.Pre (Elements.kt:798)');
-      }
-      TagElement(get_Pre(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Pre$lambda(attrs_0, content_0, $changed, $default));
-    }
-  }
-  function Span_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-606646835);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-606646835, $dirty, -1, 'org.jetbrains.compose.web.dom.Span (Elements.kt:617)');
-      }
-      TagElement(get_Span(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Span$lambda(attrs_0, content_0, $changed, $default));
-    }
-  }
-  function Hr_0(attrs, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1499320512);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(1499320512, $dirty, -1, 'org.jetbrains.compose.web.dom.Hr (Elements.kt:845)');
-      }
-      TagElement(get_Hr(), attrs_0._v, null, $composer_0, 384 | 112 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Hr$lambda(attrs_0, $changed, $default));
-    }
-  }
-  function Button_0(attrs, content, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var content_0 = {_v: content};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(17018421);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content_0._v) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (!(($default & 2) === 0)) {
-        content_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(17018421, $dirty, -1, 'org.jetbrains.compose.web.dom.Button (Elements.kt:527)');
-      }
-      TagElement(get_Button(), attrs_0._v, content_0._v, $composer_0, 112 & $dirty << 3 | 896 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Button$lambda(attrs_0, content_0, $changed, $default));
-    }
-  }
-  function Br_0(attrs, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var attrs_0 = {_v: attrs};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1362499962);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-1362499962, $dirty, -1, 'org.jetbrains.compose.web.dom.Br (Elements.kt:621)');
-      }
-      TagElement(get_Br(), attrs_0._v, null, $composer_0, 384 | 112 & $dirty << 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Br$lambda(attrs_0, $changed, $default));
-    }
-  }
-  function Img_0(src, alt, attrs, $composer, $changed, $default) {
-    _init_properties_Elements_kt__eyv5nt();
-    var alt_0 = {_v: alt};
-    var attrs_0 = {_v: attrs};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(140604733);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(src) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(alt_0._v) ? 32 : 16);
-    if (!(($default & 4) === 0))
-      $dirty = $dirty | 384;
-    else if (($changed & 896) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 256 : 128);
-    if (!(($dirty & 731) === 146) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 2) === 0)) {
-        alt_0._v = '';
-      }
-      if (!(($default & 4) === 0)) {
-        attrs_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(140604733, $dirty, -1, 'org.jetbrains.compose.web.dom.Img (Elements.kt:646)');
-      }
-      var tmp = get_Img();
-      $composer_0.startReplaceableGroup_ip860b_k$(-671457079);
-      // Inline function 'androidx.compose.runtime.cache' call
-      var this_0 = $composer_0;
-      var invalid = !!(!!($composer_0.changed_ga7h3f_k$(src) | $composer_0.changed_ga7h3f_k$(alt_0._v)) | $composer_0.changedInstance_s1wkiy_k$(attrs_0._v));
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.rememberedValue_4dg93v_k$();
       var tmp_0;
-      if (invalid ? true : it === Companion_getInstance().get_Empty_i9b85g_k$()) {
-        // Inline function 'org.jetbrains.compose.web.dom.Img.<anonymous>' call
-        var value = Img$lambda(src, alt_0, attrs_0);
-        this_0.updateRememberedValue_l1wh71_k$(value);
-        tmp_0 = value;
-      } else {
-        tmp_0 = it;
+      if (!($attrs._v == null)) {
+        tmp_0 = $attrs._v($this$TagElement);
       }
-      var tmp_1 = tmp_0;
-      var tmpCache = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_0.endReplaceableGroup_ern0ak_k$();
-      TagElement(tmp, tmpCache, null, $composer_0, 384);
-      if (isTraceInProgress()) {
-        traceEventEnd();
+      return Unit_getInstance();
+    };
+  }
+  function A$lambda_0($href, $attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      A_0($href._v, $attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
+  function Img$lambda($src, $alt, $attrs) {
+    return function ($this$TagElement) {
+      alt(src($this$TagElement, $src), $alt._v);
+      var tmp;
+      if (!($attrs._v == null)) {
+        tmp = $attrs._v($this$TagElement);
       }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Img$lambda_0(src, alt_0, attrs_0, $changed, $default));
-    }
+      return Unit_getInstance();
+    };
+  }
+  function Img$lambda_0($src, $alt, $attrs, $$changed, $$default) {
+    return function ($composer, $force) {
+      Img_0($src, $alt._v, $attrs._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
   function Text$lambda() {
     _init_properties_Elements_kt__eyv5nt();
@@ -8146,29 +8205,33 @@
       return Unit_getInstance();
     };
   }
-  function Div$lambda($attrs, $content, $$changed, $$default) {
+  function H4$lambda($attrs, $content, $$changed, $$default) {
     return function ($composer, $force) {
-      Div_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      H4_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_getInstance();
     };
   }
-  function A$lambda($href, $attrs) {
-    return function ($this$TagElement) {
-      var tmp;
-      if (!($href._v == null)) {
-        href($this$TagElement, $href._v);
-        tmp = Unit_getInstance();
-      }
-      var tmp_0;
-      if (!($attrs._v == null)) {
-        tmp_0 = $attrs._v($this$TagElement);
-      }
+  function Ul$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Ul_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_getInstance();
     };
   }
-  function A$lambda_0($href, $attrs, $content, $$changed, $$default) {
+  function Em$lambda($attrs, $content, $$changed, $$default) {
     return function ($composer, $force) {
-      A_0($href._v, $attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      Em_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
+  function Button$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Button_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
+  function Hr$lambda($attrs, $$changed, $$default) {
+    return function ($composer, $force) {
+      Hr_0($attrs._v, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_getInstance();
     };
   }
@@ -8243,106 +8306,6 @@
   function Style$lambda_1($applyAttrs, $cssRules, $$changed, $$default) {
     return function ($composer, $force) {
       Style_1($applyAttrs._v, $cssRules, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Code$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      Code_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Li$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      Li_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Em$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      Em_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function H1$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      H1_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function P$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      P_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function H2$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      H2_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function H3$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      H3_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function H4$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      H4_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Ul$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      Ul_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Pre$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      Pre_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Span$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      Span_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Hr$lambda($attrs, $$changed, $$default) {
-    return function ($composer, $force) {
-      Hr_0($attrs._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Button$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      Button_0($attrs._v, $content._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Br$lambda($attrs, $$changed, $$default) {
-    return function ($composer, $force) {
-      Br_0($attrs._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function Img$lambda($src, $alt, $attrs) {
-    return function ($this$TagElement) {
-      alt(src($this$TagElement, $src), $alt._v);
-      var tmp;
-      if (!($attrs._v == null)) {
-        tmp = $attrs._v($this$TagElement);
-      }
-      return Unit_getInstance();
-    };
-  }
-  function Img$lambda_0($src, $alt, $attrs, $$changed, $$default) {
-    return function ($composer, $force) {
-      Img_0($src, $alt._v, $attrs._v, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_getInstance();
     };
   }
@@ -9407,18 +9370,18 @@
   _.$_$ = _.$_$ || {};
   _.$_$.a = ButtonType_Button_getInstance;
   _.$_$.b = StyleSheet_init_$Init$;
-  _.$_$.c = Companion_getInstance_3;
-  _.$_$.d = Companion_getInstance_9;
+  _.$_$.c = Companion_getInstance_4;
+  _.$_$.d = Companion_getInstance_10;
   _.$_$.e = Companion_getInstance_11;
-  _.$_$.f = Companion_getInstance_12;
-  _.$_$.g = Companion_getInstance_7;
+  _.$_$.f = Companion_getInstance_3;
+  _.$_$.g = Companion_getInstance_8;
   _.$_$.h = From_getInstance;
   _.$_$.i = To_getInstance;
   _.$_$.j = Color_getInstance;
-  _.$_$.k = Companion_getInstance_6;
-  _.$_$.l = Companion_getInstance_8;
-  _.$_$.m = Companion_getInstance_4;
-  _.$_$.n = Companion_getInstance_5;
+  _.$_$.k = Companion_getInstance_7;
+  _.$_$.l = Companion_getInstance_9;
+  _.$_$.m = Companion_getInstance_5;
+  _.$_$.n = Companion_getInstance_6;
   _.$_$.o = Companion_getInstance_2;
   _.$_$.p = classes;
   _.$_$.q = contentEditable;
@@ -9549,26 +9512,25 @@
   _.$_$.l5 = width_0;
   _.$_$.m5 = width;
   _.$_$.n5 = A_0;
-  _.$_$.o5 = Br_0;
-  _.$_$.p5 = Button_0;
-  _.$_$.q5 = Code_0;
-  _.$_$.r5 = Div_0;
-  _.$_$.s5 = ElementBuilder;
-  _.$_$.t5 = Em_0;
-  _.$_$.u5 = H1_0;
-  _.$_$.v5 = H2_0;
-  _.$_$.w5 = H3_0;
-  _.$_$.x5 = H4_0;
-  _.$_$.y5 = Hr_0;
-  _.$_$.z5 = Img_0;
-  _.$_$.a6 = Li_0;
-  _.$_$.b6 = Pre_0;
-  _.$_$.c6 = P_0;
-  _.$_$.d6 = Span_0;
-  _.$_$.e6 = Style_1;
-  _.$_$.f6 = TagElement;
-  _.$_$.g6 = Text_0;
-  _.$_$.h6 = Ul_0;
+  _.$_$.o5 = Button_0;
+  _.$_$.p5 = Code_0;
+  _.$_$.q5 = Div_0;
+  _.$_$.r5 = ElementBuilder;
+  _.$_$.s5 = Em_0;
+  _.$_$.t5 = H1_0;
+  _.$_$.u5 = H2_0;
+  _.$_$.v5 = H3_0;
+  _.$_$.w5 = H4_0;
+  _.$_$.x5 = Hr_0;
+  _.$_$.y5 = Img_0;
+  _.$_$.z5 = Li_0;
+  _.$_$.a6 = Pre_0;
+  _.$_$.b6 = P_0;
+  _.$_$.c6 = Span_0;
+  _.$_$.d6 = Style_1;
+  _.$_$.e6 = TagElement;
+  _.$_$.f6 = Text_0;
+  _.$_$.g6 = Ul_0;
   //endregion
   return _;
 }));

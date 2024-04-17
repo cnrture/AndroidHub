@@ -20,7 +20,7 @@ private const val COLOR_MODE_KEY = "androidhub:colorMode"
 
 @InitSilk
 fun initColorMode(ctx: InitSilkContext) {
-    ctx.config.initialColorMode = localStorage.getItem(COLOR_MODE_KEY)?.let { ColorMode.valueOf(it) } ?: ColorMode.DARK
+    ctx.config.initialColorMode = ColorMode.LIGHT
 }
 
 @App

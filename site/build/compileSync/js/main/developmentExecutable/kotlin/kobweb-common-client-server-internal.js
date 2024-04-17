@@ -16,7 +16,7 @@
   var protoOf = kotlin_kotlin.$_$.ob;
   var objectCreate = kotlin_kotlin.$_$.mb;
   var get_lastIndex = kotlin_kotlin.$_$.h7;
-  var replace = kotlin_kotlin.$_$.id;
+  var replace = kotlin_kotlin.$_$.hd;
   var classMeta = kotlin_kotlin.$_$.ea;
   var setMetadataFor = kotlin_kotlin.$_$.pb;
   //endregion

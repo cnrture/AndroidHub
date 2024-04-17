@@ -29,7 +29,7 @@ import org.jetbrains.compose.web.dom.Text
 import com.canerture.androidhub.HeadlineTextStyle
 import com.canerture.androidhub.SubheadlineTextStyle
 import com.canerture.androidhub.components.layouts.PageLayout
-import com.canerture.androidhub.toSitePalette
+import com.canerture.androidhub.getSitePalette
 
 // Container that has a tagline and grid on desktop, and just the tagline on mobile
 val HeroContainerStyle by ComponentStyle {
@@ -69,7 +69,7 @@ fun HomePage() {
     PageLayout("Home") {
         Row(HeroContainerStyle.toModifier()) {
             Box {
-                val sitePalette = ColorMode.current.toSitePalette()
+                val sitePalette = getSitePalette()
 
                 Column(Modifier.gap(2.cssRem)) {
                     Div(HeadlineTextStyle.toAttrs()) {
@@ -117,7 +117,7 @@ fun HomePage() {
                 }
                 .toAttrs()
             ) {
-                val sitePalette = ColorMode.current.toSitePalette()
+                val sitePalette = getSitePalette()
                 GridCell(sitePalette.brand.primary, 1, 1, 2, 2)
                 GridCell(ColorSchemes.Monochrome._600, 1, 3)
                 GridCell(ColorSchemes.Monochrome._100, 1, 4, width = 2)

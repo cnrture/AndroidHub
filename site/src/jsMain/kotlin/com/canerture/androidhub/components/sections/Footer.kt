@@ -15,15 +15,14 @@ import com.varabyte.kobweb.silk.components.style.base
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.style.vars.color.ColorVar
 import com.varabyte.kobweb.silk.components.text.SpanText
-import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.dom.Span
-import com.canerture.androidhub.toSitePalette
+import com.canerture.androidhub.getSitePalette
 
 val FooterStyle by ComponentStyle.base {
     Modifier
-        .backgroundColor(colorMode.toSitePalette().nearBackground)
+        .backgroundColor(getSitePalette().nearBackground)
         .padding(topBottom = 1.5.cssRem, leftRight = 10.percent)
 }
 
@@ -31,7 +30,7 @@ val FooterStyle by ComponentStyle.base {
 fun Footer(modifier: Modifier = Modifier) {
     Box(FooterStyle.toModifier().then(modifier), contentAlignment = Alignment.Center) {
         Span(Modifier.textAlign(TextAlign.Center).toAttrs()) {
-            val sitePalette = ColorMode.current.toSitePalette()
+            val sitePalette = getSitePalette()
             SpanText("Built with ")
             Link(
                 "https://github.com/varabyte/kobweb",

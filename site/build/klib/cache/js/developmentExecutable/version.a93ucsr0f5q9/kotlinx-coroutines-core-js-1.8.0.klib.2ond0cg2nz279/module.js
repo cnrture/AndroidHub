@@ -17,13 +17,13 @@
   //region block: imports
   var imul = Math.imul;
   var protoOf = kotlin_kotlin.$_$.ob;
-  var THROW_CCE = kotlin_kotlin.$_$.ve;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
   var Continuation = kotlin_kotlin.$_$.j9;
   var classMeta = kotlin_kotlin.$_$.ea;
   var setMetadataFor = kotlin_kotlin.$_$.pb;
   var VOID = kotlin_kotlin.$_$.e;
-  var Annotation = kotlin_kotlin.$_$.he;
+  var Annotation = kotlin_kotlin.$_$.fe;
   var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.u3;
   var Key_getInstance = kotlin_kotlin.$_$.t3;
   var equals = kotlin_kotlin.$_$.ha;
@@ -35,7 +35,7 @@
   var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.b9;
   var interfaceMeta = kotlin_kotlin.$_$.qa;
   var isInterface = kotlin_kotlin.$_$.za;
-  var toString_0 = kotlin_kotlin.$_$.yf;
+  var toString_0 = kotlin_kotlin.$_$.wf;
   var atomic$ref$1 = kotlin_org_jetbrains_kotlinx_atomicfu.$_$.d;
   var objectMeta = kotlin_kotlin.$_$.nb;
   var hashCode = kotlin_kotlin.$_$.oa;
@@ -46,7 +46,7 @@
   var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.m2;
   var Companion_getInstance = kotlin_kotlin.$_$.g4;
   var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.j2;
-  var createFailure = kotlin_kotlin.$_$.nf;
+  var createFailure = kotlin_kotlin.$_$.lf;
   var AbstractCoroutineContextKey = kotlin_kotlin.$_$.f9;
   var AbstractCoroutineContextElement = kotlin_kotlin.$_$.e9;
   var get = kotlin_kotlin.$_$.g9;
@@ -55,41 +55,41 @@
   var Key = kotlin_kotlin.$_$.o9;
   var Element = kotlin_kotlin.$_$.n9;
   var RuntimeException_init_$Create$ = kotlin_kotlin.$_$.z1;
-  var addSuppressed = kotlin_kotlin.$_$.jf;
-  var THROW_IAE = kotlin_kotlin.$_$.we;
+  var addSuppressed = kotlin_kotlin.$_$.hf;
+  var THROW_IAE = kotlin_kotlin.$_$.ue;
   var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.ke;
+  var Enum = kotlin_kotlin.$_$.ie;
   var startCoroutine = kotlin_kotlin.$_$.t9;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.rf;
-  var Long = kotlin_kotlin.$_$.pe;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.pf;
+  var Long = kotlin_kotlin.$_$.ne;
   var Companion_getInstance_0 = kotlin_kotlin.$_$.f4;
   var ArrayDeque_init_$Create$ = kotlin_kotlin.$_$.i;
-  var RuntimeException = kotlin_kotlin.$_$.ue;
+  var RuntimeException = kotlin_kotlin.$_$.se;
   var RuntimeException_init_$Init$ = kotlin_kotlin.$_$.y1;
   var captureStack = kotlin_kotlin.$_$.z9;
-  var Error_0 = kotlin_kotlin.$_$.le;
+  var Error_0 = kotlin_kotlin.$_$.je;
   var Error_init_$Init$ = kotlin_kotlin.$_$.g1;
   var CancellationException_init_$Create$_0 = kotlin_kotlin.$_$.a1;
   var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.d1;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.xf;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.vf;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
   var CancellationException = kotlin_kotlin.$_$.a9;
   var ArrayList = kotlin_kotlin.$_$.u4;
   var SequenceScope = kotlin_kotlin.$_$.hc;
   var IllegalStateException_init_$Create$_0 = kotlin_kotlin.$_$.s1;
-  var sequence = kotlin_kotlin.$_$.lc;
+  var sequence = kotlin_kotlin.$_$.kc;
   var plus = kotlin_kotlin.$_$.p9;
   var get_0 = kotlin_kotlin.$_$.l9;
   var fold = kotlin_kotlin.$_$.k9;
   var minusKey_0 = kotlin_kotlin.$_$.m9;
   var anyToString = kotlin_kotlin.$_$.w9;
   var SuspendFunction1 = kotlin_kotlin.$_$.r9;
-  var UnsupportedOperationException = kotlin_kotlin.$_$.if;
+  var UnsupportedOperationException = kotlin_kotlin.$_$.gf;
   var objectCreate = kotlin_kotlin.$_$.mb;
   var CancellationException_init_$Init$ = kotlin_kotlin.$_$.x;
   var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.b2;
   var atomicfu$AtomicRefArray$ofNulls = kotlin_org_jetbrains_kotlinx_atomicfu.$_$.a;
-  var ensureNotNull = kotlin_kotlin.$_$.of;
+  var ensureNotNull = kotlin_kotlin.$_$.mf;
   var toLong = kotlin_kotlin.$_$.qb;
   var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m1;
   var atomic$long$1 = kotlin_org_jetbrains_kotlinx_atomicfu.$_$.c;
@@ -97,25 +97,25 @@
   var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
   var NoSuchElementException_init_$Create$ = kotlin_kotlin.$_$.u1;
   var compareTo = kotlin_kotlin.$_$.fa;
-  var last = kotlin_kotlin.$_$.dd;
+  var last = kotlin_kotlin.$_$.cd;
   var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.f2;
-  var IllegalStateException = kotlin_kotlin.$_$.oe;
+  var IllegalStateException = kotlin_kotlin.$_$.me;
   var IllegalStateException_init_$Init$ = kotlin_kotlin.$_$.q1;
-  var NoSuchElementException = kotlin_kotlin.$_$.qe;
+  var NoSuchElementException = kotlin_kotlin.$_$.oe;
   var NoSuchElementException_init_$Init$ = kotlin_kotlin.$_$.v1;
   var getKClass = kotlin_kotlin.$_$.c;
-  var Unit = kotlin_kotlin.$_$.hf;
+  var Unit = kotlin_kotlin.$_$.ff;
   var fillArrayVal = kotlin_kotlin.$_$.ia;
   var copyOf = kotlin_kotlin.$_$.n6;
   var emptyList = kotlin_kotlin.$_$.r6;
   var listOf_0 = kotlin_kotlin.$_$.m7;
   var IntCompanionObject_getInstance = kotlin_kotlin.$_$.z3;
   var joinToString = kotlin_kotlin.$_$.e7;
-  var throwKotlinNothingValueException = kotlin_kotlin.$_$.wf;
   var NoSuchElementException_init_$Create$_0 = kotlin_kotlin.$_$.w1;
-  var Exception = kotlin_kotlin.$_$.me;
+  var throwKotlinNothingValueException = kotlin_kotlin.$_$.uf;
+  var Exception = kotlin_kotlin.$_$.ke;
   var Exception_init_$Init$ = kotlin_kotlin.$_$.h1;
-  var toLongOrNull = kotlin_kotlin.$_$.yd;
+  var toLongOrNull = kotlin_kotlin.$_$.wd;
   var isSuspendFunction = kotlin_kotlin.$_$.db;
   var List = kotlin_kotlin.$_$.d5;
   var Collection = kotlin_kotlin.$_$.v4;
@@ -374,7 +374,7 @@
   setMetadataFor(SharedFlowSlot, 'SharedFlowSlot', classMeta, AbstractSharedFlowSlot, VOID, SharedFlowSlot);
   setMetadataFor(StateFlow, 'StateFlow', interfaceMeta, VOID, [SharedFlow], VOID, VOID, VOID, [1]);
   setMetadataFor(MutableStateFlow, 'MutableStateFlow', interfaceMeta, VOID, [StateFlow, MutableSharedFlow], VOID, VOID, VOID, [1]);
-  setMetadataFor($collectCOROUTINE$9, '$collectCOROUTINE$9', classMeta, CoroutineImpl);
+  setMetadataFor($collectCOROUTINE$0, '$collectCOROUTINE$0', classMeta, CoroutineImpl);
   setMetadataFor(StateFlowImpl, 'StateFlowImpl', classMeta, AbstractSharedFlow, [AbstractSharedFlow, MutableStateFlow, CancellableFlow, FusibleFlow], VOID, VOID, VOID, [1]);
   setMetadataFor(StateFlowSlot, 'StateFlowSlot', classMeta, AbstractSharedFlowSlot, VOID, StateFlowSlot, VOID, VOID, [0]);
   setMetadataFor(SubscriptionCountStateFlow, 'SubscriptionCountStateFlow', classMeta, SharedFlowImpl, [StateFlow, SharedFlowImpl], VOID, VOID, VOID, [1]);
@@ -382,40 +382,27 @@
   setMetadataFor(ChannelFlowOperator, 'ChannelFlowOperator', classMeta, ChannelFlow, VOID, VOID, VOID, VOID, [1, 2]);
   setMetadataFor(ChannelFlowOperatorImpl, 'ChannelFlowOperatorImpl', classMeta, ChannelFlowOperator, VOID, VOID, VOID, VOID, [1]);
   setMetadataFor(ChannelFlowOperator$collectWithContextUndispatched$slambda, 'ChannelFlowOperator$collectWithContextUndispatched$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor($collectCOROUTINE$10, '$collectCOROUTINE$10', classMeta, CoroutineImpl);
+  setMetadataFor($collectCOROUTINE$1, '$collectCOROUTINE$1', classMeta, CoroutineImpl);
   setMetadataFor(ChannelFlow$_get_collectToFun_$slambda_j53z2e, 'ChannelFlow$<get-collectToFun>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(ChannelFlow$collect$slambda, 'ChannelFlow$collect$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(UndispatchedContextCollector$emitRef$slambda, 'UndispatchedContextCollector$emitRef$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(UndispatchedContextCollector, 'UndispatchedContextCollector', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
   setMetadataFor(StackFrameContinuation, 'StackFrameContinuation', classMeta, VOID, [Continuation, CoroutineStackFrame]);
-  setMetadataFor(ChannelLimitedFlowMerge$collectTo$slambda, 'ChannelLimitedFlowMerge$collectTo$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(ChannelLimitedFlowMerge, 'ChannelLimitedFlowMerge', classMeta, ChannelFlow, VOID, VOID, VOID, VOID, [1]);
   setMetadataFor(NopCollector, 'NopCollector', objectMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
   setMetadataFor(_no_name_provided__qut3iv, VOID, classMeta, VOID, [Flow], VOID, VOID, VOID, [1]);
   setMetadataFor(SendingCollector, 'SendingCollector', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
   setMetadataFor(ThrowingCollector, 'ThrowingCollector', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
-  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
-  setMetadataFor(unsafeTransform$o$collect$slambda, 'unsafeTransform$o$collect$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor($collectCOROUTINE$11, '$collectCOROUTINE$11', classMeta, CoroutineImpl);
-  setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [Flow], VOID, VOID, VOID, [1]);
   setMetadataFor($emitCOROUTINE$14, '$emitCOROUTINE$14', classMeta, CoroutineImpl);
-  setMetadataFor(_no_name_provided__qut3iv_1, VOID, classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
+  setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
   setMetadataFor($collectCOROUTINE$13, '$collectCOROUTINE$13', classMeta, CoroutineImpl);
-  setMetadataFor(_no_name_provided__qut3iv_2, VOID, classMeta, VOID, [Flow], VOID, VOID, VOID, [1]);
+  setMetadataFor(_no_name_provided__qut3iv_1, VOID, classMeta, VOID, [Flow], VOID, VOID, VOID, [1]);
   setMetadataFor($emitCOROUTINE$15, '$emitCOROUTINE$15', classMeta, CoroutineImpl);
-  setMetadataFor(_no_name_provided__qut3iv_3, VOID, classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
+  setMetadataFor(_no_name_provided__qut3iv_2, VOID, classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
   setMetadataFor($collectWhileCOROUTINE$12, '$collectWhileCOROUTINE$12', classMeta, CoroutineImpl);
-  setMetadataFor($onSubscriptionCOROUTINE$16, '$onSubscriptionCOROUTINE$16', classMeta, CoroutineImpl);
+  setMetadataFor($onSubscriptionCOROUTINE$2, '$onSubscriptionCOROUTINE$2', classMeta, CoroutineImpl);
   setMetadataFor(SubscribedFlowCollector, 'SubscribedFlowCollector', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1, 0]);
-  setMetadataFor($collectCOROUTINE$17, '$collectCOROUTINE$17', classMeta, CoroutineImpl);
-  setMetadataFor(ReadonlyStateFlow, 'ReadonlyStateFlow', classMeta, VOID, [StateFlow, CancellableFlow, FusibleFlow], VOID, VOID, VOID, [1]);
-  setMetadataFor(sam$kotlinx_coroutines_flow_FlowCollector$0_0, 'sam$kotlinx_coroutines_flow_FlowCollector$0', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
-  setMetadataFor(onEach$o$collect$slambda, 'onEach$o$collect$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor($collectCOROUTINE$18, '$collectCOROUTINE$18', classMeta, CoroutineImpl);
-  setMetadataFor(_no_name_provided__qut3iv_4, VOID, classMeta, VOID, [Flow], VOID, VOID, VOID, [1]);
-  setMetadataFor(launchIn$slambda, 'launchIn$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor($emitCOROUTINE$20, '$emitCOROUTINE$20', classMeta, CoroutineImpl);
-  setMetadataFor(_no_name_provided__qut3iv_5, VOID, classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
+  setMetadataFor(_no_name_provided__qut3iv_3, VOID, classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
   setMetadataFor($firstCOROUTINE$19, '$firstCOROUTINE$19', classMeta, CoroutineImpl);
   setMetadataFor(OpDescriptor, 'OpDescriptor', classMeta);
   setMetadataFor(AtomicOp, 'AtomicOp', classMeta, OpDescriptor);
@@ -432,7 +419,7 @@
   setMetadataFor(UndeliveredElementException, 'UndeliveredElementException', classMeta, RuntimeException);
   setMetadataFor(ContextScope, 'ContextScope', classMeta, VOID, [CoroutineScope_0]);
   setMetadataFor(Symbol, 'Symbol', classMeta);
-  setMetadataFor(_no_name_provided__qut3iv_6, VOID, classMeta, VOID, [Runnable]);
+  setMetadataFor(_no_name_provided__qut3iv_4, VOID, classMeta, VOID, [Runnable]);
   setMetadataFor(OnTimeout, 'OnTimeout', classMeta);
   setMetadataFor(SelectClause, 'SelectClause', interfaceMeta);
   setMetadataFor(SelectClause0, 'SelectClause0', interfaceMeta, VOID, [SelectClause]);
@@ -468,7 +455,7 @@
   setMetadataFor(JsMainDispatcher, 'JsMainDispatcher', classMeta, MainCoroutineDispatcher);
   setMetadataFor(UnconfinedEventLoop, 'UnconfinedEventLoop', classMeta, EventLoop, VOID, UnconfinedEventLoop);
   setMetadataFor(JobCancellationException, 'JobCancellationException', classMeta, CancellationException);
-  setMetadataFor(_no_name_provided__qut3iv_7, VOID, classMeta, VOID, [Runnable]);
+  setMetadataFor(_no_name_provided__qut3iv_5, VOID, classMeta, VOID, [Runnable]);
   setMetadataFor(SchedulerTaskContext, 'SchedulerTaskContext', interfaceMeta);
   setMetadataFor(TaskContext, 'TaskContext', objectMeta, VOID, [SchedulerTaskContext]);
   setMetadataFor(AbortFlowException, 'AbortFlowException', classMeta, CancellationException);
@@ -9609,8 +9596,6 @@
   protoOf(ConflatedBufferedChannel).shouldSendSuspend_te8nq7_k$ = function () {
     return false;
   };
-  function ProducerScope() {
-  }
   function produce(_this__u8e3s4, context, capacity, onBufferOverflow, start, onCompletion, block) {
     context = context === VOID ? EmptyCoroutineContext_getInstance() : context;
     capacity = capacity === VOID ? 0 : capacity;
@@ -9625,6 +9610,8 @@
     }
     coroutine.start_rn6v44_k$(start, coroutine, block);
     return coroutine;
+  }
+  function ProducerScope() {
   }
   function ProducerCoroutine(parentContext, channel) {
     ChannelCoroutine.call(this, parentContext, channel, true, true);
@@ -9650,11 +9637,6 @@
   protoOf(ProducerCoroutine).cancel$default_880p35_k$ = function (cause, $super) {
     return this.cancel$default_8haxne_k$(cause, ($super == null ? true : $super instanceof ProducerCoroutine) ? $super : THROW_CCE());
   };
-  function produce_0(_this__u8e3s4, context, capacity, block) {
-    context = context === VOID ? EmptyCoroutineContext_getInstance() : context;
-    capacity = capacity === VOID ? 0 : capacity;
-    return produce(_this__u8e3s4, context, capacity, BufferOverflow_SUSPEND_getInstance(), CoroutineStart_DEFAULT_getInstance(), null, block);
-  }
   function emitAll(_this__u8e3s4, channel, $completion) {
     return emitAllImpl(_this__u8e3s4, channel, true, $completion);
   }
@@ -10654,13 +10636,13 @@
     return PENDING;
   }
   var PENDING;
+  function StateFlow() {
+  }
   function MutableStateFlow() {
   }
   function MutableStateFlow_0(value) {
     _init_properties_StateFlow_kt__eu9yi5();
     return new StateFlowImpl(value == null ? get_NULL() : value);
-  }
-  function StateFlow() {
   }
   function _get__state__37adl3_1($this) {
     return $this._state_1;
@@ -10722,12 +10704,12 @@
       curSlots = $this.get_slots_iyl3po_k$();
     }
   }
-  function $collectCOROUTINE$9(_this__u8e3s4, collector, resultContinuation) {
+  function $collectCOROUTINE$0(_this__u8e3s4, collector, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.collector_1 = collector;
   }
-  protoOf($collectCOROUTINE$9).doResume_5yljmg_k$ = function () {
+  protoOf($collectCOROUTINE$0).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -10886,7 +10868,7 @@
     throw UnsupportedOperationException_init_$Create$('MutableStateFlow.resetReplayCache is not supported');
   };
   protoOf(StateFlowImpl).collect_ve9kyv_k$ = function (collector, $completion) {
-    var tmp = new $collectCOROUTINE$9(this, collector, $completion);
+    var tmp = new $collectCOROUTINE$0(this, collector, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -11272,12 +11254,12 @@
     l.$arity = 1;
     return l;
   }
-  function $collectCOROUTINE$10(_this__u8e3s4, collector, resultContinuation) {
+  function $collectCOROUTINE$1(_this__u8e3s4, collector, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.collector_1 = collector;
   }
-  protoOf($collectCOROUTINE$10).doResume_5yljmg_k$ = function () {
+  protoOf($collectCOROUTINE$1).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -11360,7 +11342,7 @@
     return this.flowCollect_ki1wtf_k$(new SendingCollector(scope), $completion);
   };
   protoOf(ChannelFlowOperator).collect_aksokr_k$ = function (collector, $completion) {
-    var tmp = new $collectCOROUTINE$10(this, collector, $completion);
+    var tmp = new $collectCOROUTINE$1(this, collector, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -11703,94 +11685,6 @@
     if (!(_this__u8e3s4.get_owner_iwkx3e_k$() === owner))
       throw _this__u8e3s4;
   }
-  function _get_flows__hips44($this) {
-    return $this.flows_1;
-  }
-  function ChannelLimitedFlowMerge$collectTo$slambda($flow, $collector, resultContinuation) {
-    this.$flow_1 = $flow;
-    this.$collector_1 = $collector;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(ChannelLimitedFlowMerge$collectTo$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ChannelLimitedFlowMerge$collectTo$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope_0) : false) ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(ChannelLimitedFlowMerge$collectTo$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this.$flow_1.collect_aksokr_k$(this.$collector_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  protoOf(ChannelLimitedFlowMerge$collectTo$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
-    var i = new ChannelLimitedFlowMerge$collectTo$slambda(this.$flow_1, this.$collector_1, completion);
-    i.$this$launch_1 = $this$launch;
-    return i;
-  };
-  protoOf(ChannelLimitedFlowMerge$collectTo$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope_0) : false) ? value : THROW_CCE(), completion);
-  };
-  function ChannelLimitedFlowMerge$collectTo$slambda_0($flow, $collector, resultContinuation) {
-    var i = new ChannelLimitedFlowMerge$collectTo$slambda($flow, $collector, resultContinuation);
-    var l = function ($this$launch, $completion) {
-      return i.invoke_d9fzmj_k$($this$launch, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function ChannelLimitedFlowMerge(flows, context, capacity, onBufferOverflow) {
-    context = context === VOID ? EmptyCoroutineContext_getInstance() : context;
-    capacity = capacity === VOID ? Factory_getInstance().get_BUFFERED_qzy754_k$() : capacity;
-    onBufferOverflow = onBufferOverflow === VOID ? BufferOverflow_SUSPEND_getInstance() : onBufferOverflow;
-    ChannelFlow.call(this, context, capacity, onBufferOverflow);
-    this.flows_1 = flows;
-  }
-  protoOf(ChannelLimitedFlowMerge).create_lydvvb_k$ = function (context, capacity, onBufferOverflow) {
-    return new ChannelLimitedFlowMerge(this.flows_1, context, capacity, onBufferOverflow);
-  };
-  protoOf(ChannelLimitedFlowMerge).produceImpl_qjsv5i_k$ = function (scope) {
-    return produce_0(scope, this.get_context_h02k06_k$(), this.get_capacity_wxbgcd_k$(), this.get_collectToFun_va2loj_k$());
-  };
-  protoOf(ChannelLimitedFlowMerge).collectTo_qjwlth_k$ = function (scope, $completion) {
-    var collector = new SendingCollector(scope);
-    // Inline function 'kotlin.collections.forEach' call
-    var tmp0_iterator = this.flows_1.iterator_jk1svi_k$();
-    while (tmp0_iterator.hasNext_bitz1p_k$()) {
-      var element = tmp0_iterator.next_20eer_k$();
-      // Inline function 'kotlinx.coroutines.flow.internal.ChannelLimitedFlowMerge.collectTo.<anonymous>' call
-      launch(scope, VOID, VOID, ChannelLimitedFlowMerge$collectTo$slambda_0(element, collector, null));
-    }
-    return Unit_getInstance();
-  };
   function NopCollector() {
     NopCollector_instance = this;
   }
@@ -11937,132 +11831,9 @@
   protoOf(ThrowingCollector).emit_t92u1f_k$ = function (value, $completion) {
     return this.emit_53hnst_k$((value == null ? true : !(value == null)) ? value : THROW_CCE(), $completion);
   };
-  function unsafeTransform(_this__u8e3s4, transform) {
-    // Inline function 'kotlinx.coroutines.flow.internal.unsafeFlow' call
-    return new _no_name_provided__qut3iv_0(_this__u8e3s4, transform);
-  }
-  function sam$kotlinx_coroutines_flow_FlowCollector$0(function_0) {
-    this.function_1 = function_0;
-  }
-  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0).emit_t92u1f_k$ = function (value, $completion) {
-    return this.function_1(value, $completion);
-  };
-  function unsafeTransform$o$collect$slambda($transform, $$this$unsafeFlow, resultContinuation) {
-    this.$transform_1 = $transform;
-    this.$$this$unsafeFlow_1 = $$this$unsafeFlow;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(unsafeTransform$o$collect$slambda).invoke_oz8tte_k$ = function (value, $completion) {
-    var tmp = this.create_zam77m_k$(value, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(unsafeTransform$o$collect$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_oz8tte_k$((p1 == null ? true : !(p1 == null)) ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(unsafeTransform$o$collect$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this.$transform_1(this.$$this$unsafeFlow_1, this.value_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  protoOf(unsafeTransform$o$collect$slambda).create_zam77m_k$ = function (value, completion) {
-    var i = new unsafeTransform$o$collect$slambda(this.$transform_1, this.$$this$unsafeFlow_1, completion);
-    i.value_1 = value;
-    return i;
-  };
-  protoOf(unsafeTransform$o$collect$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_zam77m_k$((value == null ? true : !(value == null)) ? value : THROW_CCE(), completion);
-  };
-  function unsafeTransform$o$collect$slambda_0($transform, $$this$unsafeFlow, resultContinuation) {
-    var i = new unsafeTransform$o$collect$slambda($transform, $$this$unsafeFlow, resultContinuation);
-    var l = function (value, $completion) {
-      return i.invoke_oz8tte_k$(value, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function $collectCOROUTINE$11(_this__u8e3s4, collector, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.collector_1 = collector;
-  }
-  protoOf($collectCOROUTINE$11).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            var tmp_0 = this;
-            tmp_0.$this$unsafeFlow0__1 = this.collector_1;
-            this.set_state_rjd8d0_k$(1);
-            var tmp_1 = unsafeTransform$o$collect$slambda_0(this._this__u8e3s4__1.$transform_1, this.$this$unsafeFlow0__1, null);
-            suspendResult = this._this__u8e3s4__1.$this_unsafeTransform_1.collect_aksokr_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0(tmp_1), this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function _no_name_provided__qut3iv_0($this_unsafeTransform, $transform) {
-    this.$this_unsafeTransform_1 = $this_unsafeTransform;
-    this.$transform_1 = $transform;
-  }
-  protoOf(_no_name_provided__qut3iv_0).collect_qcqxih_k$ = function (collector, $completion) {
-    var tmp = new $collectCOROUTINE$11(this, collector, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(_no_name_provided__qut3iv_0).collect_aksokr_k$ = function (collector, $completion) {
-    return this.collect_qcqxih_k$(collector, $completion);
-  };
   function takeWhile(_this__u8e3s4, predicate) {
     // Inline function 'kotlinx.coroutines.flow.internal.unsafeFlow' call
-    return new _no_name_provided__qut3iv_2(_this__u8e3s4, predicate);
+    return new _no_name_provided__qut3iv_1(_this__u8e3s4, predicate);
   }
   function collectWhile(_this__u8e3s4, predicate, $completion) {
     var tmp = new $collectWhileCOROUTINE$12(_this__u8e3s4, predicate, $completion);
@@ -12136,11 +11907,11 @@
       }
      while (true);
   };
-  function _no_name_provided__qut3iv_1($predicate, $$this$unsafeFlow) {
+  function _no_name_provided__qut3iv_0($predicate, $$this$unsafeFlow) {
     this.$predicate_1 = $predicate;
     this.$$this$unsafeFlow_1 = $$this$unsafeFlow;
   }
-  protoOf(_no_name_provided__qut3iv_1).emit_t92u1f_k$ = function (value, $completion) {
+  protoOf(_no_name_provided__qut3iv_0).emit_t92u1f_k$ = function (value, $completion) {
     var tmp = new $emitCOROUTINE$14(this, value, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
@@ -12164,7 +11935,7 @@
             var tmp_1 = this;
             tmp_1.this1__1 = this._this__u8e3s4__1.$this_takeWhile_1;
             var tmp_2 = this;
-            tmp_2.collector2__1 = new _no_name_provided__qut3iv_1(this._this__u8e3s4__1.$predicate_1, this.$this$unsafeFlow0__1);
+            tmp_2.collector2__1 = new _no_name_provided__qut3iv_0(this._this__u8e3s4__1.$predicate_1, this.$this$unsafeFlow0__1);
             this.set_exceptionState_fex74n_k$(2);
             this.set_state_rjd8d0_k$(1);
             suspendResult = this.this1__1.collect_aksokr_k$(this.collector2__1, this);
@@ -12206,11 +11977,11 @@
       }
      while (true);
   };
-  function _no_name_provided__qut3iv_2($this_takeWhile, $predicate) {
+  function _no_name_provided__qut3iv_1($this_takeWhile, $predicate) {
     this.$this_takeWhile_1 = $this_takeWhile;
     this.$predicate_1 = $predicate;
   }
-  protoOf(_no_name_provided__qut3iv_2).collect_aksokr_k$ = function (collector, $completion) {
+  protoOf(_no_name_provided__qut3iv_1).collect_aksokr_k$ = function (collector, $completion) {
     var tmp = new $collectCOROUTINE$13(this, collector, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
@@ -12261,10 +12032,10 @@
       }
      while (true);
   };
-  function _no_name_provided__qut3iv_3($predicate) {
+  function _no_name_provided__qut3iv_2($predicate) {
     this.$predicate_1 = $predicate;
   }
-  protoOf(_no_name_provided__qut3iv_3).emit_t92u1f_k$ = function (value, $completion) {
+  protoOf(_no_name_provided__qut3iv_2).emit_t92u1f_k$ = function (value, $completion) {
     var tmp = new $emitCOROUTINE$15(this, value, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
@@ -12284,7 +12055,7 @@
           case 0:
             this.set_exceptionState_fex74n_k$(3);
             var tmp_0 = this;
-            tmp_0.collector0__1 = new _no_name_provided__qut3iv_3(this.predicate_1);
+            tmp_0.collector0__1 = new _no_name_provided__qut3iv_2(this.predicate_1);
             this.set_exceptionState_fex74n_k$(2);
             this.set_state_rjd8d0_k$(1);
             suspendResult = this._this__u8e3s4__1.collect_aksokr_k$(this.collector0__1, this);
@@ -12335,10 +12106,6 @@
     return DEFAULT_CONCURRENCY_PROPERTY_NAME;
   }
   var DEFAULT_CONCURRENCY_PROPERTY_NAME;
-  function merge(_this__u8e3s4) {
-    _init_properties_Merge_kt__cbpr96();
-    return new ChannelLimitedFlowMerge(_this__u8e3s4);
-  }
   var properties_initialized_Merge_kt_dhn6vs;
   function _init_properties_Merge_kt__cbpr96() {
     if (!properties_initialized_Merge_kt_dhn6vs) {
@@ -12352,11 +12119,11 @@
   function _get_action__ikx8yd($this) {
     return $this.action_1;
   }
-  function $onSubscriptionCOROUTINE$16(_this__u8e3s4, resultContinuation) {
+  function $onSubscriptionCOROUTINE$2(_this__u8e3s4, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
   }
-  protoOf($onSubscriptionCOROUTINE$16).doResume_5yljmg_k$ = function () {
+  protoOf($onSubscriptionCOROUTINE$2).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -12430,274 +12197,13 @@
     return this.collector_1.emit_t92u1f_k$(value, $completion);
   };
   protoOf(SubscribedFlowCollector).onSubscription_q7qr5n_k$ = function ($completion) {
-    var tmp = new $onSubscriptionCOROUTINE$16(this, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  function asStateFlow(_this__u8e3s4) {
-    return new ReadonlyStateFlow(_this__u8e3s4, null);
-  }
-  function _get_job__e6b14k_0($this) {
-    return $this.job_1;
-  }
-  function $collectCOROUTINE$17(_this__u8e3s4, collector, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.collector_1 = collector;
-  }
-  protoOf($collectCOROUTINE$17).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this._this__u8e3s4__1.$$delegate_0__1.collect_ve9kyv_k$(this.collector_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            throwKotlinNothingValueException();
-            break;
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function ReadonlyStateFlow(flow, job) {
-    this.job_1 = job;
-    this.$$delegate_0__1 = flow;
-  }
-  protoOf(ReadonlyStateFlow).get_replayCache_uwub8y_k$ = function () {
-    return this.$$delegate_0__1.get_replayCache_uwub8y_k$();
-  };
-  protoOf(ReadonlyStateFlow).get_value_j01efc_k$ = function () {
-    return this.$$delegate_0__1.get_value_j01efc_k$();
-  };
-  protoOf(ReadonlyStateFlow).collect_ve9kyv_k$ = function (collector, $completion) {
-    var tmp = new $collectCOROUTINE$17(this, collector, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(ReadonlyStateFlow).collect_aksokr_k$ = function (collector, $completion) {
-    return this.collect_ve9kyv_k$(collector, $completion);
-  };
-  protoOf(ReadonlyStateFlow).fuse_gny1ac_k$ = function (context, capacity, onBufferOverflow) {
-    return fuseStateFlow(this, context, capacity, onBufferOverflow);
-  };
-  function onEach(_this__u8e3s4, action) {
-    // Inline function 'kotlinx.coroutines.flow.unsafeTransform' call
-    // Inline function 'kotlinx.coroutines.flow.internal.unsafeFlow' call
-    return new _no_name_provided__qut3iv_4(_this__u8e3s4, action);
-  }
-  function sam$kotlinx_coroutines_flow_FlowCollector$0_0(function_0) {
-    this.function_1 = function_0;
-  }
-  protoOf(sam$kotlinx_coroutines_flow_FlowCollector$0_0).emit_t92u1f_k$ = function (value, $completion) {
-    return this.function_1(value, $completion);
-  };
-  function onEach$o$collect$slambda($$this$unsafeFlow, $action, resultContinuation) {
-    this.$$this$unsafeFlow_1 = $$this$unsafeFlow;
-    this.$action_1 = $action;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(onEach$o$collect$slambda).invoke_oz8tte_k$ = function (value, $completion) {
-    var tmp = this.create_zam77m_k$(value, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(onEach$o$collect$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_oz8tte_k$((p1 == null ? true : !(p1 == null)) ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(onEach$o$collect$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(3);
-            var tmp_0 = this;
-            tmp_0.$this$unsafeTransform0__1 = this.$$this$unsafeFlow_1;
-            var tmp_1 = this;
-            tmp_1.value1__1 = this.value_1;
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = this.$action_1(this.value1__1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            this.set_state_rjd8d0_k$(2);
-            suspendResult = this.$this$unsafeTransform0__1.emit_t92u1f_k$(this.value1__1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 2:
-            return Unit_getInstance();
-          case 3:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 3) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  protoOf(onEach$o$collect$slambda).create_zam77m_k$ = function (value, completion) {
-    var i = new onEach$o$collect$slambda(this.$$this$unsafeFlow_1, this.$action_1, completion);
-    i.value_1 = value;
-    return i;
-  };
-  protoOf(onEach$o$collect$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_zam77m_k$((value == null ? true : !(value == null)) ? value : THROW_CCE(), completion);
-  };
-  function onEach$o$collect$slambda_0($$this$unsafeFlow, $action, resultContinuation) {
-    var i = new onEach$o$collect$slambda($$this$unsafeFlow, $action, resultContinuation);
-    var l = function (value, $completion) {
-      return i.invoke_oz8tte_k$(value, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function $collectCOROUTINE$18(_this__u8e3s4, collector, resultContinuation) {
-    CoroutineImpl.call(this, resultContinuation);
-    this._this__u8e3s4__1 = _this__u8e3s4;
-    this.collector_1 = collector;
-  }
-  protoOf($collectCOROUTINE$18).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            var tmp_0 = this;
-            tmp_0.$this$unsafeFlow0__1 = this.collector_1;
-            this.set_state_rjd8d0_k$(1);
-            var tmp_1 = onEach$o$collect$slambda_0(this.$this$unsafeFlow0__1, this._this__u8e3s4__1.$action_1, null);
-            suspendResult = this._this__u8e3s4__1.$this_1.collect_aksokr_k$(new sam$kotlinx_coroutines_flow_FlowCollector$0_0(tmp_1), this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  function _no_name_provided__qut3iv_4($this, $action) {
-    this.$this_1 = $this;
-    this.$action_1 = $action;
-  }
-  protoOf(_no_name_provided__qut3iv_4).collect_aksokr_k$ = function (collector, $completion) {
-    var tmp = new $collectCOROUTINE$18(this, collector, $completion);
+    var tmp = new $onSubscriptionCOROUTINE$2(this, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
   function collect(_this__u8e3s4, $completion) {
     return _this__u8e3s4.collect_aksokr_k$(NopCollector_getInstance(), $completion);
-  }
-  function launchIn(_this__u8e3s4, scope) {
-    return launch(scope, VOID, VOID, launchIn$slambda_0(_this__u8e3s4, null));
-  }
-  function launchIn$slambda($this_launchIn, resultContinuation) {
-    this.$this_launchIn_1 = $this_launchIn;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(launchIn$slambda).invoke_d9fzmj_k$ = function ($this$launch, $completion) {
-    var tmp = this.create_rcuf4x_k$($this$launch, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(launchIn$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope_0) : false) ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(launchIn$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        switch (tmp) {
-          case 0:
-            this.set_exceptionState_fex74n_k$(2);
-            this.set_state_rjd8d0_k$(1);
-            suspendResult = collect(this.$this_launchIn_1, this);
-            if (suspendResult === get_COROUTINE_SUSPENDED()) {
-              return suspendResult;
-            }
-
-            continue $sm;
-          case 1:
-            return Unit_getInstance();
-          case 2:
-            throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        if (this.get_exceptionState_wflpxn_k$() === 2) {
-          throw e;
-        } else {
-          this.set_state_rjd8d0_k$(this.get_exceptionState_wflpxn_k$());
-          this.set_exception_px07aa_k$(e);
-        }
-      }
-     while (true);
-  };
-  protoOf(launchIn$slambda).create_rcuf4x_k$ = function ($this$launch, completion) {
-    var i = new launchIn$slambda(this.$this_launchIn_1, completion);
-    i.$this$launch_1 = $this$launch;
-    return i;
-  };
-  protoOf(launchIn$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope_0) : false) ? value : THROW_CCE(), completion);
-  };
-  function launchIn$slambda_0($this_launchIn, resultContinuation) {
-    var i = new launchIn$slambda($this_launchIn, resultContinuation);
-    var l = function ($this$launch, $completion) {
-      return i.invoke_d9fzmj_k$($this$launch, $completion);
-    };
-    l.$arity = 1;
-    return l;
   }
   function first(_this__u8e3s4, predicate, $completion) {
     var tmp = new $firstCOROUTINE$19(_this__u8e3s4, predicate, $completion);
@@ -12766,11 +12272,11 @@
       }
      while (true);
   };
-  function _no_name_provided__qut3iv_5($predicate, $result) {
+  function _no_name_provided__qut3iv_3($predicate, $result) {
     this.$predicate_1 = $predicate;
     this.$result_1 = $result;
   }
-  protoOf(_no_name_provided__qut3iv_5).emit_t92u1f_k$ = function (value, $completion) {
+  protoOf(_no_name_provided__qut3iv_3).emit_t92u1f_k$ = function (value, $completion) {
     var tmp = new $emitCOROUTINE$20(this, value, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
@@ -12793,7 +12299,7 @@
             var tmp_0 = this;
             tmp_0.this1__1 = this._this__u8e3s4__1;
             var tmp_1 = this;
-            tmp_1.collector2__1 = new _no_name_provided__qut3iv_5(this.predicate_1, this.result0__1);
+            tmp_1.collector2__1 = new _no_name_provided__qut3iv_3(this.predicate_1, this.result0__1);
             this.set_exceptionState_fex74n_k$(2);
             this.set_state_rjd8d0_k$(1);
             suspendResult = this.this1__1.collect_aksokr_k$(this.collector2__1, this);
@@ -14990,7 +14496,7 @@
       return Unit_getInstance();
     }
     // Inline function 'kotlinx.coroutines.Runnable' call
-    var action = new _no_name_provided__qut3iv_6(select, $this);
+    var action = new _no_name_provided__qut3iv_4(select, $this);
     if (!(select instanceof SelectImplementation))
       THROW_CCE();
     var context = select.get_context_h02k06_k$();
@@ -15005,11 +14511,11 @@
     l.callableName = 'register';
     return l;
   }
-  function _no_name_provided__qut3iv_6($select, this$0) {
+  function _no_name_provided__qut3iv_4($select, this$0) {
     this.$select_1 = $select;
     this.this$0__1 = this$0;
   }
-  protoOf(_no_name_provided__qut3iv_6).run_mvkpxh_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_4).run_mvkpxh_k$ = function () {
     // Inline function 'kotlinx.coroutines.selects.OnTimeout.register.<anonymous>' call
     this.$select_1.trySelect_fbege0_k$(this.this$0__1, Unit_getInstance());
   };
@@ -16380,12 +15886,12 @@
   function Runnable() {
   }
   function Runnable_0(block) {
-    return new _no_name_provided__qut3iv_7(block);
+    return new _no_name_provided__qut3iv_5(block);
   }
-  function _no_name_provided__qut3iv_7($block) {
+  function _no_name_provided__qut3iv_5($block) {
     this.$block_1 = $block;
   }
-  protoOf(_no_name_provided__qut3iv_7).run_mvkpxh_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_5).run_mvkpxh_k$ = function () {
     this.$block_1();
   };
   function SchedulerTask() {
@@ -16939,7 +16445,6 @@
   protoOf(SharedFlowImpl).fuse$default_3fvd2g_k$ = fuse$default;
   protoOf(StateFlowImpl).fuse$default_3fvd2g_k$ = fuse$default;
   protoOf(ChannelFlow).fuse$default_3fvd2g_k$ = fuse$default;
-  protoOf(ReadonlyStateFlow).fuse$default_3fvd2g_k$ = fuse$default;
   protoOf(SelectImplementation).invoke_if6p1h_k$ = invoke;
   protoOf(SelectImplementation).onTimeout_u5run0_k$ = onTimeout;
   protoOf(SetTimeoutBasedDispatcher).delay_xigjxo_k$ = delay;
@@ -17002,23 +16507,19 @@
   _.$_$.f = withContext;
   _.$_$.g = Key_getInstance_2;
   _.$_$.h = MutableStateFlow_0;
-  _.$_$.i = asStateFlow;
-  _.$_$.j = launchIn;
-  _.$_$.k = merge;
-  _.$_$.l = onEach;
-  _.$_$.m = takeWhile;
-  _.$_$.n = CancellableContinuationImpl;
-  _.$_$.o = CompletableDeferred_0;
-  _.$_$.p = CoroutineDispatcher;
-  _.$_$.q = CoroutineScope;
-  _.$_$.r = CoroutineScope_0;
-  _.$_$.s = Job_0;
-  _.$_$.t = get_MODE_CANCELLABLE;
-  _.$_$.u = SupervisorJob;
-  _.$_$.v = asCoroutineDispatcher;
-  _.$_$.w = cancel_1;
-  _.$_$.x = get_job;
-  _.$_$.y = launch;
+  _.$_$.i = takeWhile;
+  _.$_$.j = CancellableContinuationImpl;
+  _.$_$.k = CompletableDeferred_0;
+  _.$_$.l = CoroutineDispatcher;
+  _.$_$.m = CoroutineScope;
+  _.$_$.n = CoroutineScope_0;
+  _.$_$.o = Job_0;
+  _.$_$.p = get_MODE_CANCELLABLE;
+  _.$_$.q = SupervisorJob;
+  _.$_$.r = asCoroutineDispatcher;
+  _.$_$.s = cancel_1;
+  _.$_$.t = get_job;
+  _.$_$.u = launch;
   //endregion
   return _;
 }));

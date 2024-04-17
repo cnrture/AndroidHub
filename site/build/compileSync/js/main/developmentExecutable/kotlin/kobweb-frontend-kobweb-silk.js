@@ -29,12 +29,12 @@
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var THROW_CCE = kotlin_kotlin.$_$.ve;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
   var KobwebApp = kotlin_com_varabyte_kobweb_kobweb_core.$_$.c;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var setSilkWidgetVariables = kotlin_com_varabyte_kobweb_silk_widgets.$_$.q;
-  var prepareSilkFoundation = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l1;
+  var setSilkWidgetVariables = kotlin_com_varabyte_kobweb_silk_widgets.$_$.n;
+  var prepareSilkFoundation = kotlin_com_varabyte_kobweb_silk_foundation.$_$.k1;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
   //endregion
   //region block: pre-declaration

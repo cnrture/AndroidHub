@@ -4,7 +4,6 @@ import com.varabyte.kobweb.compose.ui.graphics.Color
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
-import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.colors.palette.background
 import com.varabyte.kobweb.silk.theme.colors.palette.color
 
@@ -16,6 +15,9 @@ class SitePalette(
     val nearBackground: Color,
     val cobweb: Color,
     val brand: Brand,
+    val green: Color,
+    val white: Color,
+    val blue: Color
 ) {
     class Brand(
         val primary: Color = Color.rgb(0x3C83EF),
@@ -24,35 +26,25 @@ class SitePalette(
 }
 
 object SitePalettes {
-    val light = SitePalette(
-        nearBackground = Color.rgb(0xF4F6FA),
-        cobweb = Colors.LightGray,
-        brand = SitePalette.Brand(
-            primary = Color.rgb(0x3C83EF),
-            accent = Color.rgb(0xFCBA03),
-        )
-    )
-    val dark = SitePalette(
-        nearBackground = Color.rgb(0x13171F),
+    val palette = SitePalette(
+        nearBackground = Color.rgb(0xFAF8FF),
         cobweb = Colors.LightGray.inverted(),
         brand = SitePalette.Brand(
             primary = Color.rgb(0x3C83EF),
             accent = Color.rgb(0xF3DB5B),
-        )
+        ),
+        green = Color.rgb(0x6A4EE9),
+        white = Colors.White,
+        blue = Color.rgb(0x092F42),
     )
 }
 
-fun ColorMode.toSitePalette(): SitePalette {
-    return when (this) {
-        ColorMode.LIGHT -> SitePalettes.light
-        ColorMode.DARK -> SitePalettes.dark
-    }
+fun getSitePalette(): SitePalette {
+    return SitePalettes.palette
 }
 
 @InitSilk
 fun initTheme(ctx: InitSilkContext) {
     ctx.theme.palettes.light.background = Color.rgb(0xFAFAFA)
-    ctx.theme.palettes.light.color = Colors.Black
-    ctx.theme.palettes.dark.background = Color.rgb(0x06080B)
-    ctx.theme.palettes.dark.color = Colors.White
+    ctx.theme.palettes.light.color = Colors.White
 }

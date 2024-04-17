@@ -1,8 +1,8 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kobweb-frontend-compose-html-ext.js', './html-html-core.js', './kotlin-kotlin-stdlib.js', './kobweb-frontend-kobweb-compose.js', './compose-multiplatform-core-compose-runtime-runtime.js', './kobweb-frontend-silk-foundation.js', './kotlinx-coroutines-core.js', './kobweb-frontend-browser-ext.js', './kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js'], factory);
+    define(['exports', './kobweb-frontend-compose-html-ext.js', './html-html-core.js', './kotlin-kotlin-stdlib.js', './kobweb-frontend-kobweb-compose.js', './compose-multiplatform-core-compose-runtime-runtime.js', './kobweb-frontend-silk-foundation.js', './kotlinx-coroutines-core.js', './kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kobweb-frontend-compose-html-ext.js'), require('./html-html-core.js'), require('./kotlin-kotlin-stdlib.js'), require('./kobweb-frontend-kobweb-compose.js'), require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./kobweb-frontend-silk-foundation.js'), require('./kotlinx-coroutines-core.js'), require('./kobweb-frontend-browser-ext.js'), require('./kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js'));
+    factory(module.exports, require('./kobweb-frontend-compose-html-ext.js'), require('./html-html-core.js'), require('./kotlin-kotlin-stdlib.js'), require('./kobweb-frontend-kobweb-compose.js'), require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./kobweb-frontend-silk-foundation.js'), require('./kotlinx-coroutines-core.js'), require('./kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.js'));
   else {
     if (typeof this['kobweb-frontend-compose-html-ext'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-silk-widgets'. Its dependency 'kobweb-frontend-compose-html-ext' was not found. Please, check whether 'kobweb-frontend-compose-html-ext' is loaded prior to 'kobweb-frontend-silk-widgets'.");
@@ -25,230 +25,198 @@
     if (typeof this['kotlinx-coroutines-core'] === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-silk-widgets'. Its dependency 'kotlinx-coroutines-core' was not found. Please, check whether 'kotlinx-coroutines-core' is loaded prior to 'kobweb-frontend-silk-widgets'.");
     }
-    if (typeof this['kobweb-frontend-browser-ext'] === 'undefined') {
-      throw new Error("Error loading module 'kobweb-frontend-silk-widgets'. Its dependency 'kobweb-frontend-browser-ext' was not found. Please, check whether 'kobweb-frontend-browser-ext' is loaded prior to 'kobweb-frontend-silk-widgets'.");
-    }
     if (typeof kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat === 'undefined') {
       throw new Error("Error loading module 'kobweb-frontend-silk-widgets'. Its dependency 'kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat' was not found. Please, check whether 'kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat' is loaded prior to 'kobweb-frontend-silk-widgets'.");
     }
-    root['kobweb-frontend-silk-widgets'] = factory(typeof this['kobweb-frontend-silk-widgets'] === 'undefined' ? {} : this['kobweb-frontend-silk-widgets'], this['kobweb-frontend-compose-html-ext'], this['html-html-core'], this['kotlin-kotlin-stdlib'], this['kobweb-frontend-kobweb-compose'], this['compose-multiplatform-core-compose-runtime-runtime'], this['kobweb-frontend-silk-foundation'], this['kotlinx-coroutines-core'], this['kobweb-frontend-browser-ext'], kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat);
+    root['kobweb-frontend-silk-widgets'] = factory(typeof this['kobweb-frontend-silk-widgets'] === 'undefined' ? {} : this['kobweb-frontend-silk-widgets'], this['kobweb-frontend-compose-html-ext'], this['html-html-core'], this['kotlin-kotlin-stdlib'], this['kobweb-frontend-kobweb-compose'], this['compose-multiplatform-core-compose-runtime-runtime'], this['kobweb-frontend-silk-foundation'], this['kotlinx-coroutines-core'], kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat);
   }
-}(this, function (_, kotlin_com_varabyte_kobweb_compose_html_ext, kotlin_org_jetbrains_compose_html_html_core, kotlin_kotlin, kotlin_com_varabyte_kobweb_kobweb_compose, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_com_varabyte_kobweb_silk_foundation, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_com_varabyte_kobweb_browser_ext, kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat) {
+}(this, function (_, kotlin_com_varabyte_kobweb_compose_html_ext, kotlin_org_jetbrains_compose_html_html_core, kotlin_kotlin, kotlin_com_varabyte_kobweb_kobweb_compose, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_com_varabyte_kobweb_silk_foundation, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat) {
   'use strict';
   //region block: imports
-  var StyleVariable = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i;
-  var StyleVariable_0 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j;
+  var StyleVariable = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h;
+  var StyleVariable_0 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i;
   var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.f5;
-  var StyleVariable_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h;
+  var StyleVariable_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g;
   var protoOf = kotlin_kotlin.$_$.ob;
   var objectMeta = kotlin_kotlin.$_$.nb;
   var setMetadataFor = kotlin_kotlin.$_$.pb;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var Companion_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x3;
-  var fillMaxWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e1;
+  var Companion_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u3;
+  var fillMaxWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c1;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.n;
-  var borderBottom = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o;
+  var borderBottom = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m;
   var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
   var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
-  var tabIndex = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v2;
+  var tabIndex = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s2;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var get_ariaDisabled = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l;
   var get_hover = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s;
   var not = kotlin_com_varabyte_kobweb_silk_foundation.$_$.u;
   var get_active = kotlin_com_varabyte_kobweb_silk_foundation.$_$.i;
-  var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e3;
-  var cursor = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a1;
-  var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d3;
+  var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.y2;
+  var cursor = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y;
+  var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.x2;
   var listOf = kotlin_kotlin.$_$.n7;
-  var transition = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a3;
-  var backgroundColor = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n;
-  var color = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z;
-  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p3;
-  var userSelect = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d3;
+  var transition = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x2;
+  var backgroundColor = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l;
+  var color = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x;
+  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j3;
+  var userSelect = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a3;
   var get_cssRem = kotlin_org_jetbrains_compose_html_html_core.$_$.u3;
-  var padding = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n2;
-  var calc = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b;
+  var padding = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k2;
+  var calc = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.a;
   var VOID = kotlin_kotlin.$_$.e;
-  var margin = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y1;
-  var flexGrow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f1;
-  var overflow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j2;
-  var Companion_getInstance_4 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k3;
+  var margin = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w1;
+  var flexGrow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d1;
+  var overflow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g2;
+  var Companion_getInstance_4 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e3;
   var KProperty0 = kotlin_kotlin.$_$.ec;
   var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
   var KProperty1 = kotlin_kotlin.$_$.fc;
   var ComponentStyle = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g;
-  var Companion_getInstance_5 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.q1;
+  var Companion_getInstance_5 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p1;
   var base = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n;
   var ComponentStyle_0 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.h;
   var ButtonType_Button_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.a;
   var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.x;
-  var thenIf = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i3;
-  var ensureNotNull = kotlin_kotlin.$_$.of;
-  var Companion_getInstance_6 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.r1;
-  var get_isBright = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h;
-  var ColorMode_DARK_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n1;
-  var ColorMode_LIGHT_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o1;
+  var thenIf = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f3;
+  var ensureNotNull = kotlin_kotlin.$_$.mf;
+  var Companion_getInstance_6 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.q1;
+  var get_isBright = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f;
+  var ColorMode_DARK_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.m1;
+  var ColorMode_LIGHT_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n1;
   var toPalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g1;
-  var setVariable = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t2;
+  var setVariable = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q2;
   var Companion_getInstance_7 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var THROW_CCE = kotlin_kotlin.$_$.ve;
-  var onClick = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e2;
-  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j3;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
+  var onClick = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c2;
+  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g3;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var Button = kotlin_org_jetbrains_compose_html_html_core.$_$.p5;
+  var Button = kotlin_org_jetbrains_compose_html_html_core.$_$.o5;
   var interfaceMeta = kotlin_kotlin.$_$.qa;
   var get_focusVisible = kotlin_com_varabyte_kobweb_silk_foundation.$_$.r;
-  var lineHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s1;
-  var height = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q1;
-  var minWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b2;
-  var fontSize = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h1;
-  var Companion_getInstance_8 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f3;
-  var fontWeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i1;
-  var Companion_getInstance_9 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r3;
-  var whiteSpace = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f3;
-  var padding_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p2;
-  var Companion_getInstance_10 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.q3;
-  var verticalAlign = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e3;
-  var borderRadius = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r;
-  var border = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u;
-  var CSSTransition_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.z2;
-  var Colors_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o3;
-  var outline = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h2;
-  var boxShadow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w;
+  var lineHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q1;
+  var height = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o1;
+  var minWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z1;
+  var fontSize = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f1;
+  var Companion_getInstance_8 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.z2;
+  var fontWeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g1;
+  var Companion_getInstance_9 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l3;
+  var whiteSpace = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c3;
+  var padding_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m2;
+  var Companion_getInstance_10 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k3;
+  var verticalAlign = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b3;
+  var borderRadius = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p;
+  var border = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s;
+  var CSSTransition_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.u2;
+  var Colors_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l3;
+  var outline = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e2;
+  var boxShadow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u;
   var type = kotlin_org_jetbrains_compose_html_html_core.$_$.n2;
-  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r2;
-  var Center_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l3;
-  var CenterVertically_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r3;
-  var Row = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e;
+  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m2;
+  var Center_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i3;
+  var CenterVertically_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o3;
+  var Row = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var gap = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k1;
+  var gap = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i1;
   var Companion_getInstance_11 = kotlin_org_jetbrains_compose_html_html_core.$_$.o;
-  var position = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q2;
-  var opacity = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g2;
-  var size = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u2;
-  var border_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t;
-  var transition_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b3;
-  var rowClasses = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g;
+  var position = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n2;
+  var opacity = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d2;
+  var size = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r2;
+  var border_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r;
+  var transition_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y2;
+  var rowClasses = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e;
   var Keyframes = kotlin_com_varabyte_kobweb_silk_foundation.$_$.a;
   var addVariantBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j;
   var addVariant = kotlin_com_varabyte_kobweb_silk_foundation.$_$.k;
-  var StyleVariable_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g;
-  var paddingInline = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l2;
+  var StyleVariable_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f;
+  var paddingInline = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i2;
   var get_placeholder = kotlin_com_varabyte_kobweb_silk_foundation.$_$.v;
-  var Companion_getInstance_12 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b3;
-  var appearance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k;
+  var Companion_getInstance_12 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.v2;
+  var appearance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i;
   var get_ariaInvalid = kotlin_com_varabyte_kobweb_silk_foundation.$_$.m;
   var get_disabled = kotlin_com_varabyte_kobweb_silk_foundation.$_$.q;
-  var margin_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v1;
-  var RectF_init_$Create$ = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p1;
-  var clip = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j1;
-  var overflow_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k2;
-  var width = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g3;
-  var minHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a2;
-  var Companion_getInstance_13 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.c3;
-  var boxSizing = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x;
-  var translateX = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c3;
-  var ariaHidden = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m;
-  var Companion_getInstance_14 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s3;
+  var margin_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t1;
+  var RectF_init_$Create$ = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o1;
+  var clip = kotlin_com_varabyte_kobweb_silk_foundation.$_$.i1;
+  var overflow_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h2;
+  var width = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d3;
+  var minHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y1;
+  var Companion_getInstance_13 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.w2;
+  var boxSizing = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v;
+  var translateX = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z2;
+  var ariaHidden = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k;
+  var Companion_getInstance_14 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m3;
   var get_em = kotlin_org_jetbrains_compose_html_html_core.$_$.w3;
-  var Svg = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m2;
+  var Svg = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i2;
   var classMeta = kotlin_kotlin.$_$.ea;
-  var Path = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h2;
-  var Polyline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i2;
-  var to = kotlin_kotlin.$_$.zf;
-  var Circle = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d2;
-  var Line = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g2;
-  var Rect = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k2;
-  var Group = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f2;
-  var SVGStrokeLineJoin_Round_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.v2;
-  var SVGStrokeLineCap_Round_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.u2;
+  var Path = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f2;
+  var Polyline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g2;
+  var to = kotlin_kotlin.$_$.xf;
+  var Circle = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.c2;
+  var Line = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e2;
+  var Rect = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h2;
+  var Group = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d2;
+  var SVGStrokeLineJoin_Round_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.q2;
+  var SVGStrokeLineCap_Round_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p2;
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.rf;
-  var SVGStrokeType_CurrentColor_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.w2;
-  var SVGFillType_None_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t2;
-  var SVGFillType_CurrentColor_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s2;
-  var SVGStrokeType_None_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.x2;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.pf;
+  var SVGStrokeType_CurrentColor_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r2;
+  var SVGFillType_None_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.o2;
+  var SVGFillType_CurrentColor_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.n2;
+  var SVGStrokeType_None_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s2;
   var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.d5;
-  var Hr = kotlin_org_jetbrains_compose_html_html_core.$_$.y5;
-  var borderTop = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s;
-  var borderLeft = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p;
+  var Hr = kotlin_org_jetbrains_compose_html_html_core.$_$.x5;
+  var borderTop = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q;
+  var borderLeft = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n;
   var Companion_getInstance_15 = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
-  var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b1;
+  var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z;
   var get_fr = kotlin_org_jetbrains_compose_html_html_core.$_$.c4;
-  var gridTemplateColumns = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n1;
+  var gridTemplateColumns = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l1;
   var get_entries = kotlin_com_varabyte_kobweb_silk_foundation.$_$.f;
   var collectionSizeOrDefault = kotlin_kotlin.$_$.a6;
   var mapCapacity = kotlin_kotlin.$_$.o7;
   var coerceAtLeast = kotlin_kotlin.$_$.vb;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.s;
-  var NumberValue = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f;
-  var TopStart_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w3;
+  var NumberValue = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e;
+  var TopStart_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t3;
   var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
-  var refScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p2;
-  var Box = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c;
+  var refScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k2;
+  var Box = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a;
   var KMutableProperty0 = kotlin_kotlin.$_$.cc;
-  var THROW_ISE = kotlin_kotlin.$_$.xe;
+  var THROW_ISE = kotlin_kotlin.$_$.ve;
   var getLocalDelegateReference = kotlin_kotlin.$_$.ka;
   var CoroutineImpl = kotlin_kotlin.$_$.q9;
-  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.r;
+  var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n;
   var isInterface = kotlin_kotlin.$_$.za;
   var LaunchedEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k;
   var CompositionLocalProvider = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
   var SuspendFunction1 = kotlin_kotlin.$_$.r9;
-  var MutableStateFlow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.h;
-  var asStateFlow = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.i;
-  var EventListenerManager = kotlin_com_varabyte_kobweb_browser_ext.$_$.a;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
-  var merge = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.k;
-  var onEach = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.l;
-  var asCoroutineDispatcher = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.v;
-  var CoroutineScope_0 = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.q;
-  var launchIn = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.j;
-  var THROW_IAE = kotlin_kotlin.$_$.we;
-  var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.ke;
-  var TopCenter_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v3;
+  var TopCenter_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s3;
   var deferRender = kotlin_com_varabyte_kobweb_silk_foundation.$_$.a1;
-  var top = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z2;
-  var bottom = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v;
-  var left = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r1;
-  var right = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r2;
-  var disposableRef = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.o2;
-  var toDouble = kotlin_kotlin.$_$.vd;
-  var toString = kotlin_kotlin.$_$.rb;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.r1;
-  var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
-  var IllegalStateException = kotlin_kotlin.$_$.oe;
-  var onTransitionEnd = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f2;
-  var KMutableProperty1 = kotlin_kotlin.$_$.dc;
-  var EventListener = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.e;
-  var ResizeObserver_init_$Create$ = kotlin_com_varabyte_kobweb_browser_ext.$_$.i;
-  var numberToDouble = kotlin_kotlin.$_$.kb;
-  var align = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a;
-  var BoxScope = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b;
-  var styleModifier = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h3;
+  var top = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w2;
+  var bottom = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t;
+  var left = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p1;
+  var right = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o2;
+  var styleModifier = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e3;
   var unaryMinus = kotlin_org_jetbrains_compose_html_html_core.$_$.j5;
-  var margin_1 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u1;
-  var split = kotlin_kotlin.$_$.ld;
-  var charSequenceLength = kotlin_kotlin.$_$.da;
-  var Br = kotlin_org_jetbrains_compose_html_html_core.$_$.o5;
-  var SpanText = kotlin_com_varabyte_kobweb_silk_foundation.$_$.z;
-  var Column = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d;
+  var margin_1 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s1;
   var base_0 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p;
-  var ariaDisabled = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l;
+  var ariaDisabled = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j;
   var base_1 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o;
   var get_ms = kotlin_org_jetbrains_compose_html_html_core.$_$.a5;
-  var Blue_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s1;
-  var Gray_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.t1;
-  var Red_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.v1;
-  var lightened = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i;
+  var Blue_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.r1;
+  var Gray_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s1;
+  var Red_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.u1;
+  var lightened = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g;
   var registerKeyframes = kotlin_com_varabyte_kobweb_silk_foundation.$_$.b;
-  var suffixedWith = kotlin_com_varabyte_kobweb_silk_foundation.$_$.i1;
+  var suffixedWith = kotlin_com_varabyte_kobweb_silk_foundation.$_$.h1;
   var removeClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.d;
   var addClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.a;
   var ColorGroup = kotlin_com_varabyte_kobweb_silk_foundation.$_$.e1;
   var MutablePalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.f1;
+  var KMutableProperty1 = kotlin_kotlin.$_$.dc;
   //endregion
   //region block: pre-declaration
   setMetadataFor(TabVars, 'TabVars', objectMeta);
@@ -268,45 +236,8 @@
   setMetadataFor(DividerVars, 'DividerVars', objectMeta);
   setMetadataFor(SurfaceVars, 'SurfaceVars', objectMeta);
   setMetadataFor(Surface$lambda$lambda$slambda, 'Surface$lambda$lambda$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(Companion, 'Companion', objectMeta);
-  setMetadataFor(KeepPopupOpenStrategy, 'KeepPopupOpenStrategy', classMeta);
-  setMetadataFor(never$1, VOID, classMeta, KeepPopupOpenStrategy);
-  setMetadataFor(onFocus$1, VOID, classMeta, KeepPopupOpenStrategy);
-  setMetadataFor(onHover$1, VOID, classMeta, KeepPopupOpenStrategy);
-  setMetadataFor(combine$o$slambda, 'combine$o$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(combine$1, VOID, classMeta, KeepPopupOpenStrategy);
-  setMetadataFor(Companion_0, 'Companion', objectMeta);
-  setMetadataFor(OpenClosePopupStrategy, 'OpenClosePopupStrategy', classMeta);
-  setMetadataFor(OpenClose, 'OpenClose', classMeta, Enum);
-  setMetadataFor(onFocus$1_0, VOID, classMeta, OpenClosePopupStrategy);
-  setMetadataFor(onHover$1_0, VOID, classMeta, OpenClosePopupStrategy);
-  setMetadataFor(combine$o$slambda_1, 'combine$o$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(combine$1_0, VOID, classMeta, OpenClosePopupStrategy);
   setMetadataFor(OverlayVars, 'OverlayVars', objectMeta);
   setMetadataFor(ComposableSingletons$OverlayKt, 'ComposableSingletons$OverlayKt', objectMeta);
-  setMetadataFor(PopoverShowHideSettings, 'PopoverShowHideSettings', classMeta);
-  setMetadataFor(PopoverStateController$slambda, 'PopoverStateController$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(PopoverStateController$slambda_1, 'PopoverStateController$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor(PopoverStateController, 'PopoverStateController', classMeta);
-  setMetadataFor(PopoverElements, 'PopoverElements', classMeta);
-  setMetadataFor(PopoverState, 'PopoverState', interfaceMeta);
-  setMetadataFor(Uninitialized, 'Uninitialized', objectMeta, VOID, [PopoverState]);
-  setMetadataFor(Initialized, 'Initialized', interfaceMeta, VOID, [PopoverState]);
-  setMetadataFor(FoundElements, 'FoundElements', classMeta, VOID, [Initialized]);
-  setMetadataFor(Visible, 'Visible', interfaceMeta, VOID, [Initialized]);
-  setMetadataFor(Showing, 'Showing', interfaceMeta, VOID, [Visible]);
-  setMetadataFor(Calculating, 'Calculating', classMeta, VOID, [Showing]);
-  setMetadataFor(Shown, 'Shown', classMeta, VOID, [Showing]);
-  setMetadataFor(Hiding, 'Hiding', classMeta, VOID, [Visible]);
-  setMetadataFor(_no_name_provided__qut3iv, VOID, classMeta, VOID, [DisposableEffectResult]);
-  setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [DisposableEffectResult]);
-  setMetadataFor(PopupPlacementStrategy, 'PopupPlacementStrategy', classMeta);
-  setMetadataFor(PopupPlacementStrategy$Companion$of$1, VOID, classMeta, PopupPlacementStrategy);
-  setMetadataFor(Position, 'Position', classMeta);
-  setMetadataFor(PositionAndPlacement, 'PositionAndPlacement', classMeta);
-  setMetadataFor(Companion_1, 'Companion', objectMeta);
-  setMetadataFor(PopupPlacement, 'PopupPlacement', classMeta, Enum);
-  setMetadataFor(PopupScope, 'PopupScope', classMeta, VOID, [BoxScope]);
   setMetadataFor(PopupVars, 'PopupVars', objectMeta);
   setMetadataFor(TooltipVars, 'TooltipVars', objectMeta);
   setMetadataFor(TransitionDurationVars, 'TransitionDurationVars', objectMeta);
@@ -321,8 +252,8 @@
   setMetadataFor(MutableSwitch, 'MutableSwitch', classMeta, ColorGroup, [ColorGroup, Switch]);
   setMetadataFor(Tab, 'Tab', interfaceMeta);
   setMetadataFor(MutableTab, 'MutableTab', classMeta, ColorGroup, [ColorGroup, Tab]);
-  setMetadataFor(Tooltip_0, 'Tooltip', interfaceMeta);
-  setMetadataFor(MutableTooltip, 'MutableTooltip', classMeta, ColorGroup, [ColorGroup, Tooltip_0]);
+  setMetadataFor(Tooltip, 'Tooltip', interfaceMeta);
+  setMetadataFor(MutableTooltip, 'MutableTooltip', classMeta, ColorGroup, [ColorGroup, Tooltip]);
   setMetadataFor(SilkWidgetColorGroups, 'SilkWidgetColorGroups', objectMeta);
   //endregion
   function get_TabsStyle() {
@@ -2014,63 +1945,6 @@
       CanvasStyle$delegate = ComponentStyle(VOID, 'silk', CanvasStyle$delegate$lambda);
     }
   }
-  function MoonIcon(modifier, $composer, $changed, $default) {
-    var modifier_0 = {_v: modifier};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-325313529);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 2;
-    if (!(($default & 1) === 1) ? true : !(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        modifier_0._v = Companion_getInstance();
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-325313529, $dirty, -1, 'com.varabyte.kobweb.silk.components.icons.MoonIcon (Icons.kt:387)');
-      }
-      var tmp = Companion_getInstance_14().sized$default_id0xg9_k$(200);
-      createIcon(tmp, null, new Stroke(20), toAttrs(modifier_0._v), ComposableSingletons$IconsKt_getInstance().lambda_18_7sywod_1, $composer_0, 25088, 2);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(MoonIcon$lambda(modifier_0, $changed, $default));
-    }
-  }
-  function SunIcon(modifier, $composer, $changed, $default) {
-    var modifier_0 = {_v: modifier};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1238320138);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 2;
-    if (!(($default & 1) === 1) ? true : !(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        modifier_0._v = Companion_getInstance();
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-1238320138, $dirty, -1, 'com.varabyte.kobweb.silk.components.icons.SunIcon (Icons.kt:402)');
-      }
-      createIcon(null, null, new Stroke(2), toAttrs(modifier_0._v), ComposableSingletons$IconsKt_getInstance().lambda_20_7sywp0__1, $composer_0, 25088, 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(SunIcon$lambda(modifier_0, $changed, $default));
-    }
-  }
   function HamburgerIcon(modifier, $composer, $changed, $default) {
     var modifier_0 = {_v: modifier};
     var $composer_0 = $composer;
@@ -3522,18 +3396,6 @@
       new ComposableSingletons$IconsKt();
     return ComposableSingletons$IconsKt_instance;
   }
-  function MoonIcon$lambda($modifier, $$changed, $$default) {
-    return function ($composer, $force) {
-      MoonIcon($modifier._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function SunIcon$lambda($modifier, $$changed, $$default) {
-    return function ($composer, $force) {
-      SunIcon($modifier._v, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
   function HamburgerIcon$lambda($modifier, $$changed, $$default) {
     return function ($composer, $force) {
       HamburgerIcon($modifier._v, $composer, updateChangedFlags($$changed | 1), $$default);
@@ -4179,514 +4041,6 @@
       SurfaceStyle$delegate = ComponentStyle(VOID, 'silk', SurfaceStyle$delegate$lambda);
     }
   }
-  function _get_defaultValue__cxgql7($this) {
-    return $this.defaultValue_1;
-  }
-  function Companion() {
-    Companion_instance = this;
-  }
-  var Companion_instance;
-  function Companion_getInstance_16() {
-    if (Companion_instance == null)
-      new Companion();
-    return Companion_instance;
-  }
-  function _get__keepOpenFlow__7i7cj9($this) {
-    return $this._keepOpenFlow_1;
-  }
-  function _set_isActive__8i95on($this, _set____db54di) {
-    $this.isActive_1 = _set____db54di;
-  }
-  function _get_isActive__4an5s5($this) {
-    return $this.isActive_1;
-  }
-  function KeepPopupOpenStrategy(defaultValue) {
-    Companion_getInstance_16();
-    defaultValue = defaultValue === VOID ? false : defaultValue;
-    this.defaultValue_1 = defaultValue;
-    this._keepOpenFlow_1 = MutableStateFlow(this.defaultValue_1);
-    this.isActive_1 = false;
-    this.keepOpenFlow_1 = asStateFlow(this._keepOpenFlow_1);
-  }
-  protoOf(KeepPopupOpenStrategy).get_keepOpenFlow_bsp6yu_k$ = function () {
-    return this.keepOpenFlow_1;
-  };
-  protoOf(KeepPopupOpenStrategy).init_2byfvu_k$ = function (popupElement) {
-    this._keepOpenFlow_1.set_value_v1vabv_k$(this.defaultValue_1);
-    this.onInit_7n9e9j_k$(popupElement);
-    this.isActive_1 = true;
-  };
-  protoOf(KeepPopupOpenStrategy).onInit_7n9e9j_k$ = function (popupElement) {
-    return Unit_getInstance();
-  };
-  protoOf(KeepPopupOpenStrategy).emitShouldKeepOpen_s81e2o_k$ = function (shouldKeepOpen) {
-    if (this.isActive_1) {
-      this._keepOpenFlow_1.set_value_v1vabv_k$(shouldKeepOpen);
-    }
-  };
-  protoOf(KeepPopupOpenStrategy).reset_5u6xz3_k$ = function () {
-    this.isActive_1 = false;
-    this.onResetting_or93ny_k$();
-    this._keepOpenFlow_1.set_value_v1vabv_k$(this.defaultValue_1);
-  };
-  protoOf(KeepPopupOpenStrategy).onResetting_or93ny_k$ = function () {
-    return Unit_getInstance();
-  };
-  function never(_this__u8e3s4) {
-    return new never$1();
-  }
-  function plus(_this__u8e3s4, other) {
-    return combine(Companion_getInstance_16(), [_this__u8e3s4, other]);
-  }
-  function onFocus(_this__u8e3s4) {
-    return new onFocus$1();
-  }
-  function onHover(_this__u8e3s4) {
-    return new onHover$1();
-  }
-  function get_shouldKeepOpen(_this__u8e3s4) {
-    return _this__u8e3s4.keepOpenFlow_1.get_value_j01efc_k$();
-  }
-  function combine(_this__u8e3s4, strategies) {
-    return new combine$1(strategies);
-  }
-  function never$1() {
-    KeepPopupOpenStrategy.call(this);
-  }
-  function _set_manager__87pxu0($this, _set____db54di) {
-    $this.manager_1 = _set____db54di;
-  }
-  function _get_manager__xty870($this) {
-    return $this.manager_1;
-  }
-  function onFocus$o$onInit$lambda(this$0) {
-    return function (it) {
-      this$0.emitShouldKeepOpen_s81e2o_k$(true);
-      return Unit_getInstance();
-    };
-  }
-  function onFocus$o$onInit$lambda_0(this$0, $popupElement) {
-    return function (evt) {
-      var focusEvent = evt instanceof FocusEvent ? evt : THROW_CCE();
-      var tmp = focusEvent.relatedTarget;
-      var newFocus = tmp instanceof Node ? tmp : null;
-      this$0.emitShouldKeepOpen_s81e2o_k$(!(newFocus == null) ? $popupElement.contains(newFocus) : false);
-      return Unit_getInstance();
-    };
-  }
-  function onFocus$1() {
-    KeepPopupOpenStrategy.call(this);
-    this.manager_1 = null;
-  }
-  protoOf(onFocus$1).onInit_7n9e9j_k$ = function (popupElement) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new EventListenerManager(popupElement);
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.onInit.<anonymous>' call
-    this_0.addEventListener_q0srgg_k$('focusin', onFocus$o$onInit$lambda(this));
-    this_0.addEventListener_q0srgg_k$('focusout', onFocus$o$onInit$lambda_0(this, popupElement));
-    tmp.manager_1 = this_0;
-  };
-  protoOf(onFocus$1).onResetting_or93ny_k$ = function () {
-    ensureNotNull(this.manager_1).clearAllListeners_1m8p17_k$();
-    this.manager_1 = null;
-  };
-  function _set_manager__87pxu0_0($this, _set____db54di) {
-    $this.manager_1 = _set____db54di;
-  }
-  function _get_manager__xty870_0($this) {
-    return $this.manager_1;
-  }
-  function onHover$o$onInit$lambda(this$0) {
-    return function (it) {
-      this$0.emitShouldKeepOpen_s81e2o_k$(true);
-      return Unit_getInstance();
-    };
-  }
-  function onHover$o$onInit$lambda_0(this$0) {
-    return function (it) {
-      this$0.emitShouldKeepOpen_s81e2o_k$(false);
-      return Unit_getInstance();
-    };
-  }
-  function onHover$1() {
-    KeepPopupOpenStrategy.call(this);
-    this.manager_1 = null;
-  }
-  protoOf(onHover$1).onInit_7n9e9j_k$ = function (popupElement) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new EventListenerManager(popupElement);
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.onInit.<anonymous>' call
-    this_0.addEventListener_q0srgg_k$('mouseenter', onHover$o$onInit$lambda(this));
-    this_0.addEventListener_q0srgg_k$('mouseleave', onHover$o$onInit$lambda_0(this));
-    tmp.manager_1 = this_0;
-  };
-  protoOf(onHover$1).onResetting_or93ny_k$ = function () {
-    ensureNotNull(this.manager_1).clearAllListeners_1m8p17_k$();
-    this.manager_1 = null;
-  };
-  function combine$o$slambda($strategies, this$0, resultContinuation) {
-    this.$strategies_1 = $strategies;
-    this.this$0__1 = this$0;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(combine$o$slambda).invoke_f29lti_k$ = function (it, $completion) {
-    var tmp = this.create_vh5neu_k$(it, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(combine$o$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_f29lti_k$((!(p1 == null) ? typeof p1 === 'boolean' : false) ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(combine$o$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        if (tmp === 0) {
-          this.set_exceptionState_fex74n_k$(1);
-          var tmp$ret$0;
-          l$ret$1: do {
-            var indexedObject = this.$strategies_1;
-            var inductionVariable = 0;
-            var last = indexedObject.length;
-            while (inductionVariable < last) {
-              var element = indexedObject[inductionVariable];
-              inductionVariable = inductionVariable + 1 | 0;
-              if (get_shouldKeepOpen(element)) {
-                tmp$ret$0 = true;
-                break l$ret$1;
-              }
-            }
-            tmp$ret$0 = false;
-          }
-           while (false);
-          var anyKeepOpen = tmp$ret$0;
-          if (!(anyKeepOpen === this.this$0__1.keepOpenFlow_1.get_value_j01efc_k$())) {
-            this.this$0__1.emitShouldKeepOpen_s81e2o_k$(anyKeepOpen);
-          }
-          return Unit_getInstance();
-        } else if (tmp === 1) {
-          throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        throw e;
-      }
-     while (true);
-  };
-  protoOf(combine$o$slambda).create_vh5neu_k$ = function (it, completion) {
-    var i = new combine$o$slambda(this.$strategies_1, this.this$0__1, completion);
-    i.it_1 = it;
-    return i;
-  };
-  protoOf(combine$o$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_vh5neu_k$((!(value == null) ? typeof value === 'boolean' : false) ? value : THROW_CCE(), completion);
-  };
-  function combine$o$slambda_0($strategies, this$0, resultContinuation) {
-    var i = new combine$o$slambda($strategies, this$0, resultContinuation);
-    var l = function (it, $completion) {
-      return i.invoke_f29lti_k$(it, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function combine$1($strategies) {
-    this.$strategies_1 = $strategies;
-    KeepPopupOpenStrategy.call(this);
-    // Inline function 'kotlin.collections.map' call
-    // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList_init_$Create$($strategies.length);
-    var inductionVariable = 0;
-    var last = $strategies.length;
-    while (inductionVariable < last) {
-      var item = $strategies[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.<anonymous>' call
-      var tmp$ret$0 = item.keepOpenFlow_1;
-      destination.add_utx5q5_k$(tmp$ret$0);
-    }
-    var tmp = merge(destination);
-    launchIn(onEach(tmp, combine$o$slambda_0($strategies, this, null)), CoroutineScope_0(asCoroutineDispatcher(window)));
-  }
-  protoOf(combine$1).onInit_7n9e9j_k$ = function (popupElement) {
-    // Inline function 'kotlin.collections.forEach' call
-    var indexedObject = this.$strategies_1;
-    var inductionVariable = 0;
-    var last = indexedObject.length;
-    while (inductionVariable < last) {
-      var element = indexedObject[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.onInit.<anonymous>' call
-      element.init_2byfvu_k$(popupElement);
-    }
-  };
-  protoOf(combine$1).onResetting_or93ny_k$ = function () {
-    // Inline function 'kotlin.collections.forEach' call
-    var indexedObject = this.$strategies_1;
-    var inductionVariable = 0;
-    var last = indexedObject.length;
-    while (inductionVariable < last) {
-      var element = indexedObject[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.onResetting.<anonymous>' call
-      element.reset_5u6xz3_k$();
-    }
-  };
-  function Companion_0() {
-    Companion_instance_0 = this;
-  }
-  var Companion_instance_0;
-  function Companion_getInstance_17() {
-    if (Companion_instance_0 == null)
-      new Companion_0();
-    return Companion_instance_0;
-  }
-  function _get__requestFlow__hx705v($this) {
-    return $this._requestFlow_1;
-  }
-  function OpenClosePopupStrategy() {
-    Companion_getInstance_17();
-    this._requestFlow_1 = MutableStateFlow(OpenClose_CLOSE_getInstance());
-    this.requestFlow_1 = asStateFlow(this._requestFlow_1);
-  }
-  protoOf(OpenClosePopupStrategy).get_requestFlow_wwolx0_k$ = function () {
-    return this.requestFlow_1;
-  };
-  protoOf(OpenClosePopupStrategy).init_2byfvu_k$ = function (targetElement) {
-    return Unit_getInstance();
-  };
-  protoOf(OpenClosePopupStrategy).reset_5u6xz3_k$ = function () {
-    return Unit_getInstance();
-  };
-  protoOf(OpenClosePopupStrategy).emitRequest_bf1bd6_k$ = function (request) {
-    this._requestFlow_1.tryEmit_ru0jrz_k$(request);
-  };
-  var OpenClose_OPEN_instance;
-  var OpenClose_CLOSE_instance;
-  function values() {
-    return [OpenClose_OPEN_getInstance(), OpenClose_CLOSE_getInstance()];
-  }
-  function valueOf(value) {
-    switch (value) {
-      case 'OPEN':
-        return OpenClose_OPEN_getInstance();
-      case 'CLOSE':
-        return OpenClose_CLOSE_getInstance();
-      default:
-        OpenClose_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries_0() {
-    if ($ENTRIES == null)
-      $ENTRIES = enumEntries(values());
-    return $ENTRIES;
-  }
-  var OpenClose_entriesInitialized;
-  function OpenClose_initEntries() {
-    if (OpenClose_entriesInitialized)
-      return Unit_getInstance();
-    OpenClose_entriesInitialized = true;
-    OpenClose_OPEN_instance = new OpenClose('OPEN', 0);
-    OpenClose_CLOSE_instance = new OpenClose('CLOSE', 1);
-  }
-  var $ENTRIES;
-  function OpenClose(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  function plus_0(_this__u8e3s4, other) {
-    return combine_0(Companion_getInstance_17(), [_this__u8e3s4, other]);
-  }
-  function onFocus_0(_this__u8e3s4) {
-    return new onFocus$1_0();
-  }
-  function onHover_0(_this__u8e3s4) {
-    return new onHover$1_0();
-  }
-  function combine_0(_this__u8e3s4, strategies) {
-    return new combine$1_0(strategies);
-  }
-  function _set_manager__87pxu0_1($this, _set____db54di) {
-    $this.manager_1 = _set____db54di;
-  }
-  function _get_manager__xty870_1($this) {
-    return $this.manager_1;
-  }
-  function onFocus$o$init$lambda(this$0) {
-    return function (it) {
-      this$0.emitRequest_bf1bd6_k$(OpenClose_OPEN_getInstance());
-      return Unit_getInstance();
-    };
-  }
-  function onFocus$o$init$lambda_0(this$0) {
-    return function (it) {
-      this$0.emitRequest_bf1bd6_k$(OpenClose_CLOSE_getInstance());
-      return Unit_getInstance();
-    };
-  }
-  function onFocus$1_0() {
-    OpenClosePopupStrategy.call(this);
-    this.manager_1 = null;
-  }
-  protoOf(onFocus$1_0).init_2byfvu_k$ = function (targetElement) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new EventListenerManager(targetElement);
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.init.<anonymous>' call
-    this_0.addEventListener_q0srgg_k$('focusin', onFocus$o$init$lambda(this));
-    this_0.addEventListener_q0srgg_k$('focusout', onFocus$o$init$lambda_0(this));
-    if (targetElement.contains(document.activeElement)) {
-      this.emitRequest_bf1bd6_k$(OpenClose_OPEN_getInstance());
-    }
-    tmp.manager_1 = this_0;
-  };
-  protoOf(onFocus$1_0).reset_5u6xz3_k$ = function () {
-    ensureNotNull(this.manager_1).clearAllListeners_1m8p17_k$();
-    this.manager_1 = null;
-  };
-  function _set_manager__87pxu0_2($this, _set____db54di) {
-    $this.manager_1 = _set____db54di;
-  }
-  function _get_manager__xty870_2($this) {
-    return $this.manager_1;
-  }
-  function onHover$o$init$lambda(this$0) {
-    return function (it) {
-      this$0.emitRequest_bf1bd6_k$(OpenClose_OPEN_getInstance());
-      return Unit_getInstance();
-    };
-  }
-  function onHover$o$init$lambda_0(this$0) {
-    return function (it) {
-      this$0.emitRequest_bf1bd6_k$(OpenClose_CLOSE_getInstance());
-      return Unit_getInstance();
-    };
-  }
-  function onHover$1_0() {
-    OpenClosePopupStrategy.call(this);
-    this.manager_1 = null;
-  }
-  protoOf(onHover$1_0).init_2byfvu_k$ = function (targetElement) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new EventListenerManager(targetElement);
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.init.<anonymous>' call
-    this_0.addEventListener_q0srgg_k$('mouseenter', onHover$o$init$lambda(this));
-    this_0.addEventListener_q0srgg_k$('mouseleave', onHover$o$init$lambda_0(this));
-    if (targetElement.matches(':hover')) {
-      this.emitRequest_bf1bd6_k$(OpenClose_OPEN_getInstance());
-    }
-    tmp.manager_1 = this_0;
-  };
-  protoOf(onHover$1_0).reset_5u6xz3_k$ = function () {
-    ensureNotNull(this.manager_1).clearAllListeners_1m8p17_k$();
-    this.manager_1 = null;
-  };
-  function combine$o$slambda_1(this$0, resultContinuation) {
-    this.this$0__1 = this$0;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(combine$o$slambda_1).invoke_ign9f7_k$ = function (it, $completion) {
-    var tmp = this.create_algunr_k$(it, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(combine$o$slambda_1).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_ign9f7_k$(p1 instanceof OpenClose ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(combine$o$slambda_1).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        if (tmp === 0) {
-          this.set_exceptionState_fex74n_k$(1);
-          this.this$0__1.emitRequest_bf1bd6_k$(this.it_1);
-          return Unit_getInstance();
-        } else if (tmp === 1) {
-          throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        throw e;
-      }
-     while (true);
-  };
-  protoOf(combine$o$slambda_1).create_algunr_k$ = function (it, completion) {
-    var i = new combine$o$slambda_1(this.this$0__1, completion);
-    i.it_1 = it;
-    return i;
-  };
-  protoOf(combine$o$slambda_1).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_algunr_k$(value instanceof OpenClose ? value : THROW_CCE(), completion);
-  };
-  function combine$o$slambda_2(this$0, resultContinuation) {
-    var i = new combine$o$slambda_1(this$0, resultContinuation);
-    var l = function (it, $completion) {
-      return i.invoke_ign9f7_k$(it, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function combine$1_0($strategies) {
-    this.$strategies_1 = $strategies;
-    OpenClosePopupStrategy.call(this);
-    // Inline function 'kotlin.collections.map' call
-    // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList_init_$Create$($strategies.length);
-    var inductionVariable = 0;
-    var last = $strategies.length;
-    while (inductionVariable < last) {
-      var item = $strategies[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.<anonymous>' call
-      var tmp$ret$0 = item.requestFlow_1;
-      destination.add_utx5q5_k$(tmp$ret$0);
-    }
-    var tmp = merge(destination);
-    launchIn(onEach(tmp, combine$o$slambda_2(this, null)), CoroutineScope_0(asCoroutineDispatcher(window)));
-  }
-  protoOf(combine$1_0).init_2byfvu_k$ = function (targetElement) {
-    // Inline function 'kotlin.collections.forEach' call
-    var indexedObject = this.$strategies_1;
-    var inductionVariable = 0;
-    var last = indexedObject.length;
-    while (inductionVariable < last) {
-      var element = indexedObject[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.init.<anonymous>' call
-      element.init_2byfvu_k$(targetElement);
-    }
-  };
-  protoOf(combine$1_0).reset_5u6xz3_k$ = function () {
-    // Inline function 'kotlin.collections.forEach' call
-    var indexedObject = this.$strategies_1;
-    var inductionVariable = 0;
-    var last = indexedObject.length;
-    while (inductionVariable < last) {
-      var element = indexedObject[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.reset.<anonymous>' call
-      element.reset_5u6xz3_k$();
-    }
-  };
-  function OpenClose_OPEN_getInstance() {
-    OpenClose_initEntries();
-    return OpenClose_OPEN_instance;
-  }
-  function OpenClose_CLOSE_getInstance() {
-    OpenClose_initEntries();
-    return OpenClose_CLOSE_instance;
-  }
   function get_OverlayStyle() {
     _init_properties_Overlay_kt__p5agwu();
     return OverlayStyle$delegate.getValue_fbnwi2_k$(null, OverlayStyle$factory());
@@ -4890,1172 +4244,11 @@
       OverlayStyle$delegate = base(tmp, VOID, 'silk', OverlayStyle$delegate$lambda);
     }
   }
-  function AdvancedPopover(target, modifier, hiddenModifier, variant, showDelayMs, hideDelayMs, openCloseStrategy, placementTarget, placementStrategy, keepOpenStrategy, ref, content, $composer, $changed, $changed1, $default) {
-    var modifier_0 = {_v: modifier};
-    var hiddenModifier_0 = {_v: hiddenModifier};
-    var variant_0 = {_v: variant};
-    var showDelayMs_0 = {_v: showDelayMs};
-    var hideDelayMs_0 = {_v: hideDelayMs};
-    var openCloseStrategy_0 = {_v: openCloseStrategy};
-    var placementTarget_0 = {_v: placementTarget};
-    var placementStrategy_0 = {_v: placementStrategy};
-    var keepOpenStrategy_0 = {_v: keepOpenStrategy};
-    var ref_0 = {_v: ref};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(703588025);
-    var $dirty = $changed;
-    var $dirty1 = $changed1;
-    if (!(($default & 2) === 0)) {
-      modifier_0._v = Companion_getInstance();
-    }
-    if (!(($default & 4) === 0)) {
-      hiddenModifier_0._v = Companion_getInstance();
-    }
-    if (!(($default & 8) === 0)) {
-      variant_0._v = null;
-    }
-    if (!(($default & 16) === 0)) {
-      showDelayMs_0._v = 0;
-    }
-    if (!(($default & 32) === 0)) {
-      hideDelayMs_0._v = 0;
-    }
-    if (!(($default & 64) === 0)) {
-      openCloseStrategy_0._v = null;
-    }
-    if (!(($default & 128) === 0)) {
-      placementTarget_0._v = null;
-    }
-    if (!(($default & 256) === 0)) {
-      placementStrategy_0._v = null;
-    }
-    if (!(($default & 512) === 0)) {
-      keepOpenStrategy_0._v = null;
-    }
-    if (!(($default & 1024) === 0)) {
-      ref_0._v = null;
-    }
-    if (isTraceInProgress()) {
-      traceEventStart(703588025, $dirty, $dirty1, 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover (Popover.kt:313)');
-    }
-    $composer_0.startReplaceableGroup_ip860b_k$(49691339);
-    // Inline function 'androidx.compose.runtime.cache' call
-    var this_0 = $composer_0;
-    var invalid = $composer_0.changed_ga7h3f_k$(openCloseStrategy_0._v);
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = this_0.rememberedValue_4dg93v_k$();
-    var tmp;
-    if (invalid ? true : it === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>' call
-      var tmp0_elvis_lhs = openCloseStrategy_0._v;
-      var value = tmp0_elvis_lhs == null ? plus_0(onHover_0(Companion_getInstance_17()), onFocus_0(Companion_getInstance_17())) : tmp0_elvis_lhs;
-      this_0.updateRememberedValue_l1wh71_k$(value);
-      tmp = value;
-    } else {
-      tmp = it;
-    }
-    var tmp_0 = tmp;
-    var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    var openCloseStrategy_1 = tmp0_group;
-    $composer_0.startReplaceableGroup_ip860b_k$(49691510);
-    // Inline function 'androidx.compose.runtime.cache' call
-    var this_1 = $composer_0;
-    var invalid_0 = !!(!!($composer_0.changed_ga7h3f_k$(hiddenModifier_0._v) | ((($changed & 57344 ^ 24576) > 16384 ? $composer_0.changed_kpusro_k$(showDelayMs_0._v) : false) ? true : ($changed & 24576) === 16384)) | ((($changed & 458752 ^ 196608) > 131072 ? $composer_0.changed_kpusro_k$(hideDelayMs_0._v) : false) ? true : ($changed & 196608) === 131072));
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it_0 = this_1.rememberedValue_4dg93v_k$();
-    var tmp_1;
-    if (invalid_0 ? true : it_0 === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>' call
-      var value_0 = new PopoverShowHideSettings(hiddenModifier_0._v, showDelayMs_0._v, hideDelayMs_0._v);
-      this_1.updateRememberedValue_l1wh71_k$(value_0);
-      tmp_1 = value_0;
-    } else {
-      tmp_1 = it_0;
-    }
-    var tmp_2 = tmp_1;
-    var tmp1_group = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    var showHideSettings = tmp1_group;
-    $composer_0.startReplaceableGroup_ip860b_k$(49691782);
-    // Inline function 'androidx.compose.runtime.cache' call
-    var this_2 = $composer_0;
-    var invalid_1 = (($changed & 234881024 ^ 100663296) > 67108864 ? $composer_0.changed_ga7h3f_k$(placementStrategy_0._v) : false) ? true : ($changed & 100663296) === 67108864;
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it_1 = this_2.rememberedValue_4dg93v_k$();
-    var tmp_3;
-    if (invalid_1 ? true : it_1 === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>' call
-      var tmp0_elvis_lhs_0 = placementStrategy_0._v;
-      var value_1 = tmp0_elvis_lhs_0 == null ? Companion_getInstance_18().of$default_vdti6x_k$(PopupPlacement_Bottom_getInstance()) : tmp0_elvis_lhs_0;
-      this_2.updateRememberedValue_l1wh71_k$(value_1);
-      tmp_3 = value_1;
-    } else {
-      tmp_3 = it_1;
-    }
-    var tmp_4 = tmp_3;
-    var tmp2_group = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    var placementStrategy_1 = tmp2_group;
-    $composer_0.startReplaceableGroup_ip860b_k$(49691944);
-    // Inline function 'androidx.compose.runtime.cache' call
-    var this_3 = $composer_0;
-    var invalid_2 = $composer_0.changed_ga7h3f_k$(keepOpenStrategy_0._v);
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it_2 = this_3.rememberedValue_4dg93v_k$();
-    var tmp_5;
-    if (invalid_2 ? true : it_2 === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>' call
-      var tmp0_elvis_lhs_1 = keepOpenStrategy_0._v;
-      var value_2 = tmp0_elvis_lhs_1 == null ? plus(onHover(Companion_getInstance_16()), onFocus(Companion_getInstance_16())) : tmp0_elvis_lhs_1;
-      this_3.updateRememberedValue_l1wh71_k$(value_2);
-      tmp_5 = value_2;
-    } else {
-      tmp_5 = it_2;
-    }
-    var tmp_6 = tmp_5;
-    var tmp3_group = (tmp_6 == null ? true : !(tmp_6 == null)) ? tmp_6 : THROW_CCE();
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    var keepOpenStrategy_1 = tmp3_group;
-    $composer_0.startReplaceableGroup_ip860b_k$(49692116);
-    // Inline function 'androidx.compose.runtime.cache' call
-    var this_4 = $composer_0;
-    var invalid_3 = !!(!!(!!($composer_0.changed_ga7h3f_k$(openCloseStrategy_1) | $composer_0.changed_ga7h3f_k$(showHideSettings)) | $composer_0.changed_ga7h3f_k$(placementStrategy_1)) | $composer_0.changed_ga7h3f_k$(keepOpenStrategy_1));
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it_3 = this_4.rememberedValue_4dg93v_k$();
-    var tmp_7;
-    if (invalid_3 ? true : it_3 === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>' call
-      var value_3 = new PopoverStateController(openCloseStrategy_1, showHideSettings, placementStrategy_1, keepOpenStrategy_1);
-      this_4.updateRememberedValue_l1wh71_k$(value_3);
-      tmp_7 = value_3;
-    } else {
-      tmp_7 = it_3;
-    }
-    var tmp_8 = tmp_7;
-    var tmp4_group = (tmp_8 == null ? true : !(tmp_8 == null)) ? tmp_8 : THROW_CCE();
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    var popoverStateController = tmp4_group;
-    var tmp_9 = Companion_getInstance();
-    // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
-    Companion_getInstance_15();
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    var tmp_10 = display(tmp_9, 'none');
-    var tmp_11 = [popoverStateController, target, placementTarget_0._v];
-    var tmp_12 = disposableRef(tmp_11, AdvancedPopover$lambda(target, placementTarget_0, popoverStateController, openCloseStrategy_1));
-    Box(tmp_10, null, tmp_12, null, $composer_0, 520, 10);
-    // Inline function 'kotlin.run' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>' call
-    var tmp_13 = $composer_0;
-    var dispatchReceiver = composableLambda(tmp_13, -1574969194, true, AdvancedPopover$lambda_0(popoverStateController, variant_0, modifier_0, ref_0, placementStrategy_1, content));
-    // Inline function 'androidx.compose.runtime.remember' call
-    var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
-    sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    var invalid_4 = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it_4 = $composer_1.rememberedValue_4dg93v_k$();
-    var tmp_14;
-    if (invalid_4 ? true : it_4 === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>.<anonymous>' call
-      var value_4 = ComposableLambda$invoke$ref_25(dispatchReceiver);
-      $composer_1.updateRememberedValue_l1wh71_k$(value_4);
-      tmp_14 = value_4;
-    } else {
-      tmp_14 = it_4;
-    }
-    var tmp_15 = tmp_14;
-    var tmp0 = (tmp_15 == null ? true : !(tmp_15 == null)) ? tmp_15 : THROW_CCE();
-    $composer_1.endReplaceableGroup_ern0ak_k$();
-    deferRender(tmp0, $composer_0, 6);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    var tmp5_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp5_safe_receiver == null)
-      null;
-    else {
-      tmp5_safe_receiver.updateScope_t8jcf_k$(AdvancedPopover$lambda_1(target, modifier_0, hiddenModifier_0, variant_0, showDelayMs_0, hideDelayMs_0, openCloseStrategy_0, placementTarget_0, placementStrategy_0, keepOpenStrategy_0, ref_0, content, $changed, $changed1, $default));
-    }
-  }
-  function PopoverShowHideSettings(hiddenModifier, showDelayMs, hideDelayMs) {
-    this.showDelayMs_1 = coerceAtLeast(showDelayMs, 0);
-    this.hideDelayMs_1 = coerceAtLeast(hideDelayMs, 0);
-    this.hiddenModifier_1 = opacity(hiddenModifier, 0);
-  }
-  protoOf(PopoverShowHideSettings).get_showDelayMs_p2rvkt_k$ = function () {
-    return this.showDelayMs_1;
-  };
-  protoOf(PopoverShowHideSettings).get_hideDelayMs_xhkarm_k$ = function () {
-    return this.hideDelayMs_1;
-  };
-  protoOf(PopoverShowHideSettings).get_hiddenModifier_cuypbe_k$ = function () {
-    return this.hiddenModifier_1;
-  };
-  function _get_showHideSettings__b0dpt5($this) {
-    return $this.showHideSettings_1;
-  }
-  function _get_placementStrategy__tkhdlz($this) {
-    return $this.placementStrategy_1;
-  }
-  function _get_keepOpenStrategy__hc7th3($this) {
-    return $this.keepOpenStrategy_1;
-  }
-  function _set__state__4o0y7v($this, _set____db54di) {
-    var this_0 = $this._state$delegate_1;
-    _state$factory();
-    this_0.set_value_v1vabv_k$(_set____db54di);
-    return Unit_getInstance();
-  }
-  function _get__state__37adl3($this) {
-    // Inline function 'androidx.compose.runtime.getValue' call
-    var this_0 = $this._state$delegate_1;
-    _state$factory_0();
-    return this_0.get_value_j01efc_k$();
-  }
-  function _set_showTimeoutId__5mmcee($this, _set____db54di) {
-    $this.showTimeoutId_1 = _set____db54di;
-  }
-  function _get_showTimeoutId__9l563y($this) {
-    return $this.showTimeoutId_1;
-  }
-  function _set_hideTimeoutId__z31hh1($this, _set____db54di) {
-    $this.hideTimeoutId_1 = _set____db54di;
-  }
-  function _get_hideTimeoutId__kqb1zr($this) {
-    return $this.hideTimeoutId_1;
-  }
-  function resetTimers($this) {
-    window.clearTimeout($this.showTimeoutId_1);
-    window.clearTimeout($this.hideTimeoutId_1);
-  }
-  function PopoverStateController$requestShowPopup$lambda(this$0, $state) {
-    return function () {
-      _set__state__4o0y7v(this$0, new Calculating($state.get_elements_vxwh8g_k$(), this$0.showHideSettings_1));
-      var tmp0_safe_receiver = $state.get_elements_vxwh8g_k$().popupElement_1;
-      var tmp;
-      if (tmp0_safe_receiver == null) {
-        tmp = null;
-      } else {
-        // Inline function 'kotlin.takeIf' call
-        // Inline function 'kotlin.contracts.contract' call
-        var tmp_0;
-        // Inline function 'com.varabyte.kobweb.silk.components.overlay.PopoverStateController.requestShowPopup.<anonymous>.<anonymous>' call
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'com.varabyte.kobweb.silk.components.overlay.PopoverStateController.requestShowPopup.<anonymous>.<anonymous>.<anonymous>' call
-        var rect = tmp0_safe_receiver.getBoundingClientRect();
-        if (rect.width * rect.height > 0.0) {
-          tmp_0 = tmp0_safe_receiver;
-        } else {
-          tmp_0 = null;
-        }
-        tmp = tmp_0;
-      }
-      var tmp_1;
-      if (tmp == null) {
-        tmp_1 = null;
-      } else {
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        this$0.finishShowing_619yhu_k$();
-        tmp_1 = Unit_getInstance();
-      }
-      return tmp_1;
-    };
-  }
-  function PopoverStateController$requestHidePopup$lambda(this$0, $state) {
-    return function () {
-      var tmp;
-      if (!get_shouldKeepOpen(this$0.keepOpenStrategy_1)) {
-        var tmp0_safe_receiver = $state.get_elements_vxwh8g_k$().popupElement_1;
-        var tmp_0;
-        if (tmp0_safe_receiver == null) {
-          tmp_0 = null;
-        } else {
-          // Inline function 'kotlin.let' call
-          // Inline function 'kotlin.contracts.contract' call
-          // Inline function 'com.varabyte.kobweb.silk.components.overlay.PopoverStateController.requestHidePopup.<anonymous>.<anonymous>' call
-          tmp_0 = toDouble(window.getComputedStyle(tmp0_safe_receiver).getPropertyValue('opacity'));
-        }
-        var currentOpacity = tmp_0;
-        _set__state__4o0y7v(this$0, new Hiding($state.get_elements_vxwh8g_k$(), this$0.placementStrategy_1, this$0.showHideSettings_1, $state.get_placement_wv4cec_k$()));
-        var tmp_1;
-        if (currentOpacity == null ? true : currentOpacity === 0.0) {
-          this$0.finishHiding_wjwzzw_k$($state.get_elements_vxwh8g_k$());
-          tmp_1 = Unit_getInstance();
-        }
-        tmp = tmp_1;
-      }
-      return Unit_getInstance();
-    };
-  }
-  function PopoverStateController$slambda(this$0, resultContinuation) {
-    this.this$0__1 = this$0;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(PopoverStateController$slambda).invoke_f29lti_k$ = function (keepOpen, $completion) {
-    var tmp = this.create_vh5neu_k$(keepOpen, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(PopoverStateController$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_f29lti_k$((!(p1 == null) ? typeof p1 === 'boolean' : false) ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(PopoverStateController$slambda).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        if (tmp === 0) {
-          this.set_exceptionState_fex74n_k$(1);
-          if (!this.keepOpen_1) {
-            this.this$0__1.requestHidePopup_nxy4mj_k$();
-          }
-          return Unit_getInstance();
-        } else if (tmp === 1) {
-          throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        throw e;
-      }
-     while (true);
-  };
-  protoOf(PopoverStateController$slambda).create_vh5neu_k$ = function (keepOpen, completion) {
-    var i = new PopoverStateController$slambda(this.this$0__1, completion);
-    i.keepOpen_1 = keepOpen;
-    return i;
-  };
-  protoOf(PopoverStateController$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_vh5neu_k$((!(value == null) ? typeof value === 'boolean' : false) ? value : THROW_CCE(), completion);
-  };
-  function PopoverStateController$slambda_0(this$0, resultContinuation) {
-    var i = new PopoverStateController$slambda(this$0, resultContinuation);
-    var l = function (keepOpen, $completion) {
-      return i.invoke_f29lti_k$(keepOpen, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function PopoverStateController$slambda_1(this$0, resultContinuation) {
-    this.this$0__1 = this$0;
-    CoroutineImpl.call(this, resultContinuation);
-  }
-  protoOf(PopoverStateController$slambda_1).invoke_ign9f7_k$ = function (request, $completion) {
-    var tmp = this.create_algunr_k$(request, $completion);
-    tmp.set_result_xj64lm_k$(Unit_getInstance());
-    tmp.set_exception_px07aa_k$(null);
-    return tmp.doResume_5yljmg_k$();
-  };
-  protoOf(PopoverStateController$slambda_1).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_ign9f7_k$(p1 instanceof OpenClose ? p1 : THROW_CCE(), $completion);
-  };
-  protoOf(PopoverStateController$slambda_1).doResume_5yljmg_k$ = function () {
-    var suspendResult = this.get_result_iyg5d2_k$();
-    $sm: do
-      try {
-        var tmp = this.get_state_iypx7s_k$();
-        if (tmp === 0) {
-          this.set_exceptionState_fex74n_k$(1);
-          var tmp0 = this.request_1.get_ordinal_ip24qg_k$();
-          if (tmp0 === 0) {
-            this.this$0__1.requestShowPopup_ms4agg_k$();
-          } else if (tmp0 === 1) {
-            this.this$0__1.requestHidePopup_nxy4mj_k$();
-          }
-          return Unit_getInstance();
-        } else if (tmp === 1) {
-          throw this.get_exception_x0n6w6_k$();
-        }
-      } catch ($p) {
-        var e = $p;
-        throw e;
-      }
-     while (true);
-  };
-  protoOf(PopoverStateController$slambda_1).create_algunr_k$ = function (request, completion) {
-    var i = new PopoverStateController$slambda_1(this.this$0__1, completion);
-    i.request_1 = request;
-    return i;
-  };
-  protoOf(PopoverStateController$slambda_1).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_algunr_k$(value instanceof OpenClose ? value : THROW_CCE(), completion);
-  };
-  function PopoverStateController$slambda_2(this$0, resultContinuation) {
-    var i = new PopoverStateController$slambda_1(this$0, resultContinuation);
-    var l = function (request, $completion) {
-      return i.invoke_ign9f7_k$(request, $completion);
-    };
-    l.$arity = 1;
-    return l;
-  }
-  function PopoverStateController(openCloseStrategy, showHideSettings, placementStrategy, keepOpenStrategy) {
-    this.showHideSettings_1 = showHideSettings;
-    this.placementStrategy_1 = placementStrategy;
-    this.keepOpenStrategy_1 = keepOpenStrategy;
-    this._state$delegate_1 = mutableStateOf(Uninitialized_getInstance());
-    this.showTimeoutId_1 = -1;
-    this.hideTimeoutId_1 = -1;
-    var scope = CoroutineScope_0(asCoroutineDispatcher(window));
-    var tmp = this.keepOpenStrategy_1.get_keepOpenFlow_bsp6yu_k$();
-    launchIn(onEach(tmp, PopoverStateController$slambda_0(this, null)), scope);
-    var tmp_0 = openCloseStrategy.get_requestFlow_wwolx0_k$();
-    launchIn(onEach(tmp_0, PopoverStateController$slambda_2(this, null)), scope);
-  }
-  protoOf(PopoverStateController).get_state_iypx7s_k$ = function () {
-    return _get__state__37adl3(this);
-  };
-  protoOf(PopoverStateController).resetToFoundElements_21bry9_k$ = function () {
-    var state = _get__state__37adl3(this);
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!isInterface(state, Initialized)) {
-      // Inline function 'kotlin.check.<anonymous>' call
-      var message = 'Check failed.';
-      throw IllegalStateException_init_$Create$(toString(message));
-    }
-    resetTimers(this);
-    _set__state__4o0y7v(this, new FoundElements(state.get_elements_vxwh8g_k$()));
-  };
-  protoOf(PopoverStateController).updateElements_itx82_k$ = function (elements) {
-    var state = _get__state__37adl3(this);
-    if (isInterface(state, Initialized)) {
-      state.set_elements_h4xuwq_k$(elements);
-    } else {
-      _set__state__4o0y7v(this, new FoundElements(elements));
-    }
-  };
-  protoOf(PopoverStateController).requestShowPopup_ms4agg_k$ = function () {
-    var state = _get__state__37adl3(this);
-    if (!isInterface(state, Initialized))
-      return Unit_getInstance();
-    resetTimers(this);
-    var tmp = this;
-    var tmp_0 = window;
-    tmp.showTimeoutId_1 = tmp_0.setTimeout(PopoverStateController$requestShowPopup$lambda(this, state), this.showHideSettings_1.showDelayMs_1);
-  };
-  protoOf(PopoverStateController).updatePopupElement_798jwz_k$ = function (popupElement) {
-    var state = _get__state__37adl3(this);
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!isInterface(state, Initialized)) {
-      // Inline function 'kotlin.check.<anonymous>' call
-      var message = 'Check failed.';
-      throw IllegalStateException_init_$Create$(toString(message));
-    }
-    this.keepOpenStrategy_1.init_2byfvu_k$(popupElement);
-    state.get_elements_vxwh8g_k$().popupElement_1 = popupElement;
-  };
-  protoOf(PopoverStateController).clearPopupElement_lehycz_k$ = function () {
-    var state = _get__state__37adl3(this);
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!isInterface(state, Initialized)) {
-      // Inline function 'kotlin.check.<anonymous>' call
-      var message = 'Check failed.';
-      throw IllegalStateException_init_$Create$(toString(message));
-    }
-    this.keepOpenStrategy_1.reset_5u6xz3_k$();
-    state.get_elements_vxwh8g_k$().popupElement_1 = null;
-  };
-  protoOf(PopoverStateController).finishShowing_619yhu_k$ = function () {
-    var state = _get__state__37adl3(this);
-    if (!(state instanceof Calculating))
-      return Unit_getInstance();
-    var popupElement = state.elements_1.popupElement_1;
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!!(popupElement == null)) {
-      // Inline function 'kotlin.check.<anonymous>' call
-      var message = 'Check failed.';
-      throw IllegalStateException_init_$Create$(toString(message));
-    }
-    _set__state__4o0y7v(this, new Shown(state.elements_1, this.placementStrategy_1));
-  };
-  protoOf(PopoverStateController).requestHidePopup_nxy4mj_k$ = function () {
-    var state = _get__state__37adl3(this);
-    if (state instanceof FoundElements) {
-      resetTimers(this);
-      return Unit_getInstance();
-    }
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!isInterface(state, Visible)) {
-      // Inline function 'kotlin.check.<anonymous>' call
-      var message = 'Check failed.';
-      throw IllegalStateException_init_$Create$(toString(message));
-    }
-    resetTimers(this);
-    var tmp = this;
-    var tmp_0 = window;
-    tmp.hideTimeoutId_1 = tmp_0.setTimeout(PopoverStateController$requestHidePopup$lambda(this, state), this.showHideSettings_1.hideDelayMs_1);
-  };
-  protoOf(PopoverStateController).finishHiding_wjwzzw_k$ = function (elements) {
-    var state = _get__state__37adl3(this);
-    if (!(state instanceof Hiding))
-      return Unit_getInstance();
-    _set__state__4o0y7v(this, new FoundElements(elements));
-    resetTimers(this);
-  };
-  function resolve(_this__u8e3s4, $this, targetFinder) {
-    if (_this__u8e3s4 == null ? true : targetFinder == null)
-      return _this__u8e3s4;
-    return targetFinder.invoke_eqenwi_k$(_this__u8e3s4);
-  }
-  function PopoverElements(srcElement, popupTarget, placementTarget) {
-    var tmp = this;
-    var tmp0_elvis_lhs = resolve(srcElement, this, popupTarget);
-    var tmp_0;
-    if (tmp0_elvis_lhs == null) {
-      var message = 'Target element finder returned null';
-      throw IllegalStateException_init_$Create$(toString(message));
-    } else {
-      tmp_0 = tmp0_elvis_lhs;
-    }
-    tmp.targetElement_1 = tmp_0;
-    var tmp_1 = this;
-    var tmp_2;
-    if (placementTarget == null) {
-      tmp_2 = this.targetElement_1;
-    } else {
-      var tmp0_elvis_lhs_0 = resolve(srcElement, this, placementTarget);
-      var tmp_3;
-      if (tmp0_elvis_lhs_0 == null) {
-        var message_0 = 'Placement element finder returned null';
-        throw IllegalStateException_init_$Create$(toString(message_0));
-      } else {
-        tmp_3 = tmp0_elvis_lhs_0;
-      }
-      tmp_2 = tmp_3;
-    }
-    tmp_1.placementElement_1 = tmp_2;
-    this.popupElement_1 = null;
-  }
-  protoOf(PopoverElements).get_targetElement_9dyc5e_k$ = function () {
-    return this.targetElement_1;
-  };
-  protoOf(PopoverElements).get_placementElement_okh734_k$ = function () {
-    return this.placementElement_1;
-  };
-  protoOf(PopoverElements).set_popupElement_mnuym_k$ = function (_set____db54di) {
-    this.popupElement_1 = _set____db54di;
-  };
-  protoOf(PopoverElements).get_popupElement_5cnda1_k$ = function () {
-    return this.popupElement_1;
-  };
-  function _get_positionAndPlacement__fg8rxo($this) {
-    return $this.positionAndPlacement_1;
-  }
-  function Uninitialized() {
-    Uninitialized_instance = this;
-  }
-  var Uninitialized_instance;
-  function Uninitialized_getInstance() {
-    if (Uninitialized_instance == null)
-      new Uninitialized();
-    return Uninitialized_instance;
-  }
-  function Initialized() {
-  }
-  function FoundElements(elements) {
-    this.elements_1 = elements;
-  }
-  protoOf(FoundElements).set_elements_h4xuwq_k$ = function (_set____db54di) {
-    this.elements_1 = _set____db54di;
-  };
-  protoOf(FoundElements).get_elements_vxwh8g_k$ = function () {
-    return this.elements_1;
-  };
-  function Visible() {
-  }
-  function Showing() {
-  }
-  function Calculating(elements, showHideSettings) {
-    this.elements_1 = elements;
-    this.modifier_1 = left(top(showHideSettings.hiddenModifier_1, get_percent(-100)), get_percent(-100));
-    this.placement_1 = null;
-  }
-  protoOf(Calculating).set_elements_h4xuwq_k$ = function (_set____db54di) {
-    this.elements_1 = _set____db54di;
-  };
-  protoOf(Calculating).get_elements_vxwh8g_k$ = function () {
-    return this.elements_1;
-  };
-  protoOf(Calculating).get_modifier_t1pq5c_k$ = function () {
-    return this.modifier_1;
-  };
-  protoOf(Calculating).get_placement_wv4cec_k$ = function () {
-    return this.placement_1;
-  };
-  function Shown(elements, placementStrategy) {
-    this.elements_1 = elements;
-    this.positionAndPlacement_1 = placementStrategy.calculate_l894t6_k$();
-    this.modifier_1 = Companion_getInstance().then_mmfvo6_k$(toModifier_1(this.positionAndPlacement_1.get_position_jfponi_k$()));
-    this.placement_1 = this.positionAndPlacement_1.get_placement_wv4cec_k$();
-  }
-  protoOf(Shown).set_elements_h4xuwq_k$ = function (_set____db54di) {
-    this.elements_1 = _set____db54di;
-  };
-  protoOf(Shown).get_elements_vxwh8g_k$ = function () {
-    return this.elements_1;
-  };
-  protoOf(Shown).get_modifier_t1pq5c_k$ = function () {
-    return this.modifier_1;
-  };
-  protoOf(Shown).get_placement_wv4cec_k$ = function () {
-    return this.placement_1;
-  };
-  function Hiding(elements, placementStrategy, showHideSettings, placement) {
-    this.elements_1 = elements;
-    this.placement_1 = placement;
-    var tmp = this;
-    // Inline function 'com.varabyte.kobweb.compose.ui.thenIf' call
-    var this_0 = showHideSettings.hiddenModifier_1;
-    var tmp_0;
-    if (!(this.elements_1.popupElement_1 == null)) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.Hiding.modifier.<anonymous>' call
-      tmp_0 = toModifier_1(placementStrategy.calculate_l894t6_k$().get_position_jfponi_k$());
-    } else {
-      tmp_0 = Companion_getInstance();
-    }
-    tmp.modifier_1 = this_0.then_mmfvo6_k$(tmp_0);
-  }
-  protoOf(Hiding).set_elements_h4xuwq_k$ = function (_set____db54di) {
-    this.elements_1 = _set____db54di;
-  };
-  protoOf(Hiding).get_elements_vxwh8g_k$ = function () {
-    return this.elements_1;
-  };
-  protoOf(Hiding).get_placement_wv4cec_k$ = function () {
-    return this.placement_1;
-  };
-  protoOf(Hiding).get_modifier_t1pq5c_k$ = function () {
-    return this.modifier_1;
-  };
-  function PopoverState() {
-  }
-  function toModifier_1(_this__u8e3s4) {
-    return left(top(Companion_getInstance(), _this__u8e3s4.get_top_18ivbo_k$()), _this__u8e3s4.get_left_woprgw_k$());
-  }
-  function _no_name_provided__qut3iv($openCloseStrategy) {
-    this.$openCloseStrategy_1 = $openCloseStrategy;
-  }
-  protoOf(_no_name_provided__qut3iv).dispose_3nnxhr_k$ = function () {
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>.<anonymous>' call
-    this.$openCloseStrategy_1.reset_5u6xz3_k$();
-  };
-  function AdvancedPopover$lambda($target, $placementTarget, $popoverStateController, $openCloseStrategy) {
-    return function ($this$disposableRef, element) {
-      var tmp;
-      try {
-        // Inline function 'kotlin.apply' call
-        var this_0 = new PopoverElements(element, $target, $placementTarget._v);
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>.<anonymous>' call
-        var tmp_0 = this_0;
-        var tmp_1 = $popoverStateController.get_state_iypx7s_k$();
-        var tmp0_safe_receiver = isInterface(tmp_1, Initialized) ? tmp_1 : null;
-        var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.get_elements_vxwh8g_k$();
-        tmp_0.popupElement_1 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.popupElement_1;
-        var popoverElements = this_0;
-        // Inline function 'kotlin.apply' call
-        var this_1 = popoverElements.targetElement_1;
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>.<anonymous>' call
-        $openCloseStrategy.init_2byfvu_k$(this_1);
-        $popoverStateController.updateElements_itx82_k$(popoverElements);
-        tmp = Unit_getInstance();
-      } catch ($p) {
-        var tmp_2;
-        if ($p instanceof IllegalStateException) {
-          var _ = $p;
-          tmp_2 = Unit_getInstance();
-        } else {
-          throw $p;
-        }
-        tmp = tmp_2;
-      }
-      // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      return new _no_name_provided__qut3iv($openCloseStrategy);
-    };
-  }
-  function AdvancedPopover$lambda$lambda($popoverStateController) {
-    return function (evt) {
-      var state = $popoverStateController.get_state_iypx7s_k$();
-      var tmp;
-      var tmp_0;
-      if (evt.get_propertyName_9r91o7_k$() === 'opacity') {
-        tmp_0 = state instanceof Hiding;
-      } else {
-        tmp_0 = false;
-      }
-      if (tmp_0) {
-        $popoverStateController.finishHiding_wjwzzw_k$(state.elements_1);
-        tmp = Unit_getInstance();
-      }
-      return Unit_getInstance();
-    };
-  }
-  function _no_name_provided__qut3iv_0($popoverStateController, $placementStrategy) {
-    this.$popoverStateController_1 = $popoverStateController;
-    this.$placementStrategy_1 = $placementStrategy;
-  }
-  protoOf(_no_name_provided__qut3iv_0).dispose_3nnxhr_k$ = function () {
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-    this.$popoverStateController_1.clearPopupElement_lehycz_k$();
-    this.$popoverStateController_1.resetToFoundElements_21bry9_k$();
-    this.$placementStrategy_1.reset_5u6xz3_k$();
-  };
-  function AdvancedPopover$lambda$lambda$lambda($placementStrategy, $visiblePopoverState, $popoverStateController) {
-    return function ($this$disposableRef, popupElement) {
-      $placementStrategy.init_19ji8_k$($visiblePopoverState.get_elements_vxwh8g_k$().placementElement_1, popupElement);
-      $popoverStateController.updatePopupElement_798jwz_k$(popupElement);
-      $popoverStateController.finishShowing_619yhu_k$();
-      // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
-      return new _no_name_provided__qut3iv_0($popoverStateController, $placementStrategy);
-    };
-  }
-  function AdvancedPopover$lambda$lambda_0($ref, $placementStrategy, $visiblePopoverState, $popoverStateController) {
-    return function ($this$refScope) {
-      $this$refScope.disposableRef_sdjxhc_k$([], AdvancedPopover$lambda$lambda$lambda($placementStrategy, $visiblePopoverState, $popoverStateController));
-      $this$refScope.add_uaq22z_k$($ref._v);
-      return Unit_getInstance();
-    };
-  }
-  function AdvancedPopover$lambda$lambda_1($content, $visiblePopoverState) {
-    return function ($this$Box, $composer, $changed) {
-      var $composer_0 = $composer;
-      if (isTraceInProgress()) {
-        traceEventStart(541450320, $changed, -1, 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>.<anonymous> (Popover.kt:388)');
-      }
-      $content(new PopupScope($visiblePopoverState.get_placement_wv4cec_k$()), $composer_0, 0);
-      var tmp;
-      if (isTraceInProgress()) {
-        traceEventEnd();
-        tmp = Unit_getInstance();
-      }
-      return Unit_getInstance();
-    };
-  }
-  function ComposableLambda$invoke$ref_24($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function AdvancedPopover$lambda_0($popoverStateController, $variant, $modifier, $ref, $placementStrategy, $content) {
-    return function ($composer, $changed) {
-      var $composer_0 = $composer;
-      var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-        if (isTraceInProgress()) {
-          traceEventStart(-1574969194, $changed, -1, 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous> (Popover.kt:361)');
-        }
-        var tmp_0 = $popoverStateController.get_state_iypx7s_k$();
-        var tmp0_elvis_lhs = isInterface(tmp_0, Visible) ? tmp_0 : null;
-        var tmp_1;
-        if (tmp0_elvis_lhs == null) {
-          if (isTraceInProgress()) {
-            traceEventEnd();
-          }
-          return Unit_getInstance();
-        } else {
-          tmp_1 = tmp0_elvis_lhs;
-        }
-        var visiblePopoverState = tmp_1;
-        var tmp_2 = toModifier(get_PopupStyle(), [$variant._v], $composer_0, 0);
-        // Inline function 'org.jetbrains.compose.web.css.Companion.Fixed' call
-        Companion_getInstance_11();
-        // Inline function 'org.jetbrains.compose.web.css.Position' call
-        // Inline function 'kotlin.js.unsafeCast' call
-        // Inline function 'kotlin.js.asDynamic' call
-        var tmp_3 = position(tmp_2, 'fixed').then_mmfvo6_k$(visiblePopoverState.get_modifier_t1pq5c_k$()).then_mmfvo6_k$($modifier._v);
-        var tmp_4 = onTransitionEnd(tmp_3, AdvancedPopover$lambda$lambda($popoverStateController));
-        var tmp_5 = refScope(AdvancedPopover$lambda$lambda_0($ref, $placementStrategy, visiblePopoverState, $popoverStateController));
-        // Inline function 'kotlin.run' call
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>.<anonymous>.<anonymous>' call
-        var tmp_6 = $composer_0;
-        var dispatchReceiver = composableLambda(tmp_6, 541450320, true, AdvancedPopover$lambda$lambda_1($content, visiblePopoverState));
-        // Inline function 'androidx.compose.runtime.remember' call
-        var $composer_1 = $composer_0;
-        $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
-        sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
-        // Inline function 'androidx.compose.runtime.cache' call
-        var invalid = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-        var it = $composer_1.rememberedValue_4dg93v_k$();
-        var tmp_7;
-        if (invalid ? true : it === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-          // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedPopover.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-          var value = ComposableLambda$invoke$ref_24(dispatchReceiver);
-          $composer_1.updateRememberedValue_l1wh71_k$(value);
-          tmp_7 = value;
-        } else {
-          tmp_7 = it;
-        }
-        var tmp_8 = tmp_7;
-        var tmp0 = (tmp_8 == null ? true : !(tmp_8 == null)) ? tmp_8 : THROW_CCE();
-        $composer_1.endReplaceableGroup_ern0ak_k$();
-        Box(tmp_4, null, tmp_5, tmp0, $composer_0, 3592, 2);
-        var tmp_9;
-        if (isTraceInProgress()) {
-          traceEventEnd();
-          tmp_9 = Unit_getInstance();
-        }
-        tmp = tmp_9;
-      } else {
-        $composer_0.skipToGroupEnd_lh3zi2_k$();
-        tmp = Unit_getInstance();
-      }
-      return Unit_getInstance();
-    };
-  }
-  function ComposableLambda$invoke$ref_25($boundThis) {
-    return function (p0, p1) {
-      return $boundThis.invoke_z8di7s_k$(p0, p1);
-    };
-  }
-  function AdvancedPopover$lambda_1($target, $modifier, $hiddenModifier, $variant, $showDelayMs, $hideDelayMs, $openCloseStrategy, $placementTarget, $placementStrategy, $keepOpenStrategy, $ref, $content, $$changed, $$changed1, $$default) {
-    return function ($composer, $force) {
-      AdvancedPopover($target, $modifier._v, $hiddenModifier._v, $variant._v, $showDelayMs._v, $hideDelayMs._v, $openCloseStrategy._v, $placementTarget._v, $placementStrategy._v, $keepOpenStrategy._v, $ref._v, $content, $composer, updateChangedFlags($$changed | 1), updateChangedFlags($$changed1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function _state$factory() {
-    return getPropertyCallableRef('_state', 1, KMutableProperty1, function (receiver) {
-      return _get__state__37adl3(receiver);
-    }, function (receiver, value) {
-      return _set__state__4o0y7v(receiver, value);
-    });
-  }
-  function _state$factory_0() {
-    return getPropertyCallableRef('_state', 1, KMutableProperty1, function (receiver) {
-      return _get__state__37adl3(receiver);
-    }, function (receiver, value) {
-      return _set__state__4o0y7v(receiver, value);
-    });
-  }
   function get_PopupStyle() {
     _init_properties_Popup_kt__lluomy();
     return PopupStyle$delegate.getValue_fbnwi2_k$(null, PopupStyle$factory());
   }
   var PopupStyle$delegate;
-  function _set_placementElement__vwo480($this, _set____db54di) {
-    $this.placementElement_1 = _set____db54di;
-  }
-  function _get_placementElement__a1booc($this) {
-    return $this.placementElement_1;
-  }
-  function _set_popupElement__570kh3($this, _set____db54di) {
-    $this.popupElement_1 = _set____db54di;
-  }
-  function _get_popupElement__kqrb17($this) {
-    return $this.popupElement_1;
-  }
-  function _set_resizeObserver__cin8h9($this, _set____db54di) {
-    $this.resizeObserver_1 = _set____db54di;
-  }
-  function _get_resizeObserver__wzddgf($this) {
-    return $this.resizeObserver_1;
-  }
-  function _set_mutationObserver__ei0s14($this, _set____db54di) {
-    $this.mutationObserver_1 = _set____db54di;
-  }
-  function _get_mutationObserver__el3h1o($this) {
-    return $this.mutationObserver_1;
-  }
-  function updatePopupPosition($this) {
-    updatePosition(ensureNotNull($this.popupElement_1), $this.calculate_l894t6_k$().position_1);
-  }
-  function _get_updatePopupPositionListener__lv385t($this) {
-    return $this.updatePopupPositionListener_1;
-  }
-  function PopupPlacementStrategy$Companion$of$o$updatePopupPositionListener$lambda(this$0) {
-    return function (it) {
-      updatePopupPosition(this$0);
-      return Unit_getInstance();
-    };
-  }
-  function PopupPlacementStrategy$Companion$of$o$init$lambda(this$0) {
-    return function (_anonymous_parameter_0__qggqh8) {
-      updatePopupPosition(this$0);
-      return Unit_getInstance();
-    };
-  }
-  function PopupPlacementStrategy$Companion$of$o$init$lambda_0(this$0) {
-    return function (_anonymous_parameter_0__qggqh8, _anonymous_parameter_1__qggqgd) {
-      updatePopupPosition(this$0);
-      return Unit_getInstance();
-    };
-  }
-  function PopupPlacementStrategy$Companion$of$1($placement, $offsetPixels) {
-    this.$placement_1 = $placement;
-    this.$offsetPixels_1 = $offsetPixels;
-    PopupPlacementStrategy.call(this);
-    this.placementElement_1 = null;
-    this.popupElement_1 = null;
-    this.resizeObserver_1 = null;
-    this.mutationObserver_1 = null;
-    var tmp = this;
-    tmp.updatePopupPositionListener_1 = EventListener(PopupPlacementStrategy$Companion$of$o$updatePopupPositionListener$lambda(this));
-  }
-  protoOf(PopupPlacementStrategy$Companion$of$1).init_19ji8_k$ = function (placementElement, popupElement) {
-    this.placementElement_1 = placementElement;
-    this.popupElement_1 = popupElement;
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = ResizeObserver_init_$Create$(PopupPlacementStrategy$Companion$of$o$init$lambda(this));
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.init.<anonymous>' call
-    this_0.observe_kts85w_k$(popupElement);
-    this_0.observe_kts85w_k$(placementElement);
-    tmp.resizeObserver_1 = this_0;
-    var tmp_0 = this;
-    // Inline function 'kotlin.apply' call
-    var this_1 = new MutationObserver(PopupPlacementStrategy$Companion$of$o$init$lambda_0(this));
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.<no name provided>.init.<anonymous>' call
-    // Inline function 'org.w3c.dom.MutationObserverInit' call
-    // Inline function 'kotlin.arrayOf' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    var attributeFilter = ['style'];
-    var characterData = undefined;
-    var attributeOldValue = undefined;
-    var characterDataOldValue = undefined;
-    var o = {};
-    o['childList'] = false;
-    o['attributes'] = true;
-    o['characterData'] = characterData;
-    o['subtree'] = false;
-    o['attributeOldValue'] = attributeOldValue;
-    o['characterDataOldValue'] = characterDataOldValue;
-    o['attributeFilter'] = attributeFilter;
-    this_1.observe(placementElement, o);
-    tmp_0.mutationObserver_1 = this_1;
-    window.addEventListener('scroll', this.updatePopupPositionListener_1);
-    window.addEventListener('resize', this.updatePopupPositionListener_1);
-  };
-  protoOf(PopupPlacementStrategy$Companion$of$1).calculate_l894t6_k$ = function () {
-    var placementBounds = ensureNotNull(this.placementElement_1).getBoundingClientRect();
-    var popupBounds = ensureNotNull(this.popupElement_1).getBoundingClientRect();
-    var popupWidth = popupBounds.width;
-    var popupHeight = popupBounds.height;
-    return new PositionAndPlacement(this.calculateDefaultPosition_6ufwvm_k$(this.$placement_1, popupWidth, popupHeight, placementBounds, this.$offsetPixels_1), this.$placement_1);
-  };
-  protoOf(PopupPlacementStrategy$Companion$of$1).reset_5u6xz3_k$ = function () {
-    this.placementElement_1 = null;
-    this.popupElement_1 = null;
-    ensureNotNull(this.resizeObserver_1).disconnect_t9cc0c_k$();
-    this.resizeObserver_1 = null;
-    ensureNotNull(this.mutationObserver_1).disconnect();
-    this.mutationObserver_1 = null;
-    window.removeEventListener('scroll', this.updatePopupPositionListener_1);
-    window.removeEventListener('resize', this.updatePopupPositionListener_1);
-  };
-  function Position(top, left) {
-    this.top_1 = top;
-    this.left_1 = left;
-  }
-  protoOf(Position).get_top_18ivbo_k$ = function () {
-    return this.top_1;
-  };
-  protoOf(Position).get_left_woprgw_k$ = function () {
-    return this.left_1;
-  };
-  function PositionAndPlacement(position, placement) {
-    placement = placement === VOID ? null : placement;
-    this.position_1 = position;
-    this.placement_1 = placement;
-  }
-  protoOf(PositionAndPlacement).get_position_jfponi_k$ = function () {
-    return this.position_1;
-  };
-  protoOf(PositionAndPlacement).get_placement_wv4cec_k$ = function () {
-    return this.placement_1;
-  };
-  function Companion_1() {
-    Companion_instance_1 = this;
-  }
-  protoOf(Companion_1).of_skk296_k$ = function (placement, offsetPixels) {
-    return new PopupPlacementStrategy$Companion$of$1(placement, offsetPixels);
-  };
-  protoOf(Companion_1).of$default_vdti6x_k$ = function (placement, offsetPixels, $super) {
-    offsetPixels = offsetPixels === VOID ? 15 : offsetPixels;
-    return $super === VOID ? this.of_skk296_k$(placement, offsetPixels) : $super.of_skk296_k$.call(this, placement, offsetPixels);
-  };
-  protoOf(Companion_1).of_h621qs_k$ = function (offsetPixels) {
-    return this.of_skk296_k$(PopupPlacement_Bottom_getInstance(), offsetPixels);
-  };
-  var Companion_instance_1;
-  function Companion_getInstance_18() {
-    if (Companion_instance_1 == null)
-      new Companion_1();
-    return Companion_instance_1;
-  }
-  function PopupPlacementStrategy() {
-    Companion_getInstance_18();
-  }
-  protoOf(PopupPlacementStrategy).calculateDefaultPosition_6ufwvm_k$ = function (placement, popupWidth, popupHeight, placementBounds, offsetPixels) {
-    var offsetPixels_0 = numberToDouble(offsetPixels);
-    var tmp;
-    switch (placement.get_ordinal_ip24qg_k$()) {
-      case 0:
-        tmp = new Position(get_px(placementBounds.top - offsetPixels_0 - popupHeight), get_px(placementBounds.left));
-        break;
-      case 1:
-        tmp = new Position(get_px(placementBounds.top - offsetPixels_0 - popupHeight), get_px(placementBounds.left - (popupWidth - placementBounds.width) / 2));
-        break;
-      case 2:
-        tmp = new Position(get_px(placementBounds.top - offsetPixels_0 - popupHeight), get_px(placementBounds.left + (placementBounds.width - popupWidth)));
-        break;
-      case 3:
-        tmp = new Position(get_px(placementBounds.top), get_px(placementBounds.left - offsetPixels_0 - popupWidth));
-        break;
-      case 4:
-        tmp = new Position(get_px(placementBounds.top), get_px(placementBounds.right + offsetPixels_0));
-        break;
-      case 5:
-        tmp = new Position(get_px(placementBounds.top - (popupHeight - placementBounds.height) / 2), get_px(placementBounds.left - offsetPixels_0 - popupWidth));
-        break;
-      case 6:
-        tmp = new Position(get_px(placementBounds.top - (popupHeight - placementBounds.height) / 2), get_px(placementBounds.right + offsetPixels_0));
-        break;
-      case 7:
-        tmp = new Position(get_px(placementBounds.top + (placementBounds.height - popupHeight)), get_px(placementBounds.left - offsetPixels_0 - popupWidth));
-        break;
-      case 8:
-        tmp = new Position(get_px(placementBounds.top + (placementBounds.height - popupHeight)), get_px(placementBounds.right + offsetPixels_0));
-        break;
-      case 9:
-        tmp = new Position(get_px(placementBounds.bottom + offsetPixels_0), get_px(placementBounds.left));
-        break;
-      case 10:
-        tmp = new Position(get_px(placementBounds.bottom + offsetPixels_0), get_px(placementBounds.left - (popupWidth - placementBounds.width) / 2));
-        break;
-      case 11:
-        tmp = new Position(get_px(placementBounds.bottom + offsetPixels_0), get_px(placementBounds.left + (placementBounds.width - popupWidth)));
-        break;
-      default:
-        noWhenBranchMatchedException();
-        break;
-    }
-    return tmp;
-  };
-  protoOf(PopupPlacementStrategy).calculateDefaultPosition$default_hidp87_k$ = function (placement, popupWidth, popupHeight, placementBounds, offsetPixels, $super) {
-    offsetPixels = offsetPixels === VOID ? 15 : offsetPixels;
-    return $super === VOID ? this.calculateDefaultPosition_6ufwvm_k$(placement, popupWidth, popupHeight, placementBounds, offsetPixels) : $super.calculateDefaultPosition_6ufwvm_k$.call(this, placement, popupWidth, popupHeight, placementBounds, offsetPixels);
-  };
-  var PopupPlacement_TopLeft_instance;
-  var PopupPlacement_Top_instance;
-  var PopupPlacement_TopRight_instance;
-  var PopupPlacement_LeftTop_instance;
-  var PopupPlacement_RightTop_instance;
-  var PopupPlacement_Left_instance;
-  var PopupPlacement_Right_instance;
-  var PopupPlacement_LeftBottom_instance;
-  var PopupPlacement_RightBottom_instance;
-  var PopupPlacement_BottomLeft_instance;
-  var PopupPlacement_Bottom_instance;
-  var PopupPlacement_BottomRight_instance;
-  function values_0() {
-    return [PopupPlacement_TopLeft_getInstance(), PopupPlacement_Top_getInstance(), PopupPlacement_TopRight_getInstance(), PopupPlacement_LeftTop_getInstance(), PopupPlacement_RightTop_getInstance(), PopupPlacement_Left_getInstance(), PopupPlacement_Right_getInstance(), PopupPlacement_LeftBottom_getInstance(), PopupPlacement_RightBottom_getInstance(), PopupPlacement_BottomLeft_getInstance(), PopupPlacement_Bottom_getInstance(), PopupPlacement_BottomRight_getInstance()];
-  }
-  function valueOf_0(value) {
-    switch (value) {
-      case 'TopLeft':
-        return PopupPlacement_TopLeft_getInstance();
-      case 'Top':
-        return PopupPlacement_Top_getInstance();
-      case 'TopRight':
-        return PopupPlacement_TopRight_getInstance();
-      case 'LeftTop':
-        return PopupPlacement_LeftTop_getInstance();
-      case 'RightTop':
-        return PopupPlacement_RightTop_getInstance();
-      case 'Left':
-        return PopupPlacement_Left_getInstance();
-      case 'Right':
-        return PopupPlacement_Right_getInstance();
-      case 'LeftBottom':
-        return PopupPlacement_LeftBottom_getInstance();
-      case 'RightBottom':
-        return PopupPlacement_RightBottom_getInstance();
-      case 'BottomLeft':
-        return PopupPlacement_BottomLeft_getInstance();
-      case 'Bottom':
-        return PopupPlacement_Bottom_getInstance();
-      case 'BottomRight':
-        return PopupPlacement_BottomRight_getInstance();
-      default:
-        PopupPlacement_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries_1() {
-    if ($ENTRIES_0 == null)
-      $ENTRIES_0 = enumEntries(values_0());
-    return $ENTRIES_0;
-  }
-  var PopupPlacement_entriesInitialized;
-  function PopupPlacement_initEntries() {
-    if (PopupPlacement_entriesInitialized)
-      return Unit_getInstance();
-    PopupPlacement_entriesInitialized = true;
-    PopupPlacement_TopLeft_instance = new PopupPlacement('TopLeft', 0);
-    PopupPlacement_Top_instance = new PopupPlacement('Top', 1);
-    PopupPlacement_TopRight_instance = new PopupPlacement('TopRight', 2);
-    PopupPlacement_LeftTop_instance = new PopupPlacement('LeftTop', 3);
-    PopupPlacement_RightTop_instance = new PopupPlacement('RightTop', 4);
-    PopupPlacement_Left_instance = new PopupPlacement('Left', 5);
-    PopupPlacement_Right_instance = new PopupPlacement('Right', 6);
-    PopupPlacement_LeftBottom_instance = new PopupPlacement('LeftBottom', 7);
-    PopupPlacement_RightBottom_instance = new PopupPlacement('RightBottom', 8);
-    PopupPlacement_BottomLeft_instance = new PopupPlacement('BottomLeft', 9);
-    PopupPlacement_Bottom_instance = new PopupPlacement('Bottom', 10);
-    PopupPlacement_BottomRight_instance = new PopupPlacement('BottomRight', 11);
-  }
-  var $ENTRIES_0;
-  function PopupPlacement(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  function PopupScope(placement) {
-    this.placement_1 = placement;
-  }
-  protoOf(PopupScope).get_placement_wv4cec_k$ = function () {
-    return this.placement_1;
-  };
   function PopupVars() {
     PopupVars_instance = this;
     var tmp = this;
@@ -6071,66 +4264,9 @@
       new PopupVars();
     return PopupVars_instance;
   }
-  function get_DEFAULT_POPUP_OFFSET_PX() {
-    return DEFAULT_POPUP_OFFSET_PX;
-  }
-  var DEFAULT_POPUP_OFFSET_PX;
-  function updatePosition(_this__u8e3s4, position) {
-    _init_properties_Popup_kt__lluomy();
-    _this__u8e3s4.style.top = '' + position.top_1;
-    _this__u8e3s4.style.left = '' + position.left_1;
-  }
   function PopupStyle$delegate$lambda($this$base) {
     _init_properties_Popup_kt__lluomy();
     return transition(Companion_getInstance(), [CSSTransition_init_$Create$('opacity', PopupVars_getInstance().get_TransitionDuration_6zl6by_k$().value$default_36t2hw_k$())]);
-  }
-  function PopupPlacement_TopLeft_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_TopLeft_instance;
-  }
-  function PopupPlacement_Top_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_Top_instance;
-  }
-  function PopupPlacement_TopRight_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_TopRight_instance;
-  }
-  function PopupPlacement_LeftTop_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_LeftTop_instance;
-  }
-  function PopupPlacement_RightTop_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_RightTop_instance;
-  }
-  function PopupPlacement_Left_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_Left_instance;
-  }
-  function PopupPlacement_Right_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_Right_instance;
-  }
-  function PopupPlacement_LeftBottom_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_LeftBottom_instance;
-  }
-  function PopupPlacement_RightBottom_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_RightBottom_instance;
-  }
-  function PopupPlacement_BottomLeft_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_BottomLeft_instance;
-  }
-  function PopupPlacement_Bottom_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_Bottom_instance;
-  }
-  function PopupPlacement_BottomRight_getInstance() {
-    PopupPlacement_initEntries();
-    return PopupPlacement_BottomRight_instance;
   }
   function PopupStyle$factory() {
     return getPropertyCallableRef('PopupStyle', 0, KProperty0, function () {
@@ -6268,310 +4404,6 @@
     _init_properties_Tooltip_kt__palx2n();
     return styleModifier(_this__u8e3s4, triangleUp$lambda(color));
   }
-  function Tooltip(target, text, modifier, variant, placement, hasArrow, offsetPixels, placementTarget, showDelayMs, hideDelayMs, keepOpenStrategy, ref, $composer, $changed, $changed1, $default) {
-    _init_properties_Tooltip_kt__palx2n();
-    var modifier_0 = {_v: modifier};
-    var variant_0 = {_v: variant};
-    var placement_0 = {_v: placement};
-    var hasArrow_0 = {_v: hasArrow};
-    var offsetPixels_0 = {_v: offsetPixels};
-    var placementTarget_0 = {_v: placementTarget};
-    var showDelayMs_0 = {_v: showDelayMs};
-    var hideDelayMs_0 = {_v: hideDelayMs};
-    var keepOpenStrategy_0 = {_v: keepOpenStrategy};
-    var ref_0 = {_v: ref};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(615678963);
-    var $dirty = $changed;
-    var $dirty1 = $changed1;
-    if (!(($default & 4) === 0)) {
-      modifier_0._v = Companion_getInstance();
-    }
-    if (!(($default & 8) === 0)) {
-      variant_0._v = null;
-    }
-    if (!(($default & 16) === 0)) {
-      placement_0._v = PopupPlacement_Bottom_getInstance();
-    }
-    if (!(($default & 32) === 0)) {
-      hasArrow_0._v = true;
-    }
-    if (!(($default & 64) === 0)) {
-      offsetPixels_0._v = get_DEFAULT_POPUP_OFFSET_PX();
-    }
-    if (!(($default & 128) === 0)) {
-      placementTarget_0._v = null;
-    }
-    if (!(($default & 256) === 0)) {
-      showDelayMs_0._v = 0;
-    }
-    if (!(($default & 512) === 0)) {
-      hideDelayMs_0._v = 0;
-    }
-    if (!(($default & 1024) === 0)) {
-      keepOpenStrategy_0._v = null;
-    }
-    if (!(($default & 2048) === 0)) {
-      ref_0._v = null;
-    }
-    if (isTraceInProgress()) {
-      traceEventStart(615678963, $dirty, $dirty1, 'com.varabyte.kobweb.silk.components.overlay.Tooltip (Tooltip.kt:246)');
-    }
-    $composer_0.startReplaceableGroup_ip860b_k$(-1592962979);
-    // Inline function 'androidx.compose.runtime.cache' call
-    var this_0 = $composer_0;
-    var invalid = (($changed & 57344 ^ 24576) > 16384 ? $composer_0.changed_ga7h3f_k$(placement_0._v) : false) ? true : ($changed & 24576) === 16384;
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = this_0.rememberedValue_4dg93v_k$();
-    var tmp;
-    if (invalid ? true : it === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.Tooltip.<anonymous>' call
-      var value = Companion_getInstance_18().of_skk296_k$(placement_0._v, offsetPixels_0._v);
-      this_0.updateRememberedValue_l1wh71_k$(value);
-      tmp = value;
-    } else {
-      tmp = it;
-    }
-    var tmp_0 = tmp;
-    var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    var placementStrategy = tmp0_group;
-    AdvancedTooltip(target, text, modifier_0._v, Companion_getInstance(), variant_0._v, hasArrow_0._v, showDelayMs_0._v, hideDelayMs_0._v, null, placementTarget_0._v, placementStrategy, keepOpenStrategy_0._v, ref_0._v, $composer_0, 1174409736 | 112 & $dirty | 0 | 57344 & $dirty << 3 | 458752 & $dirty | 3670016 & $dirty >> 6 | 29360128 & $dirty >> 6, 576 | 896 & $dirty1 << 3, 0);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp1_safe_receiver == null)
-      null;
-    else {
-      tmp1_safe_receiver.updateScope_t8jcf_k$(Tooltip$lambda(target, text, modifier_0, variant_0, placement_0, hasArrow_0, offsetPixels_0, placementTarget_0, showDelayMs_0, hideDelayMs_0, keepOpenStrategy_0, ref_0, $changed, $changed1, $default));
-    }
-  }
-  function AdvancedTooltip(target, text, modifier, hiddenModifier, variant, hasArrow, showDelayMs, hideDelayMs, openCloseStrategy, placementTarget, placementStrategy, keepOpenStrategy, ref, $composer, $changed, $changed1, $default) {
-    _init_properties_Tooltip_kt__palx2n();
-    var modifier_0 = {_v: modifier};
-    var hiddenModifier_0 = {_v: hiddenModifier};
-    var variant_0 = {_v: variant};
-    var hasArrow_0 = {_v: hasArrow};
-    var showDelayMs_0 = {_v: showDelayMs};
-    var hideDelayMs_0 = {_v: hideDelayMs};
-    var openCloseStrategy_0 = {_v: openCloseStrategy};
-    var placementTarget_0 = {_v: placementTarget};
-    var placementStrategy_0 = {_v: placementStrategy};
-    var keepOpenStrategy_0 = {_v: keepOpenStrategy};
-    var ref_0 = {_v: ref};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-1750516105);
-    var $dirty = $changed;
-    var $dirty1 = $changed1;
-    if (!(($default & 4) === 0)) {
-      modifier_0._v = Companion_getInstance();
-    }
-    if (!(($default & 8) === 0)) {
-      hiddenModifier_0._v = Companion_getInstance();
-    }
-    if (!(($default & 16) === 0)) {
-      variant_0._v = null;
-    }
-    if (!(($default & 32) === 0)) {
-      hasArrow_0._v = true;
-    }
-    if (!(($default & 64) === 0)) {
-      showDelayMs_0._v = 0;
-    }
-    if (!(($default & 128) === 0)) {
-      hideDelayMs_0._v = 0;
-    }
-    if (!(($default & 256) === 0)) {
-      openCloseStrategy_0._v = null;
-    }
-    if (!(($default & 512) === 0)) {
-      placementTarget_0._v = null;
-    }
-    if (!(($default & 1024) === 0)) {
-      placementStrategy_0._v = null;
-    }
-    if (!(($default & 2048) === 0)) {
-      keepOpenStrategy_0._v = null;
-    }
-    if (!(($default & 4096) === 0)) {
-      ref_0._v = null;
-    }
-    if (isTraceInProgress()) {
-      traceEventStart(-1750516105, $dirty, $dirty1, 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip (Tooltip.kt:347)');
-    }
-    var tmp = modifier_0._v;
-    var tmp_0 = hiddenModifier_0._v;
-    var tmp_1 = variant_0._v;
-    var tmp_2 = hasArrow_0._v;
-    var tmp_3 = showDelayMs_0._v;
-    var tmp_4 = hideDelayMs_0._v;
-    var tmp_5 = openCloseStrategy_0._v;
-    var tmp_6 = placementTarget_0._v;
-    var tmp_7 = placementStrategy_0._v;
-    var tmp_8 = keepOpenStrategy_0._v;
-    var tmp_9 = ref_0._v;
-    // Inline function 'kotlin.run' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous>' call
-    var tmp_10 = $composer_0;
-    var dispatchReceiver = composableLambda(tmp_10, 1808558052, true, AdvancedTooltip$lambda(text));
-    // Inline function 'androidx.compose.runtime.remember' call
-    var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
-    sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    var invalid = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_1.rememberedValue_4dg93v_k$();
-    var tmp_11;
-    if (invalid ? true : it === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous>.<anonymous>' call
-      var value = ComposableLambda$invoke$ref_27(dispatchReceiver);
-      $composer_1.updateRememberedValue_l1wh71_k$(value);
-      tmp_11 = value;
-    } else {
-      tmp_11 = it;
-    }
-    var tmp_12 = tmp_11;
-    var tmp0 = (tmp_12 == null ? true : !(tmp_12 == null)) ? tmp_12 : THROW_CCE();
-    $composer_1.endReplaceableGroup_ern0ak_k$();
-    AdvancedTooltip_0(target, tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, tmp_7, tmp_8, tmp_9, tmp0, $composer_0, 150995528 | 7168 & $dirty >> 3 | 57344 & $dirty >> 3 | 458752 & $dirty >> 3 | 3670016 & $dirty >> 3 | 1879048192 & $dirty1 << 27, 456 | 112 & $dirty1 >> 3, 0);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(AdvancedTooltip$lambda_0(target, text, modifier_0, hiddenModifier_0, variant_0, hasArrow_0, showDelayMs_0, hideDelayMs_0, openCloseStrategy_0, placementTarget_0, placementStrategy_0, keepOpenStrategy_0, ref_0, $changed, $changed1, $default));
-    }
-  }
-  function AdvancedTooltip_0(target, modifier, hiddenModifier, variant, hasArrow, showDelayMs, hideDelayMs, openCloseStrategy, placementTarget, placementStrategy, keepOpenStrategy, ref, content, $composer, $changed, $changed1, $default) {
-    _init_properties_Tooltip_kt__palx2n();
-    var modifier_0 = {_v: modifier};
-    var hiddenModifier_0 = {_v: hiddenModifier};
-    var variant_0 = {_v: variant};
-    var hasArrow_0 = {_v: hasArrow};
-    var showDelayMs_0 = {_v: showDelayMs};
-    var hideDelayMs_0 = {_v: hideDelayMs};
-    var openCloseStrategy_0 = {_v: openCloseStrategy};
-    var placementTarget_0 = {_v: placementTarget};
-    var placementStrategy_0 = {_v: placementStrategy};
-    var keepOpenStrategy_0 = {_v: keepOpenStrategy};
-    var ref_0 = {_v: ref};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-553325155);
-    var $dirty = $changed;
-    var $dirty1 = $changed1;
-    if (!(($default & 2) === 0)) {
-      modifier_0._v = Companion_getInstance();
-    }
-    if (!(($default & 4) === 0)) {
-      hiddenModifier_0._v = Companion_getInstance();
-    }
-    if (!(($default & 8) === 0)) {
-      variant_0._v = null;
-    }
-    if (!(($default & 16) === 0)) {
-      hasArrow_0._v = true;
-    }
-    if (!(($default & 32) === 0)) {
-      showDelayMs_0._v = 0;
-    }
-    if (!(($default & 64) === 0)) {
-      hideDelayMs_0._v = 0;
-    }
-    if (!(($default & 128) === 0)) {
-      openCloseStrategy_0._v = null;
-    }
-    if (!(($default & 256) === 0)) {
-      placementTarget_0._v = null;
-    }
-    if (!(($default & 512) === 0)) {
-      placementStrategy_0._v = null;
-    }
-    if (!(($default & 1024) === 0)) {
-      keepOpenStrategy_0._v = null;
-    }
-    if (!(($default & 2048) === 0)) {
-      ref_0._v = null;
-    }
-    if (isTraceInProgress()) {
-      traceEventStart(-553325155, $dirty, $dirty1, 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip (Tooltip.kt:286)');
-    }
-    $composer_0.startReplaceableGroup_ip860b_k$(-1600460472);
-    // Inline function 'androidx.compose.runtime.cache' call
-    var this_0 = $composer_0;
-    var invalid = $composer_0.changed_ga7h3f_k$(keepOpenStrategy_0._v);
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = this_0.rememberedValue_4dg93v_k$();
-    var tmp;
-    if (invalid ? true : it === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous>' call
-      var tmp0_elvis_lhs = keepOpenStrategy_0._v;
-      var value = tmp0_elvis_lhs == null ? never(Companion_getInstance_16()) : tmp0_elvis_lhs;
-      this_0.updateRememberedValue_l1wh71_k$(value);
-      tmp = value;
-    } else {
-      tmp = it;
-    }
-    var tmp_0 = tmp;
-    var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    var keepOpenStrategy_1 = tmp0_group;
-    var tmp_1 = toModifier(get_TooltipStyle(), [variant_0._v], $composer_0, 0).then_mmfvo6_k$(modifier_0._v);
-    var tmp_2 = hiddenModifier_0._v;
-    var tmp_3 = showDelayMs_0._v;
-    var tmp_4 = hideDelayMs_0._v;
-    var tmp_5 = openCloseStrategy_0._v;
-    var tmp_6 = placementTarget_0._v;
-    var tmp_7 = placementStrategy_0._v;
-    var tmp_8 = ref_0._v;
-    // Inline function 'kotlin.run' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous>' call
-    var tmp_9 = $composer_0;
-    var dispatchReceiver = composableLambda(tmp_9, 1036834515, true, AdvancedTooltip$lambda_1(content, hasArrow_0));
-    // Inline function 'androidx.compose.runtime.remember' call
-    var $composer_1 = $composer_0;
-    $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
-    sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
-    // Inline function 'androidx.compose.runtime.cache' call
-    var invalid_0 = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it_0 = $composer_1.rememberedValue_4dg93v_k$();
-    var tmp_10;
-    if (invalid_0 ? true : it_0 === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous>.<anonymous>' call
-      var value_0 = ComposableLambda$invoke$ref_28(dispatchReceiver);
-      $composer_1.updateRememberedValue_l1wh71_k$(value_0);
-      tmp_10 = value_0;
-    } else {
-      tmp_10 = it_0;
-    }
-    var tmp_11 = tmp_10;
-    var tmp0 = (tmp_11 == null ? true : !(tmp_11 == null)) ? tmp_11 : THROW_CCE();
-    $composer_1.endReplaceableGroup_ern0ak_k$();
-    AdvancedPopover(target, tmp_1, tmp_2, null, tmp_3, tmp_4, tmp_5, tmp_6, tmp_7, keepOpenStrategy_1, tmp_8, tmp0, $composer_0, 1092619848 | 57344 & $dirty >> 3 | 458752 & $dirty >> 3 | 234881024 & $dirty >> 3, 56 | 14 & $dirty1 >> 3, 0);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    var tmp1_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp1_safe_receiver == null)
-      null;
-    else {
-      tmp1_safe_receiver.updateScope_t8jcf_k$(AdvancedTooltip$lambda_2(target, modifier_0, hiddenModifier_0, variant_0, hasArrow_0, showDelayMs_0, hideDelayMs_0, openCloseStrategy_0, placementTarget_0, placementStrategy_0, keepOpenStrategy_0, ref_0, content, $changed, $changed1, $default));
-    }
-  }
   function TooltipStyle$delegate$lambda($this$base) {
     _init_properties_Tooltip_kt__palx2n();
     var tmp = Companion_getInstance();
@@ -6697,195 +4529,6 @@
   function triangleUp$lambda($color) {
     return function ($this$styleModifier) {
       $this$styleModifier.property_wcrait_k$('border-color', '' + $color + ' transparent transparent transparent');
-      return Unit_getInstance();
-    };
-  }
-  function Tooltip$lambda($target, $text, $modifier, $variant, $placement, $hasArrow, $offsetPixels, $placementTarget, $showDelayMs, $hideDelayMs, $keepOpenStrategy, $ref, $$changed, $$changed1, $$default) {
-    return function ($composer, $force) {
-      Tooltip($target, $text, $modifier._v, $variant._v, $placement._v, $hasArrow._v, $offsetPixels._v, $placementTarget._v, $showDelayMs._v, $hideDelayMs._v, $keepOpenStrategy._v, $ref._v, $composer, updateChangedFlags($$changed | 1), updateChangedFlags($$changed1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function AdvancedTooltip$lambda$lambda($text) {
-    return function ($this$Column, $composer, $changed) {
-      var $composer_0 = $composer;
-      if (isTraceInProgress()) {
-        traceEventStart(1488025435, $changed, -1, 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous>.<anonymous> (Tooltip.kt:363)');
-      }
-      // Inline function 'kotlin.collections.forEach' call
-      var tmp0_iterator = split($text, ['\n']).iterator_jk1svi_k$();
-      while (tmp0_iterator.hasNext_bitz1p_k$()) {
-        var element = tmp0_iterator.next_20eer_k$();
-        // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-        // Inline function 'kotlin.text.isNotEmpty' call
-        if (charSequenceLength(element) > 0) {
-          $composer_0.startReplaceableGroup_ip860b_k$(1593247616);
-          SpanText(element, null, null, null, $composer_0, 0, 14);
-          $composer_0.endReplaceableGroup_ern0ak_k$();
-        } else {
-          $composer_0.startReplaceableGroup_ip860b_k$(1593247636);
-          Br(null, $composer_0, 0, 1);
-          $composer_0.endReplaceableGroup_ern0ak_k$();
-        }
-      }
-      var tmp;
-      if (isTraceInProgress()) {
-        traceEventEnd();
-        tmp = Unit_getInstance();
-      }
-      return Unit_getInstance();
-    };
-  }
-  function ComposableLambda$invoke$ref_26($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function AdvancedTooltip$lambda($text) {
-    return function ($this$AdvancedTooltip, $composer, $changed) {
-      var $composer_0 = $composer;
-      var tmp;
-      if (!(($changed & 81) === 16) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-        if (isTraceInProgress()) {
-          traceEventStart(1808558052, $changed, -1, 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous> (Tooltip.kt:362)');
-        }
-        var tmp_0 = toModifier(get_TooltipTextContainerStyle(), [], $composer_0, 64);
-        // Inline function 'kotlin.run' call
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous>.<anonymous>.<anonymous>' call
-        var tmp_1 = $composer_0;
-        var dispatchReceiver = composableLambda(tmp_1, 1488025435, true, AdvancedTooltip$lambda$lambda($text));
-        // Inline function 'androidx.compose.runtime.remember' call
-        var $composer_1 = $composer_0;
-        $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
-        sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
-        // Inline function 'androidx.compose.runtime.cache' call
-        var invalid = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-        var it = $composer_1.rememberedValue_4dg93v_k$();
-        var tmp_2;
-        if (invalid ? true : it === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
-          // Inline function 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-          var value = ComposableLambda$invoke$ref_26(dispatchReceiver);
-          $composer_1.updateRememberedValue_l1wh71_k$(value);
-          tmp_2 = value;
-        } else {
-          tmp_2 = it;
-        }
-        var tmp_3 = tmp_2;
-        var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
-        $composer_1.endReplaceableGroup_ern0ak_k$();
-        Column(tmp_0, null, null, null, tmp0, $composer_0, 24584, 14);
-        var tmp_4;
-        if (isTraceInProgress()) {
-          traceEventEnd();
-          tmp_4 = Unit_getInstance();
-        }
-        tmp = tmp_4;
-      } else {
-        $composer_0.skipToGroupEnd_lh3zi2_k$();
-        tmp = Unit_getInstance();
-      }
-      return Unit_getInstance();
-    };
-  }
-  function ComposableLambda$invoke$ref_27($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function AdvancedTooltip$lambda_0($target, $text, $modifier, $hiddenModifier, $variant, $hasArrow, $showDelayMs, $hideDelayMs, $openCloseStrategy, $placementTarget, $placementStrategy, $keepOpenStrategy, $ref, $$changed, $$changed1, $$default) {
-    return function ($composer, $force) {
-      AdvancedTooltip($target, $text, $modifier._v, $hiddenModifier._v, $variant._v, $hasArrow._v, $showDelayMs._v, $hideDelayMs._v, $openCloseStrategy._v, $placementTarget._v, $placementStrategy._v, $keepOpenStrategy._v, $ref._v, $composer, updateChangedFlags($$changed | 1), updateChangedFlags($$changed1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function AdvancedTooltip$lambda_1($content, $hasArrow) {
-    return function ($this$AdvancedPopover, $composer, $changed) {
-      var $composer_0 = $composer;
-      var $dirty = $changed;
-      var tmp;
-      if (($changed & 14) === 0) {
-        $dirty = $dirty | ($composer_0.changed_ga7h3f_k$($this$AdvancedPopover) ? 4 : 2);
-        tmp = Unit_getInstance();
-      }
-      var tmp_0;
-      if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-        if (isTraceInProgress()) {
-          traceEventStart(1036834515, $dirty, -1, 'com.varabyte.kobweb.silk.components.overlay.AdvancedTooltip.<anonymous> (Tooltip.kt:301)');
-        }
-        $content($this$AdvancedPopover, $composer_0, 14 & $dirty);
-        var placement = $this$AdvancedPopover.get_placement_wv4cec_k$();
-        if ($hasArrow._v ? !(placement == null) : false) {
-          var tmp_1 = get_TooltipArrowStyle();
-          var tmp_2;
-          switch (placement.get_ordinal_ip24qg_k$()) {
-            case 0:
-              tmp_2 = get_BottomLeftTooltipArrowVariant();
-              break;
-            case 1:
-              tmp_2 = get_BottomTooltipArrowVariant();
-              break;
-            case 2:
-              tmp_2 = get_BottomRightTooltipArrowVariant();
-              break;
-            case 3:
-              tmp_2 = get_RightTopTooltipArrowVariant();
-              break;
-            case 5:
-              tmp_2 = get_RightTooltipArrowVariant();
-              break;
-            case 7:
-              tmp_2 = get_RightBottomTooltipArrowVariant();
-              break;
-            case 4:
-              tmp_2 = get_LeftTopTooltipArrowVariant();
-              break;
-            case 6:
-              tmp_2 = get_LeftTooltipArrowVariant();
-              break;
-            case 8:
-              tmp_2 = get_LeftBottomTooltipArrowVariant();
-              break;
-            case 9:
-              tmp_2 = get_TopLeftTooltipArrowVariant();
-              break;
-            case 10:
-              tmp_2 = get_TopTooltipArrowVariant();
-              break;
-            case 11:
-              tmp_2 = get_TopRightTooltipArrowVariant();
-              break;
-            default:
-              noWhenBranchMatchedException();
-              break;
-          }
-          var tmp_3 = toModifier(tmp_1, [tmp_2], $composer_0, 0);
-          Box(tmp_3, null, null, null, $composer_0, 8, 14);
-        }
-        var tmp_4;
-        if (isTraceInProgress()) {
-          traceEventEnd();
-          tmp_4 = Unit_getInstance();
-        }
-        tmp_0 = tmp_4;
-      } else {
-        $composer_0.skipToGroupEnd_lh3zi2_k$();
-        tmp_0 = Unit_getInstance();
-      }
-      return Unit_getInstance();
-    };
-  }
-  function ComposableLambda$invoke$ref_28($boundThis) {
-    return function (p0, p1, p2) {
-      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
-    };
-  }
-  function AdvancedTooltip$lambda_2($target, $modifier, $hiddenModifier, $variant, $hasArrow, $showDelayMs, $hideDelayMs, $openCloseStrategy, $placementTarget, $placementStrategy, $keepOpenStrategy, $ref, $content, $$changed, $$changed1, $$default) {
-    return function ($composer, $force) {
-      AdvancedTooltip_0($target, $modifier._v, $hiddenModifier._v, $variant._v, $hasArrow._v, $showDelayMs._v, $hideDelayMs._v, $openCloseStrategy._v, $placementTarget._v, $placementStrategy._v, $keepOpenStrategy._v, $ref._v, $content, $composer, updateChangedFlags($$changed | 1), updateChangedFlags($$changed1), $$default);
       return Unit_getInstance();
     };
   }
@@ -7716,7 +5359,7 @@
     }
     return tmp;
   };
-  function Tooltip_0() {
+  function Tooltip() {
   }
   function MutableTooltip(palette) {
     ColorGroup.call(this, palette, 'tooltip');
@@ -8212,11 +5855,7 @@
       return receiver.set_color_6hbvlo_k$(value);
     });
   }
-  //region block: post-declaration
-  protoOf(PopupScope).align_s6rwef_k$ = align;
-  //endregion
   //region block: init
-  DEFAULT_POPUP_OFFSET_PX = 15;
   OVERLAY_KEY = 'overlay';
   PLACEHOLDER_KEY = 'placeholder';
   FOCUS_OUTLINE_KEY = 'focusOutline';
@@ -8230,25 +5869,21 @@
   _.$_$.b = Button_0;
   _.$_$.c = CloseIcon;
   _.$_$.d = HamburgerIcon;
-  _.$_$.e = MoonIcon;
-  _.$_$.f = SunIcon;
-  _.$_$.g = get_HorizontalDividerStyle;
-  _.$_$.h = HorizontalDivider;
-  _.$_$.i = Surface;
-  _.$_$.j = Overlay;
-  _.$_$.k = Tooltip;
-  _.$_$.l = get_SmoothColorStyle;
-  _.$_$.m = get_BorderColorVar;
-  _.$_$.n = get_ColorVar;
-  _.$_$.o = get_SilkColorsStyle;
-  _.$_$.p = initSilkWidgets;
-  _.$_$.q = setSilkWidgetVariables_0;
-  _.$_$.r = set_background;
-  _.$_$.s = get_color;
-  _.$_$.t = set_color;
-  _.$_$.u = PopupPlacement_BottomRight_getInstance;
-  _.$_$.v = ButtonVars_getInstance;
-  _.$_$.w = OverlayVars_getInstance;
+  _.$_$.e = get_HorizontalDividerStyle;
+  _.$_$.f = HorizontalDivider;
+  _.$_$.g = Surface;
+  _.$_$.h = Overlay;
+  _.$_$.i = get_SmoothColorStyle;
+  _.$_$.j = get_BorderColorVar;
+  _.$_$.k = get_ColorVar;
+  _.$_$.l = get_SilkColorsStyle;
+  _.$_$.m = initSilkWidgets;
+  _.$_$.n = setSilkWidgetVariables_0;
+  _.$_$.o = set_background;
+  _.$_$.p = get_color;
+  _.$_$.q = set_color;
+  _.$_$.r = ButtonVars_getInstance;
+  _.$_$.s = OverlayVars_getInstance;
   //endregion
   return _;
 }));

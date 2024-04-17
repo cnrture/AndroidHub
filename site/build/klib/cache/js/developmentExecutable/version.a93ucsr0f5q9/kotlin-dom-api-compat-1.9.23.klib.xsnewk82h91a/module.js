@@ -14,23 +14,19 @@
   //region block: imports
   var Regex_init_$Create$ = kotlin_kotlin.$_$.c1;
   var toSet = kotlin_kotlin.$_$.y8;
-  var THROW_CCE = kotlin_kotlin.$_$.ve;
+  var THROW_CCE = kotlin_kotlin.$_$.te;
   var isCharSequence = kotlin_kotlin.$_$.va;
-  var trim = kotlin_kotlin.$_$.de;
+  var trim = kotlin_kotlin.$_$.be;
   var toString = kotlin_kotlin.$_$.rb;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
   var joinToString = kotlin_kotlin.$_$.e7;
   var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.d1;
   var charSequenceLength = kotlin_kotlin.$_$.da;
   var joinTo = kotlin_kotlin.$_$.g7;
-  var ensureNotNull = kotlin_kotlin.$_$.of;
-  var protoOf = kotlin_kotlin.$_$.ob;
-  var classMeta = kotlin_kotlin.$_$.ea;
-  var setMetadataFor = kotlin_kotlin.$_$.pb;
+  var ensureNotNull = kotlin_kotlin.$_$.mf;
   var VOID = kotlin_kotlin.$_$.e;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(EventListenerHandler, 'EventListenerHandler', classMeta);
   //endregion
   function hasClass(_this__u8e3s4, cssClass) {
     // Inline function 'kotlin.text.matches' call
@@ -122,27 +118,15 @@
       _this__u8e3s4.removeChild(ensureNotNull(_this__u8e3s4.firstChild));
     }
   }
-  function EventListener(handler) {
-    return new EventListenerHandler(handler);
-  }
-  function _get_handler__z70553($this) {
-    return $this.handler_1;
-  }
-  function EventListenerHandler(handler) {
-    this.handler_1 = handler;
-  }
-  protoOf(EventListenerHandler).handleEvent_zcjn50_k$ = function (event) {
-    this.handler_1(event);
-  };
-  protoOf(EventListenerHandler).handleEvent = function (event) {
-    return this.handleEvent_zcjn50_k$(event);
-  };
-  protoOf(EventListenerHandler).toString = function () {
-    return 'EventListenerHandler(' + this.handler_1 + ')';
-  };
   function get(_this__u8e3s4, index) {
     // Inline function 'kotlin.js.asDynamic' call
     return _this__u8e3s4[index];
+  }
+  function EventSourceInit(withCredentials) {
+    withCredentials = withCredentials === VOID ? false : withCredentials;
+    var o = {};
+    o['withCredentials'] = withCredentials;
+    return o;
   }
   function get_0(_this__u8e3s4, index) {
     // Inline function 'kotlin.js.asDynamic' call
@@ -151,30 +135,6 @@
   function get_1(_this__u8e3s4, index) {
     // Inline function 'kotlin.js.asDynamic' call
     return _this__u8e3s4[index];
-  }
-  function MutationObserverInit(childList, attributes, characterData, subtree, attributeOldValue, characterDataOldValue, attributeFilter) {
-    childList = childList === VOID ? false : childList;
-    attributes = attributes === VOID ? undefined : attributes;
-    characterData = characterData === VOID ? undefined : characterData;
-    subtree = subtree === VOID ? false : subtree;
-    attributeOldValue = attributeOldValue === VOID ? undefined : attributeOldValue;
-    characterDataOldValue = characterDataOldValue === VOID ? undefined : characterDataOldValue;
-    attributeFilter = attributeFilter === VOID ? undefined : attributeFilter;
-    var o = {};
-    o['childList'] = childList;
-    o['attributes'] = attributes;
-    o['characterData'] = characterData;
-    o['subtree'] = subtree;
-    o['attributeOldValue'] = attributeOldValue;
-    o['characterDataOldValue'] = characterDataOldValue;
-    o['attributeFilter'] = attributeFilter;
-    return o;
-  }
-  function EventSourceInit(withCredentials) {
-    withCredentials = withCredentials === VOID ? false : withCredentials;
-    var o = {};
-    o['withCredentials'] = withCredentials;
-    return o;
   }
   function RequestInit(method, headers, body, referrer, referrerPolicy, mode, credentials, cache, redirect, integrity, keepalive, window_0) {
     method = method === VOID ? undefined : method;
@@ -210,7 +170,6 @@
   _.$_$.b = clear;
   _.$_$.c = hasClass;
   _.$_$.d = removeClass;
-  _.$_$.e = EventListener;
   //endregion
   return _;
 }));
