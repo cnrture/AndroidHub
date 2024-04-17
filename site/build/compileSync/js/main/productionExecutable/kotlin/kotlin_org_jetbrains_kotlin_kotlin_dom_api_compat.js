@@ -12,12 +12,12 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.v;
   var toSet = kotlin_kotlin.$_$.n4;
-  var THROW_CCE = kotlin_kotlin.$_$.p8;
+  var THROW_CCE = kotlin_kotlin.$_$.n8;
   var isCharSequence = kotlin_kotlin.$_$.a6;
-  var trim = kotlin_kotlin.$_$.f8;
+  var trim = kotlin_kotlin.$_$.d8;
   var toString = kotlin_kotlin.$_$.m6;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.v;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.h;
   var Unit_instance = kotlin_kotlin.$_$.d2;
   var joinToString = kotlin_kotlin.$_$.l3;
@@ -27,13 +27,6 @@
   //endregion
   //region block: pre-declaration
   //endregion
-  function hasClass(_this__u8e3s4, cssClass) {
-    // Inline function 'kotlin.text.matches' call
-    var this_0 = _this__u8e3s4.className;
-    // Inline function 'kotlin.text.toRegex' call
-    var this_1 = '(^|.*\\s+)' + cssClass + '($|\\s+.*)';
-    return Regex_init_$Create$(this_1).k8(this_0);
-  }
   function removeClass(_this__u8e3s4, cssClasses) {
     var tmp$ret$1;
     $l$block: {
@@ -112,11 +105,17 @@
     }
     return false;
   }
+  function hasClass(_this__u8e3s4, cssClass) {
+    // Inline function 'kotlin.text.matches' call
+    var this_0 = _this__u8e3s4.className;
+    // Inline function 'kotlin.text.toRegex' call
+    var this_1 = '(^|.*\\s+)' + cssClass + '($|\\s+.*)';
+    return Regex_init_$Create$(this_1).k8(this_0);
+  }
   //region block: exports
   _.$_$ = _.$_$ || {};
   _.$_$.a = addClass;
-  _.$_$.b = hasClass;
-  _.$_$.c = removeClass;
+  _.$_$.b = removeClass;
   //endregion
   return _;
 }));

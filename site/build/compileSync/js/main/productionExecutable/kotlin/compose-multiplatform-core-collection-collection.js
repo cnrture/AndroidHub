@@ -17,12 +17,12 @@
   var longArray = kotlin_kotlin.$_$.e6;
   var fill = kotlin_kotlin.$_$.d3;
   var Unit_instance = kotlin_kotlin.$_$.d2;
-  var Long = kotlin_kotlin.$_$.n8;
+  var Long = kotlin_kotlin.$_$.l8;
   var toLong = kotlin_kotlin.$_$.l6;
-  var countTrailingZeroBits = kotlin_kotlin.$_$.u8;
+  var countTrailingZeroBits = kotlin_kotlin.$_$.s8;
   var _ULong___init__impl__c78o9k = kotlin_kotlin.$_$.v1;
   var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.w1;
-  var ulongCompare = kotlin_kotlin.$_$.f9;
+  var ulongCompare = kotlin_kotlin.$_$.d9;
   var VOID = kotlin_kotlin.$_$.c;
   var toString = kotlin_kotlin.$_$.m6;
   var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.b1;
@@ -35,9 +35,9 @@
   var fillArrayVal = kotlin_kotlin.$_$.r5;
   var hashCode = kotlin_kotlin.$_$.w5;
   var equals = kotlin_kotlin.$_$.q5;
-  var THROW_CCE = kotlin_kotlin.$_$.p8;
+  var THROW_CCE = kotlin_kotlin.$_$.n8;
   var longArrayOf = kotlin_kotlin.$_$.d6;
-  var toString_0 = kotlin_kotlin.$_$.d9;
+  var toString_0 = kotlin_kotlin.$_$.b9;
   //endregion
   //region block: pre-declaration
   setMetadataFor(IntIntMap, 'IntIntMap', classMeta);
@@ -61,10 +61,10 @@
       tmp = 0;
     }
     var newCapacity = tmp;
-    $this.ws_1 = newCapacity;
+    $this.ts_1 = newCapacity;
     initializeMetadata($this, newCapacity);
-    $this.us_1 = new Int32Array(newCapacity);
-    $this.vs_1 = new Int32Array(newCapacity);
+    $this.rs_1 = new Int32Array(newCapacity);
+    $this.ss_1 = new Int32Array(newCapacity);
   }
   function initializeMetadata($this, capacity) {
     var tmp = $this;
@@ -80,9 +80,9 @@
       fill(this_0, get_AllEmpty());
       tmp_0 = this_0;
     }
-    tmp.ts_1 = tmp_0;
+    tmp.qs_1 = tmp_0;
     // Inline function 'androidx.collection.writeRawMetadata' call
-    var data = $this.ts_1;
+    var data = $this.qs_1;
     var value = get_Sentinel();
     var i = capacity >> 3;
     var b = (capacity & 7) << 3;
@@ -90,7 +90,7 @@
     initializeGrowth($this);
   }
   function initializeGrowth($this) {
-    $this.dt_1 = loadedCapacity($this.et()) - $this.xs_1 | 0;
+    $this.at_1 = loadedCapacity($this.bt()) - $this.us_1 | 0;
   }
   function findInsertIndex($this, key) {
     // Inline function 'androidx.collection.hash' call
@@ -100,12 +100,12 @@
     var hash1 = hash_0 >>> 7 | 0;
     // Inline function 'androidx.collection.h2' call
     var hash2 = hash_0 & 127;
-    var probeMask = $this.ws_1;
+    var probeMask = $this.ts_1;
     var probeOffset = hash1 & probeMask;
     var probeIndex = 0;
     $l$loop_0: while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = $this.ts_1;
+      var metadata = $this.qs_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -125,7 +125,7 @@
         // Inline function 'androidx.collection.lowestBitSet' call
         var this_0 = m;
         var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-        if ($this.us_1[index] === key) {
+        if ($this.rs_1[index] === key) {
           return index;
         }
         // Inline function 'androidx.collection.next' call
@@ -141,11 +141,11 @@
     }
     var index_0 = findFirstAvailableSlot($this, hash1);
     var tmp_0;
-    if ($this.dt_1 === 0) {
+    if ($this.at_1 === 0) {
       // Inline function 'androidx.collection.isDeleted' call
       // Inline function 'androidx.collection.readRawMetadata' call
       var offset_0 = index_0;
-      tmp_0 = !$this.ts_1[offset_0 >> 3].jb((offset_0 & 7) << 3).lb(new Long(255, 0)).equals(get_Deleted());
+      tmp_0 = !$this.qs_1[offset_0 >> 3].jb((offset_0 & 7) << 3).lb(new Long(255, 0)).equals(get_Deleted());
     } else {
       tmp_0 = false;
     }
@@ -153,28 +153,28 @@
       adjustStorage($this);
       index_0 = findFirstAvailableSlot($this, hash1);
     }
-    $this.xs_1 = $this.xs_1 + 1 | 0;
+    $this.us_1 = $this.us_1 + 1 | 0;
     var tmp_1 = $this;
-    var tmp_2 = $this.dt_1;
+    var tmp_2 = $this.at_1;
     var tmp_3;
     // Inline function 'androidx.collection.isEmpty' call
     // Inline function 'androidx.collection.readRawMetadata' call
     var offset_1 = index_0;
-    if ($this.ts_1[offset_1 >> 3].jb((offset_1 & 7) << 3).lb(new Long(255, 0)).equals(get_Empty())) {
+    if ($this.qs_1[offset_1 >> 3].jb((offset_1 & 7) << 3).lb(new Long(255, 0)).equals(get_Empty())) {
       tmp_3 = 1;
     } else {
       tmp_3 = 0;
     }
-    tmp_1.dt_1 = tmp_2 - tmp_3 | 0;
+    tmp_1.at_1 = tmp_2 - tmp_3 | 0;
     // Inline function 'androidx.collection.MutableIntIntMap.writeMetadata' call
     var index_1 = index_0;
     var value = toLong(hash2);
-    var m_0 = $this.ts_1;
+    var m_0 = $this.qs_1;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_0 = index_1 >> 3;
     var b_0 = (index_1 & 7) << 3;
     m_0[i_0] = m_0[i_0].lb((new Long(255, 0)).ib(b_0).hb()).mb(value.ib(b_0));
-    var c = $this.ws_1;
+    var c = $this.ts_1;
     var cloneIndex = ((index_1 - get_ClonedMetadataCount() | 0) & c) + (get_ClonedMetadataCount() & c) | 0;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_1 = cloneIndex >> 3;
@@ -183,12 +183,12 @@
     return ~index_0;
   }
   function findFirstAvailableSlot($this, hash1) {
-    var probeMask = $this.ws_1;
+    var probeMask = $this.ts_1;
     var probeOffset = hash1 & probeMask;
     var probeIndex = 0;
     while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = $this.ts_1;
+      var metadata = $this.qs_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -206,17 +206,17 @@
   }
   function adjustStorage($this) {
     var tmp;
-    if ($this.ws_1 > get_GroupWidth()) {
+    if ($this.ts_1 > get_GroupWidth()) {
       // Inline function 'kotlin.ULong.compareTo' call
       // Inline function 'kotlin.ULong.times' call
       // Inline function 'kotlin.toULong' call
-      var this_0 = $this.xs_1;
+      var this_0 = $this.us_1;
       var this_1 = _ULong___init__impl__c78o9k(toLong(this_0));
       var other = _ULong___init__impl__c78o9k(new Long(32, 0));
       var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).w9(_ULong___get_data__impl__fggpzb(other)));
       // Inline function 'kotlin.ULong.times' call
       // Inline function 'kotlin.toULong' call
-      var this_3 = $this.ws_1;
+      var this_3 = $this.ts_1;
       var this_4 = _ULong___init__impl__c78o9k(toLong(this_3));
       var other_0 = _ULong___init__impl__c78o9k(new Long(25, 0));
       var other_1 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_4).w9(_ULong___get_data__impl__fggpzb(other_0)));
@@ -225,19 +225,19 @@
       tmp = false;
     }
     if (tmp) {
-      resizeStorage($this, nextCapacity($this.ws_1));
+      resizeStorage($this, nextCapacity($this.ts_1));
     } else {
-      resizeStorage($this, nextCapacity($this.ws_1));
+      resizeStorage($this, nextCapacity($this.ts_1));
     }
   }
   function resizeStorage($this, newCapacity) {
-    var previousMetadata = $this.ts_1;
-    var previousKeys = $this.us_1;
-    var previousValues = $this.vs_1;
-    var previousCapacity = $this.ws_1;
+    var previousMetadata = $this.qs_1;
+    var previousKeys = $this.rs_1;
+    var previousValues = $this.ss_1;
+    var previousCapacity = $this.ts_1;
     initializeStorage($this, newCapacity);
-    var newKeys = $this.us_1;
-    var newValues = $this.vs_1;
+    var newKeys = $this.rs_1;
+    var newValues = $this.ss_1;
     var inductionVariable = 0;
     if (inductionVariable < previousCapacity)
       do {
@@ -257,12 +257,12 @@
           // Inline function 'androidx.collection.h2' call
           var tmp$ret$4 = hash_0 & 127;
           var value = toLong(tmp$ret$4);
-          var m = $this.ts_1;
+          var m = $this.qs_1;
           // Inline function 'androidx.collection.writeRawMetadata' call
           var i_0 = index >> 3;
           var b = (index & 7) << 3;
           m[i_0] = m[i_0].lb((new Long(255, 0)).ib(b).hb()).mb(value.ib(b));
-          var c = $this.ws_1;
+          var c = $this.ts_1;
           var cloneIndex = ((index - get_ClonedMetadataCount() | 0) & c) + (get_ClonedMetadataCount() & c) | 0;
           // Inline function 'androidx.collection.writeRawMetadata' call
           var i_1 = cloneIndex >> 3;
@@ -277,7 +277,7 @@
   function MutableIntIntMap(initialCapacity) {
     initialCapacity = initialCapacity === VOID ? get_DefaultScatterCapacity() : initialCapacity;
     IntIntMap.call(this);
-    this.dt_1 = 0;
+    this.at_1 = 0;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(initialCapacity >= 0)) {
@@ -287,47 +287,47 @@
     }
     initializeStorage(this, unloadedCapacity(initialCapacity));
   }
-  protoOf(MutableIntIntMap).ft = function (key, value) {
+  protoOf(MutableIntIntMap).ct = function (key, value) {
     var index = findInsertIndex(this, key);
     if (index < 0)
       index = ~index;
-    this.us_1[index] = key;
-    this.vs_1[index] = value;
+    this.rs_1[index] = key;
+    this.ss_1[index] = value;
   };
   function IntIntMap() {
-    this.ts_1 = get_EmptyGroup();
-    this.us_1 = get_EmptyIntArray();
-    this.vs_1 = get_EmptyIntArray();
-    this.ws_1 = 0;
-    this.xs_1 = 0;
+    this.qs_1 = get_EmptyGroup();
+    this.rs_1 = get_EmptyIntArray();
+    this.ss_1 = get_EmptyIntArray();
+    this.ts_1 = 0;
+    this.us_1 = 0;
   }
-  protoOf(IntIntMap).et = function () {
-    return this.ws_1;
+  protoOf(IntIntMap).bt = function () {
+    return this.ts_1;
   };
   protoOf(IntIntMap).i = function () {
-    return this.xs_1;
+    return this.us_1;
   };
   protoOf(IntIntMap).o = function () {
-    return this.xs_1 === 0;
+    return this.us_1 === 0;
   };
   protoOf(IntIntMap).j = function (key) {
-    var index = this.ht(key);
+    var index = this.et(key);
     if (index < 0) {
       throw NoSuchElementException_init_$Create$('Cannot find value for key ' + key);
     }
-    return this.vs_1[index];
+    return this.ss_1[index];
   };
-  protoOf(IntIntMap).gt = function (key) {
-    return this.ht(key) >= 0;
+  protoOf(IntIntMap).dt = function (key) {
+    return this.et(key) >= 0;
   };
   protoOf(IntIntMap).hashCode = function () {
     var hash = 0;
     // Inline function 'androidx.collection.IntIntMap.forEach' call
-    var k = this.us_1;
-    var v = this.vs_1;
+    var k = this.rs_1;
+    var v = this.ss_1;
     $l$block: {
       // Inline function 'androidx.collection.IntIntMap.forEachIndexed' call
-      var m = this.ts_1;
+      var m = this.qs_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -374,11 +374,11 @@
       return false;
     }
     // Inline function 'androidx.collection.IntIntMap.forEach' call
-    var k = this.us_1;
-    var v = this.vs_1;
+    var k = this.rs_1;
+    var v = this.ss_1;
     $l$block: {
       // Inline function 'androidx.collection.IntIntMap.forEachIndexed' call
-      var m = this.ts_1;
+      var m = this.qs_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -424,11 +424,11 @@
     var s = StringBuilder_init_$Create$().r5(_Char___init__impl__6a9atx(123));
     var i = 0;
     // Inline function 'androidx.collection.IntIntMap.forEach' call
-    var k = this.us_1;
-    var v = this.vs_1;
+    var k = this.rs_1;
+    var v = this.ss_1;
     $l$block: {
       // Inline function 'androidx.collection.IntIntMap.forEachIndexed' call
-      var m = this.ts_1;
+      var m = this.qs_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -456,7 +456,7 @@
                   s.q5('=');
                   s.x7(value);
                   i = i + 1 | 0;
-                  if (i < this.xs_1) {
+                  if (i < this.us_1) {
                     s.r5(_Char___init__impl__6a9atx(44)).r5(_Char___init__impl__6a9atx(32));
                   }
                 }
@@ -472,19 +472,19 @@
     }
     return s.r5(_Char___init__impl__6a9atx(125)).toString();
   };
-  protoOf(IntIntMap).ht = function (key) {
+  protoOf(IntIntMap).et = function (key) {
     // Inline function 'androidx.collection.hash' call
     var hash = imul(key, get_MurmurHashC1());
     var hash_0 = hash ^ hash << 16;
     // Inline function 'androidx.collection.h2' call
     var hash2 = hash_0 & 127;
-    var probeMask = this.ws_1;
+    var probeMask = this.ts_1;
     // Inline function 'androidx.collection.h1' call
     var probeOffset = (hash_0 >>> 7 | 0) & probeMask;
     var probeIndex = 0;
     $l$loop_0: while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = this.ts_1;
+      var metadata = this.qs_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -504,7 +504,7 @@
         // Inline function 'androidx.collection.lowestBitSet' call
         var this_0 = m;
         var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-        if (this.us_1[index] === key) {
+        if (this.rs_1[index] === key) {
           return index;
         }
         // Inline function 'androidx.collection.next' call
@@ -527,15 +527,15 @@
   }
   var EmptyIntArray;
   function IntSet() {
-    this.it_1 = get_EmptyGroup();
-    this.jt_1 = get_EmptyIntArray();
-    this.kt_1 = 0;
-    this.lt_1 = 0;
+    this.ft_1 = get_EmptyGroup();
+    this.gt_1 = get_EmptyIntArray();
+    this.ht_1 = 0;
+    this.it_1 = 0;
   }
-  protoOf(IntSet).et = function () {
-    return this.kt_1;
+  protoOf(IntSet).bt = function () {
+    return this.ht_1;
   };
-  protoOf(IntSet).gt = function (element) {
+  protoOf(IntSet).dt = function (element) {
     var tmp$ret$9;
     $l$block: {
       // Inline function 'androidx.collection.IntSet.findElementIndex' call
@@ -544,13 +544,13 @@
       var hash_0 = hash ^ hash << 16;
       // Inline function 'androidx.collection.h2' call
       var hash2 = hash_0 & 127;
-      var probeMask = this.kt_1;
+      var probeMask = this.ht_1;
       // Inline function 'androidx.collection.h1' call
       var probeOffset = (hash_0 >>> 7 | 0) & probeMask;
       var probeIndex = 0;
       $l$loop_0: while (true) {
         // Inline function 'androidx.collection.group' call
-        var metadata = this.it_1;
+        var metadata = this.ft_1;
         var offset = probeOffset;
         var i = offset >> 3;
         var b = (offset & 7) << 3;
@@ -570,7 +570,7 @@
           // Inline function 'androidx.collection.lowestBitSet' call
           var this_0 = m;
           var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-          if (this.jt_1[index] === element) {
+          if (this.gt_1[index] === element) {
             tmp$ret$9 = index;
             break $l$block;
           }
@@ -589,7 +589,7 @@
     }
     return tmp$ret$9 >= 0;
   };
-  protoOf(IntSet).mt = function (separator, prefix, postfix, limit, truncated) {
+  protoOf(IntSet).jt = function (separator, prefix, postfix, limit, truncated) {
     // Inline function 'kotlin.text.buildString' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.apply' call
@@ -601,11 +601,11 @@
       var index = 0;
       // Inline function 'androidx.collection.IntSet.forEach' call
       // Inline function 'kotlin.contracts.contract' call
-      var k = this.jt_1;
+      var k = this.gt_1;
       $l$block_0: {
         // Inline function 'androidx.collection.IntSet.forEachIndex' call
         // Inline function 'kotlin.contracts.contract' call
-        var m = this.it_1;
+        var m = this.ft_1;
         var lastIndex = m.length - 2 | 0;
         var inductionVariable = 0;
         if (inductionVariable <= lastIndex)
@@ -652,23 +652,23 @@
     }
     return this_0.toString();
   };
-  protoOf(IntSet).nt = function (separator, prefix, postfix, limit, truncated, $super) {
+  protoOf(IntSet).kt = function (separator, prefix, postfix, limit, truncated, $super) {
     separator = separator === VOID ? ', ' : separator;
     prefix = prefix === VOID ? '' : prefix;
     postfix = postfix === VOID ? '' : postfix;
     limit = limit === VOID ? -1 : limit;
     truncated = truncated === VOID ? '...' : truncated;
-    return $super === VOID ? this.mt(separator, prefix, postfix, limit, truncated) : $super.mt.call(this, separator, prefix, postfix, limit, truncated);
+    return $super === VOID ? this.jt(separator, prefix, postfix, limit, truncated) : $super.jt.call(this, separator, prefix, postfix, limit, truncated);
   };
   protoOf(IntSet).hashCode = function () {
     var hash = 0;
     // Inline function 'androidx.collection.IntSet.forEach' call
     // Inline function 'kotlin.contracts.contract' call
-    var k = this.jt_1;
+    var k = this.gt_1;
     $l$block: {
       // Inline function 'androidx.collection.IntSet.forEachIndex' call
       // Inline function 'kotlin.contracts.contract' call
-      var m = this.it_1;
+      var m = this.ft_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -711,16 +711,16 @@
     if (!(other instanceof IntSet)) {
       return false;
     }
-    if (!(other.lt_1 === this.lt_1)) {
+    if (!(other.it_1 === this.it_1)) {
       return false;
     }
     // Inline function 'androidx.collection.IntSet.forEach' call
     // Inline function 'kotlin.contracts.contract' call
-    var k = this.jt_1;
+    var k = this.gt_1;
     $l$block: {
       // Inline function 'androidx.collection.IntSet.forEachIndex' call
       // Inline function 'kotlin.contracts.contract' call
-      var m = this.it_1;
+      var m = this.ft_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -743,7 +743,7 @@
                   // Inline function 'androidx.collection.IntSet.forEach.<anonymous>' call
                   // Inline function 'androidx.collection.IntSet.equals.<anonymous>' call
                   var element = k[index];
-                  if (!other.gt(element)) {
+                  if (!other.dt(element)) {
                     return false;
                   }
                 }
@@ -760,7 +760,7 @@
     return true;
   };
   protoOf(IntSet).toString = function () {
-    return this.nt(VOID, '[', ']');
+    return this.kt(VOID, '[', ']');
   };
   function initializeStorage_0($this, initialCapacity) {
     var tmp;
@@ -772,9 +772,9 @@
       tmp = 0;
     }
     var newCapacity = tmp;
-    $this.kt_1 = newCapacity;
+    $this.ht_1 = newCapacity;
     initializeMetadata_0($this, newCapacity);
-    $this.jt_1 = new Int32Array(newCapacity);
+    $this.gt_1 = new Int32Array(newCapacity);
   }
   function initializeMetadata_0($this, capacity) {
     var tmp = $this;
@@ -790,9 +790,9 @@
       fill(this_0, get_AllEmpty());
       tmp_0 = this_0;
     }
-    tmp.it_1 = tmp_0;
+    tmp.ft_1 = tmp_0;
     // Inline function 'androidx.collection.writeRawMetadata' call
-    var data = $this.it_1;
+    var data = $this.ft_1;
     var value = get_Sentinel();
     var i = capacity >> 3;
     var b = (capacity & 7) << 3;
@@ -800,12 +800,12 @@
     initializeGrowth_0($this);
   }
   function initializeGrowth_0($this) {
-    $this.st_1 = loadedCapacity($this.et()) - $this.lt_1 | 0;
+    $this.pt_1 = loadedCapacity($this.bt()) - $this.it_1 | 0;
   }
   function MutableIntSet(initialCapacity) {
     initialCapacity = initialCapacity === VOID ? get_DefaultScatterCapacity() : initialCapacity;
     IntSet.call(this);
-    this.st_1 = 0;
+    this.pt_1 = 0;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(initialCapacity >= 0)) {
@@ -833,12 +833,12 @@
       tmp = 0;
     }
     var newCapacity = tmp;
-    $this.wt_1 = newCapacity;
+    $this.tt_1 = newCapacity;
     initializeMetadata_1($this, newCapacity);
     var tmp_0 = $this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp_0.ut_1 = fillArrayVal(Array(newCapacity), null);
-    $this.vt_1 = new Int32Array(newCapacity);
+    tmp_0.rt_1 = fillArrayVal(Array(newCapacity), null);
+    $this.st_1 = new Int32Array(newCapacity);
   }
   function initializeMetadata_1($this, capacity) {
     var tmp = $this;
@@ -854,9 +854,9 @@
       fill(this_0, get_AllEmpty());
       tmp_0 = this_0;
     }
-    tmp.tt_1 = tmp_0;
+    tmp.qt_1 = tmp_0;
     // Inline function 'androidx.collection.writeRawMetadata' call
-    var data = $this.tt_1;
+    var data = $this.qt_1;
     var value = get_Sentinel();
     var i = capacity >> 3;
     var b = (capacity & 7) << 3;
@@ -864,7 +864,7 @@
     initializeGrowth_1($this);
   }
   function initializeGrowth_1($this) {
-    $this.du_1 = loadedCapacity($this.et()) - $this.xt_1 | 0;
+    $this.au_1 = loadedCapacity($this.bt()) - $this.ut_1 | 0;
   }
   function findIndex($this, key) {
     // Inline function 'androidx.collection.hash' call
@@ -877,12 +877,12 @@
     var hash1 = hash_0 >>> 7 | 0;
     // Inline function 'androidx.collection.h2' call
     var hash2 = hash_0 & 127;
-    var probeMask = $this.wt_1;
+    var probeMask = $this.tt_1;
     var probeOffset = hash1 & probeMask;
     var probeIndex = 0;
     $l$loop_0: while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = $this.tt_1;
+      var metadata = $this.qt_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -902,7 +902,7 @@
         // Inline function 'androidx.collection.lowestBitSet' call
         var this_0 = m;
         var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-        if (equals($this.ut_1[index], key)) {
+        if (equals($this.rt_1[index], key)) {
           return index;
         }
         // Inline function 'androidx.collection.next' call
@@ -918,11 +918,11 @@
     }
     var index_0 = findFirstAvailableSlot_0($this, hash1);
     var tmp_0;
-    if ($this.du_1 === 0) {
+    if ($this.au_1 === 0) {
       // Inline function 'androidx.collection.isDeleted' call
       // Inline function 'androidx.collection.readRawMetadata' call
       var offset_0 = index_0;
-      tmp_0 = !$this.tt_1[offset_0 >> 3].jb((offset_0 & 7) << 3).lb(new Long(255, 0)).equals(get_Deleted());
+      tmp_0 = !$this.qt_1[offset_0 >> 3].jb((offset_0 & 7) << 3).lb(new Long(255, 0)).equals(get_Deleted());
     } else {
       tmp_0 = false;
     }
@@ -930,28 +930,28 @@
       adjustStorage_0($this);
       index_0 = findFirstAvailableSlot_0($this, hash1);
     }
-    $this.xt_1 = $this.xt_1 + 1 | 0;
+    $this.ut_1 = $this.ut_1 + 1 | 0;
     var tmp_1 = $this;
-    var tmp_2 = $this.du_1;
+    var tmp_2 = $this.au_1;
     var tmp_3;
     // Inline function 'androidx.collection.isEmpty' call
     // Inline function 'androidx.collection.readRawMetadata' call
     var offset_1 = index_0;
-    if ($this.tt_1[offset_1 >> 3].jb((offset_1 & 7) << 3).lb(new Long(255, 0)).equals(get_Empty())) {
+    if ($this.qt_1[offset_1 >> 3].jb((offset_1 & 7) << 3).lb(new Long(255, 0)).equals(get_Empty())) {
       tmp_3 = 1;
     } else {
       tmp_3 = 0;
     }
-    tmp_1.du_1 = tmp_2 - tmp_3 | 0;
+    tmp_1.au_1 = tmp_2 - tmp_3 | 0;
     // Inline function 'androidx.collection.MutableObjectIntMap.writeMetadata' call
     var index_1 = index_0;
     var value = toLong(hash2);
-    var m_0 = $this.tt_1;
+    var m_0 = $this.qt_1;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_0 = index_1 >> 3;
     var b_0 = (index_1 & 7) << 3;
     m_0[i_0] = m_0[i_0].lb((new Long(255, 0)).ib(b_0).hb()).mb(value.ib(b_0));
-    var c = $this.wt_1;
+    var c = $this.tt_1;
     var cloneIndex = ((index_1 - get_ClonedMetadataCount() | 0) & c) + (get_ClonedMetadataCount() & c) | 0;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_1 = cloneIndex >> 3;
@@ -960,12 +960,12 @@
     return ~index_0;
   }
   function findFirstAvailableSlot_0($this, hash1) {
-    var probeMask = $this.wt_1;
+    var probeMask = $this.tt_1;
     var probeOffset = hash1 & probeMask;
     var probeIndex = 0;
     while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = $this.tt_1;
+      var metadata = $this.qt_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -983,17 +983,17 @@
   }
   function adjustStorage_0($this) {
     var tmp;
-    if ($this.wt_1 > get_GroupWidth()) {
+    if ($this.tt_1 > get_GroupWidth()) {
       // Inline function 'kotlin.ULong.compareTo' call
       // Inline function 'kotlin.ULong.times' call
       // Inline function 'kotlin.toULong' call
-      var this_0 = $this.xt_1;
+      var this_0 = $this.ut_1;
       var this_1 = _ULong___init__impl__c78o9k(toLong(this_0));
       var other = _ULong___init__impl__c78o9k(new Long(32, 0));
       var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).w9(_ULong___get_data__impl__fggpzb(other)));
       // Inline function 'kotlin.ULong.times' call
       // Inline function 'kotlin.toULong' call
-      var this_3 = $this.wt_1;
+      var this_3 = $this.tt_1;
       var this_4 = _ULong___init__impl__c78o9k(toLong(this_3));
       var other_0 = _ULong___init__impl__c78o9k(new Long(25, 0));
       var other_1 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_4).w9(_ULong___get_data__impl__fggpzb(other_0)));
@@ -1002,19 +1002,19 @@
       tmp = false;
     }
     if (tmp) {
-      resizeStorage_0($this, nextCapacity($this.wt_1));
+      resizeStorage_0($this, nextCapacity($this.tt_1));
     } else {
-      resizeStorage_0($this, nextCapacity($this.wt_1));
+      resizeStorage_0($this, nextCapacity($this.tt_1));
     }
   }
   function resizeStorage_0($this, newCapacity) {
-    var previousMetadata = $this.tt_1;
-    var previousKeys = $this.ut_1;
-    var previousValues = $this.vt_1;
-    var previousCapacity = $this.wt_1;
+    var previousMetadata = $this.qt_1;
+    var previousKeys = $this.rt_1;
+    var previousValues = $this.st_1;
+    var previousCapacity = $this.tt_1;
     initializeStorage_1($this, newCapacity);
-    var newKeys = $this.ut_1;
-    var newValues = $this.vt_1;
+    var newKeys = $this.rt_1;
+    var newValues = $this.st_1;
     var inductionVariable = 0;
     if (inductionVariable < previousCapacity)
       do {
@@ -1037,12 +1037,12 @@
           // Inline function 'androidx.collection.h2' call
           var tmp$ret$5 = hash_0 & 127;
           var value = toLong(tmp$ret$5);
-          var m = $this.tt_1;
+          var m = $this.qt_1;
           // Inline function 'androidx.collection.writeRawMetadata' call
           var i_0 = index >> 3;
           var b = (index & 7) << 3;
           m[i_0] = m[i_0].lb((new Long(255, 0)).ib(b).hb()).mb(value.ib(b));
-          var c = $this.wt_1;
+          var c = $this.tt_1;
           var cloneIndex = ((index - get_ClonedMetadataCount() | 0) & c) + (get_ClonedMetadataCount() & c) | 0;
           // Inline function 'androidx.collection.writeRawMetadata' call
           var i_1 = cloneIndex >> 3;
@@ -1057,7 +1057,7 @@
   function MutableObjectIntMap(initialCapacity) {
     initialCapacity = initialCapacity === VOID ? get_DefaultScatterCapacity() : initialCapacity;
     ObjectIntMap.call(this);
-    this.du_1 = 0;
+    this.au_1 = 0;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(initialCapacity >= 0)) {
@@ -1067,66 +1067,66 @@
     }
     initializeStorage_1(this, unloadedCapacity(initialCapacity));
   }
-  protoOf(MutableObjectIntMap).eu = function (key, value, default_0) {
+  protoOf(MutableObjectIntMap).bu = function (key, value, default_0) {
     var index = findIndex(this, key);
     var previous = default_0;
     if (index < 0) {
       index = ~index;
     } else {
-      previous = this.vt_1[index];
+      previous = this.st_1[index];
     }
-    this.ut_1[index] = key;
-    this.vt_1[index] = value;
+    this.rt_1[index] = key;
+    this.st_1[index] = value;
     return previous;
   };
-  protoOf(MutableObjectIntMap).fu = function (index) {
-    this.xt_1 = this.xt_1 - 1 | 0;
+  protoOf(MutableObjectIntMap).cu = function (index) {
+    this.ut_1 = this.ut_1 - 1 | 0;
     // Inline function 'androidx.collection.MutableObjectIntMap.writeMetadata' call
     var value = get_Deleted();
-    var m = this.tt_1;
+    var m = this.qt_1;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i = index >> 3;
     var b = (index & 7) << 3;
     m[i] = m[i].lb((new Long(255, 0)).ib(b).hb()).mb(value.ib(b));
-    var c = this.wt_1;
+    var c = this.tt_1;
     var cloneIndex = ((index - get_ClonedMetadataCount() | 0) & c) + (get_ClonedMetadataCount() & c) | 0;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_0 = cloneIndex >> 3;
     var b_0 = (cloneIndex & 7) << 3;
     m[i_0] = m[i_0].lb((new Long(255, 0)).ib(b_0).hb()).mb(value.ib(b_0));
-    this.ut_1[index] = null;
+    this.rt_1[index] = null;
   };
   function ObjectIntMap() {
-    this.tt_1 = get_EmptyGroup();
-    this.ut_1 = get_EMPTY_OBJECTS();
-    this.vt_1 = get_EmptyIntArray();
-    this.wt_1 = 0;
-    this.xt_1 = 0;
+    this.qt_1 = get_EmptyGroup();
+    this.rt_1 = get_EMPTY_OBJECTS();
+    this.st_1 = get_EmptyIntArray();
+    this.tt_1 = 0;
+    this.ut_1 = 0;
   }
-  protoOf(ObjectIntMap).et = function () {
-    return this.wt_1;
+  protoOf(ObjectIntMap).bt = function () {
+    return this.tt_1;
   };
   protoOf(ObjectIntMap).i = function () {
-    return this.xt_1;
+    return this.ut_1;
   };
   protoOf(ObjectIntMap).o = function () {
-    return this.xt_1 === 0;
+    return this.ut_1 === 0;
   };
   protoOf(ObjectIntMap).p2 = function (key) {
-    var index = this.gu(key);
+    var index = this.du(key);
     if (index < 0) {
       throw NoSuchElementException_init_$Create$('There is no key ' + key + ' in the map');
     }
-    return this.vt_1[index];
+    return this.st_1[index];
   };
   protoOf(ObjectIntMap).hashCode = function () {
     var hash = 0;
     // Inline function 'androidx.collection.ObjectIntMap.forEach' call
-    var k = this.ut_1;
-    var v = this.vt_1;
+    var k = this.rt_1;
+    var v = this.st_1;
     $l$block: {
       // Inline function 'androidx.collection.ObjectIntMap.forEachIndexed' call
-      var m = this.tt_1;
+      var m = this.qt_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -1179,11 +1179,11 @@
     }
     var o = other instanceof ObjectIntMap ? other : THROW_CCE();
     // Inline function 'androidx.collection.ObjectIntMap.forEach' call
-    var k = this.ut_1;
-    var v = this.vt_1;
+    var k = this.rt_1;
+    var v = this.st_1;
     $l$block: {
       // Inline function 'androidx.collection.ObjectIntMap.forEachIndexed' call
-      var m = this.tt_1;
+      var m = this.qt_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -1230,11 +1230,11 @@
     var s = StringBuilder_init_$Create$().r5(_Char___init__impl__6a9atx(123));
     var i = 0;
     // Inline function 'androidx.collection.ObjectIntMap.forEach' call
-    var k = this.ut_1;
-    var v = this.vt_1;
+    var k = this.rt_1;
+    var v = this.st_1;
     $l$block: {
       // Inline function 'androidx.collection.ObjectIntMap.forEachIndexed' call
-      var m = this.tt_1;
+      var m = this.qt_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -1263,7 +1263,7 @@
                   s.q5('=');
                   s.x7(value);
                   i = i + 1 | 0;
-                  if (i < this.xt_1) {
+                  if (i < this.ut_1) {
                     s.r5(_Char___init__impl__6a9atx(44)).r5(_Char___init__impl__6a9atx(32));
                   }
                 }
@@ -1279,7 +1279,7 @@
     }
     return s.r5(_Char___init__impl__6a9atx(125)).toString();
   };
-  protoOf(ObjectIntMap).gu = function (key) {
+  protoOf(ObjectIntMap).du = function (key) {
     // Inline function 'androidx.collection.hash' call
     // Inline function 'kotlin.hashCode' call
     var tmp1_elvis_lhs = key == null ? null : hashCode(key);
@@ -1288,13 +1288,13 @@
     var hash_0 = hash ^ hash << 16;
     // Inline function 'androidx.collection.h2' call
     var hash2 = hash_0 & 127;
-    var probeMask = this.wt_1;
+    var probeMask = this.tt_1;
     // Inline function 'androidx.collection.h1' call
     var probeOffset = (hash_0 >>> 7 | 0) & probeMask;
     var probeIndex = 0;
     $l$loop_0: while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = this.tt_1;
+      var metadata = this.qt_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -1314,7 +1314,7 @@
         // Inline function 'androidx.collection.lowestBitSet' call
         var this_0 = m;
         var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-        if (equals(this.ut_1[index], key)) {
+        if (equals(this.rt_1[index], key)) {
           return index;
         }
         // Inline function 'androidx.collection.next' call
@@ -1413,14 +1413,14 @@
       tmp = 0;
     }
     var newCapacity = tmp;
-    $this.ku_1 = newCapacity;
+    $this.hu_1 = newCapacity;
     initializeMetadata_2($this, newCapacity);
     var tmp_0 = $this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp_0.iu_1 = fillArrayVal(Array(newCapacity), null);
+    tmp_0.fu_1 = fillArrayVal(Array(newCapacity), null);
     var tmp_1 = $this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp_1.ju_1 = fillArrayVal(Array(newCapacity), null);
+    tmp_1.gu_1 = fillArrayVal(Array(newCapacity), null);
   }
   function initializeMetadata_2($this, capacity) {
     var tmp = $this;
@@ -1436,9 +1436,9 @@
       fill(this_0, new Long(-2139062144, -2139062144));
       tmp_0 = this_0;
     }
-    tmp.hu_1 = tmp_0;
+    tmp.eu_1 = tmp_0;
     // Inline function 'androidx.collection.writeRawMetadata' call
-    var data = $this.hu_1;
+    var data = $this.eu_1;
     var value = new Long(255, 0);
     var i = capacity >> 3;
     var b = (capacity & 7) << 3;
@@ -1446,15 +1446,15 @@
     initializeGrowth_2($this);
   }
   function initializeGrowth_2($this) {
-    $this.ru_1 = loadedCapacity($this.et()) - $this.lu_1 | 0;
+    $this.ou_1 = loadedCapacity($this.bt()) - $this.iu_1 | 0;
   }
   function findFirstAvailableSlot_1($this, hash1) {
-    var probeMask = $this.ku_1;
+    var probeMask = $this.hu_1;
     var probeOffset = hash1 & probeMask;
     var probeIndex = 0;
     while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = $this.hu_1;
+      var metadata = $this.eu_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -1472,17 +1472,17 @@
   }
   function adjustStorage_1($this) {
     var tmp;
-    if ($this.ku_1 > 8) {
+    if ($this.hu_1 > 8) {
       // Inline function 'kotlin.ULong.compareTo' call
       // Inline function 'kotlin.ULong.times' call
       // Inline function 'kotlin.toULong' call
-      var this_0 = $this.lu_1;
+      var this_0 = $this.iu_1;
       var this_1 = _ULong___init__impl__c78o9k(toLong(this_0));
       var other = _ULong___init__impl__c78o9k(new Long(32, 0));
       var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).w9(_ULong___get_data__impl__fggpzb(other)));
       // Inline function 'kotlin.ULong.times' call
       // Inline function 'kotlin.toULong' call
-      var this_3 = $this.ku_1;
+      var this_3 = $this.hu_1;
       var this_4 = _ULong___init__impl__c78o9k(toLong(this_3));
       var other_0 = _ULong___init__impl__c78o9k(new Long(25, 0));
       var other_1 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_4).w9(_ULong___get_data__impl__fggpzb(other_0)));
@@ -1491,19 +1491,19 @@
       tmp = false;
     }
     if (tmp) {
-      resizeStorage_1($this, nextCapacity($this.ku_1));
+      resizeStorage_1($this, nextCapacity($this.hu_1));
     } else {
-      resizeStorage_1($this, nextCapacity($this.ku_1));
+      resizeStorage_1($this, nextCapacity($this.hu_1));
     }
   }
   function resizeStorage_1($this, newCapacity) {
-    var previousMetadata = $this.hu_1;
-    var previousKeys = $this.iu_1;
-    var previousValues = $this.ju_1;
-    var previousCapacity = $this.ku_1;
+    var previousMetadata = $this.eu_1;
+    var previousKeys = $this.fu_1;
+    var previousValues = $this.gu_1;
+    var previousCapacity = $this.hu_1;
     initializeStorage_2($this, newCapacity);
-    var newKeys = $this.iu_1;
-    var newValues = $this.ju_1;
+    var newKeys = $this.fu_1;
+    var newValues = $this.gu_1;
     var inductionVariable = 0;
     if (inductionVariable < previousCapacity)
       do {
@@ -1526,12 +1526,12 @@
           // Inline function 'androidx.collection.h2' call
           var tmp$ret$5 = hash_0 & 127;
           var value = toLong(tmp$ret$5);
-          var m = $this.hu_1;
+          var m = $this.eu_1;
           // Inline function 'androidx.collection.writeRawMetadata' call
           var i_0 = index >> 3;
           var b = (index & 7) << 3;
           m[i_0] = m[i_0].lb((new Long(255, 0)).ib(b).hb()).mb(value.ib(b));
-          var c = $this.ku_1;
+          var c = $this.hu_1;
           var cloneIndex = ((index - 7 | 0) & c) + (7 & c) | 0;
           // Inline function 'androidx.collection.writeRawMetadata' call
           var i_1 = cloneIndex >> 3;
@@ -1546,7 +1546,7 @@
   function MutableScatterMap(initialCapacity) {
     initialCapacity = initialCapacity === VOID ? 6 : initialCapacity;
     ScatterMap.call(this);
-    this.ru_1 = 0;
+    this.ou_1 = 0;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(initialCapacity >= 0)) {
@@ -1556,14 +1556,14 @@
     }
     initializeStorage_2(this, unloadedCapacity(initialCapacity));
   }
-  protoOf(MutableScatterMap).su = function (key, value) {
+  protoOf(MutableScatterMap).pu = function (key, value) {
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.collection.MutableScatterMap.set.<anonymous>' call
-    var index = this.tu(key);
+    var index = this.qu(key);
     var index_0 = index < 0 ? ~index : index;
-    this.iu_1[index_0] = key;
-    this.ju_1[index_0] = value;
+    this.fu_1[index_0] = key;
+    this.gu_1[index_0] = value;
   };
   protoOf(MutableScatterMap).h2 = function (key) {
     var tmp$ret$10;
@@ -1577,13 +1577,13 @@
       var hash_0 = hash ^ hash << 16;
       // Inline function 'androidx.collection.h2' call
       var hash2 = hash_0 & 127;
-      var probeMask = this.ku_1;
+      var probeMask = this.hu_1;
       // Inline function 'androidx.collection.h1' call
       var probeOffset = (hash_0 >>> 7 | 0) & probeMask;
       var probeIndex = 0;
       $l$loop_0: while (true) {
         // Inline function 'androidx.collection.group' call
-        var metadata = this.hu_1;
+        var metadata = this.eu_1;
         var offset = probeOffset;
         var i = offset >> 3;
         var b = (offset & 7) << 3;
@@ -1603,7 +1603,7 @@
           // Inline function 'androidx.collection.lowestBitSet' call
           var this_0 = m;
           var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-          if (equals(this.iu_1[index], key)) {
+          if (equals(this.fu_1[index], key)) {
             tmp$ret$10 = index;
             break $l$block;
           }
@@ -1622,31 +1622,31 @@
     }
     var index_0 = tmp$ret$10;
     if (index_0 >= 0) {
-      return this.uu(index_0);
+      return this.ru(index_0);
     }
     return null;
   };
-  protoOf(MutableScatterMap).uu = function (index) {
-    this.lu_1 = this.lu_1 - 1 | 0;
+  protoOf(MutableScatterMap).ru = function (index) {
+    this.iu_1 = this.iu_1 - 1 | 0;
     // Inline function 'androidx.collection.MutableScatterMap.writeMetadata' call
     var value = new Long(254, 0);
-    var m = this.hu_1;
+    var m = this.eu_1;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i = index >> 3;
     var b = (index & 7) << 3;
     m[i] = m[i].lb((new Long(255, 0)).ib(b).hb()).mb(value.ib(b));
-    var c = this.ku_1;
+    var c = this.hu_1;
     var cloneIndex = ((index - 7 | 0) & c) + (7 & c) | 0;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_0 = cloneIndex >> 3;
     var b_0 = (cloneIndex & 7) << 3;
     m[i_0] = m[i_0].lb((new Long(255, 0)).ib(b_0).hb()).mb(value.ib(b_0));
-    this.iu_1[index] = null;
-    var oldValue = this.ju_1[index];
-    this.ju_1[index] = null;
+    this.fu_1[index] = null;
+    var oldValue = this.gu_1[index];
+    this.gu_1[index] = null;
     return (oldValue == null ? true : !(oldValue == null)) ? oldValue : THROW_CCE();
   };
-  protoOf(MutableScatterMap).tu = function (key) {
+  protoOf(MutableScatterMap).qu = function (key) {
     // Inline function 'androidx.collection.hash' call
     // Inline function 'kotlin.hashCode' call
     var tmp1_elvis_lhs = key == null ? null : hashCode(key);
@@ -1657,12 +1657,12 @@
     var hash1 = hash_0 >>> 7 | 0;
     // Inline function 'androidx.collection.h2' call
     var hash2 = hash_0 & 127;
-    var probeMask = this.ku_1;
+    var probeMask = this.hu_1;
     var probeOffset = hash1 & probeMask;
     var probeIndex = 0;
     $l$loop_0: while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = this.hu_1;
+      var metadata = this.eu_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -1682,7 +1682,7 @@
         // Inline function 'androidx.collection.lowestBitSet' call
         var this_0 = m;
         var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-        if (equals(this.iu_1[index], key)) {
+        if (equals(this.fu_1[index], key)) {
           return index;
         }
         // Inline function 'androidx.collection.next' call
@@ -1698,11 +1698,11 @@
     }
     var index_0 = findFirstAvailableSlot_1(this, hash1);
     var tmp_0;
-    if (this.ru_1 === 0) {
+    if (this.ou_1 === 0) {
       // Inline function 'androidx.collection.isDeleted' call
       // Inline function 'androidx.collection.readRawMetadata' call
       var offset_0 = index_0;
-      tmp_0 = !this.hu_1[offset_0 >> 3].jb((offset_0 & 7) << 3).lb(new Long(255, 0)).equals(new Long(254, 0));
+      tmp_0 = !this.eu_1[offset_0 >> 3].jb((offset_0 & 7) << 3).lb(new Long(255, 0)).equals(new Long(254, 0));
     } else {
       tmp_0 = false;
     }
@@ -1710,28 +1710,28 @@
       adjustStorage_1(this);
       index_0 = findFirstAvailableSlot_1(this, hash1);
     }
-    this.lu_1 = this.lu_1 + 1 | 0;
+    this.iu_1 = this.iu_1 + 1 | 0;
     var tmp_1 = this;
-    var tmp_2 = this.ru_1;
+    var tmp_2 = this.ou_1;
     var tmp_3;
     // Inline function 'androidx.collection.isEmpty' call
     // Inline function 'androidx.collection.readRawMetadata' call
     var offset_1 = index_0;
-    if (this.hu_1[offset_1 >> 3].jb((offset_1 & 7) << 3).lb(new Long(255, 0)).equals(new Long(128, 0))) {
+    if (this.eu_1[offset_1 >> 3].jb((offset_1 & 7) << 3).lb(new Long(255, 0)).equals(new Long(128, 0))) {
       tmp_3 = 1;
     } else {
       tmp_3 = 0;
     }
-    tmp_1.ru_1 = tmp_2 - tmp_3 | 0;
+    tmp_1.ou_1 = tmp_2 - tmp_3 | 0;
     // Inline function 'androidx.collection.MutableScatterMap.writeMetadata' call
     var index_1 = index_0;
     var value = toLong(hash2);
-    var m_0 = this.hu_1;
+    var m_0 = this.eu_1;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_0 = index_1 >> 3;
     var b_0 = (index_1 & 7) << 3;
     m_0[i_0] = m_0[i_0].lb((new Long(255, 0)).ib(b_0).hb()).mb(value.ib(b_0));
-    var c = this.ku_1;
+    var c = this.hu_1;
     var cloneIndex = ((index_1 - 7 | 0) & c) + (7 & c) | 0;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_1 = cloneIndex >> 3;
@@ -1748,20 +1748,20 @@
   }
   var Empty;
   function ScatterMap() {
-    this.hu_1 = get_EmptyGroup();
-    this.iu_1 = get_EMPTY_OBJECTS();
-    this.ju_1 = get_EMPTY_OBJECTS();
-    this.ku_1 = 0;
-    this.lu_1 = 0;
+    this.eu_1 = get_EmptyGroup();
+    this.fu_1 = get_EMPTY_OBJECTS();
+    this.gu_1 = get_EMPTY_OBJECTS();
+    this.hu_1 = 0;
+    this.iu_1 = 0;
   }
-  protoOf(ScatterMap).et = function () {
-    return this.ku_1;
+  protoOf(ScatterMap).bt = function () {
+    return this.hu_1;
   };
   protoOf(ScatterMap).i = function () {
-    return this.lu_1;
+    return this.iu_1;
   };
   protoOf(ScatterMap).o = function () {
-    return this.lu_1 === 0;
+    return this.iu_1 === 0;
   };
   protoOf(ScatterMap).p2 = function (key) {
     var tmp$ret$10;
@@ -1775,13 +1775,13 @@
       var hash_0 = hash ^ hash << 16;
       // Inline function 'androidx.collection.h2' call
       var hash2 = hash_0 & 127;
-      var probeMask = this.ku_1;
+      var probeMask = this.hu_1;
       // Inline function 'androidx.collection.h1' call
       var probeOffset = (hash_0 >>> 7 | 0) & probeMask;
       var probeIndex = 0;
       $l$loop_0: while (true) {
         // Inline function 'androidx.collection.group' call
-        var metadata = this.hu_1;
+        var metadata = this.eu_1;
         var offset = probeOffset;
         var i = offset >> 3;
         var b = (offset & 7) << 3;
@@ -1801,7 +1801,7 @@
           // Inline function 'androidx.collection.lowestBitSet' call
           var this_0 = m;
           var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-          if (equals(this.iu_1[index], key)) {
+          if (equals(this.fu_1[index], key)) {
             tmp$ret$10 = index;
             break $l$block;
           }
@@ -1821,7 +1821,7 @@
     var index_0 = tmp$ret$10;
     var tmp_0;
     if (index_0 >= 0) {
-      var tmp_1 = this.ju_1[index_0];
+      var tmp_1 = this.gu_1[index_0];
       tmp_0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
     } else {
       tmp_0 = null;
@@ -1840,13 +1840,13 @@
       var hash_0 = hash ^ hash << 16;
       // Inline function 'androidx.collection.h2' call
       var hash2 = hash_0 & 127;
-      var probeMask = this.ku_1;
+      var probeMask = this.hu_1;
       // Inline function 'androidx.collection.h1' call
       var probeOffset = (hash_0 >>> 7 | 0) & probeMask;
       var probeIndex = 0;
       $l$loop_0: while (true) {
         // Inline function 'androidx.collection.group' call
-        var metadata = this.hu_1;
+        var metadata = this.eu_1;
         var offset = probeOffset;
         var i = offset >> 3;
         var b = (offset & 7) << 3;
@@ -1866,7 +1866,7 @@
           // Inline function 'androidx.collection.lowestBitSet' call
           var this_0 = m;
           var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-          if (equals(this.iu_1[index], key)) {
+          if (equals(this.fu_1[index], key)) {
             tmp$ret$10 = index;
             break $l$block;
           }
@@ -1888,11 +1888,11 @@
   protoOf(ScatterMap).hashCode = function () {
     var hash = 0;
     // Inline function 'androidx.collection.ScatterMap.forEach' call
-    var k = this.iu_1;
-    var v = this.ju_1;
+    var k = this.fu_1;
+    var v = this.gu_1;
     $l$block: {
       // Inline function 'androidx.collection.ScatterMap.forEachIndexed' call
-      var m = this.hu_1;
+      var m = this.eu_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -1950,11 +1950,11 @@
     }
     var o = other instanceof ScatterMap ? other : THROW_CCE();
     // Inline function 'androidx.collection.ScatterMap.forEach' call
-    var k = this.iu_1;
-    var v = this.ju_1;
+    var k = this.fu_1;
+    var v = this.gu_1;
     $l$block: {
       // Inline function 'androidx.collection.ScatterMap.forEachIndexed' call
-      var m = this.hu_1;
+      var m = this.eu_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -2007,11 +2007,11 @@
     var s = StringBuilder_init_$Create$().r5(_Char___init__impl__6a9atx(123));
     var i = 0;
     // Inline function 'androidx.collection.ScatterMap.forEach' call
-    var k = this.iu_1;
-    var v = this.ju_1;
+    var k = this.fu_1;
+    var v = this.gu_1;
     $l$block: {
       // Inline function 'androidx.collection.ScatterMap.forEachIndexed' call
-      var m = this.hu_1;
+      var m = this.eu_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -2041,7 +2041,7 @@
                   s.q5('=');
                   s.p5(value === this ? '(this)' : value);
                   i = i + 1 | 0;
-                  if (i < this.lu_1) {
+                  if (i < this.iu_1) {
                     s.r5(_Char___init__impl__6a9atx(44)).r5(_Char___init__impl__6a9atx(32));
                   }
                 }
@@ -2083,19 +2083,19 @@
     };
   }
   function ScatterSet() {
-    this.vu_1 = get_EmptyGroup();
-    this.wu_1 = get_EMPTY_OBJECTS();
-    this.xu_1 = 0;
-    this.yu_1 = 0;
+    this.su_1 = get_EmptyGroup();
+    this.tu_1 = get_EMPTY_OBJECTS();
+    this.uu_1 = 0;
+    this.vu_1 = 0;
   }
-  protoOf(ScatterSet).et = function () {
-    return this.xu_1;
+  protoOf(ScatterSet).bt = function () {
+    return this.uu_1;
   };
   protoOf(ScatterSet).i = function () {
-    return this.yu_1;
+    return this.vu_1;
   };
   protoOf(ScatterSet).o = function () {
-    return this.yu_1 === 0;
+    return this.vu_1 === 0;
   };
   protoOf(ScatterSet).m = function (element) {
     var tmp$ret$10;
@@ -2109,13 +2109,13 @@
       var hash_0 = hash ^ hash << 16;
       // Inline function 'androidx.collection.h2' call
       var hash2 = hash_0 & 127;
-      var probeMask = this.xu_1;
+      var probeMask = this.uu_1;
       // Inline function 'androidx.collection.h1' call
       var probeOffset = (hash_0 >>> 7 | 0) & probeMask;
       var probeIndex = 0;
       $l$loop_0: while (true) {
         // Inline function 'androidx.collection.group' call
-        var metadata = this.vu_1;
+        var metadata = this.su_1;
         var offset = probeOffset;
         var i = offset >> 3;
         var b = (offset & 7) << 3;
@@ -2135,7 +2135,7 @@
           // Inline function 'androidx.collection.lowestBitSet' call
           var this_0 = m;
           var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-          if (equals(this.wu_1[index], element)) {
+          if (equals(this.tu_1[index], element)) {
             tmp$ret$10 = index;
             break $l$block;
           }
@@ -2154,7 +2154,7 @@
     }
     return tmp$ret$10 >= 0;
   };
-  protoOf(ScatterSet).zu = function (separator, prefix, postfix, limit, truncated, transform) {
+  protoOf(ScatterSet).wu = function (separator, prefix, postfix, limit, truncated, transform) {
     // Inline function 'kotlin.text.buildString' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.apply' call
@@ -2166,11 +2166,11 @@
       var index = 0;
       // Inline function 'androidx.collection.ScatterSet.forEach' call
       // Inline function 'kotlin.contracts.contract' call
-      var k = this.wu_1;
+      var k = this.tu_1;
       $l$block_0: {
         // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
         // Inline function 'kotlin.contracts.contract' call
-        var m = this.vu_1;
+        var m = this.su_1;
         var lastIndex = m.length - 2 | 0;
         var inductionVariable = 0;
         if (inductionVariable <= lastIndex)
@@ -2222,24 +2222,24 @@
     }
     return this_0.toString();
   };
-  protoOf(ScatterSet).av = function (separator, prefix, postfix, limit, truncated, transform, $super) {
+  protoOf(ScatterSet).xu = function (separator, prefix, postfix, limit, truncated, transform, $super) {
     separator = separator === VOID ? ', ' : separator;
     prefix = prefix === VOID ? '' : prefix;
     postfix = postfix === VOID ? '' : postfix;
     limit = limit === VOID ? -1 : limit;
     truncated = truncated === VOID ? '...' : truncated;
     transform = transform === VOID ? null : transform;
-    return $super === VOID ? this.zu(separator, prefix, postfix, limit, truncated, transform) : $super.zu.call(this, separator, prefix, postfix, limit, truncated, transform);
+    return $super === VOID ? this.wu(separator, prefix, postfix, limit, truncated, transform) : $super.wu.call(this, separator, prefix, postfix, limit, truncated, transform);
   };
   protoOf(ScatterSet).hashCode = function () {
     var hash = 0;
     // Inline function 'androidx.collection.ScatterSet.forEach' call
     // Inline function 'kotlin.contracts.contract' call
-    var k = this.wu_1;
+    var k = this.tu_1;
     $l$block: {
       // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
       // Inline function 'kotlin.contracts.contract' call
-      var m = this.vu_1;
+      var m = this.su_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -2293,11 +2293,11 @@
     var o = other instanceof ScatterSet ? other : THROW_CCE();
     // Inline function 'androidx.collection.ScatterSet.forEach' call
     // Inline function 'kotlin.contracts.contract' call
-    var k = this.wu_1;
+    var k = this.tu_1;
     $l$block: {
       // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
       // Inline function 'kotlin.contracts.contract' call
-      var m = this.vu_1;
+      var m = this.su_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -2338,7 +2338,7 @@
     return true;
   };
   protoOf(ScatterSet).toString = function () {
-    return this.av(VOID, '[', ']', VOID, VOID, ScatterSet$toString$lambda(this));
+    return this.xu(VOID, '[', ']', VOID, VOID, ScatterSet$toString$lambda(this));
   };
   function initializeStorage_3($this, initialCapacity) {
     var tmp;
@@ -2350,11 +2350,11 @@
       tmp = 0;
     }
     var newCapacity = tmp;
-    $this.xu_1 = newCapacity;
+    $this.uu_1 = newCapacity;
     initializeMetadata_3($this, newCapacity);
     var tmp_0 = $this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp_0.wu_1 = fillArrayVal(Array(newCapacity), null);
+    tmp_0.tu_1 = fillArrayVal(Array(newCapacity), null);
   }
   function initializeMetadata_3($this, capacity) {
     var tmp = $this;
@@ -2370,9 +2370,9 @@
       fill(this_0, get_AllEmpty());
       tmp_0 = this_0;
     }
-    tmp.vu_1 = tmp_0;
+    tmp.su_1 = tmp_0;
     // Inline function 'androidx.collection.writeRawMetadata' call
-    var data = $this.vu_1;
+    var data = $this.su_1;
     var value = get_Sentinel();
     var i = capacity >> 3;
     var b = (capacity & 7) << 3;
@@ -2380,7 +2380,7 @@
     initializeGrowth_3($this);
   }
   function initializeGrowth_3($this) {
-    $this.fv_1 = loadedCapacity($this.et()) - $this.yu_1 | 0;
+    $this.cv_1 = loadedCapacity($this.bt()) - $this.vu_1 | 0;
   }
   function findAbsoluteInsertIndex($this, element) {
     // Inline function 'androidx.collection.hash' call
@@ -2393,12 +2393,12 @@
     var hash1 = hash_0 >>> 7 | 0;
     // Inline function 'androidx.collection.h2' call
     var hash2 = hash_0 & 127;
-    var probeMask = $this.xu_1;
+    var probeMask = $this.uu_1;
     var probeOffset = hash1 & probeMask;
     var probeIndex = 0;
     $l$loop_0: while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = $this.vu_1;
+      var metadata = $this.su_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -2418,7 +2418,7 @@
         // Inline function 'androidx.collection.lowestBitSet' call
         var this_0 = m;
         var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-        if (equals($this.wu_1[index], element)) {
+        if (equals($this.tu_1[index], element)) {
           return index;
         }
         // Inline function 'androidx.collection.next' call
@@ -2434,11 +2434,11 @@
     }
     var index_0 = findFirstAvailableSlot_2($this, hash1);
     var tmp_0;
-    if ($this.fv_1 === 0) {
+    if ($this.cv_1 === 0) {
       // Inline function 'androidx.collection.isDeleted' call
       // Inline function 'androidx.collection.readRawMetadata' call
       var offset_0 = index_0;
-      tmp_0 = !$this.vu_1[offset_0 >> 3].jb((offset_0 & 7) << 3).lb(new Long(255, 0)).equals(get_Deleted());
+      tmp_0 = !$this.su_1[offset_0 >> 3].jb((offset_0 & 7) << 3).lb(new Long(255, 0)).equals(get_Deleted());
     } else {
       tmp_0 = false;
     }
@@ -2446,28 +2446,28 @@
       adjustStorage_2($this);
       index_0 = findFirstAvailableSlot_2($this, hash1);
     }
-    $this.yu_1 = $this.yu_1 + 1 | 0;
+    $this.vu_1 = $this.vu_1 + 1 | 0;
     var tmp_1 = $this;
-    var tmp_2 = $this.fv_1;
+    var tmp_2 = $this.cv_1;
     var tmp_3;
     // Inline function 'androidx.collection.isEmpty' call
     // Inline function 'androidx.collection.readRawMetadata' call
     var offset_1 = index_0;
-    if ($this.vu_1[offset_1 >> 3].jb((offset_1 & 7) << 3).lb(new Long(255, 0)).equals(get_Empty())) {
+    if ($this.su_1[offset_1 >> 3].jb((offset_1 & 7) << 3).lb(new Long(255, 0)).equals(get_Empty())) {
       tmp_3 = 1;
     } else {
       tmp_3 = 0;
     }
-    tmp_1.fv_1 = tmp_2 - tmp_3 | 0;
+    tmp_1.cv_1 = tmp_2 - tmp_3 | 0;
     // Inline function 'androidx.collection.MutableScatterSet.writeMetadata' call
     var index_1 = index_0;
     var value = toLong(hash2);
-    var m_0 = $this.vu_1;
+    var m_0 = $this.su_1;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_0 = index_1 >> 3;
     var b_0 = (index_1 & 7) << 3;
     m_0[i_0] = m_0[i_0].lb((new Long(255, 0)).ib(b_0).hb()).mb(value.ib(b_0));
-    var c = $this.xu_1;
+    var c = $this.uu_1;
     var cloneIndex = ((index_1 - get_ClonedMetadataCount() | 0) & c) + (get_ClonedMetadataCount() & c) | 0;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_1 = cloneIndex >> 3;
@@ -2476,12 +2476,12 @@
     return index_0;
   }
   function findFirstAvailableSlot_2($this, hash1) {
-    var probeMask = $this.xu_1;
+    var probeMask = $this.uu_1;
     var probeOffset = hash1 & probeMask;
     var probeIndex = 0;
     while (true) {
       // Inline function 'androidx.collection.group' call
-      var metadata = $this.vu_1;
+      var metadata = $this.su_1;
       var offset = probeOffset;
       var i = offset >> 3;
       var b = (offset & 7) << 3;
@@ -2499,17 +2499,17 @@
   }
   function adjustStorage_2($this) {
     var tmp;
-    if ($this.xu_1 > get_GroupWidth()) {
+    if ($this.uu_1 > get_GroupWidth()) {
       // Inline function 'kotlin.ULong.compareTo' call
       // Inline function 'kotlin.ULong.times' call
       // Inline function 'kotlin.toULong' call
-      var this_0 = $this.yu_1;
+      var this_0 = $this.vu_1;
       var this_1 = _ULong___init__impl__c78o9k(toLong(this_0));
       var other = _ULong___init__impl__c78o9k(new Long(32, 0));
       var this_2 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_1).w9(_ULong___get_data__impl__fggpzb(other)));
       // Inline function 'kotlin.ULong.times' call
       // Inline function 'kotlin.toULong' call
-      var this_3 = $this.xu_1;
+      var this_3 = $this.uu_1;
       var this_4 = _ULong___init__impl__c78o9k(toLong(this_3));
       var other_0 = _ULong___init__impl__c78o9k(new Long(25, 0));
       var other_1 = _ULong___init__impl__c78o9k(_ULong___get_data__impl__fggpzb(this_4).w9(_ULong___get_data__impl__fggpzb(other_0)));
@@ -2518,17 +2518,17 @@
       tmp = false;
     }
     if (tmp) {
-      resizeStorage_2($this, nextCapacity($this.xu_1));
+      resizeStorage_2($this, nextCapacity($this.uu_1));
     } else {
-      resizeStorage_2($this, nextCapacity($this.xu_1));
+      resizeStorage_2($this, nextCapacity($this.uu_1));
     }
   }
   function resizeStorage_2($this, newCapacity) {
-    var previousMetadata = $this.vu_1;
-    var previousElements = $this.wu_1;
-    var previousCapacity = $this.xu_1;
+    var previousMetadata = $this.su_1;
+    var previousElements = $this.tu_1;
+    var previousCapacity = $this.uu_1;
     initializeStorage_3($this, newCapacity);
-    var newElements = $this.wu_1;
+    var newElements = $this.tu_1;
     var inductionVariable = 0;
     if (inductionVariable < previousCapacity)
       do {
@@ -2551,12 +2551,12 @@
           // Inline function 'androidx.collection.h2' call
           var tmp$ret$5 = hash_0 & 127;
           var value = toLong(tmp$ret$5);
-          var m = $this.vu_1;
+          var m = $this.su_1;
           // Inline function 'androidx.collection.writeRawMetadata' call
           var i_0 = index >> 3;
           var b = (index & 7) << 3;
           m[i_0] = m[i_0].lb((new Long(255, 0)).ib(b).hb()).mb(value.ib(b));
-          var c = $this.xu_1;
+          var c = $this.uu_1;
           var cloneIndex = ((index - get_ClonedMetadataCount() | 0) & c) + (get_ClonedMetadataCount() & c) | 0;
           // Inline function 'androidx.collection.writeRawMetadata' call
           var i_1 = cloneIndex >> 3;
@@ -2570,7 +2570,7 @@
   function MutableScatterSet(initialCapacity) {
     initialCapacity = initialCapacity === VOID ? get_DefaultScatterCapacity() : initialCapacity;
     ScatterSet.call(this);
-    this.fv_1 = 0;
+    this.cv_1 = 0;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(initialCapacity >= 0)) {
@@ -2583,12 +2583,12 @@
   protoOf(MutableScatterSet).u = function (element) {
     var oldSize = this.i();
     var index = findAbsoluteInsertIndex(this, element);
-    this.wu_1[index] = element;
+    this.tu_1[index] = element;
     return !(this.i() === oldSize);
   };
-  protoOf(MutableScatterSet).gv = function (element) {
+  protoOf(MutableScatterSet).dv = function (element) {
     var index = findAbsoluteInsertIndex(this, element);
-    this.wu_1[index] = element;
+    this.tu_1[index] = element;
   };
   protoOf(MutableScatterSet).v = function (element) {
     var tmp$ret$10;
@@ -2602,13 +2602,13 @@
       var hash_0 = hash ^ hash << 16;
       // Inline function 'androidx.collection.h2' call
       var hash2 = hash_0 & 127;
-      var probeMask = this.xu_1;
+      var probeMask = this.uu_1;
       // Inline function 'androidx.collection.h1' call
       var probeOffset = (hash_0 >>> 7 | 0) & probeMask;
       var probeIndex = 0;
       $l$loop_0: while (true) {
         // Inline function 'androidx.collection.group' call
-        var metadata = this.vu_1;
+        var metadata = this.su_1;
         var offset = probeOffset;
         var i = offset >> 3;
         var b = (offset & 7) << 3;
@@ -2628,7 +2628,7 @@
           // Inline function 'androidx.collection.lowestBitSet' call
           var this_0 = m;
           var index = (tmp + (countTrailingZeroBits(this_0) >> 3) | 0) & probeMask;
-          if (equals(this.wu_1[index], element)) {
+          if (equals(this.tu_1[index], element)) {
             tmp$ret$10 = index;
             break $l$block;
           }
@@ -2648,26 +2648,26 @@
     var index_0 = tmp$ret$10;
     var exists = index_0 >= 0;
     if (exists) {
-      this.hv(index_0);
+      this.ev(index_0);
     }
     return exists;
   };
-  protoOf(MutableScatterSet).hv = function (index) {
-    this.yu_1 = this.yu_1 - 1 | 0;
+  protoOf(MutableScatterSet).ev = function (index) {
+    this.vu_1 = this.vu_1 - 1 | 0;
     // Inline function 'androidx.collection.MutableScatterSet.writeMetadata' call
     var value = get_Deleted();
-    var m = this.vu_1;
+    var m = this.su_1;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i = index >> 3;
     var b = (index & 7) << 3;
     m[i] = m[i].lb((new Long(255, 0)).ib(b).hb()).mb(value.ib(b));
-    var c = this.xu_1;
+    var c = this.uu_1;
     var cloneIndex = ((index - get_ClonedMetadataCount() | 0) & c) + (get_ClonedMetadataCount() & c) | 0;
     // Inline function 'androidx.collection.writeRawMetadata' call
     var i_0 = cloneIndex >> 3;
     var b_0 = (cloneIndex & 7) << 3;
     m[i_0] = m[i_0].lb((new Long(255, 0)).ib(b_0).hb()).mb(value.ib(b_0));
-    this.wu_1[index] = null;
+    this.tu_1[index] = null;
   };
   function mutableScatterSetOf() {
     _init_properties_ScatterSet_kt__vy48mc();

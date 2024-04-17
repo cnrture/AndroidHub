@@ -12,15 +12,9 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.j6;
-  var classMeta = kotlin_kotlin.$_$.n5;
-  var setMetadataFor = kotlin_kotlin.$_$.k6;
-  var VOID = kotlin_kotlin.$_$.c;
-  var KProperty1 = kotlin_kotlin.$_$.v6;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.u5;
-  var lazy = kotlin_kotlin.$_$.x8;
   var decapitalize = kotlin_kotlin.$_$.b7;
   var split = kotlin_kotlin.$_$.s7;
+  var VOID = kotlin_kotlin.$_$.c;
   var joinToString = kotlin_kotlin.$_$.l3;
   var isBlank = kotlin_kotlin.$_$.h7;
   var toString = kotlin_kotlin.$_$.m6;
@@ -29,51 +23,25 @@
   var charSequenceLength = kotlin_kotlin.$_$.m5;
   var charSequenceGet = kotlin_kotlin.$_$.l5;
   var isUpperCase = kotlin_kotlin.$_$.j7;
-  var Char = kotlin_kotlin.$_$.i8;
+  var Char = kotlin_kotlin.$_$.g8;
   var Unit_instance = kotlin_kotlin.$_$.d2;
   var isLowerCase = kotlin_kotlin.$_$.i7;
   var get_lastIndex = kotlin_kotlin.$_$.l7;
   var toString_0 = kotlin_kotlin.$_$.r1;
   var capitalize = kotlin_kotlin.$_$.y6;
+  var protoOf = kotlin_kotlin.$_$.j6;
   var objectMeta = kotlin_kotlin.$_$.i6;
+  var setMetadataFor = kotlin_kotlin.$_$.k6;
+  var classMeta = kotlin_kotlin.$_$.n5;
   var _Duration___get_inWholeMilliseconds__impl__msfiry = kotlin_kotlin.$_$.o1;
   var Companion_getInstance = kotlin_kotlin.$_$.a2;
   var DurationUnit_MILLISECONDS_getInstance = kotlin_kotlin.$_$.d;
-  var toDuration = kotlin_kotlin.$_$.h8;
+  var toDuration = kotlin_kotlin.$_$.f8;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(HttpFetcher, 'HttpFetcher', classMeta, VOID, VOID, VOID, VOID, VOID, [3, 4]);
   setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor(CancellableActionHandle, 'CancellableActionHandle', classMeta);
   //endregion
-  function get_http(_this__u8e3s4) {
-    _init_properties_HttpFetcher_kt__6mmkul();
-    // Inline function 'kotlin.getValue' call
-    var this_0 = http$delegate;
-    http$factory();
-    return this_0.j2();
-  }
-  var http$delegate;
-  function HttpFetcher(window_0) {
-    this.ns_1 = window_0;
-    this.os_1 = false;
-  }
-  function http$delegate$lambda() {
-    _init_properties_HttpFetcher_kt__6mmkul();
-    return new HttpFetcher(window);
-  }
-  function http$factory() {
-    return getPropertyCallableRef('http', 1, KProperty1, function (receiver) {
-      return get_http(receiver);
-    }, null);
-  }
-  var properties_initialized_HttpFetcher_kt_uxns7j;
-  function _init_properties_HttpFetcher_kt__6mmkul() {
-    if (!properties_initialized_HttpFetcher_kt_uxns7j) {
-      properties_initialized_HttpFetcher_kt_uxns7j = true;
-      http$delegate = lazy(http$delegate$lambda);
-    }
-  }
   function kebabCaseToCamelCase(_this__u8e3s4) {
     return decapitalize(kebabCaseToTitleCamelCase(_this__u8e3s4));
   }
@@ -139,7 +107,7 @@
   }
   function Companion() {
     Companion_instance = this;
-    this.ps_1 = new CancellableActionHandle(0);
+    this.ms_1 = new CancellableActionHandle(0);
   }
   var Companion_instance;
   function Companion_getInstance_0() {
@@ -150,16 +118,16 @@
   function CancellableActionHandle(id, isInterval) {
     Companion_getInstance_0();
     isInterval = isInterval === VOID ? false : isInterval;
-    this.qs_1 = isInterval;
-    this.rs_1 = id;
+    this.ns_1 = isInterval;
+    this.os_1 = id;
   }
-  protoOf(CancellableActionHandle).ss = function () {
-    if (this.qs_1) {
-      self.clearInterval(this.rs_1);
+  protoOf(CancellableActionHandle).ps = function () {
+    if (this.ns_1) {
+      self.clearInterval(this.os_1);
     } else {
-      self.clearTimeout(this.rs_1);
+      self.clearTimeout(this.os_1);
     }
-    this.rs_1 = 0;
+    this.os_1 = 0;
   };
   function setInterval(_this__u8e3s4, delay, block) {
     var id = _this__u8e3s4.setInterval(block, _Duration___get_inWholeMilliseconds__impl__msfiry(delay).ob());
@@ -177,13 +145,12 @@
   }
   //region block: exports
   _.$_$ = _.$_$ || {};
-  _.$_$.a = get_http;
-  _.$_$.b = invokeLater;
-  _.$_$.c = kebabCaseToCamelCase;
-  _.$_$.d = kebabCaseToTitleCamelCase;
-  _.$_$.e = setInterval;
-  _.$_$.f = titleCamelCaseToKebabCase;
-  _.$_$.g = Companion_getInstance_0;
+  _.$_$.a = invokeLater;
+  _.$_$.b = kebabCaseToCamelCase;
+  _.$_$.c = kebabCaseToTitleCamelCase;
+  _.$_$.d = setInterval;
+  _.$_$.e = titleCamelCaseToKebabCase;
+  _.$_$.f = Companion_getInstance_0;
   //endregion
   return _;
 }));

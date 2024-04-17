@@ -66,10 +66,10 @@
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
-  var THROW_CCE = kotlin_kotlin.$_$.p8;
+  var THROW_CCE = kotlin_kotlin.$_$.n8;
   var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.l3;
-  var Companion_instance_5 = kotlin_com_varabyte_kobweb_kobweb_core.$_$.k;
-  var prependIf = kotlin_com_varabyte_kobweb_kobweb_core.$_$.g;
+  var Companion_instance_5 = kotlin_com_varabyte_kobweb_kobweb_core.$_$.j;
+  var prependIf = kotlin_com_varabyte_kobweb_kobweb_core.$_$.f;
   var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.x;
   var Img = kotlin_org_jetbrains_compose_html_html_core.$_$.t3;
   var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.y2;
@@ -80,7 +80,7 @@
   var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e2;
   var ComponentStyle = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g;
   var StyleVariable_0 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h;
-  var Anchor = kotlin_com_varabyte_kobweb_kobweb_core.$_$.e;
+  var Anchor = kotlin_com_varabyte_kobweb_kobweb_core.$_$.d;
   var get_link = kotlin_com_varabyte_kobweb_silk_foundation.$_$.t;
   var get_visited = kotlin_com_varabyte_kobweb_silk_foundation.$_$.y;
   var get_hover = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s;
@@ -108,22 +108,22 @@
   //endregion
   function get_TocStyle() {
     _init_properties_Toc_kt__9n5312();
-    return TocStyle$delegate.l2f(null, TocStyle$factory());
+    return TocStyle$delegate.i2f(null, TocStyle$factory());
   }
   var TocStyle$delegate;
   function get_TocBorderedVariant() {
     _init_properties_Toc_kt__9n5312();
-    return TocBorderedVariant$delegate.l2f(null, TocBorderedVariant$factory());
+    return TocBorderedVariant$delegate.i2f(null, TocBorderedVariant$factory());
   }
   var TocBorderedVariant$delegate;
   function TocVars() {
     TocVars_instance = this;
     var tmp = this;
-    var tmp0_defaultFallback = get_BorderColorVar().f2f();
-    tmp.j36_1 = StyleVariable(tmp0_defaultFallback, 'silk');
+    var tmp0_defaultFallback = get_BorderColorVar().c2f();
+    tmp.c36_1 = StyleVariable(tmp0_defaultFallback, 'silk');
   }
-  protoOf(TocVars).u2x = function () {
-    return this.j36_1.l2f(this, BorderColor$factory());
+  protoOf(TocVars).n2x = function () {
+    return this.c36_1.i2f(this, BorderColor$factory());
   };
   var TocVars_instance;
   function TocVars_getInstance() {
@@ -133,7 +133,7 @@
   }
   function TocStyle$delegate$lambda($this$base) {
     _init_properties_Toc_kt__9n5312();
-    return padding(textAlign(listStyle(Companion_instance, Companion_instance_0.d2d()), Companion_instance_1.j2c()), get_cssRem(0));
+    return padding(textAlign(listStyle(Companion_instance, Companion_instance_0.a2d()), Companion_instance_1.g2c()), get_cssRem(0));
   }
   function TocBorderedVariant$delegate$lambda($this$addVariantBase) {
     _init_properties_Toc_kt__9n5312();
@@ -143,7 +143,7 @@
     // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return padding(border(tmp, tmp_0, 'solid', TocVars_getInstance().u2x().f2f()), get_cssRem(1));
+    return padding(border(tmp, tmp_0, 'solid', TocVars_getInstance().n2x().c2f()), get_cssRem(1));
   }
   function TocStyle$factory() {
     return getPropertyCallableRef('TocStyle', 0, KProperty0, function () {
@@ -157,7 +157,7 @@
   }
   function BorderColor$factory() {
     return getPropertyCallableRef('BorderColor', 1, KProperty1, function (receiver) {
-      return receiver.u2x();
+      return receiver.n2x();
     }, null);
   }
   var properties_initialized_Toc_kt_t9o4p4;
@@ -172,12 +172,12 @@
   }
   function get_ImageStyle() {
     _init_properties_Image_kt__h9v8mh();
-    return ImageStyle$delegate.l2f(null, ImageStyle$factory());
+    return ImageStyle$delegate.i2f(null, ImageStyle$factory());
   }
   var ImageStyle$delegate;
   function get_FitWidthImageVariant() {
     _init_properties_Image_kt__h9v8mh();
-    return FitWidthImageVariant$delegate.l2f(null, FitWidthImageVariant$factory());
+    return FitWidthImageVariant$delegate.i2f(null, FitWidthImageVariant$factory());
   }
   var FitWidthImageVariant$delegate;
   function Image(src, description, modifier, variant, width, height, autoPrefix, ref, $composer, $changed, $default) {
@@ -189,39 +189,39 @@
     var autoPrefix_0 = {_v: autoPrefix};
     var ref_0 = {_v: ref};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.k19(1391855609);
+    $composer_0 = $composer_0.h19(1391855609);
     var $dirty = $changed;
     if (!(($default & 1) === 0))
       $dirty = $dirty | 6;
     else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.lz(src) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.iz(src) ? 4 : 2);
     if (!(($default & 2) === 0))
       $dirty = $dirty | 48;
     else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.lz(description) ? 32 : 16);
+      $dirty = $dirty | ($composer_0.iz(description) ? 32 : 16);
     if (!(($default & 4) === 0))
       $dirty = $dirty | 128;
     if (!(($default & 8) === 0))
       $dirty = $dirty | 3072;
     else if (($changed & 7168) === 0)
-      $dirty = $dirty | ($composer_0.lz(variant_0._v) ? 2048 : 1024);
+      $dirty = $dirty | ($composer_0.iz(variant_0._v) ? 2048 : 1024);
     if (!(($default & 16) === 0))
       $dirty = $dirty | 24576;
     else if (($changed & 57344) === 0)
-      $dirty = $dirty | ($composer_0.lz(width_0._v) ? 16384 : 8192);
+      $dirty = $dirty | ($composer_0.iz(width_0._v) ? 16384 : 8192);
     if (!(($default & 32) === 0))
       $dirty = $dirty | 196608;
     else if (($changed & 458752) === 0)
-      $dirty = $dirty | ($composer_0.lz(height_0._v) ? 131072 : 65536);
+      $dirty = $dirty | ($composer_0.iz(height_0._v) ? 131072 : 65536);
     if (!(($default & 64) === 0))
       $dirty = $dirty | 1572864;
     else if (($changed & 3670016) === 0)
-      $dirty = $dirty | ($composer_0.o18(autoPrefix_0._v) ? 1048576 : 524288);
+      $dirty = $dirty | ($composer_0.l18(autoPrefix_0._v) ? 1048576 : 524288);
     if (!(($default & 128) === 0))
       $dirty = $dirty | 12582912;
     else if (($changed & 29360128) === 0)
-      $dirty = $dirty | ($composer_0.lz(ref_0._v) ? 8388608 : 4194304);
-    if (!(($default & 4) === 4) ? true : !(($dirty & 23967451) === 4793490) ? true : !$composer_0.n17()) {
+      $dirty = $dirty | ($composer_0.iz(ref_0._v) ? 8388608 : 4194304);
+    if (!(($default & 4) === 4) ? true : !(($dirty & 23967451) === 4793490) ? true : !$composer_0.k17()) {
       if (!(($default & 4) === 0)) {
         modifier_0._v = Companion_instance;
       }
@@ -248,13 +248,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.e12();
+      $composer_0.b12();
     }
-    var tmp0_safe_receiver = $composer_0.l19();
+    var tmp0_safe_receiver = $composer_0.i19();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.i1e(Image$lambda(src, description, modifier_0, variant_0, width_0, height_0, autoPrefix_0, ref_0, $changed, $default));
+      tmp0_safe_receiver.f1e(Image$lambda(src, description, modifier_0, variant_0, width_0, height_0, autoPrefix_0, ref_0, $changed, $default));
     }
   }
   function Image_0(src, modifier, variant, width, height, alt, autoPrefix, ref, $composer, $changed, $default) {
@@ -267,39 +267,39 @@
     var autoPrefix_0 = {_v: autoPrefix};
     var ref_0 = {_v: ref};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.k19(-2082436053);
+    $composer_0 = $composer_0.h19(-2082436053);
     var $dirty = $changed;
     if (!(($default & 1) === 0))
       $dirty = $dirty | 6;
     else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.lz(src) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.iz(src) ? 4 : 2);
     if (!(($default & 2) === 0))
       $dirty = $dirty | 16;
     if (!(($default & 4) === 0))
       $dirty = $dirty | 384;
     else if (($changed & 896) === 0)
-      $dirty = $dirty | ($composer_0.lz(variant_0._v) ? 256 : 128);
+      $dirty = $dirty | ($composer_0.iz(variant_0._v) ? 256 : 128);
     if (!(($default & 8) === 0))
       $dirty = $dirty | 3072;
     else if (($changed & 7168) === 0)
-      $dirty = $dirty | ($composer_0.lz(width_0._v) ? 2048 : 1024);
+      $dirty = $dirty | ($composer_0.iz(width_0._v) ? 2048 : 1024);
     if (!(($default & 16) === 0))
       $dirty = $dirty | 24576;
     else if (($changed & 57344) === 0)
-      $dirty = $dirty | ($composer_0.lz(height_0._v) ? 16384 : 8192);
+      $dirty = $dirty | ($composer_0.iz(height_0._v) ? 16384 : 8192);
     if (!(($default & 32) === 0))
       $dirty = $dirty | 196608;
     else if (($changed & 458752) === 0)
-      $dirty = $dirty | ($composer_0.lz(alt_0._v) ? 131072 : 65536);
+      $dirty = $dirty | ($composer_0.iz(alt_0._v) ? 131072 : 65536);
     if (!(($default & 64) === 0))
       $dirty = $dirty | 1572864;
     else if (($changed & 3670016) === 0)
-      $dirty = $dirty | ($composer_0.o18(autoPrefix_0._v) ? 1048576 : 524288);
+      $dirty = $dirty | ($composer_0.l18(autoPrefix_0._v) ? 1048576 : 524288);
     if (!(($default & 128) === 0))
       $dirty = $dirty | 12582912;
     else if (($changed & 29360128) === 0)
-      $dirty = $dirty | ($composer_0.lz(ref_0._v) ? 8388608 : 4194304);
-    if (!(($default & 2) === 2) ? true : !(($dirty & 23967451) === 4793490) ? true : !$composer_0.n17()) {
+      $dirty = $dirty | ($composer_0.iz(ref_0._v) ? 8388608 : 4194304);
+    if (!(($default & 2) === 2) ? true : !(($dirty & 23967451) === 4793490) ? true : !$composer_0.k17()) {
       if (!(($default & 2) === 0)) {
         modifier_0._v = Companion_instance;
       }
@@ -324,7 +324,7 @@
       if (isTraceInProgress()) {
         traceEventStart(-2082436053, $dirty, -1, 'com.varabyte.kobweb.silk.components.graphics.Image (Image.kt:54)');
       }
-      $composer_0.s17(1385171914);
+      $composer_0.p17(1385171914);
       if (!(ref_0._v == null)) {
         var tmp = Companion_instance;
         // Inline function 'org.jetbrains.compose.web.css.Companion.None' call
@@ -339,64 +339,64 @@
         var dispatchReceiver = composableLambda(tmp_1, 78757125, true, Image$lambda_0(ref_0));
         // Inline function 'androidx.compose.runtime.remember' call
         var $composer_1 = $composer_0;
-        $composer_1.s17(1157296644);
+        $composer_1.p17(1157296644);
         sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
         // Inline function 'androidx.compose.runtime.cache' call
-        var invalid = $composer_1.lz(dispatchReceiver);
+        var invalid = $composer_1.iz(dispatchReceiver);
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-        var it = $composer_1.w18();
+        var it = $composer_1.t18();
         var tmp_2;
-        if (invalid ? true : it === Companion_getInstance().k12_1) {
+        if (invalid ? true : it === Companion_getInstance().h12_1) {
           // Inline function 'com.varabyte.kobweb.silk.components.graphics.Image.<anonymous>.<anonymous>' call
           var value = ComposableLambda$invoke$ref(dispatchReceiver);
-          $composer_1.c19(value);
+          $composer_1.z18(value);
           tmp_2 = value;
         } else {
           tmp_2 = it;
         }
         var tmp_3 = tmp_2;
         var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
-        $composer_1.t17();
+        $composer_1.q17();
         Div(tmp_0, tmp0, $composer_0, 48, 0);
       }
-      $composer_0.t17();
+      $composer_0.q17();
       var tmp_4 = prependIf(Companion_instance_5, autoPrefix_0._v, src);
       var tmp_5 = alt_0._v;
-      var tmp_6 = toModifier(get_ImageStyle(), [variant_0._v], $composer_0, 0).e2n(modifier_0._v);
-      $composer_0.s17(1385172198);
+      var tmp_6 = toModifier(get_ImageStyle(), [variant_0._v], $composer_0, 0).x2m(modifier_0._v);
+      $composer_0.p17(1385172198);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       var invalid_0 = !!(($dirty & 7168) === 2048 | ($dirty & 57344) === 16384);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = this_0.w18();
+      var it_0 = this_0.t18();
       var tmp_7;
-      if (invalid_0 ? true : it_0 === Companion_getInstance().k12_1) {
+      if (invalid_0 ? true : it_0 === Companion_getInstance().h12_1) {
         // Inline function 'com.varabyte.kobweb.silk.components.graphics.Image.<anonymous>' call
         var value_0 = Image$lambda_1(width_0, height_0);
-        this_0.c19(value_0);
+        this_0.z18(value_0);
         tmp_7 = value_0;
       } else {
         tmp_7 = it_0;
       }
       var tmp_8 = tmp_7;
       var tmp0_group = (tmp_8 == null ? true : !(tmp_8 == null)) ? tmp_8 : THROW_CCE();
-      $composer_0.t17();
+      $composer_0.q17();
       Img(tmp_4, tmp_5, toAttrs(tmp_6, tmp0_group), $composer_0, 112 & $dirty >> 12, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.e12();
+      $composer_0.b12();
     }
-    var tmp1_safe_receiver = $composer_0.l19();
+    var tmp1_safe_receiver = $composer_0.i19();
     if (tmp1_safe_receiver == null)
       null;
     else {
-      tmp1_safe_receiver.i1e(Image$lambda_2(src, modifier_0, variant_0, width_0, height_0, alt_0, autoPrefix_0, ref_0, $changed, $default));
+      tmp1_safe_receiver.f1e(Image$lambda_2(src, modifier_0, variant_0, width_0, height_0, alt_0, autoPrefix_0, ref_0, $changed, $default));
     }
   }
   function ImageStyle$delegate$lambda($this$ComponentStyle) {
@@ -405,7 +405,7 @@
   }
   function FitWidthImageVariant$delegate$lambda($this$addVariantBase) {
     _init_properties_Image_kt__h9v8mh();
-    return objectFit(width(Companion_instance, get_percent(100)), Companion_instance_6.m2e());
+    return objectFit(width(Companion_instance, get_percent(100)), Companion_instance_6.j2e());
   }
   function Image$lambda($src, $description, $modifier, $variant, $width, $height, $autoPrefix, $ref, $$changed, $$default) {
     return function ($composer, $force) {
@@ -425,24 +425,24 @@
         traceEventStart(78757125, $changed, -1, 'com.varabyte.kobweb.silk.components.graphics.Image.<anonymous> (Image.kt:57)');
       }
       var tmp = $ref._v;
-      $composer_0.s17(-980642211);
+      $composer_0.p17(-980642211);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_0.w18();
+      var it = $composer_0.t18();
       var tmp_0;
-      if (false ? true : it === Companion_getInstance().k12_1) {
+      if (false ? true : it === Companion_getInstance().h12_1) {
         // Inline function 'com.varabyte.kobweb.silk.components.graphics.Image.<anonymous>.<anonymous>.<anonymous>' call
         var value = Image$lambda$lambda;
-        $composer_0.c19(value);
+        $composer_0.z18(value);
         tmp_0 = value;
       } else {
         tmp_0 = it;
       }
       var tmp_1 = tmp_0;
       var tmp0_group = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_0.t17();
+      $composer_0.q17();
       registerRefScope($this$Div, tmp, tmp0_group, $composer_0, 456);
       var tmp_2;
       if (isTraceInProgress()) {
@@ -454,19 +454,19 @@
   }
   function ComposableLambda$invoke$ref($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.m22(p0, p1, p2);
+      return $boundThis.j22(p0, p1, p2);
     };
   }
   function Image$lambda_1($width, $height) {
     return function ($this$toAttrs) {
       var tmp;
       if (!($width._v == null)) {
-        $this$toAttrs.p24('width', $width._v.toString());
+        $this$toAttrs.m24('width', $width._v.toString());
         tmp = Unit_instance;
       }
       var tmp_0;
       if (!($height._v == null)) {
-        $this$toAttrs.p24('height', $height._v.toString());
+        $this$toAttrs.m24('height', $height._v.toString());
         tmp_0 = Unit_instance;
       }
       return Unit_instance;
@@ -499,34 +499,34 @@
   }
   function get_LinkStyle() {
     _init_properties_Link_kt__dm1ox2();
-    return LinkStyle$delegate.l2f(null, LinkStyle$factory());
+    return LinkStyle$delegate.i2f(null, LinkStyle$factory());
   }
   var LinkStyle$delegate;
   function get_UndecoratedLinkVariant() {
     _init_properties_Link_kt__dm1ox2();
-    return UndecoratedLinkVariant$delegate.l2f(null, UndecoratedLinkVariant$factory());
+    return UndecoratedLinkVariant$delegate.i2f(null, UndecoratedLinkVariant$factory());
   }
   var UndecoratedLinkVariant$delegate;
   function get_UncoloredLinkVariant() {
     _init_properties_Link_kt__dm1ox2();
-    return UncoloredLinkVariant$delegate.l2f(null, UncoloredLinkVariant$factory());
+    return UncoloredLinkVariant$delegate.i2f(null, UncoloredLinkVariant$factory());
   }
   var UncoloredLinkVariant$delegate;
   function get_AlwaysUnderlinedLinkVariant() {
     _init_properties_Link_kt__dm1ox2();
-    return AlwaysUnderlinedLinkVariant$delegate.l2f(null, AlwaysUnderlinedLinkVariant$factory());
+    return AlwaysUnderlinedLinkVariant$delegate.i2f(null, AlwaysUnderlinedLinkVariant$factory());
   }
   var AlwaysUnderlinedLinkVariant$delegate;
   function LinkVars() {
     LinkVars_instance = this;
-    this.k36_1 = StyleVariable_0('silk');
-    this.l36_1 = StyleVariable_0('silk');
+    this.d36_1 = StyleVariable_0('silk');
+    this.e36_1 = StyleVariable_0('silk');
   }
-  protoOf(LinkVars).m36 = function () {
-    return this.k36_1.l2f(this, DefaultColor$factory());
+  protoOf(LinkVars).f36 = function () {
+    return this.d36_1.i2f(this, DefaultColor$factory());
   };
-  protoOf(LinkVars).n36 = function () {
-    return this.l36_1.l2f(this, VisitedColor$factory());
+  protoOf(LinkVars).g36 = function () {
+    return this.e36_1.i2f(this, VisitedColor$factory());
   };
   var LinkVars_instance;
   function LinkVars_getInstance() {
@@ -543,39 +543,39 @@
     var autoPrefix_0 = {_v: autoPrefix};
     var ref_0 = {_v: ref};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.k19(-1306658063);
+    $composer_0 = $composer_0.h19(-1306658063);
     var $dirty = $changed;
     if (!(($default & 1) === 0))
       $dirty = $dirty | 6;
     else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.lz(path) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.iz(path) ? 4 : 2);
     if (!(($default & 2) === 0))
       $dirty = $dirty | 16;
     if (!(($default & 4) === 0))
       $dirty = $dirty | 384;
     else if (($changed & 896) === 0)
-      $dirty = $dirty | ($composer_0.lz(variant_0._v) ? 256 : 128);
+      $dirty = $dirty | ($composer_0.iz(variant_0._v) ? 256 : 128);
     if (!(($default & 8) === 0))
       $dirty = $dirty | 3072;
     else if (($changed & 7168) === 0)
-      $dirty = $dirty | ($composer_0.lz(openInternalLinksStrategy_0._v) ? 2048 : 1024);
+      $dirty = $dirty | ($composer_0.iz(openInternalLinksStrategy_0._v) ? 2048 : 1024);
     if (!(($default & 16) === 0))
       $dirty = $dirty | 24576;
     else if (($changed & 57344) === 0)
-      $dirty = $dirty | ($composer_0.lz(openExternalLinksStrategy_0._v) ? 16384 : 8192);
+      $dirty = $dirty | ($composer_0.iz(openExternalLinksStrategy_0._v) ? 16384 : 8192);
     if (!(($default & 32) === 0))
       $dirty = $dirty | 196608;
     else if (($changed & 458752) === 0)
-      $dirty = $dirty | ($composer_0.o18(autoPrefix_0._v) ? 131072 : 65536);
+      $dirty = $dirty | ($composer_0.l18(autoPrefix_0._v) ? 131072 : 65536);
     if (!(($default & 64) === 0))
       $dirty = $dirty | 1572864;
     else if (($changed & 3670016) === 0)
-      $dirty = $dirty | ($composer_0.lz(ref_0._v) ? 1048576 : 524288);
+      $dirty = $dirty | ($composer_0.iz(ref_0._v) ? 1048576 : 524288);
     if (!(($default & 128) === 0))
       $dirty = $dirty | 12582912;
     else if (($changed & 29360128) === 0)
-      $dirty = $dirty | ($composer_0.n18(content) ? 8388608 : 4194304);
-    if (!(($default & 2) === 2) ? true : !(($dirty & 23967451) === 4793490) ? true : !$composer_0.n17()) {
+      $dirty = $dirty | ($composer_0.k18(content) ? 8388608 : 4194304);
+    if (!(($default & 2) === 2) ? true : !(($dirty & 23967451) === 4793490) ? true : !$composer_0.k17()) {
       if (!(($default & 2) === 0)) {
         modifier_0._v = Companion_instance;
       }
@@ -597,7 +597,7 @@
       if (isTraceInProgress()) {
         traceEventStart(-1306658063, $dirty, -1, 'com.varabyte.kobweb.silk.components.navigation.Link (Link.kt:116)');
       }
-      var tmp = toAttrs(toModifier(get_LinkStyle(), [variant_0._v], $composer_0, 0).e2n(modifier_0._v));
+      var tmp = toAttrs(toModifier(get_LinkStyle(), [variant_0._v], $composer_0, 0).x2m(modifier_0._v));
       var tmp_0 = openInternalLinksStrategy_0._v;
       var tmp_1 = openExternalLinksStrategy_0._v;
       var tmp_2 = autoPrefix_0._v;
@@ -608,38 +608,38 @@
       var dispatchReceiver = composableLambda(tmp_3, 2134514244, true, Link$lambda(ref_0, content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.s17(1157296644);
+      $composer_1.p17(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.lz(dispatchReceiver);
+      var invalid = $composer_1.iz(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.w18();
+      var it = $composer_1.t18();
       var tmp_4;
-      if (invalid ? true : it === Companion_getInstance().k12_1) {
+      if (invalid ? true : it === Companion_getInstance().h12_1) {
         // Inline function 'com.varabyte.kobweb.silk.components.navigation.Link.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_0(dispatchReceiver);
-        $composer_1.c19(value);
+        $composer_1.z18(value);
         tmp_4 = value;
       } else {
         tmp_4 = it;
       }
       var tmp_5 = tmp_4;
       var tmp0 = (tmp_5 == null ? true : !(tmp_5 == null)) ? tmp_5 : THROW_CCE();
-      $composer_1.t17();
+      $composer_1.q17();
       Anchor(path, tmp, tmp_0, tmp_1, tmp_2, tmp0, $composer_0, 196608 | 14 & $dirty | 896 & $dirty >> 3 | 7168 & $dirty >> 3 | 57344 & $dirty >> 3, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.e12();
+      $composer_0.b12();
     }
-    var tmp0_safe_receiver = $composer_0.l19();
+    var tmp0_safe_receiver = $composer_0.i19();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.i1e(Link$lambda_0(path, modifier_0, variant_0, openInternalLinksStrategy_0, openExternalLinksStrategy_0, autoPrefix_0, ref_0, content, $changed, $default));
+      tmp0_safe_receiver.f1e(Link$lambda_0(path, modifier_0, variant_0, openInternalLinksStrategy_0, openExternalLinksStrategy_0, autoPrefix_0, ref_0, content, $changed, $default));
     }
   }
   function Link_0(path, text, modifier, variant, openInternalLinksStrategy, openExternalLinksStrategy, autoPrefix, ref, $composer, $changed, $default) {
@@ -652,39 +652,39 @@
     var autoPrefix_0 = {_v: autoPrefix};
     var ref_0 = {_v: ref};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.k19(-1373730110);
+    $composer_0 = $composer_0.h19(-1373730110);
     var $dirty = $changed;
     if (!(($default & 1) === 0))
       $dirty = $dirty | 6;
     else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.lz(path) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.iz(path) ? 4 : 2);
     if (!(($default & 2) === 0))
       $dirty = $dirty | 48;
     else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.lz(text_0._v) ? 32 : 16);
+      $dirty = $dirty | ($composer_0.iz(text_0._v) ? 32 : 16);
     if (!(($default & 4) === 0))
       $dirty = $dirty | 128;
     if (!(($default & 8) === 0))
       $dirty = $dirty | 3072;
     else if (($changed & 7168) === 0)
-      $dirty = $dirty | ($composer_0.lz(variant_0._v) ? 2048 : 1024);
+      $dirty = $dirty | ($composer_0.iz(variant_0._v) ? 2048 : 1024);
     if (!(($default & 16) === 0))
       $dirty = $dirty | 24576;
     else if (($changed & 57344) === 0)
-      $dirty = $dirty | ($composer_0.lz(openInternalLinksStrategy_0._v) ? 16384 : 8192);
+      $dirty = $dirty | ($composer_0.iz(openInternalLinksStrategy_0._v) ? 16384 : 8192);
     if (!(($default & 32) === 0))
       $dirty = $dirty | 196608;
     else if (($changed & 458752) === 0)
-      $dirty = $dirty | ($composer_0.lz(openExternalLinksStrategy_0._v) ? 131072 : 65536);
+      $dirty = $dirty | ($composer_0.iz(openExternalLinksStrategy_0._v) ? 131072 : 65536);
     if (!(($default & 64) === 0))
       $dirty = $dirty | 1572864;
     else if (($changed & 3670016) === 0)
-      $dirty = $dirty | ($composer_0.o18(autoPrefix_0._v) ? 1048576 : 524288);
+      $dirty = $dirty | ($composer_0.l18(autoPrefix_0._v) ? 1048576 : 524288);
     if (!(($default & 128) === 0))
       $dirty = $dirty | 12582912;
     else if (($changed & 29360128) === 0)
-      $dirty = $dirty | ($composer_0.lz(ref_0._v) ? 8388608 : 4194304);
-    if (!(($default & 4) === 4) ? true : !(($dirty & 23967451) === 4793490) ? true : !$composer_0.n17()) {
+      $dirty = $dirty | ($composer_0.iz(ref_0._v) ? 8388608 : 4194304);
+    if (!(($default & 4) === 4) ? true : !(($dirty & 23967451) === 4793490) ? true : !$composer_0.k17()) {
       if (!(($default & 2) === 0)) {
         text_0._v = null;
       }
@@ -722,84 +722,84 @@
       var dispatchReceiver = composableLambda(tmp_5, 1642222480, true, Link$lambda_1(text_0, path));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.s17(1157296644);
+      $composer_1.p17(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.lz(dispatchReceiver);
+      var invalid = $composer_1.iz(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.w18();
+      var it = $composer_1.t18();
       var tmp_6;
-      if (invalid ? true : it === Companion_getInstance().k12_1) {
+      if (invalid ? true : it === Companion_getInstance().h12_1) {
         // Inline function 'com.varabyte.kobweb.silk.components.navigation.Link.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_1(dispatchReceiver);
-        $composer_1.c19(value);
+        $composer_1.z18(value);
         tmp_6 = value;
       } else {
         tmp_6 = it;
       }
       var tmp_7 = tmp_6;
       var tmp0 = (tmp_7 == null ? true : !(tmp_7 == null)) ? tmp_7 : THROW_CCE();
-      $composer_1.t17();
+      $composer_1.q17();
       Link(path, tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp0, $composer_0, 12582976 | 14 & $dirty | 0 | 896 & $dirty >> 3 | 7168 & $dirty >> 3 | 57344 & $dirty >> 3 | 458752 & $dirty >> 3 | 2097152 | 3670016 & $dirty >> 3, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.e12();
+      $composer_0.b12();
     }
-    var tmp0_safe_receiver = $composer_0.l19();
+    var tmp0_safe_receiver = $composer_0.i19();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.i1e(Link$lambda_2(path, text_0, modifier_0, variant_0, openInternalLinksStrategy_0, openExternalLinksStrategy_0, autoPrefix_0, ref_0, $changed, $default));
+      tmp0_safe_receiver.f1e(Link$lambda_2(path, text_0, modifier_0, variant_0, openInternalLinksStrategy_0, openExternalLinksStrategy_0, autoPrefix_0, ref_0, $changed, $default));
     }
   }
   function LinkStyle$delegate$lambda($this$ComponentStyle) {
     _init_properties_Link_kt__dm1ox2();
-    $this$ComponentStyle.d2r(LinkStyle$delegate$lambda$lambda);
+    $this$ComponentStyle.w2q(LinkStyle$delegate$lambda$lambda);
     var tmp = get_link($this$ComponentStyle);
-    tmp.f2s(LinkStyle$delegate$lambda$lambda_0);
+    tmp.y2r(LinkStyle$delegate$lambda$lambda_0);
     var tmp_0 = get_visited($this$ComponentStyle);
-    tmp_0.f2s(LinkStyle$delegate$lambda$lambda_1);
+    tmp_0.y2r(LinkStyle$delegate$lambda$lambda_1);
     var tmp_1 = get_hover($this$ComponentStyle);
-    tmp_1.f2s(LinkStyle$delegate$lambda$lambda_2);
+    tmp_1.y2r(LinkStyle$delegate$lambda$lambda_2);
     return Unit_instance;
   }
   function LinkStyle$delegate$lambda$lambda() {
     _init_properties_Link_kt__dm1ox2();
-    return textDecorationLine(Companion_instance, Companion_instance_7.d2d());
+    return textDecorationLine(Companion_instance, Companion_instance_7.a2d());
   }
   function LinkStyle$delegate$lambda$lambda_0() {
     _init_properties_Link_kt__dm1ox2();
-    return color(Companion_instance, LinkVars_getInstance().m36().f2f());
+    return color(Companion_instance, LinkVars_getInstance().f36().c2f());
   }
   function LinkStyle$delegate$lambda$lambda_1() {
     _init_properties_Link_kt__dm1ox2();
-    return color(Companion_instance, LinkVars_getInstance().n36().f2f());
+    return color(Companion_instance, LinkVars_getInstance().g36().c2f());
   }
   function LinkStyle$delegate$lambda$lambda_2() {
     _init_properties_Link_kt__dm1ox2();
-    return textDecorationLine(Companion_instance, Companion_instance_7.t2f());
+    return textDecorationLine(Companion_instance, Companion_instance_7.q2f());
   }
   function UndecoratedLinkVariant$delegate$lambda($this$addVariant) {
     _init_properties_Link_kt__dm1ox2();
     var tmp = get_hover($this$addVariant);
-    tmp.f2s(UndecoratedLinkVariant$delegate$lambda$lambda);
+    tmp.y2r(UndecoratedLinkVariant$delegate$lambda$lambda);
     return Unit_instance;
   }
   function UndecoratedLinkVariant$delegate$lambda$lambda() {
     _init_properties_Link_kt__dm1ox2();
-    return textDecorationLine(Companion_instance, Companion_instance_7.d2d());
+    return textDecorationLine(Companion_instance, Companion_instance_7.a2d());
   }
   function UncoloredLinkVariant$delegate$lambda($this$addVariant) {
     _init_properties_Link_kt__dm1ox2();
-    var colorModifier = color(Companion_instance, get_ColorVar().f2f());
+    var colorModifier = color(Companion_instance, get_ColorVar().c2f());
     var tmp = get_link($this$addVariant);
-    tmp.f2s(UncoloredLinkVariant$delegate$lambda$lambda(colorModifier));
+    tmp.y2r(UncoloredLinkVariant$delegate$lambda$lambda(colorModifier));
     var tmp_0 = get_visited($this$addVariant);
-    tmp_0.f2s(UncoloredLinkVariant$delegate$lambda$lambda_0(colorModifier));
+    tmp_0.y2r(UncoloredLinkVariant$delegate$lambda$lambda_0(colorModifier));
     return Unit_instance;
   }
   function UncoloredLinkVariant$delegate$lambda$lambda($colorModifier) {
@@ -814,12 +814,12 @@
   }
   function AlwaysUnderlinedLinkVariant$delegate$lambda($this$addVariant) {
     _init_properties_Link_kt__dm1ox2();
-    $this$addVariant.d2r(AlwaysUnderlinedLinkVariant$delegate$lambda$lambda);
+    $this$addVariant.w2q(AlwaysUnderlinedLinkVariant$delegate$lambda$lambda);
     return Unit_instance;
   }
   function AlwaysUnderlinedLinkVariant$delegate$lambda$lambda() {
     _init_properties_Link_kt__dm1ox2();
-    return textDecorationLine(Companion_instance, Companion_instance_7.t2f());
+    return textDecorationLine(Companion_instance, Companion_instance_7.q2f());
   }
   function Link$lambda($ref, $content) {
     return function ($this$Anchor, $composer, $changed) {
@@ -839,7 +839,7 @@
   }
   function ComposableLambda$invoke$ref_0($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.m22(p0, p1, p2);
+      return $boundThis.j22(p0, p1, p2);
     };
   }
   function Link$lambda_0($path, $modifier, $variant, $openInternalLinksStrategy, $openExternalLinksStrategy, $autoPrefix, $ref, $content, $$changed, $$default) {
@@ -852,7 +852,7 @@
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.n17()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.k17()) {
         if (isTraceInProgress()) {
           traceEventStart(1642222480, $changed, -1, 'com.varabyte.kobweb.silk.components.navigation.Link.<anonymous> (Link.kt:97)');
         }
@@ -865,7 +865,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.e12();
+        $composer_0.b12();
         tmp = Unit_instance;
       }
       return Unit_instance;
@@ -873,7 +873,7 @@
   }
   function ComposableLambda$invoke$ref_1($boundThis) {
     return function (p0, p1) {
-      return $boundThis.l17(p0, p1);
+      return $boundThis.i17(p0, p1);
     };
   }
   function Link$lambda_2($path, $text, $modifier, $variant, $openInternalLinksStrategy, $openExternalLinksStrategy, $autoPrefix, $ref, $$changed, $$default) {
@@ -904,12 +904,12 @@
   }
   function DefaultColor$factory() {
     return getPropertyCallableRef('DefaultColor', 1, KProperty1, function (receiver) {
-      return receiver.m36();
+      return receiver.f36();
     }, null);
   }
   function VisitedColor$factory() {
     return getPropertyCallableRef('VisitedColor', 1, KProperty1, function (receiver) {
-      return receiver.n36();
+      return receiver.g36();
     }, null);
   }
   var properties_initialized_Link_kt_5x6v44;
@@ -926,54 +926,54 @@
     }
   }
   function initSilkWidgetsKobweb(ctx) {
-    var mutableTheme = ctx.o2t_1;
+    var mutableTheme = ctx.h2t_1;
     // Inline function 'kotlin.apply' call
-    var this_0 = mutableTheme.v2t_1;
+    var this_0 = mutableTheme.o2t_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.varabyte.kobweb.silk.init.initSilkWidgetsKobweb.<anonymous>' call
     // Inline function 'kotlin.apply' call
-    var this_1 = this_0.d2w_1;
+    var this_1 = this_0.w2v_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.varabyte.kobweb.silk.init.initSilkWidgetsKobweb.<anonymous>.<anonymous>' call
-    get_link_0(this_1).y34(Colors_instance.e2o(), Colors_instance.n2o());
+    get_link_0(this_1).r34(Colors_instance.x2n(), Colors_instance.g2o());
     // Inline function 'kotlin.apply' call
-    var this_2 = this_0.e2w_1;
+    var this_2 = this_0.x2v_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.varabyte.kobweb.silk.init.initSilkWidgetsKobweb.<anonymous>.<anonymous>' call
-    get_link_0(this_2).y34(Colors_instance.g2o(), Colors_instance.o2o());
+    get_link_0(this_2).r34(Colors_instance.z2n(), Colors_instance.h2o());
     var tmp = get_SilkColorsStyle();
     modifyComponentStyleBase(mutableTheme, tmp, VOID, initSilkWidgetsKobweb$lambda);
-    mutableTheme.x2t(get_ImageStyle());
-    mutableTheme.g2u([get_FitWidthImageVariant()]);
-    mutableTheme.x2t(get_LinkStyle());
-    mutableTheme.g2u([get_UncoloredLinkVariant(), get_UndecoratedLinkVariant(), get_AlwaysUnderlinedLinkVariant()]);
-    mutableTheme.x2t(get_TocStyle());
-    mutableTheme.g2u([get_TocBorderedVariant()]);
+    mutableTheme.q2t(get_ImageStyle());
+    mutableTheme.z2t([get_FitWidthImageVariant()]);
+    mutableTheme.q2t(get_LinkStyle());
+    mutableTheme.z2t([get_UncoloredLinkVariant(), get_UndecoratedLinkVariant(), get_AlwaysUnderlinedLinkVariant()]);
+    mutableTheme.q2t(get_TocStyle());
+    mutableTheme.z2t([get_TocBorderedVariant()]);
   }
   function initSilkWidgetsKobweb$lambda($this$modifyComponentStyleBase) {
-    var palette = toPalette($this$modifyComponentStyleBase.c2r());
-    return setVariable(setVariable(Companion_instance, LinkVars_getInstance().m36(), get_link_1(palette).z34()), LinkVars_getInstance().n36(), get_link_1(palette).s36());
+    var palette = toPalette($this$modifyComponentStyleBase.v2q());
+    return setVariable(setVariable(Companion_instance, LinkVars_getInstance().f36(), get_link_1(palette).s34()), LinkVars_getInstance().g36(), get_link_1(palette).l36());
   }
   function MutableLink(palette) {
     ColorGroup.call(this, palette, 'link');
-    this.q36_1 = this.q2w();
-    this.r36_1 = this.q2w();
+    this.j36_1 = this.j2w();
+    this.k36_1 = this.j2w();
   }
-  protoOf(MutableLink).k35 = function (_set____db54di) {
-    return this.q36_1.n2w(this, default$factory(), _set____db54di);
+  protoOf(MutableLink).d35 = function (_set____db54di) {
+    return this.j36_1.g2w(this, default$factory(), _set____db54di);
   };
-  protoOf(MutableLink).z34 = function () {
-    return this.q36_1.l2f(this, default$factory_0());
+  protoOf(MutableLink).s34 = function () {
+    return this.j36_1.i2f(this, default$factory_0());
   };
-  protoOf(MutableLink).t36 = function (_set____db54di) {
-    return this.r36_1.n2w(this, visited$factory(), _set____db54di);
+  protoOf(MutableLink).m36 = function (_set____db54di) {
+    return this.k36_1.g2w(this, visited$factory(), _set____db54di);
   };
-  protoOf(MutableLink).s36 = function () {
-    return this.r36_1.l2f(this, visited$factory_0());
+  protoOf(MutableLink).l36 = function () {
+    return this.k36_1.i2f(this, visited$factory_0());
   };
-  protoOf(MutableLink).y34 = function (default_0, visited) {
-    this.k35(default_0);
-    this.t36(visited);
+  protoOf(MutableLink).r34 = function (default_0, visited) {
+    this.d35(default_0);
+    this.m36(visited);
   };
   function get_link_0(_this__u8e3s4) {
     return new MutableLink(_this__u8e3s4);
@@ -983,30 +983,30 @@
   }
   function default$factory() {
     return getPropertyCallableRef('default', 1, KMutableProperty1, function (receiver) {
-      return receiver.z34();
+      return receiver.s34();
     }, function (receiver, value) {
-      return receiver.k35(value);
+      return receiver.d35(value);
     });
   }
   function default$factory_0() {
     return getPropertyCallableRef('default', 1, KMutableProperty1, function (receiver) {
-      return receiver.z34();
+      return receiver.s34();
     }, function (receiver, value) {
-      return receiver.k35(value);
+      return receiver.d35(value);
     });
   }
   function visited$factory() {
     return getPropertyCallableRef('visited', 1, KMutableProperty1, function (receiver) {
-      return receiver.s36();
+      return receiver.l36();
     }, function (receiver, value) {
-      return receiver.t36(value);
+      return receiver.m36(value);
     });
   }
   function visited$factory_0() {
     return getPropertyCallableRef('visited', 1, KMutableProperty1, function (receiver) {
-      return receiver.s36();
+      return receiver.l36();
     }, function (receiver, value) {
-      return receiver.t36(value);
+      return receiver.m36(value);
     });
   }
   //region block: exports
