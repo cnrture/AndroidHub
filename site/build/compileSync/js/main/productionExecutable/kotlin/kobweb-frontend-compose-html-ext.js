@@ -46,10 +46,10 @@
   var THROW_CCE = kotlin_kotlin.$_$.n8;
   var joinToString_0 = kotlin_kotlin.$_$.m3;
   var CSSBorder = kotlin_org_jetbrains_compose_html_html_core.$_$.w;
-  var width = kotlin_org_jetbrains_compose_html_html_core.$_$.h3;
-  var style = kotlin_org_jetbrains_compose_html_html_core.$_$.c3;
+  var width = kotlin_org_jetbrains_compose_html_html_core.$_$.e3;
+  var style = kotlin_org_jetbrains_compose_html_html_core.$_$.z2;
   var color = kotlin_org_jetbrains_compose_html_html_core.$_$.q1;
-  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.a3;
+  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.x2;
   var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.w;
   var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.q1;
   var boxSizing = kotlin_org_jetbrains_compose_html_html_core.$_$.p1;
@@ -58,19 +58,19 @@
   var variable = kotlin_org_jetbrains_compose_html_html_core.$_$.e1;
   var StyleScope = kotlin_org_jetbrains_compose_html_html_core.$_$.g1;
   var copyToArray = kotlin_kotlin.$_$.y2;
-  var gridTemplateColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.j2;
-  var gridTemplateRows = kotlin_org_jetbrains_compose_html_html_core.$_$.k2;
+  var gridTemplateColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.g2;
+  var gridTemplateRows = kotlin_org_jetbrains_compose_html_html_core.$_$.h2;
   var lastOrNull = kotlin_kotlin.$_$.p3;
   var get_lastIndex = kotlin_kotlin.$_$.o3;
-  var Companion_instance = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
-  var display = kotlin_org_jetbrains_compose_html_html_core.$_$.t1;
-  var gridAutoColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.d2;
-  var gridAutoRows = kotlin_org_jetbrains_compose_html_html_core.$_$.e2;
   var noWhenBranchMatchedException = kotlin_kotlin.$_$.w8;
   var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.e1;
   var listOf = kotlin_kotlin.$_$.s3;
   var emptyList = kotlin_kotlin.$_$.a3;
   var addAll = kotlin_kotlin.$_$.r2;
+  var Companion_instance = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
+  var display = kotlin_org_jetbrains_compose_html_html_core.$_$.t1;
+  var gridAutoColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.d2;
+  var gridAutoRows = kotlin_org_jetbrains_compose_html_html_core.$_$.e2;
   var listOfNotNull = kotlin_kotlin.$_$.r3;
   var isNumber = kotlin_kotlin.$_$.c6;
   var getKClassFromExpression = kotlin_kotlin.$_$.a;
@@ -89,9 +89,9 @@
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
   var DisposableEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
-  var ElementBuilder = kotlin_org_jetbrains_compose_html_html_core.$_$.m3;
+  var ElementBuilder = kotlin_org_jetbrains_compose_html_html_core.$_$.j3;
   var isInterface = kotlin_kotlin.$_$.b6;
-  var TagElement = kotlin_org_jetbrains_compose_html_html_core.$_$.z3;
+  var TagElement = kotlin_org_jetbrains_compose_html_html_core.$_$.w3;
   var to = kotlin_kotlin.$_$.c9;
   var lazy = kotlin_kotlin.$_$.v8;
   var charArrayOf = kotlin_kotlin.$_$.k5;
@@ -166,7 +166,6 @@
   setMetadataFor(TextAlign, 'TextAlign', classMeta);
   setMetadataFor(Companion_16, 'Companion', objectMeta);
   setMetadataFor(TextDecorationLine, 'TextDecorationLine', classMeta);
-  setMetadataFor(CSSTextShadow, 'CSSTextShadow', classMeta);
   setMetadataFor(Companion_17, 'Companion', objectMeta);
   setMetadataFor(CSSTransition, 'CSSTransition', classMeta);
   setMetadataFor(Companion_18, 'Companion', objectMeta);
@@ -208,6 +207,17 @@
   }
   setMetadataFor(PresentationAttrs, 'PresentationAttrs', interfaceMeta, VOID, [AttrsScope]);
   setMetadataFor(SVGGraphicalElementAttrsScope, 'SVGGraphicalElementAttrsScope', classMeta, SVGElementAttrsScope, [SVGElementAttrsScope, PresentationAttrs]);
+  function cx(value) {
+    this.m24('cx', toString(value));
+  }
+  function cy(value) {
+    this.m24('cy', toString(value));
+  }
+  setMetadataFor(CenterCoordinateAttrs, 'CenterCoordinateAttrs', interfaceMeta, VOID, [AttrsScope]);
+  setMetadataFor(SVGCircleAttrsScope, 'SVGCircleAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, CenterCoordinateAttrs]);
+  setMetadataFor(Companion_22, 'Companion', objectMeta);
+  setMetadataFor(SVGLineAttrsScope, 'SVGLineAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
+  setMetadataFor(Companion_23, 'Companion', objectMeta);
   setMetadataFor(SVGContainerElementAttrsScope, 'SVGContainerElementAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
   function x(value) {
     this.m24('x', toString(value));
@@ -231,37 +241,26 @@
   }
   setMetadataFor(ViewBoxAttrs, 'ViewBoxAttrs', interfaceMeta, VOID, [AttrsScope]);
   setMetadataFor(SVGSvgAttrsScope, 'SVGSvgAttrsScope', classMeta, SVGContainerElementAttrsScope, [SVGContainerElementAttrsScope, CoordinateAttrs, LengthAttrs, ViewBoxAttrs]);
-  setMetadataFor(Companion_22, 'Companion', objectMeta);
+  setMetadataFor(Companion_24, 'Companion', objectMeta);
   setMetadataFor(ViewBox, 'ViewBox', classMeta);
-  setMetadataFor(SVGFillType, 'SVGFillType', classMeta, Enum);
   setMetadataFor(SVGStrokeType, 'SVGStrokeType', classMeta, Enum);
-  setMetadataFor(Companion_23, 'Companion', objectMeta);
+  setMetadataFor(SVGStrokeLineCap, 'SVGStrokeLineCap', classMeta, Enum);
+  setMetadataFor(SVGStrokeLineJoin, 'SVGStrokeLineJoin', classMeta, Enum);
+  setMetadataFor(SVGFillType, 'SVGFillType', classMeta, Enum);
+  setMetadataFor(Companion_25, 'Companion', objectMeta);
   setMetadataFor(SVGPathAttrsScope, 'SVGPathAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
   setMetadataFor(SVGPathDataScope, 'SVGPathDataScope', classMeta);
-  setMetadataFor(Companion_24, 'Companion', objectMeta);
+  setMetadataFor(Companion_26, 'Companion', objectMeta);
   function points(pairs) {
     var pointString = joinToString_0(pairs, ' ', VOID, VOID, VOID, VOID, PointsAttrs$points$lambda);
     this.m24('points', pointString);
   }
   setMetadataFor(PointsAttrs, 'PointsAttrs', interfaceMeta, VOID, [AttrsScope]);
   setMetadataFor(SVGPolylineAttrsScope, 'SVGPolylineAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, PointsAttrs]);
-  setMetadataFor(Companion_25, 'Companion', objectMeta);
-  function cx(value) {
-    this.m24('cx', toString(value));
-  }
-  function cy(value) {
-    this.m24('cy', toString(value));
-  }
-  setMetadataFor(CenterCoordinateAttrs, 'CenterCoordinateAttrs', interfaceMeta, VOID, [AttrsScope]);
-  setMetadataFor(SVGCircleAttrsScope, 'SVGCircleAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, CenterCoordinateAttrs]);
-  setMetadataFor(Companion_26, 'Companion', objectMeta);
-  setMetadataFor(SVGLineAttrsScope, 'SVGLineAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
   setMetadataFor(Companion_27, 'Companion', objectMeta);
   setMetadataFor(SVGRectAttrsScope, 'SVGRectAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, CoordinateAttrs, LengthAttrs]);
   setMetadataFor(Companion_28, 'Companion', objectMeta);
   setMetadataFor(SVGGroupAttrsScope, 'SVGGroupAttrsScope', classMeta, SVGContainerElementAttrsScope);
-  setMetadataFor(SVGStrokeLineJoin, 'SVGStrokeLineJoin', classMeta, Enum);
-  setMetadataFor(SVGStrokeLineCap, 'SVGStrokeLineCap', classMeta, Enum);
   //endregion
   function ComparableAttrsScope_init_$Init$($this) {
     ComparableAttrsScope.call($this, new DummyAttrsScope());
@@ -969,9 +968,6 @@
   protoOf(GridEntry).toString = function () {
     return this.z2d_1;
   };
-  function GridBuilder() {
-    GridBuilderInAuto.call(this);
-  }
   function gridTemplateColumns_0(_this__u8e3s4, block) {
     // Inline function 'kotlin.apply' call
     var this_0 = new GridTrackBuilder();
@@ -985,13 +981,6 @@
     // Inline function 'kotlin.contracts.contract' call
     block(this_0);
     gridTemplateRows(_this__u8e3s4, toTrackListString_0(this_0.h2d_1));
-  }
-  function grid(_this__u8e3s4, block) {
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    this_0.f2e(_this__u8e3s4);
   }
   function toTrackListString(_this__u8e3s4) {
     validate(_this__u8e3s4);
@@ -1028,76 +1017,6 @@
     var tmp$ret$4 = accumulator;
     return joinToString(tmp$ret$4, ' ');
   }
-  function GridBuilderInAuto() {
-    this.a2e_1 = null;
-    this.b2e_1 = null;
-    this.c2e_1 = null;
-  }
-  protoOf(GridBuilderInAuto).d2e = function (block) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    tmp.a2e_1 = this_0.h2d_1;
-  };
-  protoOf(GridBuilderInAuto).e2e = function (block) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    tmp.b2e_1 = this_0.h2d_1;
-  };
-  protoOf(GridBuilderInAuto).f2e = function (scope) {
-    // Inline function 'org.jetbrains.compose.web.css.Companion.Grid' call
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    display(scope, 'grid');
-    var tmp0_safe_receiver = this.a2e_1;
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      gridTemplateColumns(scope, toTrackListString_0(tmp0_safe_receiver));
-    }
-    var tmp1_safe_receiver = this.b2e_1;
-    if (tmp1_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      gridTemplateRows(scope, toTrackListString_0(tmp1_safe_receiver));
-    }
-    var tmp2_safe_receiver = this.c2e_1;
-    if (tmp2_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'com.varabyte.kobweb.compose.css.GridBuilderInAuto.buildInto.<anonymous>' call
-      var tmp0_safe_receiver_0 = tmp2_safe_receiver.a2e_1;
-      if (tmp0_safe_receiver_0 == null)
-        null;
-      else {
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        gridAutoColumns(scope, toTrackListString_0(tmp0_safe_receiver_0));
-      }
-      var tmp1_safe_receiver_0 = tmp2_safe_receiver.b2e_1;
-      var tmp;
-      if (tmp1_safe_receiver_0 == null) {
-        tmp = null;
-      } else {
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        gridAutoRows(scope, toTrackListString_0(tmp1_safe_receiver_0));
-        tmp = Unit_instance;
-      }
-    }
-  };
   function toTrackListString_0(_this__u8e3s4) {
     // Inline function 'kotlin.collections.toTypedArray' call
     var tmp$ret$0 = copyToArray(_this__u8e3s4);
@@ -1227,6 +1146,86 @@
       }
     }
   }
+  function grid(_this__u8e3s4, block) {
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    this_0.d2e(_this__u8e3s4);
+  }
+  function GridBuilder() {
+    GridBuilderInAuto.call(this);
+  }
+  function GridBuilderInAuto() {
+    this.a2e_1 = null;
+    this.b2e_1 = null;
+    this.c2e_1 = null;
+  }
+  protoOf(GridBuilderInAuto).e2e = function (block) {
+    var tmp = this;
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    tmp.a2e_1 = this_0.h2d_1;
+  };
+  protoOf(GridBuilderInAuto).f2e = function (block) {
+    var tmp = this;
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    tmp.b2e_1 = this_0.h2d_1;
+  };
+  protoOf(GridBuilderInAuto).d2e = function (scope) {
+    // Inline function 'org.jetbrains.compose.web.css.Companion.Grid' call
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    display(scope, 'grid');
+    var tmp0_safe_receiver = this.a2e_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      gridTemplateColumns(scope, toTrackListString_0(tmp0_safe_receiver));
+    }
+    var tmp1_safe_receiver = this.b2e_1;
+    if (tmp1_safe_receiver == null)
+      null;
+    else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      gridTemplateRows(scope, toTrackListString_0(tmp1_safe_receiver));
+    }
+    var tmp2_safe_receiver = this.c2e_1;
+    if (tmp2_safe_receiver == null)
+      null;
+    else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.varabyte.kobweb.compose.css.GridBuilderInAuto.buildInto.<anonymous>' call
+      var tmp0_safe_receiver_0 = tmp2_safe_receiver.a2e_1;
+      if (tmp0_safe_receiver_0 == null)
+        null;
+      else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        gridAutoColumns(scope, toTrackListString_0(tmp0_safe_receiver_0));
+      }
+      var tmp1_safe_receiver_0 = tmp2_safe_receiver.b2e_1;
+      var tmp;
+      if (tmp1_safe_receiver_0 == null) {
+        tmp = null;
+      } else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        gridAutoRows(scope, toTrackListString_0(tmp1_safe_receiver_0));
+        tmp = Unit_instance;
+      }
+    }
+  };
   function Companion_7() {
   }
   protoOf(Companion_7).g2e = function () {
@@ -1628,42 +1627,6 @@
   function textDecorationLine(_this__u8e3s4, textDecorationLines) {
     _this__u8e3s4.c27('text-decoration-line', joinToString_0(textDecorationLines, ' '));
   }
-  function textShadow(_this__u8e3s4, offsetX, offsetY, blurRadius, color) {
-    blurRadius = blurRadius === VOID ? null : blurRadius;
-    color = color === VOID ? null : color;
-    textShadow_0(_this__u8e3s4, [new CSSTextShadow(offsetX, offsetY, blurRadius, color)]);
-  }
-  function textShadow_0(_this__u8e3s4, textShadows) {
-    _this__u8e3s4.c27('text-shadow', joinToString_0(textShadows));
-  }
-  function CSSTextShadow(offsetX, offsetY, blurRadius, color) {
-    blurRadius = blurRadius === VOID ? null : blurRadius;
-    color = color === VOID ? null : color;
-    this.s2f_1 = offsetX;
-    this.t2f_1 = offsetY;
-    this.u2f_1 = blurRadius;
-    this.v2f_1 = color;
-  }
-  protoOf(CSSTextShadow).toString = function () {
-    // Inline function 'kotlin.text.buildString' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.apply' call
-    var this_0 = StringBuilder_init_$Create$();
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.compose.css.CSSTextShadow.toString.<anonymous>' call
-    this_0.p5(this.s2f_1);
-    this_0.q5(' ');
-    this_0.p5(this.t2f_1);
-    if (!(this.u2f_1 == null)) {
-      this_0.q5(' ');
-      this_0.p5(this.u2f_1);
-    }
-    if (!(this.v2f_1 == null)) {
-      this_0.q5(' ');
-      this_0.p5(this.v2f_1);
-    }
-    return this_0.toString();
-  };
   function translateX(_this__u8e3s4, tx) {
     translate(_this__u8e3s4, tx);
   }
@@ -1672,7 +1635,7 @@
   }
   function Companion_17() {
   }
-  protoOf(Companion_17).w2f = function (properties, duration, timingFunction, delay) {
+  protoOf(Companion_17).s2f = function (properties, duration, timingFunction, delay) {
     // Inline function 'kotlin.collections.toTypedArray' call
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
@@ -1686,11 +1649,11 @@
     }
     return copyToArray(destination);
   };
-  protoOf(Companion_17).x2f = function (properties, duration, timingFunction, delay, $super) {
+  protoOf(Companion_17).t2f = function (properties, duration, timingFunction, delay, $super) {
     duration = duration === VOID ? null : duration;
     timingFunction = timingFunction === VOID ? null : timingFunction;
     delay = delay === VOID ? null : delay;
-    return $super === VOID ? this.w2f(properties, duration, timingFunction, delay) : $super.w2f.call(this, properties, duration, timingFunction, delay);
+    return $super === VOID ? this.s2f(properties, duration, timingFunction, delay) : $super.s2f.call(this, properties, duration, timingFunction, delay);
   };
   var Companion_instance_18;
   function Companion_getInstance_18() {
@@ -1700,7 +1663,7 @@
     duration = duration === VOID ? null : duration;
     timingFunction = timingFunction === VOID ? null : timingFunction;
     delay = delay === VOID ? null : delay;
-    CSSTransition.call($this, Companion_instance_19.y2f(property), duration, timingFunction, delay);
+    CSSTransition.call($this, Companion_instance_19.u2f(property), duration, timingFunction, delay);
     return $this;
   }
   function CSSTransition_init_$Create$(property, duration, timingFunction, delay) {
@@ -1710,10 +1673,10 @@
     duration = duration === VOID ? null : duration;
     timingFunction = timingFunction === VOID ? null : timingFunction;
     delay = delay === VOID ? null : delay;
-    this.z2f_1 = property;
-    this.a2g_1 = duration;
-    this.b2g_1 = timingFunction;
-    this.c2g_1 = delay;
+    this.v2f_1 = property;
+    this.w2f_1 = duration;
+    this.x2f_1 = timingFunction;
+    this.y2f_1 = delay;
   }
   protoOf(CSSTransition).toString = function () {
     // Inline function 'kotlin.collections.buildList' call
@@ -1723,8 +1686,8 @@
     var this_0 = ArrayList_init_$Create$();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.varabyte.kobweb.compose.css.CSSTransition.toString.<anonymous>' call
-    this_0.u(this.z2f_1.toString());
-    var tmp0_safe_receiver = this.a2g_1;
+    this_0.u(this.v2f_1.toString());
+    var tmp0_safe_receiver = this.w2f_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
@@ -1733,7 +1696,7 @@
       // Inline function 'com.varabyte.kobweb.compose.css.CSSTransition.toString.<anonymous>.<anonymous>' call
       this_0.u(toString(tmp0_safe_receiver));
     }
-    var tmp1_safe_receiver = this.b2g_1;
+    var tmp1_safe_receiver = this.x2f_1;
     if (tmp1_safe_receiver == null)
       null;
     else {
@@ -1742,20 +1705,20 @@
       // Inline function 'com.varabyte.kobweb.compose.css.CSSTransition.toString.<anonymous>.<anonymous>' call
       this_0.u(toString(tmp1_safe_receiver));
     }
-    if (!(this.c2g_1 == null)) {
-      if (this.a2g_1 == null) {
+    if (!(this.y2f_1 == null)) {
+      if (this.w2f_1 == null) {
         this_0.u('0s');
       }
-      this_0.u(toString(this.c2g_1));
+      this_0.u(toString(this.y2f_1));
     }
     var tmp$ret$6 = this_0.w2();
     return joinToString(tmp$ret$6, ' ');
   };
   protoOf(CSSTransition).hashCode = function () {
-    var result = hashCode(this.z2f_1);
-    result = imul(result, 31) + (this.a2g_1 == null ? 0 : hashCode(this.a2g_1)) | 0;
-    result = imul(result, 31) + (this.b2g_1 == null ? 0 : hashCode(this.b2g_1)) | 0;
-    result = imul(result, 31) + (this.c2g_1 == null ? 0 : hashCode(this.c2g_1)) | 0;
+    var result = hashCode(this.v2f_1);
+    result = imul(result, 31) + (this.w2f_1 == null ? 0 : hashCode(this.w2f_1)) | 0;
+    result = imul(result, 31) + (this.x2f_1 == null ? 0 : hashCode(this.x2f_1)) | 0;
+    result = imul(result, 31) + (this.y2f_1 == null ? 0 : hashCode(this.y2f_1)) | 0;
     return result;
   };
   protoOf(CSSTransition).equals = function (other) {
@@ -1764,13 +1727,13 @@
     if (!(other instanceof CSSTransition))
       return false;
     var tmp0_other_with_cast = other instanceof CSSTransition ? other : THROW_CCE();
-    if (!equals(this.z2f_1, tmp0_other_with_cast.z2f_1))
+    if (!equals(this.v2f_1, tmp0_other_with_cast.v2f_1))
       return false;
-    if (!equals(this.a2g_1, tmp0_other_with_cast.a2g_1))
+    if (!equals(this.w2f_1, tmp0_other_with_cast.w2f_1))
       return false;
-    if (!equals(this.b2g_1, tmp0_other_with_cast.b2g_1))
+    if (!equals(this.x2f_1, tmp0_other_with_cast.x2f_1))
       return false;
-    if (!equals(this.c2g_1, tmp0_other_with_cast.c2g_1))
+    if (!equals(this.y2f_1, tmp0_other_with_cast.y2f_1))
       return false;
     return true;
   };
@@ -1783,7 +1746,7 @@
   }
   function Companion_18() {
   }
-  protoOf(Companion_18).y2f = function (customValue) {
+  protoOf(Companion_18).u2f = function (customValue) {
     // Inline function 'kotlin.check' call
     var tmp;
     // Inline function 'kotlin.text.isNotEmpty' call
@@ -1820,10 +1783,10 @@
     return Companion_instance_19;
   }
   function TransitionProperty(value) {
-    this.d2g_1 = value;
+    this.z2f_1 = value;
   }
   protoOf(TransitionProperty).toString = function () {
-    return this.d2g_1;
+    return this.z2f_1;
   };
   function calc(action) {
     // Inline function 'kotlin.with' call
@@ -1839,17 +1802,17 @@
     return CalcScopeInstance_instance;
   }
   function CSSClamp(min, value, max) {
-    this.f2g_1 = min;
-    this.g2g_1 = value;
-    this.h2g_1 = max;
+    this.b2g_1 = min;
+    this.c2g_1 = value;
+    this.d2g_1 = max;
   }
   protoOf(CSSClamp).toString = function () {
-    return 'clamp(' + this.f2g_1 + ', ' + this.g2g_1 + ', ' + this.h2g_1 + ')';
+    return 'clamp(' + this.b2g_1 + ', ' + this.c2g_1 + ', ' + this.d2g_1 + ')';
   };
   protoOf(CSSClamp).hashCode = function () {
-    var result = hashCode(this.f2g_1);
-    result = imul(result, 31) + hashCode(this.g2g_1) | 0;
-    result = imul(result, 31) + hashCode(this.h2g_1) | 0;
+    var result = hashCode(this.b2g_1);
+    result = imul(result, 31) + hashCode(this.c2g_1) | 0;
+    result = imul(result, 31) + hashCode(this.d2g_1) | 0;
     return result;
   };
   protoOf(CSSClamp).equals = function (other) {
@@ -1858,11 +1821,11 @@
     if (!(other instanceof CSSClamp))
       return false;
     var tmp0_other_with_cast = other instanceof CSSClamp ? other : THROW_CCE();
-    if (!equals(this.f2g_1, tmp0_other_with_cast.f2g_1))
+    if (!equals(this.b2g_1, tmp0_other_with_cast.b2g_1))
       return false;
-    if (!equals(this.g2g_1, tmp0_other_with_cast.g2g_1))
+    if (!equals(this.c2g_1, tmp0_other_with_cast.c2g_1))
       return false;
-    if (!equals(this.h2g_1, tmp0_other_with_cast.h2g_1))
+    if (!equals(this.d2g_1, tmp0_other_with_cast.d2g_1))
       return false;
     return true;
   };
@@ -1876,25 +1839,25 @@
   };
   function Simple(handle) {
     RefCallback.call(this);
-    this.i2g_1 = handle;
+    this.e2g_1 = handle;
   }
-  protoOf(Simple).j2g = function (scope, element) {
-    this.i2g_1(element);
+  protoOf(Simple).f2g = function (scope, element) {
+    this.e2g_1(element);
     // Inline function 'androidx.compose.runtime.DisposableEffectScope.onDispose' call
     return new _no_name_provided__qut3iv();
   };
   function RefCallback() {
   }
   function KeysToEffect(keys, refCallback) {
-    this.k2g_1 = keys;
-    this.l2g_1 = refCallback;
+    this.g2g_1 = keys;
+    this.h2g_1 = refCallback;
   }
   protoOf(KeysToEffect).toString = function () {
-    return 'KeysToEffect(keys=' + this.k2g_1 + ', refCallback=' + this.l2g_1 + ')';
+    return 'KeysToEffect(keys=' + this.g2g_1 + ', refCallback=' + this.h2g_1 + ')';
   };
   protoOf(KeysToEffect).hashCode = function () {
-    var result = hashCode(this.k2g_1);
-    result = imul(result, 31) + hashCode(this.l2g_1) | 0;
+    var result = hashCode(this.g2g_1);
+    result = imul(result, 31) + hashCode(this.h2g_1) | 0;
     return result;
   };
   protoOf(KeysToEffect).equals = function (other) {
@@ -1903,36 +1866,36 @@
     if (!(other instanceof KeysToEffect))
       return false;
     var tmp0_other_with_cast = other instanceof KeysToEffect ? other : THROW_CCE();
-    if (!equals(this.k2g_1, tmp0_other_with_cast.k2g_1))
+    if (!equals(this.g2g_1, tmp0_other_with_cast.g2g_1))
       return false;
-    if (!equals(this.l2g_1, tmp0_other_with_cast.l2g_1))
+    if (!equals(this.h2g_1, tmp0_other_with_cast.h2g_1))
       return false;
     return true;
   };
   function Builder() {
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.m2g_1 = ArrayList_init_$Create$();
+    tmp.i2g_1 = ArrayList_init_$Create$();
   }
-  protoOf(Builder).n2g = function (keys, handle) {
-    this.m2g_1.u(new KeysToEffect(toList(keys), new Simple(handle)));
+  protoOf(Builder).j2g = function (keys, handle) {
+    this.i2g_1.u(new KeysToEffect(toList(keys), new Simple(handle)));
   };
-  protoOf(Builder).o2g = function (other) {
+  protoOf(Builder).k2g = function (other) {
     if (!(other == null)) {
-      this.m2g_1.a1(other.p2g_1);
+      this.i2g_1.a1(other.l2g_1);
     }
   };
   protoOf(Builder).w2 = function () {
-    return new ElementRefScope(this.m2g_1);
+    return new ElementRefScope(this.i2g_1);
   };
   function ElementRefScope(keyedCallbacks) {
-    this.p2g_1 = keyedCallbacks;
+    this.l2g_1 = keyedCallbacks;
   }
   protoOf(ElementRefScope).toString = function () {
-    return 'ElementRefScope(keyedCallbacks=' + this.p2g_1 + ')';
+    return 'ElementRefScope(keyedCallbacks=' + this.l2g_1 + ')';
   };
   protoOf(ElementRefScope).hashCode = function () {
-    return hashCode(this.p2g_1);
+    return hashCode(this.l2g_1);
   };
   protoOf(ElementRefScope).equals = function (other) {
     if (this === other)
@@ -1940,7 +1903,7 @@
     if (!(other instanceof ElementRefScope))
       return false;
     var tmp0_other_with_cast = other instanceof ElementRefScope ? other : THROW_CCE();
-    if (!equals(this.p2g_1, tmp0_other_with_cast.p2g_1))
+    if (!equals(this.l2g_1, tmp0_other_with_cast.l2g_1))
       return false;
     return true;
   };
@@ -1988,12 +1951,12 @@
       return Unit_instance;
     }
     // Inline function 'kotlin.collections.forEach' call
-    var tmp0_iterator = scope.p2g_1.k();
+    var tmp0_iterator = scope.l2g_1.k();
     while (tmp0_iterator.x()) {
       var element = tmp0_iterator.z();
       // Inline function 'com.varabyte.kobweb.compose.dom.registerRefScope.<anonymous>' call
       // Inline function 'kotlin.collections.toTypedArray' call
-      var this_0 = element.k2g_1;
+      var this_0 = element.g2g_1;
       var tmp = copyToArray(this_0).slice();
       DisposableEffect(tmp, registerRefScope$lambda_0(element, transform, _this__u8e3s4), $composer_0, 8);
     }
@@ -2017,7 +1980,7 @@
   }
   function registerRefScope$lambda_0($keyedCallback, $transform, $this_registerRefScope) {
     return function ($this$DisposableEffect) {
-      return $keyedCallback.l2g_1.j2g($this$DisposableEffect, $transform($this_registerRefScope.i29($this$DisposableEffect)));
+      return $keyedCallback.h2g_1.f2g($this$DisposableEffect, $transform($this_registerRefScope.i29($this$DisposableEffect)));
     };
   }
   function GenericTag(name, attrsStr, content, $composer, $changed, $default) {
@@ -2140,10 +2103,10 @@
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'com.varabyte.kobweb.compose.dom.GenericTag.<anonymous>' call
-        tmp = Companion_getInstance_20().r2g(tmp0_safe_receiver, name);
+        tmp = Companion_getInstance_20().n2g(tmp0_safe_receiver, name);
       }
       var tmp1_elvis_lhs = tmp;
-      var tmp_0 = tmp1_elvis_lhs == null ? Companion_getInstance_21().t2g(name) : tmp1_elvis_lhs;
+      var tmp_0 = tmp1_elvis_lhs == null ? Companion_getInstance_21().p2g(name) : tmp1_elvis_lhs;
       TagElement(isInterface(tmp_0, ElementBuilder) ? tmp_0 : THROW_CCE(), attrs_0._v, content_0._v, $composer_0, 8 | 112 & $dirty >> 3 | 896 & $dirty >> 3);
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -2162,11 +2125,11 @@
     Companion_instance_20 = this;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp.q2g_1 = LinkedHashMap_init_$Create$();
+    tmp.m2g_1 = LinkedHashMap_init_$Create$();
   }
-  protoOf(Companion_19).r2g = function (namespace, qualifiedName) {
+  protoOf(Companion_19).n2g = function (namespace, qualifiedName) {
     // Inline function 'kotlin.collections.getOrPut' call
-    var this_0 = this.q2g_1;
+    var this_0 = this.m2g_1;
     var key = to(namespace, qualifiedName);
     var value = this_0.p2(key);
     var tmp;
@@ -2188,21 +2151,21 @@
   }
   function _get_element__z0t21h($this) {
     // Inline function 'kotlin.getValue' call
-    var this_0 = $this.w2g_1;
+    var this_0 = $this.s2g_1;
     element$factory();
     return this_0.j2();
   }
   function GenericNamespacedElementBuilder$element$delegate$lambda(this$0) {
     return function () {
-      return document.createElementNS(this$0.u2g_1, this$0.v2g_1);
+      return document.createElementNS(this$0.q2g_1, this$0.r2g_1);
     };
   }
   function GenericNamespacedElementBuilder(namespace, qualifiedName) {
     Companion_getInstance_20();
-    this.u2g_1 = namespace;
-    this.v2g_1 = qualifiedName;
+    this.q2g_1 = namespace;
+    this.r2g_1 = qualifiedName;
     var tmp = this;
-    tmp.w2g_1 = lazy(GenericNamespacedElementBuilder$element$delegate$lambda(this));
+    tmp.s2g_1 = lazy(GenericNamespacedElementBuilder$element$delegate$lambda(this));
   }
   protoOf(GenericNamespacedElementBuilder).b1m = function () {
     var tmp = _get_element__z0t21h(this).cloneNode();
@@ -2212,11 +2175,11 @@
     Companion_instance_21 = this;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp.s2g_1 = LinkedHashMap_init_$Create$();
+    tmp.o2g_1 = LinkedHashMap_init_$Create$();
   }
-  protoOf(Companion_20).t2g = function (name) {
+  protoOf(Companion_20).p2g = function (name) {
     // Inline function 'kotlin.collections.getOrPut' call
-    var this_0 = this.s2g_1;
+    var this_0 = this.o2g_1;
     var value = this_0.p2(name);
     var tmp;
     if (value == null) {
@@ -2237,20 +2200,20 @@
   }
   function _get_element__z0t21h_0($this) {
     // Inline function 'kotlin.getValue' call
-    var this_0 = $this.y2g_1;
+    var this_0 = $this.u2g_1;
     element$factory_0();
     return this_0.j2();
   }
   function GenericElementBuilder$element$delegate$lambda(this$0) {
     return function () {
-      return document.createElement(this$0.x2g_1);
+      return document.createElement(this$0.t2g_1);
     };
   }
   function GenericElementBuilder(name) {
     Companion_getInstance_21();
-    this.x2g_1 = name;
+    this.t2g_1 = name;
     var tmp = this;
-    tmp.y2g_1 = lazy(GenericElementBuilder$element$delegate$lambda(this));
+    tmp.u2g_1 = lazy(GenericElementBuilder$element$delegate$lambda(this));
   }
   protoOf(GenericElementBuilder).b1m = function () {
     var tmp = _get_element__z0t21h_0(this).cloneNode();
@@ -2331,6 +2294,107 @@
       return _get_element__z0t21h_0(receiver);
     }, null);
   }
+  function Circle(_this__u8e3s4, attrs, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.h19(-2079059220);
+    var $dirty = $changed;
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.k18(attrs) ? 32 : 16);
+    if (!(($dirty & 81) === 16) ? true : !$composer_0.k17()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-2079059220, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Circle (Svg.kt:804)');
+      }
+      var tmp = Companion_instance_22.v2g(attrs);
+      GenericTag_0('circle', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.b12();
+    }
+    var tmp0_safe_receiver = $composer_0.i19();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.f1e(Circle$lambda(_this__u8e3s4, attrs, $changed));
+    }
+  }
+  function SVGCircleAttrsScope$Companion$invoke$lambda($attrs) {
+    return function ($this$null) {
+      $attrs(new SVGCircleAttrsScope($this$null));
+      return Unit_instance;
+    };
+  }
+  function Companion_21() {
+  }
+  protoOf(Companion_21).v2g = function (attrs) {
+    return SVGCircleAttrsScope$Companion$invoke$lambda(attrs);
+  };
+  var Companion_instance_22;
+  function Companion_getInstance_22() {
+    return Companion_instance_22;
+  }
+  function SVGCircleAttrsScope(attrs) {
+    SVGGraphicalElementAttrsScope.call(this, attrs);
+  }
+  protoOf(SVGCircleAttrsScope).x2g = function (value) {
+    this.m24('r', toString(value));
+  };
+  function Line(_this__u8e3s4, attrs, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.h19(-846499000);
+    var $dirty = $changed;
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.k18(attrs) ? 32 : 16);
+    if (!(($dirty & 81) === 16) ? true : !$composer_0.k17()) {
+      if (isTraceInProgress()) {
+        traceEventStart(-846499000, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Line (Svg.kt:979)');
+      }
+      var tmp = Companion_instance_23.b2h(attrs);
+      GenericTag_0('line', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.b12();
+    }
+    var tmp0_safe_receiver = $composer_0.i19();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.f1e(Line$lambda(_this__u8e3s4, attrs, $changed));
+    }
+  }
+  function SVGLineAttrsScope$Companion$invoke$lambda($attrs) {
+    return function ($this$null) {
+      $attrs(new SVGLineAttrsScope($this$null));
+      return Unit_instance;
+    };
+  }
+  function Companion_22() {
+  }
+  protoOf(Companion_22).b2h = function (attrs) {
+    return SVGLineAttrsScope$Companion$invoke$lambda(attrs);
+  };
+  var Companion_instance_23;
+  function Companion_getInstance_23() {
+    return Companion_instance_23;
+  }
+  function SVGLineAttrsScope(attrs) {
+    SVGGraphicalElementAttrsScope.call(this, attrs);
+  }
+  protoOf(SVGLineAttrsScope).d2h = function (value) {
+    this.m24('x1', toString(value));
+  };
+  protoOf(SVGLineAttrsScope).e2h = function (value) {
+    this.m24('x2', toString(value));
+  };
+  protoOf(SVGLineAttrsScope).f2h = function (value) {
+    this.m24('y1', toString(value));
+  };
+  protoOf(SVGLineAttrsScope).g2h = function (value) {
+    this.m24('y2', toString(value));
+  };
   function SVGSvgAttrsScope$Companion$invoke$lambda($attrs) {
     return function ($this$null) {
       if (!($attrs == null))
@@ -2338,36 +2402,171 @@
       return Unit_instance;
     };
   }
-  function Companion_21() {
+  function Companion_23() {
   }
-  protoOf(Companion_21).z2g = function (attrs) {
+  protoOf(Companion_23).h2h = function (attrs) {
     return SVGSvgAttrsScope$Companion$invoke$lambda(attrs);
   };
-  var Companion_instance_22;
-  function Companion_getInstance_22() {
-    return Companion_instance_22;
+  var Companion_instance_24;
+  function Companion_getInstance_24() {
+    return Companion_instance_24;
   }
   function SVGSvgAttrsScope(attrs) {
     SVGContainerElementAttrsScope.call(this, attrs);
   }
-  function Companion_22() {
+  function SVGGraphicalElementAttrsScope(attrs) {
+    SVGElementAttrsScope.call(this, attrs);
   }
-  protoOf(Companion_22).g2h = function (width, height) {
+  function CenterCoordinateAttrs() {
+  }
+  function SVGContainerElementAttrsScope(attrs) {
+    SVGGraphicalElementAttrsScope.call(this, attrs);
+  }
+  function CoordinateAttrs() {
+  }
+  function LengthAttrs() {
+  }
+  function ViewBoxAttrs() {
+  }
+  function SVGElementAttrsScope(attrs) {
+    this.y2g_1 = attrs;
+  }
+  protoOf(SVGElementAttrsScope).m24 = function (attr, value) {
+    return this.y2g_1.m24(attr, value);
+  };
+  protoOf(SVGElementAttrsScope).p24 = function (classes) {
+    this.y2g_1.p24(classes);
+  };
+  protoOf(SVGElementAttrsScope).o24 = function (classes) {
+    this.y2g_1.o24(classes);
+  };
+  protoOf(SVGElementAttrsScope).q24 = function (value) {
+    return this.y2g_1.q24(value);
+  };
+  protoOf(SVGElementAttrsScope).u24 = function (listener) {
+    this.y2g_1.u24(listener);
+  };
+  protoOf(SVGElementAttrsScope).t24 = function (listener) {
+    this.y2g_1.t24(listener);
+  };
+  protoOf(SVGElementAttrsScope).s24 = function (listener) {
+    this.y2g_1.s24(listener);
+  };
+  protoOf(SVGElementAttrsScope).n24 = function (builder) {
+    this.y2g_1.n24(builder);
+  };
+  protoOf(SVGElementAttrsScope).r24 = function (value) {
+    return this.y2g_1.r24(value);
+  };
+  function PresentationAttrs() {
+  }
+  function Companion_24() {
+  }
+  protoOf(Companion_24).t2h = function (width, height) {
     return new ViewBox(0, 0, width, height);
   };
-  protoOf(Companion_22).h2h = function (width, height, $super) {
+  protoOf(Companion_24).u2h = function (width, height, $super) {
     height = height === VOID ? width : height;
-    return $super === VOID ? this.g2h(width, height) : $super.g2h.call(this, width, height);
+    return $super === VOID ? this.t2h(width, height) : $super.t2h.call(this, width, height);
   };
-  var Companion_instance_23;
-  function Companion_getInstance_23() {
-    return Companion_instance_23;
+  var Companion_instance_25;
+  function Companion_getInstance_25() {
+    return Companion_instance_25;
   }
   function ViewBox(x, y, width, height) {
-    this.i2h_1 = x;
-    this.j2h_1 = y;
-    this.k2h_1 = width;
-    this.l2h_1 = height;
+    this.v2h_1 = x;
+    this.w2h_1 = y;
+    this.x2h_1 = width;
+    this.y2h_1 = height;
+  }
+  var SVGStrokeType_None_instance;
+  var SVGStrokeType_CurrentColor_instance;
+  var SVGStrokeType_entriesInitialized;
+  function SVGStrokeType_initEntries() {
+    if (SVGStrokeType_entriesInitialized)
+      return Unit_instance;
+    SVGStrokeType_entriesInitialized = true;
+    SVGStrokeType_None_instance = new SVGStrokeType('None', 0);
+    SVGStrokeType_CurrentColor_instance = new SVGStrokeType('CurrentColor', 1);
+  }
+  function SVGStrokeType(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  protoOf(SVGStrokeType).toString = function () {
+    return toSvgValue(this);
+  };
+  var SVGStrokeLineCap_Butt_instance;
+  var SVGStrokeLineCap_Round_instance;
+  var SVGStrokeLineCap_Square_instance;
+  var SVGStrokeLineCap_entriesInitialized;
+  function SVGStrokeLineCap_initEntries() {
+    if (SVGStrokeLineCap_entriesInitialized)
+      return Unit_instance;
+    SVGStrokeLineCap_entriesInitialized = true;
+    SVGStrokeLineCap_Butt_instance = new SVGStrokeLineCap('Butt', 0);
+    SVGStrokeLineCap_Round_instance = new SVGStrokeLineCap('Round', 1);
+    SVGStrokeLineCap_Square_instance = new SVGStrokeLineCap('Square', 2);
+  }
+  function SVGStrokeLineCap(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  protoOf(SVGStrokeLineCap).toString = function () {
+    return toSvgValue(this);
+  };
+  var SVGStrokeLineJoin_Miter_instance;
+  var SVGStrokeLineJoin_Round_instance;
+  var SVGStrokeLineJoin_Bevel_instance;
+  var SVGStrokeLineJoin_entriesInitialized;
+  function SVGStrokeLineJoin_initEntries() {
+    if (SVGStrokeLineJoin_entriesInitialized)
+      return Unit_instance;
+    SVGStrokeLineJoin_entriesInitialized = true;
+    SVGStrokeLineJoin_Miter_instance = new SVGStrokeLineJoin('Miter', 0);
+    SVGStrokeLineJoin_Round_instance = new SVGStrokeLineJoin('Round', 1);
+    SVGStrokeLineJoin_Bevel_instance = new SVGStrokeLineJoin('Bevel', 2);
+  }
+  function SVGStrokeLineJoin(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  protoOf(SVGStrokeLineJoin).toString = function () {
+    return toSvgValue(this);
+  };
+  var SVGFillType_None_instance;
+  var SVGFillType_CurrentColor_instance;
+  var SVGFillType_entriesInitialized;
+  function SVGFillType_initEntries() {
+    if (SVGFillType_entriesInitialized)
+      return Unit_instance;
+    SVGFillType_entriesInitialized = true;
+    SVGFillType_None_instance = new SVGFillType('None', 0);
+    SVGFillType_CurrentColor_instance = new SVGFillType('CurrentColor', 1);
+  }
+  function SVGFillType(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  protoOf(SVGFillType).toString = function () {
+    return toSvgValue(this);
+  };
+  function toSvgValue(_this__u8e3s4) {
+    // Inline function 'kotlin.text.replaceFirstChar' call
+    var this_0 = _this__u8e3s4.s9_1;
+    var tmp;
+    // Inline function 'kotlin.text.isNotEmpty' call
+    if (charSequenceLength(this_0) > 0) {
+      // Inline function 'com.varabyte.kobweb.compose.dom.svg.toSvgValue.<anonymous>' call
+      // Inline function 'kotlin.text.lowercase' call
+      var this_1 = charSequenceGet(this_0, 0);
+      // Inline function 'kotlin.js.unsafeCast' call
+      // Inline function 'kotlin.js.asDynamic' call
+      var tmp$ret$4 = toString_0(this_1).toLowerCase();
+      var tmp_0 = toString(tmp$ret$4);
+      // Inline function 'kotlin.text.substring' call
+      // Inline function 'kotlin.js.asDynamic' call
+      tmp = tmp_0 + this_0.substring(1);
+    } else {
+      tmp = this_0;
+    }
+    return tmp;
   }
   function Svg(attrs, content, $composer, $changed, $default) {
     var attrs_0 = {_v: attrs};
@@ -2389,7 +2588,7 @@
       if (isTraceInProgress()) {
         traceEventStart(302969729, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Svg (Svg.kt:433)');
       }
-      GenericTag_0('svg', 'http://www.w3.org/2000/svg', Companion_instance_22.z2g(attrs_0._v), content, $composer_0, 54 | 7168 & $dirty << 6, 0);
+      GenericTag_0('svg', 'http://www.w3.org/2000/svg', Companion_instance_24.h2h(attrs_0._v), content, $composer_0, 54 | 7168 & $dirty << 6, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
@@ -2403,38 +2602,6 @@
       tmp0_safe_receiver.f1e(Svg$lambda(attrs_0, content, $changed, $default));
     }
   }
-  var SVGFillType_None_instance;
-  var SVGFillType_CurrentColor_instance;
-  var SVGFillType_entriesInitialized;
-  function SVGFillType_initEntries() {
-    if (SVGFillType_entriesInitialized)
-      return Unit_instance;
-    SVGFillType_entriesInitialized = true;
-    SVGFillType_None_instance = new SVGFillType('None', 0);
-    SVGFillType_CurrentColor_instance = new SVGFillType('CurrentColor', 1);
-  }
-  function SVGFillType(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  protoOf(SVGFillType).toString = function () {
-    return toSvgValue(this);
-  };
-  var SVGStrokeType_None_instance;
-  var SVGStrokeType_CurrentColor_instance;
-  var SVGStrokeType_entriesInitialized;
-  function SVGStrokeType_initEntries() {
-    if (SVGStrokeType_entriesInitialized)
-      return Unit_instance;
-    SVGStrokeType_entriesInitialized = true;
-    SVGStrokeType_None_instance = new SVGStrokeType('None', 0);
-    SVGStrokeType_CurrentColor_instance = new SVGStrokeType('CurrentColor', 1);
-  }
-  function SVGStrokeType(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  protoOf(SVGStrokeType).toString = function () {
-    return toSvgValue(this);
-  };
   function Path(_this__u8e3s4, attrs, $composer, $changed) {
     var $composer_0 = $composer;
     $composer_0 = $composer_0.h19(275418487);
@@ -2445,7 +2612,7 @@
       if (isTraceInProgress()) {
         traceEventStart(275418487, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Path (Svg.kt:1098)');
       }
-      var tmp = Companion_instance_24.m2h(attrs);
+      var tmp = Companion_instance_26.z2h(attrs);
       GenericTag_0('path', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -2466,95 +2633,95 @@
       return Unit_instance;
     };
   }
-  function Companion_23() {
+  function Companion_25() {
   }
-  protoOf(Companion_23).m2h = function (attrs) {
+  protoOf(Companion_25).z2h = function (attrs) {
     return SVGPathAttrsScope$Companion$invoke$lambda(attrs);
   };
-  var Companion_instance_24;
-  function Companion_getInstance_24() {
-    return Companion_instance_24;
+  var Companion_instance_26;
+  function Companion_getInstance_26() {
+    return Companion_instance_26;
   }
   function SVGPathAttrsScope(attrs) {
     SVGGraphicalElementAttrsScope.call(this, attrs);
   }
-  protoOf(SVGPathAttrsScope).o2h = function (pathDataScope) {
+  protoOf(SVGPathAttrsScope).b2i = function (pathDataScope) {
     // Inline function 'kotlin.apply' call
     var this_0 = new SVGPathDataScope();
     // Inline function 'kotlin.contracts.contract' call
     pathDataScope(this_0);
-    this.m24('d', joinToString(this_0.p2h_1, ' '));
+    this.m24('d', joinToString(this_0.c2i_1, ' '));
   };
   function SVGPathDataScope() {
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.p2h_1 = ArrayList_init_$Create$();
+    tmp.c2i_1 = ArrayList_init_$Create$();
   }
-  protoOf(SVGPathDataScope).q2h = function (x, y) {
-    this.p2h_1.u('M ' + toString(x) + ' ' + toString(y));
+  protoOf(SVGPathDataScope).d2i = function (x, y) {
+    this.c2i_1.u('M ' + toString(x) + ' ' + toString(y));
   };
-  protoOf(SVGPathDataScope).r2h = function (x, y, isRelative) {
+  protoOf(SVGPathDataScope).e2i = function (x, y, isRelative) {
     var command = isRelative ? 'l' : 'L';
-    this.p2h_1.u(command + ' ' + toString(x) + ' ' + toString(y));
+    this.c2i_1.u(command + ' ' + toString(x) + ' ' + toString(y));
   };
-  protoOf(SVGPathDataScope).s2h = function (x, y, isRelative, $super) {
+  protoOf(SVGPathDataScope).f2i = function (x, y, isRelative, $super) {
     isRelative = isRelative === VOID ? false : isRelative;
     var tmp;
     if ($super === VOID) {
-      this.r2h(x, y, isRelative);
+      this.e2i(x, y, isRelative);
       tmp = Unit_instance;
     } else {
-      tmp = $super.r2h.call(this, x, y, isRelative);
+      tmp = $super.e2i.call(this, x, y, isRelative);
     }
     return tmp;
   };
-  protoOf(SVGPathDataScope).t2h = function (x, isRelative) {
+  protoOf(SVGPathDataScope).g2i = function (x, isRelative) {
     var command = isRelative ? 'v' : 'V';
-    this.p2h_1.u(command + ' ' + toString(x));
+    this.c2i_1.u(command + ' ' + toString(x));
   };
-  protoOf(SVGPathDataScope).u2h = function (x, isRelative, $super) {
+  protoOf(SVGPathDataScope).h2i = function (x, isRelative, $super) {
     isRelative = isRelative === VOID ? false : isRelative;
     var tmp;
     if ($super === VOID) {
-      this.t2h(x, isRelative);
+      this.g2i(x, isRelative);
       tmp = Unit_instance;
     } else {
-      tmp = $super.t2h.call(this, x, isRelative);
+      tmp = $super.g2i.call(this, x, isRelative);
     }
     return tmp;
   };
-  protoOf(SVGPathDataScope).v2h = function (x, isRelative) {
+  protoOf(SVGPathDataScope).i2i = function (x, isRelative) {
     var command = isRelative ? 'h' : 'H';
-    this.p2h_1.u(command + ' ' + toString(x));
+    this.c2i_1.u(command + ' ' + toString(x));
   };
-  protoOf(SVGPathDataScope).w2h = function (x, isRelative, $super) {
+  protoOf(SVGPathDataScope).j2i = function (x, isRelative, $super) {
     isRelative = isRelative === VOID ? false : isRelative;
     var tmp;
     if ($super === VOID) {
-      this.v2h(x, isRelative);
+      this.i2i(x, isRelative);
       tmp = Unit_instance;
     } else {
-      tmp = $super.v2h.call(this, x, isRelative);
+      tmp = $super.i2i.call(this, x, isRelative);
     }
     return tmp;
   };
-  protoOf(SVGPathDataScope).x2h = function (rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative) {
+  protoOf(SVGPathDataScope).k2i = function (rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative) {
     var command = isRelative ? 'a' : 'A';
-    this.p2h_1.u(command + ' ' + toString(rx) + ' ' + toString(ry) + ' ' + toString(rotate) + ' ' + toString(largeArcFlag) + ' ' + toString(sweepFlag) + ' ' + toString(x) + ' ' + toString(y));
+    this.c2i_1.u(command + ' ' + toString(rx) + ' ' + toString(ry) + ' ' + toString(rotate) + ' ' + toString(largeArcFlag) + ' ' + toString(sweepFlag) + ' ' + toString(x) + ' ' + toString(y));
   };
-  protoOf(SVGPathDataScope).y2h = function (rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative, $super) {
+  protoOf(SVGPathDataScope).l2i = function (rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative, $super) {
     isRelative = isRelative === VOID ? false : isRelative;
     var tmp;
     if ($super === VOID) {
-      this.x2h(rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative);
+      this.k2i(rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative);
       tmp = Unit_instance;
     } else {
-      tmp = $super.x2h.call(this, rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative);
+      tmp = $super.k2i.call(this, rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative);
     }
     return tmp;
   };
-  protoOf(SVGPathDataScope).z2h = function () {
-    this.p2h_1.u('Z');
+  protoOf(SVGPathDataScope).m2i = function () {
+    this.c2i_1.u('Z');
   };
   function Polyline(_this__u8e3s4, attrs, $composer, $changed) {
     var $composer_0 = $composer;
@@ -2566,7 +2733,7 @@
       if (isTraceInProgress()) {
         traceEventStart(741814780, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Polyline (Svg.kt:1161)');
       }
-      var tmp = Companion_instance_25.a2i(attrs);
+      var tmp = Companion_instance_27.n2i(attrs);
       GenericTag_0('polyline', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -2587,119 +2754,18 @@
       return Unit_instance;
     };
   }
-  function Companion_24() {
-  }
-  protoOf(Companion_24).a2i = function (attrs) {
-    return SVGPolylineAttrsScope$Companion$invoke$lambda(attrs);
-  };
-  var Companion_instance_25;
-  function Companion_getInstance_25() {
-    return Companion_instance_25;
-  }
-  function SVGPolylineAttrsScope(attrs) {
-    SVGGraphicalElementAttrsScope.call(this, attrs);
-  }
-  function Circle(_this__u8e3s4, attrs, $composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.h19(-2079059220);
-    var $dirty = $changed;
-    if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.k18(attrs) ? 32 : 16);
-    if (!(($dirty & 81) === 16) ? true : !$composer_0.k17()) {
-      if (isTraceInProgress()) {
-        traceEventStart(-2079059220, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Circle (Svg.kt:804)');
-      }
-      var tmp = Companion_instance_26.c2i(attrs);
-      GenericTag_0('circle', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.b12();
-    }
-    var tmp0_safe_receiver = $composer_0.i19();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.f1e(Circle$lambda(_this__u8e3s4, attrs, $changed));
-    }
-  }
-  function SVGCircleAttrsScope$Companion$invoke$lambda($attrs) {
-    return function ($this$null) {
-      $attrs(new SVGCircleAttrsScope($this$null));
-      return Unit_instance;
-    };
-  }
-  function Companion_25() {
-  }
-  protoOf(Companion_25).c2i = function (attrs) {
-    return SVGCircleAttrsScope$Companion$invoke$lambda(attrs);
-  };
-  var Companion_instance_26;
-  function Companion_getInstance_26() {
-    return Companion_instance_26;
-  }
-  function SVGCircleAttrsScope(attrs) {
-    SVGGraphicalElementAttrsScope.call(this, attrs);
-  }
-  protoOf(SVGCircleAttrsScope).e2i = function (value) {
-    this.m24('r', toString(value));
-  };
-  function Line(_this__u8e3s4, attrs, $composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.h19(-846499000);
-    var $dirty = $changed;
-    if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.k18(attrs) ? 32 : 16);
-    if (!(($dirty & 81) === 16) ? true : !$composer_0.k17()) {
-      if (isTraceInProgress()) {
-        traceEventStart(-846499000, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Line (Svg.kt:979)');
-      }
-      var tmp = Companion_instance_27.h2i(attrs);
-      GenericTag_0('line', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.b12();
-    }
-    var tmp0_safe_receiver = $composer_0.i19();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.f1e(Line$lambda(_this__u8e3s4, attrs, $changed));
-    }
-  }
-  function SVGLineAttrsScope$Companion$invoke$lambda($attrs) {
-    return function ($this$null) {
-      $attrs(new SVGLineAttrsScope($this$null));
-      return Unit_instance;
-    };
-  }
   function Companion_26() {
   }
-  protoOf(Companion_26).h2i = function (attrs) {
-    return SVGLineAttrsScope$Companion$invoke$lambda(attrs);
+  protoOf(Companion_26).n2i = function (attrs) {
+    return SVGPolylineAttrsScope$Companion$invoke$lambda(attrs);
   };
   var Companion_instance_27;
   function Companion_getInstance_27() {
     return Companion_instance_27;
   }
-  function SVGLineAttrsScope(attrs) {
+  function SVGPolylineAttrsScope(attrs) {
     SVGGraphicalElementAttrsScope.call(this, attrs);
   }
-  protoOf(SVGLineAttrsScope).j2i = function (value) {
-    this.m24('x1', toString(value));
-  };
-  protoOf(SVGLineAttrsScope).k2i = function (value) {
-    this.m24('x2', toString(value));
-  };
-  protoOf(SVGLineAttrsScope).l2i = function (value) {
-    this.m24('y1', toString(value));
-  };
-  protoOf(SVGLineAttrsScope).m2i = function (value) {
-    this.m24('y2', toString(value));
-  };
   function Rect(_this__u8e3s4, attrs, $composer, $changed) {
     var $composer_0 = $composer;
     $composer_0 = $composer_0.h19(151044952);
@@ -2710,7 +2776,7 @@
       if (isTraceInProgress()) {
         traceEventStart(151044952, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Rect (Svg.kt:1223)');
       }
-      var tmp = Companion_instance_28.n2i(attrs);
+      var tmp = Companion_instance_28.p2i(attrs);
       GenericTag_0('rect', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -2733,7 +2799,7 @@
   }
   function Companion_27() {
   }
-  protoOf(Companion_27).n2i = function (attrs) {
+  protoOf(Companion_27).p2i = function (attrs) {
     return SVGRectAttrsScope$Companion$invoke$lambda(attrs);
   };
   var Companion_instance_28;
@@ -2743,7 +2809,7 @@
   function SVGRectAttrsScope(attrs) {
     SVGGraphicalElementAttrsScope.call(this, attrs);
   }
-  protoOf(SVGRectAttrsScope).p2i = function (value) {
+  protoOf(SVGRectAttrsScope).r2i = function (value) {
     this.m24('rx', toString(value));
   };
   function Group(_this__u8e3s4, attrs, content, $composer, $changed, $default) {
@@ -2774,7 +2840,7 @@
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'com.varabyte.kobweb.compose.dom.svg.Group.<anonymous>' call
-        tmp = Companion_instance_29.u2i(tmp0_safe_receiver);
+        tmp = Companion_instance_29.s2i(tmp0_safe_receiver);
       }
       GenericTag_0('g', 'http://www.w3.org/2000/svg', tmp, content, $composer_0, 54 | 7168 & $dirty << 3, 0);
       if (isTraceInProgress()) {
@@ -2798,7 +2864,7 @@
   }
   function Companion_28() {
   }
-  protoOf(Companion_28).u2i = function (attrs) {
+  protoOf(Companion_28).s2i = function (attrs) {
     return SVGGroupAttrsScope$Companion$invoke$lambda(attrs);
   };
   var Companion_instance_29;
@@ -2808,113 +2874,22 @@
   function SVGGroupAttrsScope(attrs) {
     SVGContainerElementAttrsScope.call(this, attrs);
   }
-  var SVGStrokeLineJoin_Miter_instance;
-  var SVGStrokeLineJoin_Round_instance;
-  var SVGStrokeLineJoin_Bevel_instance;
-  var SVGStrokeLineJoin_entriesInitialized;
-  function SVGStrokeLineJoin_initEntries() {
-    if (SVGStrokeLineJoin_entriesInitialized)
-      return Unit_instance;
-    SVGStrokeLineJoin_entriesInitialized = true;
-    SVGStrokeLineJoin_Miter_instance = new SVGStrokeLineJoin('Miter', 0);
-    SVGStrokeLineJoin_Round_instance = new SVGStrokeLineJoin('Round', 1);
-    SVGStrokeLineJoin_Bevel_instance = new SVGStrokeLineJoin('Bevel', 2);
-  }
-  function SVGStrokeLineJoin(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  protoOf(SVGStrokeLineJoin).toString = function () {
-    return toSvgValue(this);
-  };
-  var SVGStrokeLineCap_Butt_instance;
-  var SVGStrokeLineCap_Round_instance;
-  var SVGStrokeLineCap_Square_instance;
-  var SVGStrokeLineCap_entriesInitialized;
-  function SVGStrokeLineCap_initEntries() {
-    if (SVGStrokeLineCap_entriesInitialized)
-      return Unit_instance;
-    SVGStrokeLineCap_entriesInitialized = true;
-    SVGStrokeLineCap_Butt_instance = new SVGStrokeLineCap('Butt', 0);
-    SVGStrokeLineCap_Round_instance = new SVGStrokeLineCap('Round', 1);
-    SVGStrokeLineCap_Square_instance = new SVGStrokeLineCap('Square', 2);
-  }
-  function SVGStrokeLineCap(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  protoOf(SVGStrokeLineCap).toString = function () {
-    return toSvgValue(this);
-  };
-  function SVGContainerElementAttrsScope(attrs) {
-    SVGGraphicalElementAttrsScope.call(this, attrs);
-  }
-  function CoordinateAttrs() {
-  }
-  function LengthAttrs() {
-  }
-  function ViewBoxAttrs() {
-  }
-  function toSvgValue(_this__u8e3s4) {
-    // Inline function 'kotlin.text.replaceFirstChar' call
-    var this_0 = _this__u8e3s4.s9_1;
-    var tmp;
-    // Inline function 'kotlin.text.isNotEmpty' call
-    if (charSequenceLength(this_0) > 0) {
-      // Inline function 'com.varabyte.kobweb.compose.dom.svg.toSvgValue.<anonymous>' call
-      // Inline function 'kotlin.text.lowercase' call
-      var this_1 = charSequenceGet(this_0, 0);
-      // Inline function 'kotlin.js.unsafeCast' call
-      // Inline function 'kotlin.js.asDynamic' call
-      var tmp$ret$4 = toString_0(this_1).toLowerCase();
-      var tmp_0 = toString(tmp$ret$4);
-      // Inline function 'kotlin.text.substring' call
-      // Inline function 'kotlin.js.asDynamic' call
-      tmp = tmp_0 + this_0.substring(1);
-    } else {
-      tmp = this_0;
-    }
-    return tmp;
-  }
-  function SVGGraphicalElementAttrsScope(attrs) {
-    SVGElementAttrsScope.call(this, attrs);
-  }
   function PointsAttrs$points$lambda(it) {
     return toString(it.ce_1) + ',' + toString(it.de_1);
   }
   function PointsAttrs() {
   }
-  function CenterCoordinateAttrs() {
+  function Circle$lambda($this_Circle, $attrs, $$changed) {
+    return function ($composer, $force) {
+      Circle($this_Circle, $attrs, $composer, updateChangedFlags($$changed | 1));
+      return Unit_instance;
+    };
   }
-  function SVGElementAttrsScope(attrs) {
-    this.a2h_1 = attrs;
-  }
-  protoOf(SVGElementAttrsScope).m24 = function (attr, value) {
-    return this.a2h_1.m24(attr, value);
-  };
-  protoOf(SVGElementAttrsScope).p24 = function (classes) {
-    this.a2h_1.p24(classes);
-  };
-  protoOf(SVGElementAttrsScope).o24 = function (classes) {
-    this.a2h_1.o24(classes);
-  };
-  protoOf(SVGElementAttrsScope).q24 = function (value) {
-    return this.a2h_1.q24(value);
-  };
-  protoOf(SVGElementAttrsScope).u24 = function (listener) {
-    this.a2h_1.u24(listener);
-  };
-  protoOf(SVGElementAttrsScope).t24 = function (listener) {
-    this.a2h_1.t24(listener);
-  };
-  protoOf(SVGElementAttrsScope).s24 = function (listener) {
-    this.a2h_1.s24(listener);
-  };
-  protoOf(SVGElementAttrsScope).n24 = function (builder) {
-    this.a2h_1.n24(builder);
-  };
-  protoOf(SVGElementAttrsScope).r24 = function (value) {
-    return this.a2h_1.r24(value);
-  };
-  function PresentationAttrs() {
+  function Line$lambda($this_Line, $attrs, $$changed) {
+    return function ($composer, $force) {
+      Line($this_Line, $attrs, $composer, updateChangedFlags($$changed | 1));
+      return Unit_instance;
+    };
   }
   function Svg$lambda($attrs, $content, $$changed, $$default) {
     return function ($composer, $force) {
@@ -2934,18 +2909,6 @@
       return Unit_instance;
     };
   }
-  function Circle$lambda($this_Circle, $attrs, $$changed) {
-    return function ($composer, $force) {
-      Circle($this_Circle, $attrs, $composer, updateChangedFlags($$changed | 1));
-      return Unit_instance;
-    };
-  }
-  function Line$lambda($this_Line, $attrs, $$changed) {
-    return function ($composer, $force) {
-      Line($this_Line, $attrs, $composer, updateChangedFlags($$changed | 1));
-      return Unit_instance;
-    };
-  }
   function Rect$lambda($this_Rect, $attrs, $$changed) {
     return function ($composer, $force) {
       Rect($this_Rect, $attrs, $composer, updateChangedFlags($$changed | 1));
@@ -2958,14 +2921,6 @@
       return Unit_instance;
     };
   }
-  function SVGFillType_None_getInstance() {
-    SVGFillType_initEntries();
-    return SVGFillType_None_instance;
-  }
-  function SVGFillType_CurrentColor_getInstance() {
-    SVGFillType_initEntries();
-    return SVGFillType_CurrentColor_instance;
-  }
   function SVGStrokeType_None_getInstance() {
     SVGStrokeType_initEntries();
     return SVGStrokeType_None_instance;
@@ -2974,13 +2929,21 @@
     SVGStrokeType_initEntries();
     return SVGStrokeType_CurrentColor_instance;
   }
+  function SVGStrokeLineCap_Round_getInstance() {
+    SVGStrokeLineCap_initEntries();
+    return SVGStrokeLineCap_Round_instance;
+  }
   function SVGStrokeLineJoin_Round_getInstance() {
     SVGStrokeLineJoin_initEntries();
     return SVGStrokeLineJoin_Round_instance;
   }
-  function SVGStrokeLineCap_Round_getInstance() {
-    SVGStrokeLineCap_initEntries();
-    return SVGStrokeLineCap_Round_instance;
+  function SVGFillType_None_getInstance() {
+    SVGFillType_initEntries();
+    return SVGFillType_None_instance;
+  }
+  function SVGFillType_CurrentColor_getInstance() {
+    SVGFillType_initEntries();
+    return SVGFillType_CurrentColor_instance;
   }
   //region block: post-declaration
   protoOf(ComparableAttrsScope).p24 = classes;
@@ -2996,21 +2959,21 @@
   protoOf(ComparableStyleScope).c27 = property;
   protoOf(ComparableStyleScope).d27 = property_0;
   protoOf(ComparableStyleScope).i27 = variable;
-  protoOf(CalcScopeInstance).e2g = unaryMinus;
-  protoOf(SVGGraphicalElementAttrsScope).b2h = stroke;
-  protoOf(SVGGraphicalElementAttrsScope).v2i = strokeLineCap;
-  protoOf(SVGGraphicalElementAttrsScope).w2i = strokeLineJoin;
-  protoOf(SVGGraphicalElementAttrsScope).c2h = strokeWidth;
-  protoOf(SVGGraphicalElementAttrsScope).d2h = fill;
-  protoOf(SVGSvgAttrsScope).e2h = width_1;
-  protoOf(SVGSvgAttrsScope).f2h = viewBox;
-  protoOf(SVGPolylineAttrsScope).b2i = points;
-  protoOf(SVGCircleAttrsScope).f2i = cx;
-  protoOf(SVGCircleAttrsScope).g2i = cy;
-  protoOf(SVGRectAttrsScope).q2i = x;
-  protoOf(SVGRectAttrsScope).r2i = y;
-  protoOf(SVGRectAttrsScope).s2i = height;
-  protoOf(SVGRectAttrsScope).t2i = width_0;
+  protoOf(CalcScopeInstance).a2g = unaryMinus;
+  protoOf(SVGGraphicalElementAttrsScope).i2h = stroke;
+  protoOf(SVGGraphicalElementAttrsScope).n2h = strokeLineCap;
+  protoOf(SVGGraphicalElementAttrsScope).o2h = strokeLineJoin;
+  protoOf(SVGGraphicalElementAttrsScope).j2h = strokeWidth;
+  protoOf(SVGGraphicalElementAttrsScope).k2h = fill;
+  protoOf(SVGCircleAttrsScope).z2g = cx;
+  protoOf(SVGCircleAttrsScope).a2h = cy;
+  protoOf(SVGSvgAttrsScope).l2h = width_1;
+  protoOf(SVGSvgAttrsScope).m2h = viewBox;
+  protoOf(SVGPolylineAttrsScope).o2i = points;
+  protoOf(SVGRectAttrsScope).p2h = x;
+  protoOf(SVGRectAttrsScope).q2h = y;
+  protoOf(SVGRectAttrsScope).r2h = height;
+  protoOf(SVGRectAttrsScope).s2h = width_0;
   //endregion
   //region block: init
   Companion_instance_0 = new Companion();
@@ -3086,49 +3049,48 @@
   _.$_$.m1 = setVariable;
   _.$_$.n1 = textAlign;
   _.$_$.o1 = textDecorationLine;
-  _.$_$.p1 = textShadow;
-  _.$_$.q1 = transition;
-  _.$_$.r1 = translateX;
-  _.$_$.s1 = userSelect;
-  _.$_$.t1 = verticalAlign;
-  _.$_$.u1 = whiteSpace;
-  _.$_$.v1 = Circle;
-  _.$_$.w1 = Group;
-  _.$_$.x1 = Line;
-  _.$_$.y1 = Path;
-  _.$_$.z1 = Polyline;
-  _.$_$.a2 = Rect;
-  _.$_$.b2 = Svg;
-  _.$_$.c2 = GenericTag;
-  _.$_$.d2 = refScope;
-  _.$_$.e2 = registerRefScope_0;
-  _.$_$.f2 = registerRefScope;
-  _.$_$.g2 = SVGFillType_CurrentColor_getInstance;
-  _.$_$.h2 = SVGFillType_None_getInstance;
-  _.$_$.i2 = SVGStrokeLineCap_Round_getInstance;
-  _.$_$.j2 = SVGStrokeLineJoin_Round_getInstance;
-  _.$_$.k2 = SVGStrokeType_CurrentColor_getInstance;
-  _.$_$.l2 = SVGStrokeType_None_getInstance;
-  _.$_$.m2 = ComparableAttrsScope_init_$Create$;
-  _.$_$.n2 = CSSTransition_init_$Create$;
-  _.$_$.o2 = Companion_instance_4;
-  _.$_$.p2 = Companion_instance_2;
-  _.$_$.q2 = Companion_instance_18;
-  _.$_$.r2 = Companion_instance_3;
-  _.$_$.s2 = Companion_instance_5;
-  _.$_$.t2 = Companion_instance_0;
-  _.$_$.u2 = Companion_instance_1;
-  _.$_$.v2 = Companion_instance_9;
-  _.$_$.w2 = Companion_instance_10;
-  _.$_$.x2 = Companion_instance_11;
-  _.$_$.y2 = Companion_instance_12;
-  _.$_$.z2 = Companion_instance_13;
-  _.$_$.a3 = Companion_instance_16;
-  _.$_$.b3 = Companion_instance_17;
-  _.$_$.c3 = Companion_instance_14;
-  _.$_$.d3 = Companion_instance_8;
-  _.$_$.e3 = Companion_instance_15;
-  _.$_$.f3 = Companion_instance_23;
+  _.$_$.p1 = transition;
+  _.$_$.q1 = translateX;
+  _.$_$.r1 = userSelect;
+  _.$_$.s1 = verticalAlign;
+  _.$_$.t1 = whiteSpace;
+  _.$_$.u1 = Circle;
+  _.$_$.v1 = Group;
+  _.$_$.w1 = Line;
+  _.$_$.x1 = Path;
+  _.$_$.y1 = Polyline;
+  _.$_$.z1 = Rect;
+  _.$_$.a2 = Svg;
+  _.$_$.b2 = GenericTag;
+  _.$_$.c2 = refScope;
+  _.$_$.d2 = registerRefScope_0;
+  _.$_$.e2 = registerRefScope;
+  _.$_$.f2 = SVGFillType_CurrentColor_getInstance;
+  _.$_$.g2 = SVGFillType_None_getInstance;
+  _.$_$.h2 = SVGStrokeLineCap_Round_getInstance;
+  _.$_$.i2 = SVGStrokeLineJoin_Round_getInstance;
+  _.$_$.j2 = SVGStrokeType_CurrentColor_getInstance;
+  _.$_$.k2 = SVGStrokeType_None_getInstance;
+  _.$_$.l2 = ComparableAttrsScope_init_$Create$;
+  _.$_$.m2 = CSSTransition_init_$Create$;
+  _.$_$.n2 = Companion_instance_4;
+  _.$_$.o2 = Companion_instance_2;
+  _.$_$.p2 = Companion_instance_18;
+  _.$_$.q2 = Companion_instance_3;
+  _.$_$.r2 = Companion_instance_5;
+  _.$_$.s2 = Companion_instance_0;
+  _.$_$.t2 = Companion_instance_1;
+  _.$_$.u2 = Companion_instance_9;
+  _.$_$.v2 = Companion_instance_10;
+  _.$_$.w2 = Companion_instance_11;
+  _.$_$.x2 = Companion_instance_12;
+  _.$_$.y2 = Companion_instance_13;
+  _.$_$.z2 = Companion_instance_16;
+  _.$_$.a3 = Companion_instance_17;
+  _.$_$.b3 = Companion_instance_14;
+  _.$_$.c3 = Companion_instance_8;
+  _.$_$.d3 = Companion_instance_15;
+  _.$_$.e3 = Companion_instance_25;
   //endregion
   return _;
 }));

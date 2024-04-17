@@ -22,7 +22,7 @@
   var classMeta = kotlin_kotlin.$_$.ea;
   var setMetadataFor = kotlin_kotlin.$_$.pb;
   var VOID = kotlin_kotlin.$_$.e;
-  var THROW_CCE = kotlin_kotlin.$_$.te;
+  var THROW_CCE = kotlin_kotlin.$_$.re;
   var Companion_getInstance = kotlin_kotlin.$_$.i4;
   var serializer_0 = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.c;
   var Companion_getInstance_0 = kotlin_kotlin.$_$.j4;

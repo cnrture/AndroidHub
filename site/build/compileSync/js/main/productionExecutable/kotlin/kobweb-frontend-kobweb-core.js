@@ -25,11 +25,11 @@
   var Unit_instance = kotlin_kotlin.$_$.d2;
   var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
   var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
-  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.y3;
+  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.v3;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
-  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.a3;
-  var padding = kotlin_org_jetbrains_compose_html_html_core.$_$.x2;
-  var margin = kotlin_org_jetbrains_compose_html_html_core.$_$.q2;
+  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.x2;
+  var padding = kotlin_org_jetbrains_compose_html_html_core.$_$.u2;
+  var margin = kotlin_org_jetbrains_compose_html_html_core.$_$.n2;
   var boxSizing = kotlin_org_jetbrains_compose_html_html_core.$_$.p1;
   var StyleSheet = kotlin_org_jetbrains_compose_html_html_core.$_$.h1;
   var VOID = kotlin_kotlin.$_$.c;
@@ -52,7 +52,7 @@
   var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
   var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
   var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
-  var A = kotlin_org_jetbrains_compose_html_html_core.$_$.i3;
+  var A = kotlin_org_jetbrains_compose_html_html_core.$_$.f3;
   var Enum = kotlin_kotlin.$_$.h8;
   var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.w;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.g;
@@ -90,8 +90,8 @@
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
   var THROW_CCE = kotlin_kotlin.$_$.n8;
-  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.l3;
-  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.a4;
+  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.i3;
+  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.x3;
   var substringBefore = kotlin_kotlin.$_$.a8;
   var to = kotlin_kotlin.$_$.c9;
   var CompositionLocalProvider = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
@@ -202,15 +202,15 @@
   }
   function AppGlobals() {
   }
-  protoOf(AppGlobals).d2j = function (values) {
+  protoOf(AppGlobals).z2i = function (values) {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!!(this.c2j_1 == null)) {
+    if (!!!(this.y2i_1 == null)) {
       // Inline function 'com.varabyte.kobweb.core.AppGlobals.initialize.<anonymous>' call
       var message = 'Cannot initialize AppGlobals more than once';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    this.c2j_1 = values;
+    this.y2i_1 = values;
   };
   var AppGlobals_instance;
   function AppGlobals_getInstance() {
@@ -222,87 +222,87 @@
   }
   var PageContextLocal;
   function RouteInfo(route, dynamicParams) {
-    this.e2j_1 = route;
-    this.f2j_1 = dynamicParams;
-    this.g2j_1 = substringAfterLast(this.e2j_1.m2j_1, _Char___init__impl__6a9atx(47));
-    this.h2j_1 = this.e2j_1.m2j_1;
-    this.i2j_1 = plus(this.e2j_1.n2j_1, this.f2j_1);
-    this.j2j_1 = this.e2j_1.n2j_1;
-    this.k2j_1 = this.e2j_1.o2j_1;
+    this.a2j_1 = route;
+    this.b2j_1 = dynamicParams;
+    this.c2j_1 = substringAfterLast(this.a2j_1.i2j_1, _Char___init__impl__6a9atx(47));
+    this.d2j_1 = this.a2j_1.i2j_1;
+    this.e2j_1 = plus(this.a2j_1.j2j_1, this.b2j_1);
+    this.f2j_1 = this.a2j_1.j2j_1;
+    this.g2j_1 = this.a2j_1.k2j_1;
   }
-  protoOf(RouteInfo).p2j = function () {
-    return this.e2j_1.toString();
+  protoOf(RouteInfo).l2j = function () {
+    return this.a2j_1.toString();
   };
   protoOf(RouteInfo).toString = function () {
-    return this.p2j();
+    return this.l2j();
   };
   protoOf(RouteInfo).equals = function (other) {
     var tmp;
     var tmp_0;
     var tmp_1;
     if (other instanceof RouteInfo) {
-      tmp_1 = other.h2j_1 === this.h2j_1;
+      tmp_1 = other.d2j_1 === this.d2j_1;
     } else {
       tmp_1 = false;
     }
     if (tmp_1) {
-      tmp_0 = equals(other.i2j_1, this.i2j_1);
+      tmp_0 = equals(other.e2j_1, this.e2j_1);
     } else {
       tmp_0 = false;
     }
     if (tmp_0) {
-      tmp = other.k2j_1 == this.k2j_1;
+      tmp = other.g2j_1 == this.g2j_1;
     } else {
       tmp = false;
     }
     return tmp;
   };
   protoOf(RouteInfo).hashCode = function () {
-    var result = getStringHashCode(this.h2j_1);
-    result = imul(31, result) + hashCode(this.i2j_1) | 0;
+    var result = getStringHashCode(this.d2j_1);
+    result = imul(31, result) + hashCode(this.e2j_1) | 0;
     var tmp = imul(31, result);
     // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver = this.k2j_1;
+    var tmp0_safe_receiver = this.g2j_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hashCode(tmp0_safe_receiver);
     result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
     return result;
   };
-  protoOf(RouteInfo).q2j = function (path, queryParams, fragment, dynamicParams) {
+  protoOf(RouteInfo).m2j = function (path, queryParams, fragment, dynamicParams) {
     return new RouteInfo(Route_init_$Create$(path, queryParams, fragment), dynamicParams);
   };
-  protoOf(RouteInfo).r2j = function (path, queryParams, fragment, dynamicParams, $super) {
-    path = path === VOID ? this.e2j_1.m2j_1 : path;
-    queryParams = queryParams === VOID ? this.e2j_1.n2j_1 : queryParams;
-    fragment = fragment === VOID ? this.e2j_1.o2j_1 : fragment;
-    dynamicParams = dynamicParams === VOID ? this.f2j_1 : dynamicParams;
-    return $super === VOID ? this.q2j(path, queryParams, fragment, dynamicParams) : $super.q2j.call(this, path, queryParams, fragment, dynamicParams);
+  protoOf(RouteInfo).n2j = function (path, queryParams, fragment, dynamicParams, $super) {
+    path = path === VOID ? this.a2j_1.i2j_1 : path;
+    queryParams = queryParams === VOID ? this.a2j_1.j2j_1 : queryParams;
+    fragment = fragment === VOID ? this.a2j_1.k2j_1 : fragment;
+    dynamicParams = dynamicParams === VOID ? this.b2j_1 : dynamicParams;
+    return $super === VOID ? this.m2j(path, queryParams, fragment, dynamicParams) : $super.m2j.call(this, path, queryParams, fragment, dynamicParams);
   };
   function Companion() {
   }
-  protoOf(Companion).t2j = function () {
-    var tmp = this.s2j_1;
+  protoOf(Companion).p2j = function () {
+    var tmp = this.o2j_1;
     if (!(tmp == null))
       return tmp;
     else {
       throwUninitializedPropertyAccessException('instance');
     }
   };
-  protoOf(Companion).u2j = function (router) {
-    this.s2j_1 = new PageContext(router);
+  protoOf(Companion).q2j = function (router) {
+    this.o2j_1 = new PageContext(router);
   };
   var Companion_instance;
   function Companion_getInstance_2() {
     return Companion_instance;
   }
   function PageContext(router) {
-    this.v2j_1 = router;
-    this.w2j_1 = mutableStateOf(null);
+    this.r2j_1 = router;
+    this.s2j_1 = mutableStateOf(null);
   }
-  protoOf(PageContext).x2j = function (value) {
-    this.w2j_1.kq(value);
+  protoOf(PageContext).t2j = function (value) {
+    this.s2j_1.kq(value);
   };
-  protoOf(PageContext).y2j = function () {
-    var tmp0_elvis_lhs = this.w2j_1.j2();
+  protoOf(PageContext).u2j = function () {
+    var tmp0_elvis_lhs = this.s2j_1.j2();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       var message = 'PageContext route info is only valid within a @Page composable';
@@ -356,8 +356,8 @@
     set_MutableKobwebConfigInstance(config);
   }
   function InitKobwebContext(config, router) {
-    this.z2j_1 = config;
-    this.a2k_1 = router;
+    this.v2j_1 = config;
+    this.w2j_1 = router;
   }
   function set_MutableKobwebConfigInstance(_set____db54di) {
     _init_properties_KobwebConfig_kt__rz30d4();
@@ -369,14 +369,14 @@
   }
   var MutableKobwebConfigInstance;
   function MutableKobwebConfig() {
-    this.b2k_1 = new MutableOpenLinkStrategies();
+    this.x2j_1 = new MutableOpenLinkStrategies();
   }
-  protoOf(MutableKobwebConfig).c2k = function () {
-    return this.b2k_1;
+  protoOf(MutableKobwebConfig).y2j = function () {
+    return this.x2j_1;
   };
   function Companion_0() {
   }
-  protoOf(Companion_0).d2k = function () {
+  protoOf(Companion_0).z2j = function () {
     return get_MutableKobwebConfigInstance();
   };
   var Companion_instance_0;
@@ -386,14 +386,14 @@
   function MutableOpenLinkStrategies(internal, external) {
     internal = internal === VOID ? OpenLinkStrategy_IN_PLACE_getInstance() : internal;
     external = external === VOID ? OpenLinkStrategy_IN_NEW_TAB_getInstance() : external;
-    this.e2k_1 = internal;
-    this.f2k_1 = external;
+    this.a2k_1 = internal;
+    this.b2k_1 = external;
   }
-  protoOf(MutableOpenLinkStrategies).g2k = function () {
-    return this.e2k_1;
+  protoOf(MutableOpenLinkStrategies).c2k = function () {
+    return this.a2k_1;
   };
-  protoOf(MutableOpenLinkStrategies).h2k = function () {
-    return this.f2k_1;
+  protoOf(MutableOpenLinkStrategies).d2k = function () {
+    return this.b2k_1;
   };
   var properties_initialized_KobwebConfig_kt_yaxikm;
   function _init_properties_KobwebConfig_kt__rz30d4() {
@@ -473,10 +473,10 @@
   function Anchor$lambda$lambda($openInternalLinksStrategy, $openExternalLinksStrategy, $ctx, $href) {
     return function (evt) {
       var tmp0_elvis_lhs = $openInternalLinksStrategy._v;
-      var openInternalLinksStrategy = tmp0_elvis_lhs == null ? toOpenLinkStrategy(evt, Companion_instance_0.d2k().c2k().g2k()) : tmp0_elvis_lhs;
+      var openInternalLinksStrategy = tmp0_elvis_lhs == null ? toOpenLinkStrategy(evt, Companion_instance_0.z2j().y2j().c2k()) : tmp0_elvis_lhs;
       var tmp1_elvis_lhs = $openExternalLinksStrategy._v;
-      var openExternalLinksStrategy = tmp1_elvis_lhs == null ? toOpenLinkStrategy(evt, Companion_instance_0.d2k().c2k().h2k()) : tmp1_elvis_lhs;
-      $ctx.v2j_1.l2k($href, VOID, openInternalLinksStrategy, openExternalLinksStrategy);
+      var openExternalLinksStrategy = tmp1_elvis_lhs == null ? toOpenLinkStrategy(evt, Companion_instance_0.z2j().y2j().d2k()) : tmp1_elvis_lhs;
+      $ctx.r2j_1.h2k($href, VOID, openInternalLinksStrategy, openExternalLinksStrategy);
       evt.q2a();
       evt.r2a();
       return Unit_instance;
@@ -584,10 +584,10 @@
   }
   function Companion_1() {
   }
-  protoOf(Companion_1).m2k = function (path) {
-    return !(this.n2k(path) == null);
+  protoOf(Companion_1).i2k = function (path) {
+    return !(this.j2k(path) == null);
   };
-  protoOf(Companion_1).n2k = function (path) {
+  protoOf(Companion_1).j2k = function (path) {
     var tmp;
     try {
       tmp = new Route(path);
@@ -603,8 +603,8 @@
     }
     return tmp;
   };
-  protoOf(Companion_1).o2k = function (url) {
-    var tmp0_elvis_lhs = this.n2k(removePrefix(url.href, url.origin));
+  protoOf(Companion_1).k2k = function (url) {
+    var tmp0_elvis_lhs = this.j2k(removePrefix(url.href, url.origin));
     return tmp0_elvis_lhs == null ? new Route('') : tmp0_elvis_lhs;
   };
   var Companion_instance_1;
@@ -630,29 +630,29 @@
     if (!isValidRoute) {
       throw new RouteException(pathQueryAndFragment);
     }
-    this.l2j_1 = new URL(pathQueryAndFragment, 'http://unused.com');
+    this.h2j_1 = new URL(pathQueryAndFragment, 'http://unused.com');
     var isAbsolute = startsWith(pathQueryAndFragment, '/');
     var tmp_1 = this;
     var tmp_2;
     if (isAbsolute) {
-      tmp_2 = this.l2j_1.pathname;
+      tmp_2 = this.h2j_1.pathname;
     } else {
       // Inline function 'kotlin.also' call
-      var this_0 = drop(this.l2j_1.pathname, 1);
+      var this_0 = drop(this.h2j_1.pathname, 1);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.varabyte.kobweb.navigation.Route.<anonymous>' call
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
-      if (!(first(this.l2j_1.pathname) === _Char___init__impl__6a9atx(47))) {
+      if (!(first(this.h2j_1.pathname) === _Char___init__impl__6a9atx(47))) {
         // Inline function 'kotlin.check.<anonymous>' call
         var message = 'Check failed.';
         throw IllegalStateException_init_$Create$(toString(message));
       }
       tmp_2 = this_0;
     }
-    tmp_1.m2j_1 = tmp_2;
+    tmp_1.i2j_1 = tmp_2;
     var tmp_3 = this;
     // Inline function 'kotlin.apply' call
     // Inline function 'kotlin.collections.mutableMapOf' call
@@ -661,12 +661,12 @@
     $l$block: {
       // Inline function 'com.varabyte.kobweb.navigation.Route.<anonymous>' call
       // Inline function 'kotlin.text.isEmpty' call
-      var this_2 = this.l2j_1.search;
+      var this_2 = this.h2j_1.search;
       if (charSequenceLength(this_2) === 0) {
         break $l$block;
       }
       // Inline function 'kotlin.collections.forEach' call
-      var tmp0_iterator = split(removePrefix(this.l2j_1.search, '?'), charArrayOf([_Char___init__impl__6a9atx(38)])).k();
+      var tmp0_iterator = split(removePrefix(this.h2j_1.search, '?'), charArrayOf([_Char___init__impl__6a9atx(38)])).k();
       while (tmp0_iterator.x()) {
         var element = tmp0_iterator.z();
         // Inline function 'com.varabyte.kobweb.navigation.Route.<anonymous>.<anonymous>' call
@@ -679,10 +679,10 @@
         this_1.g2(key, value);
       }
     }
-    tmp_3.n2j_1 = this_1;
+    tmp_3.j2j_1 = this_1;
     var tmp_4 = this;
     // Inline function 'kotlin.takeIf' call
-    var this_3 = this.l2j_1.hash;
+    var this_3 = this.h2j_1.hash;
     // Inline function 'kotlin.contracts.contract' call
     var tmp_5;
     // Inline function 'com.varabyte.kobweb.navigation.Route.<anonymous>' call
@@ -692,57 +692,57 @@
       tmp_5 = null;
     }
     var tmp0_safe_receiver = tmp_5;
-    tmp_4.o2j_1 = tmp0_safe_receiver == null ? null : removePrefix(tmp0_safe_receiver, '#');
+    tmp_4.k2j_1 = tmp0_safe_receiver == null ? null : removePrefix(tmp0_safe_receiver, '#');
   }
   protoOf(Route).toString = function () {
-    return this.m2j_1 + this.l2j_1.search + this.l2j_1.hash;
+    return this.i2j_1 + this.h2j_1.search + this.h2j_1.hash;
   };
   function RouteException(value) {
     Exception_init_$Init$('Failed to create a route. Routes should be valid URLs without a leading domain. Got: ' + value, this);
     captureStack(this, RouteException);
   }
   function get_slug(_this__u8e3s4) {
-    return substringAfterLast_0(_this__u8e3s4.m2j_1, '/');
+    return substringAfterLast_0(_this__u8e3s4.i2j_1, '/');
   }
   function prependIf(_this__u8e3s4, condition, path) {
-    return condition ? Companion_instance_2.p2k(path) : path;
+    return condition ? Companion_instance_2.l2k(path) : path;
   }
   function Companion_2() {
   }
-  protoOf(Companion_2).q2k = function (value) {
-    Companion_instance_3.s2k(new RoutePrefixImpl(value));
+  protoOf(Companion_2).m2k = function (value) {
+    Companion_instance_3.o2k(new RoutePrefixImpl(value));
   };
   protoOf(Companion_2).j2 = function () {
-    return Companion_instance_3.t2j().t2k_1;
+    return Companion_instance_3.p2j().p2k_1;
   };
-  protoOf(Companion_2).p2k = function (path) {
-    return Companion_instance_3.t2j().p2k(path);
+  protoOf(Companion_2).l2k = function (path) {
+    return Companion_instance_3.p2j().l2k(path);
   };
   var Companion_instance_2;
   function Companion_getInstance_5() {
     return Companion_instance_2;
   }
   function Companion_3() {
-    this.r2k_1 = null;
+    this.n2k_1 = null;
   }
-  protoOf(Companion_3).s2k = function (value) {
+  protoOf(Companion_3).o2k = function (value) {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this.r2k_1 == null)) {
+    if (!(this.n2k_1 == null)) {
       // Inline function 'com.varabyte.kobweb.navigation.Companion.<set-_instance>.<anonymous>' call
       var message = 'Cannot overwrite route prefix once set';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    this.r2k_1 = value;
+    this.n2k_1 = value;
   };
-  protoOf(Companion_3).u2k = function () {
-    if (this.r2k_1 == null) {
-      this.r2k_1 = new RoutePrefixImpl('');
+  protoOf(Companion_3).q2k = function () {
+    if (this.n2k_1 == null) {
+      this.n2k_1 = new RoutePrefixImpl('');
     }
-    return this.r2k_1;
+    return this.n2k_1;
   };
-  protoOf(Companion_3).t2j = function () {
-    return ensureNotNull(this.u2k());
+  protoOf(Companion_3).p2j = function () {
+    return ensureNotNull(this.q2k());
   };
   var Companion_instance_3;
   function Companion_getInstance_6() {
@@ -781,17 +781,17 @@
       tmp_2 = endsWith(tmp1_safe_receiver, _Char___init__impl__6a9atx(47)) ? tmp1_safe_receiver : tmp1_safe_receiver + '/';
     }
     var tmp2_elvis_lhs = tmp_2;
-    tmp.t2k_1 = tmp2_elvis_lhs == null ? '' : tmp2_elvis_lhs;
+    tmp.p2k_1 = tmp2_elvis_lhs == null ? '' : tmp2_elvis_lhs;
   }
-  protoOf(RoutePrefixImpl).p2k = function (path) {
-    if (isBlank(this.t2k_1))
+  protoOf(RoutePrefixImpl).l2k = function (path) {
+    if (isBlank(this.p2k_1))
       return path;
     if (!startsWith(path, '/'))
       return path;
-    return dropLast(this.t2k_1, 1) + path;
+    return dropLast(this.p2k_1, 1) + path;
   };
   protoOf(RoutePrefixImpl).toString = function () {
-    return this.t2k_1;
+    return this.p2k_1;
   };
   function remove(_this__u8e3s4, path) {
     var tmp;
@@ -805,7 +805,7 @@
     return tmp;
   }
   function Companion_4() {
-    this.v2k_1 = false;
+    this.r2k_1 = false;
   }
   var Companion_instance_4;
   function Companion_getInstance_7() {
@@ -813,27 +813,27 @@
   }
   function Node(parent, name, method) {
     parent = parent === VOID ? null : parent;
-    this.w2k_1 = parent;
-    this.x2k_1 = name;
-    this.y2k_1 = method;
+    this.s2k_1 = parent;
+    this.t2k_1 = name;
+    this.u2k_1 = method;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.z2k_1 = ArrayList_init_$Create$_0();
-    this.a2l_1 = this.z2k_1;
+    tmp.v2k_1 = ArrayList_init_$Create$_0();
+    this.w2k_1 = this.v2k_1;
   }
-  protoOf(Node).b2l = function (name) {
+  protoOf(Node).x2k = function (name) {
     var tmp;
-    if (this.x2k_1 === name) {
+    if (this.t2k_1 === name) {
       tmp = true;
     } else {
       var tmp_0;
-      if (Companion_instance_4.v2k_1 ? contains(this.x2k_1, _Char___init__impl__6a9atx(45)) : false) {
-        var isLastPart = this.a2l_1.o();
+      if (Companion_instance_4.r2k_1 ? contains(this.t2k_1, _Char___init__impl__6a9atx(45)) : false) {
+        var isLastPart = this.w2k_1.o();
         var tmp_1;
         if (isLastPart) {
-          tmp_1 = replace(this.x2k_1, '-', '') === name;
+          tmp_1 = replace(this.t2k_1, '-', '') === name;
         } else {
-          tmp_1 = kebabCaseToCamelCase(this.x2k_1) === name;
+          tmp_1 = kebabCaseToCamelCase(this.t2k_1) === name;
         }
         tmp_0 = tmp_1;
       } else {
@@ -843,7 +843,7 @@
     }
     return tmp;
   };
-  protoOf(Node).c2l = function (routePart, method) {
+  protoOf(Node).y2k = function (routePart, method) {
     var tmp;
     if (startsWith_0(routePart, _Char___init__impl__6a9atx(123)) ? endsWith(routePart, _Char___init__impl__6a9atx(125)) : false) {
       // Inline function 'kotlin.text.substring' call
@@ -855,12 +855,12 @@
       tmp = new StaticNode(this, routePart, method);
     }
     var node = tmp;
-    this.z2k_1.u(node);
+    this.v2k_1.u(node);
     return node;
   };
-  protoOf(Node).d2l = function (routePart) {
+  protoOf(Node).z2k = function (routePart) {
     // Inline function 'kotlin.collections.find' call
-    var this_0 = this.z2k_1;
+    var this_0 = this.v2k_1;
     var tmp$ret$1;
     $l$block: {
       // Inline function 'kotlin.collections.firstOrNull' call
@@ -868,7 +868,7 @@
       while (tmp0_iterator.x()) {
         var element = tmp0_iterator.z();
         // Inline function 'com.varabyte.kobweb.navigation.Node.findChild.<anonymous>' call
-        if (element.b2l(routePart)) {
+        if (element.x2k(routePart)) {
           tmp$ret$1 = element;
           break $l$block;
         }
@@ -889,7 +889,7 @@
   function DynamicNode(parent, name, method) {
     ChildNode.call(this, parent, name, method);
   }
-  protoOf(DynamicNode).b2l = function (name) {
+  protoOf(DynamicNode).x2k = function (name) {
     return true;
   };
   function toRouteString(_this__u8e3s4, $this) {
@@ -899,12 +899,12 @@
     var routeParts = split(route, charArrayOf([_Char___init__impl__6a9atx(47)]));
     // Inline function 'kotlin.collections.mutableListOf' call
     var resolved = ArrayList_init_$Create$_0();
-    var currNode = $this.j2l_1;
+    var currNode = $this.f2l_1;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(routeParts.j(0) === $this.j2l_1.x2k_1)) {
+    if (!(routeParts.j(0) === $this.f2l_1.t2k_1)) {
       // Inline function 'kotlin.require.<anonymous>' call
       var message = 'Failed requirement.';
       throw IllegalArgumentException_init_$Create$(toString(message));
@@ -916,7 +916,7 @@
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         var routePart = routeParts.j(i);
-        var tmp1_elvis_lhs = currNode.d2l(routePart);
+        var tmp1_elvis_lhs = currNode.z2k(routePart);
         var tmp;
         if (tmp1_elvis_lhs == null) {
           return null;
@@ -932,18 +932,18 @@
   function resolveAllowingRedirects($this, route, showLegacyWarning) {
     // Inline function 'kotlin.collections.fold' call
     var accumulator = route;
-    var tmp0_iterator = $this.k2l_1.k();
+    var tmp0_iterator = $this.g2l_1.k();
     while (tmp0_iterator.x()) {
       var element = tmp0_iterator.z();
       // Inline function 'com.varabyte.kobweb.navigation.RouteTree.resolveAllowingRedirects.<anonymous>' call
       var route_0 = accumulator;
-      var tmp0_elvis_lhs = element.p2l(route_0);
+      var tmp0_elvis_lhs = element.l2l(route_0);
       accumulator = tmp0_elvis_lhs == null ? route_0 : tmp0_elvis_lhs;
     }
     var redirectedRoute = accumulator;
     var resolvedNodes = resolve($this, redirectedRoute);
-    if (resolvedNodes == null ? !$this.m2l_1.equals(LegacyRouteRedirectStrategy_DISALLOW_getInstance()) : false) {
-      Companion_instance_4.v2k_1 = true;
+    if (resolvedNodes == null ? !$this.i2l_1.equals(LegacyRouteRedirectStrategy_DISALLOW_getInstance()) : false) {
+      Companion_instance_4.r2k_1 = true;
       try {
         var tmp0_safe_receiver = resolve($this, route);
         var tmp;
@@ -960,7 +960,7 @@
         }
         resolvedNodes = tmp;
       }finally {
-        Companion_instance_4.v2k_1 = false;
+        Companion_instance_4.r2k_1 = false;
       }
     }
     return resolvedNodes;
@@ -969,7 +969,7 @@
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.collections.isNotEmpty' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!$this.j2l_1.a2l_1.o()) {
+    if (!!$this.f2l_1.w2k_1.o()) {
       // Inline function 'com.varabyte.kobweb.navigation.RouteTree.checkRoute.<anonymous>' call
       var message = "No routes were ever registered. This is unexpected and probably means no `@Page` was defined (or pages were defined in the wrong place where Kobweb couldn't discover them).";
       throw IllegalArgumentException_init_$Create$(toString(message));
@@ -992,7 +992,7 @@
     return toRouteString(resolvedNodes, $this);
   }
   function RouteTree$toRouteString$lambda(it) {
-    return it.x2k_1;
+    return it.t2k_1;
   }
   function ComposableLambda$invoke$ref($boundThis) {
     return function (p0, p1) {
@@ -1007,7 +1007,7 @@
         if (isTraceInProgress()) {
           traceEventStart(1742599790, $changed, -1, 'com.varabyte.kobweb.navigation.RouteTree.createPageData.<anonymous> (RouteTree.kt:231)');
         }
-        this$0.l2l_1(404, $composer_0, 6);
+        this$0.h2l_1(404, $composer_0, 6);
         var tmp_0;
         if (isTraceInProgress()) {
           traceEventEnd();
@@ -1022,26 +1022,26 @@
     };
   }
   function RouteTree() {
-    this.j2l_1 = new RootNode();
+    this.f2l_1 = new RootNode();
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.k2l_1 = ArrayList_init_$Create$_0();
-    this.l2l_1 = ComposableSingletons$RouteTreeKt_getInstance().q2l_1;
-    this.m2l_1 = LegacyRouteRedirectStrategy_WARN_getInstance();
+    tmp.g2l_1 = ArrayList_init_$Create$_0();
+    this.h2l_1 = ComposableSingletons$RouteTreeKt_getInstance().m2l_1;
+    this.i2l_1 = LegacyRouteRedirectStrategy_WARN_getInstance();
   }
-  protoOf(RouteTree).r2l = function (route) {
+  protoOf(RouteTree).n2l = function (route) {
     return !(checkRoute(this, route) == null);
   };
-  protoOf(RouteTree).s2l = function (route, method) {
+  protoOf(RouteTree).o2l = function (route, method) {
     if (!(resolve(this, route) == null))
       return false;
     var routeParts = split(route, charArrayOf([_Char___init__impl__6a9atx(47)]));
-    var currNode = this.j2l_1;
+    var currNode = this.f2l_1;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(routeParts.j(0) === this.j2l_1.x2k_1)) {
+    if (!(routeParts.j(0) === this.f2l_1.t2k_1)) {
       // Inline function 'kotlin.require.<anonymous>' call
       var message = 'Failed requirement.';
       throw IllegalArgumentException_init_$Create$(toString(message));
@@ -1053,7 +1053,7 @@
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         var routePart = routeParts.j(i);
-        var tmp1_elvis_lhs = currNode.d2l(routePart);
+        var tmp1_elvis_lhs = currNode.z2k(routePart);
         var tmp;
         if (tmp1_elvis_lhs == null) {
           var tmp_0 = currNode;
@@ -1067,7 +1067,7 @@
             tmp_1 = null;
           }
           var tmp$ret$2 = tmp_1;
-          tmp = tmp_0.c2l(routePart, tmp$ret$2);
+          tmp = tmp_0.y2k(routePart, tmp$ret$2);
         } else {
           tmp = tmp1_elvis_lhs;
         }
@@ -1076,9 +1076,9 @@
        while (inductionVariable < last);
     return true;
   };
-  protoOf(RouteTree).t2l = function (route) {
+  protoOf(RouteTree).p2l = function (route) {
     var errorPageMethod = ComposableLambda$invoke$ref(composableLambdaInstance(1742599790, true, RouteTree$createPageData$lambda(this)));
-    var tmp0_elvis_lhs = resolveAllowingRedirects(this, route.m2j_1, this.m2l_1.equals(LegacyRouteRedirectStrategy_WARN_getInstance()));
+    var tmp0_elvis_lhs = resolveAllowingRedirects(this, route.i2j_1, this.i2l_1.equals(LegacyRouteRedirectStrategy_WARN_getInstance()));
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return new PageData(errorPageMethod, new RouteInfo(route, emptyMap()));
@@ -1086,7 +1086,7 @@
       tmp = tmp0_elvis_lhs;
     }
     var resolvedNodes = tmp;
-    var tmp1_elvis_lhs = last(resolvedNodes).y2k_1;
+    var tmp1_elvis_lhs = last(resolvedNodes).u2k_1;
     var pageMethod = tmp1_elvis_lhs == null ? errorPageMethod : tmp1_elvis_lhs;
     // Inline function 'kotlin.collections.mutableMapOf' call
     var dynamicParams = LinkedHashMap_init_$Create$();
@@ -1096,28 +1096,28 @@
       var element = tmp0_iterator.z();
       // Inline function 'com.varabyte.kobweb.navigation.RouteTree.createPageData.<anonymous>' call
       if (element instanceof DynamicNode) {
-        var routePart = element.x2k_1;
+        var routePart = element.t2k_1;
         // Inline function 'kotlin.collections.set' call
-        var key = element.x2k_1;
+        var key = element.t2k_1;
         dynamicParams.g2(key, routePart);
-        if (!this.m2l_1.equals(LegacyRouteRedirectStrategy_DISALLOW_getInstance()) ? contains(element.x2k_1, _Char___init__impl__6a9atx(45)) : false) {
+        if (!this.i2l_1.equals(LegacyRouteRedirectStrategy_DISALLOW_getInstance()) ? contains(element.t2k_1, _Char___init__impl__6a9atx(45)) : false) {
           // Inline function 'kotlin.collections.set' call
-          var key_0 = replace(element.x2k_1, '-', '');
+          var key_0 = replace(element.t2k_1, '-', '');
           dynamicParams.g2(key_0, routePart);
           // Inline function 'kotlin.collections.set' call
-          var key_1 = kebabCaseToCamelCase(element.x2k_1);
+          var key_1 = kebabCaseToCamelCase(element.t2k_1);
           dynamicParams.g2(key_1, routePart);
           // Inline function 'kotlin.collections.set' call
-          var key_2 = replace_0(element.x2k_1, _Char___init__impl__6a9atx(45), _Char___init__impl__6a9atx(95));
+          var key_2 = replace_0(element.t2k_1, _Char___init__impl__6a9atx(45), _Char___init__impl__6a9atx(95));
           dynamicParams.g2(key_2, routePart);
         }
       }
     }
-    return new PageData(pageMethod, new RouteInfo(Route_init_$Create$(toRouteString(resolvedNodes, this), route.n2j_1, route.o2j_1), dynamicParams));
+    return new PageData(pageMethod, new RouteInfo(Route_init_$Create$(toRouteString(resolvedNodes, this), route.j2j_1, route.k2j_1), dynamicParams));
   };
   function PageData(pageMethod, routeInfo) {
-    this.u2l_1 = pageMethod;
-    this.v2l_1 = routeInfo;
+    this.q2l_1 = pageMethod;
+    this.r2l_1 = routeInfo;
   }
   function ComposableLambda$invoke$ref_0($boundThis) {
     return function (p0, p1, p2) {
@@ -1145,7 +1145,7 @@
   function ComposableSingletons$RouteTreeKt() {
     ComposableSingletons$RouteTreeKt_instance = this;
     var tmp = this;
-    tmp.q2l_1 = ComposableLambda$invoke$ref_0(composableLambdaInstance(-557678680, false, ComposableSingletons$RouteTreeKt$lambda_1$lambda_h43un7));
+    tmp.m2l_1 = ComposableLambda$invoke$ref_0(composableLambdaInstance(-557678680, false, ComposableSingletons$RouteTreeKt$lambda_1$lambda_h43un7));
   }
   var ComposableSingletons$RouteTreeKt_instance;
   function ComposableSingletons$RouteTreeKt_getInstance() {
@@ -1246,27 +1246,27 @@
     Enum.call(this, name, ordinal);
   }
   function _set_activePageMethod__f6z3vj($this, _set____db54di) {
-    var this_0 = $this.i2k_1;
+    var this_0 = $this.e2k_1;
     activePageMethod$factory();
     this_0.kq(_set____db54di);
     return Unit_instance;
   }
   function _get_activePageMethod__dw5579($this) {
     // Inline function 'androidx.compose.runtime.getValue' call
-    var this_0 = $this.i2k_1;
+    var this_0 = $this.e2k_1;
     activePageMethod$factory_0();
     return this_0.j2();
   }
   function updatePageContext(_this__u8e3s4, $this, pathQueryAndFragment) {
     if (startsWith(pathQueryAndFragment, '#')) {
-      var tmp0_safe_receiver = _this__u8e3s4.w2j_1.j2();
+      var tmp0_safe_receiver = _this__u8e3s4.s2j_1.j2();
       var tmp;
       if (tmp0_safe_receiver == null) {
         tmp = null;
       } else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        _this__u8e3s4.w2j_1.kq(tmp0_safe_receiver.r2j(VOID, VOID, removePrefix(pathQueryAndFragment, '#')));
+        _this__u8e3s4.s2j_1.kq(tmp0_safe_receiver.n2j(VOID, VOID, removePrefix(pathQueryAndFragment, '#')));
         return true;
       }
       if (tmp == null) {
@@ -1275,12 +1275,12 @@
         return false;
       }
     }
-    var route = Companion_instance_1.n2k(pathQueryAndFragment);
+    var route = Companion_instance_1.j2k(pathQueryAndFragment);
     var tmp_0;
     if (!(route == null)) {
-      var data = $this.j2k_1.t2l(route);
-      _set_activePageMethod__f6z3vj($this, data.u2l_1);
-      _this__u8e3s4.x2j(data.v2l_1);
+      var data = $this.f2k_1.p2l(route);
+      _set_activePageMethod__f6z3vj($this, data.q2l_1);
+      _this__u8e3s4.t2j(data.r2l_1);
       tmp_0 = true;
     } else {
       tmp_0 = false;
@@ -1292,12 +1292,12 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!Companion_instance_1.m2k(_this__u8e3s4)) {
+    if (!Companion_instance_1.i2k(_this__u8e3s4)) {
       // Inline function 'kotlin.check.<anonymous>' call
       var message = 'Check failed.';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    var hrefResolved = Companion_instance_1.o2k(new URL(_this__u8e3s4, window.location.href)).toString();
+    var hrefResolved = Companion_instance_1.k2k(new URL(_this__u8e3s4, window.location.href)).toString();
     // Inline function 'kotlin.takeIf' call
     var this_0 = remove(Companion_instance_2, hrefResolved);
     // Inline function 'kotlin.contracts.contract' call
@@ -1314,7 +1314,7 @@
     var hadPrefix = !(withoutPrefix === hrefResolved);
     var tmp_0 = Companion_instance_2;
     // Inline function 'kotlin.collections.fold' call
-    var this_1 = $this.k2k_1;
+    var this_1 = $this.g2k_1;
     var accumulator = (new Route(withoutPrefix)).toString();
     var tmp0_iterator = this_1.k();
     while (tmp0_iterator.x()) {
@@ -1323,7 +1323,7 @@
       var acc = accumulator;
       var interceptor = new RouteInterceptorScope(acc);
       element(interceptor);
-      accumulator = interceptor.p2j();
+      accumulator = interceptor.l2j();
     }
     var tmp$ret$5 = accumulator;
     return prependIf(tmp_0, hadPrefix, tmp$ret$5);
@@ -1334,7 +1334,7 @@
   }
   function Router$lambda(this$0) {
     return function (it) {
-      var tmp = Companion_instance.t2j();
+      var tmp = Companion_instance.p2j();
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.varabyte.kobweb.navigation.Router.<anonymous>.<anonymous>' call
@@ -1427,7 +1427,7 @@
   }
   function Router$renderActivePage$lambda_0($tmp0_rcvr, $pageWrapper, $$changed, $$default) {
     return function ($composer, $force) {
-      $tmp0_rcvr.a2m($pageWrapper._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      $tmp0_rcvr.w2l($pageWrapper._v, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_instance;
     };
   }
@@ -1461,21 +1461,21 @@
     return LegacyRouteRedirectStrategy_DISALLOW_instance;
   }
   function Router() {
-    this.i2k_1 = mutableStateOf(null);
-    this.j2k_1 = new RouteTree();
+    this.e2k_1 = mutableStateOf(null);
+    this.f2k_1 = new RouteTree();
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.k2k_1 = ArrayList_init_$Create$_0();
-    Companion_instance.u2j(this);
+    tmp.g2k_1 = ArrayList_init_$Create$_0();
+    Companion_instance.q2j(this);
     var tmp_0 = window;
     tmp_0.onpopstate = Router$lambda(this);
   }
-  protoOf(Router).a2m = function (pageWrapper, $composer, $changed, $default) {
+  protoOf(Router).w2l = function (pageWrapper, $composer, $changed, $default) {
     var pageWrapper_0 = {_v: pageWrapper};
     var $composer_0 = $composer;
     $composer_0 = $composer_0.h19(-1032287943);
     if (!(($default & 1) === 0)) {
-      pageWrapper_0._v = ComposableSingletons$RouterKt_getInstance().b2m_1;
+      pageWrapper_0._v = ComposableSingletons$RouterKt_getInstance().x2l_1;
     }
     if (isTraceInProgress()) {
       traceEventStart(-1032287943, $changed, -1, 'com.varabyte.kobweb.navigation.Router.renderActivePage (Router.kt:165)');
@@ -1489,7 +1489,7 @@
       tmp = tmp0_elvis_lhs;
     }
     var pageMethod = tmp;
-    var tmp_0 = get_PageContextLocal().d1e(Companion_instance.t2j());
+    var tmp_0 = get_PageContextLocal().d1e(Companion_instance.p2j());
     // Inline function 'kotlin.run' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.varabyte.kobweb.navigation.Router.renderActivePage.<anonymous>' call
@@ -1528,41 +1528,41 @@
       tmp1_safe_receiver.f1e(Router$renderActivePage$lambda_0(this, pageWrapper_0, $changed, $default));
     }
   };
-  protoOf(Router).c2m = function (route, autoPrefix, pageMethod) {
+  protoOf(Router).y2l = function (route, autoPrefix, pageMethod) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(Companion_instance_1.m2k(route) ? startsWith_0(route, _Char___init__impl__6a9atx(47)) : false)) {
+    if (!(Companion_instance_1.i2k(route) ? startsWith_0(route, _Char___init__impl__6a9atx(47)) : false)) {
       // Inline function 'com.varabyte.kobweb.navigation.Router.register.<anonymous>' call
       var message = 'Registration only allowed for internal, rooted routes, e.g. /example/path. Got: ' + route;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!this.j2k_1.s2l(prependIf(Companion_instance_2, autoPrefix, route), pageMethod)) {
+    if (!this.f2k_1.o2l(prependIf(Companion_instance_2, autoPrefix, route), pageMethod)) {
       // Inline function 'com.varabyte.kobweb.navigation.Router.register.<anonymous>' call
       var message_0 = 'Registration failure. Path is already registered: ' + route;
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
   };
-  protoOf(Router).d2m = function (route, autoPrefix, pageMethod, $super) {
+  protoOf(Router).z2l = function (route, autoPrefix, pageMethod, $super) {
     autoPrefix = autoPrefix === VOID ? true : autoPrefix;
     var tmp;
     if ($super === VOID) {
-      this.c2m(route, autoPrefix, pageMethod);
+      this.y2l(route, autoPrefix, pageMethod);
       tmp = Unit_instance;
     } else {
-      tmp = $super.c2m.call(this, route, autoPrefix, pageMethod);
+      tmp = $super.y2l.call(this, route, autoPrefix, pageMethod);
     }
     return tmp;
   };
-  protoOf(Router).e2m = function (strategy) {
-    this.j2k_1.m2l_1 = strategy;
+  protoOf(Router).a2m = function (strategy) {
+    this.f2k_1.i2l_1 = strategy;
   };
-  protoOf(Router).f2m = function (interceptor) {
-    this.k2k_1.u(interceptor);
+  protoOf(Router).b2m = function (interceptor) {
+    this.g2k_1.u(interceptor);
   };
-  protoOf(Router).g2m = function (pathQueryAndFragment, updateHistoryMode, openLinkStrategy) {
-    var tmp0_safe_receiver = Companion_instance_1.n2k(pathQueryAndFragment);
+  protoOf(Router).c2m = function (pathQueryAndFragment, updateHistoryMode, openLinkStrategy) {
+    var tmp0_safe_receiver = Companion_instance_1.j2k(pathQueryAndFragment);
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : get_slug(tmp0_safe_receiver);
     var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : substringAfterLast(tmp1_safe_receiver, _Char___init__impl__6a9atx(46), '');
     var tmp;
@@ -1586,7 +1586,7 @@
       return false;
     }
     var pathQueryAndFragment_0 = pathQueryAndFragment;
-    if (Companion_instance_1.m2k(pathQueryAndFragment_0)) {
+    if (Companion_instance_1.i2k(pathQueryAndFragment_0)) {
       pathQueryAndFragment_0 = normalize(pathQueryAndFragment_0, this);
       var tmp$ret$4;
       $l$block: {
@@ -1606,15 +1606,15 @@
       }
       if (tmp$ret$4) {
         var route = pathQueryAndFragment_0;
-        if (!this.j2k_1.r2l(route) ? !(route === '/') : false) {
+        if (!this.f2k_1.n2l(route) ? !(route === '/') : false) {
           if (endsWith(route, _Char___init__impl__6a9atx(47))) {
             var withoutSlash = removeSuffix(route, '/');
-            if (this.j2k_1.r2l(withoutSlash)) {
+            if (this.f2k_1.n2l(withoutSlash)) {
               pathQueryAndFragment_0 = withoutSlash;
             }
           } else {
             var withSlash = route + '/';
-            if (this.j2k_1.r2l(withSlash)) {
+            if (this.f2k_1.n2l(withSlash)) {
               pathQueryAndFragment_0 = withSlash;
             }
           }
@@ -1626,13 +1626,13 @@
       return true;
     }
     var tmp_1;
-    if (updatePageContext(Companion_instance.t2j(), this, pathQueryAndFragment_0)) {
-      pathQueryAndFragment_0 = Companion_instance.t2j().y2j().h2j_1 + partitionPath(pathQueryAndFragment_0, this).de_1;
+    if (updatePageContext(Companion_instance.p2j(), this, pathQueryAndFragment_0)) {
+      pathQueryAndFragment_0 = Companion_instance.p2j().u2j().d2j_1 + partitionPath(pathQueryAndFragment_0, this).de_1;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       var url = window.location.origin + pathQueryAndFragment_0;
       if (!(window.location.href === url)) {
-        var newPathname = !(window.location.pathname === Companion_instance_1.o2k(new URL(url)).m2j_1);
+        var newPathname = !(window.location.pathname === Companion_instance_1.k2k(new URL(url)).i2j_1);
         var tmp0 = updateHistoryMode.t9_1;
         if (tmp0 === 0) {
           window.history.pushState(window.history.state, '', url);
@@ -1664,40 +1664,40 @@
     }
     return tmp_1;
   };
-  protoOf(Router).h2m = function (pathQueryAndFragment, updateHistoryMode, openLinkStrategy, $super) {
+  protoOf(Router).d2m = function (pathQueryAndFragment, updateHistoryMode, openLinkStrategy, $super) {
     updateHistoryMode = updateHistoryMode === VOID ? UpdateHistoryMode_PUSH_getInstance() : updateHistoryMode;
     openLinkStrategy = openLinkStrategy === VOID ? OpenLinkStrategy_IN_PLACE_getInstance() : openLinkStrategy;
-    return $super === VOID ? this.g2m(pathQueryAndFragment, updateHistoryMode, openLinkStrategy) : $super.g2m.call(this, pathQueryAndFragment, updateHistoryMode, openLinkStrategy);
+    return $super === VOID ? this.c2m(pathQueryAndFragment, updateHistoryMode, openLinkStrategy) : $super.c2m.call(this, pathQueryAndFragment, updateHistoryMode, openLinkStrategy);
   };
-  protoOf(Router).i2m = function (pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy, openExternalLinksStrategy) {
-    if (!this.g2m(pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy)) {
+  protoOf(Router).e2m = function (pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy, openExternalLinksStrategy) {
+    if (!this.c2m(pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy)) {
       open(window, pathQueryAndFragment, openExternalLinksStrategy);
     }
   };
-  protoOf(Router).l2k = function (pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy, openExternalLinksStrategy, $super) {
+  protoOf(Router).h2k = function (pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy, openExternalLinksStrategy, $super) {
     updateHistoryMode = updateHistoryMode === VOID ? UpdateHistoryMode_PUSH_getInstance() : updateHistoryMode;
     openInternalLinksStrategy = openInternalLinksStrategy === VOID ? OpenLinkStrategy_IN_PLACE_getInstance() : openInternalLinksStrategy;
     openExternalLinksStrategy = openExternalLinksStrategy === VOID ? OpenLinkStrategy_IN_NEW_TAB_getInstance() : openExternalLinksStrategy;
     var tmp;
     if ($super === VOID) {
-      this.i2m(pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy, openExternalLinksStrategy);
+      this.e2m(pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy, openExternalLinksStrategy);
       tmp = Unit_instance;
     } else {
-      tmp = $super.i2m.call(this, pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy, openExternalLinksStrategy);
+      tmp = $super.e2m.call(this, pathQueryAndFragment, updateHistoryMode, openInternalLinksStrategy, openExternalLinksStrategy);
     }
     return tmp;
   };
   function RouteInterceptorScope(pathQueryAndFragment) {
-    this.w2l_1 = new Route(pathQueryAndFragment);
-    this.x2l_1 = this.w2l_1.m2j_1;
-    this.y2l_1 = toMutableMap(this.w2l_1.n2j_1);
-    this.z2l_1 = this.w2l_1.o2j_1;
+    this.s2l_1 = new Route(pathQueryAndFragment);
+    this.t2l_1 = this.s2l_1.i2j_1;
+    this.u2l_1 = toMutableMap(this.s2l_1.j2j_1);
+    this.v2l_1 = this.s2l_1.k2j_1;
   }
-  protoOf(RouteInterceptorScope).j2m = function (value) {
-    this.x2l_1 = startsWith_0(value, _Char___init__impl__6a9atx(47)) ? value : '/' + value;
+  protoOf(RouteInterceptorScope).f2m = function (value) {
+    this.t2l_1 = startsWith_0(value, _Char___init__impl__6a9atx(47)) ? value : '/' + value;
   };
-  protoOf(RouteInterceptorScope).p2j = function () {
-    return Route_init_$Create$(this.x2l_1, this.y2l_1, this.z2l_1).toString();
+  protoOf(RouteInterceptorScope).l2j = function () {
+    return Route_init_$Create$(this.t2l_1, this.u2l_1, this.v2l_1).toString();
   };
   function ComposableLambda$invoke$ref_4($boundThis) {
     return function (p0, p1, p2) {
@@ -1725,7 +1725,7 @@
   function ComposableSingletons$RouterKt() {
     ComposableSingletons$RouterKt_instance = this;
     var tmp = this;
-    tmp.b2m_1 = ComposableLambda$invoke$ref_4(composableLambdaInstance(-12986461, false, ComposableSingletons$RouterKt$lambda_1$lambda_cmwzz7));
+    tmp.x2l_1 = ComposableLambda$invoke$ref_4(composableLambdaInstance(-12986461, false, ComposableSingletons$RouterKt$lambda_1$lambda_cmwzz7));
   }
   var ComposableSingletons$RouterKt_instance;
   function ComposableSingletons$RouterKt_getInstance() {

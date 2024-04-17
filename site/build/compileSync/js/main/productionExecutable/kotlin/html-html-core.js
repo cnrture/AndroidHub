@@ -1136,29 +1136,20 @@
   function gridRow(_this__u8e3s4, start, end) {
     _this__u8e3s4.c27('grid-row', '' + start + ' / ' + end);
   }
-  function gridRowStart(_this__u8e3s4, value) {
-    _this__u8e3s4.d27('grid-row-start', value);
-  }
-  function gridColumn(_this__u8e3s4, start, end) {
-    _this__u8e3s4.c27('grid-column', '' + start + ' / ' + end);
-  }
-  function gridColumnStart(_this__u8e3s4, value) {
-    _this__u8e3s4.d27('grid-column-start', value);
-  }
   function gridTemplateColumns(_this__u8e3s4, value) {
     _this__u8e3s4.c27('grid-template-columns', value);
   }
   function gridTemplateRows(_this__u8e3s4, value) {
     _this__u8e3s4.c27('grid-template-rows', value);
   }
+  function gridArea(_this__u8e3s4, rowStart, columnStart) {
+    _this__u8e3s4.c27('grid-area', rowStart + ' / ' + columnStart);
+  }
   function gridAutoColumns(_this__u8e3s4, value) {
     _this__u8e3s4.c27('grid-auto-columns', value);
   }
   function gridAutoRows(_this__u8e3s4, value) {
     _this__u8e3s4.c27('grid-auto-rows', value);
-  }
-  function gridArea(_this__u8e3s4, rowStart, columnStart) {
-    _this__u8e3s4.c27('grid-area', rowStart + ' / ' + columnStart);
   }
   function margin(_this__u8e3s4, value) {
     _this__u8e3s4.c27('margin', joinToString_0(value, ' '));
@@ -1202,11 +1193,11 @@
   function fontSize(_this__u8e3s4, value) {
     _this__u8e3s4.h27('font-size', value);
   }
-  function fontFamily(_this__u8e3s4, value) {
-    _this__u8e3s4.c27('font-family', joinToString_0(value, ', ', VOID, VOID, VOID, VOID, fontFamily$lambda));
-  }
   function fontWeight(_this__u8e3s4, value) {
     _this__u8e3s4.d27('font-weight', value);
+  }
+  function fontFamily(_this__u8e3s4, value) {
+    _this__u8e3s4.c27('font-family', joinToString_0(value, ', ', VOID, VOID, VOID, VOID, fontFamily$lambda));
   }
   function fontFamily$lambda(it) {
     return contains(it, ' ') ? '"' + it + '"' : it;
@@ -3068,55 +3059,52 @@
   _.$_$.c2 = gridArea;
   _.$_$.d2 = gridAutoColumns;
   _.$_$.e2 = gridAutoRows;
-  _.$_$.f2 = gridColumnStart;
-  _.$_$.g2 = gridColumn;
-  _.$_$.h2 = gridRowStart;
-  _.$_$.i2 = gridRow;
-  _.$_$.j2 = gridTemplateColumns;
-  _.$_$.k2 = gridTemplateRows;
-  _.$_$.l2 = height;
-  _.$_$.m2 = justifyContent;
-  _.$_$.n2 = left;
-  _.$_$.o2 = lineHeight;
-  _.$_$.p2 = marginTop;
-  _.$_$.q2 = margin;
-  _.$_$.r2 = maxWidth;
-  _.$_$.s2 = media;
-  _.$_$.t2 = minHeight;
-  _.$_$.u2 = minWidth;
-  _.$_$.v2 = get_ms;
-  _.$_$.w2 = opacity;
-  _.$_$.x2 = padding;
-  _.$_$.y2 = get_percent;
-  _.$_$.z2 = position;
-  _.$_$.a3 = get_px;
-  _.$_$.b3 = right;
-  _.$_$.c3 = style_1;
-  _.$_$.d3 = top;
-  _.$_$.e3 = unaryMinus;
-  _.$_$.f3 = get_vh;
-  _.$_$.g3 = width_0;
-  _.$_$.h3 = width;
-  _.$_$.i3 = A_0;
-  _.$_$.j3 = Button_0;
-  _.$_$.k3 = Code_0;
-  _.$_$.l3 = Div_0;
-  _.$_$.m3 = ElementBuilder;
-  _.$_$.n3 = Em_0;
-  _.$_$.o3 = H1_0;
-  _.$_$.p3 = H2_0;
-  _.$_$.q3 = H3_0;
-  _.$_$.r3 = H4_0;
-  _.$_$.s3 = Hr_0;
-  _.$_$.t3 = Img_0;
-  _.$_$.u3 = Li_0;
-  _.$_$.v3 = Pre_0;
-  _.$_$.w3 = P_0;
-  _.$_$.x3 = Span_0;
-  _.$_$.y3 = Style_0;
-  _.$_$.z3 = TagElement;
-  _.$_$.a4 = Text_0;
-  _.$_$.b4 = Ul_0;
+  _.$_$.f2 = gridRow;
+  _.$_$.g2 = gridTemplateColumns;
+  _.$_$.h2 = gridTemplateRows;
+  _.$_$.i2 = height;
+  _.$_$.j2 = justifyContent;
+  _.$_$.k2 = left;
+  _.$_$.l2 = lineHeight;
+  _.$_$.m2 = marginTop;
+  _.$_$.n2 = margin;
+  _.$_$.o2 = maxWidth;
+  _.$_$.p2 = media;
+  _.$_$.q2 = minHeight;
+  _.$_$.r2 = minWidth;
+  _.$_$.s2 = get_ms;
+  _.$_$.t2 = opacity;
+  _.$_$.u2 = padding;
+  _.$_$.v2 = get_percent;
+  _.$_$.w2 = position;
+  _.$_$.x2 = get_px;
+  _.$_$.y2 = right;
+  _.$_$.z2 = style_1;
+  _.$_$.a3 = top;
+  _.$_$.b3 = unaryMinus;
+  _.$_$.c3 = get_vh;
+  _.$_$.d3 = width_0;
+  _.$_$.e3 = width;
+  _.$_$.f3 = A_0;
+  _.$_$.g3 = Button_0;
+  _.$_$.h3 = Code_0;
+  _.$_$.i3 = Div_0;
+  _.$_$.j3 = ElementBuilder;
+  _.$_$.k3 = Em_0;
+  _.$_$.l3 = H1_0;
+  _.$_$.m3 = H2_0;
+  _.$_$.n3 = H3_0;
+  _.$_$.o3 = H4_0;
+  _.$_$.p3 = Hr_0;
+  _.$_$.q3 = Img_0;
+  _.$_$.r3 = Li_0;
+  _.$_$.s3 = Pre_0;
+  _.$_$.t3 = P_0;
+  _.$_$.u3 = Span_0;
+  _.$_$.v3 = Style_0;
+  _.$_$.w3 = TagElement;
+  _.$_$.x3 = Text_0;
+  _.$_$.y3 = Ul_0;
   //endregion
   return _;
 }));

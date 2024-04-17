@@ -29,7 +29,7 @@
   //region block: imports
   var imul = Math.imul;
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var THROW_CCE = kotlin_kotlin.$_$.te;
+  var THROW_CCE = kotlin_kotlin.$_$.re;
   var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
   var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
   var Unit_getInstance = kotlin_kotlin.$_$.l4;
@@ -47,7 +47,7 @@
   var collectionSizeOrDefault = kotlin_kotlin.$_$.a6;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
   var distinct = kotlin_kotlin.$_$.q6;
-  var lazy = kotlin_kotlin.$_$.of;
+  var lazy = kotlin_kotlin.$_$.mf;
   var classMeta = kotlin_kotlin.$_$.ea;
   var removeSuffix = kotlin_kotlin.$_$.ed;
   var titleCamelCaseToKebabCase = kotlin_com_varabyte_kobweb_browser_ext.$_$.f;
@@ -57,7 +57,7 @@
   var toStyles = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e3;
   var LinkedHashMap_init_$Create$_0 = kotlin_kotlin.$_$.t;
   var From_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.h;
-  var to = kotlin_kotlin.$_$.xf;
+  var to = kotlin_kotlin.$_$.vf;
   var To_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.i;
   var Percentage = kotlin_org_jetbrains_compose_html_html_core.$_$.q2;
   var toList = kotlin_kotlin.$_$.s8;
@@ -111,14 +111,14 @@
   var getStringHashCode = kotlin_kotlin.$_$.na;
   var isBlank = kotlin_kotlin.$_$.xc;
   var first = kotlin_kotlin.$_$.uc;
-  var Char = kotlin_kotlin.$_$.ge;
+  var Char = kotlin_kotlin.$_$.ee;
   var setOf = kotlin_kotlin.$_$.d8;
-  var THROW_IAE = kotlin_kotlin.$_$.ue;
+  var THROW_IAE = kotlin_kotlin.$_$.se;
   var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.ie;
+  var Enum = kotlin_kotlin.$_$.ge;
   var numberToDouble = kotlin_kotlin.$_$.kb;
   var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
-  var toIntOrNull = kotlin_kotlin.$_$.ud;
+  var toIntOrNull = kotlin_kotlin.$_$.td;
   var endsWith_0 = kotlin_kotlin.$_$.sc;
   var startsWith = kotlin_kotlin.$_$.md;
   var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k3;
@@ -137,19 +137,19 @@
   var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
   var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
   var invokeLater = kotlin_com_varabyte_kobweb_browser_ext.$_$.b;
-  var Annotation = kotlin_kotlin.$_$.fe;
-  var asList = kotlin_kotlin.$_$.zf;
+  var Annotation = kotlin_kotlin.$_$.de;
+  var asList = kotlin_kotlin.$_$.xf;
   var Map = kotlin_kotlin.$_$.f5;
   var isInterface = kotlin_kotlin.$_$.za;
   var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.v;
   var get_cssRem = kotlin_org_jetbrains_compose_html_html_core.$_$.u3;
-  var trimIndent = kotlin_kotlin.$_$.zd;
+  var trimIndent = kotlin_kotlin.$_$.xd;
   var MediaFeature = kotlin_org_jetbrains_compose_html_html_core.$_$.t2;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.pf;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.nf;
   var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
   var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p;
   var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h3;
-  var ensureNotNull = kotlin_kotlin.$_$.mf;
+  var ensureNotNull = kotlin_kotlin.$_$.kf;
   var styleModifier = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b3;
   //endregion
   //region block: pre-declaration

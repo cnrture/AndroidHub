@@ -33,8 +33,8 @@
   var THROW_CCE = kotlin_kotlin.$_$.n8;
   var KobwebApp = kotlin_com_varabyte_kobweb_kobweb_core.$_$.b;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
-  var setSilkWidgetVariables = kotlin_com_varabyte_kobweb_silk_widgets.$_$.n;
-  var prepareSilkFoundation = kotlin_com_varabyte_kobweb_silk_foundation.$_$.k1;
+  var setSilkWidgetVariables = kotlin_com_varabyte_kobweb_silk_widgets.$_$.p;
+  var prepareSilkFoundation = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j1;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
   //endregion
   //region block: pre-declaration

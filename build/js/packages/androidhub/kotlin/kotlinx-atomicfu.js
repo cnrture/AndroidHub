@@ -12,106 +12,20 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var fillArrayVal = kotlin_kotlin.$_$.ia;
-  var protoOf = kotlin_kotlin.$_$.ob;
-  var defineProp = kotlin_kotlin.$_$.ga;
-  var classMeta = kotlin_kotlin.$_$.ea;
-  var setMetadataFor = kotlin_kotlin.$_$.pb;
-  var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var objectMeta = kotlin_kotlin.$_$.nb;
-  var toString = kotlin_kotlin.$_$.rb;
-  var VOID = kotlin_kotlin.$_$.e;
-  var toString_0 = kotlin_kotlin.$_$.wf;
+  var protoOf = kotlin_kotlin.$_$.j6;
+  var objectMeta = kotlin_kotlin.$_$.i6;
+  var setMetadataFor = kotlin_kotlin.$_$.k6;
+  var classMeta = kotlin_kotlin.$_$.n5;
+  var toString = kotlin_kotlin.$_$.b9;
+  var VOID = kotlin_kotlin.$_$.c;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(atomicfu$AtomicRefArray$ref, 'AtomicArray', classMeta);
   setMetadataFor(atomicfu$TraceBase, 'TraceBase', classMeta);
   setMetadataFor(None, 'None', objectMeta, atomicfu$TraceBase);
-  setMetadataFor(atomicfu$TraceFormat, 'TraceFormat', classMeta, VOID, VOID, atomicfu$TraceFormat);
   setMetadataFor(AtomicRef, 'AtomicRef', classMeta);
   setMetadataFor(AtomicBoolean, 'AtomicBoolean', classMeta);
   setMetadataFor(AtomicInt, 'AtomicInt', classMeta);
-  setMetadataFor(AtomicLong, 'AtomicLong', classMeta);
-  setMetadataFor(ReentrantLock, 'ReentrantLock', classMeta, VOID, VOID, ReentrantLock);
   //endregion
-  function loop(_this__u8e3s4, action) {
-    while (true) {
-      action(_this__u8e3s4.get_kotlinx$atomicfu$value_vi2am5_k$());
-    }
-  }
-  function _get_array__jslnqg($this) {
-    return $this.array_1;
-  }
-  function atomicfu$AtomicRefArray$ref(size) {
-    var tmp = this;
-    var tmp_0 = 0;
-    // Inline function 'kotlin.arrayOfNulls' call
-    var tmp_1 = fillArrayVal(Array(size), null);
-    while (tmp_0 < size) {
-      tmp_1[tmp_0] = atomic$ref$1(null);
-      tmp_0 = tmp_0 + 1 | 0;
-    }
-    tmp.array_1 = tmp_1;
-  }
-  protoOf(atomicfu$AtomicRefArray$ref).get_atomicfu$size_iufoqq_k$ = function () {
-    return this.array_1.length;
-  };
-  protoOf(atomicfu$AtomicRefArray$ref).atomicfu$get = function (index) {
-    return this.array_1[index];
-  };
-  function atomicfu$AtomicRefArray$ofNulls(size) {
-    return new atomicfu$AtomicRefArray$ref(size);
-  }
-  function update(_this__u8e3s4, function_0) {
-    while (true) {
-      var cur = _this__u8e3s4.get_kotlinx$atomicfu$value_vi2am5_k$();
-      var upd = function_0(cur);
-      if (_this__u8e3s4.atomicfu$compareAndSet(cur, upd))
-        return Unit_getInstance();
-    }
-  }
-  function getAndUpdate(_this__u8e3s4, function_0) {
-    while (true) {
-      var cur = _this__u8e3s4.get_kotlinx$atomicfu$value_vi2am5_k$();
-      var upd = function_0(cur);
-      if (_this__u8e3s4.atomicfu$compareAndSet(cur, upd))
-        return cur;
-    }
-  }
-  function loop_0(_this__u8e3s4, action) {
-    while (true) {
-      action(_this__u8e3s4.get_kotlinx$atomicfu$value_vi2am5_k$());
-    }
-  }
-  function update_0(_this__u8e3s4, function_0) {
-    while (true) {
-      var cur = _this__u8e3s4.get_kotlinx$atomicfu$value_vi2am5_k$();
-      var upd = function_0(cur);
-      if (_this__u8e3s4.atomicfu$compareAndSet(cur, upd))
-        return Unit_getInstance();
-    }
-  }
-  function loop_1(_this__u8e3s4, action) {
-    while (true) {
-      action(_this__u8e3s4.get_kotlinx$atomicfu$value_vi2am5_k$());
-    }
-  }
-  function update_1(_this__u8e3s4, function_0) {
-    while (true) {
-      var cur = _this__u8e3s4.get_kotlinx$atomicfu$value_vi2am5_k$();
-      var upd = function_0(cur);
-      if (_this__u8e3s4.atomicfu$compareAndSet(cur, upd))
-        return Unit_getInstance();
-    }
-  }
-  function updateAndGet(_this__u8e3s4, function_0) {
-    while (true) {
-      var cur = _this__u8e3s4.get_kotlinx$atomicfu$value_vi2am5_k$();
-      var upd = function_0(cur);
-      if (_this__u8e3s4.atomicfu$compareAndSet(cur, upd))
-        return upd;
-    }
-  }
   function None() {
     None_instance = this;
     atomicfu$TraceBase.call(this);
@@ -132,31 +46,14 @@
   };
   protoOf(atomicfu$TraceBase).atomicfu$Trace$append$4 = function (event1, event2, event3, event4) {
   };
-  protoOf(atomicfu$TraceBase).invoke_wlr0vx_k$ = function (event) {
-    this.atomicfu$Trace$append$1(event());
-  };
-  function atomicfu$TraceFormat() {
-  }
-  protoOf(atomicfu$TraceFormat).atomicfu$TraceFormat$format = function (index, event) {
-    return '' + index + ': ' + toString(event);
-  };
   function AtomicRef(value) {
     this.kotlinx$atomicfu$value = value;
   }
-  protoOf(AtomicRef).set_kotlinx$atomicfu$value_508e3y_k$ = function (_set____db54di) {
+  protoOf(AtomicRef).jg = function (_set____db54di) {
     this.kotlinx$atomicfu$value = _set____db54di;
   };
-  protoOf(AtomicRef).get_kotlinx$atomicfu$value_vi2am5_k$ = function () {
+  protoOf(AtomicRef).kg = function () {
     return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicRef).getValue_fbnwi2_k$ = function (thisRef, property) {
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicRef).setValue_ttauxt_k$ = function (thisRef, property, value) {
-    this.kotlinx$atomicfu$value = value;
-  };
-  protoOf(AtomicRef).lazySet_57hg9d_k$ = function (value) {
-    this.kotlinx$atomicfu$value = value;
   };
   protoOf(AtomicRef).atomicfu$compareAndSet = function (expect, update) {
     if (!(this.kotlinx$atomicfu$value === expect))
@@ -170,7 +67,7 @@
     return oldValue;
   };
   protoOf(AtomicRef).toString = function () {
-    return toString_0(this.kotlinx$atomicfu$value);
+    return toString(this.kotlinx$atomicfu$value);
   };
   function atomic$ref$1(initial) {
     return atomic$ref$(initial, None_getInstance());
@@ -178,20 +75,11 @@
   function AtomicBoolean(value) {
     this.kotlinx$atomicfu$value = value;
   }
-  protoOf(AtomicBoolean).set_kotlinx$atomicfu$value_tm3k58_k$ = function (_set____db54di) {
+  protoOf(AtomicBoolean).lg = function (_set____db54di) {
     this.kotlinx$atomicfu$value = _set____db54di;
   };
-  protoOf(AtomicBoolean).get_kotlinx$atomicfu$value_vi2am5_k$ = function () {
+  protoOf(AtomicBoolean).kg = function () {
     return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicBoolean).getValue_fbnwi2_k$ = function (thisRef, property) {
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicBoolean).setValue_bb9j9z_k$ = function (thisRef, property, value) {
-    this.kotlinx$atomicfu$value = value;
-  };
-  protoOf(AtomicBoolean).lazySet_8bd7if_k$ = function (value) {
-    this.kotlinx$atomicfu$value = value;
   };
   protoOf(AtomicBoolean).atomicfu$compareAndSet = function (expect, update) {
     if (!(this.kotlinx$atomicfu$value === expect))
@@ -213,20 +101,11 @@
   function AtomicInt(value) {
     this.kotlinx$atomicfu$value = value;
   }
-  protoOf(AtomicInt).set_kotlinx$atomicfu$value_nm6d3_k$ = function (_set____db54di) {
+  protoOf(AtomicInt).mg = function (_set____db54di) {
     this.kotlinx$atomicfu$value = _set____db54di;
   };
-  protoOf(AtomicInt).get_kotlinx$atomicfu$value_vi2am5_k$ = function () {
+  protoOf(AtomicInt).kg = function () {
     return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicInt).getValue_fbnwi2_k$ = function (thisRef, property) {
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicInt).setValue_mm2ive_k$ = function (thisRef, property, value) {
-    this.kotlinx$atomicfu$value = value;
-  };
-  protoOf(AtomicInt).lazySet_u7nu62_k$ = function (value) {
-    this.kotlinx$atomicfu$value = value;
   };
   protoOf(AtomicInt).atomicfu$compareAndSet = function (expect, update) {
     if (!(this.kotlinx$atomicfu$value === expect))
@@ -266,85 +145,11 @@
     this.kotlinx$atomicfu$value = this.kotlinx$atomicfu$value - 1 | 0;
     return this.kotlinx$atomicfu$value;
   };
-  protoOf(AtomicInt).plusAssign_8mmvnl_k$ = function (delta) {
-    this.atomicfu$getAndAdd(delta);
-  };
-  protoOf(AtomicInt).minusAssign_p980fd_k$ = function (delta) {
-    this.atomicfu$getAndAdd(-delta | 0);
-  };
   protoOf(AtomicInt).toString = function () {
     return this.kotlinx$atomicfu$value.toString();
   };
   function atomic$int$1(initial) {
     return atomic$int$(initial, None_getInstance());
-  }
-  function AtomicLong(value) {
-    this.kotlinx$atomicfu$value = value;
-  }
-  protoOf(AtomicLong).set_kotlinx$atomicfu$value_22wj1v_k$ = function (_set____db54di) {
-    this.kotlinx$atomicfu$value = _set____db54di;
-  };
-  protoOf(AtomicLong).get_kotlinx$atomicfu$value_vi2am5_k$ = function () {
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicLong).getValue_fbnwi2_k$ = function (thisRef, property) {
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicLong).setValue_2h12xs_k$ = function (thisRef, property, value) {
-    this.kotlinx$atomicfu$value = value;
-  };
-  protoOf(AtomicLong).lazySet_abm0s0_k$ = function (value) {
-    this.kotlinx$atomicfu$value = value;
-  };
-  protoOf(AtomicLong).atomicfu$compareAndSet = function (expect, update) {
-    if (!this.kotlinx$atomicfu$value.equals(expect))
-      return false;
-    this.kotlinx$atomicfu$value = update;
-    return true;
-  };
-  protoOf(AtomicLong).atomicfu$getAndSet = function (value) {
-    var oldValue = this.kotlinx$atomicfu$value;
-    this.kotlinx$atomicfu$value = value;
-    return oldValue;
-  };
-  protoOf(AtomicLong).atomicfu$getAndIncrement$long = function () {
-    var tmp1 = this.kotlinx$atomicfu$value;
-    this.kotlinx$atomicfu$value = tmp1.inc_28ke_k$();
-    return tmp1;
-  };
-  protoOf(AtomicLong).atomicfu$getAndDecrement$long = function () {
-    var tmp1 = this.kotlinx$atomicfu$value;
-    this.kotlinx$atomicfu$value = tmp1.dec_24n6_k$();
-    return tmp1;
-  };
-  protoOf(AtomicLong).atomicfu$getAndAdd$long = function (delta) {
-    var oldValue = this.kotlinx$atomicfu$value;
-    this.kotlinx$atomicfu$value = this.kotlinx$atomicfu$value.plus_r93sks_k$(delta);
-    return oldValue;
-  };
-  protoOf(AtomicLong).atomicfu$addAndGet$long = function (delta) {
-    this.kotlinx$atomicfu$value = this.kotlinx$atomicfu$value.plus_r93sks_k$(delta);
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicLong).atomicfu$incrementAndGet$long = function () {
-    this.kotlinx$atomicfu$value = this.kotlinx$atomicfu$value.inc_28ke_k$();
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicLong).atomicfu$decrementAndGet$long = function () {
-    this.kotlinx$atomicfu$value = this.kotlinx$atomicfu$value.dec_24n6_k$();
-    return this.kotlinx$atomicfu$value;
-  };
-  protoOf(AtomicLong).plusAssign_p5ji1h_k$ = function (delta) {
-    this.atomicfu$getAndAdd$long(delta);
-  };
-  protoOf(AtomicLong).minusAssign_elja0x_k$ = function (delta) {
-    this.atomicfu$getAndAdd$long(delta.unaryMinus_6uz0qp_k$());
-  };
-  protoOf(AtomicLong).toString = function () {
-    return this.kotlinx$atomicfu$value.toString();
-  };
-  function atomic$long$1(initial) {
-    return atomic$long$(initial, None_getInstance());
   }
   function atomic$ref$(initial, trace) {
     trace = trace === VOID ? None_getInstance() : trace;
@@ -358,57 +163,11 @@
     trace = trace === VOID ? None_getInstance() : trace;
     return new AtomicInt(initial);
   }
-  function atomic$long$(initial, trace) {
-    trace = trace === VOID ? None_getInstance() : trace;
-    return new AtomicLong(initial);
-  }
-  function get_traceFormatDefault() {
-    _init_properties_Trace_kt__r970dp();
-    return traceFormatDefault;
-  }
-  var traceFormatDefault;
-  var properties_initialized_Trace_kt_s8gvpx;
-  function _init_properties_Trace_kt__r970dp() {
-    if (!properties_initialized_Trace_kt_s8gvpx) {
-      properties_initialized_Trace_kt_s8gvpx = true;
-      traceFormatDefault = new atomicfu$TraceFormat();
-    }
-  }
-  function get_atomicfu$reentrantLock() {
-    _init_properties_Synchronized_kt__f4zdjg();
-    return Lock;
-  }
-  var Lock;
-  function ReentrantLock() {
-  }
-  protoOf(ReentrantLock).lock_fp5s9n_k$ = function () {
-  };
-  protoOf(ReentrantLock).tryLock_hapj0a_k$ = function () {
-    return true;
-  };
-  protoOf(ReentrantLock).unlock_85w96c_k$ = function () {
-  };
-  function synchronized(lock, block) {
-    _init_properties_Synchronized_kt__f4zdjg();
-    return block();
-  }
-  var properties_initialized_Synchronized_kt_8bwsba;
-  function _init_properties_Synchronized_kt__f4zdjg() {
-    if (!properties_initialized_Synchronized_kt_8bwsba) {
-      properties_initialized_Synchronized_kt_8bwsba = true;
-      Lock = new ReentrantLock();
-    }
-  }
-  //region block: post-declaration
-  defineProp(protoOf(atomicfu$AtomicRefArray$ref), 'atomicfu$size', protoOf(atomicfu$AtomicRefArray$ref).get_atomicfu$size_iufoqq_k$);
-  //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
-  _.$_$.a = atomicfu$AtomicRefArray$ofNulls;
-  _.$_$.b = atomic$boolean$1;
-  _.$_$.c = atomic$long$1;
-  _.$_$.d = atomic$ref$1;
-  _.$_$.e = atomic$int$1;
+  _.$_$.a = atomic$boolean$1;
+  _.$_$.b = atomic$ref$1;
+  _.$_$.c = atomic$int$1;
   //endregion
   return _;
 }));
