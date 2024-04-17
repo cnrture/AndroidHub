@@ -1,0 +1,7 @@
+2024-04-17 11:50:55.096 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
+2024-04-17 11:50:55.098 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
+2024-04-17 11:50:55.108 [main] WARN  ktor.application - API jar specified but does not exist! Please fix conf.yaml. Invalid path: "build/libs/androidhub.jar"
+2024-04-17 11:50:55.139 [main] INFO  ktor.application - Application started in 0.073 seconds.
+2024-04-17 11:50:55.208 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-04-17 11:51:31.005 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
+2024-04-17 11:51:33.081 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
