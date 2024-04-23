@@ -24,18 +24,18 @@
 }(this, function (_, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_kotlin, kotlin_com_varabyte_kobweb_kobweb_core, kotlin_com_varabyte_kobweb_silk_widgets, kotlin_com_varabyte_kobweb_silk_foundation) {
   'use strict';
   //region block: imports
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b1;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var THROW_CCE = kotlin_kotlin.$_$.re;
-  var KobwebApp = kotlin_com_varabyte_kobweb_kobweb_core.$_$.b;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
-  var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var setSilkWidgetVariables = kotlin_com_varabyte_kobweb_silk_widgets.$_$.p;
-  var prepareSilkFoundation = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j1;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
+  var THROW_CCE = kotlin_kotlin.$_$.eg;
+  var KobwebApp = kotlin_com_varabyte_kobweb_kobweb_core.$_$.c;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
+  var Unit_getInstance = kotlin_kotlin.$_$.w4;
+  var setSilkWidgetVariables = kotlin_com_varabyte_kobweb_silk_widgets.$_$.q;
+  var prepareSilkFoundation = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l1;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
   //endregion
   //region block: pre-declaration
   //endregion

@@ -10,12 +10,15 @@ import com.varabyte.kobweb.silk.components.layout.HorizontalDividerStyle
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.addVariantBase
 import com.varabyte.kobweb.silk.components.style.base
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerStyleBase
 import com.varabyte.kobweb.silk.theme.colors.palette.color
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
 import com.varabyte.kobweb.silk.theme.modifyComponentStyleBase
+import org.jetbrains.compose.web.css.CSSSizeValue
+import org.jetbrains.compose.web.css.CSSUnit
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -37,6 +40,26 @@ fun initSiteStyles(ctx: InitSilkContext) {
     }
 }
 
+fun getHeadlineFontSize(breakpoint: Breakpoint): CSSSizeValue<CSSUnit.rem> {
+    return when (breakpoint) {
+        Breakpoint.ZERO -> 1.4.cssRem
+        Breakpoint.SM -> 1.5.cssRem
+        Breakpoint.MD -> 1.7.cssRem
+        Breakpoint.LG -> 1.8.cssRem
+        Breakpoint.XL -> 2.cssRem
+    }
+}
+
+fun getSubheadlineFontSize(breakpoint: Breakpoint): CSSSizeValue<CSSUnit.rem> {
+    return when (breakpoint) {
+        Breakpoint.ZERO -> 0.8.cssRem
+        Breakpoint.SM -> 1.05.cssRem
+        Breakpoint.MD -> 1.1.cssRem
+        Breakpoint.LG -> 1.2.cssRem
+        Breakpoint.XL -> 1.25.cssRem
+    }
+}
+
 val HeadlineTextStyle by ComponentStyle.base {
     Modifier
         .fontSize(2.cssRem)
@@ -46,8 +69,6 @@ val HeadlineTextStyle by ComponentStyle.base {
 
 val SubheadlineTextStyle by ComponentStyle.base {
     Modifier
-        .fontSize(1.25.cssRem)
-        .lineHeight(2)
         .textAlign(TextAlign.Start)
         .color(getSitePalette().blue.toRgb())
 }

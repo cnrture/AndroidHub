@@ -35,188 +35,196 @@
   //region block: imports
   var StyleVariable = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h;
   var StyleVariable_0 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i;
-  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
+  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.z4;
   var StyleVariable_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g;
-  var protoOf = kotlin_kotlin.$_$.ob;
-  var objectMeta = kotlin_kotlin.$_$.nb;
-  var setMetadataFor = kotlin_kotlin.$_$.pb;
-  var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var Companion_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r3;
-  var fillMaxWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c1;
+  var protoOf = kotlin_kotlin.$_$.fc;
+  var objectMeta = kotlin_kotlin.$_$.ec;
+  var setMetadataFor = kotlin_kotlin.$_$.gc;
+  var Unit_getInstance = kotlin_kotlin.$_$.w4;
+  var Companion_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u3;
+  var fillMaxWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d1;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.n;
   var borderBottom = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
-  var tabIndex = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q2;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
-  var get_ariaDisabled = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l;
-  var get_hover = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s;
-  var not = kotlin_com_varabyte_kobweb_silk_foundation.$_$.u;
-  var get_active = kotlin_com_varabyte_kobweb_silk_foundation.$_$.i;
-  var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.x2;
-  var cursor = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y;
-  var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.w2;
-  var listOf = kotlin_kotlin.$_$.n7;
-  var transition = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u2;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b1;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
+  var tabIndex = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t2;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
+  var get_ariaDisabled = kotlin_com_varabyte_kobweb_silk_foundation.$_$.m;
+  var get_hover = kotlin_com_varabyte_kobweb_silk_foundation.$_$.t;
+  var not = kotlin_com_varabyte_kobweb_silk_foundation.$_$.v;
+  var get_active = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j;
+  var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.a3;
+  var cursor = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z;
+  var Companion_getInstance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.z2;
+  var listOf = kotlin_kotlin.$_$.b8;
+  var transition = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x2;
   var backgroundColor = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l;
-  var color = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x;
-  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i3;
-  var userSelect = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x2;
-  var get_cssRem = kotlin_org_jetbrains_compose_html_html_core.$_$.u3;
-  var padding = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i2;
+  var color = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y;
+  var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l3;
+  var userSelect = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a3;
+  var get_cssRem = kotlin_org_jetbrains_compose_html_html_core.$_$.v3;
+  var padding = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k2;
   var calc = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.a;
-  var VOID = kotlin_kotlin.$_$.e;
-  var margin = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u1;
-  var flexGrow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d1;
-  var overflow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e2;
-  var Companion_getInstance_4 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d3;
-  var KProperty0 = kotlin_kotlin.$_$.ec;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
-  var KProperty1 = kotlin_kotlin.$_$.fc;
-  var ComponentStyle = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g;
-  var Companion_getInstance_5 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o1;
-  var base = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n;
-  var ComponentStyle_0 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.h;
+  var VOID = kotlin_kotlin.$_$.g;
+  var margin = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w1;
+  var flexGrow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e1;
+  var overflow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g2;
+  var Companion_getInstance_4 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g3;
+  var KProperty0 = kotlin_kotlin.$_$.zc;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.cb;
+  var KProperty1 = kotlin_kotlin.$_$.ad;
+  var ComponentStyle = kotlin_com_varabyte_kobweb_silk_foundation.$_$.h;
+  var Companion_getInstance_5 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.u1;
+  var base = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o;
+  var ComponentStyle_0 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.i;
   var ButtonType_Button_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.a;
-  var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.w;
-  var thenIf = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c3;
-  var ensureNotNull = kotlin_kotlin.$_$.kf;
-  var Companion_getInstance_6 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p1;
+  var toModifier = kotlin_com_varabyte_kobweb_silk_foundation.$_$.x;
+  var thenIf = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f3;
+  var ensureNotNull = kotlin_kotlin.$_$.yg;
+  var Companion_getInstance_6 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.v1;
   var get_isBright = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f;
-  var ColorMode_DARK_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l1;
-  var ColorMode_LIGHT_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.m1;
-  var toPalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.f1;
-  var setVariable = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o2;
-  var Companion_getInstance_7 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var THROW_CCE = kotlin_kotlin.$_$.re;
-  var onClick = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a2;
-  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d3;
+  var ColorMode_DARK_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.r1;
+  var ColorMode_LIGHT_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s1;
+  var toPalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.h1;
+  var setVariable = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r2;
+  var Companion_getInstance_7 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
+  var THROW_CCE = kotlin_kotlin.$_$.eg;
+  var onClick = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c2;
+  var toAttrs = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g3;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var Button = kotlin_org_jetbrains_compose_html_html_core.$_$.l5;
-  var interfaceMeta = kotlin_kotlin.$_$.qa;
-  var get_focusVisible = kotlin_com_varabyte_kobweb_silk_foundation.$_$.r;
-  var lineHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o1;
-  var height = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m1;
-  var minWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.x1;
-  var fontSize = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f1;
-  var Companion_getInstance_8 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.y2;
-  var fontWeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g1;
-  var Companion_getInstance_9 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k3;
-  var whiteSpace = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z2;
-  var padding_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k2;
-  var Companion_getInstance_10 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j3;
-  var verticalAlign = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y2;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
+  var Button = kotlin_org_jetbrains_compose_html_html_core.$_$.i5;
+  var interfaceMeta = kotlin_kotlin.$_$.gb;
+  var get_focusVisible = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s;
+  var lineHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p1;
+  var height = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n1;
+  var minWidth = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z1;
+  var fontSize = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g1;
+  var Companion_getInstance_8 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b3;
+  var fontWeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h1;
+  var Companion_getInstance_9 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.n3;
+  var whiteSpace = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c3;
+  var padding_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m2;
+  var Companion_getInstance_10 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m3;
+  var verticalAlign = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b3;
   var borderRadius = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p;
-  var border = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s;
-  var CSSTransition_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t2;
-  var Colors_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i3;
-  var outline = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c2;
-  var boxShadow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u;
+  var border = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t;
+  var CSSTransition_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.w2;
+  var Colors_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l3;
+  var outline = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e2;
+  var boxShadow = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v;
   var type = kotlin_org_jetbrains_compose_html_html_core.$_$.n2;
-  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l2;
-  var Center_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f3;
-  var CenterVertically_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l3;
+  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.o2;
+  var Center_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i3;
+  var CenterVertically_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o3;
   var Row = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.c;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var gap = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i1;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
+  var gap = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j1;
   var Companion_getInstance_11 = kotlin_org_jetbrains_compose_html_html_core.$_$.o;
-  var position = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l2;
-  var opacity = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b2;
-  var size = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p2;
-  var border_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r;
-  var transition_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v2;
+  var position = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n2;
+  var opacity = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d2;
+  var size = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s2;
+  var border_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s;
+  var transition_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y2;
   var rowClasses = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e;
   var Keyframes = kotlin_com_varabyte_kobweb_silk_foundation.$_$.a;
-  var addVariantBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j;
-  var addVariant = kotlin_com_varabyte_kobweb_silk_foundation.$_$.k;
+  var addVariantBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.k;
+  var addVariant = kotlin_com_varabyte_kobweb_silk_foundation.$_$.l;
   var StyleVariable_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f;
-  var paddingInline = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g2;
-  var get_placeholder = kotlin_com_varabyte_kobweb_silk_foundation.$_$.v;
-  var Companion_getInstance_12 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.u2;
+  var paddingInline = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i2;
+  var get_placeholder = kotlin_com_varabyte_kobweb_silk_foundation.$_$.w;
+  var Companion_getInstance_12 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.x2;
   var appearance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.i;
-  var get_ariaInvalid = kotlin_com_varabyte_kobweb_silk_foundation.$_$.m;
-  var get_disabled = kotlin_com_varabyte_kobweb_silk_foundation.$_$.q;
-  var margin_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r1;
-  var RectF_init_$Create$ = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n1;
-  var clip = kotlin_com_varabyte_kobweb_silk_foundation.$_$.h1;
-  var overflow_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.f2;
-  var width = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a3;
-  var minHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w1;
-  var Companion_getInstance_13 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.v2;
-  var boxSizing = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.v;
-  var translateX = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w2;
+  var get_ariaInvalid = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n;
+  var get_disabled = kotlin_com_varabyte_kobweb_silk_foundation.$_$.r;
+  var margin_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u1;
+  var RectF_init_$Create$ = kotlin_com_varabyte_kobweb_silk_foundation.$_$.t1;
+  var clip = kotlin_com_varabyte_kobweb_silk_foundation.$_$.j1;
+  var overflow_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.h2;
+  var width = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.d3;
+  var minHeight = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.y1;
+  var Companion_getInstance_13 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.y2;
+  var boxSizing = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w;
+  var translateX = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z2;
   var ariaHidden = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k;
-  var Companion_getInstance_14 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l3;
-  var get_em = kotlin_org_jetbrains_compose_html_html_core.$_$.w3;
-  var Svg = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h2;
-  var classMeta = kotlin_kotlin.$_$.ea;
-  var Path = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e2;
-  var Polyline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f2;
-  var to = kotlin_kotlin.$_$.vf;
-  var Circle = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b2;
-  var Line = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d2;
-  var Rect = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g2;
-  var Group = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.c2;
-  var SVGStrokeLineJoin_Round_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p2;
-  var SVGStrokeLineCap_Round_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.o2;
+  var Companion_getInstance_14 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.o3;
+  var get_em = kotlin_org_jetbrains_compose_html_html_core.$_$.x3;
+  var Svg = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k2;
+  var classMeta = kotlin_kotlin.$_$.ua;
+  var Path = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h2;
+  var Polyline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i2;
+  var to = kotlin_kotlin.$_$.nh;
+  var Circle = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e2;
+  var Line = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g2;
+  var Rect = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j2;
+  var Group = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f2;
+  var SVGStrokeLineJoin_Round_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s2;
+  var SVGStrokeLineCap_Round_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r2;
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.nf;
-  var SVGStrokeType_CurrentColor_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.q2;
-  var SVGFillType_None_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.n2;
-  var SVGFillType_CurrentColor_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m2;
-  var SVGStrokeType_None_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r2;
-  var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.a5;
-  var Hr = kotlin_org_jetbrains_compose_html_html_core.$_$.u5;
-  var borderTop = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.eh;
+  var SVGStrokeType_CurrentColor_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t2;
+  var SVGFillType_None_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.q2;
+  var SVGFillType_CurrentColor_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p2;
+  var SVGStrokeType_None_getInstance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.u2;
+  var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.x4;
+  var Hr = kotlin_org_jetbrains_compose_html_html_core.$_$.r5;
+  var borderTop = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r;
   var borderLeft = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n;
+  var Breakpoint_ZERO_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.q1;
+  var getValue = kotlin_kotlin.$_$.n7;
+  var setVariable_0 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q2;
+  var Breakpoint_SM_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o1;
+  var Breakpoint_MD_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.n1;
+  var Breakpoint_LG_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.m1;
+  var Breakpoint_XL_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p1;
+  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.k5;
   var Companion_getInstance_15 = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
-  var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.z;
-  var get_fr = kotlin_org_jetbrains_compose_html_html_core.$_$.c4;
-  var gridTemplateColumns = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.k1;
+  var display = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a1;
+  var get_fr = kotlin_org_jetbrains_compose_html_html_core.$_$.d4;
+  var gridTemplateColumns = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.l1;
   var get_entries = kotlin_com_varabyte_kobweb_silk_foundation.$_$.f;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.a6;
-  var mapCapacity = kotlin_kotlin.$_$.o7;
-  var coerceAtLeast = kotlin_kotlin.$_$.vb;
-  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.s;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.m6;
+  var mapCapacity = kotlin_kotlin.$_$.c8;
+  var coerceAtLeast = kotlin_kotlin.$_$.pc;
+  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.u;
   var NumberValue = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e;
-  var TopStart_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q3;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
-  var refScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j2;
+  var TopStart_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t3;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
+  var refScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m2;
   var Box = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.a;
-  var KMutableProperty0 = kotlin_kotlin.$_$.cc;
-  var THROW_ISE = kotlin_kotlin.$_$.te;
-  var getLocalDelegateReference = kotlin_kotlin.$_$.ka;
-  var CoroutineImpl = kotlin_kotlin.$_$.q9;
+  var KMutableProperty0 = kotlin_kotlin.$_$.xc;
+  var THROW_ISE = kotlin_kotlin.$_$.gg;
+  var getLocalDelegateReference = kotlin_kotlin.$_$.ab;
+  var CoroutineImpl = kotlin_kotlin.$_$.fa;
   var CoroutineScope = kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core.$_$.n;
-  var isInterface = kotlin_kotlin.$_$.za;
+  var isInterface = kotlin_kotlin.$_$.pb;
   var LaunchedEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.k;
   var CompositionLocalProvider = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var SuspendFunction1 = kotlin_kotlin.$_$.r9;
-  var TopCenter_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p3;
-  var deferRender = kotlin_com_varabyte_kobweb_silk_foundation.$_$.z;
-  var top = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t2;
-  var bottom = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t;
-  var left = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n1;
-  var right = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.m2;
-  var styleModifier = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.b3;
-  var unaryMinus = kotlin_org_jetbrains_compose_html_html_core.$_$.g5;
-  var margin_1 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q1;
-  var base_0 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p;
+  var SuspendFunction1 = kotlin_kotlin.$_$.ga;
+  var TopCenter_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s3;
+  var deferRender = kotlin_com_varabyte_kobweb_silk_foundation.$_$.a1;
+  var top = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.w2;
+  var bottom = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u;
+  var left = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o1;
+  var right = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o2;
+  var styleModifier = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.e3;
+  var unaryMinus = kotlin_org_jetbrains_compose_html_html_core.$_$.d5;
+  var margin_1 = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.t1;
+  var base_0 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.q;
   var ariaDisabled = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.j;
-  var base_1 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o;
-  var get_ms = kotlin_org_jetbrains_compose_html_html_core.$_$.x4;
-  var Blue_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.q1;
-  var Gray_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.r1;
-  var Red_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s1;
+  var base_1 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.p;
+  var get_ms = kotlin_org_jetbrains_compose_html_html_core.$_$.u4;
+  var Blue_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.w1;
+  var Gray_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.x1;
+  var Red_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.y1;
   var lightened = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g;
   var registerKeyframes = kotlin_com_varabyte_kobweb_silk_foundation.$_$.b;
-  var suffixedWith = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g1;
-  var removeClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.c;
+  var suffixedWith = kotlin_com_varabyte_kobweb_silk_foundation.$_$.i1;
+  var removeClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.d;
   var addClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.a;
-  var ColorGroup = kotlin_com_varabyte_kobweb_silk_foundation.$_$.d1;
-  var MutablePalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.e1;
-  var KMutableProperty1 = kotlin_kotlin.$_$.dc;
+  var ColorGroup = kotlin_com_varabyte_kobweb_silk_foundation.$_$.f1;
+  var MutablePalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g1;
+  var KMutableProperty1 = kotlin_kotlin.$_$.yc;
   //endregion
   //region block: pre-declaration
   setMetadataFor(TabVars, 'TabVars', objectMeta);
@@ -479,7 +487,57 @@
     return ButtonStyle$delegate.getValue_fbnwi2_k$(null, ButtonStyle$factory());
   }
   var ButtonStyle$delegate;
-  var com_varabyte_kobweb_silk_components_forms_ButtonSize_LG$stable;
+  function ButtonVars() {
+    ButtonVars_instance = this;
+    this.BackgroundDefaultColor$delegate_1 = StyleVariable('silk');
+    var tmp = this;
+    var tmp0_defaultFallback = get_FocusOutlineColorVar().value$default_36t2hw_k$();
+    tmp.BackgroundFocusColor$delegate_1 = StyleVariable_0(tmp0_defaultFallback, 'silk');
+    this.BackgroundHoverColor$delegate_1 = StyleVariable('silk');
+    this.BackgroundPressedColor$delegate_1 = StyleVariable('silk');
+    var tmp_0 = this;
+    var tmp0_defaultFallback_0 = get_ColorVar().value$default_36t2hw_k$();
+    tmp_0.Color$delegate_1 = StyleVariable_0(tmp0_defaultFallback_0, 'silk');
+    var tmp_1 = this;
+    var tmp0_defaultFallback_1 = TransitionDurationVars_getInstance().get_Normal_22avww_k$().value$default_36t2hw_k$();
+    tmp_1.ColorTransitionDuration$delegate_1 = StyleVariable_1(tmp0_defaultFallback_1, 'silk');
+    this.FontSize$delegate_1 = StyleVariable('silk');
+    this.Height$delegate_1 = StyleVariable('silk');
+    this.PaddingHorizontal$delegate_1 = StyleVariable('silk');
+  }
+  protoOf(ButtonVars).get_BackgroundDefaultColor_so3bvr_k$ = function () {
+    return this.BackgroundDefaultColor$delegate_1.getValue_fbnwi2_k$(this, BackgroundDefaultColor$factory());
+  };
+  protoOf(ButtonVars).get_BackgroundFocusColor_4vb99e_k$ = function () {
+    return this.BackgroundFocusColor$delegate_1.getValue_fbnwi2_k$(this, BackgroundFocusColor$factory());
+  };
+  protoOf(ButtonVars).get_BackgroundHoverColor_qkbxz2_k$ = function () {
+    return this.BackgroundHoverColor$delegate_1.getValue_fbnwi2_k$(this, BackgroundHoverColor$factory());
+  };
+  protoOf(ButtonVars).get_BackgroundPressedColor_qp3aco_k$ = function () {
+    return this.BackgroundPressedColor$delegate_1.getValue_fbnwi2_k$(this, BackgroundPressedColor$factory());
+  };
+  protoOf(ButtonVars).get_Color_i88tui_k$ = function () {
+    return this.Color$delegate_1.getValue_fbnwi2_k$(this, Color$factory_0());
+  };
+  protoOf(ButtonVars).get_ColorTransitionDuration_d6ufct_k$ = function () {
+    return this.ColorTransitionDuration$delegate_1.getValue_fbnwi2_k$(this, ColorTransitionDuration$factory_0());
+  };
+  protoOf(ButtonVars).get_FontSize_oos3dz_k$ = function () {
+    return this.FontSize$delegate_1.getValue_fbnwi2_k$(this, FontSize$factory());
+  };
+  protoOf(ButtonVars).get_Height_xmnjk_k$ = function () {
+    return this.Height$delegate_1.getValue_fbnwi2_k$(this, Height$factory());
+  };
+  protoOf(ButtonVars).get_PaddingHorizontal_u991sc_k$ = function () {
+    return this.PaddingHorizontal$delegate_1.getValue_fbnwi2_k$(this, PaddingHorizontal$factory());
+  };
+  var ButtonVars_instance;
+  function ButtonVars_getInstance() {
+    if (ButtonVars_instance == null)
+      new ButtonVars();
+    return ButtonVars_instance;
+  }
   function Button_0(onClick_0, modifier, variant, type, enabled, size, colorScheme, focusBorderColor, ref, content, $composer, $changed, $default) {
     _init_properties_Button_kt__2845m6();
     var modifier_0 = {_v: modifier};
@@ -672,57 +730,6 @@
       tmp3_safe_receiver.updateScope_t8jcf_k$(Button$lambda_2(onClick_0, modifier_0, variant_0, type_0, enabled_0, size_0, colorScheme_0, focusBorderColor_0, ref_0, content, $changed, $default));
     }
   }
-  function ButtonVars() {
-    ButtonVars_instance = this;
-    this.BackgroundDefaultColor$delegate_1 = StyleVariable('silk');
-    var tmp = this;
-    var tmp0_defaultFallback = get_FocusOutlineColorVar().value$default_36t2hw_k$();
-    tmp.BackgroundFocusColor$delegate_1 = StyleVariable_0(tmp0_defaultFallback, 'silk');
-    this.BackgroundHoverColor$delegate_1 = StyleVariable('silk');
-    this.BackgroundPressedColor$delegate_1 = StyleVariable('silk');
-    var tmp_0 = this;
-    var tmp0_defaultFallback_0 = get_ColorVar().value$default_36t2hw_k$();
-    tmp_0.Color$delegate_1 = StyleVariable_0(tmp0_defaultFallback_0, 'silk');
-    var tmp_1 = this;
-    var tmp0_defaultFallback_1 = TransitionDurationVars_getInstance().get_Normal_22avww_k$().value$default_36t2hw_k$();
-    tmp_1.ColorTransitionDuration$delegate_1 = StyleVariable_1(tmp0_defaultFallback_1, 'silk');
-    this.FontSize$delegate_1 = StyleVariable('silk');
-    this.Height$delegate_1 = StyleVariable('silk');
-    this.PaddingHorizontal$delegate_1 = StyleVariable('silk');
-  }
-  protoOf(ButtonVars).get_BackgroundDefaultColor_so3bvr_k$ = function () {
-    return this.BackgroundDefaultColor$delegate_1.getValue_fbnwi2_k$(this, BackgroundDefaultColor$factory());
-  };
-  protoOf(ButtonVars).get_BackgroundFocusColor_4vb99e_k$ = function () {
-    return this.BackgroundFocusColor$delegate_1.getValue_fbnwi2_k$(this, BackgroundFocusColor$factory());
-  };
-  protoOf(ButtonVars).get_BackgroundHoverColor_qkbxz2_k$ = function () {
-    return this.BackgroundHoverColor$delegate_1.getValue_fbnwi2_k$(this, BackgroundHoverColor$factory());
-  };
-  protoOf(ButtonVars).get_BackgroundPressedColor_qp3aco_k$ = function () {
-    return this.BackgroundPressedColor$delegate_1.getValue_fbnwi2_k$(this, BackgroundPressedColor$factory());
-  };
-  protoOf(ButtonVars).get_Color_i88tui_k$ = function () {
-    return this.Color$delegate_1.getValue_fbnwi2_k$(this, Color$factory_0());
-  };
-  protoOf(ButtonVars).get_ColorTransitionDuration_d6ufct_k$ = function () {
-    return this.ColorTransitionDuration$delegate_1.getValue_fbnwi2_k$(this, ColorTransitionDuration$factory_0());
-  };
-  protoOf(ButtonVars).get_FontSize_oos3dz_k$ = function () {
-    return this.FontSize$delegate_1.getValue_fbnwi2_k$(this, FontSize$factory());
-  };
-  protoOf(ButtonVars).get_Height_xmnjk_k$ = function () {
-    return this.Height$delegate_1.getValue_fbnwi2_k$(this, Height$factory());
-  };
-  protoOf(ButtonVars).get_PaddingHorizontal_u991sc_k$ = function () {
-    return this.PaddingHorizontal$delegate_1.getValue_fbnwi2_k$(this, PaddingHorizontal$factory());
-  };
-  var ButtonVars_instance;
-  function ButtonVars_getInstance() {
-    if (ButtonVars_instance == null)
-      new ButtonVars();
-    return ButtonVars_instance;
-  }
   function XS() {
     XS_instance = this;
     this.fontSize_1 = FontSizeVars_getInstance().get_XS_kntocc_k$().value$default_36t2hw_k$();
@@ -809,6 +816,7 @@
   }
   function ButtonSize() {
   }
+  var com_varabyte_kobweb_silk_components_forms_ButtonSize_LG$stable;
   function toModifier_0(_this__u8e3s4) {
     _init_properties_Button_kt__2845m6();
     return setVariable(setVariable(setVariable(Companion_getInstance(), ButtonVars_getInstance().get_FontSize_oos3dz_k$(), _this__u8e3s4.get_fontSize_pr9n47_k$()), ButtonVars_getInstance().get_Height_xmnjk_k$(), _this__u8e3s4.get_height_e7t92o_k$()), ButtonVars_getInstance().get_PaddingHorizontal_u991sc_k$(), _this__u8e3s4.get_horizontalPadding_lfhi70_k$());
@@ -1974,6 +1982,34 @@
       tmp0_safe_receiver.updateScope_t8jcf_k$(HamburgerIcon$lambda(modifier_0, $changed, $default));
     }
   }
+  function CloseIcon(modifier, $composer, $changed, $default) {
+    var modifier_0 = {_v: modifier};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-15719902);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 2;
+    if (!(($default & 1) === 1) ? true : !(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        modifier_0._v = Companion_getInstance();
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-15719902, $dirty, -1, 'com.varabyte.kobweb.silk.components.icons.CloseIcon (Icons.kt:280)');
+      }
+      createIcon(null, null, new Stroke(3), toAttrs(modifier_0._v), ComposableSingletons$IconsKt_getInstance().lambda_12_7sywo7__1, $composer_0, 25088, 3);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(CloseIcon$lambda(modifier_0, $changed, $default));
+    }
+  }
   function createIcon(viewBox, width, renderStyle, attrs, content, $composer, $changed, $default) {
     var viewBox_0 = {_v: viewBox};
     var width_0 = {_v: width};
@@ -2041,35 +2077,6 @@
       tmp0_safe_receiver.updateScope_t8jcf_k$(createIcon$lambda_0(viewBox_0, width_0, renderStyle_0, attrs_0, content, $changed, $default));
     }
   }
-  var com_varabyte_kobweb_silk_components_icons_IconRenderStyle_Stroke$stable;
-  function CloseIcon(modifier, $composer, $changed, $default) {
-    var modifier_0 = {_v: modifier};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-15719902);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 2;
-    if (!(($default & 1) === 1) ? true : !(($dirty & 11) === 2) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        modifier_0._v = Companion_getInstance();
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-15719902, $dirty, -1, 'com.varabyte.kobweb.silk.components.icons.CloseIcon (Icons.kt:280)');
-      }
-      createIcon(null, null, new Stroke(3), toAttrs(modifier_0._v), ComposableSingletons$IconsKt_getInstance().lambda_12_7sywo7__1, $composer_0, 25088, 3);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(CloseIcon$lambda(modifier_0, $changed, $default));
-    }
-  }
   function Fill() {
   }
   function Stroke(strokeWidth) {
@@ -2081,6 +2088,7 @@
   };
   function IconRenderStyle() {
   }
+  var com_varabyte_kobweb_silk_components_icons_IconRenderStyle_Stroke$stable;
   function ComposableLambda$invoke$ref_0($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
@@ -3404,6 +3412,12 @@
       return Unit_getInstance();
     };
   }
+  function CloseIcon$lambda($modifier, $$changed, $$default) {
+    return function ($composer, $force) {
+      CloseIcon($modifier._v, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
   function createIcon$lambda($width, $viewBox, $renderStyle, $attrs) {
     return function ($this$Svg) {
       var tmp0_safe_receiver = $width._v;
@@ -3464,12 +3478,6 @@
   function createIcon$lambda_0($viewBox, $width, $renderStyle, $attrs, $content, $$changed, $$default) {
     return function ($composer, $force) {
       createIcon($viewBox._v, $width._v, $renderStyle._v, $attrs._v, $content, $composer, updateChangedFlags($$changed | 1), $$default);
-      return Unit_getInstance();
-    };
-  }
-  function CloseIcon$lambda($modifier, $$changed, $$default) {
-    return function ($composer, $force) {
-      CloseIcon($modifier._v, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_getInstance();
     };
   }
@@ -3615,6 +3623,87 @@
     return SimpleGridStyle$delegate.getValue_fbnwi2_k$(null, SimpleGridStyle$factory());
   }
   var SimpleGridStyle$delegate;
+  function SimpleGrid(numColumns, modifier, variant, ref, content, $composer, $changed, $default) {
+    _init_properties_SimpleGrid_kt__tvipdk();
+    var modifier_0 = {_v: modifier};
+    var variant_0 = {_v: variant};
+    var ref_0 = {_v: ref};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(1529613202);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(numColumns) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 16;
+    if (!(($default & 4) === 0))
+      $dirty = $dirty | 384;
+    else if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(variant_0._v) ? 256 : 128);
+    if (!(($default & 8) === 0))
+      $dirty = $dirty | 3072;
+    else if (($changed & 7168) === 0)
+      $dirty = $dirty | ($composer_0.changed_ga7h3f_k$(ref_0._v) ? 2048 : 1024);
+    if (!(($default & 16) === 0))
+      $dirty = $dirty | 24576;
+    else if (($changed & 57344) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 16384 : 8192);
+    if (!(($default & 2) === 2) ? true : !(($dirty & 46811) === 9362) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 2) === 0)) {
+        modifier_0._v = Companion_getInstance();
+      }
+      if (!(($default & 4) === 0)) {
+        variant_0._v = null;
+      }
+      if (!(($default & 8) === 0)) {
+        ref_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(1529613202, $dirty, -1, 'com.varabyte.kobweb.silk.components.layout.SimpleGrid (SimpleGrid.kt:72)');
+      }
+      var tmp = toAttrs(setVariable_0(setVariable_0(setVariable_0(setVariable_0(setVariable_0(toModifier(get_SimpleGridStyle(), [variant_0._v], $composer_0, 0), getValue(get_columnVariables(), Breakpoint_ZERO_getInstance()), numColumns.get_base_wojaxm_k$()), getValue(get_columnVariables(), Breakpoint_SM_getInstance()), numColumns.get_sm_kntnod_k$()), getValue(get_columnVariables(), Breakpoint_MD_getInstance()), numColumns.get_md_kntnts_k$()), getValue(get_columnVariables(), Breakpoint_LG_getInstance()), numColumns.get_lg_kntnuk_k$()), getValue(get_columnVariables(), Breakpoint_XL_getInstance()), numColumns.get_xl_kntnk3_k$()).then_mmfvo6_k$(modifier_0._v));
+      // Inline function 'kotlin.run' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.varabyte.kobweb.silk.components.layout.SimpleGrid.<anonymous>' call
+      var tmp_0 = $composer_0;
+      var dispatchReceiver = composableLambda(tmp_0, -2129314893, true, SimpleGrid$lambda(ref_0, content));
+      // Inline function 'androidx.compose.runtime.remember' call
+      var $composer_1 = $composer_0;
+      $composer_1.startReplaceableGroup_ip860b_k$(1157296644);
+      sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
+      // Inline function 'androidx.compose.runtime.cache' call
+      var invalid = $composer_1.changed_ga7h3f_k$(dispatchReceiver);
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+      var it = $composer_1.rememberedValue_4dg93v_k$();
+      var tmp_1;
+      if (invalid ? true : it === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
+        // Inline function 'com.varabyte.kobweb.silk.components.layout.SimpleGrid.<anonymous>.<anonymous>' call
+        var value = ComposableLambda$invoke$ref_20(dispatchReceiver);
+        $composer_1.updateRememberedValue_l1wh71_k$(value);
+        tmp_1 = value;
+      } else {
+        tmp_1 = it;
+      }
+      var tmp_2 = tmp_1;
+      var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+      $composer_1.endReplaceableGroup_ern0ak_k$();
+      Div(tmp, tmp0, $composer_0, 48, 0);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(SimpleGrid$lambda_0(numColumns, modifier_0, variant_0, ref_0, content, $changed, $default));
+    }
+  }
   function SimpleGridStyle$delegate$lambda($this$ComponentStyle) {
     _init_properties_SimpleGrid_kt__tvipdk();
     $this$ComponentStyle.base_y8uu8g_k$(SimpleGridStyle$delegate$lambda$lambda);
@@ -3658,6 +3747,33 @@
     return function () {
       var tmp = Companion_getInstance();
       return gridTemplateColumns(tmp, SimpleGridStyle$delegate$lambda$lambda$lambda($variable));
+    };
+  }
+  function SimpleGrid$lambda($ref, $content) {
+    return function ($this$Div, $composer, $changed) {
+      var $composer_0 = $composer;
+      if (isTraceInProgress()) {
+        traceEventStart(-2129314893, $changed, -1, 'com.varabyte.kobweb.silk.components.layout.SimpleGrid.<anonymous> (SimpleGrid.kt:83)');
+      }
+      registerRefScope($this$Div, $ref._v, $composer_0, 72);
+      $content($composer_0, 0);
+      var tmp;
+      if (isTraceInProgress()) {
+        traceEventEnd();
+        tmp = Unit_getInstance();
+      }
+      return Unit_getInstance();
+    };
+  }
+  function ComposableLambda$invoke$ref_20($boundThis) {
+    return function (p0, p1, p2) {
+      return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
+    };
+  }
+  function SimpleGrid$lambda_0($numColumns, $modifier, $variant, $ref, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      SimpleGrid($numColumns, $modifier._v, $variant._v, $ref._v, $content, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
     };
   }
   function SimpleGridStyle$factory() {
@@ -3812,7 +3928,7 @@
       var tmp_5;
       if (invalid ? true : it_0 === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
         // Inline function 'com.varabyte.kobweb.silk.components.layout.Surface.<anonymous>.<anonymous>' call
-        var value_0 = ComposableLambda$invoke$ref_21(dispatchReceiver);
+        var value_0 = ComposableLambda$invoke$ref_22(dispatchReceiver);
         $composer_1.updateRememberedValue_l1wh71_k$(value_0);
         tmp_5 = value_0;
       } else {
@@ -3945,7 +4061,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_20($boundThis) {
+  function ComposableLambda$invoke$ref_21($boundThis) {
     return function (p0, p1) {
       return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
@@ -3984,7 +4100,7 @@
           var tmp_2;
           if (invalid ? true : it === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
             // Inline function 'com.varabyte.kobweb.silk.components.layout.Surface.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-            var value = ComposableLambda$invoke$ref_20(dispatchReceiver);
+            var value = ComposableLambda$invoke$ref_21(dispatchReceiver);
             $composer_1.updateRememberedValue_l1wh71_k$(value);
             tmp_2 = value;
           } else {
@@ -4010,7 +4126,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_21($boundThis) {
+  function ComposableLambda$invoke$ref_22($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
@@ -4133,7 +4249,7 @@
       var tmp_0;
       if (invalid ? true : it === Companion_getInstance_7().get_Empty_i9b85g_k$()) {
         // Inline function 'com.varabyte.kobweb.silk.components.overlay.Overlay.<anonymous>.<anonymous>' call
-        var value = ComposableLambda$invoke$ref_23(dispatchReceiver);
+        var value = ComposableLambda$invoke$ref_24(dispatchReceiver);
         $composer_1.updateRememberedValue_l1wh71_k$(value);
         tmp_0 = value;
       } else {
@@ -4156,7 +4272,7 @@
       tmp0_safe_receiver.updateScope_t8jcf_k$(Overlay$lambda_0(modifier_0, variant_0, contentAlignment_0, ref_0, content_0, $changed, $default));
     }
   }
-  function ComposableLambda$invoke$ref_22($boundThis) {
+  function ComposableLambda$invoke$ref_23($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
     };
@@ -4174,7 +4290,7 @@
   function ComposableSingletons$OverlayKt() {
     ComposableSingletons$OverlayKt_instance = this;
     var tmp = this;
-    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_22(composableLambdaInstance(1721412430, false, ComposableSingletons$OverlayKt$lambda_1$lambda_mpnfty));
+    tmp.lambda_1_r8sbbp_1 = ComposableLambda$invoke$ref_23(composableLambdaInstance(1721412430, false, ComposableSingletons$OverlayKt$lambda_1$lambda_mpnfty));
   }
   protoOf(ComposableSingletons$OverlayKt).get_lambda_1_bzdzzo_k$ = function () {
     return this.lambda_1_r8sbbp_1;
@@ -4217,7 +4333,7 @@
       return Unit_getInstance();
     };
   }
-  function ComposableLambda$invoke$ref_23($boundThis) {
+  function ComposableLambda$invoke$ref_24($boundThis) {
     return function (p0, p1) {
       return $boundThis.invoke_z8di7s_k$(p0, p1);
     };
@@ -5877,20 +5993,21 @@
   _.$_$.f = createIcon;
   _.$_$.g = get_HorizontalDividerStyle;
   _.$_$.h = HorizontalDivider;
-  _.$_$.i = Surface;
-  _.$_$.j = Overlay;
-  _.$_$.k = get_SmoothColorStyle;
-  _.$_$.l = get_BorderColorVar;
-  _.$_$.m = get_ColorVar;
-  _.$_$.n = get_SilkColorsStyle;
-  _.$_$.o = initSilkWidgets;
-  _.$_$.p = setSilkWidgetVariables_0;
-  _.$_$.q = set_background;
-  _.$_$.r = get_color;
-  _.$_$.s = set_color;
-  _.$_$.t = LG_getInstance;
-  _.$_$.u = ButtonVars_getInstance;
-  _.$_$.v = OverlayVars_getInstance;
+  _.$_$.i = SimpleGrid;
+  _.$_$.j = Surface;
+  _.$_$.k = Overlay;
+  _.$_$.l = get_SmoothColorStyle;
+  _.$_$.m = get_BorderColorVar;
+  _.$_$.n = get_ColorVar;
+  _.$_$.o = get_SilkColorsStyle;
+  _.$_$.p = initSilkWidgets;
+  _.$_$.q = setSilkWidgetVariables_0;
+  _.$_$.r = set_background;
+  _.$_$.s = get_color;
+  _.$_$.t = set_color;
+  _.$_$.u = LG_getInstance;
+  _.$_$.v = ButtonVars_getInstance;
+  _.$_$.w = OverlayVars_getInstance;
   //endregion
   return _;
 }));

@@ -1,10 +1,10 @@
 abi_version=1.8.0
 builtins_platform=JS
 compiler_version=1.9.23
-depends=com.varabyte.kobweb\:kobweb-silk com.varabyte.kobweb\:kobweb-core com.varabyte.kobwebx\:kobwebx-markdown org.jetbrains.compose.runtime\:runtime org.jetbrains.compose.html\:html-core com.varabyte.kobweb\:silk-widgets-kobweb com.varabyte.kobweb\:silk-widgets com.varabyte.kobweb\:silk-foundation com.varabyte.kobweb\:kobweb-compose com.varabyte.kobweb\:compose-html-ext com.varabyte.kobweb\:kobweb-worker-interface com.varabyte.kobweb\:browser-ext org.jetbrains.compose.html\:internal-html-core-runtime org.jetbrains.kotlin\:kotlin-dom-api-compat org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+depends=com.varabyte.kobweb\:kobweb-silk com.varabyte.kobweb\:kobweb-core com.varabyte.kobwebx\:kobwebx-markdown org.jetbrains.compose.runtime\:runtime org.jetbrains.compose.html\:html-core com.varabyte.kobweb\:silk-widgets-kobweb com.varabyte.kobweb\:silk-widgets com.varabyte.kobweb\:silk-foundation com.varabyte.kobweb\:kobweb-compose com.varabyte.kobweb\:compose-html-ext com.varabyte.kobweb\:kobweb-worker-interface com.varabyte.kobweb\:browser-ext org.jetbrains.compose.html\:internal-html-core-runtime org.jetbrains.kotlin\:kotlin-dom-api-compat org.jetbrains.kotlinx\:kotlinx-serialization-json org.jetbrains.kotlinx\:kotlinx-serialization-core org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
 ir_signature_versions=1,2
 jsOutputName=androidhub
 metadata_version=1.4.1
-serializedIrFileFingerprints=4m0gtacfko1m.34rjq2yx1xnql 2rt362cmtl9kn.160029df618xk 65ztdfglwe33.29rjs835qvk1r dlkwnn1f3me4.24wcj52vuay2p wq64wixyltz0.3lej18v87be76 17elts06bv5q2.272610zevjb3u e5zsne503ns7.1jftnt7xicwju 3gk5gtvdjvv2n.2h3hoccpfbrip 3mre9hbqfihgt.1bt60eyx2nyvx 186mka9pz354w.v112hwp1xno2 pzwct727rjk8.tev5htmx5vlv
-serializedKlibFingerprint=3im84yvrfiucj.ffjqw29llvj5
+serializedIrFileFingerprints=38cyu98hrhwwt.1wsj2lr6mvvzt 2rt362cmtl9kn.160029df618xk 2duneodoz2ukg.1w5qpxsv4k2gr 1gbb19wp5kw0o.on57euj2dvtl 65ztdfglwe33.29rjs835qvk1r 3kmngyjeh67wn.1qh5yhpmyz2vs zhaerx95i0xb.73018byi6p0q 17elts06bv5q2.272610zevjb3u 11yxmmkq4y45o.22w05cokj0zqt 3fymvu13c7all.3kmo4wsrfj0uz 3gk5gtvdjvv2n.2h3hoccpfbrip 2sae308x65eb8.1hh1p49kkfldy 3r7b9ih2q7y2l.3q7h46vrgwfv8 1ue70tocvwwus.el0fmpibabtc 16rk5zoqxhjrz.2omvgr7i0g7x 39rzjgiqlb7ea.10seb4o0ee83r 2xeb2yun46yt.1tk9ltvcxkm4a 3mdpydeo36uvv.2rawkjq3rce41
+serializedKlibFingerprint=1myl36e92lqc9.1otw60pfgyyqw
 unique_name=com.canerture.androidhub\:site

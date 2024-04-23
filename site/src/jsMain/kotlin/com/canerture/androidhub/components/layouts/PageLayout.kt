@@ -9,7 +9,6 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.ColumnScope
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.background
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.gridRow
@@ -21,14 +20,13 @@ import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import kotlinx.browser.document
-import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.fr
 import org.jetbrains.compose.web.css.percent
 
 val PageContentStyle by ComponentStyle {
     base { Modifier.fillMaxSize().padding(leftRight = 2.cssRem, top = 4.cssRem) }
-    Breakpoint.MD { Modifier.maxWidth(60.cssRem) }
+    Breakpoint.MD { Modifier.maxWidth(70.cssRem) }
 }
 
 @Composable

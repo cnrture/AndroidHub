@@ -1,7 +1,123 @@
-2024-04-17 14:57:38.248 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
-2024-04-17 14:57:38.249 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
-2024-04-17 14:57:38.258 [main] WARN  ktor.application - API jar specified but does not exist! Please fix conf.yaml. Invalid path: "build/libs/androidhub.jar"
-2024-04-17 14:57:38.284 [main] INFO  ktor.application - Application started in 0.065 seconds.
-2024-04-17 14:57:38.346 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
-2024-04-17 14:57:54.134 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
-2024-04-17 14:57:56.205 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
+2024-04-23 20:12:54.548 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
+2024-04-23 20:12:54.550 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
+2024-04-23 20:12:54.557 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
+2024-04-23 20:12:54.656 [main] INFO  ktor.application - Loaded and initialized server API jar in 79ms.
+2024-04-23 20:12:54.663 [main] INFO  ktor.application - Initializing Kobweb streams.
+2024-04-23 20:12:54.678 [main] INFO  ktor.application - Application started in 0.156 seconds.
+2024-04-23 20:12:54.731 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-04-23 20:13:00.875 [eventLoopGroupProxy-4-2] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:14:38.469 [eventLoopGroupProxy-4-1] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:14:38.554 [eventLoopGroupProxy-4-2] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:15:10.542 [eventLoopGroupProxy-4-3] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:15:10.630 [eventLoopGroupProxy-4-1] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:15:36.538 [eventLoopGroupProxy-4-5] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:15:36.612 [eventLoopGroupProxy-4-3] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:17:25.622 [eventLoopGroupProxy-4-6] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:17:25.701 [eventLoopGroupProxy-4-5] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:17:49.800 [eventLoopGroupProxy-4-7] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:17:49.887 [eventLoopGroupProxy-4-6] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:20:08.369 [eventLoopGroupProxy-4-7] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:20:08.472 [eventLoopGroupProxy-4-8] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:20:08.497 [eventLoopGroupProxy-4-9] INFO  ktor.application - Loaded and initialized server API jar in 19ms.
+2024-04-23 20:20:14.834 [eventLoopGroupProxy-4-8] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:20:14.903 [eventLoopGroupProxy-4-9] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:20:14.921 [eventLoopGroupProxy-4-4] INFO  ktor.application - Loaded and initialized server API jar in 16ms.
+2024-04-23 20:24:31.111 [eventLoopGroupProxy-4-10] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:24:31.128 [eventLoopGroupProxy-4-4] INFO  ktor.application - Loaded and initialized server API jar in 15ms.
+2024-04-23 20:24:31.354 [eventLoopGroupProxy-4-9] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:24:33.236 [eventLoopGroupProxy-4-4] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:24:33.545 [eventLoopGroupProxy-4-10] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:25:29.939 [eventLoopGroupProxy-4-4] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:25:29.965 [eventLoopGroupProxy-4-11] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:25:29.983 [eventLoopGroupProxy-4-12] INFO  ktor.application - Loaded and initialized server API jar in 13ms.
+2024-04-23 20:25:58.780 [eventLoopGroupProxy-4-11] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:25:58.788 [eventLoopGroupProxy-4-12] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:25:58.805 [eventLoopGroupProxy-4-1] INFO  ktor.application - Loaded and initialized server API jar in 13ms.
+2024-04-23 20:27:15.012 [eventLoopGroupProxy-4-2] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:27:15.028 [eventLoopGroupProxy-4-1] INFO  ktor.application - Loaded and initialized server API jar in 13ms.
+2024-04-23 20:27:15.210 [eventLoopGroupProxy-4-12] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:27:20.891 [eventLoopGroupProxy-4-3] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:27:20.910 [eventLoopGroupProxy-4-1] INFO  ktor.application - Loaded and initialized server API jar in 16ms.
+2024-04-23 20:27:21.086 [eventLoopGroupProxy-4-2] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
+2024-04-23 20:27:39.208 [eventLoopGroupProxy-4-4] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-23 20:27:39.227 [eventLoopGroupProxy-4-1] INFO  ktor.application - Loaded and initialized server API jar in 14ms.
+2024-04-23 20:27:39.235 [eventLoopGroupProxy-4-1] ERROR ktor.application - kotlinx.serialization.SerializationException: Serializer for class 'Exception' is not found.
+Mark the class as @Serializable or provide the serializer explicitly.
+	at kotlinx.serialization.internal.Platform_commonKt.serializerNotRegistered(Platform.common.kt:91)
+	at kotlinx.serialization.internal.PlatformKt.platformSpecificSerializerNotRegistered(Platform.kt:29)
+	at kotlinx.serialization.SerializersKt__SerializersKt.serializer(Serializers.kt:60)
+	at kotlinx.serialization.SerializersKt.serializer(Unknown Source)
+	at com.canerture.androidhub.api.PostsKt.getPosts(Posts.kt:25)
+	at ApisFactoryImpl$create$1.invokeSuspend(ApisFactoryImpl.kt:17)
+	at ApisFactoryImpl$create$1.invoke(ApisFactoryImpl.kt)
+	at ApisFactoryImpl$create$1.invoke(ApisFactoryImpl.kt)
+	at com.varabyte.kobweb.api.Apis.handle(Apis.kt:32)
+	at com.varabyte.kobweb.server.plugins.RoutingKt.handleApiCall(Routing.kt:173)
+	at com.varabyte.kobweb.server.plugins.RoutingKt.access$handleApiCall(Routing.kt:1)
+	at com.varabyte.kobweb.server.plugins.RoutingKt$configureApiRouting$1$2.invokeSuspend(Routing.kt:344)
+	at com.varabyte.kobweb.server.plugins.RoutingKt$configureApiRouting$1$2.invoke(Routing.kt)
+	at com.varabyte.kobweb.server.plugins.RoutingKt$configureApiRouting$1$2.invoke(Routing.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invokeSuspend(Route.kt:116)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.server.routing.Route$buildPipeline$1$1.invoke(Route.kt)
+	at io.ktor.util.pipeline.DebugPipelineContext.proceedLoop(DebugPipelineContext.kt:80)
+	at io.ktor.util.pipeline.DebugPipelineContext.proceed(DebugPipelineContext.kt:57)
+	at io.ktor.util.pipeline.DebugPipelineContext.execute$ktor_utils(DebugPipelineContext.kt:63)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.routing.Routing$executeResult$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.routing.Routing.executeResult(Routing.kt:190)
+	at io.ktor.server.routing.Routing.interceptor(Routing.kt:64)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invokeSuspend(Routing.kt:140)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.server.routing.Routing$Plugin$install$1.invoke(Routing.kt)
+	at io.ktor.util.pipeline.DebugPipelineContext.proceedLoop(DebugPipelineContext.kt:80)
+	at io.ktor.util.pipeline.DebugPipelineContext.proceed(DebugPipelineContext.kt:57)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invokeSuspend(BaseApplicationEngine.kt:124)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.server.engine.BaseApplicationEngineKt$installDefaultTransformationChecker$1.invoke(BaseApplicationEngine.kt)
+	at io.ktor.util.pipeline.DebugPipelineContext.proceedLoop(DebugPipelineContext.kt:80)
+	at io.ktor.util.pipeline.DebugPipelineContext.proceed(DebugPipelineContext.kt:57)
+	at io.ktor.util.pipeline.DebugPipelineContext.execute$ktor_utils(DebugPipelineContext.kt:63)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invokeSuspend(DefaultEnginePipeline.kt:123)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.server.engine.DefaultEnginePipelineKt$defaultEnginePipeline$1.invoke(DefaultEnginePipeline.kt)
+	at io.ktor.util.pipeline.DebugPipelineContext.proceedLoop(DebugPipelineContext.kt:80)
+	at io.ktor.util.pipeline.DebugPipelineContext.proceed(DebugPipelineContext.kt:57)
+	at io.ktor.util.pipeline.DebugPipelineContext.execute$ktor_utils(DebugPipelineContext.kt:63)
+	at io.ktor.util.pipeline.Pipeline.execute(Pipeline.kt:77)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invokeSuspend(Pipeline.kt:478)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1$invokeSuspend$$inlined$execute$1.invoke(Pipeline.kt)
+	at io.ktor.util.debug.ContextUtilsKt.initContextInDebugMode(ContextUtils.kt:17)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invokeSuspend(NettyApplicationCallHandler.kt:119)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at io.ktor.server.netty.NettyApplicationCallHandler$handleRequest$1.invoke(NettyApplicationCallHandler.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startCoroutineUndispatched(Undispatched.kt:44)
+	at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:112)
+	at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:126)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:56)
+	at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+	at io.ktor.server.netty.NettyApplicationCallHandler.handleRequest(NettyApplicationCallHandler.kt:37)
+	at io.ktor.server.netty.NettyApplicationCallHandler.channelRead(NettyApplicationCallHandler.kt:29)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.access$600(AbstractChannelHandlerContext.java:61)
+	at io.netty.channel.AbstractChannelHandlerContext$7.run(AbstractChannelHandlerContext.java:425)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create$lambda$1$lambda$0(NettyApplicationEngine.kt:296)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2024-04-23 20:27:39.423 [eventLoopGroupProxy-4-3] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)

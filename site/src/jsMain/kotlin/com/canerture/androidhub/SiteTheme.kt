@@ -2,10 +2,12 @@ package com.canerture.androidhub
 
 import com.varabyte.kobweb.compose.ui.graphics.Color
 import com.varabyte.kobweb.compose.ui.graphics.Colors
+import com.varabyte.kobweb.silk.components.style.breakpoint.BreakpointSizes
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.theme.colors.palette.background
 import com.varabyte.kobweb.silk.theme.colors.palette.color
+import org.jetbrains.compose.web.css.cssRem
 
 /**
  * @property nearBackground A useful color to apply to a container that should differentiate itself from the background

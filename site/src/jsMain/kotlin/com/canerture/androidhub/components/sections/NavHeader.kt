@@ -33,6 +33,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.setVariable
 import com.varabyte.kobweb.compose.ui.modifiers.translateX
 import com.varabyte.kobweb.compose.ui.modifiers.width
+import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.animation.Keyframes
 import com.varabyte.kobweb.silk.components.animation.toAnimation
@@ -52,6 +53,7 @@ import com.varabyte.kobweb.silk.components.style.base
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.style.vars.color.ColorVar
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.AnimationDirection
 import org.jetbrains.compose.web.css.AnimationFillMode
 import org.jetbrains.compose.web.css.AnimationTimingFunction
@@ -89,7 +91,7 @@ private fun MenuItems() {
 @Composable
 private fun HamburgerButton(onClick: () -> Unit) {
     IconButton(onClick) {
-        HamburgerIcon()
+        HamburgerIcon(Modifier.color(getSitePalette().blue))
     }
 }
 
@@ -145,13 +147,23 @@ enum class SideMenuState {
 fun NavHeader() {
     var menuState by remember { mutableStateOf(SideMenuState.CLOSED) }
 
+    val breakpoint = rememberBreakpoint()
+
+    val logoWidth = when (breakpoint) {
+        Breakpoint.ZERO -> 14.cssRem
+        Breakpoint.SM -> 18.cssRem
+        Breakpoint.MD -> 24.cssRem
+        Breakpoint.LG -> 24.cssRem
+        Breakpoint.XL -> 26.cssRem
+    }
+
     Row(
         modifier = NavHeaderStyle.toModifier(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {
-        Link("https://androidhub.dev") {
-            Image("/androidhub-logo.png", "AndroidHub Logo", Modifier.width(28.cssRem).display(DisplayStyle.Block))
+        Link("https://androidhub.dev", Modifier.thenIf(breakpoint < Breakpoint.MD, Modifier.weight(1f))) {
+            Image("/androidhub-logo.png", "AndroidHub Logo", Modifier.width(logoWidth).display(DisplayStyle.Block))
         }
 
         Row(
@@ -173,7 +185,7 @@ fun NavHeader() {
     }
 
     Row(
-        modifier = NavHeaderStyle.toModifier(),
+        modifier = Modifier.fillMaxWidth().padding(top = 2.cssRem, leftRight = 3.cssRem),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {

@@ -74,6 +74,49 @@
     "a66860f155cb10a237acb5f7d0f6d0e3": {
       "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-js-runner/1.9.23/e9b1fc55af69eb09d63b271d17c217d9483241cc/kotlin-test-js-runner-1.9.23.jar",
       "target": "kotlin-test-js-runner/0.0.1"
+    },
+    "1847453724cf025cdcdffc4944428bf1": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.github.stevdza-san/KotlinBootstrap/0.1.1/ac13449c2463a9d4f0a667a77a3ccc971284eaa6/KotlinBootstrap-0.1.1.jar"
+    },
+    "2863bc583b2d4a14f16b83fd66c37b7a": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.github.stevdza-san.KotlinBootstrap/bootstrap-js/0.1.1/a7e945d5f3f0a788f6089d77e574f2a6e6cd5173/bootstrap-js-0.1.1.klib",
+      "target": "kotlinbs-bootstrap/0.1.1"
+    },
+    "5c26011156563f5a696e55ce7acf5d03": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-core/0.16.1/9bd6fc6eab559321a9ba3bcdde6dc0fe7e2a12e3/kobweb-core-js-0.16.1.klib"
+    },
+    "782ce9c075d3309d49f91da9a1eb3ac9": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/compose-html-ext/0.16.1/797ecd74042b52c9c23da1279285a5233b48c448/compose-html-ext-js-0.16.1.klib"
+    },
+    "50b3d1d1762271fb822764a7bfd93e19": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/browser-ext/0.16.1/fa710690b94956f2b964fe6dc3fc3d2ef3d202fa/browser-ext-js-0.16.1.klib"
+    },
+    "15552427e5e491b34eb1cf2ffe5669c8": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-worker-interface/0.16.1/dd9214dd14862cfa81f811fa77661d0445436055/kobweb-worker-interface-js-0.16.1.klib"
+    },
+    "900efac5f80a943c52f070f7dd8b2e6b": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-client-server-models-js/0.16.1/c7ef4bd0f640cdfa13a6d2e5f546c121b8ee932b/client-server-models-js-0.16.1.klib"
+    },
+    "c4d242b9b6573a818d8762f103058be7": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-silk/0.16.1/b194e415573058ae7ef48806170409195a7eec0c/kobweb-silk-js-0.16.1.klib"
+    },
+    "bff7759cf1e916513719bd36de254c3b": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/silk-widgets-kobweb/0.16.1/6d457630459fcd02fc7499a147fb9885fecfa317/silk-widgets-kobweb-js-0.16.1.klib"
+    },
+    "b205d082d3c8e0bee3addf5e14bc2478": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/silk-widgets/0.16.1/568b903df847c76426096886919ed710f74f64d4/silk-widgets-js-0.16.1.klib"
+    },
+    "dc613261a069aed1a3e3f0d521c883f9": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/silk-foundation/0.16.1/adcc80d192aae5b553ca802f327fdce4555cf6cf/silk-foundation-js-0.16.1.klib"
+    },
+    "23cd8bf044463a389ce40e8ecf0ef746": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobweb/kobweb-compose/0.16.1/17097d87d51f500aae792064f73064ddff9539b3/kobweb-compose-js-0.16.1.klib"
+    },
+    "5c4149b55b3f4d4d25a34818ddb92764": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobwebx/kobwebx-markdown/0.16.1/6503fa28623a25878d3784b9d77250c1d3aac49c/kobwebx-markdown-js-0.16.1.klib"
+    },
+    "d0c7d97869c33cdf3500f90e4c7d37be": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobwebx/silk-icons-fa/0.16.1/ceb0180fee992b96670b473ee06c9d675fc8df74/silk-icons-fa-js-0.16.1.klib"
     }
   }
 }

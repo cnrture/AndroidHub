@@ -22,12 +22,12 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.ob;
-  var objectCreate = kotlin_kotlin.$_$.mb;
-  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.t;
-  var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.v;
-  var equals = kotlin_kotlin.$_$.ha;
-  var hashCode = kotlin_kotlin.$_$.oa;
+  var protoOf = kotlin_kotlin.$_$.fc;
+  var objectCreate = kotlin_kotlin.$_$.dc;
+  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
+  var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.x;
+  var equals = kotlin_kotlin.$_$.xa;
+  var hashCode = kotlin_kotlin.$_$.eb;
   var classes = kotlin_org_jetbrains_compose_html_html_core.$_$.p;
   var id = kotlin_org_jetbrains_compose_html_html_core.$_$.u;
   var hidden = kotlin_org_jetbrains_compose_html_html_core.$_$.t;
@@ -78,33 +78,33 @@
   var addEventListener = kotlin_org_jetbrains_compose_html_html_core.$_$.d1;
   var addEventListener_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.c1;
   var AttrsScope = kotlin_org_jetbrains_compose_html_html_core.$_$.b1;
-  var classMeta = kotlin_kotlin.$_$.ea;
-  var setMetadataFor = kotlin_kotlin.$_$.pb;
-  var VOID = kotlin_kotlin.$_$.e;
-  var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var objectMeta = kotlin_kotlin.$_$.nb;
-  var THROW_IAE = kotlin_kotlin.$_$.se;
-  var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.ge;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.d1;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.f2;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.k;
-  var toString = kotlin_kotlin.$_$.rb;
-  var joinToString = kotlin_kotlin.$_$.e7;
-  var getStringHashCode = kotlin_kotlin.$_$.na;
-  var THROW_CCE = kotlin_kotlin.$_$.re;
-  var joinToString_0 = kotlin_kotlin.$_$.f7;
+  var classMeta = kotlin_kotlin.$_$.ua;
+  var setMetadataFor = kotlin_kotlin.$_$.gc;
+  var VOID = kotlin_kotlin.$_$.g;
+  var Unit_getInstance = kotlin_kotlin.$_$.w4;
+  var objectMeta = kotlin_kotlin.$_$.ec;
+  var THROW_IAE = kotlin_kotlin.$_$.fg;
+  var enumEntries = kotlin_kotlin.$_$.ja;
+  var Enum = kotlin_kotlin.$_$.tf;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.g1;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.l2;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.m;
+  var toString = kotlin_kotlin.$_$.kc;
+  var joinToString = kotlin_kotlin.$_$.r7;
+  var getStringHashCode = kotlin_kotlin.$_$.db;
+  var THROW_CCE = kotlin_kotlin.$_$.eg;
+  var joinToString_0 = kotlin_kotlin.$_$.s7;
   var Color_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.j;
   var Color = kotlin_org_jetbrains_compose_html_html_core.$_$.w2;
   var Companion_getInstance = kotlin_org_jetbrains_compose_html_html_core.$_$.n;
   var CSSBorder = kotlin_org_jetbrains_compose_html_html_core.$_$.o2;
-  var width = kotlin_org_jetbrains_compose_html_html_core.$_$.j5;
-  var style = kotlin_org_jetbrains_compose_html_html_core.$_$.e5;
-  var color = kotlin_org_jetbrains_compose_html_html_core.$_$.s3;
-  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
-  var boxSizing = kotlin_org_jetbrains_compose_html_html_core.$_$.r3;
-  var get_PI = kotlin_kotlin.$_$.sb;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.r1;
+  var width = kotlin_org_jetbrains_compose_html_html_core.$_$.g5;
+  var style = kotlin_org_jetbrains_compose_html_html_core.$_$.b5;
+  var color = kotlin_org_jetbrains_compose_html_html_core.$_$.t3;
+  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.z4;
+  var boxSizing = kotlin_org_jetbrains_compose_html_html_core.$_$.s3;
+  var get_PI = kotlin_kotlin.$_$.lc;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.w1;
   var property = kotlin_org_jetbrains_compose_html_html_core.$_$.a3;
   var property_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.b3;
   var variable = kotlin_org_jetbrains_compose_html_html_core.$_$.d3;
@@ -113,59 +113,59 @@
   var invoke_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.y2;
   var invoke_1 = kotlin_org_jetbrains_compose_html_html_core.$_$.x2;
   var StyleScope = kotlin_org_jetbrains_compose_html_html_core.$_$.f3;
-  var copyToArray = kotlin_kotlin.$_$.p6;
-  var Annotation = kotlin_kotlin.$_$.de;
+  var copyToArray = kotlin_kotlin.$_$.b7;
+  var gridTemplateColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.j4;
+  var gridTemplateRows = kotlin_org_jetbrains_compose_html_html_core.$_$.k4;
+  var Annotation = kotlin_kotlin.$_$.of;
+  var lastOrNull = kotlin_kotlin.$_$.x7;
+  var get_lastIndex = kotlin_kotlin.$_$.v7;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.eh;
+  var listOf = kotlin_kotlin.$_$.a8;
+  var emptyList = kotlin_kotlin.$_$.d7;
+  var addAll = kotlin_kotlin.$_$.c6;
   var Companion_getInstance_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
-  var display = kotlin_org_jetbrains_compose_html_html_core.$_$.v3;
-  var gridTemplateColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.i4;
-  var gridTemplateRows = kotlin_org_jetbrains_compose_html_html_core.$_$.j4;
-  var gridAutoColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.f4;
-  var gridAutoRows = kotlin_org_jetbrains_compose_html_html_core.$_$.g4;
-  var lastOrNull = kotlin_kotlin.$_$.j7;
-  var get_lastIndex = kotlin_kotlin.$_$.h7;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.nf;
-  var listOf = kotlin_kotlin.$_$.m7;
-  var emptyList = kotlin_kotlin.$_$.r6;
-  var addAll = kotlin_kotlin.$_$.q5;
+  var display = kotlin_org_jetbrains_compose_html_html_core.$_$.w3;
+  var gridAutoColumns = kotlin_org_jetbrains_compose_html_html_core.$_$.g4;
+  var gridAutoRows = kotlin_org_jetbrains_compose_html_html_core.$_$.h4;
   var wrapQuotesIfNecessary = kotlin_com_varabyte_kobweb_browser_ext.$_$.g;
-  var listOfNotNull = kotlin_kotlin.$_$.l7;
-  var isNumber = kotlin_kotlin.$_$.bb;
+  var listOfNotNull = kotlin_kotlin.$_$.z7;
+  var isNumber = kotlin_kotlin.$_$.rb;
   var CSSVariable = kotlin_org_jetbrains_compose_html_html_core.$_$.v2;
-  var getKClassFromExpression = kotlin_kotlin.$_$.b;
-  var ensureNotNull = kotlin_kotlin.$_$.kf;
+  var getKClassFromExpression = kotlin_kotlin.$_$.d;
+  var ensureNotNull = kotlin_kotlin.$_$.yg;
   var titleCamelCaseToKebabCase = kotlin_com_varabyte_kobweb_browser_ext.$_$.f;
-  var removeSuffix = kotlin_kotlin.$_$.ed;
-  var collectionSizeOrDefault = kotlin_kotlin.$_$.a6;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.j;
-  var charSequenceLength = kotlin_kotlin.$_$.da;
-  var charSequenceGet = kotlin_kotlin.$_$.ca;
-  var isWhitespace = kotlin_kotlin.$_$.ad;
-  var Number_0 = kotlin_kotlin.$_$.ne;
-  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.a2;
-  var interfaceMeta = kotlin_kotlin.$_$.qa;
-  var Collection = kotlin_kotlin.$_$.v4;
-  var isInterface = kotlin_kotlin.$_$.za;
-  var checkCountOverflow = kotlin_kotlin.$_$.y5;
-  var checkIndexOverflow = kotlin_kotlin.$_$.z5;
-  var getOrNull = kotlin_kotlin.$_$.z6;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
-  var DisposableEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h;
-  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
+  var removeSuffix = kotlin_kotlin.$_$.de;
+  var collectionSizeOrDefault = kotlin_kotlin.$_$.m6;
+  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.l;
+  var charSequenceLength = kotlin_kotlin.$_$.sa;
+  var charSequenceGet = kotlin_kotlin.$_$.ra;
+  var isWhitespace = kotlin_kotlin.$_$.yd;
+  var Number_0 = kotlin_kotlin.$_$.ag;
+  var UnsupportedOperationException_init_$Create$ = kotlin_kotlin.$_$.g2;
+  var interfaceMeta = kotlin_kotlin.$_$.gb;
+  var Collection = kotlin_kotlin.$_$.g5;
+  var isInterface = kotlin_kotlin.$_$.pb;
+  var checkCountOverflow = kotlin_kotlin.$_$.k6;
+  var checkIndexOverflow = kotlin_kotlin.$_$.l6;
+  var getOrNull = kotlin_kotlin.$_$.m7;
   var DisposableEffectResult = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g;
-  var toList = kotlin_kotlin.$_$.s8;
-  var ElementBuilder = kotlin_org_jetbrains_compose_html_html_core.$_$.o5;
-  var TagElement = kotlin_org_jetbrains_compose_html_html_core.$_$.b6;
-  var to = kotlin_kotlin.$_$.vf;
-  var lazy = kotlin_kotlin.$_$.mf;
-  var charArrayOf = kotlin_kotlin.$_$.aa;
-  var split = kotlin_kotlin.$_$.jd;
-  var removeSurrounding = kotlin_kotlin.$_$.fd;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var KProperty1 = kotlin_kotlin.$_$.fc;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
-  var toString_0 = kotlin_kotlin.$_$.i2;
+  var toList = kotlin_kotlin.$_$.g9;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b1;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
+  var Companion_getInstance_1 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
+  var DisposableEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.h;
+  var ElementBuilder = kotlin_org_jetbrains_compose_html_html_core.$_$.l5;
+  var TagElement = kotlin_org_jetbrains_compose_html_html_core.$_$.y5;
+  var to = kotlin_kotlin.$_$.nh;
+  var lazy = kotlin_kotlin.$_$.dh;
+  var charArrayOf = kotlin_kotlin.$_$.pa;
+  var split = kotlin_kotlin.$_$.je;
+  var removeSurrounding = kotlin_kotlin.$_$.ee;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
+  var KProperty1 = kotlin_kotlin.$_$.ad;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.cb;
+  var toString_0 = kotlin_kotlin.$_$.p2;
   //endregion
   //region block: pre-declaration
   setMetadataFor(ComparableAttrsScope, 'ComparableAttrsScope', classMeta, VOID, [AttrsScope], ComparableAttrsScope_init_$Create$);
@@ -197,8 +197,6 @@
   setMetadataFor(Companion_5, 'Companion', objectMeta);
   setMetadataFor(FontWeight, 'FontWeight', classMeta);
   setMetadataFor(GridTrackBuilderInRepeat, 'GridTrackBuilderInRepeat', classMeta);
-  setMetadataFor(GridBuilderInAuto, 'GridBuilderInAuto', classMeta);
-  setMetadataFor(GridBuilder, 'GridBuilder', classMeta, GridBuilderInAuto, VOID, GridBuilder);
   setMetadataFor(GridTrackBuilder, 'GridTrackBuilder', classMeta, GridTrackBuilderInRepeat, VOID, GridTrackBuilder);
   setMetadataFor(GridEntry, 'GridEntry', classMeta);
   setMetadataFor(TrackSize, 'TrackSize', classMeta, GridEntry);
@@ -216,6 +214,8 @@
   setMetadataFor(LineNames, 'LineNames', classMeta, GridEntry);
   setMetadataFor(Companion_7, 'Companion', objectMeta);
   setMetadataFor(GridDslMarker, 'GridDslMarker', classMeta, VOID, [Annotation]);
+  setMetadataFor(GridBuilderInAuto, 'GridBuilderInAuto', classMeta);
+  setMetadataFor(GridBuilder, 'GridBuilder', classMeta, GridBuilderInAuto, VOID, GridBuilder);
   setMetadataFor(Companion_8, 'Companion', objectMeta);
   setMetadataFor(VerticalAlign, 'VerticalAlign', classMeta);
   setMetadataFor(Companion_9, 'Companion', objectMeta);
@@ -238,13 +238,13 @@
   setMetadataFor(StringValue, 'StringValue', classMeta, StyleVariable_1);
   setMetadataFor(StyleVariablePropertyProvider, 'StyleVariablePropertyProvider', classMeta);
   setMetadataFor(Companion_15, 'Companion', objectMeta);
-  setMetadataFor(TextDecorationLine, 'TextDecorationLine', classMeta);
-  setMetadataFor(Companion_16, 'Companion', objectMeta);
   setMetadataFor(UserSelect, 'UserSelect', classMeta);
+  setMetadataFor(Companion_16, 'Companion', objectMeta);
+  setMetadataFor(WhiteSpace, 'WhiteSpace', classMeta);
   setMetadataFor(Companion_17, 'Companion', objectMeta);
   setMetadataFor(TextAlign, 'TextAlign', classMeta);
   setMetadataFor(Companion_18, 'Companion', objectMeta);
-  setMetadataFor(WhiteSpace, 'WhiteSpace', classMeta);
+  setMetadataFor(TextDecorationLine, 'TextDecorationLine', classMeta);
   setMetadataFor(Companion_19, 'Companion', objectMeta);
   setMetadataFor(CSSTransition, 'CSSTransition', classMeta);
   setMetadataFor(Companion_20, 'Companion', objectMeta);
@@ -386,14 +386,24 @@
   }
   setMetadataFor(PresentationAttrs, 'PresentationAttrs', interfaceMeta, VOID, [AttrsScope]);
   setMetadataFor(SVGGraphicalElementAttrsScope, 'SVGGraphicalElementAttrsScope', classMeta, SVGElementAttrsScope, [SVGElementAttrsScope, PresentationAttrs]);
-  function points(pairs) {
-    var pointString = joinToString_0(pairs, ' ', VOID, VOID, VOID, VOID, PointsAttrs$points$lambda);
-    this.attr_w68641_k$('points', pointString);
+  function cx(value) {
+    this.attr_w68641_k$('cx', toString(value));
   }
-  setMetadataFor(PointsAttrs, 'PointsAttrs', interfaceMeta, VOID, [AttrsScope]);
-  setMetadataFor(SVGPolylineAttrsScope, 'SVGPolylineAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, PointsAttrs]);
-  setMetadataFor(SVGFillType, 'SVGFillType', classMeta, Enum);
+  function cx_0(value) {
+    this.attr_w68641_k$('cx', toString(value));
+  }
+  function cy(value) {
+    this.attr_w68641_k$('cy', toString(value));
+  }
+  function cy_0(value) {
+    this.attr_w68641_k$('cy', toString(value));
+  }
+  setMetadataFor(CenterCoordinateAttrs, 'CenterCoordinateAttrs', interfaceMeta, VOID, [AttrsScope]);
+  setMetadataFor(SVGCircleAttrsScope, 'SVGCircleAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, CenterCoordinateAttrs]);
   setMetadataFor(Companion_25, 'Companion', objectMeta);
+  setMetadataFor(SVGLineAttrsScope, 'SVGLineAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
+  setMetadataFor(Companion_26, 'Companion', objectMeta);
+  setMetadataFor(SVGContainerElementAttrsScope, 'SVGContainerElementAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
   function x(value) {
     this.attr_w68641_k$('x', toString(value));
   }
@@ -420,9 +430,6 @@
     this.attr_w68641_k$('width', toString(value));
   }
   setMetadataFor(LengthAttrs, 'LengthAttrs', interfaceMeta, VOID, [AttrsScope]);
-  setMetadataFor(SVGRectAttrsScope, 'SVGRectAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, CoordinateAttrs, LengthAttrs]);
-  setMetadataFor(Companion_26, 'Companion', objectMeta);
-  setMetadataFor(SVGContainerElementAttrsScope, 'SVGContainerElementAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
   function viewBox(x, y, width, height) {
     this.attr_w68641_k$('viewBox', toString(x) + ' ' + toString(y) + ' ' + toString(width) + ' ' + toString(height));
   }
@@ -432,35 +439,28 @@
   setMetadataFor(ViewBoxAttrs, 'ViewBoxAttrs', interfaceMeta, VOID, [AttrsScope]);
   setMetadataFor(SVGSvgAttrsScope, 'SVGSvgAttrsScope', classMeta, SVGContainerElementAttrsScope, [SVGContainerElementAttrsScope, CoordinateAttrs, LengthAttrs, ViewBoxAttrs]);
   setMetadataFor(Companion_27, 'Companion', objectMeta);
-  function cx(value) {
-    this.attr_w68641_k$('cx', toString(value));
-  }
-  function cx_0(value) {
-    this.attr_w68641_k$('cx', toString(value));
-  }
-  function cy(value) {
-    this.attr_w68641_k$('cy', toString(value));
-  }
-  function cy_0(value) {
-    this.attr_w68641_k$('cy', toString(value));
-  }
-  setMetadataFor(CenterCoordinateAttrs, 'CenterCoordinateAttrs', interfaceMeta, VOID, [AttrsScope]);
-  setMetadataFor(SVGCircleAttrsScope, 'SVGCircleAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, CenterCoordinateAttrs]);
-  setMetadataFor(Companion_28, 'Companion', objectMeta);
   setMetadataFor(ViewBox, 'ViewBox', classMeta);
-  setMetadataFor(Companion_29, 'Companion', objectMeta);
-  setMetadataFor(SVGPathAttrsScope, 'SVGPathAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
-  setMetadataFor(Companion_30, 'Companion', objectMeta);
-  setMetadataFor(SVGLineAttrsScope, 'SVGLineAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
-  setMetadataFor(SVGPathDataScope, 'SVGPathDataScope', classMeta);
+  setMetadataFor(SVGTransformScope, 'SVGTransformScope', classMeta);
   setMetadataFor(SVGStrokeType, 'SVGStrokeType', classMeta, Enum);
+  setMetadataFor(SvgId, 'SvgId', classMeta);
   setMetadataFor(SVGStrokeLineCap, 'SVGStrokeLineCap', classMeta, Enum);
   setMetadataFor(SVGStrokeLineJoin, 'SVGStrokeLineJoin', classMeta, Enum);
+  setMetadataFor(SVGFillType, 'SVGFillType', classMeta, Enum);
+  setMetadataFor(SVGFillRule, 'SVGFillRule', classMeta, Enum);
+  setMetadataFor(Companion_28, 'Companion', objectMeta);
+  setMetadataFor(SVGPathAttrsScope, 'SVGPathAttrsScope', classMeta, SVGGraphicalElementAttrsScope);
+  setMetadataFor(SVGPathDataScope, 'SVGPathDataScope', classMeta);
+  setMetadataFor(Companion_29, 'Companion', objectMeta);
+  function points(pairs) {
+    var pointString = joinToString_0(pairs, ' ', VOID, VOID, VOID, VOID, PointsAttrs$points$lambda);
+    this.attr_w68641_k$('points', pointString);
+  }
+  setMetadataFor(PointsAttrs, 'PointsAttrs', interfaceMeta, VOID, [AttrsScope]);
+  setMetadataFor(SVGPolylineAttrsScope, 'SVGPolylineAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, PointsAttrs]);
+  setMetadataFor(Companion_30, 'Companion', objectMeta);
+  setMetadataFor(SVGRectAttrsScope, 'SVGRectAttrsScope', classMeta, SVGGraphicalElementAttrsScope, [SVGGraphicalElementAttrsScope, CoordinateAttrs, LengthAttrs]);
   setMetadataFor(Companion_31, 'Companion', objectMeta);
   setMetadataFor(SVGGroupAttrsScope, 'SVGGroupAttrsScope', classMeta, SVGContainerElementAttrsScope);
-  setMetadataFor(SVGTransformScope, 'SVGTransformScope', classMeta);
-  setMetadataFor(SvgId, 'SvgId', classMeta);
-  setMetadataFor(SVGFillRule, 'SVGFillRule', classMeta, Enum);
   //endregion
   function _get_wrapped__s2ip8($this) {
     return $this.wrapped_1;
@@ -1902,13 +1902,29 @@
   function fontWeight(_this__u8e3s4, weight) {
     _this__u8e3s4.property_npxg1h_k$('font-weight', weight);
   }
-  function grid(_this__u8e3s4, block) {
+  function GridTrackBuilder() {
+    GridTrackBuilderInRepeat.call(this);
+  }
+  protoOf(GridTrackBuilder).repeat_n9ti1_k$ = function (count, block) {
+    // Inline function 'kotlin.collections.toTypedArray' call
     // Inline function 'kotlin.apply' call
-    var this_0 = new GridBuilder();
+    var this_0 = new GridTrackBuilder();
     // Inline function 'kotlin.contracts.contract' call
     block(this_0);
-    this_0.buildInto_bd9p49_k$(_this__u8e3s4);
-  }
+    var this_1 = this_0.tracks_1;
+    var repeatTracks = copyToArray(this_1);
+    this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().repeat_1fs2oe_k$(count, repeatTracks.slice()));
+  };
+  protoOf(GridTrackBuilder).repeat_x8tdgb_k$ = function (type, block) {
+    // Inline function 'kotlin.collections.toTypedArray' call
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    var this_1 = this_0.tracks_1;
+    var repeatTracks = copyToArray(this_1);
+    this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().repeat_lz16g6_k$(type, repeatTracks.slice()));
+  };
   function GridTrackBuilderInRepeat() {
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
@@ -1967,40 +1983,6 @@
   };
   protoOf(GridTrackBuilderInRepeat).lineNames_ii8gtg_k$ = function (names) {
     this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().lineNames_npjmfo_k$(names.slice()));
-  };
-  function GridBuilder() {
-    GridBuilderInAuto.call(this);
-  }
-  protoOf(GridBuilder).auto_9oitg_k$ = function (block) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    tmp.autoBuilder_1 = this_0;
-  };
-  function GridTrackBuilder() {
-    GridTrackBuilderInRepeat.call(this);
-  }
-  protoOf(GridTrackBuilder).repeat_n9ti1_k$ = function (count, block) {
-    // Inline function 'kotlin.collections.toTypedArray' call
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    var this_1 = this_0.tracks_1;
-    var repeatTracks = copyToArray(this_1);
-    this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().repeat_1fs2oe_k$(count, repeatTracks.slice()));
-  };
-  protoOf(GridTrackBuilder).repeat_x8tdgb_k$ = function (type, block) {
-    // Inline function 'kotlin.collections.toTypedArray' call
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    var this_1 = this_0.tracks_1;
-    var repeatTracks = copyToArray(this_1);
-    this.tracks_1.add_utx5q5_k$(Companion_getInstance_10().repeat_lz16g6_k$(type, repeatTracks.slice()));
   };
   function FitContent(value) {
     TrackSize.call(this, 'fit-content(' + value + ')');
@@ -2159,6 +2141,20 @@
   protoOf(GridEntry).toString = function () {
     return this.value_1;
   };
+  function gridTemplateColumns_0(_this__u8e3s4, block) {
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    gridTemplateColumns(_this__u8e3s4, toTrackListString_0(this_0.tracks_1));
+  }
+  function gridTemplateRows_0(_this__u8e3s4, block) {
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    gridTemplateRows(_this__u8e3s4, toTrackListString_0(this_0.tracks_1));
+  }
   function GridDslMarker() {
   }
   protoOf(GridDslMarker).equals = function (other) {
@@ -2172,95 +2168,6 @@
   };
   protoOf(GridDslMarker).toString = function () {
     return '@com.varabyte.kobweb.compose.css.GridDslMarker()';
-  };
-  function GridBuilderInAuto() {
-    this.columns_1 = null;
-    this.rows_1 = null;
-    this.autoBuilder_1 = null;
-  }
-  protoOf(GridBuilderInAuto).set_columns_gc9ooa_k$ = function (_set____db54di) {
-    this.columns_1 = _set____db54di;
-  };
-  protoOf(GridBuilderInAuto).get_columns_gyzrhw_k$ = function () {
-    return this.columns_1;
-  };
-  protoOf(GridBuilderInAuto).set_rows_8edm7g_k$ = function (_set____db54di) {
-    this.rows_1 = _set____db54di;
-  };
-  protoOf(GridBuilderInAuto).get_rows_wott7m_k$ = function () {
-    return this.rows_1;
-  };
-  protoOf(GridBuilderInAuto).set_autoBuilder_13371t_k$ = function (_set____db54di) {
-    this.autoBuilder_1 = _set____db54di;
-  };
-  protoOf(GridBuilderInAuto).get_autoBuilder_5aiikd_k$ = function () {
-    return this.autoBuilder_1;
-  };
-  protoOf(GridBuilderInAuto).columns_o4h109_k$ = function (block) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    tmp.columns_1 = this_0.tracks_1;
-  };
-  protoOf(GridBuilderInAuto).rows_c0wtyb_k$ = function (block) {
-    var tmp = this;
-    // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
-    // Inline function 'kotlin.contracts.contract' call
-    block(this_0);
-    tmp.rows_1 = this_0.tracks_1;
-  };
-  protoOf(GridBuilderInAuto).buildInto_bd9p49_k$ = function (scope) {
-    // Inline function 'org.jetbrains.compose.web.css.Companion.Grid' call
-    Companion_getInstance_0();
-    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
-    // Inline function 'kotlin.js.unsafeCast' call
-    // Inline function 'kotlin.js.asDynamic' call
-    display(scope, 'grid');
-    var tmp0_safe_receiver = this.columns_1;
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      gridTemplateColumns(scope, toTrackListString_0(tmp0_safe_receiver));
-    }
-    var tmp1_safe_receiver = this.rows_1;
-    if (tmp1_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      gridTemplateRows(scope, toTrackListString_0(tmp1_safe_receiver));
-    }
-    var tmp2_safe_receiver = this.autoBuilder_1;
-    if (tmp2_safe_receiver == null)
-      null;
-    else {
-      // Inline function 'kotlin.let' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'com.varabyte.kobweb.compose.css.GridBuilderInAuto.buildInto.<anonymous>' call
-      var tmp0_safe_receiver_0 = tmp2_safe_receiver.columns_1;
-      if (tmp0_safe_receiver_0 == null)
-        null;
-      else {
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        gridAutoColumns(scope, toTrackListString_0(tmp0_safe_receiver_0));
-      }
-      var tmp1_safe_receiver_0 = tmp2_safe_receiver.rows_1;
-      var tmp;
-      if (tmp1_safe_receiver_0 == null) {
-        tmp = null;
-      } else {
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        gridAutoRows(scope, toTrackListString_0(tmp1_safe_receiver_0));
-        tmp = Unit_getInstance();
-      }
-    }
   };
   function toTrackListString(_this__u8e3s4) {
     validate(_this__u8e3s4);
@@ -2426,19 +2333,124 @@
       }
     }
   }
-  function gridTemplateColumns_0(_this__u8e3s4, block) {
+  function grid(_this__u8e3s4, block) {
     // Inline function 'kotlin.apply' call
-    var this_0 = new GridTrackBuilder();
+    var this_0 = new GridBuilder();
     // Inline function 'kotlin.contracts.contract' call
     block(this_0);
-    gridTemplateColumns(_this__u8e3s4, toTrackListString_0(this_0.tracks_1));
+    this_0.buildInto_bd9p49_k$(_this__u8e3s4);
   }
-  function gridTemplateRows_0(_this__u8e3s4, block) {
+  function GridBuilder() {
+    GridBuilderInAuto.call(this);
+  }
+  protoOf(GridBuilder).auto_9oitg_k$ = function (block) {
+    var tmp = this;
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    tmp.autoBuilder_1 = this_0;
+  };
+  function GridBuilderInAuto() {
+    this.columns_1 = null;
+    this.rows_1 = null;
+    this.autoBuilder_1 = null;
+  }
+  protoOf(GridBuilderInAuto).set_columns_gc9ooa_k$ = function (_set____db54di) {
+    this.columns_1 = _set____db54di;
+  };
+  protoOf(GridBuilderInAuto).get_columns_gyzrhw_k$ = function () {
+    return this.columns_1;
+  };
+  protoOf(GridBuilderInAuto).set_rows_8edm7g_k$ = function (_set____db54di) {
+    this.rows_1 = _set____db54di;
+  };
+  protoOf(GridBuilderInAuto).get_rows_wott7m_k$ = function () {
+    return this.rows_1;
+  };
+  protoOf(GridBuilderInAuto).set_autoBuilder_13371t_k$ = function (_set____db54di) {
+    this.autoBuilder_1 = _set____db54di;
+  };
+  protoOf(GridBuilderInAuto).get_autoBuilder_5aiikd_k$ = function () {
+    return this.autoBuilder_1;
+  };
+  protoOf(GridBuilderInAuto).columns_o4h109_k$ = function (block) {
+    var tmp = this;
     // Inline function 'kotlin.apply' call
     var this_0 = new GridTrackBuilder();
     // Inline function 'kotlin.contracts.contract' call
     block(this_0);
-    gridTemplateRows(_this__u8e3s4, toTrackListString_0(this_0.tracks_1));
+    tmp.columns_1 = this_0.tracks_1;
+  };
+  protoOf(GridBuilderInAuto).rows_c0wtyb_k$ = function (block) {
+    var tmp = this;
+    // Inline function 'kotlin.apply' call
+    var this_0 = new GridTrackBuilder();
+    // Inline function 'kotlin.contracts.contract' call
+    block(this_0);
+    tmp.rows_1 = this_0.tracks_1;
+  };
+  protoOf(GridBuilderInAuto).buildInto_bd9p49_k$ = function (scope) {
+    // Inline function 'org.jetbrains.compose.web.css.Companion.Grid' call
+    Companion_getInstance_0();
+    // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    display(scope, 'grid');
+    var tmp0_safe_receiver = this.columns_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      gridTemplateColumns(scope, toTrackListString_0(tmp0_safe_receiver));
+    }
+    var tmp1_safe_receiver = this.rows_1;
+    if (tmp1_safe_receiver == null)
+      null;
+    else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      gridTemplateRows(scope, toTrackListString_0(tmp1_safe_receiver));
+    }
+    var tmp2_safe_receiver = this.autoBuilder_1;
+    if (tmp2_safe_receiver == null)
+      null;
+    else {
+      // Inline function 'kotlin.let' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'com.varabyte.kobweb.compose.css.GridBuilderInAuto.buildInto.<anonymous>' call
+      var tmp0_safe_receiver_0 = tmp2_safe_receiver.columns_1;
+      if (tmp0_safe_receiver_0 == null)
+        null;
+      else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        gridAutoColumns(scope, toTrackListString_0(tmp0_safe_receiver_0));
+      }
+      var tmp1_safe_receiver_0 = tmp2_safe_receiver.rows_1;
+      var tmp;
+      if (tmp1_safe_receiver_0 == null) {
+        tmp = null;
+      } else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        gridAutoRows(scope, toTrackListString_0(tmp1_safe_receiver_0));
+        tmp = Unit_getInstance();
+      }
+    }
+  };
+  function marginInline(_this__u8e3s4, value) {
+    _this__u8e3s4.property_wcrait_k$('margin-inline', joinToString_0(value, ' '));
+  }
+  function paddingInline(_this__u8e3s4, value) {
+    _this__u8e3s4.property_wcrait_k$('padding-inline', joinToString_0(value, ' '));
+  }
+  function marginBlock(_this__u8e3s4, value) {
+    _this__u8e3s4.property_wcrait_k$('margin-block', joinToString_0(value, ' '));
+  }
+  function verticalAlign(_this__u8e3s4, verticalAlign) {
+    _this__u8e3s4.property_npxg1h_k$('vertical-align', verticalAlign);
   }
   function _get_value__a43j40_7($this) {
     return $this.value_1;
@@ -2495,12 +2507,6 @@
   protoOf(VerticalAlign).toString = function () {
     return this.value_1;
   };
-  function verticalAlign(_this__u8e3s4, verticalAlign) {
-    _this__u8e3s4.property_npxg1h_k$('vertical-align', verticalAlign);
-  }
-  function paddingInline(_this__u8e3s4, value) {
-    _this__u8e3s4.property_wcrait_k$('padding-inline', joinToString_0(value, ' '));
-  }
   function _get_value__a43j40_8($this) {
     return $this.value_1;
   }
@@ -2763,9 +2769,6 @@
       _this__u8e3s4.property_npxg1h_k$('list-style-image', image);
     }
   }
-  function objectFit(_this__u8e3s4, objectFit) {
-    _this__u8e3s4.property_npxg1h_k$('object-fit', objectFit);
-  }
   function _get_value__a43j40_10($this) {
     return $this.value_1;
   }
@@ -2812,6 +2815,9 @@
   protoOf(ObjectFit).toString = function () {
     return this.value_1;
   };
+  function objectFit(_this__u8e3s4, objectFit) {
+    _this__u8e3s4.property_npxg1h_k$('object-fit', objectFit);
+  }
   function outline(_this__u8e3s4, width, style, color) {
     width = width === VOID ? null : width;
     style = style === VOID ? null : style;
@@ -2915,15 +2921,6 @@
   protoOf(Overflow).toString = function () {
     return this.value_1;
   };
-  function overflowX(_this__u8e3s4, overflowX) {
-    _this__u8e3s4.property_npxg1h_k$('overflow-x', overflowX);
-  }
-  function overflowY(_this__u8e3s4, overflowY) {
-    _this__u8e3s4.property_npxg1h_k$('overflow-y', overflowY);
-  }
-  function overflow(_this__u8e3s4, overflow) {
-    _this__u8e3s4.property_npxg1h_k$('overflow', overflow);
-  }
   function _get_value__a43j40_12($this) {
     return $this.value_1;
   }
@@ -2964,6 +2961,15 @@
   protoOf(OverflowWrap).toString = function () {
     return this.value_1;
   };
+  function overflowX(_this__u8e3s4, overflowX) {
+    _this__u8e3s4.property_npxg1h_k$('overflow-x', overflowX);
+  }
+  function overflowY(_this__u8e3s4, overflowY) {
+    _this__u8e3s4.property_npxg1h_k$('overflow-y', overflowY);
+  }
+  function overflow(_this__u8e3s4, overflow) {
+    _this__u8e3s4.property_npxg1h_k$('overflow', overflow);
+  }
   function overflowWrap(_this__u8e3s4, overflowWrap) {
     _this__u8e3s4.property_npxg1h_k$('overflow-wrap', overflowWrap);
   }
@@ -3007,10 +3013,16 @@
   function scrollBehavior(_this__u8e3s4, scrollBehavior) {
     _this__u8e3s4.property_npxg1h_k$('scroll-behavior', scrollBehavior);
   }
+  function setVariable(_this__u8e3s4, variable, value) {
+    _this__u8e3s4.property_jk9dw6_k$('--' + variable.name_1, value);
+  }
   function StyleVariable(defaultFallback, prefix) {
     defaultFallback = defaultFallback === VOID ? null : defaultFallback;
     prefix = prefix === VOID ? null : prefix;
     return new StyleVariablePropertyProvider(defaultFallback, prefix);
+  }
+  function setVariable_0(_this__u8e3s4, variable, value) {
+    _this__u8e3s4.property_npxg1h_k$('--' + variable.name_1, value);
   }
   function StyleVariable_0(prefix) {
     prefix = prefix === VOID ? null : prefix;
@@ -3197,41 +3209,38 @@
     this_0.append_22ad7x_k$(removeSuffix(removeSuffix(titleCamelCaseToKebabCase(property.callableName), '-var'), '-variable'));
     return this_0.toString();
   }
-  function setVariable(_this__u8e3s4, variable, value) {
-    _this__u8e3s4.property_npxg1h_k$('--' + variable.name_1, value);
-  }
-  function whiteSpace(_this__u8e3s4, whiteSpace) {
-    _this__u8e3s4.property_npxg1h_k$('white-space', whiteSpace);
-  }
   function _get_value__a43j40_14($this) {
     return $this.value_1;
   }
   function Companion_15() {
     Companion_instance_15 = this;
   }
-  protoOf(Companion_15).get_Underline_oo7egz_k$ = function () {
-    return new TextDecorationLine('underline');
-  };
-  protoOf(Companion_15).get_Overline_lz0ci7_k$ = function () {
-    return new TextDecorationLine('overline');
-  };
-  protoOf(Companion_15).get_LineThrough_pr9ajs_k$ = function () {
-    return new TextDecorationLine('line-through');
-  };
   protoOf(Companion_15).get_None_wo6tgh_k$ = function () {
-    return new TextDecorationLine('none');
+    return new UserSelect('none');
+  };
+  protoOf(Companion_15).get_Auto_wnyn88_k$ = function () {
+    return new UserSelect('auto');
+  };
+  protoOf(Companion_15).get_Text_woag7q_k$ = function () {
+    return new UserSelect('text');
+  };
+  protoOf(Companion_15).get_Contain_qhyalx_k$ = function () {
+    return new UserSelect('contain');
+  };
+  protoOf(Companion_15).get_All_18jx7s_k$ = function () {
+    return new UserSelect('all');
   };
   protoOf(Companion_15).get_Inherit_a1a9e6_k$ = function () {
-    return new TextDecorationLine('inherit');
+    return new UserSelect('inherit');
   };
   protoOf(Companion_15).get_Initial_a0h2v9_k$ = function () {
-    return new TextDecorationLine('initial');
+    return new UserSelect('initial');
   };
   protoOf(Companion_15).get_Revert_3t1tzh_k$ = function () {
-    return new TextDecorationLine('revert');
+    return new UserSelect('revert');
   };
   protoOf(Companion_15).get_Unset_ii4mhs_k$ = function () {
-    return new TextDecorationLine('unset');
+    return new UserSelect('unset');
   };
   var Companion_instance_15;
   function Companion_getInstance_18() {
@@ -3239,48 +3248,48 @@
       new Companion_15();
     return Companion_instance_15;
   }
-  function TextDecorationLine(value) {
+  function UserSelect(value) {
     Companion_getInstance_18();
     this.value_1 = value;
   }
-  protoOf(TextDecorationLine).toString = function () {
+  protoOf(UserSelect).toString = function () {
     return this.value_1;
   };
-  function textDecorationLine(_this__u8e3s4, textDecorationLines) {
-    _this__u8e3s4.property_wcrait_k$('text-decoration-line', joinToString_0(textDecorationLines, ' '));
-  }
   function _get_value__a43j40_15($this) {
     return $this.value_1;
   }
   function Companion_16() {
     Companion_instance_16 = this;
   }
-  protoOf(Companion_16).get_None_wo6tgh_k$ = function () {
-    return new UserSelect('none');
+  protoOf(Companion_16).get_Normal_22avww_k$ = function () {
+    return new WhiteSpace('normal');
   };
-  protoOf(Companion_16).get_Auto_wnyn88_k$ = function () {
-    return new UserSelect('auto');
+  protoOf(Companion_16).get_NoWrap_21tqz8_k$ = function () {
+    return new WhiteSpace('nowrap');
   };
-  protoOf(Companion_16).get_Text_woag7q_k$ = function () {
-    return new UserSelect('text');
+  protoOf(Companion_16).get_Pre_18jlye_k$ = function () {
+    return new WhiteSpace('pre');
   };
-  protoOf(Companion_16).get_Contain_qhyalx_k$ = function () {
-    return new UserSelect('contain');
+  protoOf(Companion_16).get_PreWrap_nintz8_k$ = function () {
+    return new WhiteSpace('pre-wrap');
   };
-  protoOf(Companion_16).get_All_18jx7s_k$ = function () {
-    return new UserSelect('all');
+  protoOf(Companion_16).get_PreLine_nigmr2_k$ = function () {
+    return new WhiteSpace('pre-line');
+  };
+  protoOf(Companion_16).get_BreakSpaces_6b23jx_k$ = function () {
+    return new WhiteSpace('break-spaces');
   };
   protoOf(Companion_16).get_Inherit_a1a9e6_k$ = function () {
-    return new UserSelect('inherit');
+    return new WhiteSpace('inherit');
   };
   protoOf(Companion_16).get_Initial_a0h2v9_k$ = function () {
-    return new UserSelect('initial');
+    return new WhiteSpace('initial');
   };
   protoOf(Companion_16).get_Revert_3t1tzh_k$ = function () {
-    return new UserSelect('revert');
+    return new WhiteSpace('revert');
   };
   protoOf(Companion_16).get_Unset_ii4mhs_k$ = function () {
-    return new UserSelect('unset');
+    return new WhiteSpace('unset');
   };
   var Companion_instance_16;
   function Companion_getInstance_19() {
@@ -3288,16 +3297,13 @@
       new Companion_16();
     return Companion_instance_16;
   }
-  function UserSelect(value) {
+  function WhiteSpace(value) {
     Companion_getInstance_19();
     this.value_1 = value;
   }
-  protoOf(UserSelect).toString = function () {
+  protoOf(WhiteSpace).toString = function () {
     return this.value_1;
   };
-  function userSelect(_this__u8e3s4, userSelect) {
-    _this__u8e3s4.property_npxg1h_k$('user-select', userSelect);
-  }
   function _get_value__a43j40_16($this) {
     return $this.value_1;
   }
@@ -3359,35 +3365,29 @@
   function Companion_18() {
     Companion_instance_18 = this;
   }
-  protoOf(Companion_18).get_Normal_22avww_k$ = function () {
-    return new WhiteSpace('normal');
+  protoOf(Companion_18).get_Underline_oo7egz_k$ = function () {
+    return new TextDecorationLine('underline');
   };
-  protoOf(Companion_18).get_NoWrap_21tqz8_k$ = function () {
-    return new WhiteSpace('nowrap');
+  protoOf(Companion_18).get_Overline_lz0ci7_k$ = function () {
+    return new TextDecorationLine('overline');
   };
-  protoOf(Companion_18).get_Pre_18jlye_k$ = function () {
-    return new WhiteSpace('pre');
+  protoOf(Companion_18).get_LineThrough_pr9ajs_k$ = function () {
+    return new TextDecorationLine('line-through');
   };
-  protoOf(Companion_18).get_PreWrap_nintz8_k$ = function () {
-    return new WhiteSpace('pre-wrap');
-  };
-  protoOf(Companion_18).get_PreLine_nigmr2_k$ = function () {
-    return new WhiteSpace('pre-line');
-  };
-  protoOf(Companion_18).get_BreakSpaces_6b23jx_k$ = function () {
-    return new WhiteSpace('break-spaces');
+  protoOf(Companion_18).get_None_wo6tgh_k$ = function () {
+    return new TextDecorationLine('none');
   };
   protoOf(Companion_18).get_Inherit_a1a9e6_k$ = function () {
-    return new WhiteSpace('inherit');
+    return new TextDecorationLine('inherit');
   };
   protoOf(Companion_18).get_Initial_a0h2v9_k$ = function () {
-    return new WhiteSpace('initial');
+    return new TextDecorationLine('initial');
   };
   protoOf(Companion_18).get_Revert_3t1tzh_k$ = function () {
-    return new WhiteSpace('revert');
+    return new TextDecorationLine('revert');
   };
   protoOf(Companion_18).get_Unset_ii4mhs_k$ = function () {
-    return new WhiteSpace('unset');
+    return new TextDecorationLine('unset');
   };
   var Companion_instance_18;
   function Companion_getInstance_21() {
@@ -3395,15 +3395,24 @@
       new Companion_18();
     return Companion_instance_18;
   }
-  function WhiteSpace(value) {
+  function TextDecorationLine(value) {
     Companion_getInstance_21();
     this.value_1 = value;
   }
-  protoOf(WhiteSpace).toString = function () {
+  protoOf(TextDecorationLine).toString = function () {
     return this.value_1;
   };
+  function userSelect(_this__u8e3s4, userSelect) {
+    _this__u8e3s4.property_npxg1h_k$('user-select', userSelect);
+  }
+  function whiteSpace(_this__u8e3s4, whiteSpace) {
+    _this__u8e3s4.property_npxg1h_k$('white-space', whiteSpace);
+  }
   function textAlign(_this__u8e3s4, textAlign) {
     _this__u8e3s4.property_npxg1h_k$('text-align', textAlign);
+  }
+  function textDecorationLine(_this__u8e3s4, textDecorationLines) {
+    _this__u8e3s4.property_wcrait_k$('text-decoration-line', joinToString_0(textDecorationLines, ' '));
   }
   function translateX(_this__u8e3s4, tx) {
     translate(_this__u8e3s4, tx);
@@ -3966,75 +3975,6 @@
   protoOf(CSSUrl).toString = function () {
     return 'url("' + this.url_1 + '")';
   };
-  function registerRefScope(_this__u8e3s4, scope, transform, $composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_ip860b_k$(1100234072);
-    if (isTraceInProgress()) {
-      traceEventStart(1100234072, $changed, -1, 'com.varabyte.kobweb.compose.dom.registerRefScope (ElementRefScope.kt:107)');
-    }
-    if (scope == null) {
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-      $composer_0.endReplaceableGroup_ern0ak_k$();
-      return Unit_getInstance();
-    }
-    // Inline function 'kotlin.collections.forEach' call
-    var tmp0_iterator = scope.keyedCallbacks_1.iterator_jk1svi_k$();
-    while (tmp0_iterator.hasNext_bitz1p_k$()) {
-      var element = tmp0_iterator.next_20eer_k$();
-      // Inline function 'com.varabyte.kobweb.compose.dom.registerRefScope.<anonymous>' call
-      // Inline function 'kotlin.collections.toTypedArray' call
-      var this_0 = element.keys_1;
-      var tmp = copyToArray(this_0).slice();
-      DisposableEffect(tmp, registerRefScope$lambda(element, transform, _this__u8e3s4), $composer_0, 8);
-    }
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-  }
-  var com_varabyte_kobweb_compose_dom_ElementRefScope$stable;
-  function registerRefScope_0(_this__u8e3s4, scope, $composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_ip860b_k$(1057476357);
-    if (isTraceInProgress()) {
-      traceEventStart(1057476357, $changed, -1, 'com.varabyte.kobweb.compose.dom.registerRefScope (ElementRefScope.kt:91)');
-    }
-    $composer_0.startReplaceableGroup_ip860b_k$(49626842);
-    // Inline function 'androidx.compose.runtime.cache' call
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_0.rememberedValue_4dg93v_k$();
-    var tmp;
-    if (false ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
-      // Inline function 'com.varabyte.kobweb.compose.dom.registerRefScope.<anonymous>' call
-      var value = registerRefScope$lambda_0;
-      $composer_0.updateRememberedValue_l1wh71_k$(value);
-      tmp = value;
-    } else {
-      tmp = it;
-    }
-    var tmp_0 = tmp;
-    var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    registerRefScope(_this__u8e3s4, scope, tmp0_group, $composer_0, 456);
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-  }
-  function refScope(init) {
-    // Inline function 'kotlin.run' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'com.varabyte.kobweb.compose.dom.refScope.<anonymous>' call
-    // Inline function 'kotlin.apply' call
-    var this_0 = new Builder();
-    // Inline function 'kotlin.contracts.contract' call
-    init(this_0);
-    return this_0.build_1k0s4u_k$();
-  }
   function _no_name_provided__qut3iv() {
   }
   protoOf(_no_name_provided__qut3iv).dispose_3nnxhr_k$ = function () {
@@ -4162,13 +4102,82 @@
       return false;
     return true;
   };
-  function registerRefScope$lambda($keyedCallback, $transform, $this_registerRefScope) {
+  function registerRefScope(_this__u8e3s4, scope, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_ip860b_k$(1057476357);
+    if (isTraceInProgress()) {
+      traceEventStart(1057476357, $changed, -1, 'com.varabyte.kobweb.compose.dom.registerRefScope (ElementRefScope.kt:91)');
+    }
+    $composer_0.startReplaceableGroup_ip860b_k$(49626842);
+    // Inline function 'androidx.compose.runtime.cache' call
+    // Inline function 'kotlin.let' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
+    var it = $composer_0.rememberedValue_4dg93v_k$();
+    var tmp;
+    if (false ? true : it === Companion_getInstance_1().get_Empty_i9b85g_k$()) {
+      // Inline function 'com.varabyte.kobweb.compose.dom.registerRefScope.<anonymous>' call
+      var value = registerRefScope$lambda;
+      $composer_0.updateRememberedValue_l1wh71_k$(value);
+      tmp = value;
+    } else {
+      tmp = it;
+    }
+    var tmp_0 = tmp;
+    var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    registerRefScope_0(_this__u8e3s4, scope, tmp0_group, $composer_0, 456);
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+  }
+  var com_varabyte_kobweb_compose_dom_ElementRefScope$stable;
+  function registerRefScope_0(_this__u8e3s4, scope, transform, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_ip860b_k$(1100234072);
+    if (isTraceInProgress()) {
+      traceEventStart(1100234072, $changed, -1, 'com.varabyte.kobweb.compose.dom.registerRefScope (ElementRefScope.kt:107)');
+    }
+    if (scope == null) {
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+      $composer_0.endReplaceableGroup_ern0ak_k$();
+      return Unit_getInstance();
+    }
+    // Inline function 'kotlin.collections.forEach' call
+    var tmp0_iterator = scope.keyedCallbacks_1.iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var element = tmp0_iterator.next_20eer_k$();
+      // Inline function 'com.varabyte.kobweb.compose.dom.registerRefScope.<anonymous>' call
+      // Inline function 'kotlin.collections.toTypedArray' call
+      var this_0 = element.keys_1;
+      var tmp = copyToArray(this_0).slice();
+      DisposableEffect(tmp, registerRefScope$lambda_0(element, transform, _this__u8e3s4), $composer_0, 8);
+    }
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+  }
+  function refScope(init) {
+    // Inline function 'kotlin.run' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'com.varabyte.kobweb.compose.dom.refScope.<anonymous>' call
+    // Inline function 'kotlin.apply' call
+    var this_0 = new Builder();
+    // Inline function 'kotlin.contracts.contract' call
+    init(this_0);
+    return this_0.build_1k0s4u_k$();
+  }
+  function registerRefScope$lambda(it) {
+    return it;
+  }
+  function registerRefScope$lambda_0($keyedCallback, $transform, $this_registerRefScope) {
     return function ($this$DisposableEffect) {
       return $keyedCallback.refCallback_1.invoke_64dhf5_k$($this$DisposableEffect, $transform($this_registerRefScope.get_scopeElement_61kop2_k$($this$DisposableEffect)));
     };
-  }
-  function registerRefScope$lambda_0(it) {
-    return it;
   }
   function GenericTag(name, attrsStr, content, $composer, $changed, $default) {
     var attrsStr_0 = {_v: attrsStr};
@@ -4496,124 +4505,6 @@
       return _get_element__z0t21h_0(receiver);
     }, null);
   }
-  function Polyline(_this__u8e3s4, attrs, $composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(741814780);
-    var $dirty = $changed;
-    if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs) ? 32 : 16);
-    if (!(($dirty & 81) === 16) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (isTraceInProgress()) {
-        traceEventStart(741814780, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Polyline (Svg.kt:1161)');
-      }
-      var tmp = Companion_getInstance_27().invoke_cy68no_k$(attrs);
-      GenericTag_0('polyline', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Polyline$lambda(_this__u8e3s4, attrs, $changed));
-    }
-  }
-  function SVGPolylineAttrsScope$Companion$invoke$lambda($attrs) {
-    return function ($this$null) {
-      $attrs(new SVGPolylineAttrsScope($this$null));
-      return Unit_getInstance();
-    };
-  }
-  function Companion_24() {
-    Companion_instance_24 = this;
-  }
-  protoOf(Companion_24).invoke_cy68no_k$ = function (attrs) {
-    return SVGPolylineAttrsScope$Companion$invoke$lambda(attrs);
-  };
-  var Companion_instance_24;
-  function Companion_getInstance_27() {
-    if (Companion_instance_24 == null)
-      new Companion_24();
-    return Companion_instance_24;
-  }
-  function SVGPolylineAttrsScope(attrs) {
-    Companion_getInstance_27();
-    SVGGraphicalElementAttrsScope.call(this, attrs);
-  }
-  var SVGFillType_None_instance;
-  var SVGFillType_CurrentColor_instance;
-  function values_2() {
-    return [SVGFillType_None_getInstance(), SVGFillType_CurrentColor_getInstance()];
-  }
-  function valueOf_2(value) {
-    switch (value) {
-      case 'None':
-        return SVGFillType_None_getInstance();
-      case 'CurrentColor':
-        return SVGFillType_CurrentColor_getInstance();
-      default:
-        SVGFillType_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries_2() {
-    if ($ENTRIES_2 == null)
-      $ENTRIES_2 = enumEntries(values_2());
-    return $ENTRIES_2;
-  }
-  var SVGFillType_entriesInitialized;
-  function SVGFillType_initEntries() {
-    if (SVGFillType_entriesInitialized)
-      return Unit_getInstance();
-    SVGFillType_entriesInitialized = true;
-    SVGFillType_None_instance = new SVGFillType('None', 0);
-    SVGFillType_CurrentColor_instance = new SVGFillType('CurrentColor', 1);
-  }
-  var $ENTRIES_2;
-  function SVGFillType(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  protoOf(SVGFillType).toString = function () {
-    return toSvgValue(this);
-  };
-  function SVGRectAttrsScope$Companion$invoke$lambda($attrs) {
-    return function ($this$null) {
-      $attrs(new SVGRectAttrsScope($this$null));
-      return Unit_getInstance();
-    };
-  }
-  function Companion_25() {
-    Companion_instance_25 = this;
-  }
-  protoOf(Companion_25).invoke_ytzn80_k$ = function (attrs) {
-    return SVGRectAttrsScope$Companion$invoke$lambda(attrs);
-  };
-  var Companion_instance_25;
-  function Companion_getInstance_28() {
-    if (Companion_instance_25 == null)
-      new Companion_25();
-    return Companion_instance_25;
-  }
-  function SVGRectAttrsScope(attrs) {
-    Companion_getInstance_28();
-    SVGGraphicalElementAttrsScope.call(this, attrs);
-  }
-  protoOf(SVGRectAttrsScope).rx_neywol_k$ = function (value) {
-    this.attr_w68641_k$('rx', toString(value));
-  };
-  protoOf(SVGRectAttrsScope).ry_pgu87o_k$ = function (value) {
-    this.attr_w68641_k$('ry', toString(value));
-  };
-  protoOf(SVGRectAttrsScope).rx_h0fbf_k$ = function (value) {
-    this.attr_w68641_k$('rx', toString(value));
-  };
-  protoOf(SVGRectAttrsScope).ry_cwgqcs_k$ = function (value) {
-    this.attr_w68641_k$('ry', toString(value));
-  };
   function Circle(_this__u8e3s4, attrs, $composer, $changed) {
     var $composer_0 = $composer;
     $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-2079059220);
@@ -4624,7 +4515,7 @@
       if (isTraceInProgress()) {
         traceEventStart(-2079059220, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Circle (Svg.kt:804)');
       }
-      var tmp = Companion_getInstance_30().invoke_f9pwg4_k$(attrs);
+      var tmp = Companion_getInstance_27().invoke_f9pwg4_k$(attrs);
       GenericTag_0('circle', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -4639,49 +4530,26 @@
       tmp0_safe_receiver.updateScope_t8jcf_k$(Circle$lambda(_this__u8e3s4, attrs, $changed));
     }
   }
-  function SVGSvgAttrsScope$Companion$invoke$lambda($attrs) {
-    return function ($this$null) {
-      if (!($attrs == null))
-        $attrs(new SVGSvgAttrsScope($this$null));
-      return Unit_getInstance();
-    };
-  }
-  function Companion_26() {
-    Companion_instance_26 = this;
-  }
-  protoOf(Companion_26).invoke_uvzfhd_k$ = function (attrs) {
-    return SVGSvgAttrsScope$Companion$invoke$lambda(attrs);
-  };
-  var Companion_instance_26;
-  function Companion_getInstance_29() {
-    if (Companion_instance_26 == null)
-      new Companion_26();
-    return Companion_instance_26;
-  }
-  function SVGSvgAttrsScope(attrs) {
-    Companion_getInstance_29();
-    SVGContainerElementAttrsScope.call(this, attrs);
-  }
   function SVGCircleAttrsScope$Companion$invoke$lambda($attrs) {
     return function ($this$null) {
       $attrs(new SVGCircleAttrsScope($this$null));
       return Unit_getInstance();
     };
   }
-  function Companion_27() {
-    Companion_instance_27 = this;
+  function Companion_24() {
+    Companion_instance_24 = this;
   }
-  protoOf(Companion_27).invoke_f9pwg4_k$ = function (attrs) {
+  protoOf(Companion_24).invoke_f9pwg4_k$ = function (attrs) {
     return SVGCircleAttrsScope$Companion$invoke$lambda(attrs);
   };
-  var Companion_instance_27;
-  function Companion_getInstance_30() {
-    if (Companion_instance_27 == null)
-      new Companion_27();
-    return Companion_instance_27;
+  var Companion_instance_24;
+  function Companion_getInstance_27() {
+    if (Companion_instance_24 == null)
+      new Companion_24();
+    return Companion_instance_24;
   }
   function SVGCircleAttrsScope(attrs) {
-    Companion_getInstance_30();
+    Companion_getInstance_27();
     SVGGraphicalElementAttrsScope.call(this, attrs);
   }
   protoOf(SVGCircleAttrsScope).r_4ompmx_k$ = function (value) {
@@ -4689,107 +4557,6 @@
   };
   protoOf(SVGCircleAttrsScope).r_uxqzt5_k$ = function (value) {
     this.attr_w68641_k$('r', toString(value));
-  };
-  function Companion_28() {
-    Companion_instance_28 = this;
-  }
-  protoOf(Companion_28).sized_aiz6wt_k$ = function (width, height) {
-    return new ViewBox(0, 0, width, height);
-  };
-  protoOf(Companion_28).sized$default_id0xg9_k$ = function (width, height, $super) {
-    height = height === VOID ? width : height;
-    return $super === VOID ? this.sized_aiz6wt_k$(width, height) : $super.sized_aiz6wt_k$.call(this, width, height);
-  };
-  var Companion_instance_28;
-  function Companion_getInstance_31() {
-    if (Companion_instance_28 == null)
-      new Companion_28();
-    return Companion_instance_28;
-  }
-  function ViewBox(x, y, width, height) {
-    Companion_getInstance_31();
-    this.x_1 = x;
-    this.y_1 = y;
-    this.width_1 = width;
-    this.height_1 = height;
-  }
-  protoOf(ViewBox).get_x_1mhr67_k$ = function () {
-    return this.x_1;
-  };
-  protoOf(ViewBox).get_y_1mhr68_k$ = function () {
-    return this.y_1;
-  };
-  protoOf(ViewBox).get_width_j0q4yl_k$ = function () {
-    return this.width_1;
-  };
-  protoOf(ViewBox).get_height_e7t92o_k$ = function () {
-    return this.height_1;
-  };
-  function Svg(attrs, content, $composer, $changed, $default) {
-    var attrs_0 = {_v: attrs};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(302969729);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 6;
-    else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(302969729, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Svg (Svg.kt:433)');
-      }
-      GenericTag_0('svg', 'http://www.w3.org/2000/svg', Companion_getInstance_29().invoke_uvzfhd_k$(attrs_0._v), content, $composer_0, 54 | 7168 & $dirty << 6, 0);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Svg$lambda(attrs_0, content, $changed, $default));
-    }
-  }
-  function SVGPathAttrsScope$Companion$invoke$lambda($attrs) {
-    return function ($this$null) {
-      $attrs(new SVGPathAttrsScope($this$null));
-      return Unit_getInstance();
-    };
-  }
-  function Companion_29() {
-    Companion_instance_29 = this;
-  }
-  protoOf(Companion_29).invoke_ck7z5b_k$ = function (attrs) {
-    return SVGPathAttrsScope$Companion$invoke$lambda(attrs);
-  };
-  var Companion_instance_29;
-  function Companion_getInstance_32() {
-    if (Companion_instance_29 == null)
-      new Companion_29();
-    return Companion_instance_29;
-  }
-  function SVGPathAttrsScope(attrs) {
-    Companion_getInstance_32();
-    SVGGraphicalElementAttrsScope.call(this, attrs);
-  }
-  protoOf(SVGPathAttrsScope).d_tonr5x_k$ = function (pathDataScope) {
-    // Inline function 'kotlin.apply' call
-    var this_0 = new SVGPathDataScope();
-    // Inline function 'kotlin.contracts.contract' call
-    pathDataScope(this_0);
-    this.attr_w68641_k$('d', joinToString(this_0.pathCommands_1, ' '));
-  };
-  protoOf(SVGPathAttrsScope).d_e5qqiu_k$ = function (value) {
-    this.attr_w68641_k$('d', value);
   };
   function Line(_this__u8e3s4, attrs, $composer, $changed) {
     var $composer_0 = $composer;
@@ -4801,7 +4568,7 @@
       if (isTraceInProgress()) {
         traceEventStart(-846499000, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Line (Svg.kt:979)');
       }
-      var tmp = Companion_getInstance_33().invoke_zctbq8_k$(attrs);
+      var tmp = Companion_getInstance_28().invoke_zctbq8_k$(attrs);
       GenericTag_0('line', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -4822,20 +4589,20 @@
       return Unit_getInstance();
     };
   }
-  function Companion_30() {
-    Companion_instance_30 = this;
+  function Companion_25() {
+    Companion_instance_25 = this;
   }
-  protoOf(Companion_30).invoke_zctbq8_k$ = function (attrs) {
+  protoOf(Companion_25).invoke_zctbq8_k$ = function (attrs) {
     return SVGLineAttrsScope$Companion$invoke$lambda(attrs);
   };
-  var Companion_instance_30;
-  function Companion_getInstance_33() {
-    if (Companion_instance_30 == null)
-      new Companion_30();
-    return Companion_instance_30;
+  var Companion_instance_25;
+  function Companion_getInstance_28() {
+    if (Companion_instance_25 == null)
+      new Companion_25();
+    return Companion_instance_25;
   }
   function SVGLineAttrsScope(attrs) {
-    Companion_getInstance_33();
+    Companion_getInstance_28();
     SVGGraphicalElementAttrsScope.call(this, attrs);
   }
   protoOf(SVGLineAttrsScope).x1_oqfh9a_k$ = function (value) {
@@ -4862,392 +4629,42 @@
   protoOf(SVGLineAttrsScope).y2_j8bxhe_k$ = function (value) {
     this.attr_w68641_k$('y2', toString(value));
   };
-  function SVGPathDataScope() {
-    var tmp = this;
-    // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.pathCommands_1 = ArrayList_init_$Create$();
-  }
-  protoOf(SVGPathDataScope).get_pathCommands_p1akmi_k$ = function () {
-    return this.pathCommands_1;
-  };
-  protoOf(SVGPathDataScope).moveTo_3kg6ro_k$ = function (x, y) {
-    this.pathCommands_1.add_utx5q5_k$('M ' + toString(x) + ' ' + toString(y));
-  };
-  protoOf(SVGPathDataScope).lineTo_wo5zt2_k$ = function (x, y, isRelative) {
-    var command = isRelative ? 'l' : 'L';
-    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x) + ' ' + toString(y));
-  };
-  protoOf(SVGPathDataScope).lineTo$default_92g2t9_k$ = function (x, y, isRelative, $super) {
-    isRelative = isRelative === VOID ? false : isRelative;
-    var tmp;
-    if ($super === VOID) {
-      this.lineTo_wo5zt2_k$(x, y, isRelative);
-      tmp = Unit_getInstance();
-    } else {
-      tmp = $super.lineTo_wo5zt2_k$.call(this, x, y, isRelative);
-    }
-    return tmp;
-  };
-  protoOf(SVGPathDataScope).verticalLineTo_1jzv3_k$ = function (x, isRelative) {
-    var command = isRelative ? 'v' : 'V';
-    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x));
-  };
-  protoOf(SVGPathDataScope).verticalLineTo$default_w5grj4_k$ = function (x, isRelative, $super) {
-    isRelative = isRelative === VOID ? false : isRelative;
-    var tmp;
-    if ($super === VOID) {
-      this.verticalLineTo_1jzv3_k$(x, isRelative);
-      tmp = Unit_getInstance();
-    } else {
-      tmp = $super.verticalLineTo_1jzv3_k$.call(this, x, isRelative);
-    }
-    return tmp;
-  };
-  protoOf(SVGPathDataScope).horizontalLineTo_vd3o5f_k$ = function (x, isRelative) {
-    var command = isRelative ? 'h' : 'H';
-    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x));
-  };
-  protoOf(SVGPathDataScope).horizontalLineTo$default_sdjoge_k$ = function (x, isRelative, $super) {
-    isRelative = isRelative === VOID ? false : isRelative;
-    var tmp;
-    if ($super === VOID) {
-      this.horizontalLineTo_vd3o5f_k$(x, isRelative);
-      tmp = Unit_getInstance();
-    } else {
-      tmp = $super.horizontalLineTo_vd3o5f_k$.call(this, x, isRelative);
-    }
-    return tmp;
-  };
-  protoOf(SVGPathDataScope).curveTo_dux3mz_k$ = function (x1, y1, x2, y2, x, y, isRelative) {
-    var command = isRelative ? 'c' : 'C';
-    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x1) + ' ' + toString(y1) + ' ' + toString(x2) + ' ' + toString(y2) + ' ' + toString(x) + ' ' + toString(y));
-  };
-  protoOf(SVGPathDataScope).curveTo$default_10zpsu_k$ = function (x1, y1, x2, y2, x, y, isRelative, $super) {
-    isRelative = isRelative === VOID ? false : isRelative;
-    var tmp;
-    if ($super === VOID) {
-      this.curveTo_dux3mz_k$(x1, y1, x2, y2, x, y, isRelative);
-      tmp = Unit_getInstance();
-    } else {
-      tmp = $super.curveTo_dux3mz_k$.call(this, x1, y1, x2, y2, x, y, isRelative);
-    }
-    return tmp;
-  };
-  protoOf(SVGPathDataScope).smoothCurveTo_m2p9yf_k$ = function (x2, y2, x, y, isRelative) {
-    var command = isRelative ? 's' : 'S';
-    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x2) + ' ' + toString(y2) + ' ' + toString(x) + ' ' + toString(y));
-  };
-  protoOf(SVGPathDataScope).smoothCurveTo$default_an6pv4_k$ = function (x2, y2, x, y, isRelative, $super) {
-    isRelative = isRelative === VOID ? false : isRelative;
-    var tmp;
-    if ($super === VOID) {
-      this.smoothCurveTo_m2p9yf_k$(x2, y2, x, y, isRelative);
-      tmp = Unit_getInstance();
-    } else {
-      tmp = $super.smoothCurveTo_m2p9yf_k$.call(this, x2, y2, x, y, isRelative);
-    }
-    return tmp;
-  };
-  protoOf(SVGPathDataScope).quadraticBezierCurve_4zqqkj_k$ = function (x1, y1, x, y, isRelative) {
-    var command = isRelative ? 'q' : 'Q';
-    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x1) + ' ' + toString(y1) + ' ' + toString(x) + ' ' + toString(y));
-  };
-  protoOf(SVGPathDataScope).smoothQuadraticBezierCurve_qx2ddd_k$ = function (x, y, isRelative) {
-    var command = isRelative ? 't' : 'T';
-    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x) + ' ' + toString(y));
-  };
-  protoOf(SVGPathDataScope).ellipticalArc_dlakgh_k$ = function (rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative) {
-    var command = isRelative ? 'a' : 'A';
-    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(rx) + ' ' + toString(ry) + ' ' + toString(rotate) + ' ' + toString(largeArcFlag) + ' ' + toString(sweepFlag) + ' ' + toString(x) + ' ' + toString(y));
-  };
-  protoOf(SVGPathDataScope).ellipticalArc$default_j89yrk_k$ = function (rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative, $super) {
-    isRelative = isRelative === VOID ? false : isRelative;
-    var tmp;
-    if ($super === VOID) {
-      this.ellipticalArc_dlakgh_k$(rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative);
-      tmp = Unit_getInstance();
-    } else {
-      tmp = $super.ellipticalArc_dlakgh_k$.call(this, rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative);
-    }
-    return tmp;
-  };
-  protoOf(SVGPathDataScope).closePath_hm2tg3_k$ = function () {
-    this.pathCommands_1.add_utx5q5_k$('Z');
-  };
-  var SVGStrokeType_None_instance;
-  var SVGStrokeType_CurrentColor_instance;
-  function values_3() {
-    return [SVGStrokeType_None_getInstance(), SVGStrokeType_CurrentColor_getInstance()];
-  }
-  function valueOf_3(value) {
-    switch (value) {
-      case 'None':
-        return SVGStrokeType_None_getInstance();
-      case 'CurrentColor':
-        return SVGStrokeType_CurrentColor_getInstance();
-      default:
-        SVGStrokeType_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries_3() {
-    if ($ENTRIES_3 == null)
-      $ENTRIES_3 = enumEntries(values_3());
-    return $ENTRIES_3;
-  }
-  var SVGStrokeType_entriesInitialized;
-  function SVGStrokeType_initEntries() {
-    if (SVGStrokeType_entriesInitialized)
-      return Unit_getInstance();
-    SVGStrokeType_entriesInitialized = true;
-    SVGStrokeType_None_instance = new SVGStrokeType('None', 0);
-    SVGStrokeType_CurrentColor_instance = new SVGStrokeType('CurrentColor', 1);
-  }
-  var $ENTRIES_3;
-  function SVGStrokeType(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  protoOf(SVGStrokeType).toString = function () {
-    return toSvgValue(this);
-  };
-  var SVGStrokeLineCap_Butt_instance;
-  var SVGStrokeLineCap_Round_instance;
-  var SVGStrokeLineCap_Square_instance;
-  function values_4() {
-    return [SVGStrokeLineCap_Butt_getInstance(), SVGStrokeLineCap_Round_getInstance(), SVGStrokeLineCap_Square_getInstance()];
-  }
-  function valueOf_4(value) {
-    switch (value) {
-      case 'Butt':
-        return SVGStrokeLineCap_Butt_getInstance();
-      case 'Round':
-        return SVGStrokeLineCap_Round_getInstance();
-      case 'Square':
-        return SVGStrokeLineCap_Square_getInstance();
-      default:
-        SVGStrokeLineCap_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries_4() {
-    if ($ENTRIES_4 == null)
-      $ENTRIES_4 = enumEntries(values_4());
-    return $ENTRIES_4;
-  }
-  var SVGStrokeLineCap_entriesInitialized;
-  function SVGStrokeLineCap_initEntries() {
-    if (SVGStrokeLineCap_entriesInitialized)
-      return Unit_getInstance();
-    SVGStrokeLineCap_entriesInitialized = true;
-    SVGStrokeLineCap_Butt_instance = new SVGStrokeLineCap('Butt', 0);
-    SVGStrokeLineCap_Round_instance = new SVGStrokeLineCap('Round', 1);
-    SVGStrokeLineCap_Square_instance = new SVGStrokeLineCap('Square', 2);
-  }
-  var $ENTRIES_4;
-  function SVGStrokeLineCap(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  protoOf(SVGStrokeLineCap).toString = function () {
-    return toSvgValue(this);
-  };
-  function Path(_this__u8e3s4, attrs, $composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(275418487);
-    var $dirty = $changed;
-    if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs) ? 32 : 16);
-    if (!(($dirty & 81) === 16) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (isTraceInProgress()) {
-        traceEventStart(275418487, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Path (Svg.kt:1098)');
-      }
-      var tmp = Companion_getInstance_32().invoke_ck7z5b_k$(attrs);
-      GenericTag_0('path', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Path$lambda(_this__u8e3s4, attrs, $changed));
-    }
-  }
-  var SVGStrokeLineJoin_Miter_instance;
-  var SVGStrokeLineJoin_Round_instance;
-  var SVGStrokeLineJoin_Bevel_instance;
-  function values_5() {
-    return [SVGStrokeLineJoin_Miter_getInstance(), SVGStrokeLineJoin_Round_getInstance(), SVGStrokeLineJoin_Bevel_getInstance()];
-  }
-  function valueOf_5(value) {
-    switch (value) {
-      case 'Miter':
-        return SVGStrokeLineJoin_Miter_getInstance();
-      case 'Round':
-        return SVGStrokeLineJoin_Round_getInstance();
-      case 'Bevel':
-        return SVGStrokeLineJoin_Bevel_getInstance();
-      default:
-        SVGStrokeLineJoin_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries_5() {
-    if ($ENTRIES_5 == null)
-      $ENTRIES_5 = enumEntries(values_5());
-    return $ENTRIES_5;
-  }
-  var SVGStrokeLineJoin_entriesInitialized;
-  function SVGStrokeLineJoin_initEntries() {
-    if (SVGStrokeLineJoin_entriesInitialized)
-      return Unit_getInstance();
-    SVGStrokeLineJoin_entriesInitialized = true;
-    SVGStrokeLineJoin_Miter_instance = new SVGStrokeLineJoin('Miter', 0);
-    SVGStrokeLineJoin_Round_instance = new SVGStrokeLineJoin('Round', 1);
-    SVGStrokeLineJoin_Bevel_instance = new SVGStrokeLineJoin('Bevel', 2);
-  }
-  var $ENTRIES_5;
-  function SVGStrokeLineJoin(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
-  protoOf(SVGStrokeLineJoin).toString = function () {
-    return toSvgValue(this);
-  };
-  function Group(_this__u8e3s4, attrs, content, $composer, $changed, $default) {
-    var attrs_0 = {_v: attrs};
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-214649536);
-    var $dirty = $changed;
-    if (!(($default & 1) === 0))
-      $dirty = $dirty | 48;
-    else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 32 : 16);
-    if (!(($default & 2) === 0))
-      $dirty = $dirty | 384;
-    else if (($changed & 896) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 256 : 128);
-    if (!(($dirty & 721) === 144) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (!(($default & 1) === 0)) {
-        attrs_0._v = null;
-      }
-      if (isTraceInProgress()) {
-        traceEventStart(-214649536, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Group (Svg.kt:874)');
-      }
-      var tmp0_safe_receiver = attrs_0._v;
-      var tmp;
-      if (tmp0_safe_receiver == null) {
-        tmp = null;
-      } else {
-        // Inline function 'kotlin.let' call
-        // Inline function 'kotlin.contracts.contract' call
-        // Inline function 'com.varabyte.kobweb.compose.dom.svg.Group.<anonymous>' call
-        tmp = Companion_getInstance_34().invoke_cn7v_k$(tmp0_safe_receiver);
-      }
-      GenericTag_0('g', 'http://www.w3.org/2000/svg', tmp, content, $composer_0, 54 | 7168 & $dirty << 3, 0);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver_0 = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver_0 == null)
-      null;
-    else {
-      tmp0_safe_receiver_0.updateScope_t8jcf_k$(Group$lambda(_this__u8e3s4, attrs_0, content, $changed, $default));
-    }
-  }
-  function Rect(_this__u8e3s4, attrs, $composer, $changed) {
-    var $composer_0 = $composer;
-    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(151044952);
-    var $dirty = $changed;
-    if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs) ? 32 : 16);
-    if (!(($dirty & 81) === 16) ? true : !$composer_0.get_skipping_3owdve_k$()) {
-      if (isTraceInProgress()) {
-        traceEventStart(151044952, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Rect (Svg.kt:1223)');
-      }
-      var tmp = Companion_getInstance_28().invoke_ytzn80_k$(attrs);
-      GenericTag_0('rect', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
-      if (isTraceInProgress()) {
-        traceEventEnd();
-      }
-    } else {
-      $composer_0.skipToGroupEnd_lh3zi2_k$();
-    }
-    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.updateScope_t8jcf_k$(Rect$lambda(_this__u8e3s4, attrs, $changed));
-    }
-  }
-  function SVGGroupAttrsScope$Companion$invoke$lambda($attrs) {
+  function SVGSvgAttrsScope$Companion$invoke$lambda($attrs) {
     return function ($this$null) {
-      $attrs(new SVGGroupAttrsScope($this$null));
+      if (!($attrs == null))
+        $attrs(new SVGSvgAttrsScope($this$null));
       return Unit_getInstance();
     };
   }
-  function Companion_31() {
-    Companion_instance_31 = this;
+  function Companion_26() {
+    Companion_instance_26 = this;
   }
-  protoOf(Companion_31).invoke_cn7v_k$ = function (attrs) {
-    return SVGGroupAttrsScope$Companion$invoke$lambda(attrs);
+  protoOf(Companion_26).invoke_uvzfhd_k$ = function (attrs) {
+    return SVGSvgAttrsScope$Companion$invoke$lambda(attrs);
   };
-  var Companion_instance_31;
-  function Companion_getInstance_34() {
-    if (Companion_instance_31 == null)
-      new Companion_31();
-    return Companion_instance_31;
+  var Companion_instance_26;
+  function Companion_getInstance_29() {
+    if (Companion_instance_26 == null)
+      new Companion_26();
+    return Companion_instance_26;
   }
-  function SVGGroupAttrsScope(attrs) {
-    Companion_getInstance_34();
+  function SVGSvgAttrsScope(attrs) {
+    Companion_getInstance_29();
     SVGContainerElementAttrsScope.call(this, attrs);
   }
   function SVGGraphicalElementAttrsScope(attrs) {
     SVGElementAttrsScope.call(this, attrs);
   }
-  function PointsAttrs$points$lambda(it) {
-    return toString(it.get_first_irdx8n_k$()) + ',' + toString(it.get_second_jf7fjx_k$());
+  function CenterCoordinateAttrs() {
   }
-  function PointsAttrs() {
-  }
-  function toSvgValue(_this__u8e3s4) {
-    // Inline function 'kotlin.text.replaceFirstChar' call
-    var this_0 = _this__u8e3s4.get_name_woqyms_k$();
-    var tmp;
-    // Inline function 'kotlin.text.isNotEmpty' call
-    if (charSequenceLength(this_0) > 0) {
-      // Inline function 'com.varabyte.kobweb.compose.dom.svg.toSvgValue.<anonymous>' call
-      // Inline function 'kotlin.text.lowercase' call
-      var this_1 = charSequenceGet(this_0, 0);
-      // Inline function 'kotlin.js.unsafeCast' call
-      // Inline function 'kotlin.js.asDynamic' call
-      var tmp$ret$4 = toString_0(this_1).toLowerCase();
-      var tmp_0 = toString(tmp$ret$4);
-      // Inline function 'kotlin.text.substring' call
-      // Inline function 'kotlin.js.asDynamic' call
-      tmp = tmp_0 + this_0.substring(1);
-    } else {
-      tmp = this_0;
-    }
-    return tmp;
+  function SVGContainerElementAttrsScope(attrs) {
+    SVGGraphicalElementAttrsScope.call(this, attrs);
   }
   function CoordinateAttrs() {
   }
   function LengthAttrs() {
   }
-  function SVGContainerElementAttrsScope(attrs) {
-    SVGGraphicalElementAttrsScope.call(this, attrs);
-  }
   function ViewBoxAttrs() {
-  }
-  function CenterCoordinateAttrs() {
   }
   function SVGElementAttrsScope(attrs) {
     this.$$delegate_0__1 = attrs;
@@ -5433,6 +4850,41 @@
   }
   function PresentationAttrs() {
   }
+  function Companion_27() {
+    Companion_instance_27 = this;
+  }
+  protoOf(Companion_27).sized_aiz6wt_k$ = function (width, height) {
+    return new ViewBox(0, 0, width, height);
+  };
+  protoOf(Companion_27).sized$default_id0xg9_k$ = function (width, height, $super) {
+    height = height === VOID ? width : height;
+    return $super === VOID ? this.sized_aiz6wt_k$(width, height) : $super.sized_aiz6wt_k$.call(this, width, height);
+  };
+  var Companion_instance_27;
+  function Companion_getInstance_30() {
+    if (Companion_instance_27 == null)
+      new Companion_27();
+    return Companion_instance_27;
+  }
+  function ViewBox(x, y, width, height) {
+    Companion_getInstance_30();
+    this.x_1 = x;
+    this.y_1 = y;
+    this.width_1 = width;
+    this.height_1 = height;
+  }
+  protoOf(ViewBox).get_x_1mhr67_k$ = function () {
+    return this.x_1;
+  };
+  protoOf(ViewBox).get_y_1mhr68_k$ = function () {
+    return this.y_1;
+  };
+  protoOf(ViewBox).get_width_j0q4yl_k$ = function () {
+    return this.width_1;
+  };
+  protoOf(ViewBox).get_height_e7t92o_k$ = function () {
+    return this.height_1;
+  };
   function SVGTransformScope() {
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
@@ -5585,6 +5037,43 @@
   protoOf(SVGTransformScope).skewY_yc4et6_k$ = function (angle) {
     this.skewY_h1goc4_k$(toDegrees(angle));
   };
+  var SVGStrokeType_None_instance;
+  var SVGStrokeType_CurrentColor_instance;
+  function values_2() {
+    return [SVGStrokeType_None_getInstance(), SVGStrokeType_CurrentColor_getInstance()];
+  }
+  function valueOf_2(value) {
+    switch (value) {
+      case 'None':
+        return SVGStrokeType_None_getInstance();
+      case 'CurrentColor':
+        return SVGStrokeType_CurrentColor_getInstance();
+      default:
+        SVGStrokeType_initEntries();
+        THROW_IAE('No enum constant value.');
+        break;
+    }
+  }
+  function get_entries_2() {
+    if ($ENTRIES_2 == null)
+      $ENTRIES_2 = enumEntries(values_2());
+    return $ENTRIES_2;
+  }
+  var SVGStrokeType_entriesInitialized;
+  function SVGStrokeType_initEntries() {
+    if (SVGStrokeType_entriesInitialized)
+      return Unit_getInstance();
+    SVGStrokeType_entriesInitialized = true;
+    SVGStrokeType_None_instance = new SVGStrokeType('None', 0);
+    SVGStrokeType_CurrentColor_instance = new SVGStrokeType('CurrentColor', 1);
+  }
+  var $ENTRIES_2;
+  function SVGStrokeType(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  protoOf(SVGStrokeType).toString = function () {
+    return toSvgValue(this);
+  };
   function _SvgId___init__impl__pmt7ru(value) {
     return value;
   }
@@ -5621,6 +5110,125 @@
   };
   protoOf(SvgId).equals = function (other) {
     return SvgId__equals_impl_mxwuq9(this.value_1, other);
+  };
+  var SVGStrokeLineCap_Butt_instance;
+  var SVGStrokeLineCap_Round_instance;
+  var SVGStrokeLineCap_Square_instance;
+  function values_3() {
+    return [SVGStrokeLineCap_Butt_getInstance(), SVGStrokeLineCap_Round_getInstance(), SVGStrokeLineCap_Square_getInstance()];
+  }
+  function valueOf_3(value) {
+    switch (value) {
+      case 'Butt':
+        return SVGStrokeLineCap_Butt_getInstance();
+      case 'Round':
+        return SVGStrokeLineCap_Round_getInstance();
+      case 'Square':
+        return SVGStrokeLineCap_Square_getInstance();
+      default:
+        SVGStrokeLineCap_initEntries();
+        THROW_IAE('No enum constant value.');
+        break;
+    }
+  }
+  function get_entries_3() {
+    if ($ENTRIES_3 == null)
+      $ENTRIES_3 = enumEntries(values_3());
+    return $ENTRIES_3;
+  }
+  var SVGStrokeLineCap_entriesInitialized;
+  function SVGStrokeLineCap_initEntries() {
+    if (SVGStrokeLineCap_entriesInitialized)
+      return Unit_getInstance();
+    SVGStrokeLineCap_entriesInitialized = true;
+    SVGStrokeLineCap_Butt_instance = new SVGStrokeLineCap('Butt', 0);
+    SVGStrokeLineCap_Round_instance = new SVGStrokeLineCap('Round', 1);
+    SVGStrokeLineCap_Square_instance = new SVGStrokeLineCap('Square', 2);
+  }
+  var $ENTRIES_3;
+  function SVGStrokeLineCap(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  protoOf(SVGStrokeLineCap).toString = function () {
+    return toSvgValue(this);
+  };
+  var SVGStrokeLineJoin_Miter_instance;
+  var SVGStrokeLineJoin_Round_instance;
+  var SVGStrokeLineJoin_Bevel_instance;
+  function values_4() {
+    return [SVGStrokeLineJoin_Miter_getInstance(), SVGStrokeLineJoin_Round_getInstance(), SVGStrokeLineJoin_Bevel_getInstance()];
+  }
+  function valueOf_4(value) {
+    switch (value) {
+      case 'Miter':
+        return SVGStrokeLineJoin_Miter_getInstance();
+      case 'Round':
+        return SVGStrokeLineJoin_Round_getInstance();
+      case 'Bevel':
+        return SVGStrokeLineJoin_Bevel_getInstance();
+      default:
+        SVGStrokeLineJoin_initEntries();
+        THROW_IAE('No enum constant value.');
+        break;
+    }
+  }
+  function get_entries_4() {
+    if ($ENTRIES_4 == null)
+      $ENTRIES_4 = enumEntries(values_4());
+    return $ENTRIES_4;
+  }
+  var SVGStrokeLineJoin_entriesInitialized;
+  function SVGStrokeLineJoin_initEntries() {
+    if (SVGStrokeLineJoin_entriesInitialized)
+      return Unit_getInstance();
+    SVGStrokeLineJoin_entriesInitialized = true;
+    SVGStrokeLineJoin_Miter_instance = new SVGStrokeLineJoin('Miter', 0);
+    SVGStrokeLineJoin_Round_instance = new SVGStrokeLineJoin('Round', 1);
+    SVGStrokeLineJoin_Bevel_instance = new SVGStrokeLineJoin('Bevel', 2);
+  }
+  var $ENTRIES_4;
+  function SVGStrokeLineJoin(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  protoOf(SVGStrokeLineJoin).toString = function () {
+    return toSvgValue(this);
+  };
+  var SVGFillType_None_instance;
+  var SVGFillType_CurrentColor_instance;
+  function values_5() {
+    return [SVGFillType_None_getInstance(), SVGFillType_CurrentColor_getInstance()];
+  }
+  function valueOf_5(value) {
+    switch (value) {
+      case 'None':
+        return SVGFillType_None_getInstance();
+      case 'CurrentColor':
+        return SVGFillType_CurrentColor_getInstance();
+      default:
+        SVGFillType_initEntries();
+        THROW_IAE('No enum constant value.');
+        break;
+    }
+  }
+  function get_entries_5() {
+    if ($ENTRIES_5 == null)
+      $ENTRIES_5 = enumEntries(values_5());
+    return $ENTRIES_5;
+  }
+  var SVGFillType_entriesInitialized;
+  function SVGFillType_initEntries() {
+    if (SVGFillType_entriesInitialized)
+      return Unit_getInstance();
+    SVGFillType_entriesInitialized = true;
+    SVGFillType_None_instance = new SVGFillType('None', 0);
+    SVGFillType_CurrentColor_instance = new SVGFillType('CurrentColor', 1);
+  }
+  var $ENTRIES_5;
+  function SVGFillType(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  protoOf(SVGFillType).toString = function () {
+    return toSvgValue(this);
   };
   var SVGFillRule_NonZero_instance;
   var SVGFillRule_EvenOdd_instance;
@@ -5659,21 +5267,410 @@
   protoOf(SVGFillRule).toString = function () {
     return toSvgValue(this);
   };
-  function Polyline$lambda($this_Polyline, $attrs, $$changed) {
-    return function ($composer, $force) {
-      Polyline($this_Polyline, $attrs, $composer, updateChangedFlags($$changed | 1));
+  function toSvgValue(_this__u8e3s4) {
+    // Inline function 'kotlin.text.replaceFirstChar' call
+    var this_0 = _this__u8e3s4.get_name_woqyms_k$();
+    var tmp;
+    // Inline function 'kotlin.text.isNotEmpty' call
+    if (charSequenceLength(this_0) > 0) {
+      // Inline function 'com.varabyte.kobweb.compose.dom.svg.toSvgValue.<anonymous>' call
+      // Inline function 'kotlin.text.lowercase' call
+      var this_1 = charSequenceGet(this_0, 0);
+      // Inline function 'kotlin.js.unsafeCast' call
+      // Inline function 'kotlin.js.asDynamic' call
+      var tmp$ret$4 = toString_0(this_1).toLowerCase();
+      var tmp_0 = toString(tmp$ret$4);
+      // Inline function 'kotlin.text.substring' call
+      // Inline function 'kotlin.js.asDynamic' call
+      tmp = tmp_0 + this_0.substring(1);
+    } else {
+      tmp = this_0;
+    }
+    return tmp;
+  }
+  function Svg(attrs, content, $composer, $changed, $default) {
+    var attrs_0 = {_v: attrs};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(302969729);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 6;
+    else if (($changed & 14) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 4 : 2);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(302969729, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Svg (Svg.kt:433)');
+      }
+      GenericTag_0('svg', 'http://www.w3.org/2000/svg', Companion_getInstance_29().invoke_uvzfhd_k$(attrs_0._v), content, $composer_0, 54 | 7168 & $dirty << 6, 0);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Svg$lambda(attrs_0, content, $changed, $default));
+    }
+  }
+  function Path(_this__u8e3s4, attrs, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(275418487);
+    var $dirty = $changed;
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs) ? 32 : 16);
+    if (!(($dirty & 81) === 16) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(275418487, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Path (Svg.kt:1098)');
+      }
+      var tmp = Companion_getInstance_31().invoke_ck7z5b_k$(attrs);
+      GenericTag_0('path', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Path$lambda(_this__u8e3s4, attrs, $changed));
+    }
+  }
+  function SVGPathAttrsScope$Companion$invoke$lambda($attrs) {
+    return function ($this$null) {
+      $attrs(new SVGPathAttrsScope($this$null));
       return Unit_getInstance();
     };
+  }
+  function Companion_28() {
+    Companion_instance_28 = this;
+  }
+  protoOf(Companion_28).invoke_ck7z5b_k$ = function (attrs) {
+    return SVGPathAttrsScope$Companion$invoke$lambda(attrs);
+  };
+  var Companion_instance_28;
+  function Companion_getInstance_31() {
+    if (Companion_instance_28 == null)
+      new Companion_28();
+    return Companion_instance_28;
+  }
+  function SVGPathAttrsScope(attrs) {
+    Companion_getInstance_31();
+    SVGGraphicalElementAttrsScope.call(this, attrs);
+  }
+  protoOf(SVGPathAttrsScope).d_tonr5x_k$ = function (pathDataScope) {
+    // Inline function 'kotlin.apply' call
+    var this_0 = new SVGPathDataScope();
+    // Inline function 'kotlin.contracts.contract' call
+    pathDataScope(this_0);
+    this.attr_w68641_k$('d', joinToString(this_0.pathCommands_1, ' '));
+  };
+  protoOf(SVGPathAttrsScope).d_e5qqiu_k$ = function (value) {
+    this.attr_w68641_k$('d', value);
+  };
+  function SVGPathDataScope() {
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp.pathCommands_1 = ArrayList_init_$Create$();
+  }
+  protoOf(SVGPathDataScope).get_pathCommands_p1akmi_k$ = function () {
+    return this.pathCommands_1;
+  };
+  protoOf(SVGPathDataScope).moveTo_3kg6ro_k$ = function (x, y) {
+    this.pathCommands_1.add_utx5q5_k$('M ' + toString(x) + ' ' + toString(y));
+  };
+  protoOf(SVGPathDataScope).lineTo_wo5zt2_k$ = function (x, y, isRelative) {
+    var command = isRelative ? 'l' : 'L';
+    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x) + ' ' + toString(y));
+  };
+  protoOf(SVGPathDataScope).lineTo$default_92g2t9_k$ = function (x, y, isRelative, $super) {
+    isRelative = isRelative === VOID ? false : isRelative;
+    var tmp;
+    if ($super === VOID) {
+      this.lineTo_wo5zt2_k$(x, y, isRelative);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.lineTo_wo5zt2_k$.call(this, x, y, isRelative);
+    }
+    return tmp;
+  };
+  protoOf(SVGPathDataScope).verticalLineTo_1jzv3_k$ = function (x, isRelative) {
+    var command = isRelative ? 'v' : 'V';
+    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x));
+  };
+  protoOf(SVGPathDataScope).verticalLineTo$default_w5grj4_k$ = function (x, isRelative, $super) {
+    isRelative = isRelative === VOID ? false : isRelative;
+    var tmp;
+    if ($super === VOID) {
+      this.verticalLineTo_1jzv3_k$(x, isRelative);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.verticalLineTo_1jzv3_k$.call(this, x, isRelative);
+    }
+    return tmp;
+  };
+  protoOf(SVGPathDataScope).horizontalLineTo_vd3o5f_k$ = function (x, isRelative) {
+    var command = isRelative ? 'h' : 'H';
+    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x));
+  };
+  protoOf(SVGPathDataScope).horizontalLineTo$default_sdjoge_k$ = function (x, isRelative, $super) {
+    isRelative = isRelative === VOID ? false : isRelative;
+    var tmp;
+    if ($super === VOID) {
+      this.horizontalLineTo_vd3o5f_k$(x, isRelative);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.horizontalLineTo_vd3o5f_k$.call(this, x, isRelative);
+    }
+    return tmp;
+  };
+  protoOf(SVGPathDataScope).curveTo_dux3mz_k$ = function (x1, y1, x2, y2, x, y, isRelative) {
+    var command = isRelative ? 'c' : 'C';
+    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x1) + ' ' + toString(y1) + ' ' + toString(x2) + ' ' + toString(y2) + ' ' + toString(x) + ' ' + toString(y));
+  };
+  protoOf(SVGPathDataScope).curveTo$default_10zpsu_k$ = function (x1, y1, x2, y2, x, y, isRelative, $super) {
+    isRelative = isRelative === VOID ? false : isRelative;
+    var tmp;
+    if ($super === VOID) {
+      this.curveTo_dux3mz_k$(x1, y1, x2, y2, x, y, isRelative);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.curveTo_dux3mz_k$.call(this, x1, y1, x2, y2, x, y, isRelative);
+    }
+    return tmp;
+  };
+  protoOf(SVGPathDataScope).smoothCurveTo_m2p9yf_k$ = function (x2, y2, x, y, isRelative) {
+    var command = isRelative ? 's' : 'S';
+    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x2) + ' ' + toString(y2) + ' ' + toString(x) + ' ' + toString(y));
+  };
+  protoOf(SVGPathDataScope).smoothCurveTo$default_an6pv4_k$ = function (x2, y2, x, y, isRelative, $super) {
+    isRelative = isRelative === VOID ? false : isRelative;
+    var tmp;
+    if ($super === VOID) {
+      this.smoothCurveTo_m2p9yf_k$(x2, y2, x, y, isRelative);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.smoothCurveTo_m2p9yf_k$.call(this, x2, y2, x, y, isRelative);
+    }
+    return tmp;
+  };
+  protoOf(SVGPathDataScope).quadraticBezierCurve_4zqqkj_k$ = function (x1, y1, x, y, isRelative) {
+    var command = isRelative ? 'q' : 'Q';
+    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x1) + ' ' + toString(y1) + ' ' + toString(x) + ' ' + toString(y));
+  };
+  protoOf(SVGPathDataScope).smoothQuadraticBezierCurve_qx2ddd_k$ = function (x, y, isRelative) {
+    var command = isRelative ? 't' : 'T';
+    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(x) + ' ' + toString(y));
+  };
+  protoOf(SVGPathDataScope).ellipticalArc_dlakgh_k$ = function (rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative) {
+    var command = isRelative ? 'a' : 'A';
+    this.pathCommands_1.add_utx5q5_k$(command + ' ' + toString(rx) + ' ' + toString(ry) + ' ' + toString(rotate) + ' ' + toString(largeArcFlag) + ' ' + toString(sweepFlag) + ' ' + toString(x) + ' ' + toString(y));
+  };
+  protoOf(SVGPathDataScope).ellipticalArc$default_j89yrk_k$ = function (rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative, $super) {
+    isRelative = isRelative === VOID ? false : isRelative;
+    var tmp;
+    if ($super === VOID) {
+      this.ellipticalArc_dlakgh_k$(rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.ellipticalArc_dlakgh_k$.call(this, rx, ry, rotate, largeArcFlag, sweepFlag, x, y, isRelative);
+    }
+    return tmp;
+  };
+  protoOf(SVGPathDataScope).closePath_hm2tg3_k$ = function () {
+    this.pathCommands_1.add_utx5q5_k$('Z');
+  };
+  function Polyline(_this__u8e3s4, attrs, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(741814780);
+    var $dirty = $changed;
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs) ? 32 : 16);
+    if (!(($dirty & 81) === 16) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(741814780, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Polyline (Svg.kt:1161)');
+      }
+      var tmp = Companion_getInstance_32().invoke_cy68no_k$(attrs);
+      GenericTag_0('polyline', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Polyline$lambda(_this__u8e3s4, attrs, $changed));
+    }
+  }
+  function SVGPolylineAttrsScope$Companion$invoke$lambda($attrs) {
+    return function ($this$null) {
+      $attrs(new SVGPolylineAttrsScope($this$null));
+      return Unit_getInstance();
+    };
+  }
+  function Companion_29() {
+    Companion_instance_29 = this;
+  }
+  protoOf(Companion_29).invoke_cy68no_k$ = function (attrs) {
+    return SVGPolylineAttrsScope$Companion$invoke$lambda(attrs);
+  };
+  var Companion_instance_29;
+  function Companion_getInstance_32() {
+    if (Companion_instance_29 == null)
+      new Companion_29();
+    return Companion_instance_29;
+  }
+  function SVGPolylineAttrsScope(attrs) {
+    Companion_getInstance_32();
+    SVGGraphicalElementAttrsScope.call(this, attrs);
+  }
+  function Rect(_this__u8e3s4, attrs, $composer, $changed) {
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(151044952);
+    var $dirty = $changed;
+    if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs) ? 32 : 16);
+    if (!(($dirty & 81) === 16) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (isTraceInProgress()) {
+        traceEventStart(151044952, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Rect (Svg.kt:1223)');
+      }
+      var tmp = Companion_getInstance_33().invoke_ytzn80_k$(attrs);
+      GenericTag_0('rect', 'http://www.w3.org/2000/svg', tmp, null, $composer_0, 54, 8);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.updateScope_t8jcf_k$(Rect$lambda(_this__u8e3s4, attrs, $changed));
+    }
+  }
+  function SVGRectAttrsScope$Companion$invoke$lambda($attrs) {
+    return function ($this$null) {
+      $attrs(new SVGRectAttrsScope($this$null));
+      return Unit_getInstance();
+    };
+  }
+  function Companion_30() {
+    Companion_instance_30 = this;
+  }
+  protoOf(Companion_30).invoke_ytzn80_k$ = function (attrs) {
+    return SVGRectAttrsScope$Companion$invoke$lambda(attrs);
+  };
+  var Companion_instance_30;
+  function Companion_getInstance_33() {
+    if (Companion_instance_30 == null)
+      new Companion_30();
+    return Companion_instance_30;
+  }
+  function SVGRectAttrsScope(attrs) {
+    Companion_getInstance_33();
+    SVGGraphicalElementAttrsScope.call(this, attrs);
+  }
+  protoOf(SVGRectAttrsScope).rx_neywol_k$ = function (value) {
+    this.attr_w68641_k$('rx', toString(value));
+  };
+  protoOf(SVGRectAttrsScope).ry_pgu87o_k$ = function (value) {
+    this.attr_w68641_k$('ry', toString(value));
+  };
+  protoOf(SVGRectAttrsScope).rx_h0fbf_k$ = function (value) {
+    this.attr_w68641_k$('rx', toString(value));
+  };
+  protoOf(SVGRectAttrsScope).ry_cwgqcs_k$ = function (value) {
+    this.attr_w68641_k$('ry', toString(value));
+  };
+  function Group(_this__u8e3s4, attrs, content, $composer, $changed, $default) {
+    var attrs_0 = {_v: attrs};
+    var $composer_0 = $composer;
+    $composer_0 = $composer_0.startRestartGroup_lebv1i_k$(-214649536);
+    var $dirty = $changed;
+    if (!(($default & 1) === 0))
+      $dirty = $dirty | 48;
+    else if (($changed & 112) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(attrs_0._v) ? 32 : 16);
+    if (!(($default & 2) === 0))
+      $dirty = $dirty | 384;
+    else if (($changed & 896) === 0)
+      $dirty = $dirty | ($composer_0.changedInstance_s1wkiy_k$(content) ? 256 : 128);
+    if (!(($dirty & 721) === 144) ? true : !$composer_0.get_skipping_3owdve_k$()) {
+      if (!(($default & 1) === 0)) {
+        attrs_0._v = null;
+      }
+      if (isTraceInProgress()) {
+        traceEventStart(-214649536, $dirty, -1, 'com.varabyte.kobweb.compose.dom.svg.Group (Svg.kt:874)');
+      }
+      var tmp0_safe_receiver = attrs_0._v;
+      var tmp;
+      if (tmp0_safe_receiver == null) {
+        tmp = null;
+      } else {
+        // Inline function 'kotlin.let' call
+        // Inline function 'kotlin.contracts.contract' call
+        // Inline function 'com.varabyte.kobweb.compose.dom.svg.Group.<anonymous>' call
+        tmp = Companion_getInstance_34().invoke_cn7v_k$(tmp0_safe_receiver);
+      }
+      GenericTag_0('g', 'http://www.w3.org/2000/svg', tmp, content, $composer_0, 54 | 7168 & $dirty << 3, 0);
+      if (isTraceInProgress()) {
+        traceEventEnd();
+      }
+    } else {
+      $composer_0.skipToGroupEnd_lh3zi2_k$();
+    }
+    var tmp0_safe_receiver_0 = $composer_0.endRestartGroup_yxpjv9_k$();
+    if (tmp0_safe_receiver_0 == null)
+      null;
+    else {
+      tmp0_safe_receiver_0.updateScope_t8jcf_k$(Group$lambda(_this__u8e3s4, attrs_0, content, $changed, $default));
+    }
+  }
+  function SVGGroupAttrsScope$Companion$invoke$lambda($attrs) {
+    return function ($this$null) {
+      $attrs(new SVGGroupAttrsScope($this$null));
+      return Unit_getInstance();
+    };
+  }
+  function Companion_31() {
+    Companion_instance_31 = this;
+  }
+  protoOf(Companion_31).invoke_cn7v_k$ = function (attrs) {
+    return SVGGroupAttrsScope$Companion$invoke$lambda(attrs);
+  };
+  var Companion_instance_31;
+  function Companion_getInstance_34() {
+    if (Companion_instance_31 == null)
+      new Companion_31();
+    return Companion_instance_31;
+  }
+  function SVGGroupAttrsScope(attrs) {
+    Companion_getInstance_34();
+    SVGContainerElementAttrsScope.call(this, attrs);
+  }
+  function PointsAttrs$points$lambda(it) {
+    return toString(it.get_first_irdx8n_k$()) + ',' + toString(it.get_second_jf7fjx_k$());
+  }
+  function PointsAttrs() {
   }
   function Circle$lambda($this_Circle, $attrs, $$changed) {
     return function ($composer, $force) {
       Circle($this_Circle, $attrs, $composer, updateChangedFlags($$changed | 1));
-      return Unit_getInstance();
-    };
-  }
-  function Svg$lambda($attrs, $content, $$changed, $$default) {
-    return function ($composer, $force) {
-      Svg($attrs._v, $content, $composer, updateChangedFlags($$changed | 1), $$default);
       return Unit_getInstance();
     };
   }
@@ -5683,15 +5680,21 @@
       return Unit_getInstance();
     };
   }
+  function Svg$lambda($attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Svg($attrs._v, $content, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
+  }
   function Path$lambda($this_Path, $attrs, $$changed) {
     return function ($composer, $force) {
       Path($this_Path, $attrs, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
-  function Group$lambda($this_Group, $attrs, $content, $$changed, $$default) {
+  function Polyline$lambda($this_Polyline, $attrs, $$changed) {
     return function ($composer, $force) {
-      Group($this_Group, $attrs._v, $content, $composer, updateChangedFlags($$changed | 1), $$default);
+      Polyline($this_Polyline, $attrs, $composer, updateChangedFlags($$changed | 1));
       return Unit_getInstance();
     };
   }
@@ -5701,13 +5704,11 @@
       return Unit_getInstance();
     };
   }
-  function SVGFillType_None_getInstance() {
-    SVGFillType_initEntries();
-    return SVGFillType_None_instance;
-  }
-  function SVGFillType_CurrentColor_getInstance() {
-    SVGFillType_initEntries();
-    return SVGFillType_CurrentColor_instance;
+  function Group$lambda($this_Group, $attrs, $content, $$changed, $$default) {
+    return function ($composer, $force) {
+      Group($this_Group, $attrs._v, $content, $composer, updateChangedFlags($$changed | 1), $$default);
+      return Unit_getInstance();
+    };
   }
   function SVGStrokeType_None_getInstance() {
     SVGStrokeType_initEntries();
@@ -5740,6 +5741,14 @@
   function SVGStrokeLineJoin_Bevel_getInstance() {
     SVGStrokeLineJoin_initEntries();
     return SVGStrokeLineJoin_Bevel_instance;
+  }
+  function SVGFillType_None_getInstance() {
+    SVGFillType_initEntries();
+    return SVGFillType_None_instance;
+  }
+  function SVGFillType_CurrentColor_getInstance() {
+    SVGFillType_initEntries();
+    return SVGFillType_CurrentColor_instance;
   }
   function SVGFillRule_NonZero_getInstance() {
     SVGFillRule_initEntries();
@@ -5885,15 +5894,10 @@
   protoOf(SVGGraphicalElementAttrsScope).floodColor_c7kev5_k$ = floodColor;
   protoOf(SVGGraphicalElementAttrsScope).floodOpacity_dw0q4i_k$ = floodOpacity;
   protoOf(SVGGraphicalElementAttrsScope).lightingColor_3dqaer_k$ = lightingColor;
-  protoOf(SVGPolylineAttrsScope).points_buxj0r_k$ = points;
-  protoOf(SVGRectAttrsScope).x_gzumtf_k$ = x;
-  protoOf(SVGRectAttrsScope).x_re57k3_k$ = x_0;
-  protoOf(SVGRectAttrsScope).y_j1pyci_k$ = y;
-  protoOf(SVGRectAttrsScope).y_eyowiq_k$ = y_0;
-  protoOf(SVGRectAttrsScope).height_azv3o_k$ = height;
-  protoOf(SVGRectAttrsScope).height_vnwjw4_k$ = height_0;
-  protoOf(SVGRectAttrsScope).width_ux3u5x_k$ = width_0;
-  protoOf(SVGRectAttrsScope).width_3dri8b_k$ = width_1;
+  protoOf(SVGCircleAttrsScope).cx_7c4b4q_k$ = cx;
+  protoOf(SVGCircleAttrsScope).cx_pmhp9i_k$ = cx_0;
+  protoOf(SVGCircleAttrsScope).cy_5a8zln_k$ = cy;
+  protoOf(SVGCircleAttrsScope).cy_d71e85_k$ = cy_0;
   protoOf(SVGSvgAttrsScope).x_gzumtf_k$ = x;
   protoOf(SVGSvgAttrsScope).x_re57k3_k$ = x_0;
   protoOf(SVGSvgAttrsScope).y_j1pyci_k$ = y;
@@ -5904,10 +5908,15 @@
   protoOf(SVGSvgAttrsScope).width_3dri8b_k$ = width_1;
   protoOf(SVGSvgAttrsScope).viewBox_s5pn86_k$ = viewBox;
   protoOf(SVGSvgAttrsScope).viewBox_cjnss5_k$ = viewBox_0;
-  protoOf(SVGCircleAttrsScope).cx_7c4b4q_k$ = cx;
-  protoOf(SVGCircleAttrsScope).cx_pmhp9i_k$ = cx_0;
-  protoOf(SVGCircleAttrsScope).cy_5a8zln_k$ = cy;
-  protoOf(SVGCircleAttrsScope).cy_d71e85_k$ = cy_0;
+  protoOf(SVGPolylineAttrsScope).points_buxj0r_k$ = points;
+  protoOf(SVGRectAttrsScope).x_gzumtf_k$ = x;
+  protoOf(SVGRectAttrsScope).x_re57k3_k$ = x_0;
+  protoOf(SVGRectAttrsScope).y_j1pyci_k$ = y;
+  protoOf(SVGRectAttrsScope).y_eyowiq_k$ = y_0;
+  protoOf(SVGRectAttrsScope).height_azv3o_k$ = height;
+  protoOf(SVGRectAttrsScope).height_vnwjw4_k$ = height_0;
+  protoOf(SVGRectAttrsScope).width_ux3u5x_k$ = width_0;
+  protoOf(SVGRectAttrsScope).width_3dri8b_k$ = width_1;
   //endregion
   //region block: init
   com_varabyte_kobweb_compose_dom_ElementRefScope$stable = 8;
@@ -5950,60 +5959,63 @@
   _.$_$.h1 = justifyItems;
   _.$_$.i1 = justifySelf;
   _.$_$.j1 = listStyle;
-  _.$_$.k1 = objectFit;
-  _.$_$.l1 = outline;
-  _.$_$.m1 = overflowWrap;
-  _.$_$.n1 = overflowX;
-  _.$_$.o1 = overflowY;
-  _.$_$.p1 = overflow;
-  _.$_$.q1 = paddingInline;
-  _.$_$.r1 = scrollBehavior;
-  _.$_$.s1 = setVariable;
-  _.$_$.t1 = textAlign;
-  _.$_$.u1 = textDecorationLine;
-  _.$_$.v1 = toDegrees;
-  _.$_$.w1 = transition;
-  _.$_$.x1 = translateX;
-  _.$_$.y1 = userSelect;
-  _.$_$.z1 = verticalAlign;
-  _.$_$.a2 = whiteSpace;
-  _.$_$.b2 = Circle;
-  _.$_$.c2 = Group;
-  _.$_$.d2 = Line;
-  _.$_$.e2 = Path;
-  _.$_$.f2 = Polyline;
-  _.$_$.g2 = Rect;
-  _.$_$.h2 = Svg;
-  _.$_$.i2 = GenericTag;
-  _.$_$.j2 = refScope;
-  _.$_$.k2 = registerRefScope;
-  _.$_$.l2 = registerRefScope_0;
-  _.$_$.m2 = SVGFillType_CurrentColor_getInstance;
-  _.$_$.n2 = SVGFillType_None_getInstance;
-  _.$_$.o2 = SVGStrokeLineCap_Round_getInstance;
-  _.$_$.p2 = SVGStrokeLineJoin_Round_getInstance;
-  _.$_$.q2 = SVGStrokeType_CurrentColor_getInstance;
-  _.$_$.r2 = SVGStrokeType_None_getInstance;
-  _.$_$.s2 = ComparableAttrsScope_init_$Create$;
-  _.$_$.t2 = CSSTransition_init_$Create$;
-  _.$_$.u2 = Companion_getInstance_7;
-  _.$_$.v2 = Companion_getInstance_5;
-  _.$_$.w2 = Companion_getInstance_22;
-  _.$_$.x2 = Companion_getInstance_6;
-  _.$_$.y2 = Companion_getInstance_8;
-  _.$_$.z2 = Companion_getInstance_2;
-  _.$_$.a3 = Companion_getInstance_3;
-  _.$_$.b3 = Companion_getInstance_12;
-  _.$_$.c3 = Companion_getInstance_14;
-  _.$_$.d3 = Companion_getInstance_15;
-  _.$_$.e3 = Companion_getInstance_16;
-  _.$_$.f3 = Companion_getInstance_17;
-  _.$_$.g3 = Companion_getInstance_20;
-  _.$_$.h3 = Companion_getInstance_18;
-  _.$_$.i3 = Companion_getInstance_19;
-  _.$_$.j3 = Companion_getInstance_11;
+  _.$_$.k1 = marginBlock;
+  _.$_$.l1 = marginInline;
+  _.$_$.m1 = objectFit;
+  _.$_$.n1 = outline;
+  _.$_$.o1 = overflowWrap;
+  _.$_$.p1 = overflowX;
+  _.$_$.q1 = overflowY;
+  _.$_$.r1 = overflow;
+  _.$_$.s1 = paddingInline;
+  _.$_$.t1 = scrollBehavior;
+  _.$_$.u1 = setVariable_0;
+  _.$_$.v1 = setVariable;
+  _.$_$.w1 = textAlign;
+  _.$_$.x1 = textDecorationLine;
+  _.$_$.y1 = toDegrees;
+  _.$_$.z1 = transition;
+  _.$_$.a2 = translateX;
+  _.$_$.b2 = userSelect;
+  _.$_$.c2 = verticalAlign;
+  _.$_$.d2 = whiteSpace;
+  _.$_$.e2 = Circle;
+  _.$_$.f2 = Group;
+  _.$_$.g2 = Line;
+  _.$_$.h2 = Path;
+  _.$_$.i2 = Polyline;
+  _.$_$.j2 = Rect;
+  _.$_$.k2 = Svg;
+  _.$_$.l2 = GenericTag;
+  _.$_$.m2 = refScope;
+  _.$_$.n2 = registerRefScope_0;
+  _.$_$.o2 = registerRefScope;
+  _.$_$.p2 = SVGFillType_CurrentColor_getInstance;
+  _.$_$.q2 = SVGFillType_None_getInstance;
+  _.$_$.r2 = SVGStrokeLineCap_Round_getInstance;
+  _.$_$.s2 = SVGStrokeLineJoin_Round_getInstance;
+  _.$_$.t2 = SVGStrokeType_CurrentColor_getInstance;
+  _.$_$.u2 = SVGStrokeType_None_getInstance;
+  _.$_$.v2 = ComparableAttrsScope_init_$Create$;
+  _.$_$.w2 = CSSTransition_init_$Create$;
+  _.$_$.x2 = Companion_getInstance_7;
+  _.$_$.y2 = Companion_getInstance_5;
+  _.$_$.z2 = Companion_getInstance_22;
+  _.$_$.a3 = Companion_getInstance_6;
+  _.$_$.b3 = Companion_getInstance_8;
+  _.$_$.c3 = Companion_getInstance_2;
+  _.$_$.d3 = Companion_getInstance_3;
+  _.$_$.e3 = Companion_getInstance_12;
+  _.$_$.f3 = Companion_getInstance_14;
+  _.$_$.g3 = Companion_getInstance_15;
+  _.$_$.h3 = Companion_getInstance_16;
+  _.$_$.i3 = Companion_getInstance_17;
+  _.$_$.j3 = Companion_getInstance_20;
   _.$_$.k3 = Companion_getInstance_21;
-  _.$_$.l3 = Companion_getInstance_31;
+  _.$_$.l3 = Companion_getInstance_18;
+  _.$_$.m3 = Companion_getInstance_11;
+  _.$_$.n3 = Companion_getInstance_19;
+  _.$_$.o3 = Companion_getInstance_30;
   //endregion
   return _;
 }));

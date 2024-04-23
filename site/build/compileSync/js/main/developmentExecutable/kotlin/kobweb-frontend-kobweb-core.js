@@ -25,110 +25,110 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.f2;
-  var charArrayOf = kotlin_kotlin.$_$.aa;
-  var trimStart = kotlin_kotlin.$_$.yd;
+  var _Char___init__impl__6a9atx = kotlin_kotlin.$_$.l2;
+  var charArrayOf = kotlin_kotlin.$_$.pa;
+  var trimStart = kotlin_kotlin.$_$.jf;
   var get_http = kotlin_com_varabyte_kobweb_browser_ext.$_$.a;
-  var Unit_getInstance = kotlin_kotlin.$_$.l4;
-  var protoOf = kotlin_kotlin.$_$.ob;
-  var VOID = kotlin_kotlin.$_$.e;
-  var classMeta = kotlin_kotlin.$_$.ea;
-  var setMetadataFor = kotlin_kotlin.$_$.pb;
-  var KProperty1 = kotlin_kotlin.$_$.fc;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.ma;
-  var KMutableProperty0 = kotlin_kotlin.$_$.cc;
-  var KMutableProperty1 = kotlin_kotlin.$_$.dc;
-  var lazy = kotlin_kotlin.$_$.mf;
-  var THROW_CCE = kotlin_kotlin.$_$.re;
-  var Annotation = kotlin_kotlin.$_$.de;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
-  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.a6;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
-  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.c5;
-  var padding = kotlin_org_jetbrains_compose_html_html_core.$_$.z4;
-  var margin = kotlin_org_jetbrains_compose_html_html_core.$_$.s4;
-  var boxSizing = kotlin_org_jetbrains_compose_html_html_core.$_$.r3;
+  var Unit_getInstance = kotlin_kotlin.$_$.w4;
+  var protoOf = kotlin_kotlin.$_$.fc;
+  var VOID = kotlin_kotlin.$_$.g;
+  var classMeta = kotlin_kotlin.$_$.ua;
+  var setMetadataFor = kotlin_kotlin.$_$.gc;
+  var KProperty1 = kotlin_kotlin.$_$.ad;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.cb;
+  var KMutableProperty0 = kotlin_kotlin.$_$.xc;
+  var KMutableProperty1 = kotlin_kotlin.$_$.yc;
+  var lazy = kotlin_kotlin.$_$.dh;
+  var THROW_CCE = kotlin_kotlin.$_$.eg;
+  var Annotation = kotlin_kotlin.$_$.of;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b1;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
+  var Style = kotlin_org_jetbrains_compose_html_html_core.$_$.x5;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
+  var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.z4;
+  var padding = kotlin_org_jetbrains_compose_html_html_core.$_$.w4;
+  var margin = kotlin_org_jetbrains_compose_html_html_core.$_$.p4;
+  var boxSizing = kotlin_org_jetbrains_compose_html_html_core.$_$.s3;
   var StyleSheet = kotlin_org_jetbrains_compose_html_html_core.$_$.g3;
   var StyleSheet_init_$Init$ = kotlin_org_jetbrains_compose_html_html_core.$_$.b;
-  var objectMeta = kotlin_kotlin.$_$.nb;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.tf;
-  var toString = kotlin_kotlin.$_$.rb;
-  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.r1;
-  var getValue = kotlin_kotlin.$_$.a7;
-  var getStringHashCode = kotlin_kotlin.$_$.na;
-  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
-  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
-  var substringAfterLast = kotlin_kotlin.$_$.nd;
-  var plus = kotlin_kotlin.$_$.u7;
-  var equals = kotlin_kotlin.$_$.ha;
-  var hashCode = kotlin_kotlin.$_$.oa;
-  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.t;
-  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
-  var interfaceMeta = kotlin_kotlin.$_$.qa;
-  var A = kotlin_org_jetbrains_compose_html_html_core.$_$.k5;
-  var THROW_IAE = kotlin_kotlin.$_$.se;
-  var enumEntries = kotlin_kotlin.$_$.u9;
-  var Enum = kotlin_kotlin.$_$.ge;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.d1;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.j;
-  var charSequenceLength = kotlin_kotlin.$_$.da;
-  var joinToString = kotlin_kotlin.$_$.e7;
-  var objectCreate = kotlin_kotlin.$_$.mb;
-  var removePrefix = kotlin_kotlin.$_$.dd;
-  var startsWith = kotlin_kotlin.$_$.ld;
-  var drop = kotlin_kotlin.$_$.rc;
-  var first = kotlin_kotlin.$_$.uc;
-  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.t;
-  var split = kotlin_kotlin.$_$.jd;
-  var getOrNull = kotlin_kotlin.$_$.z6;
-  var Exception = kotlin_kotlin.$_$.ie;
-  var Exception_init_$Init$ = kotlin_kotlin.$_$.i1;
-  var captureStack = kotlin_kotlin.$_$.z9;
-  var substringAfterLast_0 = kotlin_kotlin.$_$.od;
-  var ensureNotNull = kotlin_kotlin.$_$.kf;
-  var isBlank = kotlin_kotlin.$_$.xc;
-  var startsWith_0 = kotlin_kotlin.$_$.md;
-  var endsWith = kotlin_kotlin.$_$.sc;
-  var dropLast = kotlin_kotlin.$_$.qc;
-  var CoroutineImpl = kotlin_kotlin.$_$.q9;
-  var SequenceScope = kotlin_kotlin.$_$.hc;
-  var mutableListOf = kotlin_kotlin.$_$.s7;
-  var removeFirst = kotlin_kotlin.$_$.b8;
-  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.k;
-  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.b9;
+  var objectMeta = kotlin_kotlin.$_$.ec;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.lh;
+  var toString = kotlin_kotlin.$_$.kc;
+  var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.w1;
+  var getValue = kotlin_kotlin.$_$.n7;
+  var getStringHashCode = kotlin_kotlin.$_$.db;
+  var substringAfterLast = kotlin_kotlin.$_$.ne;
+  var plus = kotlin_kotlin.$_$.i8;
+  var equals = kotlin_kotlin.$_$.xa;
+  var hashCode = kotlin_kotlin.$_$.eb;
+  var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
+  var sourceInformationMarkerStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
+  var sourceInformationMarkerEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
+  var staticCompositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.z;
+  var interfaceMeta = kotlin_kotlin.$_$.gb;
+  var A = kotlin_org_jetbrains_compose_html_html_core.$_$.h5;
+  var THROW_IAE = kotlin_kotlin.$_$.fg;
+  var enumEntries = kotlin_kotlin.$_$.ja;
+  var Enum = kotlin_kotlin.$_$.tf;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.g1;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.l;
+  var charSequenceLength = kotlin_kotlin.$_$.sa;
+  var joinToString = kotlin_kotlin.$_$.r7;
+  var objectCreate = kotlin_kotlin.$_$.dc;
+  var removePrefix = kotlin_kotlin.$_$.ce;
+  var startsWith = kotlin_kotlin.$_$.le;
+  var drop = kotlin_kotlin.$_$.nd;
+  var first = kotlin_kotlin.$_$.rd;
+  var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
+  var split = kotlin_kotlin.$_$.je;
+  var getOrNull = kotlin_kotlin.$_$.m7;
+  var Exception = kotlin_kotlin.$_$.vf;
+  var Exception_init_$Init$ = kotlin_kotlin.$_$.l1;
+  var captureStack = kotlin_kotlin.$_$.oa;
+  var substringAfterLast_0 = kotlin_kotlin.$_$.oe;
+  var ensureNotNull = kotlin_kotlin.$_$.yg;
+  var isBlank = kotlin_kotlin.$_$.ud;
+  var startsWith_0 = kotlin_kotlin.$_$.me;
+  var endsWith = kotlin_kotlin.$_$.od;
+  var dropLast = kotlin_kotlin.$_$.md;
+  var CoroutineImpl = kotlin_kotlin.$_$.fa;
+  var SequenceScope = kotlin_kotlin.$_$.cd;
+  var mutableListOf = kotlin_kotlin.$_$.g8;
+  var removeFirst = kotlin_kotlin.$_$.p8;
+  var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.m;
+  var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.q9;
   var kebabCaseToCamelCase = kotlin_com_varabyte_kobweb_browser_ext.$_$.c;
-  var replace = kotlin_kotlin.$_$.hd;
-  var contains = kotlin_kotlin.$_$.nc;
-  var sequence = kotlin_kotlin.$_$.kc;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.m1;
-  var get_lastIndex = kotlin_kotlin.$_$.h7;
+  var replace = kotlin_kotlin.$_$.ge;
+  var contains = kotlin_kotlin.$_$.jd;
+  var sequence = kotlin_kotlin.$_$.fd;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.r1;
+  var get_lastIndex = kotlin_kotlin.$_$.v7;
   var PatternMapper_init_$Create$ = kotlin_com_varabyte_kobweb_client_server_internal.$_$.a;
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
-  var emptyMap = kotlin_kotlin.$_$.s6;
-  var last = kotlin_kotlin.$_$.k7;
-  var replace_0 = kotlin_kotlin.$_$.id;
+  var emptyMap = kotlin_kotlin.$_$.e7;
+  var last = kotlin_kotlin.$_$.y7;
+  var replace_0 = kotlin_kotlin.$_$.he;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.g1;
-  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.n5;
-  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.c6;
-  var SuspendFunction1 = kotlin_kotlin.$_$.r9;
-  var substringBefore = kotlin_kotlin.$_$.sd;
-  var to = kotlin_kotlin.$_$.vf;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
+  var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.k5;
+  var Text = kotlin_org_jetbrains_compose_html_html_core.$_$.z5;
+  var SuspendFunction1 = kotlin_kotlin.$_$.ga;
+  var substringBefore = kotlin_kotlin.$_$.se;
+  var to = kotlin_kotlin.$_$.nh;
   var CompositionLocalProvider = kotlin_org_jetbrains_compose_runtime_runtime.$_$.d;
-  var listOf = kotlin_kotlin.$_$.n7;
-  var removeSuffix = kotlin_kotlin.$_$.ed;
-  var setOf = kotlin_kotlin.$_$.d8;
-  var charSequenceGet = kotlin_kotlin.$_$.ca;
-  var substringAfter = kotlin_kotlin.$_$.pd;
-  var Companion_getInstance_0 = kotlin_kotlin.$_$.d4;
-  var DurationUnit_MILLISECONDS_getInstance = kotlin_kotlin.$_$.f;
-  var toDuration = kotlin_kotlin.$_$.ce;
+  var listOf = kotlin_kotlin.$_$.b8;
+  var removeSuffix = kotlin_kotlin.$_$.de;
+  var setOf = kotlin_kotlin.$_$.r8;
+  var charSequenceGet = kotlin_kotlin.$_$.ra;
+  var substringAfter = kotlin_kotlin.$_$.pe;
+  var Companion_getInstance_0 = kotlin_kotlin.$_$.o4;
+  var DurationUnit_MILLISECONDS_getInstance = kotlin_kotlin.$_$.h;
+  var toDuration = kotlin_kotlin.$_$.nf;
   var Companion_getInstance_1 = kotlin_com_varabyte_kobweb_browser_ext.$_$.h;
   var setInterval = kotlin_com_varabyte_kobweb_browser_ext.$_$.e;
-  var toMutableMap = kotlin_kotlin.$_$.w8;
+  var toMutableMap = kotlin_kotlin.$_$.k9;
   //endregion
   //region block: pre-declaration
   setMetadataFor(ApiFetcher, 'ApiFetcher', classMeta, VOID, VOID, VOID, VOID, VOID, [4, 5]);
@@ -165,9 +165,9 @@
   setMetadataFor(ComposableSingletons$RouteTreeKt, 'ComposableSingletons$RouteTreeKt', objectMeta);
   setMetadataFor(LegacyRouteRedirectStrategy, 'LegacyRouteRedirectStrategy', classMeta, Enum);
   setMetadataFor(Router, 'Router', classMeta, VOID, VOID, Router);
-  setMetadataFor(UpdateHistoryMode, 'UpdateHistoryMode', classMeta, Enum);
   setMetadataFor(RouteInterceptorScope, 'RouteInterceptorScope', classMeta);
   setMetadataFor(ComposableSingletons$RouterKt, 'ComposableSingletons$RouterKt', objectMeta);
+  setMetadataFor(UpdateHistoryMode, 'UpdateHistoryMode', classMeta, Enum);
   //endregion
   function get_api(_this__u8e3s4) {
     _init_properties_ApiFetcher_kt__epxlpv();
@@ -504,33 +504,6 @@
     return PageContextLocal;
   }
   var PageContextLocal;
-  function rememberPageContext($composer, $changed) {
-    _init_properties_PageContext_kt__u2hiem();
-    var $composer_0 = $composer;
-    $composer_0.startReplaceableGroup_ip860b_k$(979146567);
-    if (isTraceInProgress()) {
-      traceEventStart(979146567, $changed, -1, 'com.varabyte.kobweb.core.rememberPageContext (PageContext.kt:165)');
-    }
-    // Inline function 'androidx.compose.runtime.CompositionLocal.current' call
-    var this_0 = get_PageContextLocal();
-    var $composer_1 = $composer_0;
-    sourceInformationMarkerStart($composer_1, 2023513938, 'CC:CompositionLocal.kt#9igjgp');
-    var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
-    sourceInformationMarkerEnd($composer_1);
-    var tmp;
-    if (tmp0 == null) {
-      var message = 'PageContext is only valid within a @Page composable';
-      throw IllegalStateException_init_$Create$(toString(message));
-    } else {
-      tmp = tmp0;
-    }
-    var tmp0_0 = tmp;
-    if (isTraceInProgress()) {
-      traceEventEnd();
-    }
-    $composer_0.endReplaceableGroup_ern0ak_k$();
-    return tmp0_0;
-  }
   function _get_route__bsf68o($this) {
     return $this.route_1;
   }
@@ -659,6 +632,33 @@
     }
     return tmp;
   };
+  function rememberPageContext($composer, $changed) {
+    _init_properties_PageContext_kt__u2hiem();
+    var $composer_0 = $composer;
+    $composer_0.startReplaceableGroup_ip860b_k$(979146567);
+    if (isTraceInProgress()) {
+      traceEventStart(979146567, $changed, -1, 'com.varabyte.kobweb.core.rememberPageContext (PageContext.kt:165)');
+    }
+    // Inline function 'androidx.compose.runtime.CompositionLocal.current' call
+    var this_0 = get_PageContextLocal();
+    var $composer_1 = $composer_0;
+    sourceInformationMarkerStart($composer_1, 2023513938, 'CC:CompositionLocal.kt#9igjgp');
+    var tmp0 = $composer_1.consume_ebzcrh_k$(this_0);
+    sourceInformationMarkerEnd($composer_1);
+    var tmp;
+    if (tmp0 == null) {
+      var message = 'PageContext is only valid within a @Page composable';
+      throw IllegalStateException_init_$Create$(toString(message));
+    } else {
+      tmp = tmp0;
+    }
+    var tmp0_0 = tmp;
+    if (isTraceInProgress()) {
+      traceEventEnd();
+    }
+    $composer_0.endReplaceableGroup_ern0ak_k$();
+    return tmp0_0;
+  }
   function PageContextLocal$lambda() {
     _init_properties_PageContext_kt__u2hiem();
     return null;
@@ -2286,40 +2286,6 @@
     }
     return tmp;
   };
-  var UpdateHistoryMode_PUSH_instance;
-  var UpdateHistoryMode_REPLACE_instance;
-  function values_1() {
-    return [UpdateHistoryMode_PUSH_getInstance(), UpdateHistoryMode_REPLACE_getInstance()];
-  }
-  function valueOf_1(value) {
-    switch (value) {
-      case 'PUSH':
-        return UpdateHistoryMode_PUSH_getInstance();
-      case 'REPLACE':
-        return UpdateHistoryMode_REPLACE_getInstance();
-      default:
-        UpdateHistoryMode_initEntries();
-        THROW_IAE('No enum constant value.');
-        break;
-    }
-  }
-  function get_entries_1() {
-    if ($ENTRIES_1 == null)
-      $ENTRIES_1 = enumEntries(values_1());
-    return $ENTRIES_1;
-  }
-  var UpdateHistoryMode_entriesInitialized;
-  function UpdateHistoryMode_initEntries() {
-    if (UpdateHistoryMode_entriesInitialized)
-      return Unit_getInstance();
-    UpdateHistoryMode_entriesInitialized = true;
-    UpdateHistoryMode_PUSH_instance = new UpdateHistoryMode('PUSH', 0);
-    UpdateHistoryMode_REPLACE_instance = new UpdateHistoryMode('REPLACE', 1);
-  }
-  var $ENTRIES_1;
-  function UpdateHistoryMode(name, ordinal) {
-    Enum.call(this, name, ordinal);
-  }
   function _get_route__bsf68o_0($this) {
     return $this.route_1;
   }
@@ -2350,7 +2316,6 @@
   protoOf(RouteInterceptorScope).get_pathQueryAndFragment_8mv2zx_k$ = function () {
     return Route_init_$Create$(this.path_1, this.queryParams_1, this.fragment_1).toString();
   };
-  var com_varabyte_kobweb_navigation_Router$stable;
   function ComposableLambda$invoke$ref_4($boundThis) {
     return function (p0, p1, p2) {
       return $boundThis.invoke_c9vvnb_k$(p0, p1, p2);
@@ -2388,6 +2353,41 @@
       new ComposableSingletons$RouterKt();
     return ComposableSingletons$RouterKt_instance;
   }
+  var UpdateHistoryMode_PUSH_instance;
+  var UpdateHistoryMode_REPLACE_instance;
+  function values_1() {
+    return [UpdateHistoryMode_PUSH_getInstance(), UpdateHistoryMode_REPLACE_getInstance()];
+  }
+  function valueOf_1(value) {
+    switch (value) {
+      case 'PUSH':
+        return UpdateHistoryMode_PUSH_getInstance();
+      case 'REPLACE':
+        return UpdateHistoryMode_REPLACE_getInstance();
+      default:
+        UpdateHistoryMode_initEntries();
+        THROW_IAE('No enum constant value.');
+        break;
+    }
+  }
+  function get_entries_1() {
+    if ($ENTRIES_1 == null)
+      $ENTRIES_1 = enumEntries(values_1());
+    return $ENTRIES_1;
+  }
+  var UpdateHistoryMode_entriesInitialized;
+  function UpdateHistoryMode_initEntries() {
+    if (UpdateHistoryMode_entriesInitialized)
+      return Unit_getInstance();
+    UpdateHistoryMode_entriesInitialized = true;
+    UpdateHistoryMode_PUSH_instance = new UpdateHistoryMode('PUSH', 0);
+    UpdateHistoryMode_REPLACE_instance = new UpdateHistoryMode('REPLACE', 1);
+  }
+  var $ENTRIES_1;
+  function UpdateHistoryMode(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  var com_varabyte_kobweb_navigation_Router$stable;
   function UpdateHistoryMode_PUSH_getInstance() {
     UpdateHistoryMode_initEntries();
     return UpdateHistoryMode_PUSH_instance;
@@ -2415,16 +2415,17 @@
   //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
-  _.$_$.a = initKobweb;
-  _.$_$.b = KobwebApp;
-  _.$_$.c = rememberPageContext;
-  _.$_$.d = Anchor;
-  _.$_$.e = Router;
-  _.$_$.f = prependIf;
-  _.$_$.g = LegacyRouteRedirectStrategy_DISALLOW_getInstance;
-  _.$_$.h = UpdateHistoryMode_REPLACE_getInstance;
-  _.$_$.i = AppGlobals_getInstance;
-  _.$_$.j = Companion_getInstance_5;
+  _.$_$.a = get_api;
+  _.$_$.b = initKobweb;
+  _.$_$.c = KobwebApp;
+  _.$_$.d = rememberPageContext;
+  _.$_$.e = Anchor;
+  _.$_$.f = Router;
+  _.$_$.g = prependIf;
+  _.$_$.h = LegacyRouteRedirectStrategy_DISALLOW_getInstance;
+  _.$_$.i = UpdateHistoryMode_REPLACE_getInstance;
+  _.$_$.j = AppGlobals_getInstance;
+  _.$_$.k = Companion_getInstance_5;
   //endregion
   return _;
 }));

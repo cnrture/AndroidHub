@@ -15,11 +15,11 @@
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_runtime_runtime) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.ob;
-  var classMeta = kotlin_kotlin.$_$.ea;
-  var setMetadataFor = kotlin_kotlin.$_$.pb;
-  var VOID = kotlin_kotlin.$_$.e;
-  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.p;
+  var protoOf = kotlin_kotlin.$_$.fc;
+  var classMeta = kotlin_kotlin.$_$.ua;
+  var setMetadataFor = kotlin_kotlin.$_$.gc;
+  var VOID = kotlin_kotlin.$_$.g;
+  var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
   //endregion
   //region block: pre-declaration
   setMetadataFor(MarkdownContext, 'MarkdownContext', classMeta);

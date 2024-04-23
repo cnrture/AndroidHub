@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kobweb.application)
     alias(libs.plugins.kobwebx.markdown)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 group = "com.canerture.androidhub"
@@ -24,28 +25,24 @@ kobweb {
 }
 
 kotlin {
-    // This example is frontend only. However, for a fullstack app, you can uncomment the includeServer parameter
-    // and the `jvmMain` source set below.
-    configAsKobwebApplication("androidhub" /*, includeServer = true*/)
+    configAsKobwebApplication("androidhub", includeServer = true)
 
     sourceSets {
         commonMain.dependencies {
             implementation(compose.runtime)
+            implementation(libs.kotlinx.serialization.json)
         }
 
         jsMain.dependencies {
             implementation(compose.html.core)
             implementation(libs.kobweb.core)
             implementation(libs.kobweb.silk)
-            // This default template uses built-in SVG icons, but what's available is limited.
-            // Uncomment the following if you want access to a large set of font-awesome icons:
-            // implementation(libs.silk.icons.fa)
             implementation(libs.kobwebx.markdown)
         }
 
-        // Uncomment the following if you pass `includeServer = true` into the `configAsKobwebApplication` call.
-//        jvmMain.dependencies {
-//            compileOnly(libs.kobweb.api) // Provided by Kobweb backend at runtime
-//        }
+        jvmMain.dependencies {
+            compileOnly(libs.kobweb.api)
+            implementation(libs.bundles.okhttp)
+        }
     }
 }

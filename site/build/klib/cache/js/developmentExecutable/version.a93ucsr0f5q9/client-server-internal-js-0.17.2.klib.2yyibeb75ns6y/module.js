@@ -12,13 +12,13 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.c1;
-  var protoOf = kotlin_kotlin.$_$.ob;
-  var objectCreate = kotlin_kotlin.$_$.mb;
-  var get_lastIndex = kotlin_kotlin.$_$.h7;
-  var replace = kotlin_kotlin.$_$.hd;
-  var classMeta = kotlin_kotlin.$_$.ea;
-  var setMetadataFor = kotlin_kotlin.$_$.pb;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.e1;
+  var protoOf = kotlin_kotlin.$_$.fc;
+  var objectCreate = kotlin_kotlin.$_$.dc;
+  var get_lastIndex = kotlin_kotlin.$_$.v7;
+  var replace = kotlin_kotlin.$_$.ge;
+  var classMeta = kotlin_kotlin.$_$.ua;
+  var setMetadataFor = kotlin_kotlin.$_$.gc;
   //endregion
   //region block: pre-declaration
   setMetadataFor(PatternMapper, 'PatternMapper', classMeta);
