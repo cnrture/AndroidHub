@@ -14,7 +14,7 @@ public class ApisFactoryImpl : ApisFactory {
     ): Apis {
         val data = MutableData()
         val apis = Apis(env, data, logger)
-        apis.register("/getposts") { ctx -> com.canerture.androidhub.api.getPosts(ctx) }
+        apis.register("/get_posts.php") { ctx -> com.canerture.androidhub.api.getPosts(ctx) }
         val initCtx = InitApiContext(env, apis, data, events, logger)
         com.canerture.androidhub.init.initJson(initCtx)
         com.canerture.androidhub.init.initPostsRepository(initCtx)

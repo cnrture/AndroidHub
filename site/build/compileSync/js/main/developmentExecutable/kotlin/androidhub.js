@@ -6159,7 +6159,7 @@
             this.set_exceptionState_fex74n_k$(3);
             this.set_exceptionState_fex74n_k$(2);
             this.set_state_rjd8d0_k$(1);
-            suspendResult = get_api(window).tryGet$default_tg3lb4_k$('getposts', VOID, VOID, VOID, this);
+            suspendResult = get_api(window).tryGet$default_tg3lb4_k$('get_posts.php', VOID, VOID, VOID, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }

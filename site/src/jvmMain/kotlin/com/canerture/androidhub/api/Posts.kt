@@ -8,7 +8,7 @@ import com.varabyte.kobweb.api.http.setBodyText
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
-@Api(routeOverride = "getposts")
+@Api(routeOverride = "get_posts.php")
 suspend fun getPosts(context: ApiContext) {
     try {
         val posts = context.data.getValue<PostsRepository>().getPosts()

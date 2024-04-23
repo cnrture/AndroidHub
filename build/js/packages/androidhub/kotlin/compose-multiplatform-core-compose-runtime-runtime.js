@@ -333,14 +333,14 @@
   setMetadataFor(MutableVector, 'MutableVector', classMeta);
   setMetadataFor(ScopeMap, 'ScopeMap', classMeta, VOID, VOID, ScopeMap);
   setMetadataFor(AbstractListIterator, 'AbstractListIterator', classMeta);
-  setMetadataFor(AbstractPersistentList, 'AbstractPersistentList', classMeta, AbstractList, [List, Collection, AbstractList]);
+  setMetadataFor(AbstractPersistentList, 'AbstractPersistentList', classMeta, AbstractList, [Collection, List, AbstractList]);
   setMetadataFor(BufferIterator, 'BufferIterator', classMeta, AbstractListIterator);
-  setMetadataFor(PersistentVector, 'PersistentVector', classMeta, AbstractPersistentList, [List, Collection, AbstractPersistentList]);
+  setMetadataFor(PersistentVector, 'PersistentVector', classMeta, AbstractPersistentList, [Collection, List, AbstractPersistentList]);
   setMetadataFor(PersistentVectorBuilder, 'PersistentVectorBuilder', classMeta, AbstractMutableList, [AbstractMutableList, MutableList, MutableCollection]);
   setMetadataFor(PersistentVectorIterator, 'PersistentVectorIterator', classMeta, AbstractListIterator);
   setMetadataFor(PersistentVectorMutableIterator, 'PersistentVectorMutableIterator', classMeta, AbstractListIterator);
   setMetadataFor(Companion_6, 'Companion', objectMeta);
-  setMetadataFor(SmallPersistentVector, 'SmallPersistentVector', classMeta, AbstractPersistentList, [List, Collection, AbstractPersistentList]);
+  setMetadataFor(SmallPersistentVector, 'SmallPersistentVector', classMeta, AbstractPersistentList, [Collection, List, AbstractPersistentList]);
   setMetadataFor(TrieIterator, 'TrieIterator', classMeta, AbstractListIterator);
   setMetadataFor(ObjectRef, 'ObjectRef', classMeta);
   setMetadataFor(Companion_7, 'Companion', objectMeta);
@@ -361,7 +361,7 @@
   setMetadataFor(Companion_8, 'Companion', objectMeta);
   setMetadataFor(TrieNode, 'TrieNode', classMeta);
   setMetadataFor(Companion_9, 'Companion', objectMeta);
-  setMetadataFor(PersistentOrderedSet, 'PersistentOrderedSet', classMeta, AbstractSet, [AbstractSet, Set, Collection]);
+  setMetadataFor(PersistentOrderedSet, 'PersistentOrderedSet', classMeta, AbstractSet, [AbstractSet, Collection, Set]);
   setMetadataFor(Links, 'Links', classMeta, VOID, VOID, Links_init_$Create$);
   setMetadataFor(PersistentOrderedSetIterator, 'PersistentOrderedSetIterator', classMeta);
   setMetadataFor(EndOfChain, 'EndOfChain', objectMeta);

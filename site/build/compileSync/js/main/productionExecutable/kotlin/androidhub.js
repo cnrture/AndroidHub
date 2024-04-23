@@ -5518,7 +5518,7 @@
             this.bd_1 = 3;
             this.bd_1 = 2;
             this.ad_1 = 1;
-            suspendResult = get_api(window).h3d('getposts', VOID, VOID, VOID, this);
+            suspendResult = get_api(window).h3d('get_posts.php', VOID, VOID, VOID, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }

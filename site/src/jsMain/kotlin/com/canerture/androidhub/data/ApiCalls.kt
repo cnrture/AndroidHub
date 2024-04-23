@@ -12,7 +12,7 @@ suspend fun getPosts(
 ){
     try {
         val result = window.api.tryGet(
-            apiPath = "getposts"
+            apiPath = "get_posts.php"
         )?.decodeToString()
         if(result != null){
             onSuccess(Json.decodeFromString(result))

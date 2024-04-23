@@ -1,1 +1,1 @@
-{"initMethods":[{"fqn":"com.canerture.androidhub.init.initJson"},{"fqn":"com.canerture.androidhub.init.initPostsRepository"}],"apiMethods":[{"fqn":"com.canerture.androidhub.api.getPosts","route":"/getposts"}],"apiStreamMethods":[]}
+{"initMethods":[{"fqn":"com.canerture.androidhub.init.initJson"},{"fqn":"com.canerture.androidhub.init.initPostsRepository"}],"apiMethods":[{"fqn":"com.canerture.androidhub.api.getPosts","route":"/get_posts.php"}],"apiStreamMethods":[]}
