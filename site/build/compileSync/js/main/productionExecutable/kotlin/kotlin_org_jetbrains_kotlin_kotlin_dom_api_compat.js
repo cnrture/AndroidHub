@@ -12,20 +12,24 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var toSet = kotlin_kotlin.$_$.n4;
-  var THROW_CCE = kotlin_kotlin.$_$.n8;
-  var isCharSequence = kotlin_kotlin.$_$.a6;
-  var trim = kotlin_kotlin.$_$.d8;
-  var toString = kotlin_kotlin.$_$.m6;
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.v;
-  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.h;
-  var Unit_instance = kotlin_kotlin.$_$.d2;
-  var joinToString = kotlin_kotlin.$_$.l3;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.w;
-  var charSequenceLength = kotlin_kotlin.$_$.m5;
-  var joinTo = kotlin_kotlin.$_$.n3;
+  var toSet = kotlin_kotlin.$_$.r7;
+  var THROW_CCE = kotlin_kotlin.$_$.kd;
+  var isCharSequence = kotlin_kotlin.$_$.m9;
+  var trim = kotlin_kotlin.$_$.uc;
+  var toString = kotlin_kotlin.$_$.ka;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.e1;
+  var ArrayList_init_$Create$ = kotlin_kotlin.$_$.m;
+  var Unit_instance = kotlin_kotlin.$_$.h4;
+  var joinToString = kotlin_kotlin.$_$.j6;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.f1;
+  var charSequenceLength = kotlin_kotlin.$_$.t8;
+  var joinTo = kotlin_kotlin.$_$.l6;
+  var protoOf = kotlin_kotlin.$_$.fa;
+  var classMeta = kotlin_kotlin.$_$.v8;
+  var setMetadataFor = kotlin_kotlin.$_$.ga;
   //endregion
   //region block: pre-declaration
+  setMetadataFor(EventListenerHandler, 'EventListenerHandler', classMeta);
   //endregion
   function removeClass(_this__u8e3s4, cssClasses) {
     var tmp$ret$1;
@@ -53,14 +57,14 @@
       var this_1 = toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
       // Inline function 'kotlin.text.toRegex' call
       // Inline function 'kotlin.collections.filterTo' call
-      var this_2 = Regex_init_$Create$('\\s+').o8(this_1, 0);
+      var this_2 = Regex_init_$Create$('\\s+').m9(this_1, 0);
       var destination = ArrayList_init_$Create$();
-      var tmp0_iterator = this_2.k();
-      while (tmp0_iterator.x()) {
-        var element_0 = tmp0_iterator.z();
+      var tmp0_iterator = this_2.n();
+      while (tmp0_iterator.b1()) {
+        var element_0 = tmp0_iterator.d1();
         // Inline function 'kotlinx.dom.removeClass.<anonymous>' call
-        if (!toBeRemoved.m(element_0)) {
-          destination.u(element_0);
+        if (!toBeRemoved.q(element_0)) {
+          destination.y(element_0);
         }
       }
       _this__u8e3s4.className = joinToString(destination, ' ');
@@ -79,12 +83,12 @@
       inductionVariable = inductionVariable + 1 | 0;
       // Inline function 'kotlinx.dom.addClass.<anonymous>' call
       if (!hasClass(_this__u8e3s4, element)) {
-        destination.u(element);
+        destination.y(element);
       }
     }
     var missingClasses = destination;
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!missingClasses.o()) {
+    if (!missingClasses.s()) {
       // Inline function 'kotlin.text.trim' call
       var this_0 = _this__u8e3s4.className;
       var presentClasses = toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
@@ -94,10 +98,10 @@
       var this_1 = StringBuilder_init_$Create$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'kotlinx.dom.addClass.<anonymous>' call
-      this_1.q5(presentClasses);
+      this_1.w5(presentClasses);
       // Inline function 'kotlin.text.isEmpty' call
       if (!(charSequenceLength(presentClasses) === 0)) {
-        this_1.q5(' ');
+        this_1.w5(' ');
       }
       joinTo(missingClasses, this_1, ' ');
       _this__u8e3s4.className = this_1.toString();
@@ -110,12 +114,28 @@
     var this_0 = _this__u8e3s4.className;
     // Inline function 'kotlin.text.toRegex' call
     var this_1 = '(^|.*\\s+)' + cssClass + '($|\\s+.*)';
-    return Regex_init_$Create$(this_1).k8(this_0);
+    return Regex_init_$Create$(this_1).i9(this_0);
   }
+  function EventListener(handler) {
+    return new EventListenerHandler(handler);
+  }
+  function EventListenerHandler(handler) {
+    this.ek_1 = handler;
+  }
+  protoOf(EventListenerHandler).fk = function (event) {
+    this.ek_1(event);
+  };
+  protoOf(EventListenerHandler).handleEvent = function (event) {
+    return this.fk(event);
+  };
+  protoOf(EventListenerHandler).toString = function () {
+    return 'EventListenerHandler(' + this.ek_1 + ')';
+  };
   //region block: exports
   _.$_$ = _.$_$ || {};
   _.$_$.a = addClass;
   _.$_$.b = removeClass;
+  _.$_$.c = EventListener;
   //endregion
   return _;
 }));

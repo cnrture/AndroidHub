@@ -20,8 +20,8 @@
   //region block: imports
   var imul = Math.imul;
   var protoOf = kotlin_kotlin.$_$.fc;
-  var THROW_CCE = kotlin_kotlin.$_$.eg;
-  var Annotation = kotlin_kotlin.$_$.of;
+  var THROW_CCE = kotlin_kotlin.$_$.dg;
+  var Annotation = kotlin_kotlin.$_$.nf;
   var classMeta = kotlin_kotlin.$_$.ua;
   var setMetadataFor = kotlin_kotlin.$_$.gc;
   var VOID = kotlin_kotlin.$_$.g;
@@ -29,18 +29,18 @@
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.m;
   var addAll = kotlin_kotlin.$_$.b6;
-  var to = kotlin_kotlin.$_$.nh;
-  var Pair = kotlin_kotlin.$_$.bg;
+  var to = kotlin_kotlin.$_$.mh;
+  var Pair = kotlin_kotlin.$_$.ag;
   var objectMeta = kotlin_kotlin.$_$.ec;
   var asList = kotlin_kotlin.$_$.j6;
   var interfaceMeta = kotlin_kotlin.$_$.gb;
-  var THROW_IAE = kotlin_kotlin.$_$.fg;
+  var THROW_IAE = kotlin_kotlin.$_$.eg;
   var enumEntries = kotlin_kotlin.$_$.ja;
-  var Enum = kotlin_kotlin.$_$.tf;
+  var Enum = kotlin_kotlin.$_$.sf;
   var NamedEventListener = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.d;
   var charSequenceLength = kotlin_kotlin.$_$.sa;
   var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.x;
-  var ensureNotNull = kotlin_kotlin.$_$.yg;
+  var ensureNotNull = kotlin_kotlin.$_$.xg;
   var hashCode = kotlin_kotlin.$_$.eb;
   var equals = kotlin_kotlin.$_$.xa;
   var toString = kotlin_kotlin.$_$.kc;
@@ -48,7 +48,7 @@
   var getStringHashCode = kotlin_kotlin.$_$.db;
   var objectCreate = kotlin_kotlin.$_$.dc;
   var toList = kotlin_kotlin.$_$.g9;
-  var toString_0 = kotlin_kotlin.$_$.mh;
+  var toString_0 = kotlin_kotlin.$_$.lh;
   var numberToDouble = kotlin_kotlin.$_$.ac;
   var getNumberHashCode = kotlin_kotlin.$_$.bb;
   var defineProp = kotlin_kotlin.$_$.wa;
@@ -80,11 +80,11 @@
   var emptyList = kotlin_kotlin.$_$.d7;
   var copyToArray = kotlin_kotlin.$_$.b7;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.lh;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.kh;
   var DOMScope = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.a;
   var SideEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o;
   var RememberObserver = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
-  var lazy = kotlin_kotlin.$_$.dh;
+  var lazy = kotlin_kotlin.$_$.ch;
   var invalidApplier = kotlin_org_jetbrains_compose_runtime_runtime.$_$.r;
   var DomApplier = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.b;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;

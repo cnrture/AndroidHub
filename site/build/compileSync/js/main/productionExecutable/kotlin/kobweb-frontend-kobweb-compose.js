@@ -22,55 +22,55 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.j6;
-  var interfaceMeta = kotlin_kotlin.$_$.y5;
-  var setMetadataFor = kotlin_kotlin.$_$.k6;
-  var objectMeta = kotlin_kotlin.$_$.i6;
-  var VOID = kotlin_kotlin.$_$.c;
-  var Unit_instance = kotlin_kotlin.$_$.d2;
-  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
-  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
+  var protoOf = kotlin_kotlin.$_$.fa;
+  var interfaceMeta = kotlin_kotlin.$_$.h9;
+  var setMetadataFor = kotlin_kotlin.$_$.ga;
+  var objectMeta = kotlin_kotlin.$_$.ea;
+  var VOID = kotlin_kotlin.$_$.g;
+  var Unit_instance = kotlin_kotlin.$_$.h4;
+  var traceEventStart = kotlin_org_jetbrains_compose_runtime_runtime.$_$.x;
+  var isTraceInProgress = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o;
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
-  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.s;
-  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
-  var THROW_CCE = kotlin_kotlin.$_$.n8;
+  var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
+  var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.e1;
+  var THROW_CCE = kotlin_kotlin.$_$.kd;
   var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.i3;
-  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.u;
+  var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
   var composableLambdaInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a;
-  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e2;
-  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.w;
-  var noWhenBranchMatchedException = kotlin_kotlin.$_$.w8;
-  var equals = kotlin_kotlin.$_$.q5;
-  var isInterface = kotlin_kotlin.$_$.b6;
+  var registerRefScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h2;
+  var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
+  var noWhenBranchMatchedException = kotlin_kotlin.$_$.ie;
+  var equals = kotlin_kotlin.$_$.y8;
+  var isInterface = kotlin_kotlin.$_$.q9;
   var grid = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.z;
   var get_px = kotlin_org_jetbrains_compose_html_html_core.$_$.x2;
-  var get_fr = kotlin_org_jetbrains_compose_html_html_core.$_$.a2;
-  var gridArea = kotlin_org_jetbrains_compose_html_html_core.$_$.c2;
+  var get_fr = kotlin_org_jetbrains_compose_html_html_core.$_$.b2;
+  var gridArea = kotlin_org_jetbrains_compose_html_html_core.$_$.d2;
   var Companion_instance = kotlin_org_jetbrains_compose_html_html_core.$_$.c;
   var alignItems = kotlin_org_jetbrains_compose_html_html_core.$_$.i1;
-  var Companion_instance_0 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s2;
+  var Companion_instance_0 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.v2;
   var justifyItems = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.b1;
   var Companion_instance_1 = kotlin_org_jetbrains_compose_html_html_core.$_$.d;
   var alignSelf = kotlin_org_jetbrains_compose_html_html_core.$_$.j1;
-  var Companion_instance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t2;
+  var Companion_instance_2 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.w2;
   var justifySelf = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.c1;
   var Companion_instance_3 = kotlin_org_jetbrains_compose_html_html_core.$_$.k;
-  var display = kotlin_org_jetbrains_compose_html_html_core.$_$.t1;
+  var display = kotlin_org_jetbrains_compose_html_html_core.$_$.u1;
   var Companion_instance_4 = kotlin_org_jetbrains_compose_html_html_core.$_$.l;
-  var flexDirection = kotlin_org_jetbrains_compose_html_html_core.$_$.v1;
+  var flexDirection = kotlin_org_jetbrains_compose_html_html_core.$_$.w1;
   var Companion_instance_5 = kotlin_org_jetbrains_compose_html_html_core.$_$.m;
-  var justifyContent = kotlin_org_jetbrains_compose_html_html_core.$_$.j2;
-  var flexGrow = kotlin_org_jetbrains_compose_html_html_core.$_$.w1;
+  var justifyContent = kotlin_org_jetbrains_compose_html_html_core.$_$.k2;
+  var flexGrow = kotlin_org_jetbrains_compose_html_html_core.$_$.x1;
   var StyleSheet = kotlin_org_jetbrains_compose_html_html_core.$_$.h1;
   var StyleSheet_init_$Init$ = kotlin_org_jetbrains_compose_html_html_core.$_$.b;
-  var hashCode = kotlin_kotlin.$_$.w5;
-  var classMeta = kotlin_kotlin.$_$.n5;
-  var ComparableAttrsScope_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l2;
+  var hashCode = kotlin_kotlin.$_$.f9;
+  var classMeta = kotlin_kotlin.$_$.v8;
+  var ComparableAttrsScope_init_$Create$ = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.o2;
   var ComparableStyleScope = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d;
-  var toString = kotlin_kotlin.$_$.m6;
-  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.b1;
-  var coerceIn = kotlin_kotlin.$_$.p6;
-  var numberToInt = kotlin_kotlin.$_$.g6;
+  var toString = kotlin_kotlin.$_$.ka;
+  var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.o1;
+  var coerceIn = kotlin_kotlin.$_$.oa;
+  var numberToInt = kotlin_kotlin.$_$.ba;
   var ariaHidden = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m;
   var ariaDisabled = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l;
   var animation = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j;
@@ -80,56 +80,59 @@
   var borderWidth = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s;
   var borderBottom = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.n;
   var borderRadius = kotlin_org_jetbrains_compose_html_html_core.$_$.m1;
-  var border = kotlin_org_jetbrains_compose_html_html_core.$_$.n1;
+  var border = kotlin_org_jetbrains_compose_html_html_core.$_$.o1;
   var borderTop = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r;
   var borderLeft = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p;
   var borderRadius_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.l1;
+  var borderRadius_1 = kotlin_org_jetbrains_compose_html_html_core.$_$.n1;
   var boxShadow = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t;
   var boxSizing = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.u;
-  var color = kotlin_org_jetbrains_compose_html_html_core.$_$.r1;
+  var color = kotlin_org_jetbrains_compose_html_html_core.$_$.s1;
   var opacity = kotlin_org_jetbrains_compose_html_html_core.$_$.t2;
   var appearance = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k;
-  var gap = kotlin_org_jetbrains_compose_html_html_core.$_$.b2;
+  var gap = kotlin_org_jetbrains_compose_html_html_core.$_$.c2;
   var fontWeight = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.w;
-  var fontSize = kotlin_org_jetbrains_compose_html_html_core.$_$.y1;
-  var fontWeight_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.z1;
-  var fontFamily = kotlin_org_jetbrains_compose_html_html_core.$_$.x1;
+  var fontSize = kotlin_org_jetbrains_compose_html_html_core.$_$.z1;
+  var fontWeight_0 = kotlin_org_jetbrains_compose_html_html_core.$_$.a2;
+  var fontFamily = kotlin_org_jetbrains_compose_html_html_core.$_$.y1;
   var gridTemplateColumns = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.x;
   var gridTemplateRows = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.y;
-  var gridRow = kotlin_org_jetbrains_compose_html_html_core.$_$.f2;
-  var userSelect = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r1;
+  var gridRow = kotlin_org_jetbrains_compose_html_html_core.$_$.g2;
+  var userSelect = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.u1;
   var cursor = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.v;
-  var overflowX = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h1;
-  var overflowY = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i1;
-  var marginTop = kotlin_org_jetbrains_compose_html_html_core.$_$.m2;
+  var overflowX = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j1;
+  var overflowY = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k1;
   var margin = kotlin_org_jetbrains_compose_html_html_core.$_$.n2;
   var padding = kotlin_org_jetbrains_compose_html_html_core.$_$.u2;
-  var verticalAlign = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s1;
-  var lineHeight = kotlin_org_jetbrains_compose_html_html_core.$_$.l2;
-  var overflow = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.j1;
-  var paddingInline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.k1;
-  var overflowWrap = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g1;
+  var verticalAlign = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.v1;
+  var lineHeight = kotlin_org_jetbrains_compose_html_html_core.$_$.m2;
+  var overflow = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l1;
+  var paddingInline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m1;
+  var overflowWrap = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i1;
+  var marginBlock = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e1;
+  var marginInline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f1;
   var listStyle = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.d1;
-  var objectFit = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e1;
-  var outline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.f1;
+  var objectFit = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.g1;
+  var outline = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.h1;
   var position = kotlin_org_jetbrains_compose_html_html_core.$_$.w2;
   var top = kotlin_org_jetbrains_compose_html_html_core.$_$.a3;
-  var left = kotlin_org_jetbrains_compose_html_html_core.$_$.k2;
+  var left = kotlin_org_jetbrains_compose_html_html_core.$_$.l2;
   var right = kotlin_org_jetbrains_compose_html_html_core.$_$.y2;
-  var bottom = kotlin_org_jetbrains_compose_html_html_core.$_$.o1;
-  var scrollBehavior = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.l1;
+  var bottom = kotlin_org_jetbrains_compose_html_html_core.$_$.p1;
+  var scrollBehavior = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.n1;
   var get_percent = kotlin_org_jetbrains_compose_html_html_core.$_$.v2;
   var width = kotlin_org_jetbrains_compose_html_html_core.$_$.d3;
   var minWidth = kotlin_org_jetbrains_compose_html_html_core.$_$.r2;
-  var height = kotlin_org_jetbrains_compose_html_html_core.$_$.i2;
+  var height = kotlin_org_jetbrains_compose_html_html_core.$_$.j2;
   var minHeight = kotlin_org_jetbrains_compose_html_html_core.$_$.q2;
   var maxWidth = kotlin_org_jetbrains_compose_html_html_core.$_$.o2;
-  var whiteSpace = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t1;
-  var textAlign = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.n1;
-  var textDecorationLine = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.o1;
-  var translateX = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.q1;
-  var transition = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p1;
-  var setVariable = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.m1;
+  var whiteSpace = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.w1;
+  var textAlign = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.q1;
+  var textDecorationLine = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.r1;
+  var translateX = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.t1;
+  var transition = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.s1;
+  var setVariable = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.o1;
+  var setVariable_0 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.p1;
   //endregion
   //region block: pre-declaration
   setMetadataFor(HorizontalOrVertical, 'HorizontalOrVertical', interfaceMeta);
@@ -149,10 +152,18 @@
   setMetadataFor(ComposableSingletons$BoxKt, 'ComposableSingletons$BoxKt', objectMeta);
   setMetadataFor(BoxScopeInstance, 'BoxScopeInstance', objectMeta, VOID, [BoxScope]);
   setMetadataFor(BoxDefaults, 'BoxDefaults', objectMeta);
+  function weight(_this__u8e3s4, value) {
+    return flexGrow_0(_this__u8e3s4, value);
+  }
+  setMetadataFor(FlexScope, 'FlexScope', interfaceMeta);
+  function align_0(_this__u8e3s4, alignment) {
+    return attrsModifier(_this__u8e3s4, ColumnScope$align$lambda(alignment));
+  }
+  setMetadataFor(ColumnScope, 'ColumnScope', interfaceMeta, VOID, [FlexScope]);
   setMetadataFor(ColumnDefaults, 'ColumnDefaults', objectMeta);
-  setMetadataFor(ColumnScopeInstance, 'ColumnScopeInstance', objectMeta);
+  setMetadataFor(ColumnScopeInstance, 'ColumnScopeInstance', objectMeta, VOID, [ColumnScope]);
   setMetadataFor(RowDefaults, 'RowDefaults', objectMeta);
-  setMetadataFor(RowScopeInstance, 'RowScopeInstance', objectMeta);
+  setMetadataFor(RowScopeInstance, 'RowScopeInstance', objectMeta, VOID, [FlexScope]);
   setMetadataFor(KobwebComposeStyleSheet, 'KobwebComposeStyleSheet', objectMeta, StyleSheet);
   setMetadataFor(TopStart, 'TopStart', objectMeta);
   setMetadataFor(TopCenter, 'TopCenter', objectMeta);
@@ -187,7 +198,6 @@
   setMetadataFor(Colors, 'Colors', objectMeta);
   setMetadataFor(BorderScope, 'BorderScope', classMeta);
   setMetadataFor(OverflowScope, 'OverflowScope', classMeta);
-  setMetadataFor(MarginScope, 'MarginScope', classMeta);
   //endregion
   function HorizontalOrVertical() {
   }
@@ -247,7 +257,7 @@
   }
   function BoxScope$align$lambda($alignment) {
     return function ($this$attrsModifier) {
-      $this$attrsModifier.p24([toClassName_0($alignment) + '-self']);
+      $this$attrsModifier.c2c([toClassName_0($alignment) + '-self']);
       return Unit_instance;
     };
   }
@@ -259,25 +269,25 @@
     var ref_0 = {_v: ref};
     var content_0 = {_v: content};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.h19(287459556);
+    $composer_0 = $composer_0.z1f(287459556);
     var $dirty = $changed;
     if (!(($default & 1) === 0))
       $dirty = $dirty | 6;
     else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.iz(modifier_0._v) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.a16(modifier_0._v) ? 4 : 2);
     if (!(($default & 2) === 0))
       $dirty = $dirty | 48;
     else if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.iz(contentAlignment_0._v) ? 32 : 16);
+      $dirty = $dirty | ($composer_0.a16(contentAlignment_0._v) ? 32 : 16);
     if (!(($default & 4) === 0))
       $dirty = $dirty | 384;
     else if (($changed & 896) === 0)
-      $dirty = $dirty | ($composer_0.iz(ref_0._v) ? 256 : 128);
+      $dirty = $dirty | ($composer_0.a16(ref_0._v) ? 256 : 128);
     if (!(($default & 8) === 0))
       $dirty = $dirty | 3072;
     else if (($changed & 7168) === 0)
-      $dirty = $dirty | ($composer_0.k18(content_0._v) ? 2048 : 1024);
-    if (!(($dirty & 5851) === 1170) ? true : !$composer_0.k17()) {
+      $dirty = $dirty | ($composer_0.c1f(content_0._v) ? 2048 : 1024);
+    if (!(($dirty & 5851) === 1170) ? true : !$composer_0.c1e()) {
       if (!(($default & 1) === 0)) {
         modifier_0._v = Companion_instance_6;
       }
@@ -288,7 +298,7 @@
         ref_0._v = null;
       }
       if (!(($default & 8) === 0)) {
-        content_0._v = ComposableSingletons$BoxKt_getInstance().h2m_1;
+        content_0._v = ComposableSingletons$BoxKt_getInstance().w3g_1;
       }
       if (isTraceInProgress()) {
         traceEventStart(287459556, $dirty, -1, 'com.varabyte.kobweb.compose.foundation.layout.Box (Box.kt:44)');
@@ -301,48 +311,48 @@
       var dispatchReceiver = composableLambda(tmp_0, 721727587, true, Box$lambda(ref_0, content_0));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.p17(1157296644);
+      $composer_1.h1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.iz(dispatchReceiver);
+      var invalid = $composer_1.a16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.t18();
+      var it = $composer_1.l1f();
       var tmp_1;
-      if (invalid ? true : it === Companion_getInstance().h12_1) {
+      if (invalid ? true : it === Companion_getInstance().z18_1) {
         // Inline function 'com.varabyte.kobweb.compose.foundation.layout.Box.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_0(dispatchReceiver);
-        $composer_1.z18(value);
+        $composer_1.r1f(value);
         tmp_1 = value;
       } else {
         tmp_1 = it;
       }
       var tmp_2 = tmp_1;
       var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_1.q17();
+      $composer_1.i1e();
       Div(tmp, tmp0, $composer_0, 48, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.b12();
+      $composer_0.t18();
     }
-    var tmp0_safe_receiver = $composer_0.i19();
+    var tmp0_safe_receiver = $composer_0.a1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.f1e(Box$lambda_0(modifier_0, contentAlignment_0, ref_0, content_0, $changed, $default));
+      tmp0_safe_receiver.w1k(Box$lambda_0(modifier_0, contentAlignment_0, ref_0, content_0, $changed, $default));
     }
   }
   function ComposableLambda$invoke$ref($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.j22(p0, p1, p2);
+      return $boundThis.w29(p0, p1, p2);
     };
   }
   function ComposableSingletons$BoxKt$lambda_1$lambda_ab4h0h($this$null, $composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 81) === 16) ? true : !$composer_0.k17()) {
+    if (!(($changed & 81) === 16) ? true : !$composer_0.c1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-1088174424, $changed, -1, 'com.varabyte.kobweb.compose.foundation.layout.ComposableSingletons$BoxKt.lambda-1.<anonymous> (Box.kt:43)');
       }
@@ -350,14 +360,14 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.b12();
+      $composer_0.t18();
     }
     return Unit_instance;
   }
   function ComposableSingletons$BoxKt() {
     ComposableSingletons$BoxKt_instance = this;
     var tmp = this;
-    tmp.h2m_1 = ComposableLambda$invoke$ref(composableLambdaInstance(-1088174424, false, ComposableSingletons$BoxKt$lambda_1$lambda_ab4h0h));
+    tmp.w3g_1 = ComposableLambda$invoke$ref(composableLambdaInstance(-1088174424, false, ComposableSingletons$BoxKt$lambda_1$lambda_ab4h0h));
   }
   var ComposableSingletons$BoxKt_instance;
   function ComposableSingletons$BoxKt_getInstance() {
@@ -366,7 +376,7 @@
     return ComposableSingletons$BoxKt_instance;
   }
   function boxClasses(_this__u8e3s4, contentAlignment) {
-    contentAlignment = contentAlignment === VOID ? BoxDefaults_getInstance().i2m_1 : contentAlignment;
+    contentAlignment = contentAlignment === VOID ? BoxDefaults_getInstance().x3g_1 : contentAlignment;
     return classNames(_this__u8e3s4, ['kobweb-box', toClassName_0(contentAlignment)]);
   }
   function BoxScopeInstance() {
@@ -377,7 +387,7 @@
   }
   function BoxDefaults() {
     BoxDefaults_instance = this;
-    this.i2m_1 = TopStart_instance;
+    this.x3g_1 = TopStart_instance;
   }
   var BoxDefaults_instance;
   function BoxDefaults_getInstance() {
@@ -403,7 +413,7 @@
   }
   function ComposableLambda$invoke$ref_0($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.j22(p0, p1, p2);
+      return $boundThis.w29(p0, p1, p2);
     };
   }
   function Box$lambda_0($modifier, $contentAlignment, $ref, $content, $$changed, $$default) {
@@ -412,55 +422,63 @@
       return Unit_instance;
     };
   }
+  function ColumnScope$align$lambda($alignment) {
+    return function ($this$attrsModifier) {
+      $this$attrsModifier.c2c([toClassName_1($alignment) + '-self']);
+      return Unit_instance;
+    };
+  }
+  function ColumnScope() {
+  }
   function Column(modifier, verticalArrangement, horizontalAlignment, ref, content, $composer, $changed, $default) {
     var modifier_0 = {_v: modifier};
     var verticalArrangement_0 = {_v: verticalArrangement};
     var horizontalAlignment_0 = {_v: horizontalAlignment};
     var ref_0 = {_v: ref};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.h19(-59454311);
+    $composer_0 = $composer_0.z1f(-59454311);
     var $dirty = $changed;
     if (!(($default & 1) === 0))
       $dirty = $dirty | 6;
     else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.iz(modifier_0._v) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.a16(modifier_0._v) ? 4 : 2);
     if (($changed & 112) === 0)
-      $dirty = $dirty | ((($default & 2) === 0 ? $composer_0.iz(verticalArrangement_0._v) : false) ? 32 : 16);
+      $dirty = $dirty | ((($default & 2) === 0 ? $composer_0.a16(verticalArrangement_0._v) : false) ? 32 : 16);
     if (($changed & 896) === 0)
-      $dirty = $dirty | ((($default & 4) === 0 ? $composer_0.iz(horizontalAlignment_0._v) : false) ? 256 : 128);
+      $dirty = $dirty | ((($default & 4) === 0 ? $composer_0.a16(horizontalAlignment_0._v) : false) ? 256 : 128);
     if (!(($default & 8) === 0))
       $dirty = $dirty | 3072;
     else if (($changed & 7168) === 0)
-      $dirty = $dirty | ($composer_0.iz(ref_0._v) ? 2048 : 1024);
+      $dirty = $dirty | ($composer_0.a16(ref_0._v) ? 2048 : 1024);
     if (!(($default & 16) === 0))
       $dirty = $dirty | 24576;
     else if (($changed & 57344) === 0)
-      $dirty = $dirty | ($composer_0.k18(content) ? 16384 : 8192);
-    if (!(($dirty & 46811) === 9362) ? true : !$composer_0.k17()) {
-      $composer_0.r17();
-      if (($changed & 1) === 0 ? true : $composer_0.v17()) {
+      $dirty = $dirty | ($composer_0.c1f(content) ? 16384 : 8192);
+    if (!(($dirty & 46811) === 9362) ? true : !$composer_0.c1e()) {
+      $composer_0.j1e();
+      if (($changed & 1) === 0 ? true : $composer_0.n1e()) {
         if (!(($default & 1) === 0)) {
           modifier_0._v = Companion_instance_6;
         }
         if (!(($default & 2) === 0)) {
-          verticalArrangement_0._v = ColumnDefaults_getInstance().j2m_1;
+          verticalArrangement_0._v = ColumnDefaults_getInstance().z3g_1;
           $dirty = $dirty & -113;
         }
         if (!(($default & 4) === 0)) {
-          horizontalAlignment_0._v = ColumnDefaults_getInstance().k2m_1;
+          horizontalAlignment_0._v = ColumnDefaults_getInstance().a3h_1;
           $dirty = $dirty & -897;
         }
         if (!(($default & 8) === 0)) {
           ref_0._v = null;
         }
       } else {
-        $composer_0.b12();
+        $composer_0.t18();
         if (!(($default & 2) === 0))
           $dirty = $dirty & -113;
         if (!(($default & 4) === 0))
           $dirty = $dirty & -897;
       }
-      $composer_0.s17();
+      $composer_0.k1e();
       if (isTraceInProgress()) {
         traceEventStart(-59454311, $dirty, -1, 'com.varabyte.kobweb.compose.foundation.layout.Column (Column.kt:48)');
       }
@@ -472,44 +490,44 @@
       var dispatchReceiver = composableLambda(tmp_0, 1861113368, true, Column$lambda(ref_0, content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.p17(1157296644);
+      $composer_1.h1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.iz(dispatchReceiver);
+      var invalid = $composer_1.a16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.t18();
+      var it = $composer_1.l1f();
       var tmp_1;
-      if (invalid ? true : it === Companion_getInstance().h12_1) {
+      if (invalid ? true : it === Companion_getInstance().z18_1) {
         // Inline function 'com.varabyte.kobweb.compose.foundation.layout.Column.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_1(dispatchReceiver);
-        $composer_1.z18(value);
+        $composer_1.r1f(value);
         tmp_1 = value;
       } else {
         tmp_1 = it;
       }
       var tmp_2 = tmp_1;
       var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_1.q17();
+      $composer_1.i1e();
       Div(tmp, tmp0, $composer_0, 48, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.b12();
+      $composer_0.t18();
     }
-    var tmp0_safe_receiver = $composer_0.i19();
+    var tmp0_safe_receiver = $composer_0.a1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.f1e(Column$lambda_0(modifier_0, verticalArrangement_0, horizontalAlignment_0, ref_0, content, $changed, $default));
+      tmp0_safe_receiver.w1k(Column$lambda_0(modifier_0, verticalArrangement_0, horizontalAlignment_0, ref_0, content, $changed, $default));
     }
   }
   function ColumnDefaults() {
     ColumnDefaults_instance = this;
-    this.j2m_1 = Top_instance;
-    this.k2m_1 = Start_instance_0;
+    this.z3g_1 = Top_instance;
+    this.a3h_1 = Start_instance_0;
   }
   var ColumnDefaults_instance;
   function ColumnDefaults_getInstance() {
@@ -518,8 +536,8 @@
     return ColumnDefaults_instance;
   }
   function columnClasses(_this__u8e3s4, verticalArrangement, horizontalAlignment) {
-    verticalArrangement = verticalArrangement === VOID ? ColumnDefaults_getInstance().j2m_1 : verticalArrangement;
-    horizontalAlignment = horizontalAlignment === VOID ? ColumnDefaults_getInstance().k2m_1 : horizontalAlignment;
+    verticalArrangement = verticalArrangement === VOID ? ColumnDefaults_getInstance().z3g_1 : verticalArrangement;
+    horizontalAlignment = horizontalAlignment === VOID ? ColumnDefaults_getInstance().a3h_1 : horizontalAlignment;
     return classNames(_this__u8e3s4, ['kobweb-col', toClassName_3(verticalArrangement), toClassName_1(horizontalAlignment)]);
   }
   function ColumnScopeInstance() {
@@ -546,7 +564,7 @@
   }
   function ComposableLambda$invoke$ref_1($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.j22(p0, p1, p2);
+      return $boundThis.w29(p0, p1, p2);
     };
   }
   function Column$lambda_0($modifier, $verticalArrangement, $horizontalAlignment, $ref, $content, $$changed, $$default) {
@@ -555,9 +573,11 @@
       return Unit_instance;
     };
   }
+  function FlexScope() {
+  }
   function rowClasses(_this__u8e3s4, horizontalArrangement, verticalAlignment) {
-    horizontalArrangement = horizontalArrangement === VOID ? RowDefaults_getInstance().l2m_1 : horizontalArrangement;
-    verticalAlignment = verticalAlignment === VOID ? RowDefaults_getInstance().m2m_1 : verticalAlignment;
+    horizontalArrangement = horizontalArrangement === VOID ? RowDefaults_getInstance().c3h_1 : horizontalArrangement;
+    verticalAlignment = verticalAlignment === VOID ? RowDefaults_getInstance().d3h_1 : verticalAlignment;
     return classNames(_this__u8e3s4, ['kobweb-row', toClassName_2(horizontalArrangement), toClassName(verticalAlignment)]);
   }
   function Row(modifier, horizontalArrangement, verticalAlignment, ref, content, $composer, $changed, $default) {
@@ -566,49 +586,49 @@
     var verticalAlignment_0 = {_v: verticalAlignment};
     var ref_0 = {_v: ref};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.h19(-568516375);
+    $composer_0 = $composer_0.z1f(-568516375);
     var $dirty = $changed;
     if (!(($default & 1) === 0))
       $dirty = $dirty | 6;
     else if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.iz(modifier_0._v) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.a16(modifier_0._v) ? 4 : 2);
     if (($changed & 112) === 0)
-      $dirty = $dirty | ((($default & 2) === 0 ? $composer_0.iz(horizontalArrangement_0._v) : false) ? 32 : 16);
+      $dirty = $dirty | ((($default & 2) === 0 ? $composer_0.a16(horizontalArrangement_0._v) : false) ? 32 : 16);
     if (($changed & 896) === 0)
-      $dirty = $dirty | ((($default & 4) === 0 ? $composer_0.iz(verticalAlignment_0._v) : false) ? 256 : 128);
+      $dirty = $dirty | ((($default & 4) === 0 ? $composer_0.a16(verticalAlignment_0._v) : false) ? 256 : 128);
     if (!(($default & 8) === 0))
       $dirty = $dirty | 3072;
     else if (($changed & 7168) === 0)
-      $dirty = $dirty | ($composer_0.iz(ref_0._v) ? 2048 : 1024);
+      $dirty = $dirty | ($composer_0.a16(ref_0._v) ? 2048 : 1024);
     if (!(($default & 16) === 0))
       $dirty = $dirty | 24576;
     else if (($changed & 57344) === 0)
-      $dirty = $dirty | ($composer_0.k18(content) ? 16384 : 8192);
-    if (!(($dirty & 46811) === 9362) ? true : !$composer_0.k17()) {
-      $composer_0.r17();
-      if (($changed & 1) === 0 ? true : $composer_0.v17()) {
+      $dirty = $dirty | ($composer_0.c1f(content) ? 16384 : 8192);
+    if (!(($dirty & 46811) === 9362) ? true : !$composer_0.c1e()) {
+      $composer_0.j1e();
+      if (($changed & 1) === 0 ? true : $composer_0.n1e()) {
         if (!(($default & 1) === 0)) {
           modifier_0._v = Companion_instance_6;
         }
         if (!(($default & 2) === 0)) {
-          horizontalArrangement_0._v = RowDefaults_getInstance().l2m_1;
+          horizontalArrangement_0._v = RowDefaults_getInstance().c3h_1;
           $dirty = $dirty & -113;
         }
         if (!(($default & 4) === 0)) {
-          verticalAlignment_0._v = RowDefaults_getInstance().m2m_1;
+          verticalAlignment_0._v = RowDefaults_getInstance().d3h_1;
           $dirty = $dirty & -897;
         }
         if (!(($default & 8) === 0)) {
           ref_0._v = null;
         }
       } else {
-        $composer_0.b12();
+        $composer_0.t18();
         if (!(($default & 2) === 0))
           $dirty = $dirty & -113;
         if (!(($default & 4) === 0))
           $dirty = $dirty & -897;
       }
-      $composer_0.s17();
+      $composer_0.k1e();
       if (isTraceInProgress()) {
         traceEventStart(-568516375, $dirty, -1, 'com.varabyte.kobweb.compose.foundation.layout.Row (Row.kt:49)');
       }
@@ -620,44 +640,44 @@
       var dispatchReceiver = composableLambda(tmp_0, 1725920680, true, Row$lambda(ref_0, content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.p17(1157296644);
+      $composer_1.h1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.iz(dispatchReceiver);
+      var invalid = $composer_1.a16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.t18();
+      var it = $composer_1.l1f();
       var tmp_1;
-      if (invalid ? true : it === Companion_getInstance().h12_1) {
+      if (invalid ? true : it === Companion_getInstance().z18_1) {
         // Inline function 'com.varabyte.kobweb.compose.foundation.layout.Row.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_2(dispatchReceiver);
-        $composer_1.z18(value);
+        $composer_1.r1f(value);
         tmp_1 = value;
       } else {
         tmp_1 = it;
       }
       var tmp_2 = tmp_1;
       var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_1.q17();
+      $composer_1.i1e();
       Div(tmp, tmp0, $composer_0, 48, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.b12();
+      $composer_0.t18();
     }
-    var tmp0_safe_receiver = $composer_0.i19();
+    var tmp0_safe_receiver = $composer_0.a1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.f1e(Row$lambda_0(modifier_0, horizontalArrangement_0, verticalAlignment_0, ref_0, content, $changed, $default));
+      tmp0_safe_receiver.w1k(Row$lambda_0(modifier_0, horizontalArrangement_0, verticalAlignment_0, ref_0, content, $changed, $default));
     }
   }
   function RowDefaults() {
     RowDefaults_instance = this;
-    this.l2m_1 = Start_instance;
-    this.m2m_1 = Top_instance_0;
+    this.c3h_1 = Start_instance;
+    this.d3h_1 = Top_instance_0;
   }
   var RowDefaults_instance;
   function RowDefaults_getInstance() {
@@ -689,7 +709,7 @@
   }
   function ComposableLambda$invoke$ref_2($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.j22(p0, p1, p2);
+      return $boundThis.w29(p0, p1, p2);
     };
   }
   function Row$lambda_0($modifier, $horizontalArrangement, $verticalAlignment, $ref, $content, $$changed, $$default) {
@@ -700,46 +720,46 @@
   }
   function Spacer($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.h19(1962209258);
-    if (!($changed === 0) ? true : !$composer_0.k17()) {
+    $composer_0 = $composer_0.z1f(1962209258);
+    if (!($changed === 0) ? true : !$composer_0.c1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1962209258, $changed, -1, 'com.varabyte.kobweb.compose.foundation.layout.Spacer (Spacer.kt:9)');
       }
-      $composer_0.p17(-247832835);
+      $composer_0.h1e(-247832835);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.t18();
+      var it = this_0.l1f();
       var tmp;
-      if (false ? true : it === Companion_getInstance().h12_1) {
+      if (false ? true : it === Companion_getInstance().z18_1) {
         // Inline function 'com.varabyte.kobweb.compose.foundation.layout.Spacer.<anonymous>' call
         var value = Spacer$lambda;
-        this_0.z18(value);
+        this_0.r1f(value);
         tmp = value;
       } else {
         tmp = it;
       }
       var tmp_0 = tmp;
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.q17();
+      $composer_0.i1e();
       Div(tmp0_group, null, $composer_0, 6, 2);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.b12();
+      $composer_0.t18();
     }
-    var tmp1_safe_receiver = $composer_0.i19();
+    var tmp1_safe_receiver = $composer_0.a1g();
     if (tmp1_safe_receiver == null)
       null;
     else {
-      tmp1_safe_receiver.f1e(Spacer$lambda_0($changed));
+      tmp1_safe_receiver.w1k(Spacer$lambda_0($changed));
     }
   }
   function Spacer$lambda($this$Div) {
-    $this$Div.p24(['kobweb-spacer']);
+    $this$Div.c2c(['kobweb-spacer']);
     return Unit_instance;
   }
   function Spacer$lambda_0($$changed) {
@@ -857,75 +877,75 @@
     return tmp;
   }
   function initBox($this) {
-    $this.g28('.kobweb-box', KobwebComposeStyleSheet$initBox$lambda);
-    $this.g28('.kobweb-box > *', KobwebComposeStyleSheet$initBox$lambda_0);
-    $this.g28('.kobweb-box.kobweb-align-top-start', KobwebComposeStyleSheet$initBox$lambda_1);
-    $this.g28('.kobweb-box.kobweb-align-top-center', KobwebComposeStyleSheet$initBox$lambda_2);
-    $this.g28('.kobweb-box.kobweb-align-top-end', KobwebComposeStyleSheet$initBox$lambda_3);
-    $this.g28('.kobweb-box.kobweb-align-center-start', KobwebComposeStyleSheet$initBox$lambda_4);
-    $this.g28('.kobweb-box.kobweb-align-center', KobwebComposeStyleSheet$initBox$lambda_5);
-    $this.g28('.kobweb-box.kobweb-align-center-end', KobwebComposeStyleSheet$initBox$lambda_6);
-    $this.g28('.kobweb-box.kobweb-align-bottom-start', KobwebComposeStyleSheet$initBox$lambda_7);
-    $this.g28('.kobweb-box.kobweb-align-bottom-center', KobwebComposeStyleSheet$initBox$lambda_8);
-    $this.g28('.kobweb-box.kobweb-align-bottom-end', KobwebComposeStyleSheet$initBox$lambda_9);
-    $this.g28('.kobweb-box > .kobweb-align-top-start-self', KobwebComposeStyleSheet$initBox$lambda_10);
-    $this.g28('.kobweb-box > .kobweb-align-top-center-self', KobwebComposeStyleSheet$initBox$lambda_11);
-    $this.g28('.kobweb-box > .kobweb-align-top-end-self', KobwebComposeStyleSheet$initBox$lambda_12);
-    $this.g28('.kobweb-box > .kobweb-align-center-start-self', KobwebComposeStyleSheet$initBox$lambda_13);
-    $this.g28('.kobweb-box > .kobweb-align-center-self', KobwebComposeStyleSheet$initBox$lambda_14);
-    $this.g28('.kobweb-box > .kobweb-align-center-end-self', KobwebComposeStyleSheet$initBox$lambda_15);
-    $this.g28('.kobweb-box > .kobweb-align-bottom-start-self', KobwebComposeStyleSheet$initBox$lambda_16);
-    $this.g28('.kobweb-box > .kobweb-align-bottom-center-self', KobwebComposeStyleSheet$initBox$lambda_17);
-    $this.g28('.kobweb-box > .kobweb-align-bottom-end-self', KobwebComposeStyleSheet$initBox$lambda_18);
+    $this.s2f('.kobweb-box', KobwebComposeStyleSheet$initBox$lambda);
+    $this.s2f('.kobweb-box > *', KobwebComposeStyleSheet$initBox$lambda_0);
+    $this.s2f('.kobweb-box.kobweb-align-top-start', KobwebComposeStyleSheet$initBox$lambda_1);
+    $this.s2f('.kobweb-box.kobweb-align-top-center', KobwebComposeStyleSheet$initBox$lambda_2);
+    $this.s2f('.kobweb-box.kobweb-align-top-end', KobwebComposeStyleSheet$initBox$lambda_3);
+    $this.s2f('.kobweb-box.kobweb-align-center-start', KobwebComposeStyleSheet$initBox$lambda_4);
+    $this.s2f('.kobweb-box.kobweb-align-center', KobwebComposeStyleSheet$initBox$lambda_5);
+    $this.s2f('.kobweb-box.kobweb-align-center-end', KobwebComposeStyleSheet$initBox$lambda_6);
+    $this.s2f('.kobweb-box.kobweb-align-bottom-start', KobwebComposeStyleSheet$initBox$lambda_7);
+    $this.s2f('.kobweb-box.kobweb-align-bottom-center', KobwebComposeStyleSheet$initBox$lambda_8);
+    $this.s2f('.kobweb-box.kobweb-align-bottom-end', KobwebComposeStyleSheet$initBox$lambda_9);
+    $this.s2f('.kobweb-box > .kobweb-align-top-start-self', KobwebComposeStyleSheet$initBox$lambda_10);
+    $this.s2f('.kobweb-box > .kobweb-align-top-center-self', KobwebComposeStyleSheet$initBox$lambda_11);
+    $this.s2f('.kobweb-box > .kobweb-align-top-end-self', KobwebComposeStyleSheet$initBox$lambda_12);
+    $this.s2f('.kobweb-box > .kobweb-align-center-start-self', KobwebComposeStyleSheet$initBox$lambda_13);
+    $this.s2f('.kobweb-box > .kobweb-align-center-self', KobwebComposeStyleSheet$initBox$lambda_14);
+    $this.s2f('.kobweb-box > .kobweb-align-center-end-self', KobwebComposeStyleSheet$initBox$lambda_15);
+    $this.s2f('.kobweb-box > .kobweb-align-bottom-start-self', KobwebComposeStyleSheet$initBox$lambda_16);
+    $this.s2f('.kobweb-box > .kobweb-align-bottom-center-self', KobwebComposeStyleSheet$initBox$lambda_17);
+    $this.s2f('.kobweb-box > .kobweb-align-bottom-end-self', KobwebComposeStyleSheet$initBox$lambda_18);
   }
   function initRow($this) {
-    $this.g28('.kobweb-row', KobwebComposeStyleSheet$initRow$lambda);
-    $this.g28('.kobweb-row.kobweb-arrange-start', KobwebComposeStyleSheet$initRow$lambda_0);
-    $this.g28('.kobweb-row.kobweb-arrange-center', KobwebComposeStyleSheet$initRow$lambda_1);
-    $this.g28('.kobweb-row.kobweb-arrange-end', KobwebComposeStyleSheet$initRow$lambda_2);
-    $this.g28('.kobweb-row.kobweb-arrange-space-evenly', KobwebComposeStyleSheet$initRow$lambda_3);
-    $this.g28('.kobweb-row.kobweb-arrange-space-between', KobwebComposeStyleSheet$initRow$lambda_4);
-    $this.g28('.kobweb-row.kobweb-arrange-space-around', KobwebComposeStyleSheet$initRow$lambda_5);
-    $this.g28('.kobweb-row.kobweb-align-top', KobwebComposeStyleSheet$initRow$lambda_6);
-    $this.g28('.kobweb-row.kobweb-align-center-vert', KobwebComposeStyleSheet$initRow$lambda_7);
-    $this.g28('.kobweb-row.kobweb-align-bottom', KobwebComposeStyleSheet$initRow$lambda_8);
-    $this.g28('.kobweb-row > .kobweb-align-top-self', KobwebComposeStyleSheet$initRow$lambda_9);
-    $this.g28('.kobweb-row > .kobweb-align-center-vert-self', KobwebComposeStyleSheet$initRow$lambda_10);
-    $this.g28('.kobweb-row > .kobweb-align-bottom-self', KobwebComposeStyleSheet$initRow$lambda_11);
+    $this.s2f('.kobweb-row', KobwebComposeStyleSheet$initRow$lambda);
+    $this.s2f('.kobweb-row.kobweb-arrange-start', KobwebComposeStyleSheet$initRow$lambda_0);
+    $this.s2f('.kobweb-row.kobweb-arrange-center', KobwebComposeStyleSheet$initRow$lambda_1);
+    $this.s2f('.kobweb-row.kobweb-arrange-end', KobwebComposeStyleSheet$initRow$lambda_2);
+    $this.s2f('.kobweb-row.kobweb-arrange-space-evenly', KobwebComposeStyleSheet$initRow$lambda_3);
+    $this.s2f('.kobweb-row.kobweb-arrange-space-between', KobwebComposeStyleSheet$initRow$lambda_4);
+    $this.s2f('.kobweb-row.kobweb-arrange-space-around', KobwebComposeStyleSheet$initRow$lambda_5);
+    $this.s2f('.kobweb-row.kobweb-align-top', KobwebComposeStyleSheet$initRow$lambda_6);
+    $this.s2f('.kobweb-row.kobweb-align-center-vert', KobwebComposeStyleSheet$initRow$lambda_7);
+    $this.s2f('.kobweb-row.kobweb-align-bottom', KobwebComposeStyleSheet$initRow$lambda_8);
+    $this.s2f('.kobweb-row > .kobweb-align-top-self', KobwebComposeStyleSheet$initRow$lambda_9);
+    $this.s2f('.kobweb-row > .kobweb-align-center-vert-self', KobwebComposeStyleSheet$initRow$lambda_10);
+    $this.s2f('.kobweb-row > .kobweb-align-bottom-self', KobwebComposeStyleSheet$initRow$lambda_11);
   }
   function initCol($this) {
-    $this.g28('.kobweb-col', KobwebComposeStyleSheet$initCol$lambda);
-    $this.g28('.kobweb-col.kobweb-arrange-top', KobwebComposeStyleSheet$initCol$lambda_0);
-    $this.g28('.kobweb-col.kobweb-arrange-center', KobwebComposeStyleSheet$initCol$lambda_1);
-    $this.g28('.kobweb-col.kobweb-arrange-bottom', KobwebComposeStyleSheet$initCol$lambda_2);
-    $this.g28('.kobweb-col.kobweb-arrange-space-evenly', KobwebComposeStyleSheet$initCol$lambda_3);
-    $this.g28('.kobweb-col.kobweb-arrange-space-between', KobwebComposeStyleSheet$initCol$lambda_4);
-    $this.g28('.kobweb-col.kobweb-arrange-space-around', KobwebComposeStyleSheet$initCol$lambda_5);
-    $this.g28('.kobweb-col.kobweb-align-start', KobwebComposeStyleSheet$initCol$lambda_6);
-    $this.g28('.kobweb-col.kobweb-align-center-horiz', KobwebComposeStyleSheet$initCol$lambda_7);
-    $this.g28('.kobweb-col.kobweb-align-end', KobwebComposeStyleSheet$initCol$lambda_8);
-    $this.g28('.kobweb-col > .kobweb-align-start-self', KobwebComposeStyleSheet$initCol$lambda_9);
-    $this.g28('.kobweb-col > .kobweb-align-center-horiz-self', KobwebComposeStyleSheet$initCol$lambda_10);
-    $this.g28('.kobweb-col > .kobweb-align-end-self', KobwebComposeStyleSheet$initCol$lambda_11);
+    $this.s2f('.kobweb-col', KobwebComposeStyleSheet$initCol$lambda);
+    $this.s2f('.kobweb-col.kobweb-arrange-top', KobwebComposeStyleSheet$initCol$lambda_0);
+    $this.s2f('.kobweb-col.kobweb-arrange-center', KobwebComposeStyleSheet$initCol$lambda_1);
+    $this.s2f('.kobweb-col.kobweb-arrange-bottom', KobwebComposeStyleSheet$initCol$lambda_2);
+    $this.s2f('.kobweb-col.kobweb-arrange-space-evenly', KobwebComposeStyleSheet$initCol$lambda_3);
+    $this.s2f('.kobweb-col.kobweb-arrange-space-between', KobwebComposeStyleSheet$initCol$lambda_4);
+    $this.s2f('.kobweb-col.kobweb-arrange-space-around', KobwebComposeStyleSheet$initCol$lambda_5);
+    $this.s2f('.kobweb-col.kobweb-align-start', KobwebComposeStyleSheet$initCol$lambda_6);
+    $this.s2f('.kobweb-col.kobweb-align-center-horiz', KobwebComposeStyleSheet$initCol$lambda_7);
+    $this.s2f('.kobweb-col.kobweb-align-end', KobwebComposeStyleSheet$initCol$lambda_8);
+    $this.s2f('.kobweb-col > .kobweb-align-start-self', KobwebComposeStyleSheet$initCol$lambda_9);
+    $this.s2f('.kobweb-col > .kobweb-align-center-horiz-self', KobwebComposeStyleSheet$initCol$lambda_10);
+    $this.s2f('.kobweb-col > .kobweb-align-end-self', KobwebComposeStyleSheet$initCol$lambda_11);
   }
   function initSpacer($this) {
-    $this.g28('.kobweb-spacer', KobwebComposeStyleSheet$initSpacer$lambda);
+    $this.s2f('.kobweb-spacer', KobwebComposeStyleSheet$initSpacer$lambda);
   }
   function KobwebComposeStyleSheet$initBox$lambda($this$invoke) {
     grid($this$invoke, KobwebComposeStyleSheet$initBox$lambda$lambda);
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda$lambda($this$grid) {
-    $this$grid.e2e(KobwebComposeStyleSheet$initBox$lambda$lambda$lambda);
-    $this$grid.f2e(KobwebComposeStyleSheet$initBox$lambda$lambda$lambda_0);
+    $this$grid.t2l(KobwebComposeStyleSheet$initBox$lambda$lambda$lambda);
+    $this$grid.u2l(KobwebComposeStyleSheet$initBox$lambda$lambda$lambda_0);
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda$lambda$lambda($this$columns) {
-    $this$columns.n2d(get_px(0), get_fr(1));
+    $this$columns.c2l(get_px(0), get_fr(1));
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda$lambda$lambda_0($this$rows) {
-    $this$rows.n2d(get_px(0), get_fr(1));
+    $this$rows.c2l(get_px(0), get_fr(1));
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_0($this$invoke) {
@@ -938,7 +958,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignItems($this$invoke, 'start');
-    justifyItems($this$invoke, Companion_instance_0.g2c());
+    justifyItems($this$invoke, Companion_instance_0.s2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_2($this$invoke) {
@@ -947,7 +967,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignItems($this$invoke, 'start');
-    justifyItems($this$invoke, Companion_instance_0.f2c());
+    justifyItems($this$invoke, Companion_instance_0.r2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_3($this$invoke) {
@@ -956,7 +976,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignItems($this$invoke, 'start');
-    justifyItems($this$invoke, Companion_instance_0.h2c());
+    justifyItems($this$invoke, Companion_instance_0.t2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_4($this$invoke) {
@@ -965,7 +985,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignItems($this$invoke, 'center');
-    justifyItems($this$invoke, Companion_instance_0.g2c());
+    justifyItems($this$invoke, Companion_instance_0.s2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_5($this$invoke) {
@@ -974,7 +994,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignItems($this$invoke, 'center');
-    justifyItems($this$invoke, Companion_instance_0.f2c());
+    justifyItems($this$invoke, Companion_instance_0.r2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_6($this$invoke) {
@@ -983,7 +1003,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignItems($this$invoke, 'center');
-    justifyItems($this$invoke, Companion_instance_0.h2c());
+    justifyItems($this$invoke, Companion_instance_0.t2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_7($this$invoke) {
@@ -992,7 +1012,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignItems($this$invoke, 'end');
-    justifyItems($this$invoke, Companion_instance_0.g2c());
+    justifyItems($this$invoke, Companion_instance_0.s2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_8($this$invoke) {
@@ -1001,7 +1021,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignItems($this$invoke, 'end');
-    justifyItems($this$invoke, Companion_instance_0.f2c());
+    justifyItems($this$invoke, Companion_instance_0.r2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_9($this$invoke) {
@@ -1010,7 +1030,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignItems($this$invoke, 'end');
-    justifyItems($this$invoke, Companion_instance_0.h2c());
+    justifyItems($this$invoke, Companion_instance_0.t2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_10($this$invoke) {
@@ -1019,7 +1039,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignSelf($this$invoke, 'start');
-    justifySelf($this$invoke, Companion_instance_2.g2c());
+    justifySelf($this$invoke, Companion_instance_2.s2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_11($this$invoke) {
@@ -1028,7 +1048,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignSelf($this$invoke, 'start');
-    justifySelf($this$invoke, Companion_instance_2.f2c());
+    justifySelf($this$invoke, Companion_instance_2.r2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_12($this$invoke) {
@@ -1037,7 +1057,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignSelf($this$invoke, 'start');
-    justifySelf($this$invoke, Companion_instance_2.h2c());
+    justifySelf($this$invoke, Companion_instance_2.t2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_13($this$invoke) {
@@ -1046,7 +1066,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignSelf($this$invoke, 'center');
-    justifySelf($this$invoke, Companion_instance_2.g2c());
+    justifySelf($this$invoke, Companion_instance_2.s2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_14($this$invoke) {
@@ -1055,11 +1075,11 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     alignSelf($this$invoke, 'center');
-    justifySelf($this$invoke, Companion_instance_2.f2c());
+    justifySelf($this$invoke, Companion_instance_2.r2j());
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_15($this$invoke) {
-    justifySelf($this$invoke, Companion_instance_2.h2c());
+    justifySelf($this$invoke, Companion_instance_2.t2j());
     // Inline function 'org.jetbrains.compose.web.css.Companion.Center' call
     // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
     // Inline function 'kotlin.js.unsafeCast' call
@@ -1068,7 +1088,7 @@
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_16($this$invoke) {
-    justifySelf($this$invoke, Companion_instance_2.g2c());
+    justifySelf($this$invoke, Companion_instance_2.s2j());
     // Inline function 'org.jetbrains.compose.web.css.Companion.End' call
     // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
     // Inline function 'kotlin.js.unsafeCast' call
@@ -1077,7 +1097,7 @@
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_17($this$invoke) {
-    justifySelf($this$invoke, Companion_instance_2.f2c());
+    justifySelf($this$invoke, Companion_instance_2.r2j());
     // Inline function 'org.jetbrains.compose.web.css.Companion.End' call
     // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
     // Inline function 'kotlin.js.unsafeCast' call
@@ -1086,7 +1106,7 @@
     return Unit_instance;
   }
   function KobwebComposeStyleSheet$initBox$lambda_18($this$invoke) {
-    justifySelf($this$invoke, Companion_instance_2.h2c());
+    justifySelf($this$invoke, Companion_instance_2.t2j());
     // Inline function 'org.jetbrains.compose.web.css.Companion.End' call
     // Inline function 'org.jetbrains.compose.web.css.AlignSelf' call
     // Inline function 'kotlin.js.unsafeCast' call
@@ -1342,8 +1362,8 @@
     initRow(this);
     initSpacer(this);
   }
-  protoOf(KobwebComposeStyleSheet).e28 = function (selector, cssRule) {
-    return this.d28(selector, cssRule);
+  protoOf(KobwebComposeStyleSheet).q2f = function (selector, cssRule) {
+    return this.p2f(selector, cssRule);
   };
   var KobwebComposeStyleSheet_instance;
   function KobwebComposeStyleSheet_getInstance() {
@@ -1451,10 +1471,10 @@
   }
   function Companion() {
   }
-  protoOf(Companion).s2m = function (initial, operation) {
+  protoOf(Companion).j3h = function (initial, operation) {
     return initial;
   };
-  protoOf(Companion).t2m = function (other) {
+  protoOf(Companion).k3h = function (other) {
     return other;
   };
   var Companion_instance_6;
@@ -1463,31 +1483,6 @@
   }
   function Modifier() {
   }
-  function ChainedModifier(current, next) {
-    this.u2m_1 = current;
-    this.v2m_1 = next;
-  }
-  protoOf(ChainedModifier).s2m = function (initial, operation) {
-    return this.v2m_1.s2m(this.u2m_1.s2m(initial, operation), operation);
-  };
-  protoOf(ChainedModifier).equals = function (other) {
-    var tmp;
-    var tmp_0;
-    if (other instanceof ChainedModifier) {
-      tmp_0 = equals(this.u2m_1, other.u2m_1);
-    } else {
-      tmp_0 = false;
-    }
-    if (tmp_0) {
-      tmp = equals(this.v2m_1, other.v2m_1);
-    } else {
-      tmp = false;
-    }
-    return tmp;
-  };
-  protoOf(ChainedModifier).hashCode = function () {
-    return hashCode(this.u2m_1) + imul(31, hashCode(this.v2m_1)) | 0;
-  };
   function thenIf(_this__u8e3s4, condition, other) {
     // Inline function 'com.varabyte.kobweb.compose.ui.thenIf' call
     var tmp;
@@ -1497,8 +1492,33 @@
     } else {
       tmp = Companion_instance_6;
     }
-    return _this__u8e3s4.t2m(tmp);
+    return _this__u8e3s4.k3h(tmp);
   }
+  function ChainedModifier(current, next) {
+    this.l3h_1 = current;
+    this.m3h_1 = next;
+  }
+  protoOf(ChainedModifier).j3h = function (initial, operation) {
+    return this.m3h_1.j3h(this.l3h_1.j3h(initial, operation), operation);
+  };
+  protoOf(ChainedModifier).equals = function (other) {
+    var tmp;
+    var tmp_0;
+    if (other instanceof ChainedModifier) {
+      tmp_0 = equals(this.l3h_1, other.l3h_1);
+    } else {
+      tmp_0 = false;
+    }
+    if (tmp_0) {
+      tmp = equals(this.m3h_1, other.m3h_1);
+    } else {
+      tmp = false;
+    }
+    return tmp;
+  };
+  protoOf(ChainedModifier).hashCode = function () {
+    return hashCode(this.l3h_1) + imul(31, hashCode(this.m3h_1)) | 0;
+  };
   function toAttrs(_this__u8e3s4, finalHandler) {
     finalHandler = finalHandler === VOID ? null : finalHandler;
     var firstModifier = _this__u8e3s4;
@@ -1510,10 +1530,10 @@
     return toStyles$lambda(firstModifier, finalHandler);
   }
   function styleModifier(_this__u8e3s4, styles) {
-    return _this__u8e3s4.t2m(new StyleModifier(styles));
+    return _this__u8e3s4.k3h(new StyleModifier(styles));
   }
   function AttrsModifier(attrs) {
-    this.w2m_1 = attrs;
+    this.n3h_1 = attrs;
   }
   protoOf(AttrsModifier).equals = function (other) {
     if (this === other)
@@ -1521,18 +1541,18 @@
     if (!(other instanceof AttrsModifier))
       return false;
     var attrsResolved = ComparableAttrsScope_init_$Create$();
-    this.w2m_1(attrsResolved);
+    this.n3h_1(attrsResolved);
     var otherAttrsResolved = ComparableAttrsScope_init_$Create$();
-    other.w2m_1(otherAttrsResolved);
+    other.n3h_1(otherAttrsResolved);
     return attrsResolved.equals(otherAttrsResolved);
   };
   protoOf(AttrsModifier).hashCode = function () {
     var attrsResolved = ComparableAttrsScope_init_$Create$();
-    this.w2m_1(attrsResolved);
+    this.n3h_1(attrsResolved);
     return attrsResolved.hashCode();
   };
   function StyleModifier(styles) {
-    this.x2m_1 = styles;
+    this.o3h_1 = styles;
   }
   protoOf(StyleModifier).equals = function (other) {
     if (this === other)
@@ -1540,22 +1560,22 @@
     if (!(other instanceof StyleModifier))
       return false;
     var stylesResolved = new ComparableStyleScope();
-    this.x2m_1(stylesResolved);
+    this.o3h_1(stylesResolved);
     var otherStylesResolved = new ComparableStyleScope();
-    other.x2m_1(otherStylesResolved);
+    other.o3h_1(otherStylesResolved);
     return stylesResolved.equals(otherStylesResolved);
   };
   protoOf(StyleModifier).hashCode = function () {
     var stylesResolved = new ComparableStyleScope();
-    this.x2m_1(stylesResolved);
+    this.o3h_1(stylesResolved);
     return stylesResolved.hashCode();
   };
   function attrsModifier(_this__u8e3s4, attrs) {
-    return _this__u8e3s4.t2m(new AttrsModifier(attrs));
+    return _this__u8e3s4.k3h(new AttrsModifier(attrs));
   }
   function toAttrs$lambda$lambda$lambda($element) {
     return function ($this$style) {
-      $element.x2m_1($this$style);
+      $element.o3h_1($this$style);
       return Unit_instance;
     };
   }
@@ -1563,10 +1583,10 @@
     return function (_anonymous_parameter_0__qggqh8, element) {
       var tmp;
       if (element instanceof AttrsModifier) {
-        tmp = element.w2m_1($this_null);
+        tmp = element.n3h_1($this_null);
       } else {
         if (element instanceof StyleModifier) {
-          $this_null.n24(toAttrs$lambda$lambda$lambda(element));
+          $this_null.a2c(toAttrs$lambda$lambda$lambda(element));
           tmp = Unit_instance;
         }
       }
@@ -1575,7 +1595,7 @@
   }
   function toAttrs$lambda($firstModifier, $finalHandler) {
     return function ($this$null) {
-      $firstModifier.s2m(Unit_instance, toAttrs$lambda$lambda($this$null));
+      $firstModifier.j3h(Unit_instance, toAttrs$lambda$lambda($this$null));
       var tmp0_safe_receiver = $finalHandler;
       if (tmp0_safe_receiver == null)
         null;
@@ -1588,14 +1608,14 @@
     return function (_anonymous_parameter_0__qggqh8, element) {
       var tmp;
       if (element instanceof StyleModifier) {
-        tmp = element.x2m_1($this_null);
+        tmp = element.o3h_1($this_null);
       }
       return Unit_instance;
     };
   }
   function toStyles$lambda($firstModifier, $finalHandler) {
     return function ($this$null) {
-      $firstModifier.s2m(Unit_instance, toStyles$lambda$lambda($this$null));
+      $firstModifier.j3h(Unit_instance, toStyles$lambda$lambda($this$null));
       var tmp0_safe_receiver = $finalHandler;
       if (tmp0_safe_receiver == null)
         null;
@@ -1605,36 +1625,36 @@
     };
   }
   function Rgb(value) {
-    this.y2m_1 = value;
+    this.p3h_1 = value;
   }
-  protoOf(Rgb).z2m = function () {
-    return this.y2m_1 >> 16 & 255;
+  protoOf(Rgb).q3h = function () {
+    return this.p3h_1 >> 16 & 255;
   };
-  protoOf(Rgb).a2n = function () {
-    return this.y2m_1 >> 8 & 255;
+  protoOf(Rgb).r3h = function () {
+    return this.p3h_1 >> 8 & 255;
   };
-  protoOf(Rgb).b2n = function () {
-    return this.y2m_1 >> 0 & 255;
+  protoOf(Rgb).s3h = function () {
+    return this.p3h_1 >> 0 & 255;
   };
-  protoOf(Rgb).c2n = function () {
-    return this.y2m_1 >> 24 & 255;
+  protoOf(Rgb).t3h = function () {
+    return this.p3h_1 >> 24 & 255;
   };
-  protoOf(Rgb).d2n = function () {
-    return toColorFloat(this.z2m());
+  protoOf(Rgb).u3h = function () {
+    return toColorFloat(this.q3h());
   };
-  protoOf(Rgb).e2n = function () {
-    return toColorFloat(this.a2n());
+  protoOf(Rgb).v3h = function () {
+    return toColorFloat(this.r3h());
   };
-  protoOf(Rgb).f2n = function () {
-    return toColorFloat(this.b2n());
+  protoOf(Rgb).w3h = function () {
+    return toColorFloat(this.s3h());
   };
-  protoOf(Rgb).g2n = function () {
-    return toColorFloat(this.c2n());
+  protoOf(Rgb).x3h = function () {
+    return toColorFloat(this.t3h());
   };
-  protoOf(Rgb).h2n = function () {
-    return Companion_instance_7.j2n(255 - this.z2m() | 0, 255 - this.a2n() | 0, 255 - this.b2n() | 0, this.c2n());
+  protoOf(Rgb).y3h = function () {
+    return Companion_instance_7.a3i(255 - this.q3h() | 0, 255 - this.r3h() | 0, 255 - this.s3h() | 0, this.t3h());
   };
-  protoOf(Rgb).k2n = function (byPercent) {
+  protoOf(Rgb).b3i = function (byPercent) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
     if (!(0.0 <= byPercent ? byPercent <= 1.0 : false)) {
@@ -1645,23 +1665,23 @@
     if (byPercent === 0.0)
       return this;
     var darkeningMultiplier = 1.0 - byPercent;
-    return Companion_instance_7.l2n(this.d2n() * darkeningMultiplier, this.e2n() * darkeningMultiplier, this.f2n() * darkeningMultiplier, this.g2n());
+    return Companion_instance_7.c3i(this.u3h() * darkeningMultiplier, this.v3h() * darkeningMultiplier, this.w3h() * darkeningMultiplier, this.x3h());
   };
-  protoOf(Rgb).m2n = function (red, green, blue, alpha) {
-    return Companion_instance_7.l2n(red, green, blue, alpha);
+  protoOf(Rgb).d3i = function (red, green, blue, alpha) {
+    return Companion_instance_7.c3i(red, green, blue, alpha);
   };
-  protoOf(Rgb).n2n = function (red, green, blue, alpha, $super) {
-    red = red === VOID ? this.d2n() : red;
-    green = green === VOID ? this.e2n() : green;
-    blue = blue === VOID ? this.f2n() : blue;
-    alpha = alpha === VOID ? this.g2n() : alpha;
-    return $super === VOID ? this.m2n(red, green, blue, alpha) : $super.m2n.call(this, red, green, blue, alpha);
+  protoOf(Rgb).e3i = function (red, green, blue, alpha, $super) {
+    red = red === VOID ? this.u3h() : red;
+    green = green === VOID ? this.v3h() : green;
+    blue = blue === VOID ? this.w3h() : blue;
+    alpha = alpha === VOID ? this.x3h() : alpha;
+    return $super === VOID ? this.d3i(red, green, blue, alpha) : $super.d3i.call(this, red, green, blue, alpha);
   };
-  protoOf(Rgb).o2n = function () {
+  protoOf(Rgb).f3i = function () {
     return this;
   };
   protoOf(Rgb).toString = function () {
-    return this.c2n() === 255 ? 'rgb(' + this.z2m() + ', ' + this.a2n() + ', ' + this.b2n() + ')' : 'rgba(' + this.z2m() + ', ' + this.a2n() + ', ' + this.b2n() + ', ' + this.g2n() + ')';
+    return this.t3h() === 255 ? 'rgb(' + this.q3h() + ', ' + this.r3h() + ', ' + this.s3h() + ')' : 'rgba(' + this.q3h() + ', ' + this.r3h() + ', ' + this.s3h() + ', ' + this.x3h() + ')';
   };
   protoOf(Rgb).equals = function (other) {
     if (this === other)
@@ -1671,48 +1691,48 @@
     var tmp_1;
     var tmp_2;
     if (other instanceof Rgb) {
-      tmp_2 = this.z2m() === other.z2m();
+      tmp_2 = this.q3h() === other.q3h();
     } else {
       tmp_2 = false;
     }
     if (tmp_2) {
-      tmp_1 = this.a2n() === other.a2n();
+      tmp_1 = this.r3h() === other.r3h();
     } else {
       tmp_1 = false;
     }
     if (tmp_1) {
-      tmp_0 = this.b2n() === other.b2n();
+      tmp_0 = this.s3h() === other.s3h();
     } else {
       tmp_0 = false;
     }
     if (tmp_0) {
-      tmp = this.c2n() === other.c2n();
+      tmp = this.t3h() === other.t3h();
     } else {
       tmp = false;
     }
     return tmp;
   };
   protoOf(Rgb).hashCode = function () {
-    var result = this.z2m();
-    result = imul(31, result) + this.a2n() | 0;
-    result = imul(31, result) + this.b2n() | 0;
-    result = imul(31, result) + this.c2n() | 0;
+    var result = this.q3h();
+    result = imul(31, result) + this.r3h() | 0;
+    result = imul(31, result) + this.s3h() | 0;
+    result = imul(31, result) + this.t3h() | 0;
     return result;
   };
   function Companion_0() {
-    this.i2n_1 = 0.3;
+    this.z3h_1 = 0.3;
   }
-  protoOf(Companion_0).p2n = function (value) {
+  protoOf(Companion_0).g3i = function (value) {
     return new Rgb(-16777216 | value);
   };
-  protoOf(Companion_0).q2n = function (r, g, b) {
-    return this.j2n(r, g, b, 255);
+  protoOf(Companion_0).h3i = function (r, g, b) {
+    return this.a3i(r, g, b, 255);
   };
-  protoOf(Companion_0).j2n = function (r, g, b, a) {
+  protoOf(Companion_0).a3i = function (r, g, b, a) {
     return new Rgb((r & 255) << 16 | (g & 255) << 8 | (b & 255) << 0 | (a & 255) << 24);
   };
-  protoOf(Companion_0).l2n = function (r, g, b, a) {
-    return this.j2n(toColorInt(r), toColorInt(g), toColorInt(b), toColorInt(a));
+  protoOf(Companion_0).c3i = function (r, g, b, a) {
+    return this.a3i(toColorInt(r), toColorInt(g), toColorInt(b), toColorInt(a));
   };
   var Companion_instance_7;
   function Companion_getInstance_1() {
@@ -1720,47 +1740,47 @@
   }
   function Colors() {
   }
-  protoOf(Colors).r2n = function () {
-    return Companion_instance_7.j2n(0, 0, 0, 0);
+  protoOf(Colors).i3i = function () {
+    return Companion_instance_7.a3i(0, 0, 0, 0);
   };
-  protoOf(Colors).s2n = function () {
-    return Companion_instance_7.q2n(0, 0, 0);
+  protoOf(Colors).j3i = function () {
+    return Companion_instance_7.h3i(0, 0, 0);
   };
-  protoOf(Colors).t2n = function () {
-    return Companion_instance_7.q2n(0, 0, 255);
+  protoOf(Colors).k3i = function () {
+    return Companion_instance_7.h3i(0, 0, 255);
   };
-  protoOf(Colors).u2n = function () {
-    return Companion_instance_7.q2n(100, 149, 237);
+  protoOf(Colors).l3i = function () {
+    return Companion_instance_7.h3i(100, 149, 237);
   };
-  protoOf(Colors).v2n = function () {
-    return Companion_instance_7.q2n(0, 255, 255);
+  protoOf(Colors).m3i = function () {
+    return Companion_instance_7.h3i(0, 255, 255);
   };
-  protoOf(Colors).w2n = function () {
-    return Companion_instance_7.q2n(169, 169, 169);
+  protoOf(Colors).n3i = function () {
+    return Companion_instance_7.h3i(169, 169, 169);
   };
-  protoOf(Colors).x2n = function () {
-    return Companion_instance_7.q2n(47, 79, 79);
+  protoOf(Colors).o3i = function () {
+    return Companion_instance_7.h3i(47, 79, 79);
   };
-  protoOf(Colors).y2n = function () {
-    return Companion_instance_7.q2n(30, 144, 255);
+  protoOf(Colors).p3i = function () {
+    return Companion_instance_7.h3i(30, 144, 255);
   };
-  protoOf(Colors).z2n = function () {
-    return Companion_instance_7.q2n(211, 211, 211);
+  protoOf(Colors).q3i = function () {
+    return Companion_instance_7.h3i(211, 211, 211);
   };
-  protoOf(Colors).a2o = function () {
-    return Companion_instance_7.q2n(135, 206, 250);
+  protoOf(Colors).r3i = function () {
+    return Companion_instance_7.h3i(135, 206, 250);
   };
-  protoOf(Colors).b2o = function () {
-    return Companion_instance_7.q2n(128, 0, 128);
+  protoOf(Colors).s3i = function () {
+    return Companion_instance_7.h3i(128, 0, 128);
   };
-  protoOf(Colors).c2o = function () {
-    return Companion_instance_7.q2n(238, 130, 238);
+  protoOf(Colors).t3i = function () {
+    return Companion_instance_7.h3i(238, 130, 238);
   };
-  protoOf(Colors).d2o = function () {
-    return Companion_instance_7.q2n(255, 255, 255);
+  protoOf(Colors).u3i = function () {
+    return Companion_instance_7.h3i(255, 255, 255);
   };
-  protoOf(Colors).e2o = function () {
-    return Companion_instance_7.q2n(245, 245, 245);
+  protoOf(Colors).v3i = function () {
+    return Companion_instance_7.h3i(245, 245, 245);
   };
   var Colors_instance;
   function Colors_getInstance() {
@@ -1774,7 +1794,7 @@
   }
   function lightened(_this__u8e3s4, byPercent) {
     byPercent = byPercent === VOID ? 0.3 : byPercent;
-    return _this__u8e3s4.h2n().k2n(byPercent).h2n();
+    return _this__u8e3s4.y3h().b3i(byPercent).y3h();
   }
   function get_isBright(_this__u8e3s4) {
     return get_luminance(_this__u8e3s4) > 0.5;
@@ -1783,8 +1803,8 @@
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'com.varabyte.kobweb.compose.ui.graphics.<get-luminance>.<anonymous>' call
-    var rgb = _this__u8e3s4.o2n();
-    return rgb.d2n() * 0.299 + rgb.e2n() * 0.587 + rgb.f2n() * 0.114;
+    var rgb = _this__u8e3s4.f3i();
+    return rgb.u3h() * 0.299 + rgb.v3h() * 0.587 + rgb.w3h() * 0.114;
   }
   function ariaHidden_0(_this__u8e3s4, value) {
     value = value === VOID ? true : value;
@@ -1814,7 +1834,7 @@
   }
   function onAnimationEnd$lambda($listener) {
     return function ($this$attrsModifier) {
-      $this$attrsModifier.u24($listener);
+      $this$attrsModifier.h2c($listener);
       return Unit_instance;
     };
   }
@@ -1843,18 +1863,18 @@
     return styleModifier(_this__u8e3s4, border$lambda(scope));
   }
   function BorderScope(styleScope) {
-    this.f2o_1 = styleScope;
+    this.w3i_1 = styleScope;
   }
-  protoOf(BorderScope).g2o = function (color) {
-    return borderColor(this.f2o_1, color);
+  protoOf(BorderScope).x3i = function (color) {
+    return borderColor(this.w3i_1, color);
   };
-  protoOf(BorderScope).h2o = function (lineStyle) {
-    return borderStyle(this.f2o_1, lineStyle);
+  protoOf(BorderScope).y3i = function (lineStyle) {
+    return borderStyle(this.w3i_1, lineStyle);
   };
-  protoOf(BorderScope).i2o = function (width) {
-    return borderWidth(this.f2o_1, width);
+  protoOf(BorderScope).z3i = function (width) {
+    return borderWidth(this.w3i_1, width);
   };
-  function borderRadius_1(_this__u8e3s4, r) {
+  function borderRadius_2(_this__u8e3s4, r) {
     return styleModifier(_this__u8e3s4, borderRadius$lambda(r));
   }
   function border_1(_this__u8e3s4, width, style, color) {
@@ -1875,11 +1895,18 @@
     color = color === VOID ? null : color;
     return styleModifier(_this__u8e3s4, borderLeft$lambda(width, style, color));
   }
-  function borderRadius_2(_this__u8e3s4, topLeft, topRightAndBottomLeft, bottomRight) {
+  function borderRadius_3(_this__u8e3s4, topLeft, topRightAndBottomLeft, bottomRight) {
     topLeft = topLeft === VOID ? get_px(0) : topLeft;
     topRightAndBottomLeft = topRightAndBottomLeft === VOID ? get_px(0) : topRightAndBottomLeft;
     bottomRight = bottomRight === VOID ? get_px(0) : bottomRight;
     return styleModifier(_this__u8e3s4, borderRadius$lambda_0(topLeft, topRightAndBottomLeft, bottomRight));
+  }
+  function borderRadius_4(_this__u8e3s4, topLeft, topRight, bottomRight, bottomLeft) {
+    topLeft = topLeft === VOID ? get_px(0) : topLeft;
+    topRight = topRight === VOID ? get_px(0) : topRight;
+    bottomRight = bottomRight === VOID ? get_px(0) : bottomRight;
+    bottomLeft = bottomLeft === VOID ? get_px(0) : bottomLeft;
+    return styleModifier(_this__u8e3s4, borderRadius$lambda_1(topLeft, topRight, bottomRight, bottomLeft));
   }
   function borderBottom$lambda($width, $style, $color) {
     return function ($this$styleModifier) {
@@ -1926,6 +1953,12 @@
   function borderRadius$lambda_0($topLeft, $topRightAndBottomLeft, $bottomRight) {
     return function ($this$styleModifier) {
       borderRadius_0($this$styleModifier, $topLeft, $topRightAndBottomLeft, $bottomRight);
+      return Unit_instance;
+    };
+  }
+  function borderRadius$lambda_1($topLeft, $topRight, $bottomRight, $bottomLeft) {
+    return function ($this$styleModifier) {
+      borderRadius_1($this$styleModifier, $topLeft, $topRight, $bottomRight, $bottomLeft);
       return Unit_instance;
     };
   }
@@ -1988,7 +2021,7 @@
   }
   function classNames$lambda($classes) {
     return function ($this$attrsModifier) {
-      $this$attrsModifier.p24($classes.slice());
+      $this$attrsModifier.c2c($classes.slice());
       return Unit_instance;
     };
   }
@@ -2094,7 +2127,7 @@
   }
   function tabIndex$lambda($value) {
     return function ($this$attrsModifier) {
-      $this$attrsModifier.r24($value);
+      $this$attrsModifier.e2c($value);
       return Unit_instance;
     };
   }
@@ -2112,7 +2145,7 @@
   }
   function onClick$lambda($listener) {
     return function ($this$attrsModifier) {
-      $this$attrsModifier.t24($listener);
+      $this$attrsModifier.g2c($listener);
       return Unit_instance;
     };
   }
@@ -2129,13 +2162,13 @@
     return styleModifier(_this__u8e3s4, overflow$lambda(scope));
   }
   function OverflowScope(styleScope) {
-    this.j2o_1 = styleScope;
+    this.a3j_1 = styleScope;
   }
-  protoOf(OverflowScope).k2o = function (overflowX_0) {
-    return overflowX(this.j2o_1, overflowX_0);
+  protoOf(OverflowScope).b3j = function (overflowX_0) {
+    return overflowX(this.a3j_1, overflowX_0);
   };
-  protoOf(OverflowScope).l2o = function (overflowY_0) {
-    return overflowY(this.j2o_1, overflowY_0);
+  protoOf(OverflowScope).c3j = function (overflowY_0) {
+    return overflowY(this.a3j_1, overflowY_0);
   };
   function verticalAlign_0(_this__u8e3s4, verticalAlign) {
     return styleModifier(_this__u8e3s4, verticalAlign$lambda(verticalAlign));
@@ -2187,15 +2220,16 @@
     left = left === VOID ? get_px(0) : left;
     return styleModifier(_this__u8e3s4, padding$lambda_2(top, right, bottom, left));
   }
-  function margin_4(_this__u8e3s4, scope) {
-    return styleModifier(_this__u8e3s4, margin$lambda_3(scope));
+  function marginBlock_0(_this__u8e3s4, start, end) {
+    start = start === VOID ? get_px(0) : start;
+    end = end === VOID ? get_px(0) : end;
+    return styleModifier(_this__u8e3s4, marginBlock$lambda(start, end));
   }
-  function MarginScope(styleScope) {
-    this.m2o_1 = styleScope;
+  function marginInline_0(_this__u8e3s4, start, end) {
+    start = start === VOID ? get_px(0) : start;
+    end = end === VOID ? get_px(0) : end;
+    return styleModifier(_this__u8e3s4, marginInline$lambda(start, end));
   }
-  protoOf(MarginScope).n2o = function (value) {
-    return marginTop(this.m2o_1, value);
-  };
   function margin$lambda($top, $leftRight, $bottom) {
     return function ($this$styleModifier) {
       margin($this$styleModifier, [$top, $leftRight, $bottom]);
@@ -2280,9 +2314,15 @@
       return Unit_instance;
     };
   }
-  function margin$lambda_3($scope) {
+  function marginBlock$lambda($start, $end) {
     return function ($this$styleModifier) {
-      $scope(new MarginScope($this$styleModifier));
+      marginBlock($this$styleModifier, [$start, $end]);
+      return Unit_instance;
+    };
+  }
+  function marginInline$lambda($start, $end) {
+    return function ($this$styleModifier) {
+      marginInline($this$styleModifier, [$start, $end]);
       return Unit_instance;
     };
   }
@@ -2528,10 +2568,19 @@
       return Unit_instance;
     };
   }
-  function setVariable_0(_this__u8e3s4, variable, value) {
+  function setVariable_1(_this__u8e3s4, variable, value) {
     var tmp;
     if (!(value == null)) {
       tmp = styleModifier(_this__u8e3s4, setVariable$lambda(variable, value));
+    } else {
+      tmp = _this__u8e3s4;
+    }
+    return tmp;
+  }
+  function setVariable_2(_this__u8e3s4, variable, value) {
+    var tmp;
+    if (!(value == null)) {
+      tmp = styleModifier(_this__u8e3s4, setVariable$lambda_0(variable, value));
     } else {
       tmp = _this__u8e3s4;
     }
@@ -2543,13 +2592,21 @@
       return Unit_instance;
     };
   }
+  function setVariable$lambda_0($variable, $value) {
+    return function ($this$styleModifier) {
+      setVariable_0($this$styleModifier, $variable, $value);
+      return Unit_instance;
+    };
+  }
   //region block: post-declaration
-  protoOf(BoxScopeInstance).g2m = align;
-  protoOf(ChainedModifier).t2m = then;
-  protoOf(AttrsModifier).s2m = fold;
-  protoOf(AttrsModifier).t2m = then;
-  protoOf(StyleModifier).s2m = fold;
-  protoOf(StyleModifier).t2m = then;
+  protoOf(BoxScopeInstance).v3g = align;
+  protoOf(ColumnScopeInstance).y3g = align_0;
+  protoOf(RowScopeInstance).b3h = weight;
+  protoOf(ChainedModifier).k3h = then;
+  protoOf(AttrsModifier).j3h = fold;
+  protoOf(AttrsModifier).k3h = then;
+  protoOf(StyleModifier).j3h = fold;
+  protoOf(StyleModifier).k3h = then;
   //endregion
   //region block: init
   End_instance = new End();
@@ -2600,88 +2657,91 @@
   _.$_$.l = backgroundColor_0;
   _.$_$.m = borderBottom_0;
   _.$_$.n = borderLeft_0;
-  _.$_$.o = borderRadius_2;
-  _.$_$.p = borderRadius_1;
-  _.$_$.q = borderTop_0;
-  _.$_$.r = border_1;
-  _.$_$.s = border_0;
-  _.$_$.t = bottom_0;
-  _.$_$.u = boxShadow_0;
-  _.$_$.v = boxSizing_0;
-  _.$_$.w = classNames;
-  _.$_$.x = color_0;
-  _.$_$.y = cursor_0;
-  _.$_$.z = display_0;
-  _.$_$.a1 = fillMaxHeight;
-  _.$_$.b1 = fillMaxSize;
-  _.$_$.c1 = fillMaxWidth;
-  _.$_$.d1 = flexGrow_0;
-  _.$_$.e1 = fontFamily_0;
-  _.$_$.f1 = fontSize_0;
-  _.$_$.g1 = fontWeight_1;
-  _.$_$.h1 = fontWeight_2;
-  _.$_$.i1 = gap_0;
-  _.$_$.j1 = gridRow_0;
-  _.$_$.k1 = gridTemplateColumns_0;
-  _.$_$.l1 = gridTemplateRows_0;
-  _.$_$.m1 = height_0;
-  _.$_$.n1 = left_0;
-  _.$_$.o1 = lineHeight_0;
-  _.$_$.p1 = listStyle_0;
-  _.$_$.q1 = margin_2;
-  _.$_$.r1 = margin_1;
-  _.$_$.s1 = margin_4;
-  _.$_$.t1 = margin_3;
-  _.$_$.u1 = margin_0;
-  _.$_$.v1 = maxWidth_0;
-  _.$_$.w1 = minHeight_0;
-  _.$_$.x1 = minWidth_0;
-  _.$_$.y1 = objectFit_0;
-  _.$_$.z1 = onAnimationEnd;
-  _.$_$.a2 = onClick;
-  _.$_$.b2 = opacity_0;
-  _.$_$.c2 = outline_0;
-  _.$_$.d2 = overflowWrap_0;
-  _.$_$.e2 = overflow_0;
-  _.$_$.f2 = overflow_1;
-  _.$_$.g2 = paddingInline_0;
-  _.$_$.h2 = padding_3;
-  _.$_$.i2 = padding_0;
-  _.$_$.j2 = padding_2;
-  _.$_$.k2 = padding_1;
-  _.$_$.l2 = position_0;
-  _.$_$.m2 = right_0;
-  _.$_$.n2 = scrollBehavior_0;
-  _.$_$.o2 = setVariable_0;
-  _.$_$.p2 = size;
-  _.$_$.q2 = tabIndex;
-  _.$_$.r2 = textAlign_0;
-  _.$_$.s2 = textDecorationLine_0;
-  _.$_$.t2 = top_0;
-  _.$_$.u2 = transition_0;
-  _.$_$.v2 = transition_1;
-  _.$_$.w2 = translateX_0;
-  _.$_$.x2 = userSelect_0;
-  _.$_$.y2 = verticalAlign_0;
-  _.$_$.z2 = whiteSpace_0;
-  _.$_$.a3 = width_0;
-  _.$_$.b3 = styleModifier;
-  _.$_$.c3 = thenIf;
-  _.$_$.d3 = toAttrs;
-  _.$_$.e3 = toStyles;
-  _.$_$.f3 = Center_instance;
-  _.$_$.g3 = KobwebComposeStyleSheet_getInstance;
-  _.$_$.h3 = Companion_instance_7;
-  _.$_$.i3 = Colors_instance;
-  _.$_$.j3 = CenterEnd_instance;
-  _.$_$.k3 = CenterHorizontally_instance;
-  _.$_$.l3 = CenterVertically_instance;
-  _.$_$.m3 = Center_instance_0;
-  _.$_$.n3 = End_instance_0;
-  _.$_$.o3 = Start_instance_0;
-  _.$_$.p3 = TopCenter_instance;
-  _.$_$.q3 = TopStart_instance;
-  _.$_$.r3 = Companion_instance_6;
+  _.$_$.o = borderRadius_3;
+  _.$_$.p = borderRadius_2;
+  _.$_$.q = borderRadius_4;
+  _.$_$.r = borderTop_0;
+  _.$_$.s = border_1;
+  _.$_$.t = border_0;
+  _.$_$.u = bottom_0;
+  _.$_$.v = boxShadow_0;
+  _.$_$.w = boxSizing_0;
+  _.$_$.x = classNames;
+  _.$_$.y = color_0;
+  _.$_$.z = cursor_0;
+  _.$_$.a1 = display_0;
+  _.$_$.b1 = fillMaxHeight;
+  _.$_$.c1 = fillMaxSize;
+  _.$_$.d1 = fillMaxWidth;
+  _.$_$.e1 = flexGrow_0;
+  _.$_$.f1 = fontFamily_0;
+  _.$_$.g1 = fontSize_0;
+  _.$_$.h1 = fontWeight_1;
+  _.$_$.i1 = fontWeight_2;
+  _.$_$.j1 = gap_0;
+  _.$_$.k1 = gridRow_0;
+  _.$_$.l1 = gridTemplateColumns_0;
+  _.$_$.m1 = gridTemplateRows_0;
+  _.$_$.n1 = height_0;
+  _.$_$.o1 = left_0;
+  _.$_$.p1 = lineHeight_0;
+  _.$_$.q1 = listStyle_0;
+  _.$_$.r1 = marginBlock_0;
+  _.$_$.s1 = marginInline_0;
+  _.$_$.t1 = margin_2;
+  _.$_$.u1 = margin_1;
+  _.$_$.v1 = margin_3;
+  _.$_$.w1 = margin_0;
+  _.$_$.x1 = maxWidth_0;
+  _.$_$.y1 = minHeight_0;
+  _.$_$.z1 = minWidth_0;
+  _.$_$.a2 = objectFit_0;
+  _.$_$.b2 = onAnimationEnd;
+  _.$_$.c2 = onClick;
+  _.$_$.d2 = opacity_0;
+  _.$_$.e2 = outline_0;
+  _.$_$.f2 = overflowWrap_0;
+  _.$_$.g2 = overflow_0;
+  _.$_$.h2 = overflow_1;
+  _.$_$.i2 = paddingInline_0;
+  _.$_$.j2 = padding_3;
+  _.$_$.k2 = padding_0;
+  _.$_$.l2 = padding_2;
+  _.$_$.m2 = padding_1;
+  _.$_$.n2 = position_0;
+  _.$_$.o2 = right_0;
+  _.$_$.p2 = scrollBehavior_0;
+  _.$_$.q2 = setVariable_2;
+  _.$_$.r2 = setVariable_1;
+  _.$_$.s2 = size;
+  _.$_$.t2 = tabIndex;
+  _.$_$.u2 = textAlign_0;
+  _.$_$.v2 = textDecorationLine_0;
+  _.$_$.w2 = top_0;
+  _.$_$.x2 = transition_0;
+  _.$_$.y2 = transition_1;
+  _.$_$.z2 = translateX_0;
+  _.$_$.a3 = userSelect_0;
+  _.$_$.b3 = verticalAlign_0;
+  _.$_$.c3 = whiteSpace_0;
+  _.$_$.d3 = width_0;
+  _.$_$.e3 = styleModifier;
+  _.$_$.f3 = thenIf;
+  _.$_$.g3 = toAttrs;
+  _.$_$.h3 = toStyles;
+  _.$_$.i3 = Center_instance;
+  _.$_$.j3 = KobwebComposeStyleSheet_getInstance;
+  _.$_$.k3 = Companion_instance_7;
+  _.$_$.l3 = Colors_instance;
+  _.$_$.m3 = CenterEnd_instance;
+  _.$_$.n3 = CenterHorizontally_instance;
+  _.$_$.o3 = CenterVertically_instance;
+  _.$_$.p3 = Center_instance_0;
+  _.$_$.q3 = End_instance_0;
+  _.$_$.r3 = Start_instance_0;
+  _.$_$.s3 = TopCenter_instance;
+  _.$_$.t3 = TopStart_instance;
+  _.$_$.u3 = Companion_instance_6;
   //endregion
   return _;
 }));

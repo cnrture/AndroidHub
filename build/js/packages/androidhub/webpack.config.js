@@ -1,5 +1,5 @@
 let config = {
-  mode: 'development',
+  mode: 'production',
   resolve: {
     modules: [
       "node_modules"
@@ -25,14 +25,14 @@ config.output = {
     libraryTarget: "umd",
     globalObject: "this"
 };
-config.output.path = require('path').resolve(__dirname, "../../../../site/build/dist/js/developmentExecutable")
+config.output.path = require('path').resolve(__dirname, "../../../../site/build/dist/js/productionExecutable")
     // source maps
     config.module.rules.push({
             test: /\.m?js$/,
             use: ["source-map-loader"],
             enforce: "pre"
     });
-    config.devtool = 'eval-source-map';
+    config.devtool = 'source-map';
 config.ignoreWarnings = [/Failed to parse source map/]
     
 // Report progress to console

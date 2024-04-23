@@ -65,7 +65,7 @@
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var Companion_getInstance_5 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
-  var THROW_CCE = kotlin_kotlin.$_$.eg;
+  var THROW_CCE = kotlin_kotlin.$_$.dg;
   var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.k5;
   var Companion_getInstance_6 = kotlin_com_varabyte_kobweb_kobweb_core.$_$.k;
   var prependIf = kotlin_com_varabyte_kobweb_kobweb_core.$_$.g;

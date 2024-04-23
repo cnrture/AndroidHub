@@ -29,7 +29,7 @@
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var Companion_getInstance = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
-  var THROW_CCE = kotlin_kotlin.$_$.eg;
+  var THROW_CCE = kotlin_kotlin.$_$.dg;
   var KobwebApp = kotlin_com_varabyte_kobweb_kobweb_core.$_$.c;
   var traceEventEnd = kotlin_org_jetbrains_compose_runtime_runtime.$_$.a1;
   var Unit_getInstance = kotlin_kotlin.$_$.w4;

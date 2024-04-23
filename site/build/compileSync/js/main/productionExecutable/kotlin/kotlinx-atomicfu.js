@@ -12,12 +12,12 @@
 }(this, function (_, kotlin_kotlin) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.j6;
-  var objectMeta = kotlin_kotlin.$_$.i6;
-  var setMetadataFor = kotlin_kotlin.$_$.k6;
-  var classMeta = kotlin_kotlin.$_$.n5;
-  var toString = kotlin_kotlin.$_$.b9;
-  var VOID = kotlin_kotlin.$_$.c;
+  var protoOf = kotlin_kotlin.$_$.fa;
+  var objectMeta = kotlin_kotlin.$_$.ea;
+  var setMetadataFor = kotlin_kotlin.$_$.ga;
+  var classMeta = kotlin_kotlin.$_$.v8;
+  var toString = kotlin_kotlin.$_$.pe;
+  var VOID = kotlin_kotlin.$_$.g;
   //endregion
   //region block: pre-declaration
   setMetadataFor(atomicfu$TraceBase, 'TraceBase', classMeta);
@@ -49,10 +49,10 @@
   function AtomicRef(value) {
     this.kotlinx$atomicfu$value = value;
   }
-  protoOf(AtomicRef).jg = function (_set____db54di) {
+  protoOf(AtomicRef).gk = function (_set____db54di) {
     this.kotlinx$atomicfu$value = _set____db54di;
   };
-  protoOf(AtomicRef).kg = function () {
+  protoOf(AtomicRef).hk = function () {
     return this.kotlinx$atomicfu$value;
   };
   protoOf(AtomicRef).atomicfu$compareAndSet = function (expect, update) {
@@ -75,10 +75,10 @@
   function AtomicBoolean(value) {
     this.kotlinx$atomicfu$value = value;
   }
-  protoOf(AtomicBoolean).lg = function (_set____db54di) {
+  protoOf(AtomicBoolean).ik = function (_set____db54di) {
     this.kotlinx$atomicfu$value = _set____db54di;
   };
-  protoOf(AtomicBoolean).kg = function () {
+  protoOf(AtomicBoolean).hk = function () {
     return this.kotlinx$atomicfu$value;
   };
   protoOf(AtomicBoolean).atomicfu$compareAndSet = function (expect, update) {
@@ -101,10 +101,10 @@
   function AtomicInt(value) {
     this.kotlinx$atomicfu$value = value;
   }
-  protoOf(AtomicInt).mg = function (_set____db54di) {
+  protoOf(AtomicInt).jk = function (_set____db54di) {
     this.kotlinx$atomicfu$value = _set____db54di;
   };
-  protoOf(AtomicInt).kg = function () {
+  protoOf(AtomicInt).hk = function () {
     return this.kotlinx$atomicfu$value;
   };
   protoOf(AtomicInt).atomicfu$compareAndSet = function (expect, update) {
