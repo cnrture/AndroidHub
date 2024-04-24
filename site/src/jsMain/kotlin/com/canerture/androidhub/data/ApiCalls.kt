@@ -9,17 +9,15 @@ import kotlinx.serialization.json.Json
 suspend fun getPosts(
     onSuccess: (List<Post>) -> Unit,
     onError: (Exception) -> Unit
-){
+) {
     try {
-        val result = window.api.tryGet(
-            apiPath = "get_posts.php"
-        )?.decodeToString()
-        if(result != null){
+        val result = window.api.tryGet("get_posts.php")?.decodeToString()
+        if (result != null) {
             onSuccess(Json.decodeFromString(result))
         } else {
             onError(Exception("Something went wrong"))
         }
-    }catch (e: Exception){
+    } catch (e: Exception) {
         println(e)
         onError(e)
     }

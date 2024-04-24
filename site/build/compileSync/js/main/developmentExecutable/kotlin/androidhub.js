@@ -261,7 +261,8 @@
   var listOf = kotlin_kotlin.$_$.b8;
   var ResponsiveValues = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g;
   var SimpleGrid = kotlin_com_varabyte_kobweb_silk_widgets.$_$.i;
-  var toString = kotlin_kotlin.$_$.kc;
+  var toString = kotlin_kotlin.$_$.lh;
+  var toString_0 = kotlin_kotlin.$_$.kc;
   var rememberPageContext = kotlin_com_varabyte_kobweb_kobweb_core.$_$.d;
   var LG_getInstance = kotlin_com_varabyte_kobweb_silk_widgets.$_$.u;
   var height = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.n1;
@@ -6603,7 +6604,7 @@
   }
   function HomePage$slambda$lambda_0($error$delegate) {
     return function (it) {
-      HomePage$lambda_2($error$delegate, it.toString());
+      HomePage$lambda_2($error$delegate, toString(it.message));
       return Unit_getInstance();
     };
   }
@@ -6676,13 +6677,13 @@
         traceEventStart(-1997478029, $changed, -1, 'com.canerture.androidhub.pages.HomePage.<anonymous> (Index.kt:132)');
       }
       AndroidHeroContent($breakpoint, $composer_0, 0);
-      $composer_0.startReplaceableGroup_ip860b_k$(-219728481);
+      $composer_0.startReplaceableGroup_ip860b_k$(-219728473);
       // Inline function 'kotlin.collections.isNotEmpty' call
       if (!HomePage$lambda($postList$delegate).isEmpty_y1axqb_k$()) {
-        Text(toString(HomePage$lambda($postList$delegate)), $composer_0, 0);
+        Text(toString_0(HomePage$lambda($postList$delegate)), $composer_0, 0);
       }
       $composer_0.endReplaceableGroup_ern0ak_k$();
-      $composer_0.startReplaceableGroup_ip860b_k$(-219728395);
+      $composer_0.startReplaceableGroup_ip860b_k$(-219728387);
       if (!(HomePage$lambda_1($error$delegate) == null)) {
         Text('Error: ' + HomePage$lambda_1($error$delegate), $composer_0, 0);
       }

@@ -12,8 +12,10 @@ import kotlinx.serialization.json.Json
 suspend fun getPosts(context: ApiContext) {
     try {
         val posts = context.data.getValue<PostsRepository>().getPosts()
+        println(Json.encodeToString(posts))
         context.res.setBodyText(Json.encodeToString(posts))
     } catch (e: Exception) {
+        println(Json.encodeToString(e))
         context.res.setBodyText(Json.encodeToString(e))
     }
 }

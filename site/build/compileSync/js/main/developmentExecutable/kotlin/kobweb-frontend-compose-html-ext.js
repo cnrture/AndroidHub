@@ -231,12 +231,12 @@
   setMetadataFor(OverflowWrap, 'OverflowWrap', classMeta);
   setMetadataFor(Companion_14, 'Companion', objectMeta);
   setMetadataFor(ScrollBehavior, 'ScrollBehavior', classMeta);
-  setMetadataFor(StyleVariableNumberProvider, 'StyleVariableNumberProvider', classMeta);
-  setMetadataFor(StyleVariable_1, 'StyleVariable', classMeta, VOID, [CSSVariable]);
-  setMetadataFor(PropertyValue, 'PropertyValue', classMeta, StyleVariable_1);
-  setMetadataFor(NumberValue, 'NumberValue', classMeta, StyleVariable_1);
-  setMetadataFor(StringValue, 'StringValue', classMeta, StyleVariable_1);
+  setMetadataFor(StyleVariable, 'StyleVariable', classMeta, VOID, [CSSVariable]);
+  setMetadataFor(PropertyValue, 'PropertyValue', classMeta, StyleVariable);
+  setMetadataFor(NumberValue, 'NumberValue', classMeta, StyleVariable);
+  setMetadataFor(StringValue, 'StringValue', classMeta, StyleVariable);
   setMetadataFor(StyleVariablePropertyProvider, 'StyleVariablePropertyProvider', classMeta);
+  setMetadataFor(StyleVariableNumberProvider, 'StyleVariableNumberProvider', classMeta);
   setMetadataFor(Companion_15, 'Companion', objectMeta);
   setMetadataFor(UserSelect, 'UserSelect', classMeta);
   setMetadataFor(Companion_16, 'Companion', objectMeta);
@@ -2440,18 +2440,6 @@
       }
     }
   };
-  function marginInline(_this__u8e3s4, value) {
-    _this__u8e3s4.property_wcrait_k$('margin-inline', joinToString_0(value, ' '));
-  }
-  function paddingInline(_this__u8e3s4, value) {
-    _this__u8e3s4.property_wcrait_k$('padding-inline', joinToString_0(value, ' '));
-  }
-  function marginBlock(_this__u8e3s4, value) {
-    _this__u8e3s4.property_wcrait_k$('margin-block', joinToString_0(value, ' '));
-  }
-  function verticalAlign(_this__u8e3s4, verticalAlign) {
-    _this__u8e3s4.property_npxg1h_k$('vertical-align', verticalAlign);
-  }
   function _get_value__a43j40_7($this) {
     return $this.value_1;
   }
@@ -2507,6 +2495,18 @@
   protoOf(VerticalAlign).toString = function () {
     return this.value_1;
   };
+  function verticalAlign(_this__u8e3s4, verticalAlign) {
+    _this__u8e3s4.property_npxg1h_k$('vertical-align', verticalAlign);
+  }
+  function paddingInline(_this__u8e3s4, value) {
+    _this__u8e3s4.property_wcrait_k$('padding-inline', joinToString_0(value, ' '));
+  }
+  function marginBlock(_this__u8e3s4, value) {
+    _this__u8e3s4.property_wcrait_k$('margin-block', joinToString_0(value, ' '));
+  }
+  function marginInline(_this__u8e3s4, value) {
+    _this__u8e3s4.property_wcrait_k$('margin-inline', joinToString_0(value, ' '));
+  }
   function _get_value__a43j40_8($this) {
     return $this.value_1;
   }
@@ -3013,41 +3013,13 @@
   function scrollBehavior(_this__u8e3s4, scrollBehavior) {
     _this__u8e3s4.property_npxg1h_k$('scroll-behavior', scrollBehavior);
   }
-  function setVariable(_this__u8e3s4, variable, value) {
-    _this__u8e3s4.property_jk9dw6_k$('--' + variable.name_1, value);
-  }
-  function StyleVariable(defaultFallback, prefix) {
-    defaultFallback = defaultFallback === VOID ? null : defaultFallback;
-    prefix = prefix === VOID ? null : prefix;
-    return new StyleVariablePropertyProvider(defaultFallback, prefix);
-  }
-  function setVariable_0(_this__u8e3s4, variable, value) {
-    _this__u8e3s4.property_npxg1h_k$('--' + variable.name_1, value);
-  }
-  function StyleVariable_0(prefix) {
-    prefix = prefix === VOID ? null : prefix;
-    return new StyleVariablePropertyProvider(null, prefix);
-  }
   function _get_defaultFallback__wdjuwe($this) {
-    return $this.defaultFallback_1;
-  }
-  function _get_prefix__wiwq7t($this) {
-    return $this.prefix_1;
-  }
-  function StyleVariableNumberProvider(defaultFallback, prefix) {
-    this.defaultFallback_1 = defaultFallback;
-    this.prefix_1 = prefix;
-  }
-  protoOf(StyleVariableNumberProvider).getValue_fbnwi2_k$ = function (thisRef, property) {
-    return new NumberValue(provideVariableName(thisRef, property), this.defaultFallback_1, this.prefix_1);
-  };
-  function _get_defaultFallback__wdjuwe_0($this) {
     return $this.defaultFallback_1;
   }
   function PropertyValue(name, defaultFallback, prefix) {
     defaultFallback = defaultFallback === VOID ? null : defaultFallback;
     prefix = prefix === VOID ? null : prefix;
-    StyleVariable_1.call(this, name, defaultFallback, prefix);
+    StyleVariable.call(this, name, defaultFallback, prefix);
   }
   protoOf(PropertyValue).value_wk9s6x_k$ = function (fallback) {
     return this.variableValue_ovgee5_k$(fallback);
@@ -3070,7 +3042,7 @@
       // Inline function 'kotlin.js.asDynamic' call
       tmp = defaultFallback;
     }
-    StyleVariable_1.call(this, name, tmp, prefix);
+    StyleVariable.call(this, name, tmp, prefix);
   }
   protoOf(NumberValue).value_9bth3g_k$ = function (fallback) {
     // Inline function 'kotlin.js.unsafeCast' call
@@ -3107,7 +3079,7 @@
       // Inline function 'kotlin.js.asDynamic' call
       tmp = defaultFallback;
     }
-    StyleVariable_1.call(this, name, tmp, prefix);
+    StyleVariable.call(this, name, tmp, prefix);
   }
   protoOf(StringValue).value_lu1i8m_k$ = function (fallback) {
     // Inline function 'kotlin.js.unsafeCast' call
@@ -3129,7 +3101,7 @@
   protoOf(StringValue).value_66g3ir_k$ = function (fallback) {
     return this.value_lu1i8m_k$((fallback == null ? true : typeof fallback === 'string') ? fallback : THROW_CCE());
   };
-  function StyleVariable_1(name, defaultFallback, prefix) {
+  function StyleVariable(name, defaultFallback, prefix) {
     this.defaultFallback_1 = defaultFallback;
     var tmp = this;
     var tmp_0;
@@ -3144,14 +3116,14 @@
     var tmp1_elvis_lhs = tmp_0;
     tmp.name_1 = tmp1_elvis_lhs == null ? name : tmp1_elvis_lhs;
   }
-  protoOf(StyleVariable_1).get_name_woqyms_k$ = function () {
+  protoOf(StyleVariable).get_name_woqyms_k$ = function () {
     return this.name_1;
   };
-  protoOf(StyleVariable_1).value$default_36t2hw_k$ = function (fallback, $super) {
+  protoOf(StyleVariable).value$default_36t2hw_k$ = function (fallback, $super) {
     fallback = fallback === VOID ? null : fallback;
     return $super === VOID ? this.value_66g3ir_k$(fallback) : $super.value_66g3ir_k$.call(this, fallback);
   };
-  protoOf(StyleVariable_1).variableValue_ovgee5_k$ = function (fallback) {
+  protoOf(StyleVariable).variableValue_ovgee5_k$ = function (fallback) {
     // Inline function 'org.jetbrains.compose.web.css.CSSVariableValue' call
     var tmp1_safe_receiver = fallback == null ? this.defaultFallback_1 : fallback;
     var tmp;
@@ -3172,15 +3144,10 @@
     // Inline function 'kotlin.js.asDynamic' call
     return 'var(--' + this.name_1 + (tmp2_elvis_lhs == null ? '' : tmp2_elvis_lhs) + ')';
   };
-  function StyleVariable_2(defaultFallback, prefix) {
-    defaultFallback = defaultFallback === VOID ? null : defaultFallback;
-    prefix = prefix === VOID ? null : prefix;
-    return new StyleVariableNumberProvider(defaultFallback, prefix);
-  }
-  function _get_defaultFallback__wdjuwe_1($this) {
+  function _get_defaultFallback__wdjuwe_0($this) {
     return $this.defaultFallback_1;
   }
-  function _get_prefix__wiwq7t_0($this) {
+  function _get_prefix__wiwq7t($this) {
     return $this.prefix_1;
   }
   function StyleVariablePropertyProvider(defaultFallback, prefix) {
@@ -3190,10 +3157,40 @@
   protoOf(StyleVariablePropertyProvider).getValue_fbnwi2_k$ = function (thisRef, property) {
     return new PropertyValue(provideVariableName(thisRef, property), this.defaultFallback_1, this.prefix_1);
   };
-  function StyleVariable_3(defaultFallback, prefix) {
+  function StyleVariable_0(prefix) {
+    prefix = prefix === VOID ? null : prefix;
+    return new StyleVariablePropertyProvider(null, prefix);
+  }
+  function StyleVariable_1(defaultFallback, prefix) {
     defaultFallback = defaultFallback === VOID ? null : defaultFallback;
     prefix = prefix === VOID ? null : prefix;
     return new StyleVariablePropertyProvider(defaultFallback, prefix);
+  }
+  function StyleVariable_2(defaultFallback, prefix) {
+    defaultFallback = defaultFallback === VOID ? null : defaultFallback;
+    prefix = prefix === VOID ? null : prefix;
+    return new StyleVariablePropertyProvider(defaultFallback, prefix);
+  }
+  function _get_defaultFallback__wdjuwe_1($this) {
+    return $this.defaultFallback_1;
+  }
+  function _get_prefix__wiwq7t_0($this) {
+    return $this.prefix_1;
+  }
+  function StyleVariableNumberProvider(defaultFallback, prefix) {
+    this.defaultFallback_1 = defaultFallback;
+    this.prefix_1 = prefix;
+  }
+  protoOf(StyleVariableNumberProvider).getValue_fbnwi2_k$ = function (thisRef, property) {
+    return new NumberValue(provideVariableName(thisRef, property), this.defaultFallback_1, this.prefix_1);
+  };
+  function StyleVariable_3(defaultFallback, prefix) {
+    defaultFallback = defaultFallback === VOID ? null : defaultFallback;
+    prefix = prefix === VOID ? null : prefix;
+    return new StyleVariableNumberProvider(defaultFallback, prefix);
+  }
+  function setVariable(_this__u8e3s4, variable, value) {
+    _this__u8e3s4.property_npxg1h_k$('--' + variable.name_1, value);
   }
   function provideVariableName(groupObject, property) {
     // Inline function 'kotlin.text.buildString' call
@@ -3208,6 +3205,9 @@
     }
     this_0.append_22ad7x_k$(removeSuffix(removeSuffix(titleCamelCaseToKebabCase(property.callableName), '-var'), '-variable'));
     return this_0.toString();
+  }
+  function setVariable_0(_this__u8e3s4, variable, value) {
+    _this__u8e3s4.property_jk9dw6_k$('--' + variable.name_1, value);
   }
   function _get_value__a43j40_14($this) {
     return $this.value_1;
@@ -5928,10 +5928,10 @@
   _.$_$.c = CSSAnimation;
   _.$_$.d = ComparableStyleScope;
   _.$_$.e = NumberValue;
-  _.$_$.f = StyleVariable_2;
-  _.$_$.g = StyleVariable;
+  _.$_$.f = StyleVariable_3;
+  _.$_$.g = StyleVariable_2;
   _.$_$.h = StyleVariable_0;
-  _.$_$.i = StyleVariable_3;
+  _.$_$.i = StyleVariable_1;
   _.$_$.j = animation;
   _.$_$.k = appearance;
   _.$_$.l = ariaDisabled;
@@ -5969,8 +5969,8 @@
   _.$_$.r1 = overflow;
   _.$_$.s1 = paddingInline;
   _.$_$.t1 = scrollBehavior;
-  _.$_$.u1 = setVariable_0;
-  _.$_$.v1 = setVariable;
+  _.$_$.u1 = setVariable;
+  _.$_$.v1 = setVariable_0;
   _.$_$.w1 = textAlign;
   _.$_$.x1 = textDecorationLine;
   _.$_$.y1 = toDegrees;

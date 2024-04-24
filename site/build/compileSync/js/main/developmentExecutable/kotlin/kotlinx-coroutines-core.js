@@ -24,15 +24,15 @@
   var setMetadataFor = kotlin_kotlin.$_$.gc;
   var VOID = kotlin_kotlin.$_$.g;
   var Annotation = kotlin_kotlin.$_$.nf;
+  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.f4;
   var Key_getInstance = kotlin_kotlin.$_$.e4;
   var equals = kotlin_kotlin.$_$.xa;
-  var EmptyCoroutineContext_getInstance = kotlin_kotlin.$_$.f4;
+  var createCoroutineUnintercepted = kotlin_kotlin.$_$.r9;
   var toString = kotlin_kotlin.$_$.kc;
   var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.w1;
   var atomic$int$1 = kotlin_org_jetbrains_kotlinx_atomicfu.$_$.e;
   var intercepted = kotlin_kotlin.$_$.s9;
   var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.q9;
-  var createCoroutineUnintercepted = kotlin_kotlin.$_$.r9;
   var interfaceMeta = kotlin_kotlin.$_$.gb;
   var isInterface = kotlin_kotlin.$_$.pb;
   var toString_0 = kotlin_kotlin.$_$.lh;
@@ -162,17 +162,17 @@
   setMetadataFor(ChildJob, 'ChildJob', interfaceMeta, VOID, [Job], VOID, VOID, VOID, [0]);
   setMetadataFor(ParentJob, 'ParentJob', interfaceMeta, VOID, [Job], VOID, VOID, VOID, [0]);
   setMetadataFor(JobSupport, 'JobSupport', classMeta, VOID, [Job, ChildJob, ParentJob], VOID, VOID, VOID, [0]);
-  setMetadataFor(CoroutineScope_0, 'CoroutineScope', interfaceMeta);
-  setMetadataFor(AbstractCoroutine, 'AbstractCoroutine', classMeta, JobSupport, [JobSupport, Job, Continuation, CoroutineScope_0], VOID, VOID, VOID, [0]);
+  setMetadataFor(CoroutineScope, 'CoroutineScope', interfaceMeta);
+  setMetadataFor(AbstractCoroutine, 'AbstractCoroutine', classMeta, JobSupport, [JobSupport, Job, Continuation, CoroutineScope], VOID, VOID, VOID, [0]);
   setMetadataFor(InternalCoroutinesApi, 'InternalCoroutinesApi', classMeta, VOID, [Annotation]);
   setMetadataFor(ExperimentalCoroutinesApi, 'ExperimentalCoroutinesApi', classMeta, VOID, [Annotation]);
   setMetadataFor(DelicateCoroutinesApi, 'DelicateCoroutinesApi', classMeta, VOID, [Annotation]);
   setMetadataFor(FlowPreview, 'FlowPreview', classMeta, VOID, [Annotation]);
+  setMetadataFor(StandaloneCoroutine, 'StandaloneCoroutine', classMeta, AbstractCoroutine, VOID, VOID, VOID, VOID, [0]);
+  setMetadataFor(LazyStandaloneCoroutine, 'LazyStandaloneCoroutine', classMeta, StandaloneCoroutine, VOID, VOID, VOID, VOID, [0]);
   setMetadataFor(CoroutineStackFrame, 'CoroutineStackFrame', interfaceMeta);
   setMetadataFor(ScopeCoroutine, 'ScopeCoroutine', classMeta, AbstractCoroutine, [AbstractCoroutine, CoroutineStackFrame], VOID, VOID, VOID, [0]);
   setMetadataFor(DispatchedCoroutine, 'DispatchedCoroutine', classMeta, ScopeCoroutine, VOID, VOID, VOID, VOID, [0]);
-  setMetadataFor(StandaloneCoroutine, 'StandaloneCoroutine', classMeta, AbstractCoroutine, VOID, VOID, VOID, VOID, [0]);
-  setMetadataFor(LazyStandaloneCoroutine, 'LazyStandaloneCoroutine', classMeta, StandaloneCoroutine, VOID, VOID, VOID, VOID, [0]);
   function tryResume$default(value, idempotent, $super) {
     idempotent = idempotent === VOID ? null : idempotent;
     return $super === VOID ? this.tryResume_8iaqti_k$(value, idempotent) : $super.tryResume_8iaqti_k$.call(this, value, idempotent);
@@ -227,8 +227,8 @@
   setMetadataFor(CompletionHandlerException, 'CompletionHandlerException', classMeta, RuntimeException);
   setMetadataFor(CoroutinesInternalError, 'CoroutinesInternalError', classMeta, Error_0);
   setMetadataFor(DisposableHandle, 'DisposableHandle', interfaceMeta);
-  setMetadataFor(ChildHandle, 'ChildHandle', interfaceMeta, VOID, [DisposableHandle]);
   setMetadataFor(Key_2, 'Key', objectMeta, VOID, [Key]);
+  setMetadataFor(ChildHandle, 'ChildHandle', interfaceMeta, VOID, [DisposableHandle]);
   setMetadataFor(NonDisposableHandle, 'NonDisposableHandle', objectMeta, VOID, [DisposableHandle, ChildHandle]);
   setMetadataFor(Incomplete, 'Incomplete', interfaceMeta);
   setMetadataFor(Empty, 'Empty', classMeta, VOID, [Incomplete]);
@@ -351,7 +351,7 @@
   setMetadataFor($receiveOrNullCOROUTINE$6, '$receiveOrNullCOROUTINE$6', classMeta, CoroutineImpl);
   setMetadataFor(ChannelCoroutine, 'ChannelCoroutine', classMeta, AbstractCoroutine, [AbstractCoroutine, Channel], VOID, VOID, VOID, [0, 1]);
   setMetadataFor(ConflatedBufferedChannel, 'ConflatedBufferedChannel', classMeta, BufferedChannel, VOID, VOID, VOID, VOID, [1, 0]);
-  setMetadataFor(ProducerScope, 'ProducerScope', interfaceMeta, VOID, [CoroutineScope_0, SendChannel], VOID, VOID, VOID, [1]);
+  setMetadataFor(ProducerScope, 'ProducerScope', interfaceMeta, VOID, [CoroutineScope, SendChannel], VOID, VOID, VOID, [1]);
   setMetadataFor(ProducerCoroutine, 'ProducerCoroutine', classMeta, ChannelCoroutine, [ChannelCoroutine, ProducerScope], VOID, VOID, VOID, [0, 1]);
   setMetadataFor($emitAllImplCOROUTINE$7, '$emitAllImplCOROUTINE$7', classMeta, CoroutineImpl);
   setMetadataFor(Flow, 'Flow', interfaceMeta, VOID, VOID, VOID, VOID, VOID, [1]);
@@ -374,7 +374,7 @@
   setMetadataFor(SharedFlowSlot, 'SharedFlowSlot', classMeta, AbstractSharedFlowSlot, VOID, SharedFlowSlot);
   setMetadataFor(StateFlow, 'StateFlow', interfaceMeta, VOID, [SharedFlow], VOID, VOID, VOID, [1]);
   setMetadataFor(MutableStateFlow, 'MutableStateFlow', interfaceMeta, VOID, [StateFlow, MutableSharedFlow], VOID, VOID, VOID, [1]);
-  setMetadataFor($collectCOROUTINE$0, '$collectCOROUTINE$0', classMeta, CoroutineImpl);
+  setMetadataFor($collectCOROUTINE$9, '$collectCOROUTINE$9', classMeta, CoroutineImpl);
   setMetadataFor(StateFlowImpl, 'StateFlowImpl', classMeta, AbstractSharedFlow, [AbstractSharedFlow, MutableStateFlow, CancellableFlow, FusibleFlow], VOID, VOID, VOID, [1]);
   setMetadataFor(StateFlowSlot, 'StateFlowSlot', classMeta, AbstractSharedFlowSlot, VOID, StateFlowSlot, VOID, VOID, [0]);
   setMetadataFor(SubscriptionCountStateFlow, 'SubscriptionCountStateFlow', classMeta, SharedFlowImpl, [StateFlow, SharedFlowImpl], VOID, VOID, VOID, [1]);
@@ -382,7 +382,7 @@
   setMetadataFor(ChannelFlowOperator, 'ChannelFlowOperator', classMeta, ChannelFlow, VOID, VOID, VOID, VOID, [1, 2]);
   setMetadataFor(ChannelFlowOperatorImpl, 'ChannelFlowOperatorImpl', classMeta, ChannelFlowOperator, VOID, VOID, VOID, VOID, [1]);
   setMetadataFor(ChannelFlowOperator$collectWithContextUndispatched$slambda, 'ChannelFlowOperator$collectWithContextUndispatched$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
-  setMetadataFor($collectCOROUTINE$1, '$collectCOROUTINE$1', classMeta, CoroutineImpl);
+  setMetadataFor($collectCOROUTINE$10, '$collectCOROUTINE$10', classMeta, CoroutineImpl);
   setMetadataFor(ChannelFlow$_get_collectToFun_$slambda_j53z2e, 'ChannelFlow$<get-collectToFun>$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(ChannelFlow$collect$slambda, 'ChannelFlow$collect$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
   setMetadataFor(UndispatchedContextCollector$emitRef$slambda, 'UndispatchedContextCollector$emitRef$slambda', classMeta, CoroutineImpl, [CoroutineImpl], VOID, VOID, VOID, [1]);
@@ -392,18 +392,18 @@
   setMetadataFor(_no_name_provided__qut3iv, VOID, classMeta, VOID, [Flow], VOID, VOID, VOID, [1]);
   setMetadataFor(SendingCollector, 'SendingCollector', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
   setMetadataFor(ThrowingCollector, 'ThrowingCollector', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
-  setMetadataFor($emitCOROUTINE$14, '$emitCOROUTINE$14', classMeta, CoroutineImpl);
+  setMetadataFor($emitCOROUTINE$13, '$emitCOROUTINE$13', classMeta, CoroutineImpl);
   setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
-  setMetadataFor($collectCOROUTINE$13, '$collectCOROUTINE$13', classMeta, CoroutineImpl);
+  setMetadataFor($collectCOROUTINE$12, '$collectCOROUTINE$12', classMeta, CoroutineImpl);
   setMetadataFor(_no_name_provided__qut3iv_1, VOID, classMeta, VOID, [Flow], VOID, VOID, VOID, [1]);
-  setMetadataFor($emitCOROUTINE$15, '$emitCOROUTINE$15', classMeta, CoroutineImpl);
+  setMetadataFor($emitCOROUTINE$14, '$emitCOROUTINE$14', classMeta, CoroutineImpl);
   setMetadataFor(_no_name_provided__qut3iv_2, VOID, classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
-  setMetadataFor($collectWhileCOROUTINE$12, '$collectWhileCOROUTINE$12', classMeta, CoroutineImpl);
-  setMetadataFor($onSubscriptionCOROUTINE$2, '$onSubscriptionCOROUTINE$2', classMeta, CoroutineImpl);
+  setMetadataFor($collectWhileCOROUTINE$11, '$collectWhileCOROUTINE$11', classMeta, CoroutineImpl);
+  setMetadataFor($onSubscriptionCOROUTINE$15, '$onSubscriptionCOROUTINE$15', classMeta, CoroutineImpl);
   setMetadataFor(SubscribedFlowCollector, 'SubscribedFlowCollector', classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1, 0]);
-  setMetadataFor($emitCOROUTINE$20, '$emitCOROUTINE$20', classMeta, CoroutineImpl);
+  setMetadataFor($emitCOROUTINE$17, '$emitCOROUTINE$17', classMeta, CoroutineImpl);
   setMetadataFor(_no_name_provided__qut3iv_3, VOID, classMeta, VOID, [FlowCollector], VOID, VOID, VOID, [1]);
-  setMetadataFor($firstCOROUTINE$19, '$firstCOROUTINE$19', classMeta, CoroutineImpl);
+  setMetadataFor($firstCOROUTINE$16, '$firstCOROUTINE$16', classMeta, CoroutineImpl);
   setMetadataFor(OpDescriptor, 'OpDescriptor', classMeta);
   setMetadataFor(AtomicOp, 'AtomicOp', classMeta, OpDescriptor);
   setMetadataFor(SegmentOrClosed, 'SegmentOrClosed', classMeta);
@@ -417,7 +417,7 @@
   setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(LockFreeTaskQueueCore, 'LockFreeTaskQueueCore', classMeta);
   setMetadataFor(UndeliveredElementException, 'UndeliveredElementException', classMeta, RuntimeException);
-  setMetadataFor(ContextScope, 'ContextScope', classMeta, VOID, [CoroutineScope_0]);
+  setMetadataFor(ContextScope, 'ContextScope', classMeta, VOID, [CoroutineScope]);
   setMetadataFor(Symbol, 'Symbol', classMeta);
   setMetadataFor(_no_name_provided__qut3iv_4, VOID, classMeta, VOID, [Runnable]);
   setMetadataFor(OnTimeout, 'OnTimeout', classMeta);
@@ -427,12 +427,12 @@
   setMetadataFor(SelectInstance, 'SelectInstance', interfaceMeta);
   setMetadataFor(SelectClause1, 'SelectClause1', interfaceMeta, VOID, [SelectClause]);
   setMetadataFor(SelectClause1Impl, 'SelectClause1Impl', classMeta, VOID, [SelectClause1]);
-  setMetadataFor($invokeBlockCOROUTINE$25, '$invokeBlockCOROUTINE$25', classMeta, CoroutineImpl);
+  setMetadataFor($invokeBlockCOROUTINE$22, '$invokeBlockCOROUTINE$22', classMeta, CoroutineImpl);
   setMetadataFor(ClauseData, 'ClauseData', classMeta, VOID, VOID, VOID, VOID, VOID, [1]);
-  setMetadataFor($doSelectCOROUTINE$21, '$doSelectCOROUTINE$21', classMeta, CoroutineImpl);
-  setMetadataFor($doSelectSuspendCOROUTINE$22, '$doSelectSuspendCOROUTINE$22', classMeta, CoroutineImpl);
-  setMetadataFor($completeCOROUTINE$23, '$completeCOROUTINE$23', classMeta, CoroutineImpl);
-  setMetadataFor($processResultAndInvokeBlockRecoveringExceptionCOROUTINE$24, '$processResultAndInvokeBlockRecoveringExceptionCOROUTINE$24', classMeta, CoroutineImpl);
+  setMetadataFor($doSelectCOROUTINE$18, '$doSelectCOROUTINE$18', classMeta, CoroutineImpl);
+  setMetadataFor($doSelectSuspendCOROUTINE$19, '$doSelectSuspendCOROUTINE$19', classMeta, CoroutineImpl);
+  setMetadataFor($completeCOROUTINE$20, '$completeCOROUTINE$20', classMeta, CoroutineImpl);
+  setMetadataFor($processResultAndInvokeBlockRecoveringExceptionCOROUTINE$21, '$processResultAndInvokeBlockRecoveringExceptionCOROUTINE$21', classMeta, CoroutineImpl);
   function invoke(_this__u8e3s4, block) {
     return this.invoke_13uk3f_k$(_this__u8e3s4, null, block);
   }
@@ -579,6 +579,14 @@
   protoOf(FlowPreview).toString = function () {
     return '@kotlinx.coroutines.FlowPreview()';
   };
+  function launch(_this__u8e3s4, context, start, block) {
+    context = context === VOID ? EmptyCoroutineContext_getInstance() : context;
+    start = start === VOID ? CoroutineStart_DEFAULT_getInstance() : start;
+    var newContext = newCoroutineContext(_this__u8e3s4, context);
+    var coroutine = start.get_isLazy_ew1d53_k$() ? new LazyStandaloneCoroutine(newContext, block) : new StandaloneCoroutine(newContext, true);
+    coroutine.start_rn6v44_k$(start, coroutine, block);
+    return coroutine;
+  }
   function withContext(context, block, $completion) {
     // Inline function 'kotlin.contracts.contract' call
     var tmp$ret$0;
@@ -605,14 +613,23 @@
     }
     return tmp$ret$0;
   }
-  function launch(_this__u8e3s4, context, start, block) {
-    context = context === VOID ? EmptyCoroutineContext_getInstance() : context;
-    start = start === VOID ? CoroutineStart_DEFAULT_getInstance() : start;
-    var newContext = newCoroutineContext(_this__u8e3s4, context);
-    var coroutine = start.get_isLazy_ew1d53_k$() ? new LazyStandaloneCoroutine(newContext, block) : new StandaloneCoroutine(newContext, true);
-    coroutine.start_rn6v44_k$(start, coroutine, block);
-    return coroutine;
+  function StandaloneCoroutine(parentContext, active) {
+    AbstractCoroutine.call(this, parentContext, true, active);
   }
+  protoOf(StandaloneCoroutine).handleJobException_9fdet1_k$ = function (exception) {
+    handleCoroutineException(this.get_context_h02k06_k$(), exception);
+    return true;
+  };
+  function _get_continuation__y3gzck($this) {
+    return $this.continuation_1;
+  }
+  function LazyStandaloneCoroutine(parentContext, block) {
+    StandaloneCoroutine.call(this, parentContext, false);
+    this.continuation_1 = createCoroutineUnintercepted(block, this, this);
+  }
+  protoOf(LazyStandaloneCoroutine).onStart_qsx7gt_k$ = function () {
+    startCoroutineCancellable_0(this.continuation_1, this);
+  };
   function trySuspend($this) {
     // Inline function 'kotlinx.atomicfu.loop' call
     var this_0 = $this._decision_1;
@@ -675,23 +692,6 @@
     if (state instanceof CompletedExceptionally)
       throw state.get_cause_iplhs0_k$();
     return (state == null ? true : !(state == null)) ? state : THROW_CCE();
-  };
-  function StandaloneCoroutine(parentContext, active) {
-    AbstractCoroutine.call(this, parentContext, true, active);
-  }
-  protoOf(StandaloneCoroutine).handleJobException_9fdet1_k$ = function (exception) {
-    handleCoroutineException(this.get_context_h02k06_k$(), exception);
-    return true;
-  };
-  function _get_continuation__y3gzck($this) {
-    return $this.continuation_1;
-  }
-  function LazyStandaloneCoroutine(parentContext, block) {
-    StandaloneCoroutine.call(this, parentContext, false);
-    this.continuation_1 = createCoroutineUnintercepted(block, this, this);
-  }
-  protoOf(LazyStandaloneCoroutine).onStart_qsx7gt_k$ = function () {
-    startCoroutineCancellable_0(this.continuation_1, this);
   };
   function get_UNDECIDED() {
     return UNDECIDED;
@@ -1942,10 +1942,10 @@
     addSuppressed(this_0, originalException);
     return this_0;
   }
-  function CoroutineScope(context) {
-    return new ContextScope(!(context.get_y2st91_k$(Key_getInstance_2()) == null) ? context : context.plus_s13ygv_k$(Job_0()));
+  function CoroutineScope() {
   }
-  function CoroutineScope_0() {
+  function CoroutineScope_0(context) {
+    return new ContextScope(!(context.get_y2st91_k$(Key_getInstance_2()) == null) ? context : context.plus_s13ygv_k$(Job_0()));
   }
   function coroutineScope(block, $completion) {
     // Inline function 'kotlin.contracts.contract' call
@@ -2254,9 +2254,7 @@
     Error_init_$Init$(message, cause, this);
     captureStack(this, CoroutinesInternalError);
   }
-  function ParentJob() {
-  }
-  function ChildHandle() {
+  function DisposableHandle() {
   }
   function Key_2() {
     Key_instance_1 = this;
@@ -2269,34 +2267,11 @@
   }
   function Job() {
   }
-  function ensureActive(_this__u8e3s4) {
-    var tmp0_safe_receiver = _this__u8e3s4.get_y2st91_k$(Key_getInstance_2());
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      ensureActive_0(tmp0_safe_receiver);
-    }
-  }
-  function get_job(_this__u8e3s4) {
-    var tmp0_elvis_lhs = _this__u8e3s4.get_y2st91_k$(Key_getInstance_2());
-    var tmp;
-    if (tmp0_elvis_lhs == null) {
-      var message = "Current context doesn't contain Job in it: " + _this__u8e3s4;
-      throw IllegalStateException_init_$Create$(toString(message));
-    } else {
-      tmp = tmp0_elvis_lhs;
-    }
-    return tmp;
-  }
-  function Job_0(parent) {
-    parent = parent === VOID ? null : parent;
-    return new JobImpl(parent);
-  }
-  function cancelAndJoin(_this__u8e3s4, $completion) {
-    _this__u8e3s4.cancel$default_8haxne_k$();
-    return _this__u8e3s4.join_o20dar_k$($completion);
-  }
   function ChildJob() {
+  }
+  function ParentJob() {
+  }
+  function ChildHandle() {
   }
   function NonDisposableHandle() {
     NonDisposableHandle_instance = this;
@@ -2318,11 +2293,36 @@
       new NonDisposableHandle();
     return NonDisposableHandle_instance;
   }
+  function ensureActive(_this__u8e3s4) {
+    var tmp0_safe_receiver = _this__u8e3s4.get_y2st91_k$(Key_getInstance_2());
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      ensureActive_0(tmp0_safe_receiver);
+    }
+  }
   function ensureActive_0(_this__u8e3s4) {
     if (!_this__u8e3s4.get_isActive_quafmh_k$())
       throw _this__u8e3s4.getCancellationException_8i1q6u_k$();
   }
-  function DisposableHandle() {
+  function Job_0(parent) {
+    parent = parent === VOID ? null : parent;
+    return new JobImpl(parent);
+  }
+  function get_job(_this__u8e3s4) {
+    var tmp0_elvis_lhs = _this__u8e3s4.get_y2st91_k$(Key_getInstance_2());
+    var tmp;
+    if (tmp0_elvis_lhs == null) {
+      var message = "Current context doesn't contain Job in it: " + _this__u8e3s4;
+      throw IllegalStateException_init_$Create$(toString(message));
+    } else {
+      tmp = tmp0_elvis_lhs;
+    }
+    return tmp;
+  }
+  function cancelAndJoin(_this__u8e3s4, $completion) {
+    _this__u8e3s4.cancel$default_8haxne_k$();
+    return _this__u8e3s4.join_o20dar_k$($completion);
   }
   function cancel_1(_this__u8e3s4, message, cause) {
     cause = cause === VOID ? null : cause;
@@ -9596,6 +9596,8 @@
   protoOf(ConflatedBufferedChannel).shouldSendSuspend_te8nq7_k$ = function () {
     return false;
   };
+  function ProducerScope() {
+  }
   function produce(_this__u8e3s4, context, capacity, onBufferOverflow, start, onCompletion, block) {
     context = context === VOID ? EmptyCoroutineContext_getInstance() : context;
     capacity = capacity === VOID ? 0 : capacity;
@@ -9610,8 +9612,6 @@
     }
     coroutine.start_rn6v44_k$(start, coroutine, block);
     return coroutine;
-  }
-  function ProducerScope() {
   }
   function ProducerCoroutine(parentContext, channel) {
     ChannelCoroutine.call(this, parentContext, channel, true, true);
@@ -10636,13 +10636,13 @@
     return PENDING;
   }
   var PENDING;
-  function StateFlow() {
-  }
   function MutableStateFlow() {
   }
   function MutableStateFlow_0(value) {
     _init_properties_StateFlow_kt__eu9yi5();
     return new StateFlowImpl(value == null ? get_NULL() : value);
+  }
+  function StateFlow() {
   }
   function _get__state__37adl3_1($this) {
     return $this._state_1;
@@ -10704,12 +10704,12 @@
       curSlots = $this.get_slots_iyl3po_k$();
     }
   }
-  function $collectCOROUTINE$0(_this__u8e3s4, collector, resultContinuation) {
+  function $collectCOROUTINE$9(_this__u8e3s4, collector, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.collector_1 = collector;
   }
-  protoOf($collectCOROUTINE$0).doResume_5yljmg_k$ = function () {
+  protoOf($collectCOROUTINE$9).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -10868,7 +10868,7 @@
     throw UnsupportedOperationException_init_$Create$('MutableStateFlow.resetReplayCache is not supported');
   };
   protoOf(StateFlowImpl).collect_ve9kyv_k$ = function (collector, $completion) {
-    var tmp = new $collectCOROUTINE$0(this, collector, $completion);
+    var tmp = new $collectCOROUTINE$9(this, collector, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -11254,12 +11254,12 @@
     l.$arity = 1;
     return l;
   }
-  function $collectCOROUTINE$1(_this__u8e3s4, collector, resultContinuation) {
+  function $collectCOROUTINE$10(_this__u8e3s4, collector, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.collector_1 = collector;
   }
-  protoOf($collectCOROUTINE$1).doResume_5yljmg_k$ = function () {
+  protoOf($collectCOROUTINE$10).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -11342,7 +11342,7 @@
     return this.flowCollect_ki1wtf_k$(new SendingCollector(scope), $completion);
   };
   protoOf(ChannelFlowOperator).collect_aksokr_k$ = function (collector, $completion) {
-    var tmp = new $collectCOROUTINE$1(this, collector, $completion);
+    var tmp = new $collectCOROUTINE$10(this, collector, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -11422,7 +11422,7 @@
     return tmp.doResume_5yljmg_k$();
   };
   protoOf(ChannelFlow$collect$slambda).invoke_qns8j1_k$ = function (p1, $completion) {
-    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope_0) : false) ? p1 : THROW_CCE(), $completion);
+    return this.invoke_d9fzmj_k$((!(p1 == null) ? isInterface(p1, CoroutineScope) : false) ? p1 : THROW_CCE(), $completion);
   };
   protoOf(ChannelFlow$collect$slambda).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
@@ -11461,7 +11461,7 @@
     return i;
   };
   protoOf(ChannelFlow$collect$slambda).create_wyq9v6_k$ = function (value, completion) {
-    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope_0) : false) ? value : THROW_CCE(), completion);
+    return this.create_rcuf4x_k$((!(value == null) ? isInterface(value, CoroutineScope) : false) ? value : THROW_CCE(), completion);
   };
   function ChannelFlow$collect$slambda_0($collector, this$0, resultContinuation) {
     var i = new ChannelFlow$collect$slambda($collector, this$0, resultContinuation);
@@ -11836,17 +11836,17 @@
     return new _no_name_provided__qut3iv_1(_this__u8e3s4, predicate);
   }
   function collectWhile(_this__u8e3s4, predicate, $completion) {
-    var tmp = new $collectWhileCOROUTINE$12(_this__u8e3s4, predicate, $completion);
+    var tmp = new $collectWhileCOROUTINE$11(_this__u8e3s4, predicate, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   }
-  function $emitCOROUTINE$14(_this__u8e3s4, value, resultContinuation) {
+  function $emitCOROUTINE$13(_this__u8e3s4, value, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.value_1 = value;
   }
-  protoOf($emitCOROUTINE$14).doResume_5yljmg_k$ = function () {
+  protoOf($emitCOROUTINE$13).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -11912,17 +11912,17 @@
     this.$$this$unsafeFlow_1 = $$this$unsafeFlow;
   }
   protoOf(_no_name_provided__qut3iv_0).emit_t92u1f_k$ = function (value, $completion) {
-    var tmp = new $emitCOROUTINE$14(this, value, $completion);
+    var tmp = new $emitCOROUTINE$13(this, value, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  function $collectCOROUTINE$13(_this__u8e3s4, collector, resultContinuation) {
+  function $collectCOROUTINE$12(_this__u8e3s4, collector, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.collector_1 = collector;
   }
-  protoOf($collectCOROUTINE$13).doResume_5yljmg_k$ = function () {
+  protoOf($collectCOROUTINE$12).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -11982,17 +11982,17 @@
     this.$predicate_1 = $predicate;
   }
   protoOf(_no_name_provided__qut3iv_1).collect_aksokr_k$ = function (collector, $completion) {
-    var tmp = new $collectCOROUTINE$13(this, collector, $completion);
+    var tmp = new $collectCOROUTINE$12(this, collector, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  function $emitCOROUTINE$15(_this__u8e3s4, value, resultContinuation) {
+  function $emitCOROUTINE$14(_this__u8e3s4, value, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.value_1 = value;
   }
-  protoOf($emitCOROUTINE$15).doResume_5yljmg_k$ = function () {
+  protoOf($emitCOROUTINE$14).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -12036,17 +12036,17 @@
     this.$predicate_1 = $predicate;
   }
   protoOf(_no_name_provided__qut3iv_2).emit_t92u1f_k$ = function (value, $completion) {
-    var tmp = new $emitCOROUTINE$15(this, value, $completion);
+    var tmp = new $emitCOROUTINE$14(this, value, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  function $collectWhileCOROUTINE$12(_this__u8e3s4, predicate, resultContinuation) {
+  function $collectWhileCOROUTINE$11(_this__u8e3s4, predicate, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.predicate_1 = predicate;
   }
-  protoOf($collectWhileCOROUTINE$12).doResume_5yljmg_k$ = function () {
+  protoOf($collectWhileCOROUTINE$11).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -12119,11 +12119,11 @@
   function _get_action__ikx8yd($this) {
     return $this.action_1;
   }
-  function $onSubscriptionCOROUTINE$2(_this__u8e3s4, resultContinuation) {
+  function $onSubscriptionCOROUTINE$15(_this__u8e3s4, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
   }
-  protoOf($onSubscriptionCOROUTINE$2).doResume_5yljmg_k$ = function () {
+  protoOf($onSubscriptionCOROUTINE$15).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -12197,7 +12197,7 @@
     return this.collector_1.emit_t92u1f_k$(value, $completion);
   };
   protoOf(SubscribedFlowCollector).onSubscription_q7qr5n_k$ = function ($completion) {
-    var tmp = new $onSubscriptionCOROUTINE$2(this, $completion);
+    var tmp = new $onSubscriptionCOROUTINE$15(this, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -12206,17 +12206,17 @@
     return _this__u8e3s4.collect_aksokr_k$(NopCollector_getInstance(), $completion);
   }
   function first(_this__u8e3s4, predicate, $completion) {
-    var tmp = new $firstCOROUTINE$19(_this__u8e3s4, predicate, $completion);
+    var tmp = new $firstCOROUTINE$16(_this__u8e3s4, predicate, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   }
-  function $emitCOROUTINE$20(_this__u8e3s4, value, resultContinuation) {
+  function $emitCOROUTINE$17(_this__u8e3s4, value, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.value_1 = value;
   }
-  protoOf($emitCOROUTINE$20).doResume_5yljmg_k$ = function () {
+  protoOf($emitCOROUTINE$17).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -12277,17 +12277,17 @@
     this.$result_1 = $result;
   }
   protoOf(_no_name_provided__qut3iv_3).emit_t92u1f_k$ = function (value, $completion) {
-    var tmp = new $emitCOROUTINE$20(this, value, $completion);
+    var tmp = new $emitCOROUTINE$17(this, value, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   };
-  function $firstCOROUTINE$19(_this__u8e3s4, predicate, resultContinuation) {
+  function $firstCOROUTINE$16(_this__u8e3s4, predicate, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.predicate_1 = predicate;
   }
-  protoOf($firstCOROUTINE$19).doResume_5yljmg_k$ = function () {
+  protoOf($firstCOROUTINE$16).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -14612,12 +14612,12 @@
   function _get_block__jewopo($this) {
     return $this.block_1;
   }
-  function $invokeBlockCOROUTINE$25(_this__u8e3s4, argument, resultContinuation) {
+  function $invokeBlockCOROUTINE$22(_this__u8e3s4, argument, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.argument_1 = argument;
   }
-  protoOf($invokeBlockCOROUTINE$25).doResume_5yljmg_k$ = function () {
+  protoOf($invokeBlockCOROUTINE$22).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -14720,7 +14720,7 @@
     return $this.internalResult_1;
   }
   function doSelectSuspend($this, $completion) {
-    var tmp = new $doSelectSuspendCOROUTINE$22($this, $completion);
+    var tmp = new $doSelectSuspendCOROUTINE$19($this, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -14896,13 +14896,13 @@
     return tmp_0;
   }
   function complete($this, $completion) {
-    var tmp = new $completeCOROUTINE$23($this, $completion);
+    var tmp = new $completeCOROUTINE$20($this, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
   }
   function processResultAndInvokeBlockRecoveringException($this, clause, internalResult, $completion) {
-    var tmp = new $processResultAndInvokeBlockRecoveringExceptionCOROUTINE$24($this, clause, internalResult, $completion);
+    var tmp = new $processResultAndInvokeBlockRecoveringExceptionCOROUTINE$21($this, clause, internalResult, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -14969,7 +14969,7 @@
     return this.processResFunc_1(this.clauseObject_1, this.param_1, result);
   };
   protoOf(ClauseData).invokeBlock_xrc4lb_k$ = function (argument, $completion) {
-    var tmp = new $invokeBlockCOROUTINE$25(this, argument, $completion);
+    var tmp = new $invokeBlockCOROUTINE$22(this, argument, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -14999,11 +14999,11 @@
     var tmp0_safe_receiver = this.onCancellationConstructor_1;
     return tmp0_safe_receiver == null ? null : tmp0_safe_receiver(select, this.param_1, internalResult);
   };
-  function $doSelectCOROUTINE$21(_this__u8e3s4, resultContinuation) {
+  function $doSelectCOROUTINE$18(_this__u8e3s4, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
   }
-  protoOf($doSelectCOROUTINE$21).doResume_5yljmg_k$ = function () {
+  protoOf($doSelectCOROUTINE$18).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -15051,11 +15051,11 @@
       }
      while (true);
   };
-  function $doSelectSuspendCOROUTINE$22(_this__u8e3s4, resultContinuation) {
+  function $doSelectSuspendCOROUTINE$19(_this__u8e3s4, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
   }
-  protoOf($doSelectSuspendCOROUTINE$22).doResume_5yljmg_k$ = function () {
+  protoOf($doSelectSuspendCOROUTINE$19).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -15094,11 +15094,11 @@
       }
      while (true);
   };
-  function $completeCOROUTINE$23(_this__u8e3s4, resultContinuation) {
+  function $completeCOROUTINE$20(_this__u8e3s4, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
   }
-  protoOf($completeCOROUTINE$23).doResume_5yljmg_k$ = function () {
+  protoOf($completeCOROUTINE$20).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -15152,13 +15152,13 @@
       }
      while (true);
   };
-  function $processResultAndInvokeBlockRecoveringExceptionCOROUTINE$24(_this__u8e3s4, clause, internalResult, resultContinuation) {
+  function $processResultAndInvokeBlockRecoveringExceptionCOROUTINE$21(_this__u8e3s4, clause, internalResult, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
     this._this__u8e3s4__1 = _this__u8e3s4;
     this.clause_1 = clause;
     this.internalResult_1 = internalResult;
   }
-  protoOf($processResultAndInvokeBlockRecoveringExceptionCOROUTINE$24).doResume_5yljmg_k$ = function () {
+  protoOf($processResultAndInvokeBlockRecoveringExceptionCOROUTINE$21).doResume_5yljmg_k$ = function () {
     var suspendResult = this.get_result_iyg5d2_k$();
     $sm: do
       try {
@@ -15221,7 +15221,7 @@
     return this.context_1;
   };
   protoOf(SelectImplementation).doSelect_2tssk0_k$ = function ($completion) {
-    var tmp = new $doSelectCOROUTINE$21(this, $completion);
+    var tmp = new $doSelectCOROUTINE$18(this, $completion);
     tmp.set_result_xj64lm_k$(Unit_getInstance());
     tmp.set_exception_px07aa_k$(null);
     return tmp.doResume_5yljmg_k$();
@@ -16511,8 +16511,8 @@
   _.$_$.j = CancellableContinuationImpl;
   _.$_$.k = CompletableDeferred_0;
   _.$_$.l = CoroutineDispatcher;
-  _.$_$.m = CoroutineScope;
-  _.$_$.n = CoroutineScope_0;
+  _.$_$.m = CoroutineScope_0;
+  _.$_$.n = CoroutineScope;
   _.$_$.o = Job_0;
   _.$_$.p = get_MODE_CANCELLABLE;
   _.$_$.q = SupervisorJob;

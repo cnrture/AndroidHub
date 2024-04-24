@@ -1,17 +1,17 @@
-2024-04-23 20:35:24.366 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
-2024-04-23 20:35:24.368 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
-2024-04-23 20:35:24.376 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
-2024-04-23 20:35:24.472 [main] INFO  ktor.application - Loaded and initialized server API jar in 77ms.
-2024-04-23 20:35:24.480 [main] INFO  ktor.application - Initializing Kobweb streams.
-2024-04-23 20:35:24.495 [main] INFO  ktor.application - Application started in 0.154 seconds.
-2024-04-23 20:35:24.547 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
-2024-04-23 20:35:42.739 [eventLoopGroupProxy-4-2] ERROR ktor.application - kotlinx.serialization.SerializationException: Serializer for class 'Exception' is not found.
+2024-04-24 21:14:03.419 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
+2024-04-24 21:14:03.421 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
+2024-04-24 21:14:03.430 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
+2024-04-24 21:14:03.533 [main] INFO  ktor.application - Loaded and initialized server API jar in 83ms.
+2024-04-24 21:14:03.544 [main] INFO  ktor.application - Initializing Kobweb streams.
+2024-04-24 21:14:03.567 [main] INFO  ktor.application - Application started in 0.175 seconds.
+2024-04-24 21:14:03.630 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-04-24 21:14:24.932 [eventLoopGroupProxy-4-2] ERROR ktor.application - kotlinx.serialization.SerializationException: Serializer for class 'Exception' is not found.
 Mark the class as @Serializable or provide the serializer explicitly.
 	at kotlinx.serialization.internal.Platform_commonKt.serializerNotRegistered(Platform.common.kt:91)
 	at kotlinx.serialization.internal.PlatformKt.platformSpecificSerializerNotRegistered(Platform.kt:29)
 	at kotlinx.serialization.SerializersKt__SerializersKt.serializer(Serializers.kt:60)
 	at kotlinx.serialization.SerializersKt.serializer(Unknown Source)
-	at com.canerture.androidhub.api.PostsKt.getPosts(Posts.kt:25)
+	at com.canerture.androidhub.api.PostsKt.getPosts(Posts.kt:30)
 	at ApisFactoryImpl$create$1.invokeSuspend(ApisFactoryImpl.kt:17)
 	at ApisFactoryImpl$create$1.invoke(ApisFactoryImpl.kt)
 	at ApisFactoryImpl$create$1.invoke(ApisFactoryImpl.kt)
@@ -84,5 +84,5 @@ Mark the class as @Serializable or provide the serializer explicitly.
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 
-2024-04-23 20:35:43.997 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
-2024-04-23 20:35:46.084 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
+2024-04-24 21:14:26.091 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
+2024-04-24 21:14:28.171 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.

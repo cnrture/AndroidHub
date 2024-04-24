@@ -26,14 +26,14 @@
   var setMetadataFor = kotlin_kotlin.$_$.gc;
   var VOID = kotlin_kotlin.$_$.g;
   var Unit_getInstance = kotlin_kotlin.$_$.w4;
+  var objectMeta = kotlin_kotlin.$_$.ec;
+  var asList = kotlin_kotlin.$_$.j6;
+  var interfaceMeta = kotlin_kotlin.$_$.gb;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.m;
   var addAll = kotlin_kotlin.$_$.b6;
   var to = kotlin_kotlin.$_$.mh;
   var Pair = kotlin_kotlin.$_$.ag;
-  var objectMeta = kotlin_kotlin.$_$.ec;
-  var asList = kotlin_kotlin.$_$.j6;
-  var interfaceMeta = kotlin_kotlin.$_$.gb;
   var THROW_IAE = kotlin_kotlin.$_$.eg;
   var enumEntries = kotlin_kotlin.$_$.ja;
   var Enum = kotlin_kotlin.$_$.sf;
@@ -41,9 +41,9 @@
   var charSequenceLength = kotlin_kotlin.$_$.sa;
   var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.x;
   var ensureNotNull = kotlin_kotlin.$_$.xg;
+  var toString = kotlin_kotlin.$_$.kc;
   var hashCode = kotlin_kotlin.$_$.eb;
   var equals = kotlin_kotlin.$_$.xa;
-  var toString = kotlin_kotlin.$_$.kc;
   var joinToString = kotlin_kotlin.$_$.r7;
   var getStringHashCode = kotlin_kotlin.$_$.db;
   var objectCreate = kotlin_kotlin.$_$.dc;
@@ -80,8 +80,8 @@
   var emptyList = kotlin_kotlin.$_$.d7;
   var copyToArray = kotlin_kotlin.$_$.b7;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.c1;
-  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.kh;
   var DOMScope = kotlin_org_jetbrains_compose_html_internal_html_core_runtime.$_$.a;
+  var throwUninitializedPropertyAccessException = kotlin_kotlin.$_$.kh;
   var SideEffect = kotlin_org_jetbrains_compose_runtime_runtime.$_$.o;
   var RememberObserver = kotlin_org_jetbrains_compose_runtime_runtime.$_$.n;
   var lazy = kotlin_kotlin.$_$.ch;
@@ -97,6 +97,7 @@
   //endregion
   //region block: pre-declaration
   setMetadataFor(ExperimentalComposeWebApi, 'ExperimentalComposeWebApi', classMeta, VOID, [Annotation]);
+  setMetadataFor(Companion, 'Companion', objectMeta);
   function onContextMenu(listener) {
     this.registerEventListener_oiyxlj_k$(new MouseEventListener('contextmenu', listener));
   }
@@ -247,17 +248,16 @@
   }
   setMetadataFor(AttrsScope, 'AttrsScope', interfaceMeta, VOID, [EventsListenerScope]);
   setMetadataFor(AttrsScopeBuilder, 'AttrsScopeBuilder', classMeta, VOID, [AttrsScope, EventsListenerScope], AttrsScopeBuilder);
-  setMetadataFor(Companion, 'Companion', objectMeta);
-  setMetadataFor(EventsListenerScopeBuilder, 'EventsListenerScopeBuilder', classMeta, VOID, [EventsListenerScope], EventsListenerScopeBuilder);
   setMetadataFor(Companion_0, 'Companion', objectMeta);
+  setMetadataFor(EventsListenerScopeBuilder, 'EventsListenerScopeBuilder', classMeta, VOID, [EventsListenerScope], EventsListenerScopeBuilder);
   setMetadataFor(HtmlAttrMarker, 'HtmlAttrMarker', classMeta, VOID, [Annotation]);
   setMetadataFor(DirType, 'DirType', classMeta);
   setMetadataFor(Ltr, 'Ltr', objectMeta, DirType);
   setMetadataFor(Rtl, 'Rtl', objectMeta, DirType);
   setMetadataFor(Auto, 'Auto', objectMeta, DirType);
-  setMetadataFor(ButtonType, 'ButtonType', classMeta, Enum);
-  setMetadataFor(InputMode, 'InputMode', classMeta, Enum);
   setMetadataFor(Draggable, 'Draggable', classMeta, Enum);
+  setMetadataFor(InputMode, 'InputMode', classMeta, Enum);
+  setMetadataFor(ButtonType, 'ButtonType', classMeta, Enum);
   setMetadataFor(SyntheticEventListener, 'SyntheticEventListener', classMeta, VOID, [NamedEventListener]);
   setMetadataFor(MouseEventListener, 'MouseEventListener', classMeta, SyntheticEventListener);
   setMetadataFor(MouseWheelEventListener, 'MouseWheelEventListener', classMeta, SyntheticEventListener);
@@ -663,14 +663,14 @@
   setMetadataFor(FlexDirection, 'FlexDirection', interfaceMeta, VOID, [StylePropertyEnum]);
   setMetadataFor(Companion_12, 'Companion', objectMeta);
   setMetadataFor(JustifyContent, 'JustifyContent', interfaceMeta, VOID, [StylePropertyEnum]);
-  setMetadataFor(CSSRuleDeclaration, 'CSSRuleDeclaration', interfaceMeta);
-  setMetadataFor(CSSStyledRuleDeclaration, 'CSSStyledRuleDeclaration', interfaceMeta);
-  setMetadataFor(CSSKeyframeRuleDeclaration, 'CSSKeyframeRuleDeclaration', classMeta, VOID, [CSSRuleDeclaration, CSSStyledRuleDeclaration]);
   setMetadataFor(CSSKeyframe, 'CSSKeyframe', classMeta);
   setMetadataFor(From, 'From', objectMeta, CSSKeyframe);
   setMetadataFor(To, 'To', objectMeta, CSSKeyframe);
   setMetadataFor(Percentage, 'Percentage', classMeta, CSSKeyframe);
   setMetadataFor(Combine, 'Combine', classMeta, CSSKeyframe);
+  setMetadataFor(CSSRuleDeclaration, 'CSSRuleDeclaration', interfaceMeta);
+  setMetadataFor(CSSStyledRuleDeclaration, 'CSSStyledRuleDeclaration', interfaceMeta);
+  setMetadataFor(CSSKeyframeRuleDeclaration, 'CSSKeyframeRuleDeclaration', classMeta, VOID, [CSSRuleDeclaration, CSSStyledRuleDeclaration]);
   setMetadataFor(CSSNamedKeyframes, 'CSSNamedKeyframes', interfaceMeta);
   setMetadataFor(CSSKeyframesRuleDeclaration, 'CSSKeyframesRuleDeclaration', classMeta, VOID, [CSSRuleDeclaration, CSSNamedKeyframes]);
   setMetadataFor(CSSKeyframesBuilder, 'CSSKeyframesBuilder', classMeta, VOID, VOID, CSSKeyframesBuilder);
@@ -693,9 +693,9 @@
   setMetadataFor(CSSStyleRuleDeclaration, 'CSSStyleRuleDeclaration', classMeta, VOID, [CSSRuleDeclaration, CSSStyledRuleDeclaration]);
   setMetadataFor(CSSUnit, 'CSSUnit', interfaceMeta);
   setMetadataFor(CSSUnitLengthOrPercentage, 'CSSUnitLengthOrPercentage', interfaceMeta, VOID, [CSSUnit]);
+  setMetadataFor(CSSUnitLength, 'CSSUnitLength', interfaceMeta, VOID, [CSSUnitLengthOrPercentage]);
   setMetadataFor(CSSUnitPercentage, 'CSSUnitPercentage', interfaceMeta, VOID, [CSSUnitLengthOrPercentage]);
   setMetadataFor(percent, 'percent', interfaceMeta, VOID, [CSSUnitPercentage]);
-  setMetadataFor(CSSUnitLength, 'CSSUnitLength', interfaceMeta, VOID, [CSSUnitLengthOrPercentage]);
   setMetadataFor(CSSUnitRel, 'CSSUnitRel', interfaceMeta, VOID, [CSSUnitLength]);
   setMetadataFor(em, 'em', interfaceMeta, VOID, [CSSUnitRel]);
   setMetadataFor(ex, 'ex', interfaceMeta, VOID, [CSSUnitRel]);
@@ -742,9 +742,9 @@
   setMetadataFor(HSL, 'HSL', classMeta);
   setMetadataFor(HSLA, 'HSLA', classMeta);
   setMetadataFor(Color, 'Color', objectMeta);
-  setMetadataFor(StylePropertyDeclaration, 'StylePropertyDeclaration', classMeta);
   setMetadataFor(CSSVariable, 'CSSVariable', interfaceMeta);
   setMetadataFor(CSSStyleVariable, 'CSSStyleVariable', classMeta, VOID, [CSSVariable]);
+  setMetadataFor(StylePropertyDeclaration, 'StylePropertyDeclaration', classMeta);
   setMetadataFor(sam$kotlin_properties_ReadOnlyProperty$0, 'sam$kotlin_properties_ReadOnlyProperty$0', classMeta, VOID, [ReadOnlyProperty]);
   setMetadataFor(CSSSelector, 'CSSSelector', classMeta);
   setMetadataFor(StyleSheet$CSSHolder$provideDelegate$selector$1, VOID, classMeta, CSSSelector);
@@ -762,7 +762,6 @@
   setMetadataFor(StyleSheetBuilder, 'StyleSheetBuilder', interfaceMeta, VOID, [CSSRulesHolder, GenericStyleSheetBuilder]);
   setMetadataFor(StyleSheet, 'StyleSheet', classMeta, VOID, [StyleSheetBuilder, CSSRulesHolder], StyleSheet_init_$Create$);
   setMetadataFor(CSSRulesHolderState, 'CSSRulesHolderState', classMeta, VOID, [CSSRulesHolder], CSSRulesHolderState);
-  setMetadataFor(StyleSheetBuilderImpl, 'StyleSheetBuilderImpl', classMeta, VOID, [StyleSheetBuilder], StyleSheetBuilderImpl);
   setMetadataFor(RawSelector, 'RawSelector', classMeta, CSSSelector);
   setMetadataFor(Combine_1, 'Combine', classMeta, CSSSelector);
   setMetadataFor(Attribute, 'Attribute', classMeta, CSSSelector);
@@ -781,6 +780,7 @@
   setMetadataFor(Not_0, 'Not', classMeta, PseudoClassInternal);
   setMetadataFor(PseudoElementInternal, 'PseudoElementInternal', classMeta, CSSSelector);
   setMetadataFor(Slotted, 'Slotted', classMeta, PseudoElementInternal);
+  setMetadataFor(StyleSheetBuilderImpl, 'StyleSheetBuilderImpl', classMeta, VOID, [StyleSheetBuilder], StyleSheetBuilderImpl);
   setMetadataFor(CSSBorder, 'CSSBorder', classMeta, VOID, VOID, CSSBorder);
   setMetadataFor(Operator, 'Operator', classMeta, Enum);
   setMetadataFor(Attribute_0, 'Attribute', objectMeta);
@@ -806,9 +806,9 @@
     $composer_0.endReplaceableGroup_ern0ak_k$();
   }
   setMetadataFor(ElementScope, 'ElementScope', interfaceMeta, VOID, [DOMScope]);
+  setMetadataFor(DomEffectScope, 'DomEffectScope', interfaceMeta);
   setMetadataFor(ElementScopeBase, 'ElementScopeBase', classMeta, VOID, [ElementScope]);
   setMetadataFor(ElementScopeImpl, 'ElementScopeImpl', classMeta, ElementScopeBase, VOID, ElementScopeImpl);
-  setMetadataFor(DomEffectScope, 'DomEffectScope', interfaceMeta);
   setMetadataFor(DomDisposableEffectHolder, 'DomDisposableEffectHolder', classMeta, VOID, [RememberObserver, DomEffectScope]);
   setMetadataFor(Companion_16, 'Companion', objectMeta);
   setMetadataFor(ElementBuilder, 'ElementBuilder', interfaceMeta);
@@ -821,8 +821,8 @@
   setMetadataFor(SyntheticFocusEvent, 'SyntheticFocusEvent', classMeta, SyntheticEvent);
   setMetadataFor(SyntheticKeyboardEvent, 'SyntheticKeyboardEvent', classMeta, SyntheticEvent);
   setMetadataFor(SyntheticMouseEvent, 'SyntheticMouseEvent', classMeta, SyntheticEvent);
-  setMetadataFor(SyntheticDragEvent, 'SyntheticDragEvent', classMeta, SyntheticMouseEvent);
   setMetadataFor(SyntheticWheelEvent, 'SyntheticWheelEvent', classMeta, SyntheticMouseEvent);
+  setMetadataFor(SyntheticDragEvent, 'SyntheticDragEvent', classMeta, SyntheticMouseEvent);
   setMetadataFor(SyntheticTouchEvent, 'SyntheticTouchEvent', classMeta, SyntheticEvent);
   //endregion
   function ExperimentalComposeWebApi() {
@@ -854,21 +854,21 @@
     return setCheckedValue;
   }
   var setCheckedValue;
-  function href(_this__u8e3s4, value) {
+  function type_0(_this__u8e3s4, value) {
     _init_properties_Attrs_kt__w5qjhs();
-    return _this__u8e3s4.attr_w68641_k$('href', value);
-  }
-  function src(_this__u8e3s4, value) {
-    _init_properties_Attrs_kt__w5qjhs();
-    return _this__u8e3s4.attr_w68641_k$('src', value);
+    return _this__u8e3s4.attr_w68641_k$('type', value.get_str_18ivy0_k$());
   }
   function alt(_this__u8e3s4, value) {
     _init_properties_Attrs_kt__w5qjhs();
     return _this__u8e3s4.attr_w68641_k$('alt', value);
   }
-  function type_0(_this__u8e3s4, value) {
+  function src(_this__u8e3s4, value) {
     _init_properties_Attrs_kt__w5qjhs();
-    return _this__u8e3s4.attr_w68641_k$('type', value.get_str_18ivy0_k$());
+    return _this__u8e3s4.attr_w68641_k$('src', value);
+  }
+  function href(_this__u8e3s4, value) {
+    _init_properties_Attrs_kt__w5qjhs();
+    return _this__u8e3s4.attr_w68641_k$('href', value);
   }
   function setInputValue$lambda(e, v) {
     _init_properties_Attrs_kt__w5qjhs();
@@ -903,6 +903,57 @@
     return setClassList;
   }
   var setClassList;
+  function Companion() {
+    Companion_instance = this;
+    this.CLASS_1 = 'class';
+    this.ID_1 = 'id';
+    this.HIDDEN_1 = 'hidden';
+    this.TITLE_1 = 'title';
+    this.DIR_1 = 'dir';
+    this.DRAGGABLE_1 = 'draggable';
+    this.CONTENT_EDITABLE_1 = 'contenteditable';
+    this.LANG_1 = 'lang';
+    this.TAB_INDEX_1 = 'tabindex';
+    this.SPELLCHECK_1 = 'spellcheck';
+  }
+  protoOf(Companion).get_CLASS_i7lkq7_k$ = function () {
+    return this.CLASS_1;
+  };
+  protoOf(Companion).get_ID_kntopo_k$ = function () {
+    return this.ID_1;
+  };
+  protoOf(Companion).get_HIDDEN_1dp9hp_k$ = function () {
+    return this.HIDDEN_1;
+  };
+  protoOf(Companion).get_TITLE_igwjrj_k$ = function () {
+    return this.TITLE_1;
+  };
+  protoOf(Companion).get_DIR_18jvuk_k$ = function () {
+    return this.DIR_1;
+  };
+  protoOf(Companion).get_DRAGGABLE_lgsxfg_k$ = function () {
+    return this.DRAGGABLE_1;
+  };
+  protoOf(Companion).get_CONTENT_EDITABLE_pkf1hv_k$ = function () {
+    return this.CONTENT_EDITABLE_1;
+  };
+  protoOf(Companion).get_LANG_wo4kl3_k$ = function () {
+    return this.LANG_1;
+  };
+  protoOf(Companion).get_TAB_INDEX_us6klb_k$ = function () {
+    return this.TAB_INDEX_1;
+  };
+  protoOf(Companion).get_SPELLCHECK_xv0ui1_k$ = function () {
+    return this.SPELLCHECK_1;
+  };
+  var Companion_instance;
+  function Companion_getInstance_0() {
+    if (Companion_instance == null)
+      new Companion();
+    return Companion_instance;
+  }
+  function AttrsScope() {
+  }
   function get_$stableprop() {
     return 8;
   }
@@ -1090,57 +1141,6 @@
     this.propertyUpdates_1.addAll_4lagoh_k$(attrsScope.propertyUpdates_1);
     this.eventsListenerScopeBuilder_1.copyListenersFrom_8b6my_k$(attrsScope.eventsListenerScopeBuilder_1);
   };
-  function Companion() {
-    Companion_instance = this;
-    this.CLASS_1 = 'class';
-    this.ID_1 = 'id';
-    this.HIDDEN_1 = 'hidden';
-    this.TITLE_1 = 'title';
-    this.DIR_1 = 'dir';
-    this.DRAGGABLE_1 = 'draggable';
-    this.CONTENT_EDITABLE_1 = 'contenteditable';
-    this.LANG_1 = 'lang';
-    this.TAB_INDEX_1 = 'tabindex';
-    this.SPELLCHECK_1 = 'spellcheck';
-  }
-  protoOf(Companion).get_CLASS_i7lkq7_k$ = function () {
-    return this.CLASS_1;
-  };
-  protoOf(Companion).get_ID_kntopo_k$ = function () {
-    return this.ID_1;
-  };
-  protoOf(Companion).get_HIDDEN_1dp9hp_k$ = function () {
-    return this.HIDDEN_1;
-  };
-  protoOf(Companion).get_TITLE_igwjrj_k$ = function () {
-    return this.TITLE_1;
-  };
-  protoOf(Companion).get_DIR_18jvuk_k$ = function () {
-    return this.DIR_1;
-  };
-  protoOf(Companion).get_DRAGGABLE_lgsxfg_k$ = function () {
-    return this.DRAGGABLE_1;
-  };
-  protoOf(Companion).get_CONTENT_EDITABLE_pkf1hv_k$ = function () {
-    return this.CONTENT_EDITABLE_1;
-  };
-  protoOf(Companion).get_LANG_wo4kl3_k$ = function () {
-    return this.LANG_1;
-  };
-  protoOf(Companion).get_TAB_INDEX_us6klb_k$ = function () {
-    return this.TAB_INDEX_1;
-  };
-  protoOf(Companion).get_SPELLCHECK_xv0ui1_k$ = function () {
-    return this.SPELLCHECK_1;
-  };
-  var Companion_instance;
-  function Companion_getInstance_0() {
-    if (Companion_instance == null)
-      new Companion();
-    return Companion_instance;
-  }
-  function AttrsScope() {
-  }
   function setClassList$lambda(e, classList) {
     _init_properties_AttrsScope_kt__ek7k4y();
     (function () {
@@ -1156,27 +1156,6 @@
       setClassList = setClassList$lambda;
     }
   }
-  function _get_listeners__760gzy($this) {
-    return $this.listeners_1;
-  }
-  function get_$stableprop_0() {
-    return 8;
-  }
-  function EventsListenerScopeBuilder() {
-    var tmp = this;
-    // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.listeners_1 = ArrayList_init_$Create$();
-    this.$stable_1 = 8;
-  }
-  protoOf(EventsListenerScopeBuilder).registerEventListener_oiyxlj_k$ = function (listener) {
-    this.listeners_1.add_utx5q5_k$(listener);
-  };
-  protoOf(EventsListenerScopeBuilder).copyListenersFrom_8b6my_k$ = function (from) {
-    this.listeners_1.addAll_4lagoh_k$(from.listeners_1);
-  };
-  protoOf(EventsListenerScopeBuilder).collectListeners_sutf4b_k$ = function () {
-    return this.listeners_1;
-  };
   function Companion_0() {
     Companion_instance_0 = this;
     this.COPY_1 = 'copy';
@@ -1360,6 +1339,27 @@
   }
   function EventsListenerScope() {
   }
+  function _get_listeners__760gzy($this) {
+    return $this.listeners_1;
+  }
+  function get_$stableprop_0() {
+    return 8;
+  }
+  function EventsListenerScopeBuilder() {
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp.listeners_1 = ArrayList_init_$Create$();
+    this.$stable_1 = 8;
+  }
+  protoOf(EventsListenerScopeBuilder).registerEventListener_oiyxlj_k$ = function (listener) {
+    this.listeners_1.add_utx5q5_k$(listener);
+  };
+  protoOf(EventsListenerScopeBuilder).copyListenersFrom_8b6my_k$ = function (from) {
+    this.listeners_1.addAll_4lagoh_k$(from.listeners_1);
+  };
+  protoOf(EventsListenerScopeBuilder).collectListeners_sutf4b_k$ = function () {
+    return this.listeners_1;
+  };
   function HtmlAttrMarker() {
   }
   protoOf(HtmlAttrMarker).equals = function (other) {
@@ -1426,22 +1426,22 @@
   protoOf(DirType).get_dirStr_cdza7h_k$ = function () {
     return this.dirStr_1;
   };
-  var ButtonType_Button_instance;
-  var ButtonType_Reset_instance;
-  var ButtonType_Submit_instance;
+  var Draggable_True_instance;
+  var Draggable_False_instance;
+  var Draggable_Auto_instance;
   function values() {
-    return [ButtonType_Button_getInstance(), ButtonType_Reset_getInstance(), ButtonType_Submit_getInstance()];
+    return [Draggable_True_getInstance(), Draggable_False_getInstance(), Draggable_Auto_getInstance()];
   }
   function valueOf(value) {
     switch (value) {
-      case 'Button':
-        return ButtonType_Button_getInstance();
-      case 'Reset':
-        return ButtonType_Reset_getInstance();
-      case 'Submit':
-        return ButtonType_Submit_getInstance();
+      case 'True':
+        return Draggable_True_getInstance();
+      case 'False':
+        return Draggable_False_getInstance();
+      case 'Auto':
+        return Draggable_Auto_getInstance();
       default:
-        ButtonType_initEntries();
+        Draggable_initEntries();
         THROW_IAE('No enum constant value.');
         break;
     }
@@ -1451,21 +1451,21 @@
       $ENTRIES = enumEntries(values());
     return $ENTRIES;
   }
-  var ButtonType_entriesInitialized;
-  function ButtonType_initEntries() {
-    if (ButtonType_entriesInitialized)
+  var Draggable_entriesInitialized;
+  function Draggable_initEntries() {
+    if (Draggable_entriesInitialized)
       return Unit_getInstance();
-    ButtonType_entriesInitialized = true;
-    ButtonType_Button_instance = new ButtonType('Button', 0, 'button');
-    ButtonType_Reset_instance = new ButtonType('Reset', 1, 'reset');
-    ButtonType_Submit_instance = new ButtonType('Submit', 2, 'submit');
+    Draggable_entriesInitialized = true;
+    Draggable_True_instance = new Draggable('True', 0, 'true');
+    Draggable_False_instance = new Draggable('False', 1, 'false');
+    Draggable_Auto_instance = new Draggable('Auto', 2, 'auto');
   }
   var $ENTRIES;
-  function ButtonType(name, ordinal, str) {
+  function Draggable(name, ordinal, str) {
     Enum.call(this, name, ordinal);
     this.str_1 = str;
   }
-  protoOf(ButtonType).get_str_18ivy0_k$ = function () {
+  protoOf(Draggable).get_str_18ivy0_k$ = function () {
     return this.str_1;
   };
   var InputMode_None_instance;
@@ -1530,22 +1530,22 @@
   protoOf(InputMode).get_str_18ivy0_k$ = function () {
     return this.str_1;
   };
-  var Draggable_True_instance;
-  var Draggable_False_instance;
-  var Draggable_Auto_instance;
+  var ButtonType_Button_instance;
+  var ButtonType_Reset_instance;
+  var ButtonType_Submit_instance;
   function values_1() {
-    return [Draggable_True_getInstance(), Draggable_False_getInstance(), Draggable_Auto_getInstance()];
+    return [ButtonType_Button_getInstance(), ButtonType_Reset_getInstance(), ButtonType_Submit_getInstance()];
   }
   function valueOf_1(value) {
     switch (value) {
-      case 'True':
-        return Draggable_True_getInstance();
-      case 'False':
-        return Draggable_False_getInstance();
-      case 'Auto':
-        return Draggable_Auto_getInstance();
+      case 'Button':
+        return ButtonType_Button_getInstance();
+      case 'Reset':
+        return ButtonType_Reset_getInstance();
+      case 'Submit':
+        return ButtonType_Submit_getInstance();
       default:
-        Draggable_initEntries();
+        ButtonType_initEntries();
         THROW_IAE('No enum constant value.');
         break;
     }
@@ -1555,34 +1555,34 @@
       $ENTRIES_1 = enumEntries(values_1());
     return $ENTRIES_1;
   }
-  var Draggable_entriesInitialized;
-  function Draggable_initEntries() {
-    if (Draggable_entriesInitialized)
+  var ButtonType_entriesInitialized;
+  function ButtonType_initEntries() {
+    if (ButtonType_entriesInitialized)
       return Unit_getInstance();
-    Draggable_entriesInitialized = true;
-    Draggable_True_instance = new Draggable('True', 0, 'true');
-    Draggable_False_instance = new Draggable('False', 1, 'false');
-    Draggable_Auto_instance = new Draggable('Auto', 2, 'auto');
+    ButtonType_entriesInitialized = true;
+    ButtonType_Button_instance = new ButtonType('Button', 0, 'button');
+    ButtonType_Reset_instance = new ButtonType('Reset', 1, 'reset');
+    ButtonType_Submit_instance = new ButtonType('Submit', 2, 'submit');
   }
   var $ENTRIES_1;
-  function Draggable(name, ordinal, str) {
+  function ButtonType(name, ordinal, str) {
     Enum.call(this, name, ordinal);
     this.str_1 = str;
   }
-  protoOf(Draggable).get_str_18ivy0_k$ = function () {
+  protoOf(ButtonType).get_str_18ivy0_k$ = function () {
     return this.str_1;
   };
-  function ButtonType_Button_getInstance() {
-    ButtonType_initEntries();
-    return ButtonType_Button_instance;
+  function Draggable_True_getInstance() {
+    Draggable_initEntries();
+    return Draggable_True_instance;
   }
-  function ButtonType_Reset_getInstance() {
-    ButtonType_initEntries();
-    return ButtonType_Reset_instance;
+  function Draggable_False_getInstance() {
+    Draggable_initEntries();
+    return Draggable_False_instance;
   }
-  function ButtonType_Submit_getInstance() {
-    ButtonType_initEntries();
-    return ButtonType_Submit_instance;
+  function Draggable_Auto_getInstance() {
+    Draggable_initEntries();
+    return Draggable_Auto_instance;
   }
   function InputMode_None_getInstance() {
     InputMode_initEntries();
@@ -1616,17 +1616,17 @@
     InputMode_initEntries();
     return InputMode_Url_instance;
   }
-  function Draggable_True_getInstance() {
-    Draggable_initEntries();
-    return Draggable_True_instance;
+  function ButtonType_Button_getInstance() {
+    ButtonType_initEntries();
+    return ButtonType_Button_instance;
   }
-  function Draggable_False_getInstance() {
-    Draggable_initEntries();
-    return Draggable_False_instance;
+  function ButtonType_Reset_getInstance() {
+    ButtonType_initEntries();
+    return ButtonType_Reset_instance;
   }
-  function Draggable_Auto_getInstance() {
-    Draggable_initEntries();
-    return Draggable_Auto_instance;
+  function ButtonType_Submit_getInstance() {
+    ButtonType_initEntries();
+    return ButtonType_Submit_instance;
   }
   function get_$stableprop_5() {
     return 0;
@@ -2796,70 +2796,15 @@
     return value;
   }
   function get_$stableprop_15() {
-    return 8;
-  }
-  function CSSKeyframeRuleDeclaration(keyframe, style) {
-    this.keyframe_1 = keyframe;
-    this.style_1 = style;
-    this.$stable_1 = 8;
-  }
-  protoOf(CSSKeyframeRuleDeclaration).get_keyframe_nerrnt_k$ = function () {
-    return this.keyframe_1;
-  };
-  protoOf(CSSKeyframeRuleDeclaration).get_style_iyqetk_k$ = function () {
-    return this.style_1;
-  };
-  protoOf(CSSKeyframeRuleDeclaration).get_header_e7o2vq_k$ = function () {
-    return this.keyframe_1.toString();
-  };
-  protoOf(CSSKeyframeRuleDeclaration).component1_7eebsc_k$ = function () {
-    return this.keyframe_1;
-  };
-  protoOf(CSSKeyframeRuleDeclaration).component2_7eebsb_k$ = function () {
-    return this.style_1;
-  };
-  protoOf(CSSKeyframeRuleDeclaration).copy_js03l5_k$ = function (keyframe, style) {
-    return new CSSKeyframeRuleDeclaration(keyframe, style);
-  };
-  protoOf(CSSKeyframeRuleDeclaration).copy$default_olqi3m_k$ = function (keyframe, style, $super) {
-    keyframe = keyframe === VOID ? this.keyframe_1 : keyframe;
-    style = style === VOID ? this.style_1 : style;
-    return $super === VOID ? this.copy_js03l5_k$(keyframe, style) : $super.copy_js03l5_k$.call(this, keyframe, style);
-  };
-  protoOf(CSSKeyframeRuleDeclaration).toString = function () {
-    return 'CSSKeyframeRuleDeclaration(keyframe=' + this.keyframe_1 + ', style=' + this.style_1 + ')';
-  };
-  protoOf(CSSKeyframeRuleDeclaration).hashCode = function () {
-    var result = hashCode(this.keyframe_1);
-    result = imul(result, 31) + hashCode(this.style_1) | 0;
-    return result;
-  };
-  protoOf(CSSKeyframeRuleDeclaration).equals = function (other) {
-    if (this === other)
-      return true;
-    if (!(other instanceof CSSKeyframeRuleDeclaration))
-      return false;
-    var tmp0_other_with_cast = other instanceof CSSKeyframeRuleDeclaration ? other : THROW_CCE();
-    if (!equals(this.keyframe_1, tmp0_other_with_cast.keyframe_1))
-      return false;
-    if (!equals(this.style_1, tmp0_other_with_cast.style_1))
-      return false;
-    return true;
-  };
-  function buildKeyframes(name, builder) {
-    var frames = CSSKeyframesBuilder_init_$Create$(builder).frames_1;
-    return new CSSKeyframesRuleDeclaration(name, frames);
+    return 0;
   }
   function get_$stableprop_16() {
     return 0;
   }
   function get_$stableprop_17() {
-    return 0;
-  }
-  function get_$stableprop_18() {
     return 8;
   }
-  function get_$stableprop_19() {
+  function get_$stableprop_18() {
     return 8;
   }
   function From() {
@@ -2958,14 +2903,63 @@
       return false;
     return true;
   };
-  function get_$stableprop_20() {
+  function get_$stableprop_19() {
     return 0;
   }
   function CSSKeyframe() {
     this.$stable_1 = 0;
   }
-  function CSSNamedKeyframes() {
+  function get_$stableprop_20() {
+    return 8;
   }
+  function CSSKeyframeRuleDeclaration(keyframe, style) {
+    this.keyframe_1 = keyframe;
+    this.style_1 = style;
+    this.$stable_1 = 8;
+  }
+  protoOf(CSSKeyframeRuleDeclaration).get_keyframe_nerrnt_k$ = function () {
+    return this.keyframe_1;
+  };
+  protoOf(CSSKeyframeRuleDeclaration).get_style_iyqetk_k$ = function () {
+    return this.style_1;
+  };
+  protoOf(CSSKeyframeRuleDeclaration).get_header_e7o2vq_k$ = function () {
+    return this.keyframe_1.toString();
+  };
+  protoOf(CSSKeyframeRuleDeclaration).component1_7eebsc_k$ = function () {
+    return this.keyframe_1;
+  };
+  protoOf(CSSKeyframeRuleDeclaration).component2_7eebsb_k$ = function () {
+    return this.style_1;
+  };
+  protoOf(CSSKeyframeRuleDeclaration).copy_js03l5_k$ = function (keyframe, style) {
+    return new CSSKeyframeRuleDeclaration(keyframe, style);
+  };
+  protoOf(CSSKeyframeRuleDeclaration).copy$default_olqi3m_k$ = function (keyframe, style, $super) {
+    keyframe = keyframe === VOID ? this.keyframe_1 : keyframe;
+    style = style === VOID ? this.style_1 : style;
+    return $super === VOID ? this.copy_js03l5_k$(keyframe, style) : $super.copy_js03l5_k$.call(this, keyframe, style);
+  };
+  protoOf(CSSKeyframeRuleDeclaration).toString = function () {
+    return 'CSSKeyframeRuleDeclaration(keyframe=' + this.keyframe_1 + ', style=' + this.style_1 + ')';
+  };
+  protoOf(CSSKeyframeRuleDeclaration).hashCode = function () {
+    var result = hashCode(this.keyframe_1);
+    result = imul(result, 31) + hashCode(this.style_1) | 0;
+    return result;
+  };
+  protoOf(CSSKeyframeRuleDeclaration).equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof CSSKeyframeRuleDeclaration))
+      return false;
+    var tmp0_other_with_cast = other instanceof CSSKeyframeRuleDeclaration ? other : THROW_CCE();
+    if (!equals(this.keyframe_1, tmp0_other_with_cast.keyframe_1))
+      return false;
+    if (!equals(this.style_1, tmp0_other_with_cast.style_1))
+      return false;
+    return true;
+  };
   function get_$stableprop_21() {
     return 8;
   }
@@ -3061,6 +3055,12 @@
     var element = new CSSKeyframeRuleDeclaration(new Percentage(_this__u8e3s4), buildCSSStyleRule(style));
     this_0.add_utx5q5_k$(element);
   };
+  function CSSNamedKeyframes() {
+  }
+  function buildKeyframes(name, builder) {
+    var frames = CSSKeyframesBuilder_init_$Create$(builder).frames_1;
+    return new CSSKeyframesRuleDeclaration(name, frames);
+  }
   function get_$stableprop_23() {
     return 0;
   }
@@ -3500,25 +3500,13 @@
   function unaryMinus(_this__u8e3s4) {
     return new CSSUnitValueTyped(-_this__u8e3s4.value, _this__u8e3s4.unit);
   }
-  function get_$stableprop_33() {
-    return 0;
-  }
-  function CSSRuleBuilderImpl() {
-    StyleScopeBuilder.call(this);
-    this.$stable_2 = 0;
+  function CSSStyleRuleBuilder() {
   }
   function CSSRuleDeclaration() {
   }
-  function CSSStyleRuleBuilder() {
+  function CSSGroupingRuleDeclaration() {
   }
-  function CSSStyledRuleDeclaration() {
-  }
-  function buildCSSStyleRule(cssRule) {
-    var builder = new CSSRuleBuilderImpl();
-    cssRule(builder);
-    return builder;
-  }
-  function get_$stableprop_34() {
+  function get_$stableprop_33() {
     return 8;
   }
   function CSSStyleRuleDeclaration(selector, style) {
@@ -3569,7 +3557,21 @@
       return false;
     return true;
   };
-  function CSSGroupingRuleDeclaration() {
+  function CSSStyledRuleDeclaration() {
+  }
+  function buildCSSStyleRule(cssRule) {
+    var builder = new CSSRuleBuilderImpl();
+    cssRule(builder);
+    return builder;
+  }
+  function get_$stableprop_34() {
+    return 0;
+  }
+  function CSSRuleBuilderImpl() {
+    StyleScopeBuilder.call(this);
+    this.$stable_2 = 0;
+  }
+  function CSSUnitLength() {
   }
   function percent() {
   }
@@ -3813,26 +3815,6 @@
   }
   function CSSUnit() {
   }
-  function CSSUnitPercentage() {
-  }
-  function CSSUnitRel() {
-  }
-  function CSSUnitAbs() {
-  }
-  function CSSUnitAngle() {
-  }
-  function CSSUnitTime() {
-  }
-  function CSSUnitFrequency() {
-  }
-  function CSSUnitResolution() {
-  }
-  function CSSUnitFlex() {
-  }
-  function CSSUnitLengthOrPercentage() {
-  }
-  function CSSUnitLength() {
-  }
   function get_cssRem(_this__u8e3s4) {
     var tmp = numberToDouble(_this__u8e3s4);
     // Inline function 'org.jetbrains.compose.web.css.Companion.rem' call
@@ -3848,6 +3830,10 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return new CSSUnitValueTyped(tmp, 'px');
+  }
+  function CSSUnitTime() {
+  }
+  function CSSUnitLengthOrPercentage() {
   }
   function get_percent(_this__u8e3s4) {
     var tmp = numberToDouble(_this__u8e3s4);
@@ -3888,6 +3874,20 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return new CSSUnitValueTyped(tmp, 'em');
+  }
+  function CSSUnitPercentage() {
+  }
+  function CSSUnitRel() {
+  }
+  function CSSUnitAbs() {
+  }
+  function CSSUnitAngle() {
+  }
+  function CSSUnitFrequency() {
+  }
+  function CSSUnitResolution() {
+  }
+  function CSSUnitFlex() {
   }
   function get_$stableprop_35() {
     return 0;
@@ -4662,6 +4662,8 @@
     // Inline function 'kotlin.js.asDynamic' call
     return value;
   }
+  function StyleScope() {
+  }
   function get_$stableprop_41() {
     return 0;
   }
@@ -4699,9 +4701,17 @@
     this.get_properties_zhllqc_k$().addAll_4lagoh_k$(sb.get_properties_zhllqc_k$());
     this.get_variables_75f0zy_k$().addAll_4lagoh_k$(sb.get_variables_75f0zy_k$());
   };
-  function StyleHolder() {
+  function get_$stableprop_42() {
+    return 0;
   }
-  function StyleScope() {
+  function CSSStyleVariable(name) {
+    this.name_1 = name;
+    this.$stable_1 = 0;
+  }
+  protoOf(CSSStyleVariable).get_name_woqyms_k$ = function () {
+    return this.name_1;
+  };
+  function StyleHolder() {
   }
   function StylePropertyDeclaration_init_$Init$(name, value, $this) {
     // Inline function 'kotlin.js.unsafeCast' call
@@ -4721,7 +4731,7 @@
   function StylePropertyDeclaration_init_$Create$_0(name, value) {
     return StylePropertyDeclaration_init_$Init$_0(name, value, objectCreate(protoOf(StylePropertyDeclaration)));
   }
-  function get_$stableprop_42() {
+  function get_$stableprop_43() {
     return 8;
   }
   function StylePropertyDeclaration(name, value) {
@@ -4802,16 +4812,6 @@
     }
     return tmp$ret$0;
   }
-  function get_$stableprop_43() {
-    return 0;
-  }
-  function CSSStyleVariable(name) {
-    this.name_1 = name;
-    this.$stable_1 = 0;
-  }
-  protoOf(CSSStyleVariable).get_name_woqyms_k$ = function () {
-    return this.name_1;
-  };
   function CSSVariable() {
   }
   function CSSVariableValue(value) {
@@ -4827,16 +4827,6 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     return value;
-  }
-  function buildCSS(thisClass, thisContext, cssRule) {
-    var styleSheet = new StyleSheetBuilderImpl();
-    var tmp0_elvis_lhs = thisClass instanceof CSSSelfSelector ? thisClass : null;
-    var root = tmp0_elvis_lhs == null ? new CSSSelfSelector(thisClass) : tmp0_elvis_lhs;
-    var tmp1_elvis_lhs = thisContext instanceof CSSSelfSelector ? thisContext : null;
-    var self_0 = tmp1_elvis_lhs == null ? new CSSSelfSelector(thisContext) : tmp1_elvis_lhs;
-    var builder = new CSSBuilderImpl(root, self_0, styleSheet);
-    cssRule(builder);
-    return to(builder, styleSheet.get_cssRules_jdoznh_k$());
   }
   function _set_counter__gelo1j($this, _set____db54di) {
     $this.counter_1 = _set____db54di;
@@ -5036,6 +5026,16 @@
   protoOf(CSSRulesHolderState).add_19esmm_k$ = function (cssRule) {
     this.cssRules_1.add_wl2rvy_k$(cssRule);
   };
+  function buildCSS(thisClass, thisContext, cssRule) {
+    var styleSheet = new StyleSheetBuilderImpl();
+    var tmp0_elvis_lhs = thisClass instanceof CSSSelfSelector ? thisClass : null;
+    var root = tmp0_elvis_lhs == null ? new CSSSelfSelector(thisClass) : tmp0_elvis_lhs;
+    var tmp1_elvis_lhs = thisContext instanceof CSSSelfSelector ? thisContext : null;
+    var self_0 = tmp1_elvis_lhs == null ? new CSSSelfSelector(thisContext) : tmp1_elvis_lhs;
+    var builder = new CSSBuilderImpl(root, self_0, styleSheet);
+    cssRule(builder);
+    return to(builder, styleSheet.get_cssRules_jdoznh_k$());
+  }
   function Style(styleSheet, $composer, $changed) {
     var $composer_0 = $composer;
     $composer_0.startReplaceableGroup_ip860b_k$(-1196466140);
@@ -5047,42 +5047,6 @@
     return Universal;
   }
   var Universal;
-  function GenericStyleSheetBuilder() {
-  }
-  function SelectorsScope() {
-  }
-  function CSSRulesHolder() {
-  }
-  function get_$stableprop_47() {
-    return 8;
-  }
-  function StyleSheetBuilderImpl() {
-    var tmp = this;
-    // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.cssRules_1 = ArrayList_init_$Create$();
-    this.$stable_1 = 8;
-  }
-  protoOf(StyleSheetBuilderImpl).get_cssRules_jdoznh_k$ = function () {
-    return this.cssRules_1;
-  };
-  protoOf(StyleSheetBuilderImpl).add_19esmm_k$ = function (cssRule) {
-    this.get_cssRules_jdoznh_k$().add_utx5q5_k$(cssRule);
-  };
-  protoOf(StyleSheetBuilderImpl).buildRules_fgavxj_k$ = function (rulesBuild) {
-    // Inline function 'kotlin.apply' call
-    var this_0 = new StyleSheetBuilderImpl();
-    // Inline function 'kotlin.contracts.contract' call
-    rulesBuild(this_0);
-    return this_0.get_cssRules_jdoznh_k$();
-  };
-  protoOf(StyleSheetBuilderImpl).buildRules_xiubel_k$ = function (rulesBuild) {
-    return this.buildRules_fgavxj_k$(rulesBuild);
-  };
-  protoOf(StyleSheetBuilderImpl).style_r4zx12_k$ = function (selector, cssRule) {
-    return this.style_pgxmpo_k$(selector, cssRule);
-  };
-  function StyleSheetBuilder() {
-  }
   function RawSelector(selector) {
     CSSSelector.call(this);
     this.selector_1 = selector;
@@ -5116,6 +5080,8 @@
       return false;
     return true;
   };
+  function SelectorsScope() {
+  }
   function Combine$asString$lambda(it) {
     return it.asString_l3f38d_k$();
   }
@@ -5485,8 +5451,11 @@
       return false;
     return true;
   };
-  function get_$stableprop_48() {
+  function get_$stableprop_47() {
     return 0;
+  }
+  function get_$stableprop_48() {
+    return 8;
   }
   function get_$stableprop_49() {
     return 8;
@@ -5498,12 +5467,9 @@
     return 8;
   }
   function get_$stableprop_52() {
-    return 8;
-  }
-  function get_$stableprop_53() {
     return 0;
   }
-  function get_$stableprop_54() {
+  function get_$stableprop_53() {
     return 0;
   }
   function Lang(langCode) {
@@ -5622,7 +5588,7 @@
     var tmp1_elvis_lhs = tmp;
     return ':' + this.name_1 + (tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs);
   };
-  function get_$stableprop_55() {
+  function get_$stableprop_54() {
     return 0;
   }
   function Slotted(selector) {
@@ -5671,6 +5637,40 @@
     }
     var tmp1_elvis_lhs = tmp;
     return '::' + this.name_1 + (tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs);
+  };
+  function GenericStyleSheetBuilder() {
+  }
+  function CSSRulesHolder() {
+  }
+  function StyleSheetBuilder() {
+  }
+  function get_$stableprop_55() {
+    return 8;
+  }
+  function StyleSheetBuilderImpl() {
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp.cssRules_1 = ArrayList_init_$Create$();
+    this.$stable_1 = 8;
+  }
+  protoOf(StyleSheetBuilderImpl).get_cssRules_jdoznh_k$ = function () {
+    return this.cssRules_1;
+  };
+  protoOf(StyleSheetBuilderImpl).add_19esmm_k$ = function (cssRule) {
+    this.get_cssRules_jdoznh_k$().add_utx5q5_k$(cssRule);
+  };
+  protoOf(StyleSheetBuilderImpl).buildRules_fgavxj_k$ = function (rulesBuild) {
+    // Inline function 'kotlin.apply' call
+    var this_0 = new StyleSheetBuilderImpl();
+    // Inline function 'kotlin.contracts.contract' call
+    rulesBuild(this_0);
+    return this_0.get_cssRules_jdoznh_k$();
+  };
+  protoOf(StyleSheetBuilderImpl).buildRules_xiubel_k$ = function (rulesBuild) {
+    return this.buildRules_fgavxj_k$(rulesBuild);
+  };
+  protoOf(StyleSheetBuilderImpl).style_r4zx12_k$ = function (selector, cssRule) {
+    return this.style_pgxmpo_k$(selector, cssRule);
   };
   var properties_initialized_StyleSheetBuilder_kt_uqx9b1;
   function _init_properties_StyleSheetBuilder_kt__ftybdn() {
@@ -6681,6 +6681,10 @@
       return $factory();
     };
   }
+  function ElementScope() {
+  }
+  function DomEffectScope() {
+  }
   function get_$stableprop_61() {
     return 8;
   }
@@ -6702,8 +6706,6 @@
   protoOf(ElementScopeImpl).get_scopeElement_61kop2_k$ = function (_this__u8e3s4) {
     return this.get_element_q8gf71_k$();
   };
-  function ElementScope() {
-  }
   function _set_nextDisposableDomEffectKey__ral2d4($this, _set____db54di) {
     $this.nextDisposableDomEffectKey_1 = _set____db54di;
   }
@@ -6791,8 +6793,6 @@
     }
     $composer_0.endReplaceableGroup_ern0ak_k$();
   };
-  function DomEffectScope() {
-  }
   function DomDisposableEffectHolder(elementScope) {
     this.elementScope_1 = elementScope;
     this.onDispose_1 = null;
@@ -8834,17 +8834,6 @@
   function get_$stableprop_70() {
     return 0;
   }
-  function SyntheticDragEvent(nativeEvent) {
-    SyntheticMouseEvent.call(this, nativeEvent);
-    this.dataTransfer_1 = nativeEvent.dataTransfer;
-    this.$stable_3 = 0;
-  }
-  protoOf(SyntheticDragEvent).get_dataTransfer_ncqosi_k$ = function () {
-    return this.dataTransfer_1;
-  };
-  function get_$stableprop_71() {
-    return 0;
-  }
   function SyntheticWheelEvent(nativeEvent) {
     SyntheticMouseEvent.call(this, nativeEvent);
     this.deltaX_1 = nativeEvent.deltaX;
@@ -8864,6 +8853,17 @@
   };
   protoOf(SyntheticWheelEvent).get_deltaMode_9dro42_k$ = function () {
     return this.deltaMode_1;
+  };
+  function get_$stableprop_71() {
+    return 0;
+  }
+  function SyntheticDragEvent(nativeEvent) {
+    SyntheticMouseEvent.call(this, nativeEvent);
+    this.dataTransfer_1 = nativeEvent.dataTransfer;
+    this.$stable_3 = 0;
+  }
+  protoOf(SyntheticDragEvent).get_dataTransfer_ncqosi_k$ = function () {
+    return this.dataTransfer_1;
   };
   function get_$stableprop_72() {
     return 0;

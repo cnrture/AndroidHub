@@ -70,7 +70,7 @@ fun HomePage() {
                 postList = it
             },
             onError = {
-                error = it.toString()
+                error = it.message.toString()
             }
         )
     }

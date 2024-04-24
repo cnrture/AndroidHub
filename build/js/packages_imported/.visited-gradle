@@ -117,6 +117,25 @@
     },
     "d0c7d97869c33cdf3500f90e4c7d37be": {
       "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/com.varabyte.kobwebx/silk-icons-fa/0.16.1/ceb0180fee992b96670b473ee06c9d675fc8df74/silk-icons-fa-js-0.16.1.klib"
+    },
+    "2a4c89b93d7367e0fa0c8b1c32950fbe": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-js/1.6.4/6f9fa7f2351da63399f2ed9753595765fc2b59be/ktor-client-js-jsir-1.6.4.klib"
+    },
+    "bd911bbea16ac834392eff2e011971f8": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-core-js/1.6.4/b64869d64d8d74bd24c7a51a0c25fe63064ce531/ktor-client-core-jsir-1.6.4.klib",
+      "target": "ktor-ktor-client-core-js-ir/1.6.4"
+    },
+    "3f318722b1e9cc9695fe9888f252a711": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-cio-js/1.6.4/21644d2cb18ac76cb48b59fa9e49c3754fde68c0/ktor-http-cio-jsir-1.6.4.klib"
+    },
+    "45bf88616df22c3385cadda1d4e1ae93": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-js/1.6.4/bdc3be6af928fa8aef88c35be67eae0349394cf8/ktor-http-jsir-1.6.4.klib"
+    },
+    "50621769a67e809b6f4b378e392036ee": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-utils-js/1.6.4/da992cf5cfa236b32383a5165457ef2f03fe199f/ktor-utils-jsir-1.6.4.klib"
+    },
+    "aefe16ae49f81652888768927239193e": {
+      "src": "/Users/canerture/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-io-js/1.6.4/db6d26996ec17392b55a66a6412c25f8539d8c81/ktor-io-jsir-1.6.4.klib"
     }
   }
 }
