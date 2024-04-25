@@ -15,9 +15,9 @@
 }(this, function (_, kotlin_kotlin, kotlin_org_jetbrains_compose_runtime_runtime) {
   'use strict';
   //region block: imports
-  var protoOf = kotlin_kotlin.$_$.fc;
-  var classMeta = kotlin_kotlin.$_$.ua;
-  var setMetadataFor = kotlin_kotlin.$_$.gc;
+  var protoOf = kotlin_kotlin.$_$.gc;
+  var classMeta = kotlin_kotlin.$_$.va;
+  var setMetadataFor = kotlin_kotlin.$_$.hc;
   var VOID = kotlin_kotlin.$_$.g;
   var compositionLocalOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
   //endregion

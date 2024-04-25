@@ -35,9 +35,9 @@
   //region block: imports
   var get_BorderColorVar = kotlin_com_varabyte_kobweb_silk_widgets.$_$.m;
   var StyleVariable = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.i;
-  var protoOf = kotlin_kotlin.$_$.fc;
-  var objectMeta = kotlin_kotlin.$_$.ec;
-  var setMetadataFor = kotlin_kotlin.$_$.gc;
+  var protoOf = kotlin_kotlin.$_$.gc;
+  var objectMeta = kotlin_kotlin.$_$.fc;
+  var setMetadataFor = kotlin_kotlin.$_$.hc;
   var Companion_getInstance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.u3;
   var Companion_getInstance_0 = kotlin_com_varabyte_kobweb_compose_html_ext.$_$.e3;
   var listStyle = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.q1;
@@ -49,9 +49,9 @@
   var borderRadius = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.p;
   var Companion_getInstance_2 = kotlin_org_jetbrains_compose_html_html_core.$_$.n;
   var border = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.s;
-  var KProperty0 = kotlin_kotlin.$_$.zc;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.cb;
-  var KProperty1 = kotlin_kotlin.$_$.ad;
+  var KProperty0 = kotlin_kotlin.$_$.bd;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.db;
+  var KProperty1 = kotlin_kotlin.$_$.cd;
   var Companion_getInstance_3 = kotlin_com_varabyte_kobweb_silk_foundation.$_$.u1;
   var VOID = kotlin_kotlin.$_$.g;
   var base = kotlin_com_varabyte_kobweb_silk_foundation.$_$.o;
@@ -65,7 +65,7 @@
   var composableLambda = kotlin_org_jetbrains_compose_runtime_runtime.$_$.b;
   var sourceInformation = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var Companion_getInstance_5 = kotlin_org_jetbrains_compose_runtime_runtime.$_$.i1;
-  var THROW_CCE = kotlin_kotlin.$_$.dg;
+  var THROW_CCE = kotlin_kotlin.$_$.jg;
   var Div = kotlin_org_jetbrains_compose_html_html_core.$_$.k5;
   var Companion_getInstance_6 = kotlin_com_varabyte_kobweb_kobweb_core.$_$.k;
   var prependIf = kotlin_com_varabyte_kobweb_kobweb_core.$_$.g;
@@ -96,11 +96,11 @@
   var modifyComponentStyleBase = kotlin_com_varabyte_kobweb_silk_foundation.$_$.k1;
   var toPalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.h1;
   var setVariable = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.r2;
-  var interfaceMeta = kotlin_kotlin.$_$.gb;
+  var interfaceMeta = kotlin_kotlin.$_$.hb;
   var ColorGroup = kotlin_com_varabyte_kobweb_silk_foundation.$_$.f1;
-  var classMeta = kotlin_kotlin.$_$.ua;
+  var classMeta = kotlin_kotlin.$_$.va;
   var MutablePalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g1;
-  var KMutableProperty1 = kotlin_kotlin.$_$.yc;
+  var KMutableProperty1 = kotlin_kotlin.$_$.ad;
   //endregion
   //region block: pre-declaration
   setMetadataFor(TocVars, 'TocVars', objectMeta);

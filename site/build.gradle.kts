@@ -42,7 +42,8 @@ kotlin {
 
         jvmMain.dependencies {
             compileOnly(libs.kobweb.api)
-            implementation(libs.bundles.okhttp)
+            implementation(libs.mongodb.kotlin.driver)
+            implementation(libs.kotlinx.serialization.json)
         }
     }
 }

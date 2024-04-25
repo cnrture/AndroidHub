@@ -13,49 +13,49 @@
   'use strict';
   //region block: imports
   var imul = Math.imul;
-  var protoOf = kotlin_kotlin.$_$.fc;
-  var THROW_CCE = kotlin_kotlin.$_$.dg;
-  var Annotation = kotlin_kotlin.$_$.nf;
-  var classMeta = kotlin_kotlin.$_$.ua;
-  var setMetadataFor = kotlin_kotlin.$_$.gc;
+  var protoOf = kotlin_kotlin.$_$.gc;
+  var THROW_CCE = kotlin_kotlin.$_$.jg;
+  var Annotation = kotlin_kotlin.$_$.tf;
+  var classMeta = kotlin_kotlin.$_$.va;
+  var setMetadataFor = kotlin_kotlin.$_$.hc;
   var VOID = kotlin_kotlin.$_$.g;
   var getKClass = kotlin_kotlin.$_$.e;
-  var getStringHashCode = kotlin_kotlin.$_$.db;
-  var interfaceMeta = kotlin_kotlin.$_$.gb;
+  var getStringHashCode = kotlin_kotlin.$_$.eb;
+  var interfaceMeta = kotlin_kotlin.$_$.hb;
   var asList = kotlin_kotlin.$_$.j6;
-  var objectCreate = kotlin_kotlin.$_$.dc;
+  var objectCreate = kotlin_kotlin.$_$.ec;
   var StringCompanionObject_getInstance = kotlin_kotlin.$_$.m4;
   var Unit_getInstance = kotlin_kotlin.$_$.w4;
-  var emptyList = kotlin_kotlin.$_$.d7;
+  var emptyList = kotlin_kotlin.$_$.e7;
   var LazyThreadSafetyMode_PUBLICATION_getInstance = kotlin_kotlin.$_$.i;
-  var lazy = kotlin_kotlin.$_$.bh;
+  var lazy = kotlin_kotlin.$_$.hh;
   var getKClassFromExpression = kotlin_kotlin.$_$.d;
-  var KProperty1 = kotlin_kotlin.$_$.ad;
-  var getPropertyCallableRef = kotlin_kotlin.$_$.cb;
+  var KProperty1 = kotlin_kotlin.$_$.cd;
+  var getPropertyCallableRef = kotlin_kotlin.$_$.db;
   var Entry = kotlin_kotlin.$_$.q5;
-  var isInterface = kotlin_kotlin.$_$.pb;
+  var isInterface = kotlin_kotlin.$_$.qb;
   var Grouping = kotlin_kotlin.$_$.h5;
   var IllegalArgumentException_init_$Create$ = kotlin_kotlin.$_$.r1;
-  var zip = kotlin_kotlin.$_$.o9;
-  var toMap = kotlin_kotlin.$_$.h9;
+  var zip = kotlin_kotlin.$_$.p9;
+  var toMap = kotlin_kotlin.$_$.i9;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$_$.v;
-  var toString = kotlin_kotlin.$_$.kc;
+  var toString = kotlin_kotlin.$_$.lc;
   var IllegalStateException_init_$Create$ = kotlin_kotlin.$_$.w1;
-  var mapCapacity = kotlin_kotlin.$_$.c8;
+  var mapCapacity = kotlin_kotlin.$_$.d8;
   var LinkedHashMap_init_$Create$_0 = kotlin_kotlin.$_$.u;
   var Map = kotlin_kotlin.$_$.r5;
+  var captureStack = kotlin_kotlin.$_$.pa;
+  var listOf = kotlin_kotlin.$_$.b8;
   var IllegalArgumentException_init_$Init$ = kotlin_kotlin.$_$.o1;
-  var captureStack = kotlin_kotlin.$_$.oa;
   var IllegalArgumentException_init_$Init$_0 = kotlin_kotlin.$_$.q1;
   var IllegalArgumentException_init_$Init$_1 = kotlin_kotlin.$_$.s1;
   var IllegalArgumentException_init_$Init$_2 = kotlin_kotlin.$_$.n1;
-  var IllegalArgumentException = kotlin_kotlin.$_$.vf;
-  var listOf = kotlin_kotlin.$_$.a8;
+  var IllegalArgumentException = kotlin_kotlin.$_$.bg;
   var collectionSizeOrDefault = kotlin_kotlin.$_$.m6;
   var ArrayList_init_$Create$ = kotlin_kotlin.$_$.l;
-  var KClass = kotlin_kotlin.$_$.wc;
-  var Triple = kotlin_kotlin.$_$.gg;
-  var Pair = kotlin_kotlin.$_$.ag;
+  var KClass = kotlin_kotlin.$_$.yc;
+  var Triple = kotlin_kotlin.$_$.mg;
+  var Pair = kotlin_kotlin.$_$.gg;
   var LinkedHashMap = kotlin_kotlin.$_$.m5;
   var MutableMap = kotlin_kotlin.$_$.x5;
   var HashMap = kotlin_kotlin.$_$.i5;
@@ -67,153 +67,156 @@
   var MutableList = kotlin_kotlin.$_$.v5;
   var List = kotlin_kotlin.$_$.p5;
   var Collection = kotlin_kotlin.$_$.g5;
-  var copyToArray = kotlin_kotlin.$_$.b7;
+  var copyToArray = kotlin_kotlin.$_$.c7;
   var _Result___get_value__impl__bjfvqg = kotlin_kotlin.$_$.t2;
   var _Result___get_isFailure__impl__jpiriv = kotlin_kotlin.$_$.s2;
-  var Result = kotlin_kotlin.$_$.bg;
-  var ensureNotNull = kotlin_kotlin.$_$.xg;
-  var equals = kotlin_kotlin.$_$.xa;
+  var Result = kotlin_kotlin.$_$.hg;
+  var ensureNotNull = kotlin_kotlin.$_$.dh;
+  var equals = kotlin_kotlin.$_$.ya;
   var Iterator = kotlin_kotlin.$_$.l5;
   var Iterable = kotlin_kotlin.$_$.k5;
-  var isBlank = kotlin_kotlin.$_$.ud;
-  var toList = kotlin_kotlin.$_$.g9;
+  var isBlank = kotlin_kotlin.$_$.xd;
+  var toList = kotlin_kotlin.$_$.h9;
   var ArrayList_init_$Create$_0 = kotlin_kotlin.$_$.m;
   var HashSet_init_$Create$ = kotlin_kotlin.$_$.s;
-  var toHashSet = kotlin_kotlin.$_$.d9;
-  var toBooleanArray = kotlin_kotlin.$_$.c9;
-  var withIndex = kotlin_kotlin.$_$.n9;
-  var to = kotlin_kotlin.$_$.mh;
-  var lazy_0 = kotlin_kotlin.$_$.ch;
+  var toHashSet = kotlin_kotlin.$_$.e9;
+  var toBooleanArray = kotlin_kotlin.$_$.d9;
+  var withIndex = kotlin_kotlin.$_$.o9;
+  var to = kotlin_kotlin.$_$.sh;
+  var lazy_0 = kotlin_kotlin.$_$.ih;
   var contentEquals = kotlin_kotlin.$_$.p6;
-  var until = kotlin_kotlin.$_$.vc;
-  var joinToString = kotlin_kotlin.$_$.r7;
-  var objectMeta = kotlin_kotlin.$_$.ec;
-  var Long = kotlin_kotlin.$_$.xf;
-  var Char = kotlin_kotlin.$_$.of;
+  var until = kotlin_kotlin.$_$.xc;
+  var joinToString = kotlin_kotlin.$_$.s7;
+  var objectMeta = kotlin_kotlin.$_$.fc;
+  var Long = kotlin_kotlin.$_$.dg;
+  var Char = kotlin_kotlin.$_$.uf;
   var Duration__toIsoString_impl_9h6wsm = kotlin_kotlin.$_$.k2;
-  var Duration = kotlin_kotlin.$_$.kf;
+  var Duration = kotlin_kotlin.$_$.qf;
   var Companion_getInstance = kotlin_kotlin.$_$.o4;
-  var toIntOrNull = kotlin_kotlin.$_$.xe;
-  var hashCode = kotlin_kotlin.$_$.eb;
-  var ArrayList_init_$Create$_1 = kotlin_kotlin.$_$.n;
-  var HashSet_init_$Create$_0 = kotlin_kotlin.$_$.t;
+  var toIntOrNull = kotlin_kotlin.$_$.df;
+  var hashCode = kotlin_kotlin.$_$.fb;
+  var LinkedHashMap_init_$Create$_1 = kotlin_kotlin.$_$.w;
   var LinkedHashSet_init_$Create$ = kotlin_kotlin.$_$.x;
   var LinkedHashSet_init_$Create$_0 = kotlin_kotlin.$_$.y;
+  var HashSet_init_$Create$_0 = kotlin_kotlin.$_$.t;
+  var isArray = kotlin_kotlin.$_$.ib;
+  var arrayIterator = kotlin_kotlin.$_$.na;
+  var ArrayList_init_$Create$_1 = kotlin_kotlin.$_$.n;
   var HashMap_init_$Create$ = kotlin_kotlin.$_$.p;
   var HashMap_init_$Create$_0 = kotlin_kotlin.$_$.q;
-  var LinkedHashMap_init_$Create$_1 = kotlin_kotlin.$_$.w;
-  var isArray = kotlin_kotlin.$_$.hb;
-  var arrayIterator = kotlin_kotlin.$_$.ma;
-  var step = kotlin_kotlin.$_$.uc;
-  var getValue = kotlin_kotlin.$_$.n7;
-  var longArray = kotlin_kotlin.$_$.xb;
+  var step = kotlin_kotlin.$_$.wc;
+  var getValue = kotlin_kotlin.$_$.o7;
+  var longArray = kotlin_kotlin.$_$.yb;
   var Companion_getInstance_0 = kotlin_kotlin.$_$.q4;
-  var get_lastIndex = kotlin_kotlin.$_$.u7;
-  var countTrailingZeroBits = kotlin_kotlin.$_$.vg;
+  var get_lastIndex = kotlin_kotlin.$_$.v7;
+  var countTrailingZeroBits = kotlin_kotlin.$_$.bh;
+  var indexOf = kotlin_kotlin.$_$.p7;
+  var contentToString = kotlin_kotlin.$_$.r6;
+  var Enum = kotlin_kotlin.$_$.yf;
+  var fillArrayVal = kotlin_kotlin.$_$.za;
   var HashSet_init_$Create$_1 = kotlin_kotlin.$_$.r;
-  var KTypeParameter = kotlin_kotlin.$_$.bd;
-  var fillArrayVal = kotlin_kotlin.$_$.ya;
-  var booleanArray = kotlin_kotlin.$_$.na;
-  var emptyMap = kotlin_kotlin.$_$.e7;
+  var KTypeParameter = kotlin_kotlin.$_$.dd;
+  var booleanArray = kotlin_kotlin.$_$.oa;
+  var emptyMap = kotlin_kotlin.$_$.f7;
   var contentHashCode = kotlin_kotlin.$_$.q6;
   var Companion_getInstance_1 = kotlin_kotlin.$_$.p4;
-  var isCharArray = kotlin_kotlin.$_$.kb;
-  var charArray = kotlin_kotlin.$_$.qa;
+  var isCharArray = kotlin_kotlin.$_$.lb;
+  var charArray = kotlin_kotlin.$_$.ra;
   var DoubleCompanionObject_getInstance = kotlin_kotlin.$_$.i4;
-  var isDoubleArray = kotlin_kotlin.$_$.mb;
+  var isDoubleArray = kotlin_kotlin.$_$.nb;
   var FloatCompanionObject_getInstance = kotlin_kotlin.$_$.j4;
-  var isFloatArray = kotlin_kotlin.$_$.nb;
-  var isLongArray = kotlin_kotlin.$_$.qb;
+  var isFloatArray = kotlin_kotlin.$_$.ob;
+  var isLongArray = kotlin_kotlin.$_$.rb;
   var Companion_getInstance_2 = kotlin_kotlin.$_$.u4;
   var _ULongArray___get_size__impl__ju6dtr = kotlin_kotlin.$_$.t3;
-  var ULongArray = kotlin_kotlin.$_$.lg;
+  var ULongArray = kotlin_kotlin.$_$.rg;
   var _ULongArray___init__impl__twm1l3 = kotlin_kotlin.$_$.p3;
   var _ULong___init__impl__c78o9k = kotlin_kotlin.$_$.m3;
   var ULongArray__get_impl_pr71q9 = kotlin_kotlin.$_$.r3;
   var _ULong___get_data__impl__fggpzb = kotlin_kotlin.$_$.n3;
   var IntCompanionObject_getInstance = kotlin_kotlin.$_$.k4;
-  var isIntArray = kotlin_kotlin.$_$.ob;
+  var isIntArray = kotlin_kotlin.$_$.pb;
   var Companion_getInstance_3 = kotlin_kotlin.$_$.t4;
   var _UIntArray___get_size__impl__r6l8ci = kotlin_kotlin.$_$.k3;
-  var UIntArray = kotlin_kotlin.$_$.jg;
+  var UIntArray = kotlin_kotlin.$_$.pg;
   var _UIntArray___init__impl__ghjpc6 = kotlin_kotlin.$_$.g3;
   var _UInt___init__impl__l7qpdl = kotlin_kotlin.$_$.d3;
   var UIntArray__get_impl_gp5kza = kotlin_kotlin.$_$.i3;
   var _UInt___get_data__impl__f0vqqw = kotlin_kotlin.$_$.e3;
   var ShortCompanionObject_getInstance = kotlin_kotlin.$_$.l4;
-  var isShortArray = kotlin_kotlin.$_$.sb;
+  var isShortArray = kotlin_kotlin.$_$.tb;
   var Companion_getInstance_4 = kotlin_kotlin.$_$.v4;
   var _UShortArray___get_size__impl__jqto1b = kotlin_kotlin.$_$.c4;
-  var UShortArray = kotlin_kotlin.$_$.ng;
+  var UShortArray = kotlin_kotlin.$_$.tg;
   var _UShortArray___init__impl__9b26ef = kotlin_kotlin.$_$.y3;
   var _UShort___init__impl__jigrne = kotlin_kotlin.$_$.v3;
   var UShortArray__get_impl_fnbhmx = kotlin_kotlin.$_$.a4;
   var _UShort___get_data__impl__g0245 = kotlin_kotlin.$_$.w3;
   var ByteCompanionObject_getInstance = kotlin_kotlin.$_$.h4;
-  var isByteArray = kotlin_kotlin.$_$.jb;
+  var isByteArray = kotlin_kotlin.$_$.kb;
   var Companion_getInstance_5 = kotlin_kotlin.$_$.s4;
   var _UByteArray___get_size__impl__h6pkdv = kotlin_kotlin.$_$.b3;
-  var UByteArray = kotlin_kotlin.$_$.hg;
+  var UByteArray = kotlin_kotlin.$_$.ng;
   var _UByteArray___init__impl__ip4y9n = kotlin_kotlin.$_$.y2;
   var _UByte___init__impl__g9hnc4 = kotlin_kotlin.$_$.u2;
   var UByteArray__get_impl_t5f3hv = kotlin_kotlin.$_$.z2;
   var _UByte___get_data__impl__jof9qr = kotlin_kotlin.$_$.v2;
   var BooleanCompanionObject_getInstance = kotlin_kotlin.$_$.g4;
-  var isBooleanArray = kotlin_kotlin.$_$.ib;
-  var coerceAtLeast = kotlin_kotlin.$_$.pc;
-  var copyOf = kotlin_kotlin.$_$.v6;
-  var copyOf_0 = kotlin_kotlin.$_$.x6;
-  var copyOf_1 = kotlin_kotlin.$_$.y6;
-  var copyOf_2 = kotlin_kotlin.$_$.t6;
+  var isBooleanArray = kotlin_kotlin.$_$.jb;
+  var coerceAtLeast = kotlin_kotlin.$_$.rc;
+  var copyOf = kotlin_kotlin.$_$.w6;
+  var copyOf_0 = kotlin_kotlin.$_$.y6;
+  var copyOf_1 = kotlin_kotlin.$_$.z6;
+  var copyOf_2 = kotlin_kotlin.$_$.u6;
   var _ULongArray___get_storage__impl__28e64j = kotlin_kotlin.$_$.u3;
   var _ULongArray___init__impl__twm1l3_0 = kotlin_kotlin.$_$.q3;
   var ULongArray__set_impl_z19mvh = kotlin_kotlin.$_$.s3;
-  var copyOf_3 = kotlin_kotlin.$_$.a7;
+  var copyOf_3 = kotlin_kotlin.$_$.b7;
   var _UIntArray___get_storage__impl__92a0v0 = kotlin_kotlin.$_$.l3;
   var _UIntArray___init__impl__ghjpc6_0 = kotlin_kotlin.$_$.h3;
   var UIntArray__set_impl_7f2zu2 = kotlin_kotlin.$_$.j3;
-  var copyOf_4 = kotlin_kotlin.$_$.s6;
+  var copyOf_4 = kotlin_kotlin.$_$.t6;
   var _UShortArray___get_storage__impl__t2jpv5 = kotlin_kotlin.$_$.d4;
   var _UShortArray___init__impl__9b26ef_0 = kotlin_kotlin.$_$.z3;
   var UShortArray__set_impl_6d8whp = kotlin_kotlin.$_$.b4;
-  var copyOf_5 = kotlin_kotlin.$_$.w6;
+  var copyOf_5 = kotlin_kotlin.$_$.x6;
   var _UByteArray___get_storage__impl__d4kctt = kotlin_kotlin.$_$.c3;
   var _UByteArray___init__impl__ip4y9n_0 = kotlin_kotlin.$_$.x2;
   var UByteArray__set_impl_jvcicn = kotlin_kotlin.$_$.a3;
-  var copyOf_6 = kotlin_kotlin.$_$.u6;
-  var Unit = kotlin_kotlin.$_$.pg;
-  var trimIndent = kotlin_kotlin.$_$.hf;
-  var equals_0 = kotlin_kotlin.$_$.qd;
-  var charSequenceLength = kotlin_kotlin.$_$.sa;
-  var charSequenceGet = kotlin_kotlin.$_$.ra;
+  var copyOf_6 = kotlin_kotlin.$_$.v6;
+  var Unit = kotlin_kotlin.$_$.vg;
+  var trimIndent = kotlin_kotlin.$_$.nf;
+  var equals_0 = kotlin_kotlin.$_$.td;
+  var charSequenceLength = kotlin_kotlin.$_$.ta;
+  var charSequenceGet = kotlin_kotlin.$_$.sa;
   var toString_0 = kotlin_kotlin.$_$.p2;
-  var titlecase = kotlin_kotlin.$_$.te;
-  var isLowerCase = kotlin_kotlin.$_$.wd;
+  var titlecase = kotlin_kotlin.$_$.ye;
+  var isLowerCase = kotlin_kotlin.$_$.zd;
   var PrimitiveClasses_getInstance = kotlin_kotlin.$_$.n4;
-  var ULong = kotlin_kotlin.$_$.mg;
-  var UInt = kotlin_kotlin.$_$.kg;
-  var UShort = kotlin_kotlin.$_$.og;
-  var UByte = kotlin_kotlin.$_$.ig;
-  var mapOf = kotlin_kotlin.$_$.e8;
-  var last = kotlin_kotlin.$_$.y7;
-  var lastOrNull = kotlin_kotlin.$_$.x7;
-  var get_lastIndex_0 = kotlin_kotlin.$_$.v7;
-  var get_js = kotlin_kotlin.$_$.ub;
+  var ULong = kotlin_kotlin.$_$.sg;
+  var UInt = kotlin_kotlin.$_$.qg;
+  var UShort = kotlin_kotlin.$_$.ug;
+  var UByte = kotlin_kotlin.$_$.og;
+  var mapOf = kotlin_kotlin.$_$.f8;
+  var last = kotlin_kotlin.$_$.z7;
+  var lastOrNull = kotlin_kotlin.$_$.y7;
+  var get_lastIndex_0 = kotlin_kotlin.$_$.w7;
+  var get_js = kotlin_kotlin.$_$.vb;
   var findAssociatedObject = kotlin_kotlin.$_$.c;
-  var get_indices = kotlin_kotlin.$_$.q7;
+  var get_indices = kotlin_kotlin.$_$.r7;
   var IndexOutOfBoundsException_init_$Create$ = kotlin_kotlin.$_$.y1;
-  var get_indices_0 = kotlin_kotlin.$_$.p7;
+  var get_indices_0 = kotlin_kotlin.$_$.q7;
   var Companion_getInstance_6 = kotlin_kotlin.$_$.r4;
   var _Result___init__impl__xyqfz8 = kotlin_kotlin.$_$.q2;
-  var createFailure = kotlin_kotlin.$_$.wg;
+  var createFailure = kotlin_kotlin.$_$.ch;
   //endregion
   //region block: pre-declaration
-  setMetadataFor(ExperimentalSerializationApi, 'ExperimentalSerializationApi', classMeta, VOID, [Annotation]);
-  setMetadataFor(InternalSerializationApi, 'InternalSerializationApi', classMeta, VOID, [Annotation]);
-  setMetadataFor(Serializable, 'Serializable', classMeta, VOID, [Annotation]);
-  setMetadataFor(SerialName, 'SerialName', classMeta, VOID, [Annotation]);
   setMetadataFor(InheritableSerialInfo, 'InheritableSerialInfo', classMeta, VOID, [Annotation]);
+  setMetadataFor(ExperimentalSerializationApi, 'ExperimentalSerializationApi', classMeta, VOID, [Annotation]);
+  setMetadataFor(Serializable, 'Serializable', classMeta, VOID, [Annotation]);
   setMetadataFor(SerialInfo, 'SerialInfo', classMeta, VOID, [Annotation]);
+  setMetadataFor(InternalSerializationApi, 'InternalSerializationApi', classMeta, VOID, [Annotation]);
+  setMetadataFor(SerialName, 'SerialName', classMeta, VOID, [Annotation]);
   setMetadataFor(SerializationStrategy, 'SerializationStrategy', interfaceMeta);
   setMetadataFor(DeserializationStrategy, 'DeserializationStrategy', interfaceMeta);
   setMetadataFor(KSerializer, 'KSerializer', interfaceMeta, VOID, [SerializationStrategy, DeserializationStrategy]);
@@ -224,8 +227,8 @@
   setMetadataFor(SerialFormat, 'SerialFormat', interfaceMeta);
   setMetadataFor(StringFormat, 'StringFormat', interfaceMeta, VOID, [SerialFormat]);
   setMetadataFor(SerializationException, 'SerializationException', classMeta, IllegalArgumentException, VOID, SerializationException_init_$Create$);
-  setMetadataFor(UnknownFieldException, 'UnknownFieldException', classMeta, SerializationException);
   setMetadataFor(MissingFieldException, 'MissingFieldException', classMeta, SerializationException);
+  setMetadataFor(UnknownFieldException, 'UnknownFieldException', classMeta, SerializationException);
   function get_isNullable() {
     return false;
   }
@@ -237,8 +240,10 @@
   }
   setMetadataFor(SerialDescriptor, 'SerialDescriptor', interfaceMeta);
   setMetadataFor(ContextDescriptor, 'ContextDescriptor', classMeta, VOID, [SerialDescriptor]);
-  setMetadataFor(elementDescriptors$1$1, VOID, classMeta, VOID, [Iterator]);
+  setMetadataFor(elementNames$1$1, VOID, classMeta, VOID, [Iterator]);
   setMetadataFor(_no_name_provided__qut3iv_0, VOID, classMeta, VOID, [Iterable]);
+  setMetadataFor(elementDescriptors$1$1, VOID, classMeta, VOID, [Iterator]);
+  setMetadataFor(_no_name_provided__qut3iv_1, VOID, classMeta, VOID, [Iterable]);
   setMetadataFor(ClassSerialDescriptorBuilder, 'ClassSerialDescriptorBuilder', classMeta);
   setMetadataFor(CachedNames, 'CachedNames', interfaceMeta);
   setMetadataFor(SerialDescriptorImpl, 'SerialDescriptorImpl', classMeta, VOID, [SerialDescriptor, CachedNames]);
@@ -327,20 +332,22 @@
   setMetadataFor(ArrayClassDesc, 'ArrayClassDesc', classMeta, ListLikeDescriptor);
   setMetadataFor(PrimitiveArrayDescriptor, 'PrimitiveArrayDescriptor', classMeta, ListLikeDescriptor);
   setMetadataFor(AbstractCollectionSerializer, 'AbstractCollectionSerializer', classMeta, VOID, [KSerializer]);
+  setMetadataFor(MapLikeSerializer, 'MapLikeSerializer', classMeta, AbstractCollectionSerializer);
+  setMetadataFor(LinkedHashMapSerializer, 'LinkedHashMapSerializer', classMeta, MapLikeSerializer);
   setMetadataFor(CollectionLikeSerializer, 'CollectionLikeSerializer', classMeta, AbstractCollectionSerializer);
   setMetadataFor(CollectionSerializer, 'CollectionSerializer', classMeta, CollectionLikeSerializer);
-  setMetadataFor(ArrayListSerializer, 'ArrayListSerializer', classMeta, CollectionSerializer);
-  setMetadataFor(HashSetSerializer, 'HashSetSerializer', classMeta, CollectionSerializer);
   setMetadataFor(LinkedHashSetSerializer, 'LinkedHashSetSerializer', classMeta, CollectionSerializer);
-  setMetadataFor(MapLikeSerializer, 'MapLikeSerializer', classMeta, AbstractCollectionSerializer);
-  setMetadataFor(HashMapSerializer, 'HashMapSerializer', classMeta, MapLikeSerializer);
-  setMetadataFor(LinkedHashMapSerializer, 'LinkedHashMapSerializer', classMeta, MapLikeSerializer);
-  setMetadataFor(ReferenceArraySerializer, 'ReferenceArraySerializer', classMeta, CollectionLikeSerializer);
   setMetadataFor(PrimitiveArraySerializer, 'PrimitiveArraySerializer', classMeta, CollectionLikeSerializer);
+  setMetadataFor(HashSetSerializer, 'HashSetSerializer', classMeta, CollectionSerializer);
+  setMetadataFor(ReferenceArraySerializer, 'ReferenceArraySerializer', classMeta, CollectionLikeSerializer);
+  setMetadataFor(ArrayListSerializer, 'ArrayListSerializer', classMeta, CollectionSerializer);
+  setMetadataFor(HashMapSerializer, 'HashMapSerializer', classMeta, MapLikeSerializer);
   setMetadataFor(PrimitiveArrayBuilder, 'PrimitiveArrayBuilder', classMeta);
   setMetadataFor(Companion_0, 'Companion', objectMeta);
   setMetadataFor(ElementMarker, 'ElementMarker', classMeta);
+  setMetadataFor(EnumSerializer, 'EnumSerializer', classMeta, VOID, [KSerializer]);
   setMetadataFor(PluginGeneratedSerialDescriptor, 'PluginGeneratedSerialDescriptor', classMeta, VOID, [SerialDescriptor, CachedNames]);
+  setMetadataFor(EnumDescriptor, 'EnumDescriptor', classMeta, PluginGeneratedSerialDescriptor);
   setMetadataFor(InlineClassDescriptor, 'InlineClassDescriptor', classMeta, PluginGeneratedSerialDescriptor);
   function typeParametersSerializers() {
     return get_EMPTY_SERIALIZER_ARRAY();
@@ -383,17 +390,17 @@
   setMetadataFor(ByteArrayBuilder, 'ByteArrayBuilder', classMeta, PrimitiveArrayBuilder);
   setMetadataFor(UByteArrayBuilder, 'UByteArrayBuilder', classMeta, PrimitiveArrayBuilder);
   setMetadataFor(BooleanArrayBuilder, 'BooleanArrayBuilder', classMeta, PrimitiveArrayBuilder);
-  setMetadataFor(StringSerializer, 'StringSerializer', objectMeta, VOID, [KSerializer]);
-  setMetadataFor(CharSerializer, 'CharSerializer', objectMeta, VOID, [KSerializer]);
   setMetadataFor(DoubleSerializer, 'DoubleSerializer', objectMeta, VOID, [KSerializer]);
-  setMetadataFor(FloatSerializer, 'FloatSerializer', objectMeta, VOID, [KSerializer]);
-  setMetadataFor(LongSerializer, 'LongSerializer', objectMeta, VOID, [KSerializer]);
-  setMetadataFor(IntSerializer, 'IntSerializer', objectMeta, VOID, [KSerializer]);
   setMetadataFor(ShortSerializer, 'ShortSerializer', objectMeta, VOID, [KSerializer]);
+  setMetadataFor(CharSerializer, 'CharSerializer', objectMeta, VOID, [KSerializer]);
+  setMetadataFor(LongSerializer, 'LongSerializer', objectMeta, VOID, [KSerializer]);
   setMetadataFor(ByteSerializer, 'ByteSerializer', objectMeta, VOID, [KSerializer]);
-  setMetadataFor(BooleanSerializer, 'BooleanSerializer', objectMeta, VOID, [KSerializer]);
   setMetadataFor(UnitSerializer, 'UnitSerializer', objectMeta, VOID, [KSerializer]);
   setMetadataFor(PrimitiveSerialDescriptor_0, 'PrimitiveSerialDescriptor', classMeta, VOID, [SerialDescriptor]);
+  setMetadataFor(StringSerializer, 'StringSerializer', objectMeta, VOID, [KSerializer]);
+  setMetadataFor(BooleanSerializer, 'BooleanSerializer', objectMeta, VOID, [KSerializer]);
+  setMetadataFor(IntSerializer, 'IntSerializer', objectMeta, VOID, [KSerializer]);
+  setMetadataFor(FloatSerializer, 'FloatSerializer', objectMeta, VOID, [KSerializer]);
   setMetadataFor(SerializationConstructorMarker, 'SerializationConstructorMarker', classMeta);
   setMetadataFor(TaggedEncoder, 'TaggedEncoder', classMeta, VOID, [Encoder, CompositeEncoder]);
   setMetadataFor(NamedValueEncoder, 'NamedValueEncoder', classMeta, TaggedEncoder);
@@ -424,6 +431,20 @@
   setMetadataFor(createCache$1, VOID, classMeta, VOID, [SerializerCache]);
   setMetadataFor(createParametrizedCache$1, VOID, classMeta, VOID, [ParametrizedSerializerCache]);
   //endregion
+  function InheritableSerialInfo() {
+  }
+  protoOf(InheritableSerialInfo).equals = function (other) {
+    if (!(other instanceof InheritableSerialInfo))
+      return false;
+    other instanceof InheritableSerialInfo || THROW_CCE();
+    return true;
+  };
+  protoOf(InheritableSerialInfo).hashCode = function () {
+    return 0;
+  };
+  protoOf(InheritableSerialInfo).toString = function () {
+    return '@kotlinx.serialization.InheritableSerialInfo()';
+  };
   function ExperimentalSerializationApi() {
   }
   protoOf(ExperimentalSerializationApi).equals = function (other) {
@@ -437,20 +458,6 @@
   };
   protoOf(ExperimentalSerializationApi).toString = function () {
     return '@kotlinx.serialization.ExperimentalSerializationApi()';
-  };
-  function InternalSerializationApi() {
-  }
-  protoOf(InternalSerializationApi).equals = function (other) {
-    if (!(other instanceof InternalSerializationApi))
-      return false;
-    other instanceof InternalSerializationApi || THROW_CCE();
-    return true;
-  };
-  protoOf(InternalSerializationApi).hashCode = function () {
-    return 0;
-  };
-  protoOf(InternalSerializationApi).toString = function () {
-    return '@kotlinx.serialization.InternalSerializationApi()';
   };
   function Serializable(with_0) {
     with_0 = with_0 === VOID ? getKClass(KSerializer) : with_0;
@@ -473,6 +480,34 @@
   protoOf(Serializable).toString = function () {
     return '@kotlinx.serialization.Serializable(with=' + this.with_1 + ')';
   };
+  function SerialInfo() {
+  }
+  protoOf(SerialInfo).equals = function (other) {
+    if (!(other instanceof SerialInfo))
+      return false;
+    other instanceof SerialInfo || THROW_CCE();
+    return true;
+  };
+  protoOf(SerialInfo).hashCode = function () {
+    return 0;
+  };
+  protoOf(SerialInfo).toString = function () {
+    return '@kotlinx.serialization.SerialInfo()';
+  };
+  function InternalSerializationApi() {
+  }
+  protoOf(InternalSerializationApi).equals = function (other) {
+    if (!(other instanceof InternalSerializationApi))
+      return false;
+    other instanceof InternalSerializationApi || THROW_CCE();
+    return true;
+  };
+  protoOf(InternalSerializationApi).hashCode = function () {
+    return 0;
+  };
+  protoOf(InternalSerializationApi).toString = function () {
+    return '@kotlinx.serialization.InternalSerializationApi()';
+  };
   function SerialName(value) {
     this.value_1 = value;
   }
@@ -492,34 +527,6 @@
   };
   protoOf(SerialName).toString = function () {
     return '@kotlinx.serialization.SerialName(value=' + this.value_1 + ')';
-  };
-  function InheritableSerialInfo() {
-  }
-  protoOf(InheritableSerialInfo).equals = function (other) {
-    if (!(other instanceof InheritableSerialInfo))
-      return false;
-    other instanceof InheritableSerialInfo || THROW_CCE();
-    return true;
-  };
-  protoOf(InheritableSerialInfo).hashCode = function () {
-    return 0;
-  };
-  protoOf(InheritableSerialInfo).toString = function () {
-    return '@kotlinx.serialization.InheritableSerialInfo()';
-  };
-  function SerialInfo() {
-  }
-  protoOf(SerialInfo).equals = function (other) {
-    if (!(other instanceof SerialInfo))
-      return false;
-    other instanceof SerialInfo || THROW_CCE();
-    return true;
-  };
-  protoOf(SerialInfo).hashCode = function () {
-    return 0;
-  };
-  protoOf(SerialInfo).toString = function () {
-    return '@kotlinx.serialization.SerialInfo()';
   };
   function KSerializer() {
   }
@@ -752,6 +759,41 @@
   }
   function SerialFormat() {
   }
+  function MissingFieldException_init_$Init$(missingFields, serialName, $this) {
+    MissingFieldException.call($this, missingFields, missingFields.get_size_woubt6_k$() === 1 ? "Field '" + missingFields.get_c1px32_k$(0) + "' is required for type with serial name '" + serialName + "', but it was missing" : 'Fields ' + missingFields + " are required for type with serial name '" + serialName + "', but they were missing", null);
+    return $this;
+  }
+  function MissingFieldException_init_$Create$(missingFields, serialName) {
+    var tmp = MissingFieldException_init_$Init$(missingFields, serialName, objectCreate(protoOf(MissingFieldException)));
+    captureStack(tmp, MissingFieldException_init_$Create$);
+    return tmp;
+  }
+  function MissingFieldException_init_$Init$_0(missingField, serialName, $this) {
+    MissingFieldException.call($this, listOf(missingField), "Field '" + missingField + "' is required for type with serial name '" + serialName + "', but it was missing", null);
+    return $this;
+  }
+  function MissingFieldException_init_$Create$_0(missingField, serialName) {
+    var tmp = MissingFieldException_init_$Init$_0(missingField, serialName, objectCreate(protoOf(MissingFieldException)));
+    captureStack(tmp, MissingFieldException_init_$Create$_0);
+    return tmp;
+  }
+  function MissingFieldException_init_$Init$_1(missingField, $this) {
+    MissingFieldException.call($this, listOf(missingField), "Field '" + missingField + "' is required, but it was missing", null);
+    return $this;
+  }
+  function MissingFieldException_init_$Create$_1(missingField) {
+    var tmp = MissingFieldException_init_$Init$_1(missingField, objectCreate(protoOf(MissingFieldException)));
+    captureStack(tmp, MissingFieldException_init_$Create$_1);
+    return tmp;
+  }
+  function MissingFieldException(missingFields, message, cause) {
+    SerializationException_init_$Init$_1(message, cause, this);
+    captureStack(this, MissingFieldException);
+    this.missingFields_1 = missingFields;
+  }
+  protoOf(MissingFieldException).get_missingFields_wryzxm_k$ = function () {
+    return this.missingFields_1;
+  };
   function SerializationException_init_$Init$($this) {
     IllegalArgumentException_init_$Init$($this);
     SerializationException.call($this);
@@ -808,41 +850,6 @@
     SerializationException_init_$Init$_0(message, this);
     captureStack(this, UnknownFieldException);
   }
-  function MissingFieldException_init_$Init$(missingFields, serialName, $this) {
-    MissingFieldException.call($this, missingFields, missingFields.get_size_woubt6_k$() === 1 ? "Field '" + missingFields.get_c1px32_k$(0) + "' is required for type with serial name '" + serialName + "', but it was missing" : 'Fields ' + missingFields + " are required for type with serial name '" + serialName + "', but they were missing", null);
-    return $this;
-  }
-  function MissingFieldException_init_$Create$(missingFields, serialName) {
-    var tmp = MissingFieldException_init_$Init$(missingFields, serialName, objectCreate(protoOf(MissingFieldException)));
-    captureStack(tmp, MissingFieldException_init_$Create$);
-    return tmp;
-  }
-  function MissingFieldException_init_$Init$_0(missingField, serialName, $this) {
-    MissingFieldException.call($this, listOf(missingField), "Field '" + missingField + "' is required for type with serial name '" + serialName + "', but it was missing", null);
-    return $this;
-  }
-  function MissingFieldException_init_$Create$_0(missingField, serialName) {
-    var tmp = MissingFieldException_init_$Init$_0(missingField, serialName, objectCreate(protoOf(MissingFieldException)));
-    captureStack(tmp, MissingFieldException_init_$Create$_0);
-    return tmp;
-  }
-  function MissingFieldException_init_$Init$_1(missingField, $this) {
-    MissingFieldException.call($this, listOf(missingField), "Field '" + missingField + "' is required, but it was missing", null);
-    return $this;
-  }
-  function MissingFieldException_init_$Create$_1(missingField) {
-    var tmp = MissingFieldException_init_$Init$_1(missingField, objectCreate(protoOf(MissingFieldException)));
-    captureStack(tmp, MissingFieldException_init_$Create$_1);
-    return tmp;
-  }
-  function MissingFieldException(missingFields, message, cause) {
-    SerializationException_init_$Init$_1(message, cause, this);
-    captureStack(this, MissingFieldException);
-    this.missingFields_1 = missingFields;
-  }
-  protoOf(MissingFieldException).get_missingFields_wryzxm_k$ = function () {
-    return this.missingFields_1;
-  };
   function serializerOrNull(_this__u8e3s4) {
     var tmp0_elvis_lhs = compiledSerializerImpl(_this__u8e3s4);
     return tmp0_elvis_lhs == null ? builtinSerializerOrNull(_this__u8e3s4) : tmp0_elvis_lhs;
@@ -1335,14 +1342,44 @@
   }
   function SerialDescriptor() {
   }
-  function get_elementDescriptors(_this__u8e3s4) {
+  function get_elementNames(_this__u8e3s4) {
     // Inline function 'kotlin.collections.Iterable' call
     return new _no_name_provided__qut3iv_0(_this__u8e3s4);
+  }
+  function get_elementDescriptors(_this__u8e3s4) {
+    // Inline function 'kotlin.collections.Iterable' call
+    return new _no_name_provided__qut3iv_1(_this__u8e3s4);
   }
   function _set_elementsLeft__kqd1tz($this, _set____db54di) {
     $this.elementsLeft_1 = _set____db54di;
   }
   function _get_elementsLeft__56mb9v($this) {
+    return $this.elementsLeft_1;
+  }
+  function elementNames$1$1($this_elementNames) {
+    this.$this_elementNames_1 = $this_elementNames;
+    this.elementsLeft_1 = $this_elementNames.get_elementsCount_288r0x_k$();
+  }
+  protoOf(elementNames$1$1).hasNext_bitz1p_k$ = function () {
+    return this.elementsLeft_1 > 0;
+  };
+  protoOf(elementNames$1$1).next_20eer_k$ = function () {
+    var tmp = this.$this_elementNames_1.get_elementsCount_288r0x_k$();
+    var tmp1 = this.elementsLeft_1;
+    this.elementsLeft_1 = tmp1 - 1 | 0;
+    return this.$this_elementNames_1.getElementName_u4sqmf_k$(tmp - tmp1 | 0);
+  };
+  function _no_name_provided__qut3iv_0($this_elementNames) {
+    this.$this_elementNames_1 = $this_elementNames;
+  }
+  protoOf(_no_name_provided__qut3iv_0).iterator_jk1svi_k$ = function () {
+    // Inline function 'kotlinx.serialization.descriptors.<get-elementNames>.<anonymous>' call
+    return new elementNames$1$1(this.$this_elementNames_1);
+  };
+  function _set_elementsLeft__kqd1tz_0($this, _set____db54di) {
+    $this.elementsLeft_1 = _set____db54di;
+  }
+  function _get_elementsLeft__56mb9v_0($this) {
     return $this.elementsLeft_1;
   }
   function elementDescriptors$1$1($this_elementDescriptors) {
@@ -1358,10 +1395,10 @@
     this.elementsLeft_1 = tmp1 - 1 | 0;
     return this.$this_elementDescriptors_1.getElementDescriptor_ncda77_k$(tmp - tmp1 | 0);
   };
-  function _no_name_provided__qut3iv_0($this_elementDescriptors) {
+  function _no_name_provided__qut3iv_1($this_elementDescriptors) {
     this.$this_elementDescriptors_1 = $this_elementDescriptors;
   }
-  protoOf(_no_name_provided__qut3iv_0).iterator_jk1svi_k$ = function () {
+  protoOf(_no_name_provided__qut3iv_1).iterator_jk1svi_k$ = function () {
     // Inline function 'kotlinx.serialization.descriptors.<get-elementDescriptors>.<anonymous>' call
     return new elementDescriptors$1$1(this.$this_elementDescriptors_1);
   };
@@ -2053,7 +2090,11 @@
   };
   function ChunkedDecoder() {
   }
-  function Decoder() {
+  function decodeStructure(_this__u8e3s4, descriptor, block) {
+    var composite = _this__u8e3s4.beginStructure_yljocp_k$(descriptor);
+    var result = block(composite);
+    composite.endStructure_1xqz0n_k$(descriptor);
+    return result;
   }
   function Companion() {
     Companion_instance = this;
@@ -2074,23 +2115,19 @@
   }
   function CompositeDecoder() {
   }
-  function decodeStructure(_this__u8e3s4, descriptor, block) {
-    var composite = _this__u8e3s4.beginStructure_yljocp_k$(descriptor);
-    var result = block(composite);
-    composite.endStructure_1xqz0n_k$(descriptor);
-    return result;
-  }
-  function Encoder() {
+  function Decoder() {
   }
   function CompositeEncoder() {
   }
-  function encodeCollection(_this__u8e3s4, descriptor, collectionSize, block) {
-    var composite = _this__u8e3s4.beginCollection_9edss2_k$(descriptor, collectionSize);
-    block(composite);
-    composite.endStructure_1xqz0n_k$(descriptor);
+  function Encoder() {
   }
   function encodeStructure(_this__u8e3s4, descriptor, block) {
     var composite = _this__u8e3s4.beginStructure_yljocp_k$(descriptor);
+    block(composite);
+    composite.endStructure_1xqz0n_k$(descriptor);
+  }
+  function encodeCollection(_this__u8e3s4, descriptor, collectionSize, block) {
+    var composite = _this__u8e3s4.beginCollection_9edss2_k$(descriptor, collectionSize);
     block(composite);
     composite.endStructure_1xqz0n_k$(descriptor);
   }
@@ -2479,188 +2516,6 @@
   protoOf(PrimitiveArrayDescriptor).get_serialName_u2rqhk_k$ = function () {
     return this.serialName_1;
   };
-  function ArrayListSerializer(element) {
-    CollectionSerializer.call(this, element);
-    this.descriptor_1 = new ArrayListClassDesc(element.get_descriptor_wjt6a0_k$());
-  }
-  protoOf(ArrayListSerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(ArrayListSerializer).builder_3thy1n_k$ = function () {
-    // Inline function 'kotlin.collections.arrayListOf' call
-    return ArrayList_init_$Create$_0();
-  };
-  protoOf(ArrayListSerializer).builderSize_y2o8s8_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.get_size_woubt6_k$();
-  };
-  protoOf(ArrayListSerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
-    return this.builderSize_y2o8s8_k$(_this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(ArrayListSerializer).toResult_fpl6ik_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4;
-  };
-  protoOf(ArrayListSerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
-    return this.toResult_fpl6ik_k$(_this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(ArrayListSerializer).toBuilder_unwgi5_k$ = function (_this__u8e3s4) {
-    var tmp0_elvis_lhs = _this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : null;
-    return tmp0_elvis_lhs == null ? ArrayList_init_$Create$_1(_this__u8e3s4) : tmp0_elvis_lhs;
-  };
-  protoOf(ArrayListSerializer).toBuilder_5lxc6t_k$ = function (_this__u8e3s4) {
-    return this.toBuilder_unwgi5_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, List) : false) ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(ArrayListSerializer).checkCapacity_qq1vqe_k$ = function (_this__u8e3s4, size) {
-    return _this__u8e3s4.ensureCapacity_wr7980_k$(size);
-  };
-  protoOf(ArrayListSerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
-    return this.checkCapacity_qq1vqe_k$(_this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : THROW_CCE(), size);
-  };
-  protoOf(ArrayListSerializer).insert_irgt39_k$ = function (_this__u8e3s4, index, element) {
-    _this__u8e3s4.add_dl6gt3_k$(index, element);
-  };
-  protoOf(ArrayListSerializer).insert_rt7dry_k$ = function (_this__u8e3s4, index, element) {
-    var tmp = _this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : THROW_CCE();
-    return this.insert_irgt39_k$(tmp, index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
-  };
-  function HashSetSerializer(eSerializer) {
-    CollectionSerializer.call(this, eSerializer);
-    this.descriptor_1 = new HashSetClassDesc(eSerializer.get_descriptor_wjt6a0_k$());
-  }
-  protoOf(HashSetSerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(HashSetSerializer).builder_3thy1n_k$ = function () {
-    return HashSet_init_$Create$();
-  };
-  protoOf(HashSetSerializer).builderSize_uktc1i_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.get_size_woubt6_k$();
-  };
-  protoOf(HashSetSerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
-    return this.builderSize_uktc1i_k$(_this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(HashSetSerializer).toResult_pk432m_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4;
-  };
-  protoOf(HashSetSerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
-    return this.toResult_pk432m_k$(_this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(HashSetSerializer).toBuilder_4rloh5_k$ = function (_this__u8e3s4) {
-    var tmp0_elvis_lhs = _this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : null;
-    return tmp0_elvis_lhs == null ? HashSet_init_$Create$_0(_this__u8e3s4) : tmp0_elvis_lhs;
-  };
-  protoOf(HashSetSerializer).toBuilder_5lxc6t_k$ = function (_this__u8e3s4) {
-    return this.toBuilder_4rloh5_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Set) : false) ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(HashSetSerializer).checkCapacity_81yld8_k$ = function (_this__u8e3s4, size) {
-  };
-  protoOf(HashSetSerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
-    return this.checkCapacity_81yld8_k$(_this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : THROW_CCE(), size);
-  };
-  protoOf(HashSetSerializer).insert_dbcb3d_k$ = function (_this__u8e3s4, index, element) {
-    _this__u8e3s4.add_utx5q5_k$(element);
-  };
-  protoOf(HashSetSerializer).insert_rt7dry_k$ = function (_this__u8e3s4, index, element) {
-    var tmp = _this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : THROW_CCE();
-    return this.insert_dbcb3d_k$(tmp, index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
-  };
-  function LinkedHashSetSerializer(eSerializer) {
-    CollectionSerializer.call(this, eSerializer);
-    this.descriptor_1 = new LinkedHashSetClassDesc(eSerializer.get_descriptor_wjt6a0_k$());
-  }
-  protoOf(LinkedHashSetSerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(LinkedHashSetSerializer).builder_3thy1n_k$ = function () {
-    // Inline function 'kotlin.collections.linkedSetOf' call
-    return LinkedHashSet_init_$Create$();
-  };
-  protoOf(LinkedHashSetSerializer).builderSize_r1nqpv_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.get_size_woubt6_k$();
-  };
-  protoOf(LinkedHashSetSerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
-    return this.builderSize_r1nqpv_k$(_this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(LinkedHashSetSerializer).toResult_r6oxq1_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4;
-  };
-  protoOf(LinkedHashSetSerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
-    return this.toResult_r6oxq1_k$(_this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(LinkedHashSetSerializer).toBuilder_4rloh5_k$ = function (_this__u8e3s4) {
-    var tmp0_elvis_lhs = _this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : null;
-    return tmp0_elvis_lhs == null ? LinkedHashSet_init_$Create$_0(_this__u8e3s4) : tmp0_elvis_lhs;
-  };
-  protoOf(LinkedHashSetSerializer).toBuilder_5lxc6t_k$ = function (_this__u8e3s4) {
-    return this.toBuilder_4rloh5_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Set) : false) ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(LinkedHashSetSerializer).checkCapacity_ntq5h1_k$ = function (_this__u8e3s4, size) {
-  };
-  protoOf(LinkedHashSetSerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
-    return this.checkCapacity_ntq5h1_k$(_this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : THROW_CCE(), size);
-  };
-  protoOf(LinkedHashSetSerializer).insert_rxm550_k$ = function (_this__u8e3s4, index, element) {
-    _this__u8e3s4.add_utx5q5_k$(element);
-  };
-  protoOf(LinkedHashSetSerializer).insert_rt7dry_k$ = function (_this__u8e3s4, index, element) {
-    var tmp = _this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : THROW_CCE();
-    return this.insert_rxm550_k$(tmp, index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
-  };
-  function HashMapSerializer(kSerializer, vSerializer) {
-    MapLikeSerializer.call(this, kSerializer, vSerializer);
-    this.descriptor_1 = new HashMapClassDesc(kSerializer.get_descriptor_wjt6a0_k$(), vSerializer.get_descriptor_wjt6a0_k$());
-  }
-  protoOf(HashMapSerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(HashMapSerializer).collectionSize_tcfefw_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.get_size_woubt6_k$();
-  };
-  protoOf(HashMapSerializer).collectionSize_kqukvo_k$ = function (_this__u8e3s4) {
-    return this.collectionSize_tcfefw_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Map) : false) ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(HashMapSerializer).collectionIterator_iaj4x5_k$ = function (_this__u8e3s4) {
-    // Inline function 'kotlin.collections.iterator' call
-    return _this__u8e3s4.get_entries_p20ztl_k$().iterator_jk1svi_k$();
-  };
-  protoOf(HashMapSerializer).collectionIterator_l8s4xt_k$ = function (_this__u8e3s4) {
-    return this.collectionIterator_iaj4x5_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Map) : false) ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(HashMapSerializer).builder_3thy1n_k$ = function () {
-    return HashMap_init_$Create$();
-  };
-  protoOf(HashMapSerializer).builderSize_xjd9v8_k$ = function (_this__u8e3s4) {
-    return imul(_this__u8e3s4.get_size_woubt6_k$(), 2);
-  };
-  protoOf(HashMapSerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
-    return this.builderSize_xjd9v8_k$(_this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(HashMapSerializer).toResult_rkrg20_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4;
-  };
-  protoOf(HashMapSerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
-    return this.toResult_rkrg20_k$(_this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(HashMapSerializer).toBuilder_2u7r19_k$ = function (_this__u8e3s4) {
-    var tmp0_elvis_lhs = _this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : null;
-    return tmp0_elvis_lhs == null ? HashMap_init_$Create$_0(_this__u8e3s4) : tmp0_elvis_lhs;
-  };
-  protoOf(HashMapSerializer).toBuilder_5lxc6t_k$ = function (_this__u8e3s4) {
-    return this.toBuilder_2u7r19_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Map) : false) ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(HashMapSerializer).checkCapacity_l9cilm_k$ = function (_this__u8e3s4, size) {
-  };
-  protoOf(HashMapSerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
-    return this.checkCapacity_l9cilm_k$(_this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : THROW_CCE(), size);
-  };
-  protoOf(HashMapSerializer).insertKeyValuePair_ddw0oi_k$ = function (_this__u8e3s4, index, key, value) {
-    _this__u8e3s4.put_4fpzoq_k$(key, value);
-    return Unit_getInstance();
-  };
-  protoOf(HashMapSerializer).insertKeyValuePair_1auocl_k$ = function (_this__u8e3s4, index, key, value) {
-    var tmp = _this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : THROW_CCE();
-    var tmp_0 = (key == null ? true : !(key == null)) ? key : THROW_CCE();
-    return this.insertKeyValuePair_ddw0oi_k$(tmp, index, tmp_0, (value == null ? true : !(value == null)) ? value : THROW_CCE());
-  };
   function LinkedHashMapSerializer(kSerializer, vSerializer) {
     MapLikeSerializer.call(this, kSerializer, vSerializer);
     this.descriptor_1 = new LinkedHashMapClassDesc(kSerializer.get_descriptor_wjt6a0_k$(), vSerializer.get_descriptor_wjt6a0_k$());
@@ -2716,6 +2571,236 @@
     var tmp = _this__u8e3s4 instanceof LinkedHashMap ? _this__u8e3s4 : THROW_CCE();
     var tmp_0 = (key == null ? true : !(key == null)) ? key : THROW_CCE();
     return this.insertKeyValuePair_myfi4h_k$(tmp, index, tmp_0, (value == null ? true : !(value == null)) ? value : THROW_CCE());
+  };
+  function readSize($this, decoder, builder) {
+    var size = decoder.decodeCollectionSize_l3mlkk_k$($this.get_descriptor_wjt6a0_k$());
+    $this.checkCapacity_4ljkg0_k$(builder, size);
+    return size;
+  }
+  function AbstractCollectionSerializer() {
+  }
+  protoOf(AbstractCollectionSerializer).merge_4lx7x7_k$ = function (decoder, previous) {
+    var tmp1_elvis_lhs = previous == null ? null : this.toBuilder_5lxc6t_k$(previous);
+    var builder = tmp1_elvis_lhs == null ? this.builder_3thy1n_k$() : tmp1_elvis_lhs;
+    var startIndex = this.builderSize_wan9ya_k$(builder);
+    var compositeDecoder = decoder.beginStructure_yljocp_k$(this.get_descriptor_wjt6a0_k$());
+    if (compositeDecoder.decodeSequentially_xlblqy_k$()) {
+      this.readAll_464h0j_k$(compositeDecoder, builder, startIndex, readSize(this, compositeDecoder, builder));
+    } else {
+      $l$loop: while (true) {
+        var index = compositeDecoder.decodeElementIndex_bstkhp_k$(this.get_descriptor_wjt6a0_k$());
+        if (index === Companion_getInstance_7().get_DECODE_DONE_1b8fna_k$())
+          break $l$loop;
+        this.readElement$default_8pfo75_k$(compositeDecoder, startIndex + index | 0, builder);
+      }
+    }
+    compositeDecoder.endStructure_1xqz0n_k$(this.get_descriptor_wjt6a0_k$());
+    return this.toResult_x7ydem_k$(builder);
+  };
+  protoOf(AbstractCollectionSerializer).deserialize_sy6x50_k$ = function (decoder) {
+    return this.merge_4lx7x7_k$(decoder, null);
+  };
+  protoOf(AbstractCollectionSerializer).readElement$default_8pfo75_k$ = function (decoder, index, builder, checkIndex, $super) {
+    checkIndex = checkIndex === VOID ? true : checkIndex;
+    var tmp;
+    if ($super === VOID) {
+      this.readElement_36l3ep_k$(decoder, index, builder, checkIndex);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.readElement_36l3ep_k$.call(this, decoder, index, builder, checkIndex);
+    }
+    return tmp;
+  };
+  function LinkedHashSetSerializer(eSerializer) {
+    CollectionSerializer.call(this, eSerializer);
+    this.descriptor_1 = new LinkedHashSetClassDesc(eSerializer.get_descriptor_wjt6a0_k$());
+  }
+  protoOf(LinkedHashSetSerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(LinkedHashSetSerializer).builder_3thy1n_k$ = function () {
+    // Inline function 'kotlin.collections.linkedSetOf' call
+    return LinkedHashSet_init_$Create$();
+  };
+  protoOf(LinkedHashSetSerializer).builderSize_r1nqpv_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.get_size_woubt6_k$();
+  };
+  protoOf(LinkedHashSetSerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
+    return this.builderSize_r1nqpv_k$(_this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(LinkedHashSetSerializer).toResult_r6oxq1_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4;
+  };
+  protoOf(LinkedHashSetSerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
+    return this.toResult_r6oxq1_k$(_this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(LinkedHashSetSerializer).toBuilder_4rloh5_k$ = function (_this__u8e3s4) {
+    var tmp0_elvis_lhs = _this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : null;
+    return tmp0_elvis_lhs == null ? LinkedHashSet_init_$Create$_0(_this__u8e3s4) : tmp0_elvis_lhs;
+  };
+  protoOf(LinkedHashSetSerializer).toBuilder_5lxc6t_k$ = function (_this__u8e3s4) {
+    return this.toBuilder_4rloh5_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Set) : false) ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(LinkedHashSetSerializer).checkCapacity_ntq5h1_k$ = function (_this__u8e3s4, size) {
+  };
+  protoOf(LinkedHashSetSerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
+    return this.checkCapacity_ntq5h1_k$(_this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : THROW_CCE(), size);
+  };
+  protoOf(LinkedHashSetSerializer).insert_rxm550_k$ = function (_this__u8e3s4, index, element) {
+    _this__u8e3s4.add_utx5q5_k$(element);
+  };
+  protoOf(LinkedHashSetSerializer).insert_rt7dry_k$ = function (_this__u8e3s4, index, element) {
+    var tmp = _this__u8e3s4 instanceof LinkedHashSet ? _this__u8e3s4 : THROW_CCE();
+    return this.insert_rxm550_k$(tmp, index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
+  };
+  function PrimitiveArraySerializer(primitiveSerializer) {
+    CollectionLikeSerializer.call(this, primitiveSerializer);
+    this.descriptor_1 = new PrimitiveArrayDescriptor(primitiveSerializer.get_descriptor_wjt6a0_k$());
+  }
+  protoOf(PrimitiveArraySerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(PrimitiveArraySerializer).builderSize_o7j3ed_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.get_position_jfponi_k$();
+  };
+  protoOf(PrimitiveArraySerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
+    return this.builderSize_o7j3ed_k$(_this__u8e3s4 instanceof PrimitiveArrayBuilder ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(PrimitiveArraySerializer).toResult_a2kawh_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.build_1k0s4u_k$();
+  };
+  protoOf(PrimitiveArraySerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
+    return this.toResult_a2kawh_k$(_this__u8e3s4 instanceof PrimitiveArrayBuilder ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(PrimitiveArraySerializer).checkCapacity_m26r65_k$ = function (_this__u8e3s4, size) {
+    return _this__u8e3s4.ensureCapacity_wr7980_k$(size);
+  };
+  protoOf(PrimitiveArraySerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
+    return this.checkCapacity_m26r65_k$(_this__u8e3s4 instanceof PrimitiveArrayBuilder ? _this__u8e3s4 : THROW_CCE(), size);
+  };
+  protoOf(PrimitiveArraySerializer).collectionIterator_7wnbtc_k$ = function (_this__u8e3s4) {
+    var message = 'This method lead to boxing and must not be used, use writeContents instead';
+    throw IllegalStateException_init_$Create$(toString(message));
+  };
+  protoOf(PrimitiveArraySerializer).collectionIterator_l8s4xt_k$ = function (_this__u8e3s4) {
+    return this.collectionIterator_7wnbtc_k$((_this__u8e3s4 == null ? true : !(_this__u8e3s4 == null)) ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(PrimitiveArraySerializer).insert_hsr581_k$ = function (_this__u8e3s4, index, element) {
+    var message = 'This method lead to boxing and must not be used, use Builder.append instead';
+    throw IllegalStateException_init_$Create$(toString(message));
+  };
+  protoOf(PrimitiveArraySerializer).insert_rt7dry_k$ = function (_this__u8e3s4, index, element) {
+    var tmp = _this__u8e3s4 instanceof PrimitiveArrayBuilder ? _this__u8e3s4 : THROW_CCE();
+    return this.insert_hsr581_k$(tmp, index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
+  };
+  protoOf(PrimitiveArraySerializer).builder_3thy1n_k$ = function () {
+    return this.toBuilder_5lxc6t_k$(this.empty_1lj7f1_k$());
+  };
+  protoOf(PrimitiveArraySerializer).serialize_tb1dm5_k$ = function (encoder, value) {
+    var size = this.collectionSize_kqukvo_k$(value);
+    // Inline function 'kotlinx.serialization.encoding.encodeCollection' call
+    var descriptor = this.descriptor_1;
+    var composite = encoder.beginCollection_9edss2_k$(descriptor, size);
+    // Inline function 'kotlinx.serialization.internal.PrimitiveArraySerializer.serialize.<anonymous>' call
+    this.writeContent_wekas_k$(composite, value, size);
+    composite.endStructure_1xqz0n_k$(descriptor);
+  };
+  protoOf(PrimitiveArraySerializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_tb1dm5_k$(encoder, (value == null ? true : !(value == null)) ? value : THROW_CCE());
+  };
+  protoOf(PrimitiveArraySerializer).serialize_ag16s_k$ = function (encoder, value) {
+    return this.serialize_tb1dm5_k$(encoder, (value == null ? true : !(value == null)) ? value : THROW_CCE());
+  };
+  protoOf(PrimitiveArraySerializer).deserialize_sy6x50_k$ = function (decoder) {
+    return this.merge_4lx7x7_k$(decoder, null);
+  };
+  function _get_elementSerializer__tegbkt($this) {
+    return $this.elementSerializer_1;
+  }
+  function CollectionLikeSerializer(elementSerializer) {
+    AbstractCollectionSerializer.call(this);
+    this.elementSerializer_1 = elementSerializer;
+  }
+  protoOf(CollectionLikeSerializer).serialize_ag16s_k$ = function (encoder, value) {
+    var size = this.collectionSize_kqukvo_k$(value);
+    // Inline function 'kotlinx.serialization.encoding.encodeCollection' call
+    var descriptor = this.get_descriptor_wjt6a0_k$();
+    var composite = encoder.beginCollection_9edss2_k$(descriptor, size);
+    // Inline function 'kotlinx.serialization.internal.CollectionLikeSerializer.serialize.<anonymous>' call
+    var iterator = this.collectionIterator_l8s4xt_k$(value);
+    var inductionVariable = 0;
+    if (inductionVariable < size)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        composite.encodeSerializableElement_isqxcl_k$(this.get_descriptor_wjt6a0_k$(), index, this.elementSerializer_1, iterator.next_20eer_k$());
+      }
+       while (inductionVariable < size);
+    composite.endStructure_1xqz0n_k$(descriptor);
+  };
+  protoOf(CollectionLikeSerializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_ag16s_k$(encoder, (value == null ? true : !(value == null)) ? value : THROW_CCE());
+  };
+  protoOf(CollectionLikeSerializer).readAll_464h0j_k$ = function (decoder, builder, startIndex, size) {
+    // Inline function 'kotlin.require' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(size >= 0)) {
+      // Inline function 'kotlinx.serialization.internal.CollectionLikeSerializer.readAll.<anonymous>' call
+      var message = 'Size must be known in advance when using READ_ALL';
+      throw IllegalArgumentException_init_$Create$(toString(message));
+    }
+    var inductionVariable = 0;
+    if (inductionVariable < size)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        this.readElement_36l3ep_k$(decoder, startIndex + index | 0, builder, false);
+      }
+       while (inductionVariable < size);
+  };
+  protoOf(CollectionLikeSerializer).readElement_36l3ep_k$ = function (decoder, index, builder, checkIndex) {
+    this.insert_rt7dry_k$(builder, index, decoder.decodeSerializableElement$default_j0zaoi_k$(this.get_descriptor_wjt6a0_k$(), index, this.elementSerializer_1));
+  };
+  function HashSetSerializer(eSerializer) {
+    CollectionSerializer.call(this, eSerializer);
+    this.descriptor_1 = new HashSetClassDesc(eSerializer.get_descriptor_wjt6a0_k$());
+  }
+  protoOf(HashSetSerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(HashSetSerializer).builder_3thy1n_k$ = function () {
+    return HashSet_init_$Create$();
+  };
+  protoOf(HashSetSerializer).builderSize_uktc1i_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.get_size_woubt6_k$();
+  };
+  protoOf(HashSetSerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
+    return this.builderSize_uktc1i_k$(_this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(HashSetSerializer).toResult_pk432m_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4;
+  };
+  protoOf(HashSetSerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
+    return this.toResult_pk432m_k$(_this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(HashSetSerializer).toBuilder_4rloh5_k$ = function (_this__u8e3s4) {
+    var tmp0_elvis_lhs = _this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : null;
+    return tmp0_elvis_lhs == null ? HashSet_init_$Create$_0(_this__u8e3s4) : tmp0_elvis_lhs;
+  };
+  protoOf(HashSetSerializer).toBuilder_5lxc6t_k$ = function (_this__u8e3s4) {
+    return this.toBuilder_4rloh5_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Set) : false) ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(HashSetSerializer).checkCapacity_81yld8_k$ = function (_this__u8e3s4, size) {
+  };
+  protoOf(HashSetSerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
+    return this.checkCapacity_81yld8_k$(_this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : THROW_CCE(), size);
+  };
+  protoOf(HashSetSerializer).insert_dbcb3d_k$ = function (_this__u8e3s4, index, element) {
+    _this__u8e3s4.add_utx5q5_k$(element);
+  };
+  protoOf(HashSetSerializer).insert_rt7dry_k$ = function (_this__u8e3s4, index, element) {
+    var tmp = _this__u8e3s4 instanceof HashSet ? _this__u8e3s4 : THROW_CCE();
+    return this.insert_dbcb3d_k$(tmp, index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
   function _get_kClass__80op26($this) {
     return $this.kClass_1;
@@ -2775,20 +2860,117 @@
     var tmp = _this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : THROW_CCE();
     return this.insert_4w10q6_k$(tmp, index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
-  function CollectionSerializer(element) {
-    CollectionLikeSerializer.call(this, element);
+  function ArrayListSerializer(element) {
+    CollectionSerializer.call(this, element);
+    this.descriptor_1 = new ArrayListClassDesc(element.get_descriptor_wjt6a0_k$());
   }
-  protoOf(CollectionSerializer).collectionSize_y7efpe_k$ = function (_this__u8e3s4) {
+  protoOf(ArrayListSerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(ArrayListSerializer).builder_3thy1n_k$ = function () {
+    // Inline function 'kotlin.collections.arrayListOf' call
+    return ArrayList_init_$Create$_0();
+  };
+  protoOf(ArrayListSerializer).builderSize_y2o8s8_k$ = function (_this__u8e3s4) {
     return _this__u8e3s4.get_size_woubt6_k$();
   };
-  protoOf(CollectionSerializer).collectionSize_kqukvo_k$ = function (_this__u8e3s4) {
-    return this.collectionSize_y7efpe_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Collection) : false) ? _this__u8e3s4 : THROW_CCE());
+  protoOf(ArrayListSerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
+    return this.builderSize_y2o8s8_k$(_this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : THROW_CCE());
   };
-  protoOf(CollectionSerializer).collectionIterator_5cte45_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.iterator_jk1svi_k$();
+  protoOf(ArrayListSerializer).toResult_fpl6ik_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4;
   };
-  protoOf(CollectionSerializer).collectionIterator_l8s4xt_k$ = function (_this__u8e3s4) {
-    return this.collectionIterator_5cte45_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Collection) : false) ? _this__u8e3s4 : THROW_CCE());
+  protoOf(ArrayListSerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
+    return this.toResult_fpl6ik_k$(_this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(ArrayListSerializer).toBuilder_unwgi5_k$ = function (_this__u8e3s4) {
+    var tmp0_elvis_lhs = _this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : null;
+    return tmp0_elvis_lhs == null ? ArrayList_init_$Create$_1(_this__u8e3s4) : tmp0_elvis_lhs;
+  };
+  protoOf(ArrayListSerializer).toBuilder_5lxc6t_k$ = function (_this__u8e3s4) {
+    return this.toBuilder_unwgi5_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, List) : false) ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(ArrayListSerializer).checkCapacity_qq1vqe_k$ = function (_this__u8e3s4, size) {
+    return _this__u8e3s4.ensureCapacity_wr7980_k$(size);
+  };
+  protoOf(ArrayListSerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
+    return this.checkCapacity_qq1vqe_k$(_this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : THROW_CCE(), size);
+  };
+  protoOf(ArrayListSerializer).insert_irgt39_k$ = function (_this__u8e3s4, index, element) {
+    _this__u8e3s4.add_dl6gt3_k$(index, element);
+  };
+  protoOf(ArrayListSerializer).insert_rt7dry_k$ = function (_this__u8e3s4, index, element) {
+    var tmp = _this__u8e3s4 instanceof ArrayList ? _this__u8e3s4 : THROW_CCE();
+    return this.insert_irgt39_k$(tmp, index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
+  };
+  function HashMapSerializer(kSerializer, vSerializer) {
+    MapLikeSerializer.call(this, kSerializer, vSerializer);
+    this.descriptor_1 = new HashMapClassDesc(kSerializer.get_descriptor_wjt6a0_k$(), vSerializer.get_descriptor_wjt6a0_k$());
+  }
+  protoOf(HashMapSerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(HashMapSerializer).collectionSize_tcfefw_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.get_size_woubt6_k$();
+  };
+  protoOf(HashMapSerializer).collectionSize_kqukvo_k$ = function (_this__u8e3s4) {
+    return this.collectionSize_tcfefw_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Map) : false) ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(HashMapSerializer).collectionIterator_iaj4x5_k$ = function (_this__u8e3s4) {
+    // Inline function 'kotlin.collections.iterator' call
+    return _this__u8e3s4.get_entries_p20ztl_k$().iterator_jk1svi_k$();
+  };
+  protoOf(HashMapSerializer).collectionIterator_l8s4xt_k$ = function (_this__u8e3s4) {
+    return this.collectionIterator_iaj4x5_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Map) : false) ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(HashMapSerializer).builder_3thy1n_k$ = function () {
+    return HashMap_init_$Create$();
+  };
+  protoOf(HashMapSerializer).builderSize_xjd9v8_k$ = function (_this__u8e3s4) {
+    return imul(_this__u8e3s4.get_size_woubt6_k$(), 2);
+  };
+  protoOf(HashMapSerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
+    return this.builderSize_xjd9v8_k$(_this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(HashMapSerializer).toResult_rkrg20_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4;
+  };
+  protoOf(HashMapSerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
+    return this.toResult_rkrg20_k$(_this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(HashMapSerializer).toBuilder_2u7r19_k$ = function (_this__u8e3s4) {
+    var tmp0_elvis_lhs = _this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : null;
+    return tmp0_elvis_lhs == null ? HashMap_init_$Create$_0(_this__u8e3s4) : tmp0_elvis_lhs;
+  };
+  protoOf(HashMapSerializer).toBuilder_5lxc6t_k$ = function (_this__u8e3s4) {
+    return this.toBuilder_2u7r19_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Map) : false) ? _this__u8e3s4 : THROW_CCE());
+  };
+  protoOf(HashMapSerializer).checkCapacity_l9cilm_k$ = function (_this__u8e3s4, size) {
+  };
+  protoOf(HashMapSerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
+    return this.checkCapacity_l9cilm_k$(_this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : THROW_CCE(), size);
+  };
+  protoOf(HashMapSerializer).insertKeyValuePair_ddw0oi_k$ = function (_this__u8e3s4, index, key, value) {
+    _this__u8e3s4.put_4fpzoq_k$(key, value);
+    return Unit_getInstance();
+  };
+  protoOf(HashMapSerializer).insertKeyValuePair_1auocl_k$ = function (_this__u8e3s4, index, key, value) {
+    var tmp = _this__u8e3s4 instanceof HashMap ? _this__u8e3s4 : THROW_CCE();
+    var tmp_0 = (key == null ? true : !(key == null)) ? key : THROW_CCE();
+    return this.insertKeyValuePair_ddw0oi_k$(tmp, index, tmp_0, (value == null ? true : !(value == null)) ? value : THROW_CCE());
+  };
+  function PrimitiveArrayBuilder() {
+  }
+  protoOf(PrimitiveArrayBuilder).ensureCapacity$default_e1gu2o_k$ = function (requiredCapacity, $super) {
+    requiredCapacity = requiredCapacity === VOID ? this.get_position_jfponi_k$() + 1 | 0 : requiredCapacity;
+    var tmp;
+    if ($super === VOID) {
+      this.ensureCapacity_wr7980_k$(requiredCapacity);
+      tmp = Unit_getInstance();
+    } else {
+      tmp = $super.ensureCapacity_wr7980_k$.call(this, requiredCapacity);
+    }
+    return tmp;
   };
   function MapLikeSerializer(keySerializer, valueSerializer) {
     AbstractCollectionSerializer.call(this);
@@ -2896,165 +3078,20 @@
   protoOf(MapLikeSerializer).serialize_5ase3y_k$ = function (encoder, value) {
     return this.serialize_ag16s_k$(encoder, (value == null ? true : !(value == null)) ? value : THROW_CCE());
   };
-  function _get_elementSerializer__tegbkt($this) {
-    return $this.elementSerializer_1;
+  function CollectionSerializer(element) {
+    CollectionLikeSerializer.call(this, element);
   }
-  function CollectionLikeSerializer(elementSerializer) {
-    AbstractCollectionSerializer.call(this);
-    this.elementSerializer_1 = elementSerializer;
-  }
-  protoOf(CollectionLikeSerializer).serialize_ag16s_k$ = function (encoder, value) {
-    var size = this.collectionSize_kqukvo_k$(value);
-    // Inline function 'kotlinx.serialization.encoding.encodeCollection' call
-    var descriptor = this.get_descriptor_wjt6a0_k$();
-    var composite = encoder.beginCollection_9edss2_k$(descriptor, size);
-    // Inline function 'kotlinx.serialization.internal.CollectionLikeSerializer.serialize.<anonymous>' call
-    var iterator = this.collectionIterator_l8s4xt_k$(value);
-    var inductionVariable = 0;
-    if (inductionVariable < size)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        composite.encodeSerializableElement_isqxcl_k$(this.get_descriptor_wjt6a0_k$(), index, this.elementSerializer_1, iterator.next_20eer_k$());
-      }
-       while (inductionVariable < size);
-    composite.endStructure_1xqz0n_k$(descriptor);
+  protoOf(CollectionSerializer).collectionSize_y7efpe_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.get_size_woubt6_k$();
   };
-  protoOf(CollectionLikeSerializer).serialize_5ase3y_k$ = function (encoder, value) {
-    return this.serialize_ag16s_k$(encoder, (value == null ? true : !(value == null)) ? value : THROW_CCE());
+  protoOf(CollectionSerializer).collectionSize_kqukvo_k$ = function (_this__u8e3s4) {
+    return this.collectionSize_y7efpe_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Collection) : false) ? _this__u8e3s4 : THROW_CCE());
   };
-  protoOf(CollectionLikeSerializer).readAll_464h0j_k$ = function (decoder, builder, startIndex, size) {
-    // Inline function 'kotlin.require' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!(size >= 0)) {
-      // Inline function 'kotlinx.serialization.internal.CollectionLikeSerializer.readAll.<anonymous>' call
-      var message = 'Size must be known in advance when using READ_ALL';
-      throw IllegalArgumentException_init_$Create$(toString(message));
-    }
-    var inductionVariable = 0;
-    if (inductionVariable < size)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        this.readElement_36l3ep_k$(decoder, startIndex + index | 0, builder, false);
-      }
-       while (inductionVariable < size);
+  protoOf(CollectionSerializer).collectionIterator_5cte45_k$ = function (_this__u8e3s4) {
+    return _this__u8e3s4.iterator_jk1svi_k$();
   };
-  protoOf(CollectionLikeSerializer).readElement_36l3ep_k$ = function (decoder, index, builder, checkIndex) {
-    this.insert_rt7dry_k$(builder, index, decoder.decodeSerializableElement$default_j0zaoi_k$(this.get_descriptor_wjt6a0_k$(), index, this.elementSerializer_1));
-  };
-  function readSize($this, decoder, builder) {
-    var size = decoder.decodeCollectionSize_l3mlkk_k$($this.get_descriptor_wjt6a0_k$());
-    $this.checkCapacity_4ljkg0_k$(builder, size);
-    return size;
-  }
-  function AbstractCollectionSerializer() {
-  }
-  protoOf(AbstractCollectionSerializer).merge_4lx7x7_k$ = function (decoder, previous) {
-    var tmp1_elvis_lhs = previous == null ? null : this.toBuilder_5lxc6t_k$(previous);
-    var builder = tmp1_elvis_lhs == null ? this.builder_3thy1n_k$() : tmp1_elvis_lhs;
-    var startIndex = this.builderSize_wan9ya_k$(builder);
-    var compositeDecoder = decoder.beginStructure_yljocp_k$(this.get_descriptor_wjt6a0_k$());
-    if (compositeDecoder.decodeSequentially_xlblqy_k$()) {
-      this.readAll_464h0j_k$(compositeDecoder, builder, startIndex, readSize(this, compositeDecoder, builder));
-    } else {
-      $l$loop: while (true) {
-        var index = compositeDecoder.decodeElementIndex_bstkhp_k$(this.get_descriptor_wjt6a0_k$());
-        if (index === Companion_getInstance_7().get_DECODE_DONE_1b8fna_k$())
-          break $l$loop;
-        this.readElement$default_8pfo75_k$(compositeDecoder, startIndex + index | 0, builder);
-      }
-    }
-    compositeDecoder.endStructure_1xqz0n_k$(this.get_descriptor_wjt6a0_k$());
-    return this.toResult_x7ydem_k$(builder);
-  };
-  protoOf(AbstractCollectionSerializer).deserialize_sy6x50_k$ = function (decoder) {
-    return this.merge_4lx7x7_k$(decoder, null);
-  };
-  protoOf(AbstractCollectionSerializer).readElement$default_8pfo75_k$ = function (decoder, index, builder, checkIndex, $super) {
-    checkIndex = checkIndex === VOID ? true : checkIndex;
-    var tmp;
-    if ($super === VOID) {
-      this.readElement_36l3ep_k$(decoder, index, builder, checkIndex);
-      tmp = Unit_getInstance();
-    } else {
-      tmp = $super.readElement_36l3ep_k$.call(this, decoder, index, builder, checkIndex);
-    }
-    return tmp;
-  };
-  function PrimitiveArraySerializer(primitiveSerializer) {
-    CollectionLikeSerializer.call(this, primitiveSerializer);
-    this.descriptor_1 = new PrimitiveArrayDescriptor(primitiveSerializer.get_descriptor_wjt6a0_k$());
-  }
-  protoOf(PrimitiveArraySerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(PrimitiveArraySerializer).builderSize_o7j3ed_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.get_position_jfponi_k$();
-  };
-  protoOf(PrimitiveArraySerializer).builderSize_wan9ya_k$ = function (_this__u8e3s4) {
-    return this.builderSize_o7j3ed_k$(_this__u8e3s4 instanceof PrimitiveArrayBuilder ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(PrimitiveArraySerializer).toResult_a2kawh_k$ = function (_this__u8e3s4) {
-    return _this__u8e3s4.build_1k0s4u_k$();
-  };
-  protoOf(PrimitiveArraySerializer).toResult_x7ydem_k$ = function (_this__u8e3s4) {
-    return this.toResult_a2kawh_k$(_this__u8e3s4 instanceof PrimitiveArrayBuilder ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(PrimitiveArraySerializer).checkCapacity_m26r65_k$ = function (_this__u8e3s4, size) {
-    return _this__u8e3s4.ensureCapacity_wr7980_k$(size);
-  };
-  protoOf(PrimitiveArraySerializer).checkCapacity_4ljkg0_k$ = function (_this__u8e3s4, size) {
-    return this.checkCapacity_m26r65_k$(_this__u8e3s4 instanceof PrimitiveArrayBuilder ? _this__u8e3s4 : THROW_CCE(), size);
-  };
-  protoOf(PrimitiveArraySerializer).collectionIterator_7wnbtc_k$ = function (_this__u8e3s4) {
-    var message = 'This method lead to boxing and must not be used, use writeContents instead';
-    throw IllegalStateException_init_$Create$(toString(message));
-  };
-  protoOf(PrimitiveArraySerializer).collectionIterator_l8s4xt_k$ = function (_this__u8e3s4) {
-    return this.collectionIterator_7wnbtc_k$((_this__u8e3s4 == null ? true : !(_this__u8e3s4 == null)) ? _this__u8e3s4 : THROW_CCE());
-  };
-  protoOf(PrimitiveArraySerializer).insert_hsr581_k$ = function (_this__u8e3s4, index, element) {
-    var message = 'This method lead to boxing and must not be used, use Builder.append instead';
-    throw IllegalStateException_init_$Create$(toString(message));
-  };
-  protoOf(PrimitiveArraySerializer).insert_rt7dry_k$ = function (_this__u8e3s4, index, element) {
-    var tmp = _this__u8e3s4 instanceof PrimitiveArrayBuilder ? _this__u8e3s4 : THROW_CCE();
-    return this.insert_hsr581_k$(tmp, index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
-  };
-  protoOf(PrimitiveArraySerializer).builder_3thy1n_k$ = function () {
-    return this.toBuilder_5lxc6t_k$(this.empty_1lj7f1_k$());
-  };
-  protoOf(PrimitiveArraySerializer).serialize_tb1dm5_k$ = function (encoder, value) {
-    var size = this.collectionSize_kqukvo_k$(value);
-    // Inline function 'kotlinx.serialization.encoding.encodeCollection' call
-    var descriptor = this.descriptor_1;
-    var composite = encoder.beginCollection_9edss2_k$(descriptor, size);
-    // Inline function 'kotlinx.serialization.internal.PrimitiveArraySerializer.serialize.<anonymous>' call
-    this.writeContent_wekas_k$(composite, value, size);
-    composite.endStructure_1xqz0n_k$(descriptor);
-  };
-  protoOf(PrimitiveArraySerializer).serialize_5ase3y_k$ = function (encoder, value) {
-    return this.serialize_tb1dm5_k$(encoder, (value == null ? true : !(value == null)) ? value : THROW_CCE());
-  };
-  protoOf(PrimitiveArraySerializer).serialize_ag16s_k$ = function (encoder, value) {
-    return this.serialize_tb1dm5_k$(encoder, (value == null ? true : !(value == null)) ? value : THROW_CCE());
-  };
-  protoOf(PrimitiveArraySerializer).deserialize_sy6x50_k$ = function (decoder) {
-    return this.merge_4lx7x7_k$(decoder, null);
-  };
-  function PrimitiveArrayBuilder() {
-  }
-  protoOf(PrimitiveArrayBuilder).ensureCapacity$default_e1gu2o_k$ = function (requiredCapacity, $super) {
-    requiredCapacity = requiredCapacity === VOID ? this.get_position_jfponi_k$() + 1 | 0 : requiredCapacity;
-    var tmp;
-    if ($super === VOID) {
-      this.ensureCapacity_wr7980_k$(requiredCapacity);
-      tmp = Unit_getInstance();
-    } else {
-      tmp = $super.ensureCapacity_wr7980_k$.call(this, requiredCapacity);
-    }
-    return tmp;
+  protoOf(CollectionSerializer).collectionIterator_l8s4xt_k$ = function (_this__u8e3s4) {
+    return this.collectionIterator_5cte45_k$((!(_this__u8e3s4 == null) ? isInterface(_this__u8e3s4, Collection) : false) ? _this__u8e3s4 : THROW_CCE());
   };
   function _get_EMPTY_HIGH_MARKS__mj061c($this) {
     return $this.EMPTY_HIGH_MARKS_1;
@@ -3162,6 +3199,155 @@
     }
     return Companion_getInstance_7().get_DECODE_DONE_1b8fna_k$();
   };
+  function _get_values__tel787($this) {
+    return $this.values_1;
+  }
+  function _set_overriddenDescriptor__uash3g($this, _set____db54di) {
+    $this.overriddenDescriptor_1 = _set____db54di;
+  }
+  function _get_overriddenDescriptor__qs8wvc($this) {
+    return $this.overriddenDescriptor_1;
+  }
+  function EnumSerializer_init_$Init$(serialName, values, descriptor, $this) {
+    EnumSerializer.call($this, serialName, values);
+    $this.overriddenDescriptor_1 = descriptor;
+    return $this;
+  }
+  function EnumSerializer_init_$Create$(serialName, values, descriptor) {
+    return EnumSerializer_init_$Init$(serialName, values, descriptor, objectCreate(protoOf(EnumSerializer)));
+  }
+  function createUnmarkedDescriptor($this, serialName) {
+    var d = new EnumDescriptor(serialName, $this.values_1.length);
+    // Inline function 'kotlin.collections.forEach' call
+    var indexedObject = $this.values_1;
+    var inductionVariable = 0;
+    var last = indexedObject.length;
+    while (inductionVariable < last) {
+      var element = indexedObject[inductionVariable];
+      inductionVariable = inductionVariable + 1 | 0;
+      // Inline function 'kotlinx.serialization.internal.EnumSerializer.createUnmarkedDescriptor.<anonymous>' call
+      d.addElement$default_mty55e_k$(element.get_name_woqyms_k$());
+    }
+    return d;
+  }
+  function EnumSerializer$descriptor$delegate$lambda(this$0, $serialName) {
+    return function () {
+      var tmp0_elvis_lhs = this$0.overriddenDescriptor_1;
+      return tmp0_elvis_lhs == null ? createUnmarkedDescriptor(this$0, $serialName) : tmp0_elvis_lhs;
+    };
+  }
+  function EnumSerializer(serialName, values) {
+    this.values_1 = values;
+    this.overriddenDescriptor_1 = null;
+    var tmp = this;
+    tmp.descriptor$delegate_1 = lazy_0(EnumSerializer$descriptor$delegate$lambda(this, serialName));
+  }
+  protoOf(EnumSerializer).get_descriptor_wjt6a0_k$ = function () {
+    // Inline function 'kotlin.getValue' call
+    var this_0 = this.descriptor$delegate_1;
+    descriptor$factory_1();
+    return this_0.get_value_j01efc_k$();
+  };
+  protoOf(EnumSerializer).serialize_dc42ix_k$ = function (encoder, value) {
+    var index = indexOf(this.values_1, value);
+    if (index === -1) {
+      throw SerializationException_init_$Create$_0('' + value + ' is not a valid enum ' + this.get_descriptor_wjt6a0_k$().get_serialName_u2rqhk_k$() + ', ' + ('must be one of ' + contentToString(this.values_1)));
+    }
+    encoder.encodeEnum_2qin0y_k$(this.get_descriptor_wjt6a0_k$(), index);
+  };
+  protoOf(EnumSerializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_dc42ix_k$(encoder, value instanceof Enum ? value : THROW_CCE());
+  };
+  protoOf(EnumSerializer).deserialize_sy6x50_k$ = function (decoder) {
+    var index = decoder.decodeEnum_slg6lu_k$(this.get_descriptor_wjt6a0_k$());
+    if (!(0 <= index ? index <= (this.values_1.length - 1 | 0) : false)) {
+      throw SerializationException_init_$Create$_0('' + index + ' is not among valid ' + this.get_descriptor_wjt6a0_k$().get_serialName_u2rqhk_k$() + ' enum values, ' + ('values size is ' + this.values_1.length));
+    }
+    return this.values_1[index];
+  };
+  protoOf(EnumSerializer).toString = function () {
+    return 'kotlinx.serialization.internal.EnumSerializer<' + this.get_descriptor_wjt6a0_k$().get_serialName_u2rqhk_k$() + '>';
+  };
+  function _get_elementDescriptors__y23q9p_0($this) {
+    // Inline function 'kotlin.getValue' call
+    var this_0 = $this.elementDescriptors$delegate_1;
+    elementDescriptors$factory();
+    return this_0.get_value_j01efc_k$();
+  }
+  function EnumDescriptor$elementDescriptors$delegate$lambda($elementsCount, $name, this$0) {
+    return function () {
+      var tmp = 0;
+      var tmp_0 = $elementsCount;
+      // Inline function 'kotlin.arrayOfNulls' call
+      var tmp_1 = fillArrayVal(Array(tmp_0), null);
+      while (tmp < tmp_0) {
+        var tmp_2 = tmp;
+        tmp_1[tmp_2] = buildSerialDescriptor($name + '.' + this$0.getElementName_u4sqmf_k$(tmp_2), OBJECT_getInstance(), []);
+        tmp = tmp + 1 | 0;
+      }
+      return tmp_1;
+    };
+  }
+  function EnumDescriptor(name, elementsCount) {
+    PluginGeneratedSerialDescriptor.call(this, name, VOID, elementsCount);
+    this.kind_1 = ENUM_getInstance();
+    var tmp = this;
+    tmp.elementDescriptors$delegate_1 = lazy_0(EnumDescriptor$elementDescriptors$delegate$lambda(elementsCount, name, this));
+  }
+  protoOf(EnumDescriptor).get_kind_wop7ml_k$ = function () {
+    return this.kind_1;
+  };
+  protoOf(EnumDescriptor).getElementDescriptor_ncda77_k$ = function (index) {
+    return getChecked(_get_elementDescriptors__y23q9p_0(this), index);
+  };
+  protoOf(EnumDescriptor).equals = function (other) {
+    if (this === other)
+      return true;
+    if (other == null)
+      return false;
+    if (!(!(other == null) ? isInterface(other, SerialDescriptor) : false))
+      return false;
+    if (!(other.get_kind_wop7ml_k$() === ENUM_getInstance()))
+      return false;
+    if (!(this.get_serialName_u2rqhk_k$() === other.get_serialName_u2rqhk_k$()))
+      return false;
+    if (!equals(cachedSerialNames(this), cachedSerialNames(other)))
+      return false;
+    return true;
+  };
+  protoOf(EnumDescriptor).toString = function () {
+    return joinToString(get_elementNames(this), ', ', this.get_serialName_u2rqhk_k$() + '(', ')');
+  };
+  protoOf(EnumDescriptor).hashCode = function () {
+    var result = getStringHashCode(this.get_serialName_u2rqhk_k$());
+    // Inline function 'kotlinx.serialization.internal.elementsHashCodeBy' call
+    // Inline function 'kotlin.collections.fold' call
+    var accumulator = 1;
+    var tmp0_iterator = get_elementNames(this).iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var element = tmp0_iterator.next_20eer_k$();
+      // Inline function 'kotlinx.serialization.internal.elementsHashCodeBy.<anonymous>' call
+      var hash = accumulator;
+      var tmp = imul(31, hash);
+      // Inline function 'kotlin.hashCode' call
+      // Inline function 'kotlinx.serialization.internal.EnumDescriptor.hashCode.<anonymous>' call
+      var tmp1_elvis_lhs = element == null ? null : hashCode(element);
+      accumulator = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
+    }
+    var elementsHashCode = accumulator;
+    result = imul(31, result) + elementsHashCode | 0;
+    return result;
+  };
+  function descriptor$factory_1() {
+    return getPropertyCallableRef('descriptor', 1, KProperty1, function (receiver) {
+      return receiver.get_descriptor_wjt6a0_k$();
+    }, null);
+  }
+  function elementDescriptors$factory() {
+    return getPropertyCallableRef('elementDescriptors', 1, KProperty1, function (receiver) {
+      return _get_elementDescriptors__y23q9p_0(receiver);
+    }, null);
+  }
   function InlinePrimitiveDescriptor(name, primitiveSerializer) {
     return new InlineClassDescriptor(name, new InlinePrimitiveDescriptor$1(primitiveSerializer));
   }
@@ -3479,7 +3665,7 @@
   protoOf(ObjectSerializer).get_descriptor_wjt6a0_k$ = function () {
     // Inline function 'kotlin.getValue' call
     var this_0 = this.descriptor$delegate_1;
-    descriptor$factory_1();
+    descriptor$factory_2();
     return this_0.get_value_j01efc_k$();
   };
   protoOf(ObjectSerializer).serialize_kj9hv3_k$ = function (encoder, value) {
@@ -3510,7 +3696,7 @@
     composite.endStructure_1xqz0n_k$(descriptor);
     return this.objectInstance_1;
   };
-  function descriptor$factory_1() {
+  function descriptor$factory_2() {
     return getPropertyCallableRef('descriptor', 1, KProperty1, function (receiver) {
       return receiver.get_descriptor_wjt6a0_k$();
     }, null);
@@ -3973,9 +4159,9 @@
     return EMPTY_SERIALIZER_ARRAY;
   }
   var EMPTY_SERIALIZER_ARRAY;
-  function SerializerFactory() {
-  }
   function GeneratedSerializer() {
+  }
+  function SerializerFactory() {
   }
   var properties_initialized_PluginHelperInterfaces_kt_ap8in1;
   function _init_properties_PluginHelperInterfaces_kt__xgvzfp() {
@@ -5028,32 +5214,49 @@
     return BUILTIN_SERIALIZERS;
   }
   var BUILTIN_SERIALIZERS;
-  function builtinSerializerOrNull(_this__u8e3s4) {
-    _init_properties_Primitives_kt__k0eto4();
-    var tmp = get_BUILTIN_SERIALIZERS().get_wei43m_k$(_this__u8e3s4);
-    return (tmp == null ? true : isInterface(tmp, KSerializer)) ? tmp : THROW_CCE();
+  function DoubleSerializer() {
+    DoubleSerializer_instance = this;
+    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Double', DOUBLE_getInstance());
   }
-  function StringSerializer() {
-    StringSerializer_instance = this;
-    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.String', STRING_getInstance());
-  }
-  protoOf(StringSerializer).get_descriptor_wjt6a0_k$ = function () {
+  protoOf(DoubleSerializer).get_descriptor_wjt6a0_k$ = function () {
     return this.descriptor_1;
   };
-  protoOf(StringSerializer).serialize_jnz9c3_k$ = function (encoder, value) {
-    return encoder.encodeString_424b5v_k$(value);
+  protoOf(DoubleSerializer).serialize_sc6aif_k$ = function (encoder, value) {
+    return encoder.encodeDouble_n270q9_k$(value);
   };
-  protoOf(StringSerializer).serialize_5ase3y_k$ = function (encoder, value) {
-    return this.serialize_jnz9c3_k$(encoder, (!(value == null) ? typeof value === 'string' : false) ? value : THROW_CCE());
+  protoOf(DoubleSerializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_sc6aif_k$(encoder, (!(value == null) ? typeof value === 'number' : false) ? value : THROW_CCE());
   };
-  protoOf(StringSerializer).deserialize_sy6x50_k$ = function (decoder) {
-    return decoder.decodeString_x3hxsx_k$();
+  protoOf(DoubleSerializer).deserialize_sy6x50_k$ = function (decoder) {
+    return decoder.decodeDouble_ur8l0f_k$();
   };
-  var StringSerializer_instance;
-  function StringSerializer_getInstance() {
-    if (StringSerializer_instance == null)
-      new StringSerializer();
-    return StringSerializer_instance;
+  var DoubleSerializer_instance;
+  function DoubleSerializer_getInstance() {
+    if (DoubleSerializer_instance == null)
+      new DoubleSerializer();
+    return DoubleSerializer_instance;
+  }
+  function ShortSerializer() {
+    ShortSerializer_instance = this;
+    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Short', SHORT_getInstance());
+  }
+  protoOf(ShortSerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(ShortSerializer).serialize_s3969x_k$ = function (encoder, value) {
+    return encoder.encodeShort_gza6si_k$(value);
+  };
+  protoOf(ShortSerializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_s3969x_k$(encoder, (!(value == null) ? typeof value === 'number' : false) ? value : THROW_CCE());
+  };
+  protoOf(ShortSerializer).deserialize_sy6x50_k$ = function (decoder) {
+    return decoder.decodeShort_jjqk32_k$();
+  };
+  var ShortSerializer_instance;
+  function ShortSerializer_getInstance() {
+    if (ShortSerializer_instance == null)
+      new ShortSerializer();
+    return ShortSerializer_instance;
   }
   function CharSerializer() {
     CharSerializer_instance = this;
@@ -5080,49 +5283,10 @@
       new CharSerializer();
     return CharSerializer_instance;
   }
-  function DoubleSerializer() {
-    DoubleSerializer_instance = this;
-    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Double', DOUBLE_getInstance());
-  }
-  protoOf(DoubleSerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(DoubleSerializer).serialize_sc6aif_k$ = function (encoder, value) {
-    return encoder.encodeDouble_n270q9_k$(value);
-  };
-  protoOf(DoubleSerializer).serialize_5ase3y_k$ = function (encoder, value) {
-    return this.serialize_sc6aif_k$(encoder, (!(value == null) ? typeof value === 'number' : false) ? value : THROW_CCE());
-  };
-  protoOf(DoubleSerializer).deserialize_sy6x50_k$ = function (decoder) {
-    return decoder.decodeDouble_ur8l0f_k$();
-  };
-  var DoubleSerializer_instance;
-  function DoubleSerializer_getInstance() {
-    if (DoubleSerializer_instance == null)
-      new DoubleSerializer();
-    return DoubleSerializer_instance;
-  }
-  function FloatSerializer() {
-    FloatSerializer_instance = this;
-    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Float', FLOAT_getInstance());
-  }
-  protoOf(FloatSerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(FloatSerializer).serialize_ttziez_k$ = function (encoder, value) {
-    return encoder.encodeFloat_b8b85a_k$(value);
-  };
-  protoOf(FloatSerializer).serialize_5ase3y_k$ = function (encoder, value) {
-    return this.serialize_ttziez_k$(encoder, (!(value == null) ? typeof value === 'number' : false) ? value : THROW_CCE());
-  };
-  protoOf(FloatSerializer).deserialize_sy6x50_k$ = function (decoder) {
-    return decoder.decodeFloat_jcnrwu_k$();
-  };
-  var FloatSerializer_instance;
-  function FloatSerializer_getInstance() {
-    if (FloatSerializer_instance == null)
-      new FloatSerializer();
-    return FloatSerializer_instance;
+  function PrimitiveDescriptorSafe(serialName, kind) {
+    _init_properties_Primitives_kt__k0eto4();
+    checkName(serialName);
+    return new PrimitiveSerialDescriptor_0(serialName, kind);
   }
   function LongSerializer() {
     LongSerializer_instance = this;
@@ -5146,50 +5310,6 @@
       new LongSerializer();
     return LongSerializer_instance;
   }
-  function IntSerializer() {
-    IntSerializer_instance = this;
-    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Int', INT_getInstance());
-  }
-  protoOf(IntSerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(IntSerializer).serialize_iz3ntn_k$ = function (encoder, value) {
-    return encoder.encodeInt_y5zi3z_k$(value);
-  };
-  protoOf(IntSerializer).serialize_5ase3y_k$ = function (encoder, value) {
-    return this.serialize_iz3ntn_k$(encoder, (!(value == null) ? typeof value === 'number' : false) ? value : THROW_CCE());
-  };
-  protoOf(IntSerializer).deserialize_sy6x50_k$ = function (decoder) {
-    return decoder.decodeInt_8iq8f5_k$();
-  };
-  var IntSerializer_instance;
-  function IntSerializer_getInstance() {
-    if (IntSerializer_instance == null)
-      new IntSerializer();
-    return IntSerializer_instance;
-  }
-  function ShortSerializer() {
-    ShortSerializer_instance = this;
-    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Short', SHORT_getInstance());
-  }
-  protoOf(ShortSerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(ShortSerializer).serialize_s3969x_k$ = function (encoder, value) {
-    return encoder.encodeShort_gza6si_k$(value);
-  };
-  protoOf(ShortSerializer).serialize_5ase3y_k$ = function (encoder, value) {
-    return this.serialize_s3969x_k$(encoder, (!(value == null) ? typeof value === 'number' : false) ? value : THROW_CCE());
-  };
-  protoOf(ShortSerializer).deserialize_sy6x50_k$ = function (decoder) {
-    return decoder.decodeShort_jjqk32_k$();
-  };
-  var ShortSerializer_instance;
-  function ShortSerializer_getInstance() {
-    if (ShortSerializer_instance == null)
-      new ShortSerializer();
-    return ShortSerializer_instance;
-  }
   function ByteSerializer() {
     ByteSerializer_instance = this;
     this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Byte', BYTE_getInstance());
@@ -5211,28 +5331,6 @@
     if (ByteSerializer_instance == null)
       new ByteSerializer();
     return ByteSerializer_instance;
-  }
-  function BooleanSerializer() {
-    BooleanSerializer_instance = this;
-    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Boolean', BOOLEAN_getInstance());
-  }
-  protoOf(BooleanSerializer).get_descriptor_wjt6a0_k$ = function () {
-    return this.descriptor_1;
-  };
-  protoOf(BooleanSerializer).serialize_ky3y8o_k$ = function (encoder, value) {
-    return encoder.encodeBoolean_tu2e59_k$(value);
-  };
-  protoOf(BooleanSerializer).serialize_5ase3y_k$ = function (encoder, value) {
-    return this.serialize_ky3y8o_k$(encoder, (!(value == null) ? typeof value === 'boolean' : false) ? value : THROW_CCE());
-  };
-  protoOf(BooleanSerializer).deserialize_sy6x50_k$ = function (decoder) {
-    return decoder.decodeBoolean_m0aca_k$();
-  };
-  var BooleanSerializer_instance;
-  function BooleanSerializer_getInstance() {
-    if (BooleanSerializer_instance == null)
-      new BooleanSerializer();
-    return BooleanSerializer_instance;
   }
   function UnitSerializer() {
     UnitSerializer_instance = this;
@@ -5306,10 +5404,98 @@
   protoOf(PrimitiveSerialDescriptor_0).hashCode = function () {
     return getStringHashCode(this.serialName_1) + imul(31, this.kind_1.hashCode()) | 0;
   };
-  function PrimitiveDescriptorSafe(serialName, kind) {
+  function StringSerializer() {
+    StringSerializer_instance = this;
+    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.String', STRING_getInstance());
+  }
+  protoOf(StringSerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(StringSerializer).serialize_jnz9c3_k$ = function (encoder, value) {
+    return encoder.encodeString_424b5v_k$(value);
+  };
+  protoOf(StringSerializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_jnz9c3_k$(encoder, (!(value == null) ? typeof value === 'string' : false) ? value : THROW_CCE());
+  };
+  protoOf(StringSerializer).deserialize_sy6x50_k$ = function (decoder) {
+    return decoder.decodeString_x3hxsx_k$();
+  };
+  var StringSerializer_instance;
+  function StringSerializer_getInstance() {
+    if (StringSerializer_instance == null)
+      new StringSerializer();
+    return StringSerializer_instance;
+  }
+  function builtinSerializerOrNull(_this__u8e3s4) {
     _init_properties_Primitives_kt__k0eto4();
-    checkName(serialName);
-    return new PrimitiveSerialDescriptor_0(serialName, kind);
+    var tmp = get_BUILTIN_SERIALIZERS().get_wei43m_k$(_this__u8e3s4);
+    return (tmp == null ? true : isInterface(tmp, KSerializer)) ? tmp : THROW_CCE();
+  }
+  function BooleanSerializer() {
+    BooleanSerializer_instance = this;
+    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Boolean', BOOLEAN_getInstance());
+  }
+  protoOf(BooleanSerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(BooleanSerializer).serialize_ky3y8o_k$ = function (encoder, value) {
+    return encoder.encodeBoolean_tu2e59_k$(value);
+  };
+  protoOf(BooleanSerializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_ky3y8o_k$(encoder, (!(value == null) ? typeof value === 'boolean' : false) ? value : THROW_CCE());
+  };
+  protoOf(BooleanSerializer).deserialize_sy6x50_k$ = function (decoder) {
+    return decoder.decodeBoolean_m0aca_k$();
+  };
+  var BooleanSerializer_instance;
+  function BooleanSerializer_getInstance() {
+    if (BooleanSerializer_instance == null)
+      new BooleanSerializer();
+    return BooleanSerializer_instance;
+  }
+  function IntSerializer() {
+    IntSerializer_instance = this;
+    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Int', INT_getInstance());
+  }
+  protoOf(IntSerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(IntSerializer).serialize_iz3ntn_k$ = function (encoder, value) {
+    return encoder.encodeInt_y5zi3z_k$(value);
+  };
+  protoOf(IntSerializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_iz3ntn_k$(encoder, (!(value == null) ? typeof value === 'number' : false) ? value : THROW_CCE());
+  };
+  protoOf(IntSerializer).deserialize_sy6x50_k$ = function (decoder) {
+    return decoder.decodeInt_8iq8f5_k$();
+  };
+  var IntSerializer_instance;
+  function IntSerializer_getInstance() {
+    if (IntSerializer_instance == null)
+      new IntSerializer();
+    return IntSerializer_instance;
+  }
+  function FloatSerializer() {
+    FloatSerializer_instance = this;
+    this.descriptor_1 = new PrimitiveSerialDescriptor_0('kotlin.Float', FLOAT_getInstance());
+  }
+  protoOf(FloatSerializer).get_descriptor_wjt6a0_k$ = function () {
+    return this.descriptor_1;
+  };
+  protoOf(FloatSerializer).serialize_ttziez_k$ = function (encoder, value) {
+    return encoder.encodeFloat_b8b85a_k$(value);
+  };
+  protoOf(FloatSerializer).serialize_5ase3y_k$ = function (encoder, value) {
+    return this.serialize_ttziez_k$(encoder, (!(value == null) ? typeof value === 'number' : false) ? value : THROW_CCE());
+  };
+  protoOf(FloatSerializer).deserialize_sy6x50_k$ = function (decoder) {
+    return decoder.decodeFloat_jcnrwu_k$();
+  };
+  var FloatSerializer_instance;
+  function FloatSerializer_getInstance() {
+    if (FloatSerializer_instance == null)
+      new FloatSerializer();
+    return FloatSerializer_instance;
   }
   function checkName(serialName) {
     _init_properties_Primitives_kt__k0eto4();
@@ -6523,67 +6709,69 @@
   //endregion
   //region block: exports
   _.$_$ = _.$_$ || {};
-  _.$_$.a = SerializationException_init_$Init$_0;
-  _.$_$.b = SerializationException_init_$Create$_0;
-  _.$_$.c = UnknownFieldException_init_$Create$;
-  _.$_$.d = SEALED_getInstance;
-  _.$_$.e = STRING_getInstance;
-  _.$_$.f = CONTEXTUAL_getInstance;
-  _.$_$.g = ENUM_getInstance;
-  _.$_$.h = CLASS_getInstance;
-  _.$_$.i = LIST_getInstance;
-  _.$_$.j = MAP_getInstance;
-  _.$_$.k = Companion_getInstance_7;
-  _.$_$.l = IntSerializer_getInstance;
-  _.$_$.m = StringSerializer_getInstance;
-  _.$_$.n = ListSerializer;
-  _.$_$.o = MapSerializer;
-  _.$_$.p = serializer_0;
-  _.$_$.q = serializer_9;
-  _.$_$.r = serializer_7;
-  _.$_$.s = serializer_11;
-  _.$_$.t = serializer_5;
-  _.$_$.u = PolymorphicKind;
-  _.$_$.v = PrimitiveKind;
-  _.$_$.w = PrimitiveSerialDescriptor;
-  _.$_$.x = get_annotations;
-  _.$_$.y = get_isInline;
-  _.$_$.z = get_isNullable;
-  _.$_$.a1 = SerialDescriptor;
-  _.$_$.b1 = ENUM;
-  _.$_$.c1 = buildSerialDescriptor;
-  _.$_$.d1 = getContextualDescriptor;
-  _.$_$.e1 = AbstractDecoder;
-  _.$_$.f1 = AbstractEncoder;
-  _.$_$.g1 = ChunkedDecoder;
-  _.$_$.h1 = CompositeDecoder;
-  _.$_$.i1 = CompositeEncoder;
-  _.$_$.j1 = Decoder;
-  _.$_$.k1 = Encoder;
-  _.$_$.l1 = AbstractPolymorphicSerializer;
-  _.$_$.m1 = ArrayListSerializer;
-  _.$_$.n1 = ElementMarker;
-  _.$_$.o1 = typeParametersSerializers;
-  _.$_$.p1 = GeneratedSerializer;
-  _.$_$.q1 = InlinePrimitiveDescriptor;
-  _.$_$.r1 = NamedValueDecoder;
-  _.$_$.s1 = NamedValueEncoder;
-  _.$_$.t1 = PluginGeneratedSerialDescriptor;
-  _.$_$.u1 = SerializerFactory;
-  _.$_$.v1 = jsonCachedSerialNames;
-  _.$_$.w1 = throwMissingFieldException;
-  _.$_$.x1 = EmptySerializersModule_0;
-  _.$_$.y1 = contextual;
-  _.$_$.z1 = polymorphicDefault;
-  _.$_$.a2 = SerializersModuleCollector;
-  _.$_$.b2 = DeserializationStrategy;
-  _.$_$.c2 = KSerializer;
-  _.$_$.d2 = MissingFieldException;
-  _.$_$.e2 = SealedClassSerializer;
-  _.$_$.f2 = SerializationException;
-  _.$_$.g2 = StringFormat;
-  _.$_$.h2 = findPolymorphicSerializer;
-  _.$_$.i2 = serializer;
+  _.$_$.a = ObjectSerializer_init_$Create$;
+  _.$_$.b = SerializationException_init_$Init$_0;
+  _.$_$.c = SerializationException_init_$Create$_0;
+  _.$_$.d = UnknownFieldException_init_$Create$;
+  _.$_$.e = SEALED_getInstance;
+  _.$_$.f = STRING_getInstance;
+  _.$_$.g = CONTEXTUAL_getInstance;
+  _.$_$.h = ENUM_getInstance;
+  _.$_$.i = CLASS_getInstance;
+  _.$_$.j = LIST_getInstance;
+  _.$_$.k = MAP_getInstance;
+  _.$_$.l = Companion_getInstance_7;
+  _.$_$.m = BooleanSerializer_getInstance;
+  _.$_$.n = DoubleSerializer_getInstance;
+  _.$_$.o = IntSerializer_getInstance;
+  _.$_$.p = StringSerializer_getInstance;
+  _.$_$.q = ListSerializer;
+  _.$_$.r = MapSerializer;
+  _.$_$.s = serializer_0;
+  _.$_$.t = serializer_9;
+  _.$_$.u = serializer_7;
+  _.$_$.v = serializer_11;
+  _.$_$.w = serializer_5;
+  _.$_$.x = PolymorphicKind;
+  _.$_$.y = PrimitiveKind;
+  _.$_$.z = PrimitiveSerialDescriptor;
+  _.$_$.a1 = get_annotations;
+  _.$_$.b1 = get_isInline;
+  _.$_$.c1 = get_isNullable;
+  _.$_$.d1 = SerialDescriptor;
+  _.$_$.e1 = ENUM;
+  _.$_$.f1 = buildSerialDescriptor;
+  _.$_$.g1 = getContextualDescriptor;
+  _.$_$.h1 = AbstractDecoder;
+  _.$_$.i1 = AbstractEncoder;
+  _.$_$.j1 = ChunkedDecoder;
+  _.$_$.k1 = CompositeDecoder;
+  _.$_$.l1 = CompositeEncoder;
+  _.$_$.m1 = Decoder;
+  _.$_$.n1 = Encoder;
+  _.$_$.o1 = AbstractPolymorphicSerializer;
+  _.$_$.p1 = ArrayListSerializer;
+  _.$_$.q1 = ElementMarker;
+  _.$_$.r1 = EnumSerializer;
+  _.$_$.s1 = typeParametersSerializers;
+  _.$_$.t1 = GeneratedSerializer;
+  _.$_$.u1 = InlinePrimitiveDescriptor;
+  _.$_$.v1 = NamedValueDecoder;
+  _.$_$.w1 = NamedValueEncoder;
+  _.$_$.x1 = PluginGeneratedSerialDescriptor;
+  _.$_$.y1 = SerializerFactory;
+  _.$_$.z1 = jsonCachedSerialNames;
+  _.$_$.a2 = throwMissingFieldException;
+  _.$_$.b2 = EmptySerializersModule_0;
+  _.$_$.c2 = DeserializationStrategy;
+  _.$_$.d2 = KSerializer;
+  _.$_$.e2 = MissingFieldException;
+  _.$_$.f2 = SealedClassSerializer;
+  _.$_$.g2 = SerializationException;
+  _.$_$.h2 = StringFormat;
+  _.$_$.i2 = findPolymorphicSerializer;
+  _.$_$.j2 = serializerOrNull;
+  _.$_$.k2 = serializer;
   //endregion
   return _;
 }));

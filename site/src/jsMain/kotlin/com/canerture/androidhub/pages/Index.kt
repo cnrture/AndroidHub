@@ -15,7 +15,8 @@ import com.canerture.androidhub.data.getPosts
 import com.canerture.androidhub.getHeadlineFontSize
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.getSubheadlineFontSize
-import com.canerture.androidhub.serialization.Post
+import com.canerture.androidhub.models.Post
+import com.varabyte.kobweb.browser.http.http
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -45,6 +46,7 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.ResponsiveValues
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import kotlinx.browser.window
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.dom.Text
@@ -64,7 +66,9 @@ fun HomePage() {
     var postList by remember { mutableStateOf<List<Post>>(emptyList()) }
     var error by remember { mutableStateOf<String?>(null) }
 
-    LaunchedEffect(Unit){
+    LaunchedEffect(Unit) {
+        val result = window.http.get("https://androidhub.dev/api/get_posts.php").decodeToString()
+        println(result)
         getPosts(
             onSuccess = {
                 postList = it

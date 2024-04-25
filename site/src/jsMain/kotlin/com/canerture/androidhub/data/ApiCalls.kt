@@ -1,6 +1,6 @@
 package com.canerture.androidhub.data
 
-import com.canerture.androidhub.serialization.Post
+import com.canerture.androidhub.models.Post
 import com.varabyte.kobweb.browser.api
 import kotlinx.browser.window
 import kotlinx.serialization.decodeFromString
