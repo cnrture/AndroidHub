@@ -20,8 +20,8 @@
   var StringBuilder_init_$Create$ = kotlin_kotlin.$_$.g1;
   var charSequenceLength = kotlin_kotlin.$_$.ta;
   var joinTo = kotlin_kotlin.$_$.u7;
-  var Regex_init_$Create$ = kotlin_kotlin.$_$.e1;
   var toSet = kotlin_kotlin.$_$.n9;
+  var Regex_init_$Create$ = kotlin_kotlin.$_$.e1;
   var joinToString = kotlin_kotlin.$_$.s7;
   var ensureNotNull = kotlin_kotlin.$_$.dh;
   var protoOf = kotlin_kotlin.$_$.gc;
@@ -69,13 +69,6 @@
     }
     return false;
   }
-  function hasClass(_this__u8e3s4, cssClass) {
-    // Inline function 'kotlin.text.matches' call
-    var this_0 = _this__u8e3s4.className;
-    // Inline function 'kotlin.text.toRegex' call
-    var this_1 = '(^|.*\\s+)' + cssClass + '($|\\s+.*)';
-    return Regex_init_$Create$(this_1).matches_evli6i_k$(this_0);
-  }
   function removeClass(_this__u8e3s4, cssClasses) {
     var tmp$ret$1;
     $l$block: {
@@ -117,6 +110,13 @@
     }
     return false;
   }
+  function hasClass(_this__u8e3s4, cssClass) {
+    // Inline function 'kotlin.text.matches' call
+    var this_0 = _this__u8e3s4.className;
+    // Inline function 'kotlin.text.toRegex' call
+    var this_1 = '(^|.*\\s+)' + cssClass + '($|\\s+.*)';
+    return Regex_init_$Create$(this_1).matches_evli6i_k$(this_0);
+  }
   function clear(_this__u8e3s4) {
     while (_this__u8e3s4.hasChildNodes()) {
       _this__u8e3s4.removeChild(ensureNotNull(_this__u8e3s4.firstChild));
@@ -144,12 +144,6 @@
     // Inline function 'kotlin.js.asDynamic' call
     return _this__u8e3s4[index];
   }
-  function EventSourceInit(withCredentials) {
-    withCredentials = withCredentials === VOID ? false : withCredentials;
-    var o = {};
-    o['withCredentials'] = withCredentials;
-    return o;
-  }
   function get_0(_this__u8e3s4, index) {
     // Inline function 'kotlin.js.asDynamic' call
     return _this__u8e3s4[index];
@@ -158,11 +152,7 @@
     // Inline function 'kotlin.js.asDynamic' call
     _this__u8e3s4[key] = value;
   }
-  function get_1(_this__u8e3s4, index) {
-    // Inline function 'kotlin.js.asDynamic' call
-    return _this__u8e3s4[index];
-  }
-  function get_2(_this__u8e3s4, key) {
+  function get_1(_this__u8e3s4, key) {
     // Inline function 'kotlin.js.asDynamic' call
     return _this__u8e3s4[key];
   }
@@ -198,9 +188,8 @@
   _.$_$ = _.$_$ || {};
   _.$_$.a = addClass;
   _.$_$.b = clear;
-  _.$_$.c = hasClass;
-  _.$_$.d = removeClass;
-  _.$_$.e = EventListener;
+  _.$_$.c = removeClass;
+  _.$_$.d = EventListener;
   //endregion
   return _;
 }));

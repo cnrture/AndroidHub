@@ -1,8 +1,8 @@
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
-    define(['exports', './kobweb-frontend-kobweb-core.js', './kobweb-frontend-silk-foundation.js', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-compose-runtime-runtime.js', './html-internal-html-core-runtime.js', './kobweb-frontend-silk-widgets.js', './kobweb-frontend-silk-widgets-kobweb.js', './html-html-core.js', './kobweb-frontend-compose-html-ext.js', './kotlinx-serialization-kotlinx-serialization-core.js', './kobweb-frontend-kobweb-silk.js', './kotlinx-coroutines-core.js', './kobweb-frontend-kobweb-compose.js', './kotlinx-serialization-kotlinx-serialization-json.js'], factory);
+    define(['exports', './kobweb-frontend-kobweb-core.js', './kobweb-frontend-silk-foundation.js', './kotlin-kotlin-stdlib.js', './compose-multiplatform-core-compose-runtime-runtime.js', './html-internal-html-core-runtime.js', './kobweb-frontend-silk-widgets.js', './kobweb-frontend-silk-widgets-kobweb.js', './html-html-core.js', './kobweb-frontend-compose-html-ext.js', './kotlinx-serialization-kotlinx-serialization-core.js', './kobweb-frontend-kobweb-silk.js', './kotlinx-coroutines-core.js', './kobweb-frontend-kobweb-compose.js', './kotlinx-serialization-kotlinx-serialization-json.js', './kobweb-frontend-browser-ext.js'], factory);
   else if (typeof exports === 'object')
-    factory(module.exports, require('./kobweb-frontend-kobweb-core.js'), require('./kobweb-frontend-silk-foundation.js'), require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./html-internal-html-core-runtime.js'), require('./kobweb-frontend-silk-widgets.js'), require('./kobweb-frontend-silk-widgets-kobweb.js'), require('./html-html-core.js'), require('./kobweb-frontend-compose-html-ext.js'), require('./kotlinx-serialization-kotlinx-serialization-core.js'), require('./kobweb-frontend-kobweb-silk.js'), require('./kotlinx-coroutines-core.js'), require('./kobweb-frontend-kobweb-compose.js'), require('./kotlinx-serialization-kotlinx-serialization-json.js'));
+    factory(module.exports, require('./kobweb-frontend-kobweb-core.js'), require('./kobweb-frontend-silk-foundation.js'), require('./kotlin-kotlin-stdlib.js'), require('./compose-multiplatform-core-compose-runtime-runtime.js'), require('./html-internal-html-core-runtime.js'), require('./kobweb-frontend-silk-widgets.js'), require('./kobweb-frontend-silk-widgets-kobweb.js'), require('./html-html-core.js'), require('./kobweb-frontend-compose-html-ext.js'), require('./kotlinx-serialization-kotlinx-serialization-core.js'), require('./kobweb-frontend-kobweb-silk.js'), require('./kotlinx-coroutines-core.js'), require('./kobweb-frontend-kobweb-compose.js'), require('./kotlinx-serialization-kotlinx-serialization-json.js'), require('./kobweb-frontend-browser-ext.js'));
   else {
     if (typeof this['kobweb-frontend-kobweb-core'] === 'undefined') {
       throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kobweb-frontend-kobweb-core' was not found. Please, check whether 'kobweb-frontend-kobweb-core' is loaded prior to 'com.canerture.androidhub:site'.");
@@ -46,9 +46,12 @@
     if (typeof this['kotlinx-serialization-kotlinx-serialization-json'] === 'undefined') {
       throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kotlinx-serialization-kotlinx-serialization-json' was not found. Please, check whether 'kotlinx-serialization-kotlinx-serialization-json' is loaded prior to 'com.canerture.androidhub:site'.");
     }
-    root['com.canerture.androidhub:site'] = factory(typeof this['com.canerture.androidhub:site'] === 'undefined' ? {} : this['com.canerture.androidhub:site'], this['kobweb-frontend-kobweb-core'], this['kobweb-frontend-silk-foundation'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-compose-runtime-runtime'], this['html-internal-html-core-runtime'], this['kobweb-frontend-silk-widgets'], this['kobweb-frontend-silk-widgets-kobweb'], this['html-html-core'], this['kobweb-frontend-compose-html-ext'], this['kotlinx-serialization-kotlinx-serialization-core'], this['kobweb-frontend-kobweb-silk'], this['kotlinx-coroutines-core'], this['kobweb-frontend-kobweb-compose'], this['kotlinx-serialization-kotlinx-serialization-json']);
+    if (typeof this['kobweb-frontend-browser-ext'] === 'undefined') {
+      throw new Error("Error loading module 'com.canerture.androidhub:site'. Its dependency 'kobweb-frontend-browser-ext' was not found. Please, check whether 'kobweb-frontend-browser-ext' is loaded prior to 'com.canerture.androidhub:site'.");
+    }
+    root['com.canerture.androidhub:site'] = factory(typeof this['com.canerture.androidhub:site'] === 'undefined' ? {} : this['com.canerture.androidhub:site'], this['kobweb-frontend-kobweb-core'], this['kobweb-frontend-silk-foundation'], this['kotlin-kotlin-stdlib'], this['compose-multiplatform-core-compose-runtime-runtime'], this['html-internal-html-core-runtime'], this['kobweb-frontend-silk-widgets'], this['kobweb-frontend-silk-widgets-kobweb'], this['html-html-core'], this['kobweb-frontend-compose-html-ext'], this['kotlinx-serialization-kotlinx-serialization-core'], this['kobweb-frontend-kobweb-silk'], this['kotlinx-coroutines-core'], this['kobweb-frontend-kobweb-compose'], this['kotlinx-serialization-kotlinx-serialization-json'], this['kobweb-frontend-browser-ext']);
   }
-}(this, function (_, kotlin_com_varabyte_kobweb_kobweb_core, kotlin_com_varabyte_kobweb_silk_foundation, kotlin_kotlin, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_html_internal_html_core_runtime, kotlin_com_varabyte_kobweb_silk_widgets, kotlin_com_varabyte_kobweb_silk_widgets_kobweb, kotlin_org_jetbrains_compose_html_html_core, kotlin_com_varabyte_kobweb_compose_html_ext, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core, kotlin_com_varabyte_kobweb_kobweb_silk, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_com_varabyte_kobweb_kobweb_compose, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_json) {
+}(this, function (_, kotlin_com_varabyte_kobweb_kobweb_core, kotlin_com_varabyte_kobweb_silk_foundation, kotlin_kotlin, kotlin_org_jetbrains_compose_runtime_runtime, kotlin_org_jetbrains_compose_html_internal_html_core_runtime, kotlin_com_varabyte_kobweb_silk_widgets, kotlin_com_varabyte_kobweb_silk_widgets_kobweb, kotlin_org_jetbrains_compose_html_html_core, kotlin_com_varabyte_kobweb_compose_html_ext, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core, kotlin_com_varabyte_kobweb_kobweb_silk, kotlin_org_jetbrains_kotlinx_kotlinx_coroutines_core, kotlin_com_varabyte_kobweb_kobweb_compose, kotlin_org_jetbrains_kotlinx_kotlinx_serialization_json, kotlin_com_varabyte_kobweb_browser_ext) {
   'use strict';
   //region block: imports
   var imul = Math.imul;
@@ -97,16 +100,22 @@
   var Pre = kotlin_org_jetbrains_compose_html_html_core.$_$.s3;
   var updateChangedFlags = kotlin_org_jetbrains_compose_runtime_runtime.$_$.y;
   var protoOf = kotlin_kotlin.$_$.fa;
-  var PluginGeneratedSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.l1;
-  var IntSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.k;
-  var StringSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.l;
-  var UnknownFieldException_init_$Create$ = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.b;
-  var typeParametersSerializers = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.h1;
-  var GeneratedSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.i1;
-  var throwMissingFieldException = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.o1;
+  var classMeta = kotlin_kotlin.$_$.v8;
+  var Enum = kotlin_kotlin.$_$.bd;
+  var EnumSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.j1;
+  var PluginGeneratedSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.o1;
+  var StringSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.n;
+  var DoubleSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.m;
+  var BooleanSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.l;
+  var UnknownFieldException_init_$Create$ = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.c;
+  var typeParametersSerializers = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.k1;
+  var GeneratedSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.l1;
+  var throwMissingFieldException = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.r1;
   var objectCreate = kotlin_kotlin.$_$.da;
   var getStringHashCode = kotlin_kotlin.$_$.e9;
-  var classMeta = kotlin_kotlin.$_$.v8;
+  var getNumberHashCode = kotlin_kotlin.$_$.c9;
+  var getBooleanHashCode = kotlin_kotlin.$_$.a9;
+  var equals = kotlin_kotlin.$_$.y8;
   var ColorMode_LIGHT_getInstance = kotlin_com_varabyte_kobweb_silk_foundation.$_$.s1;
   var SilkApp = kotlin_com_varabyte_kobweb_kobweb_silk.$_$.a;
   var CoroutineImpl = kotlin_kotlin.$_$.i8;
@@ -191,7 +200,6 @@
   var get_ColorVar = kotlin_com_varabyte_kobweb_silk_widgets.$_$.n;
   var get_UncoloredLinkVariant = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.d;
   var Link_0 = kotlin_com_varabyte_kobweb_silk_widgets_kobweb.$_$.c;
-  var Enum = kotlin_kotlin.$_$.bd;
   var mutableStateOf = kotlin_org_jetbrains_compose_runtime_runtime.$_$.q;
   var rememberBreakpoint = kotlin_com_varabyte_kobweb_silk_foundation.$_$.e1;
   var CenterVertically_instance = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.o3;
@@ -246,8 +254,8 @@
   var arrayOf = kotlin_kotlin.$_$.yd;
   var createKType = kotlin_kotlin.$_$.b;
   var createInvariantKTypeProjection = kotlin_kotlin.$_$.a;
-  var serializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.u1;
-  var KSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.r1;
+  var serializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.x1;
+  var KSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$_$.u1;
   var println = kotlin_kotlin.$_$.l8;
   var Exception = kotlin_kotlin.$_$.dd;
   var emptyList = kotlin_kotlin.$_$.v5;
@@ -255,6 +263,7 @@
   var ResponsiveValues = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g;
   var SimpleGrid = kotlin_com_varabyte_kobweb_silk_widgets.$_$.i;
   var toString = kotlin_kotlin.$_$.pe;
+  var get_http = kotlin_com_varabyte_kobweb_browser_ext.$_$.a;
   var toString_0 = kotlin_kotlin.$_$.ka;
   var rememberPageContext = kotlin_com_varabyte_kobweb_kobweb_core.$_$.d;
   var LG_getInstance = kotlin_com_varabyte_kobweb_silk_widgets.$_$.u;
@@ -265,6 +274,10 @@
   //region block: pre-declaration
   setMetadataFor(ComposableSingletons$MainKt, 'ComposableSingletons$MainKt', objectMeta);
   setMetadataFor(ComposableSingletons$AboutKt, 'ComposableSingletons$AboutKt', objectMeta);
+  setMetadataFor(Category, 'Category', classMeta, Enum);
+  setMetadataFor(Category$Technology, 'Technology', classMeta, Category);
+  setMetadataFor(Category$Programming, 'Programming', classMeta, Category);
+  setMetadataFor(Category$Design, 'Design', classMeta, Category);
   setMetadataFor(Companion, 'Companion', objectMeta);
   setMetadataFor($serializer, '$serializer', objectMeta, VOID, [GeneratedSerializer]);
   setMetadataFor(Post, 'Post', classMeta, VOID, VOID, VOID, VOID, {0: $serializer_getInstance});
@@ -284,28 +297,28 @@
   setMetadataFor(HomePage$slambda, 'HomePage$slambda', classMeta, CoroutineImpl, VOID, VOID, VOID, VOID, [1]);
   //endregion
   function main() {
-    Companion_instance.b3f('');
+    Companion_instance.b3g('');
     var router = new Router();
     initKobweb(router, main$lambda);
-    router.p3g(LegacyRouteRedirectStrategy_DISALLOW_getInstance());
-    router.q3g(main$lambda_0);
+    router.p3h(LegacyRouteRedirectStrategy_DISALLOW_getInstance());
+    router.q3h(main$lambda_0);
     set_additionalSilkInitialization(main$lambda_1);
-    router.w3e(removePrefix(window.location.href, window.location.origin), UpdateHistoryMode_REPLACE_getInstance());
+    router.w3f(removePrefix(window.location.href, window.location.origin), UpdateHistoryMode_REPLACE_getInstance());
     var root = ensureNotNull(document.getElementById('root'));
     while (!(root.firstChild == null)) {
       root.removeChild(ensureNotNull(root.firstChild));
     }
-    AppGlobals_instance.o3d(mapOf(to('title', '.')));
+    AppGlobals_instance.o3e(mapOf(to('title', '.')));
     renderComposable('root', ComposableLambda$invoke$ref_4(composableLambdaInstance(1108811911, true, main$lambda_2(router))));
   }
   function ComposableLambda$invoke$ref($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$MainKt$lambda_1$lambda_sdpc0d($composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-994802423, $changed, -1, 'ComposableSingletons$MainKt.lambda-1.<anonymous> (main.kt:15)');
       }
@@ -314,18 +327,18 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_0($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$MainKt$lambda_2$lambda_dts8wk($composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-1296252800, $changed, -1, 'ComposableSingletons$MainKt.lambda-2.<anonymous> (main.kt:16)');
       }
@@ -334,18 +347,18 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_1($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$MainKt$lambda_3$lambda_ezu85n($composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(197659649, $changed, -1, 'ComposableSingletons$MainKt.lambda-3.<anonymous> (main.kt:17)');
       }
@@ -354,21 +367,21 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_2($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$MainKt$lambda_4$lambda_r7ncra(it, $composer, $changed) {
     var $composer_0 = $composer;
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.c1f(it) ? 4 : 2);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(it) ? 4 : 2);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1940211355, $dirty, -1, 'ComposableSingletons$MainKt.lambda-4.<anonymous> (main.kt:56)');
       }
@@ -379,32 +392,32 @@
       var dispatchReceiver = composableLambda(tmp, 2103839155, true, ComposableSingletons$MainKt$lambda_4$lambda$lambda_tu4lbz(it));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = $composer_1.l1f();
+      var it_0 = $composer_1.n1f();
       var tmp_0;
-      if (invalid ? true : it_0 === Companion_getInstance().z18_1) {
+      if (invalid ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'ComposableSingletons$MainKt.lambda-4.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_3(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_0 = value;
       } else {
         tmp_0 = it_0;
       }
       var tmp_1 = tmp_0;
       var tmp0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       renderWithDeferred(tmp0, $composer_0, 6);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
@@ -412,7 +425,7 @@
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
         if (isTraceInProgress()) {
           traceEventStart(2103839155, $changed, -1, 'ComposableSingletons$MainKt.lambda-4.<anonymous>.<anonymous> (main.kt:56)');
         }
@@ -424,7 +437,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.t18();
+        $composer_0.v18();
         tmp = Unit_instance;
       }
       return Unit_instance;
@@ -432,19 +445,19 @@
   }
   function ComposableLambda$invoke$ref_3($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$MainKt() {
     ComposableSingletons$MainKt_instance = this;
     var tmp = this;
-    tmp.j41_1 = ComposableLambda$invoke$ref(composableLambdaInstance(-994802423, false, ComposableSingletons$MainKt$lambda_1$lambda_sdpc0d));
+    tmp.j42_1 = ComposableLambda$invoke$ref(composableLambdaInstance(-994802423, false, ComposableSingletons$MainKt$lambda_1$lambda_sdpc0d));
     var tmp_0 = this;
-    tmp_0.k41_1 = ComposableLambda$invoke$ref_0(composableLambdaInstance(-1296252800, false, ComposableSingletons$MainKt$lambda_2$lambda_dts8wk));
+    tmp_0.k42_1 = ComposableLambda$invoke$ref_0(composableLambdaInstance(-1296252800, false, ComposableSingletons$MainKt$lambda_2$lambda_dts8wk));
     var tmp_1 = this;
-    tmp_1.l41_1 = ComposableLambda$invoke$ref_1(composableLambdaInstance(197659649, false, ComposableSingletons$MainKt$lambda_3$lambda_ezu85n));
+    tmp_1.l42_1 = ComposableLambda$invoke$ref_1(composableLambdaInstance(197659649, false, ComposableSingletons$MainKt$lambda_3$lambda_ezu85n));
     var tmp_2 = this;
-    tmp_2.m41_1 = ComposableLambda$invoke$ref_2(composableLambdaInstance(1940211355, false, ComposableSingletons$MainKt$lambda_4$lambda_r7ncra));
+    tmp_2.m42_1 = ComposableLambda$invoke$ref_2(composableLambdaInstance(1940211355, false, ComposableSingletons$MainKt$lambda_4$lambda_r7ncra));
   }
   var ComposableSingletons$MainKt_instance;
   function ComposableSingletons$MainKt_getInstance() {
@@ -453,28 +466,28 @@
     return ComposableSingletons$MainKt_instance;
   }
   function main$lambda(ctx) {
-    ctx.l3e_1.o3g('/', VOID, ComposableSingletons$MainKt_getInstance().j41_1);
-    ctx.l3e_1.o3g('/about', VOID, ComposableSingletons$MainKt_getInstance().k41_1);
-    ctx.l3e_1.o3g('/post', VOID, ComposableSingletons$MainKt_getInstance().l41_1);
+    ctx.l3f_1.o3h('/', VOID, ComposableSingletons$MainKt_getInstance().j42_1);
+    ctx.l3f_1.o3h('/about', VOID, ComposableSingletons$MainKt_getInstance().k42_1);
+    ctx.l3f_1.o3h('/post', VOID, ComposableSingletons$MainKt_getInstance().l42_1);
     return Unit_instance;
   }
   function main$lambda_0($this$addRouteInterceptor) {
-    $this$addRouteInterceptor.u3g(removeSuffix(removeSuffix($this$addRouteInterceptor.i3g_1, '.html'), '.htm'));
+    $this$addRouteInterceptor.u3h(removeSuffix(removeSuffix($this$addRouteInterceptor.i3h_1, '.html'), '.htm'));
     return Unit_instance;
   }
   function main$lambda_1(ctx) {
     initSilkWidgets(ctx);
     initSilkWidgetsKobweb(ctx);
-    ctx.y3n_1.h3o(get_HeadlineTextStyle());
-    ctx.y3n_1.h3o(get_SubheadlineTextStyle());
-    ctx.y3n_1.h3o(get_MarkdownStyle());
-    ctx.y3n_1.h3o(get_PageContentStyle());
-    ctx.y3n_1.h3o(get_PostPageContentStyle());
-    ctx.y3n_1.h3o(get_FooterStyle());
-    ctx.y3n_1.h3o(get_NavHeaderStyle());
-    ctx.y3n_1.q3o([get_CircleButtonVariant()]);
-    ctx.y3n_1.q3o([get_UncoloredButtonVariant()]);
-    registerKeyframes(ctx.x3n_1, get_SideMenuSlideInAnim());
+    ctx.y3o_1.h3p(get_HeadlineTextStyle());
+    ctx.y3o_1.h3p(get_SubheadlineTextStyle());
+    ctx.y3o_1.h3p(get_MarkdownStyle());
+    ctx.y3o_1.h3p(get_PageContentStyle());
+    ctx.y3o_1.h3p(get_PostPageContentStyle());
+    ctx.y3o_1.h3p(get_FooterStyle());
+    ctx.y3o_1.h3p(get_NavHeaderStyle());
+    ctx.y3o_1.q3p([get_CircleButtonVariant()]);
+    ctx.y3o_1.q3p([get_UncoloredButtonVariant()]);
+    registerKeyframes(ctx.x3o_1, get_SideMenuSlideInAnim());
     initColorMode(ctx);
     initSiteStyles(ctx);
     initTheme(ctx);
@@ -482,18 +495,18 @@
   }
   function ComposableLambda$invoke$ref_4($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function main$lambda$lambda($router) {
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
         if (isTraceInProgress()) {
           traceEventStart(-1190994075, $changed, -1, 'main.<anonymous>.<anonymous> (main.kt:56)');
         }
-        $router.l3g(ComposableSingletons$MainKt_getInstance().m41_1, $composer_0, 70, 0);
+        $router.l3h(ComposableSingletons$MainKt_getInstance().m42_1, $composer_0, 70, 0);
         var tmp_0;
         if (isTraceInProgress()) {
           traceEventEnd();
@@ -501,7 +514,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.t18();
+        $composer_0.v18();
         tmp = Unit_instance;
       }
       return Unit_instance;
@@ -509,7 +522,7 @@
   }
   function ComposableLambda$invoke$ref_5($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function main$lambda_2($router) {
@@ -525,26 +538,26 @@
       var dispatchReceiver = composableLambda(tmp, -1190994075, true, main$lambda$lambda($router));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_0;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'main.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_5(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_0 = value;
       } else {
         tmp_0 = it;
       }
       var tmp_1 = tmp_0;
       var tmp0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       AppEntry(tmp0, $composer_0, 6);
       var tmp_2;
       if (isTraceInProgress()) {
@@ -556,28 +569,28 @@
   }
   function AboutPage($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-2053218993);
-    if (!($changed === 0) ? true : !$composer_0.c1e()) {
+    $composer_0 = $composer_0.b1g(-2053218993);
+    if (!($changed === 0) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-2053218993, $changed, -1, 'com.canerture.androidhub.pages.AboutPage (About.kt:8)');
       }
-      MarkdownLayout('About', ComposableSingletons$AboutKt_getInstance().d44_1, $composer_0, 54);
+      MarkdownLayout('About', ComposableSingletons$AboutKt_getInstance().d45_1, $composer_0, 54);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(AboutPage$lambda($changed));
+      tmp0_safe_receiver.y1k(AboutPage$lambda($changed));
     }
   }
   function ComposableLambda$invoke$ref_6($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_1$lambda_irurs3($this$H1, $composer, $changed) {
@@ -593,7 +606,7 @@
   }
   function ComposableLambda$invoke$ref_7($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_2$lambda_nfmt4u($this$P, $composer, $changed) {
@@ -609,7 +622,7 @@
   }
   function ComposableLambda$invoke$ref_8($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_3$lambda_5dznxd($this$H2, $composer, $changed) {
@@ -625,7 +638,7 @@
   }
   function ComposableLambda$invoke$ref_9($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_4$lambda_y7m4zk($this$P, $composer, $changed) {
@@ -641,7 +654,7 @@
   }
   function ComposableLambda$invoke$ref_10($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_5$lambda_7zvfxd($this$H3, $composer, $changed) {
@@ -657,7 +670,7 @@
   }
   function ComposableLambda$invoke$ref_11($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_6$lambda_ktr14u($this$H4, $composer, $changed) {
@@ -673,7 +686,7 @@
   }
   function ComposableLambda$invoke$ref_12($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_7$lambda_ldqjs3($this$Code, $composer, $changed) {
@@ -689,7 +702,7 @@
   }
   function ComposableLambda$invoke$ref_13($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_8$lambda_7fvxa4($this$P, $composer, $changed) {
@@ -698,7 +711,7 @@
       traceEventStart(1801179858, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-8.<anonymous> (About.kt:30)');
     }
     Text('This file declares a method that is an entry point for all pages on your site. You can rename the file and the method if you like. Kobweb searches for a single method at compile time annotated with ', $composer_0, 6);
-    Code(null, ComposableSingletons$AboutKt_getInstance().t41_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().t42_1, $composer_0, 48, 1);
     Text('.', $composer_0, 6);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -707,7 +720,7 @@
   }
   function ComposableLambda$invoke$ref_14($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_9$lambda_yrlnmt($this$H4, $composer, $changed) {
@@ -723,7 +736,7 @@
   }
   function ComposableLambda$invoke$ref_15($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_10$lambda_i5qkjn($this$P, $composer, $changed) {
@@ -739,7 +752,7 @@
   }
   function ComposableLambda$invoke$ref_16($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_11$lambda_o1r0da($this$H4, $composer, $changed) {
@@ -755,7 +768,7 @@
   }
   function ComposableLambda$invoke$ref_17($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_12$lambda_4rvgox($this$P, $composer, $changed) {
@@ -771,7 +784,7 @@
   }
   function ComposableLambda$invoke$ref_18($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_13$lambda_xlhxr4($this$H4, $composer, $changed) {
@@ -787,7 +800,7 @@
   }
   function ComposableLambda$invoke$ref_19($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_14$lambda_8lzn5t($this$P, $composer, $changed) {
@@ -803,7 +816,7 @@
   }
   function ComposableLambda$invoke$ref_20($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_15$lambda_k7mtwe($this$Code, $composer, $changed) {
@@ -819,7 +832,7 @@
   }
   function ComposableLambda$invoke$ref_21($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_16$lambda_lzur0j($this$Li, $composer, $changed) {
@@ -827,7 +840,7 @@
     if (isTraceInProgress()) {
       traceEventStart(1697742766, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-16.<anonymous> (About.kt:56)');
     }
-    Code(null, ComposableSingletons$AboutKt_getInstance().b42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().b43_1, $composer_0, 48, 1);
     GenericTag('br', null, null, $composer_0, 54, 4);
     Text(' Represents top-level organization for pages', $composer_0, 6);
     if (isTraceInProgress()) {
@@ -837,7 +850,7 @@
   }
   function ComposableLambda$invoke$ref_22($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_17$lambda_6trq1o($this$Code, $composer, $changed) {
@@ -853,7 +866,7 @@
   }
   function ComposableLambda$invoke$ref_23($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_18$lambda_zdpuv9($this$Li, $composer, $changed) {
@@ -861,7 +874,7 @@
     if (isTraceInProgress()) {
       traceEventStart(-821068379, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-18.<anonymous> (About.kt:63)');
     }
-    Code(null, ComposableSingletons$AboutKt_getInstance().d42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().d43_1, $composer_0, 48, 1);
     GenericTag('br', null, null, $composer_0, 54, 4);
     Text(' Areas of content that appear across multiple pages (such as nav bars and footers)', $composer_0, 6);
     if (isTraceInProgress()) {
@@ -871,7 +884,7 @@
   }
   function ComposableLambda$invoke$ref_24($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_19$lambda_6k3dt2($this$Code, $composer, $changed) {
@@ -887,7 +900,7 @@
   }
   function ComposableLambda$invoke$ref_25($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_20$lambda_bqdg8s($this$Li, $composer, $changed) {
@@ -895,7 +908,7 @@
     if (isTraceInProgress()) {
       traceEventStart(-1524931354, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-20.<anonymous> (About.kt:70)');
     }
-    Code(null, ComposableSingletons$AboutKt_getInstance().f42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().f43_1, $composer_0, 48, 1);
     GenericTag('br', null, null, $composer_0, 54, 4);
     Text(' Home for low-level UI pieces that you can use around your site', $composer_0, 6);
     if (isTraceInProgress()) {
@@ -905,7 +918,7 @@
   }
   function ComposableLambda$invoke$ref_26($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_21$lambda_h390tf($this$Ul, $composer, $changed) {
@@ -913,9 +926,9 @@
     if (isTraceInProgress()) {
       traceEventStart(245760669, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-21.<anonymous> (About.kt:55)');
     }
-    Li(null, ComposableSingletons$AboutKt_getInstance().c42_1, $composer_0, 48, 1);
-    Li(null, ComposableSingletons$AboutKt_getInstance().e42_1, $composer_0, 48, 1);
-    Li(null, ComposableSingletons$AboutKt_getInstance().g42_1, $composer_0, 48, 1);
+    Li(null, ComposableSingletons$AboutKt_getInstance().c43_1, $composer_0, 48, 1);
+    Li(null, ComposableSingletons$AboutKt_getInstance().e43_1, $composer_0, 48, 1);
+    Li(null, ComposableSingletons$AboutKt_getInstance().g43_1, $composer_0, 48, 1);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -923,7 +936,7 @@
   }
   function ComposableLambda$invoke$ref_27($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_22$lambda_p48k3i($this$H4, $composer, $changed) {
@@ -939,7 +952,7 @@
   }
   function ComposableLambda$invoke$ref_28($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_23$lambda_3pdwyp($this$Code, $composer, $changed) {
@@ -955,7 +968,7 @@
   }
   function ComposableLambda$invoke$ref_29($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_24$lambda_wj0e0w($this$Code, $composer, $changed) {
@@ -971,7 +984,7 @@
   }
   function ComposableLambda$invoke$ref_30($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_25$lambda_9oh6w1($this$Code, $composer, $changed) {
@@ -987,7 +1000,7 @@
   }
   function ComposableLambda$invoke$ref_31($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_26$lambda_j55a66($this$P, $composer, $changed) {
@@ -996,11 +1009,11 @@
       traceEventStart(-1883771570, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-26.<anonymous> (About.kt:81)');
     }
     Text('Any ', $composer_0, 6);
-    Code(null, ComposableSingletons$AboutKt_getInstance().j42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().j43_1, $composer_0, 48, 1);
     Text(' under this folder additionally tagged with ', $composer_0, 6);
-    Code(null, ComposableSingletons$AboutKt_getInstance().k42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().k43_1, $composer_0, 48, 1);
     Text(' will have a route generated for it automatically. Defining a page outside of this folder will be flagged as an error by the Kobweb Gradle plugin at compile time. Note that additional pages (like this one!) might live under the ', $composer_0, 6);
-    Code(null, ComposableSingletons$AboutKt_getInstance().l42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().l43_1, $composer_0, 48, 1);
     Text(' folder.', $composer_0, 6);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1009,7 +1022,7 @@
   }
   function ComposableLambda$invoke$ref_32($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_27$lambda_n2caqr($this$H4, $composer, $changed) {
@@ -1025,7 +1038,7 @@
   }
   function ComposableLambda$invoke$ref_33($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_28$lambda_5ra6bg($this$Code, $composer, $changed) {
@@ -1041,7 +1054,7 @@
   }
   function ComposableLambda$invoke$ref_34($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_29$lambda_ykwndn($this$Li, $composer, $changed) {
@@ -1049,7 +1062,7 @@
     if (isTraceInProgress()) {
       traceEventStart(-547124457, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-29.<anonymous> (About.kt:100)');
     }
-    Code(null, ComposableSingletons$AboutKt_getInstance().o42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().o43_1, $composer_0, 48, 1);
     GenericTag('br', null, null, $composer_0, 54, 4);
     Text(' If you want to host any media on your site (such as an icon, an image, text configuration files, movies, fonts, etc.), you should put it under this folder.', $composer_0, 6);
     if (isTraceInProgress()) {
@@ -1059,7 +1072,7 @@
   }
   function ComposableLambda$invoke$ref_35($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_30$lambda_temkxx($this$Code, $composer, $changed) {
@@ -1075,7 +1088,7 @@
   }
   function ComposableLambda$invoke$ref_36($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_31$lambda_csuzz0($this$Li, $composer, $changed) {
@@ -1083,7 +1096,7 @@
     if (isTraceInProgress()) {
       traceEventStart(1236920142, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-31.<anonymous> (About.kt:107)');
     }
-    Code(null, ComposableSingletons$AboutKt_getInstance().q42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().q43_1, $composer_0, 48, 1);
     GenericTag('br', null, null, $composer_0, 54, 4);
     Text(' Any markdown discovered in here by Kobweb at compile time will be converted into pages on your site.', $composer_0, 6);
     if (isTraceInProgress()) {
@@ -1093,7 +1106,7 @@
   }
   function ComposableLambda$invoke$ref_37($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_32$lambda_g0rh37($this$Ul, $composer, $changed) {
@@ -1101,8 +1114,8 @@
     if (isTraceInProgress()) {
       traceEventStart(-37548474, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-32.<anonymous> (About.kt:99)');
     }
-    Li(null, ComposableSingletons$AboutKt_getInstance().p42_1, $composer_0, 48, 1);
-    Li(null, ComposableSingletons$AboutKt_getInstance().r42_1, $composer_0, 48, 1);
+    Li(null, ComposableSingletons$AboutKt_getInstance().p43_1, $composer_0, 48, 1);
+    Li(null, ComposableSingletons$AboutKt_getInstance().r43_1, $composer_0, 48, 1);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -1110,7 +1123,7 @@
   }
   function ComposableLambda$invoke$ref_38($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_33$lambda_q6q3tq($this$H3, $composer, $changed) {
@@ -1126,7 +1139,7 @@
   }
   function ComposableLambda$invoke$ref_39($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_34$lambda_2mwd8h($this$P, $composer, $changed) {
@@ -1142,7 +1155,7 @@
   }
   function ComposableLambda$invoke$ref_40($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_35$lambda_vgiuao($this$H4, $composer, $changed) {
@@ -1158,7 +1171,7 @@
   }
   function ComposableLambda$invoke$ref_41($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_36$lambda_aqyqm9($this$Code, $composer, $changed) {
@@ -1174,7 +1187,7 @@
   }
   function ComposableLambda$invoke$ref_42($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_37$lambda_i2nqfy($this$P, $composer, $changed) {
@@ -1183,7 +1196,7 @@
       traceEventStart(568720012, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-37.<anonymous> (About.kt:124)');
     }
     Text('Kobweb introduces the ', $composer_0, 6);
-    Code(null, ComposableSingletons$AboutKt_getInstance().w42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().w43_1, $composer_0, 48, 1);
     Text(' keyword that Android developers will recognize from the Jetpack Compose API. In a webdev context, this is used for setting CSS styles and html attributes on elements in the page.', $composer_0, 6);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1192,7 +1205,7 @@
   }
   function ComposableLambda$invoke$ref_43($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_38$lambda_o4tugz($this$H4, $composer, $changed) {
@@ -1208,7 +1221,7 @@
   }
   function ComposableLambda$invoke$ref_44($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_39$lambda_4osml8($this$Code, $composer, $changed) {
@@ -1224,7 +1237,7 @@
   }
   function ComposableLambda$invoke$ref_45($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_40$lambda_hhfui($this$P, $composer, $changed) {
@@ -1233,7 +1246,7 @@
       traceEventStart(1794965803, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-40.<anonymous> (About.kt:134)');
     }
     Text('Traditional HTML pages use CSS to style their UI. In Kobweb, these styles can be declared using the ', $composer_0, 6);
-    Code(null, ComposableSingletons$AboutKt_getInstance().z42_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().z43_1, $composer_0, 48, 1);
     Text(' class in a Kotlin-idiomatic way. You can find examples of component styles used throughout the template.', $composer_0, 6);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1242,7 +1255,7 @@
   }
   function ComposableLambda$invoke$ref_46($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_41$lambda_sc517p($this$H4, $composer, $changed) {
@@ -1258,7 +1271,7 @@
   }
   function ComposableLambda$invoke$ref_47($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_42$lambda_dvcjp8($this$P, $composer, $changed) {
@@ -1274,7 +1287,7 @@
   }
   function ComposableLambda$invoke$ref_48($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_43$lambda_ey9xcz($this$H4, $composer, $changed) {
@@ -1290,7 +1303,7 @@
   }
   function ComposableLambda$invoke$ref_49($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_44$lambda_r97njy($this$P, $composer, $changed) {
@@ -1306,7 +1319,7 @@
   }
   function ComposableLambda$invoke$ref_50($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_45$lambda_1keti9($this$H2, $composer, $changed) {
@@ -1322,7 +1335,7 @@
   }
   function ComposableLambda$invoke$ref_51($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_46$lambda_ue1akg($this$Em, $composer, $changed) {
@@ -1338,7 +1351,7 @@
   }
   function ComposableLambda$invoke$ref_52($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_47$lambda_btgach($this$P, $composer, $changed) {
@@ -1347,7 +1360,7 @@
       traceEventStart(841980169, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-47.<anonymous> (About.kt:156)');
     }
     Text('This template aims to create some generally useful pieces that most sites will want to use. Making your own site could be as easy as deleting this ', $composer_0, 6);
-    Em(null, ComposableSingletons$AboutKt_getInstance().g43_1, $composer_0, 48, 1);
+    Em(null, ComposableSingletons$AboutKt_getInstance().g44_1, $composer_0, 48, 1);
     Text(" page and working from there. However, you are welcome to modify or delete anything you find in the template that you don't plan to use in your final site.", $composer_0, 6);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1356,7 +1369,7 @@
   }
   function ComposableLambda$invoke$ref_53($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_48$lambda_h066pq($this$P, $composer, $changed) {
@@ -1372,7 +1385,7 @@
   }
   function ComposableLambda$invoke$ref_54($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_49$lambda_p7be77($this$Code, $composer, $changed) {
@@ -1388,7 +1401,7 @@
   }
   function ComposableLambda$invoke$ref_55($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_50$lambda_udlgmx($this$Pre, $composer, $changed) {
@@ -1396,7 +1409,7 @@
     if (isTraceInProgress()) {
       traceEventStart(-1625879881, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-50.<anonymous> (About.kt:165)');
     }
-    Code(null, ComposableSingletons$AboutKt_getInstance().j43_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().j44_1, $composer_0, 48, 1);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -1404,7 +1417,7 @@
   }
   function ComposableLambda$invoke$ref_56($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_51$lambda_1jyzkq($this$P, $composer, $changed) {
@@ -1420,7 +1433,7 @@
   }
   function ComposableLambda$invoke$ref_57($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_52$lambda_r9nhhh($this$H2, $composer, $changed) {
@@ -1436,7 +1449,7 @@
   }
   function ComposableLambda$invoke$ref_58($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_53$lambda_exu3fg($this$P, $composer, $changed) {
@@ -1452,7 +1465,7 @@
   }
   function ComposableLambda$invoke$ref_59($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_54$lambda_dvsdmr($this$Em, $composer, $changed) {
@@ -1468,7 +1481,7 @@
   }
   function ComposableLambda$invoke$ref_60($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_55$lambda_sbp7a6($this$Em, $composer, $changed) {
@@ -1484,12 +1497,12 @@
   }
   function ComposableLambda$invoke$ref_61($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$AboutKt$lambda_56$lambda_hx9s1($composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(940845651, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-56.<anonymous> (About.kt:187)');
       }
@@ -1498,13 +1511,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_62($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_57$lambda_tbjqu8($this$P, $composer, $changed) {
@@ -1513,11 +1526,11 @@
       traceEventStart(1451996037, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-57.<anonymous> (About.kt:177)');
     }
     Text('There are two flavors of Kobweb sites: ', $composer_0, 6);
-    Em(null, ComposableSingletons$AboutKt_getInstance().o43_1, $composer_0, 48, 1);
+    Em(null, ComposableSingletons$AboutKt_getInstance().o44_1, $composer_0, 48, 1);
     Text(' and ', $composer_0, 6);
-    Em(null, ComposableSingletons$AboutKt_getInstance().p43_1, $composer_0, 48, 1);
+    Em(null, ComposableSingletons$AboutKt_getInstance().p44_1, $composer_0, 48, 1);
     Text('. You can ', $composer_0, 6);
-    Link('https://github.com/varabyte/kobweb#static-layout-vs-full-stack-sites', null, null, null, null, false, null, ComposableSingletons$AboutKt_getInstance().q43_1, $composer_0, 12582918, 126);
+    Link('https://github.com/varabyte/kobweb#static-layout-vs-full-stack-sites', null, null, null, null, false, null, ComposableSingletons$AboutKt_getInstance().q44_1, $composer_0, 12582918, 126);
     Text('.', $composer_0, 6);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1526,7 +1539,7 @@
   }
   function ComposableLambda$invoke$ref_63($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_58$lambda_cvxu2p($this$P, $composer, $changed) {
@@ -1542,7 +1555,7 @@
   }
   function ComposableLambda$invoke$ref_64($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_59$lambda_fxomzi($this$Code, $composer, $changed) {
@@ -1558,7 +1571,7 @@
   }
   function ComposableLambda$invoke$ref_65($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_60$lambda_arekjs($this$Pre, $composer, $changed) {
@@ -1566,7 +1579,7 @@
     if (isTraceInProgress()) {
       traceEventStart(907180000, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-60.<anonymous> (About.kt:194)');
     }
-    Code(null, ComposableSingletons$AboutKt_getInstance().t43_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().t44_1, $composer_0, 48, 1);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -1574,7 +1587,7 @@
   }
   function ComposableLambda$invoke$ref_66($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_61$lambda_vg30d5($this$Code, $composer, $changed) {
@@ -1590,7 +1603,7 @@
   }
   function ComposableLambda$invoke$ref_67($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_62$lambda_2mgjay($this$P, $composer, $changed) {
@@ -1599,7 +1612,7 @@
       traceEventStart(-390479677, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-62.<anonymous> (About.kt:197)');
     }
     Text('After that runs for a little while, your production site should be generated! You can find the files under the ', $composer_0, 6);
-    Code(null, ComposableSingletons$AboutKt_getInstance().v43_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().v44_1, $composer_0, 48, 1);
     Text(' folder.', $composer_0, 6);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1608,7 +1621,7 @@
   }
   function ComposableLambda$invoke$ref_68($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_63$lambda_q75xr9($this$P, $composer, $changed) {
@@ -1624,7 +1637,7 @@
   }
   function ComposableLambda$invoke$ref_69($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_64$lambda_g0bn5o($this$Code, $composer, $changed) {
@@ -1640,7 +1653,7 @@
   }
   function ComposableLambda$invoke$ref_70($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_65$lambda_ctatwj($this$Pre, $composer, $changed) {
@@ -1648,7 +1661,7 @@
     if (isTraceInProgress()) {
       traceEventStart(2133425791, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-65.<anonymous> (About.kt:206)');
     }
-    Code(null, ComposableSingletons$AboutKt_getInstance().y43_1, $composer_0, 48, 1);
+    Code(null, ComposableSingletons$AboutKt_getInstance().y44_1, $composer_0, 48, 1);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -1656,7 +1669,7 @@
   }
   function ComposableLambda$invoke$ref_71($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_66$lambda_te6r0e($this$P, $composer, $changed) {
@@ -1672,12 +1685,12 @@
   }
   function ComposableLambda$invoke$ref_72($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$AboutKt$lambda_67$lambda_kk9y7($composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-1536502151, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-67.<anonymous> (About.kt:214)');
       }
@@ -1686,13 +1699,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_73($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$AboutKt$lambda_68$lambda_s92740($this$P, $composer, $changed) {
@@ -1701,7 +1714,7 @@
       traceEventStart(-1025351765, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-68.<anonymous> (About.kt:212)');
     }
     Text('You can ', $composer_0, 6);
-    Link('https://bitspittle.dev/blog/2022/staticdeploy', null, null, null, null, false, null, ComposableSingletons$AboutKt_getInstance().b44_1, $composer_0, 12582918, 126);
+    Link('https://bitspittle.dev/blog/2022/staticdeploy', null, null, null, null, false, null, ComposableSingletons$AboutKt_getInstance().b45_1, $composer_0, 12582918, 126);
     Text(' for some concrete examples of exporting a Kobweb site to two popular static website hosting providers.', $composer_0, 6);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -1710,559 +1723,559 @@
   }
   function ComposableLambda$invoke$ref_74($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda_dyfdsx($composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1129324712, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous> (About.kt:10)');
       }
-      $composer_0.h1e(120959690);
+      $composer_0.j1e(120959690);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_0.l1f();
+      var it = $composer_0.n1f();
       var tmp;
-      if (false ? true : it === Companion_getInstance().z18_1) {
+      if (false ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng;
-        $composer_0.r1f(value);
+        $composer_0.t1f(value);
         tmp = value;
       } else {
         tmp = it;
       }
       var tmp_0 = tmp;
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.i1e();
-      H1(tmp0_group, ComposableSingletons$AboutKt_getInstance().n41_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().o41_1, $composer_0, 48, 1);
+      $composer_0.k1e();
+      H1(tmp0_group, ComposableSingletons$AboutKt_getInstance().n42_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().o42_1, $composer_0, 48, 1);
       HorizontalDivider(null, null, $composer_0, 0, 3);
-      $composer_0.h1e(120960172);
+      $composer_0.j1e(120960172);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = $composer_0.l1f();
+      var it_0 = $composer_0.n1f();
       var tmp_1;
-      if (false ? true : it_0 === Companion_getInstance().z18_1) {
+      if (false ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_0 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_0;
-        $composer_0.r1f(value_0);
+        $composer_0.t1f(value_0);
         tmp_1 = value_0;
       } else {
         tmp_1 = it_0;
       }
       var tmp_2 = tmp_1;
       var tmp1_group = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_0.i1e();
-      H2(tmp1_group, ComposableSingletons$AboutKt_getInstance().p41_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().q41_1, $composer_0, 48, 1);
-      $composer_0.h1e(120960539);
+      $composer_0.k1e();
+      H2(tmp1_group, ComposableSingletons$AboutKt_getInstance().p42_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().q42_1, $composer_0, 48, 1);
+      $composer_0.j1e(120960539);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_1 = $composer_0.l1f();
+      var it_1 = $composer_0.n1f();
       var tmp_3;
-      if (false ? true : it_1 === Companion_getInstance().z18_1) {
+      if (false ? true : it_1 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_1 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_1;
-        $composer_0.r1f(value_1);
+        $composer_0.t1f(value_1);
         tmp_3 = value_1;
       } else {
         tmp_3 = it_1;
       }
       var tmp_4 = tmp_3;
       var tmp2_group = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
-      $composer_0.i1e();
-      H3(tmp2_group, ComposableSingletons$AboutKt_getInstance().r41_1, $composer_0, 54, 0);
-      $composer_0.h1e(120960673);
+      $composer_0.k1e();
+      H3(tmp2_group, ComposableSingletons$AboutKt_getInstance().r42_1, $composer_0, 54, 0);
+      $composer_0.j1e(120960673);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_2 = $composer_0.l1f();
+      var it_2 = $composer_0.n1f();
       var tmp_5;
-      if (false ? true : it_2 === Companion_getInstance().z18_1) {
+      if (false ? true : it_2 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_2 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_2;
-        $composer_0.r1f(value_2);
+        $composer_0.t1f(value_2);
         tmp_5 = value_2;
       } else {
         tmp_5 = it_2;
       }
       var tmp_6 = tmp_5;
       var tmp3_group = (tmp_6 == null ? true : !(tmp_6 == null)) ? tmp_6 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp3_group, ComposableSingletons$AboutKt_getInstance().s41_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().u41_1, $composer_0, 48, 1);
-      $composer_0.h1e(120961294);
+      $composer_0.k1e();
+      H4(tmp3_group, ComposableSingletons$AboutKt_getInstance().s42_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().u42_1, $composer_0, 48, 1);
+      $composer_0.j1e(120961294);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_3 = $composer_0.l1f();
+      var it_3 = $composer_0.n1f();
       var tmp_7;
-      if (false ? true : it_3 === Companion_getInstance().z18_1) {
+      if (false ? true : it_3 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_3 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_3;
-        $composer_0.r1f(value_3);
+        $composer_0.t1f(value_3);
         tmp_7 = value_3;
       } else {
         tmp_7 = it_3;
       }
       var tmp_8 = tmp_7;
       var tmp4_group = (tmp_8 == null ? true : !(tmp_8 == null)) ? tmp_8 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp4_group, ComposableSingletons$AboutKt_getInstance().v41_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().w41_1, $composer_0, 48, 1);
-      $composer_0.h1e(120961716);
+      $composer_0.k1e();
+      H4(tmp4_group, ComposableSingletons$AboutKt_getInstance().v42_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().w42_1, $composer_0, 48, 1);
+      $composer_0.j1e(120961716);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_4 = $composer_0.l1f();
+      var it_4 = $composer_0.n1f();
       var tmp_9;
-      if (false ? true : it_4 === Companion_getInstance().z18_1) {
+      if (false ? true : it_4 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_4 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_4;
-        $composer_0.r1f(value_4);
+        $composer_0.t1f(value_4);
         tmp_9 = value_4;
       } else {
         tmp_9 = it_4;
       }
       var tmp_10 = tmp_9;
       var tmp5_group = (tmp_10 == null ? true : !(tmp_10 == null)) ? tmp_10 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp5_group, ComposableSingletons$AboutKt_getInstance().x41_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().y41_1, $composer_0, 48, 1);
-      $composer_0.h1e(120962073);
+      $composer_0.k1e();
+      H4(tmp5_group, ComposableSingletons$AboutKt_getInstance().x42_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().y42_1, $composer_0, 48, 1);
+      $composer_0.j1e(120962073);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_5 = $composer_0.l1f();
+      var it_5 = $composer_0.n1f();
       var tmp_11;
-      if (false ? true : it_5 === Companion_getInstance().z18_1) {
+      if (false ? true : it_5 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_5 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_5;
-        $composer_0.r1f(value_5);
+        $composer_0.t1f(value_5);
         tmp_11 = value_5;
       } else {
         tmp_11 = it_5;
       }
       var tmp_12 = tmp_11;
       var tmp6_group = (tmp_12 == null ? true : !(tmp_12 == null)) ? tmp_12 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp6_group, ComposableSingletons$AboutKt_getInstance().z41_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().a42_1, $composer_0, 48, 1);
-      Ul(null, ComposableSingletons$AboutKt_getInstance().h42_1, $composer_0, 48, 1);
-      $composer_0.h1e(120963643);
+      $composer_0.k1e();
+      H4(tmp6_group, ComposableSingletons$AboutKt_getInstance().z42_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().a43_1, $composer_0, 48, 1);
+      Ul(null, ComposableSingletons$AboutKt_getInstance().h43_1, $composer_0, 48, 1);
+      $composer_0.j1e(120963643);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_6 = $composer_0.l1f();
+      var it_6 = $composer_0.n1f();
       var tmp_13;
-      if (false ? true : it_6 === Companion_getInstance().z18_1) {
+      if (false ? true : it_6 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_6 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_6;
-        $composer_0.r1f(value_6);
+        $composer_0.t1f(value_6);
         tmp_13 = value_6;
       } else {
         tmp_13 = it_6;
       }
       var tmp_14 = tmp_13;
       var tmp7_group = (tmp_14 == null ? true : !(tmp_14 == null)) ? tmp_14 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp7_group, ComposableSingletons$AboutKt_getInstance().i42_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().m42_1, $composer_0, 48, 1);
-      $composer_0.h1e(120964706);
+      $composer_0.k1e();
+      H4(tmp7_group, ComposableSingletons$AboutKt_getInstance().i43_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().m43_1, $composer_0, 48, 1);
+      $composer_0.j1e(120964706);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_7 = $composer_0.l1f();
+      var it_7 = $composer_0.n1f();
       var tmp_15;
-      if (false ? true : it_7 === Companion_getInstance().z18_1) {
+      if (false ? true : it_7 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_7 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_7;
-        $composer_0.r1f(value_7);
+        $composer_0.t1f(value_7);
         tmp_15 = value_7;
       } else {
         tmp_15 = it_7;
       }
       var tmp_16 = tmp_15;
       var tmp8_group = (tmp_16 == null ? true : !(tmp_16 == null)) ? tmp_16 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp8_group, ComposableSingletons$AboutKt_getInstance().n42_1, $composer_0, 54, 0);
-      Ul(null, ComposableSingletons$AboutKt_getInstance().s42_1, $composer_0, 48, 1);
-      $composer_0.h1e(120965807);
+      $composer_0.k1e();
+      H4(tmp8_group, ComposableSingletons$AboutKt_getInstance().n43_1, $composer_0, 54, 0);
+      Ul(null, ComposableSingletons$AboutKt_getInstance().s43_1, $composer_0, 48, 1);
+      $composer_0.j1e(120965807);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_8 = $composer_0.l1f();
+      var it_8 = $composer_0.n1f();
       var tmp_17;
-      if (false ? true : it_8 === Companion_getInstance().z18_1) {
+      if (false ? true : it_8 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_8 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_8;
-        $composer_0.r1f(value_8);
+        $composer_0.t1f(value_8);
         tmp_17 = value_8;
       } else {
         tmp_17 = it_8;
       }
       var tmp_18 = tmp_17;
       var tmp9_group = (tmp_18 == null ? true : !(tmp_18 == null)) ? tmp_18 : THROW_CCE();
-      $composer_0.i1e();
-      H3(tmp9_group, ComposableSingletons$AboutKt_getInstance().t42_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().u42_1, $composer_0, 48, 1);
-      $composer_0.h1e(120966215);
+      $composer_0.k1e();
+      H3(tmp9_group, ComposableSingletons$AboutKt_getInstance().t43_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().u43_1, $composer_0, 48, 1);
+      $composer_0.j1e(120966215);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_9 = $composer_0.l1f();
+      var it_9 = $composer_0.n1f();
       var tmp_19;
-      if (false ? true : it_9 === Companion_getInstance().z18_1) {
+      if (false ? true : it_9 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_9 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_9;
-        $composer_0.r1f(value_9);
+        $composer_0.t1f(value_9);
         tmp_19 = value_9;
       } else {
         tmp_19 = it_9;
       }
       var tmp_20 = tmp_19;
       var tmp10_group = (tmp_20 == null ? true : !(tmp_20 == null)) ? tmp_20 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp10_group, ComposableSingletons$AboutKt_getInstance().v42_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().x42_1, $composer_0, 48, 1);
-      $composer_0.h1e(120966836);
+      $composer_0.k1e();
+      H4(tmp10_group, ComposableSingletons$AboutKt_getInstance().v43_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().x43_1, $composer_0, 48, 1);
+      $composer_0.j1e(120966836);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_10 = $composer_0.l1f();
+      var it_10 = $composer_0.n1f();
       var tmp_21;
-      if (false ? true : it_10 === Companion_getInstance().z18_1) {
+      if (false ? true : it_10 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_10 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_10;
-        $composer_0.r1f(value_10);
+        $composer_0.t1f(value_10);
         tmp_21 = value_10;
       } else {
         tmp_21 = it_10;
       }
       var tmp_22 = tmp_21;
       var tmp11_group = (tmp_22 == null ? true : !(tmp_22 == null)) ? tmp_22 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp11_group, ComposableSingletons$AboutKt_getInstance().y42_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().a43_1, $composer_0, 48, 1);
-      $composer_0.h1e(120967479);
+      $composer_0.k1e();
+      H4(tmp11_group, ComposableSingletons$AboutKt_getInstance().y43_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().a44_1, $composer_0, 48, 1);
+      $composer_0.j1e(120967479);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_11 = $composer_0.l1f();
+      var it_11 = $composer_0.n1f();
       var tmp_23;
-      if (false ? true : it_11 === Companion_getInstance().z18_1) {
+      if (false ? true : it_11 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_11 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_11;
-        $composer_0.r1f(value_11);
+        $composer_0.t1f(value_11);
         tmp_23 = value_11;
       } else {
         tmp_23 = it_11;
       }
       var tmp_24 = tmp_23;
       var tmp12_group = (tmp_24 == null ? true : !(tmp_24 == null)) ? tmp_24 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp12_group, ComposableSingletons$AboutKt_getInstance().b43_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().c43_1, $composer_0, 48, 1);
-      $composer_0.h1e(120967855);
+      $composer_0.k1e();
+      H4(tmp12_group, ComposableSingletons$AboutKt_getInstance().b44_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().c44_1, $composer_0, 48, 1);
+      $composer_0.j1e(120967855);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_12 = $composer_0.l1f();
+      var it_12 = $composer_0.n1f();
       var tmp_25;
-      if (false ? true : it_12 === Companion_getInstance().z18_1) {
+      if (false ? true : it_12 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_12 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_12;
-        $composer_0.r1f(value_12);
+        $composer_0.t1f(value_12);
         tmp_25 = value_12;
       } else {
         tmp_25 = it_12;
       }
       var tmp_26 = tmp_25;
       var tmp13_group = (tmp_26 == null ? true : !(tmp_26 == null)) ? tmp_26 : THROW_CCE();
-      $composer_0.i1e();
-      H4(tmp13_group, ComposableSingletons$AboutKt_getInstance().d43_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().e43_1, $composer_0, 48, 1);
-      $composer_0.h1e(120968158);
+      $composer_0.k1e();
+      H4(tmp13_group, ComposableSingletons$AboutKt_getInstance().d44_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().e44_1, $composer_0, 48, 1);
+      $composer_0.j1e(120968158);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_13 = $composer_0.l1f();
+      var it_13 = $composer_0.n1f();
       var tmp_27;
-      if (false ? true : it_13 === Companion_getInstance().z18_1) {
+      if (false ? true : it_13 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_13 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_13;
-        $composer_0.r1f(value_13);
+        $composer_0.t1f(value_13);
         tmp_27 = value_13;
       } else {
         tmp_27 = it_13;
       }
       var tmp_28 = tmp_27;
       var tmp14_group = (tmp_28 == null ? true : !(tmp_28 == null)) ? tmp_28 : THROW_CCE();
-      $composer_0.i1e();
-      H2(tmp14_group, ComposableSingletons$AboutKt_getInstance().f43_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().h43_1, $composer_0, 48, 1);
-      P(null, ComposableSingletons$AboutKt_getInstance().i43_1, $composer_0, 48, 1);
-      Pre(null, ComposableSingletons$AboutKt_getInstance().k43_1, $composer_0, 48, 1);
-      P(null, ComposableSingletons$AboutKt_getInstance().l43_1, $composer_0, 48, 1);
-      $composer_0.h1e(120969407);
+      $composer_0.k1e();
+      H2(tmp14_group, ComposableSingletons$AboutKt_getInstance().f44_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().h44_1, $composer_0, 48, 1);
+      P(null, ComposableSingletons$AboutKt_getInstance().i44_1, $composer_0, 48, 1);
+      Pre(null, ComposableSingletons$AboutKt_getInstance().k44_1, $composer_0, 48, 1);
+      P(null, ComposableSingletons$AboutKt_getInstance().l44_1, $composer_0, 48, 1);
+      $composer_0.j1e(120969407);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_14 = $composer_0.l1f();
+      var it_14 = $composer_0.n1f();
       var tmp_29;
-      if (false ? true : it_14 === Companion_getInstance().z18_1) {
+      if (false ? true : it_14 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.ComposableSingletons$AboutKt.lambda-69.<anonymous>.<anonymous>' call
         var value_14 = ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_14;
-        $composer_0.r1f(value_14);
+        $composer_0.t1f(value_14);
         tmp_29 = value_14;
       } else {
         tmp_29 = it_14;
       }
       var tmp_30 = tmp_29;
       var tmp15_group = (tmp_30 == null ? true : !(tmp_30 == null)) ? tmp_30 : THROW_CCE();
-      $composer_0.i1e();
-      H2(tmp15_group, ComposableSingletons$AboutKt_getInstance().m43_1, $composer_0, 54, 0);
-      P(null, ComposableSingletons$AboutKt_getInstance().n43_1, $composer_0, 48, 1);
-      P(null, ComposableSingletons$AboutKt_getInstance().r43_1, $composer_0, 48, 1);
-      P(null, ComposableSingletons$AboutKt_getInstance().s43_1, $composer_0, 48, 1);
-      Pre(null, ComposableSingletons$AboutKt_getInstance().u43_1, $composer_0, 48, 1);
-      P(null, ComposableSingletons$AboutKt_getInstance().w43_1, $composer_0, 48, 1);
-      P(null, ComposableSingletons$AboutKt_getInstance().x43_1, $composer_0, 48, 1);
-      Pre(null, ComposableSingletons$AboutKt_getInstance().z43_1, $composer_0, 48, 1);
-      P(null, ComposableSingletons$AboutKt_getInstance().a44_1, $composer_0, 48, 1);
-      P(null, ComposableSingletons$AboutKt_getInstance().c44_1, $composer_0, 48, 1);
+      $composer_0.k1e();
+      H2(tmp15_group, ComposableSingletons$AboutKt_getInstance().m44_1, $composer_0, 54, 0);
+      P(null, ComposableSingletons$AboutKt_getInstance().n44_1, $composer_0, 48, 1);
+      P(null, ComposableSingletons$AboutKt_getInstance().r44_1, $composer_0, 48, 1);
+      P(null, ComposableSingletons$AboutKt_getInstance().s44_1, $composer_0, 48, 1);
+      Pre(null, ComposableSingletons$AboutKt_getInstance().u44_1, $composer_0, 48, 1);
+      P(null, ComposableSingletons$AboutKt_getInstance().w44_1, $composer_0, 48, 1);
+      P(null, ComposableSingletons$AboutKt_getInstance().x44_1, $composer_0, 48, 1);
+      Pre(null, ComposableSingletons$AboutKt_getInstance().z44_1, $composer_0, 48, 1);
+      P(null, ComposableSingletons$AboutKt_getInstance().a45_1, $composer_0, 48, 1);
+      P(null, ComposableSingletons$AboutKt_getInstance().c45_1, $composer_0, 48, 1);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng($this$H1) {
-    $this$H1.d2c('about-this-template');
+    $this$H1.f2c('about-this-template');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_0($this$H2) {
-    $this$H2.d2c('learn');
+    $this$H2.f2c('learn');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_1($this$H3) {
-    $this$H3.d2c('files');
+    $this$H3.f2c('files');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_2($this$H4) {
-    $this$H4.d2c('appentry-kt');
+    $this$H4.f2c('appentry-kt');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_3($this$H4) {
-    $this$H4.d2c('appstyles-kt');
+    $this$H4.f2c('appstyles-kt');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_4($this$H4) {
-    $this$H4.d2c('sitetheme-kt');
+    $this$H4.f2c('sitetheme-kt');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_5($this$H4) {
-    $this$H4.d2c('components');
+    $this$H4.f2c('components');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_6($this$H4) {
-    $this$H4.d2c('pages');
+    $this$H4.f2c('pages');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_7($this$H4) {
-    $this$H4.d2c('resources');
+    $this$H4.f2c('resources');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_8($this$H3) {
-    $this$H3.d2c('classes');
+    $this$H3.f2c('classes');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_9($this$H4) {
-    $this$H4.d2c('modifier');
+    $this$H4.f2c('modifier');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_10($this$H4) {
-    $this$H4.d2c('componentstyle');
+    $this$H4.f2c('componentstyle');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_11($this$H4) {
-    $this$H4.d2c('componentvariant');
+    $this$H4.f2c('componentvariant');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_12($this$H4) {
-    $this$H4.d2c('keyframes');
+    $this$H4.f2c('keyframes');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_13($this$H2) {
-    $this$H2.d2c('starting-point');
+    $this$H2.f2c('starting-point');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt$lambda_69$lambda$lambda_myrqng_14($this$H2) {
-    $this$H2.d2c('export-and-deploy');
+    $this$H2.f2c('export-and-deploy');
     return Unit_instance;
   }
   function ComposableSingletons$AboutKt() {
     ComposableSingletons$AboutKt_instance = this;
     var tmp = this;
-    tmp.n41_1 = ComposableLambda$invoke$ref_6(composableLambdaInstance(655888299, false, ComposableSingletons$AboutKt$lambda_1$lambda_irurs3));
+    tmp.n42_1 = ComposableLambda$invoke$ref_6(composableLambdaInstance(655888299, false, ComposableSingletons$AboutKt$lambda_1$lambda_irurs3));
     var tmp_0 = this;
-    tmp_0.o41_1 = ComposableLambda$invoke$ref_7(composableLambdaInstance(443045834, false, ComposableSingletons$AboutKt$lambda_2$lambda_nfmt4u));
+    tmp_0.o42_1 = ComposableLambda$invoke$ref_7(composableLambdaInstance(443045834, false, ComposableSingletons$AboutKt$lambda_2$lambda_nfmt4u));
     var tmp_1 = this;
-    tmp_1.p41_1 = ComposableLambda$invoke$ref_8(composableLambdaInstance(1882134090, false, ComposableSingletons$AboutKt$lambda_3$lambda_5dznxd));
+    tmp_1.p42_1 = ComposableLambda$invoke$ref_8(composableLambdaInstance(1882134090, false, ComposableSingletons$AboutKt$lambda_3$lambda_5dznxd));
     var tmp_2 = this;
-    tmp_2.q41_1 = ComposableLambda$invoke$ref_9(composableLambdaInstance(574934067, false, ComposableSingletons$AboutKt$lambda_4$lambda_y7m4zk));
+    tmp_2.q42_1 = ComposableLambda$invoke$ref_9(composableLambdaInstance(574934067, false, ComposableSingletons$AboutKt$lambda_4$lambda_y7m4zk));
     var tmp_3 = this;
-    tmp_3.r41_1 = ComposableLambda$invoke$ref_10(composableLambdaInstance(-1186587415, false, ComposableSingletons$AboutKt$lambda_5$lambda_7zvfxd));
+    tmp_3.r42_1 = ComposableLambda$invoke$ref_10(composableLambdaInstance(-1186587415, false, ComposableSingletons$AboutKt$lambda_5$lambda_7zvfxd));
     var tmp_4 = this;
-    tmp_4.s41_1 = ComposableLambda$invoke$ref_11(composableLambdaInstance(39658376, false, ComposableSingletons$AboutKt$lambda_6$lambda_ktr14u));
+    tmp_4.s42_1 = ComposableLambda$invoke$ref_11(composableLambdaInstance(39658376, false, ComposableSingletons$AboutKt$lambda_6$lambda_ktr14u));
     var tmp_5 = this;
-    tmp_5.t41_1 = ComposableLambda$invoke$ref_12(composableLambdaInstance(-1055744463, false, ComposableSingletons$AboutKt$lambda_7$lambda_ldqjs3));
+    tmp_5.t42_1 = ComposableLambda$invoke$ref_12(composableLambdaInstance(-1055744463, false, ComposableSingletons$AboutKt$lambda_7$lambda_ldqjs3));
     var tmp_6 = this;
-    tmp_6.u41_1 = ComposableLambda$invoke$ref_13(composableLambdaInstance(1801179858, false, ComposableSingletons$AboutKt$lambda_8$lambda_7fvxa4));
+    tmp_6.u42_1 = ComposableLambda$invoke$ref_13(composableLambdaInstance(1801179858, false, ComposableSingletons$AboutKt$lambda_8$lambda_7fvxa4));
     var tmp_7 = this;
-    tmp_7.v41_1 = ComposableLambda$invoke$ref_14(composableLambdaInstance(-533356431, false, ComposableSingletons$AboutKt$lambda_9$lambda_yrlnmt));
+    tmp_7.v42_1 = ComposableLambda$invoke$ref_14(composableLambdaInstance(-533356431, false, ComposableSingletons$AboutKt$lambda_9$lambda_yrlnmt));
     var tmp_8 = this;
-    tmp_8.w41_1 = ComposableLambda$invoke$ref_15(composableLambdaInstance(-1267541647, false, ComposableSingletons$AboutKt$lambda_10$lambda_i5qkjn));
+    tmp_8.w42_1 = ComposableLambda$invoke$ref_15(composableLambdaInstance(-1267541647, false, ComposableSingletons$AboutKt$lambda_10$lambda_i5qkjn));
     var tmp_9 = this;
-    tmp_9.x41_1 = ComposableLambda$invoke$ref_16(composableLambdaInstance(692889360, false, ComposableSingletons$AboutKt$lambda_11$lambda_o1r0da));
+    tmp_9.x42_1 = ComposableLambda$invoke$ref_16(composableLambdaInstance(692889360, false, ComposableSingletons$AboutKt$lambda_11$lambda_o1r0da));
     var tmp_10 = this;
-    tmp_10.y41_1 = ComposableLambda$invoke$ref_17(composableLambdaInstance(-41295856, false, ComposableSingletons$AboutKt$lambda_12$lambda_4rvgox));
+    tmp_10.y42_1 = ComposableLambda$invoke$ref_17(composableLambdaInstance(-41295856, false, ComposableSingletons$AboutKt$lambda_12$lambda_4rvgox));
     var tmp_11 = this;
-    tmp_11.z41_1 = ComposableLambda$invoke$ref_18(composableLambdaInstance(1919135151, false, ComposableSingletons$AboutKt$lambda_13$lambda_xlhxr4));
+    tmp_11.z42_1 = ComposableLambda$invoke$ref_18(composableLambdaInstance(1919135151, false, ComposableSingletons$AboutKt$lambda_13$lambda_xlhxr4));
     var tmp_12 = this;
-    tmp_12.a42_1 = ComposableLambda$invoke$ref_19(composableLambdaInstance(1184949935, false, ComposableSingletons$AboutKt$lambda_14$lambda_8lzn5t));
+    tmp_12.a43_1 = ComposableLambda$invoke$ref_19(composableLambdaInstance(1184949935, false, ComposableSingletons$AboutKt$lambda_14$lambda_8lzn5t));
     var tmp_13 = this;
-    tmp_13.b42_1 = ComposableLambda$invoke$ref_20(composableLambdaInstance(672559373, false, ComposableSingletons$AboutKt$lambda_15$lambda_k7mtwe));
+    tmp_13.b43_1 = ComposableLambda$invoke$ref_20(composableLambdaInstance(672559373, false, ComposableSingletons$AboutKt$lambda_15$lambda_k7mtwe));
     var tmp_14 = this;
-    tmp_14.c42_1 = ComposableLambda$invoke$ref_21(composableLambdaInstance(1697742766, false, ComposableSingletons$AboutKt$lambda_16$lambda_lzur0j));
+    tmp_14.c43_1 = ComposableLambda$invoke$ref_21(composableLambdaInstance(1697742766, false, ComposableSingletons$AboutKt$lambda_16$lambda_lzur0j));
     var tmp_15 = this;
-    tmp_15.d42_1 = ComposableLambda$invoke$ref_22(composableLambdaInstance(1820169028, false, ComposableSingletons$AboutKt$lambda_17$lambda_6trq1o));
+    tmp_15.d43_1 = ComposableLambda$invoke$ref_22(composableLambdaInstance(1820169028, false, ComposableSingletons$AboutKt$lambda_17$lambda_6trq1o));
     var tmp_16 = this;
-    tmp_16.e42_1 = ComposableLambda$invoke$ref_23(composableLambdaInstance(-821068379, false, ComposableSingletons$AboutKt$lambda_18$lambda_zdpuv9));
+    tmp_16.e43_1 = ComposableLambda$invoke$ref_23(composableLambdaInstance(-821068379, false, ComposableSingletons$AboutKt$lambda_18$lambda_zdpuv9));
     var tmp_17 = this;
-    tmp_17.f42_1 = ComposableLambda$invoke$ref_24(composableLambdaInstance(1116306053, false, ComposableSingletons$AboutKt$lambda_19$lambda_6k3dt2));
+    tmp_17.f43_1 = ComposableLambda$invoke$ref_24(composableLambdaInstance(1116306053, false, ComposableSingletons$AboutKt$lambda_19$lambda_6k3dt2));
     var tmp_18 = this;
-    tmp_18.g42_1 = ComposableLambda$invoke$ref_25(composableLambdaInstance(-1524931354, false, ComposableSingletons$AboutKt$lambda_20$lambda_bqdg8s));
+    tmp_18.g43_1 = ComposableLambda$invoke$ref_25(composableLambdaInstance(-1524931354, false, ComposableSingletons$AboutKt$lambda_20$lambda_bqdg8s));
     var tmp_19 = this;
-    tmp_19.h42_1 = ComposableLambda$invoke$ref_26(composableLambdaInstance(245760669, false, ComposableSingletons$AboutKt$lambda_21$lambda_h390tf));
+    tmp_19.h43_1 = ComposableLambda$invoke$ref_26(composableLambdaInstance(245760669, false, ComposableSingletons$AboutKt$lambda_21$lambda_h390tf));
     var tmp_20 = this;
-    tmp_20.i42_1 = ComposableLambda$invoke$ref_27(composableLambdaInstance(-1149586354, false, ComposableSingletons$AboutKt$lambda_22$lambda_p48k3i));
+    tmp_20.i43_1 = ComposableLambda$invoke$ref_27(composableLambdaInstance(-1149586354, false, ComposableSingletons$AboutKt$lambda_22$lambda_p48k3i));
     var tmp_21 = this;
-    tmp_21.j42_1 = ComposableLambda$invoke$ref_28(composableLambdaInstance(-445728595, false, ComposableSingletons$AboutKt$lambda_23$lambda_3pdwyp));
+    tmp_21.j43_1 = ComposableLambda$invoke$ref_28(composableLambdaInstance(-445728595, false, ComposableSingletons$AboutKt$lambda_23$lambda_3pdwyp));
     var tmp_22 = this;
-    tmp_22.k42_1 = ComposableLambda$invoke$ref_29(composableLambdaInstance(1296049558, false, ComposableSingletons$AboutKt$lambda_24$lambda_wj0e0w));
+    tmp_22.k43_1 = ComposableLambda$invoke$ref_29(composableLambdaInstance(1296049558, false, ComposableSingletons$AboutKt$lambda_24$lambda_wj0e0w));
     var tmp_23 = this;
-    tmp_23.l42_1 = ComposableLambda$invoke$ref_30(composableLambdaInstance(951133813, false, ComposableSingletons$AboutKt$lambda_25$lambda_9oh6w1));
+    tmp_23.l43_1 = ComposableLambda$invoke$ref_30(composableLambdaInstance(951133813, false, ComposableSingletons$AboutKt$lambda_25$lambda_9oh6w1));
     var tmp_24 = this;
-    tmp_24.m42_1 = ComposableLambda$invoke$ref_31(composableLambdaInstance(-1883771570, false, ComposableSingletons$AboutKt$lambda_26$lambda_j55a66));
+    tmp_24.m43_1 = ComposableLambda$invoke$ref_31(composableLambdaInstance(-1883771570, false, ComposableSingletons$AboutKt$lambda_26$lambda_j55a66));
     var tmp_25 = this;
-    tmp_25.n42_1 = ComposableLambda$invoke$ref_32(composableLambdaInstance(76659437, false, ComposableSingletons$AboutKt$lambda_27$lambda_n2caqr));
+    tmp_25.n43_1 = ComposableLambda$invoke$ref_32(composableLambdaInstance(76659437, false, ComposableSingletons$AboutKt$lambda_27$lambda_n2caqr));
     var tmp_26 = this;
-    tmp_26.o42_1 = ComposableLambda$invoke$ref_33(composableLambdaInstance(2094112950, false, ComposableSingletons$AboutKt$lambda_28$lambda_5ra6bg));
+    tmp_26.o43_1 = ComposableLambda$invoke$ref_33(composableLambdaInstance(2094112950, false, ComposableSingletons$AboutKt$lambda_28$lambda_5ra6bg));
     var tmp_27 = this;
-    tmp_27.p42_1 = ComposableLambda$invoke$ref_34(composableLambdaInstance(-547124457, false, ComposableSingletons$AboutKt$lambda_29$lambda_ykwndn));
+    tmp_27.p43_1 = ComposableLambda$invoke$ref_34(composableLambdaInstance(-547124457, false, ComposableSingletons$AboutKt$lambda_29$lambda_ykwndn));
     var tmp_28 = this;
-    tmp_28.q42_1 = ComposableLambda$invoke$ref_35(composableLambdaInstance(1140396333, false, ComposableSingletons$AboutKt$lambda_30$lambda_temkxx));
+    tmp_28.q43_1 = ComposableLambda$invoke$ref_35(composableLambdaInstance(1140396333, false, ComposableSingletons$AboutKt$lambda_30$lambda_temkxx));
     var tmp_29 = this;
-    tmp_29.r42_1 = ComposableLambda$invoke$ref_36(composableLambdaInstance(1236920142, false, ComposableSingletons$AboutKt$lambda_31$lambda_csuzz0));
+    tmp_29.r43_1 = ComposableLambda$invoke$ref_36(composableLambdaInstance(1236920142, false, ComposableSingletons$AboutKt$lambda_31$lambda_csuzz0));
     var tmp_30 = this;
-    tmp_30.s42_1 = ComposableLambda$invoke$ref_37(composableLambdaInstance(-37548474, false, ComposableSingletons$AboutKt$lambda_32$lambda_g0rh37));
+    tmp_30.s43_1 = ComposableLambda$invoke$ref_37(composableLambdaInstance(-37548474, false, ComposableSingletons$AboutKt$lambda_32$lambda_g0rh37));
     var tmp_31 = this;
-    tmp_31.t42_1 = ComposableLambda$invoke$ref_38(composableLambdaInstance(-2134522478, false, ComposableSingletons$AboutKt$lambda_33$lambda_q6q3tq));
+    tmp_31.t43_1 = ComposableLambda$invoke$ref_38(composableLambdaInstance(-2134522478, false, ComposableSingletons$AboutKt$lambda_33$lambda_q6q3tq));
     var tmp_32 = this;
-    tmp_32.u42_1 = ComposableLambda$invoke$ref_39(composableLambdaInstance(-657525779, false, ComposableSingletons$AboutKt$lambda_34$lambda_2mwd8h));
+    tmp_32.u43_1 = ComposableLambda$invoke$ref_39(composableLambdaInstance(-657525779, false, ComposableSingletons$AboutKt$lambda_34$lambda_2mwd8h));
     var tmp_33 = this;
-    tmp_33.v42_1 = ComposableLambda$invoke$ref_40(composableLambdaInstance(1302905228, false, ComposableSingletons$AboutKt$lambda_35$lambda_vgiuao));
+    tmp_33.v43_1 = ComposableLambda$invoke$ref_40(composableLambdaInstance(1302905228, false, ComposableSingletons$AboutKt$lambda_35$lambda_vgiuao));
     var tmp_34 = this;
-    tmp_34.w42_1 = ComposableLambda$invoke$ref_41(composableLambdaInstance(2006762987, false, ComposableSingletons$AboutKt$lambda_36$lambda_aqyqm9));
+    tmp_34.w43_1 = ComposableLambda$invoke$ref_41(composableLambdaInstance(2006762987, false, ComposableSingletons$AboutKt$lambda_36$lambda_aqyqm9));
     var tmp_35 = this;
-    tmp_35.x42_1 = ComposableLambda$invoke$ref_42(composableLambdaInstance(568720012, false, ComposableSingletons$AboutKt$lambda_37$lambda_i2nqfy));
+    tmp_35.x43_1 = ComposableLambda$invoke$ref_42(composableLambdaInstance(568720012, false, ComposableSingletons$AboutKt$lambda_37$lambda_i2nqfy));
     var tmp_36 = this;
-    tmp_36.y42_1 = ComposableLambda$invoke$ref_43(composableLambdaInstance(-1765816277, false, ComposableSingletons$AboutKt$lambda_38$lambda_o4tugz));
+    tmp_36.y43_1 = ComposableLambda$invoke$ref_43(composableLambdaInstance(-1765816277, false, ComposableSingletons$AboutKt$lambda_38$lambda_o4tugz));
     var tmp_37 = this;
-    tmp_37.z42_1 = ComposableLambda$invoke$ref_44(composableLambdaInstance(-1061958518, false, ComposableSingletons$AboutKt$lambda_39$lambda_4osml8));
+    tmp_37.z43_1 = ComposableLambda$invoke$ref_44(composableLambdaInstance(-1061958518, false, ComposableSingletons$AboutKt$lambda_39$lambda_4osml8));
     var tmp_38 = this;
-    tmp_38.a43_1 = ComposableLambda$invoke$ref_45(composableLambdaInstance(1794965803, false, ComposableSingletons$AboutKt$lambda_40$lambda_hhfui));
+    tmp_38.a44_1 = ComposableLambda$invoke$ref_45(composableLambdaInstance(1794965803, false, ComposableSingletons$AboutKt$lambda_40$lambda_hhfui));
     var tmp_39 = this;
-    tmp_39.b43_1 = ComposableLambda$invoke$ref_46(composableLambdaInstance(-539570486, false, ComposableSingletons$AboutKt$lambda_41$lambda_sc517p));
+    tmp_39.b44_1 = ComposableLambda$invoke$ref_46(composableLambdaInstance(-539570486, false, ComposableSingletons$AboutKt$lambda_41$lambda_sc517p));
     var tmp_40 = this;
-    tmp_40.c43_1 = ComposableLambda$invoke$ref_47(composableLambdaInstance(-1610511413, false, ComposableSingletons$AboutKt$lambda_42$lambda_dvcjp8));
+    tmp_40.c44_1 = ComposableLambda$invoke$ref_47(composableLambdaInstance(-1610511413, false, ComposableSingletons$AboutKt$lambda_42$lambda_dvcjp8));
     var tmp_41 = this;
-    tmp_41.d43_1 = ComposableLambda$invoke$ref_48(composableLambdaInstance(686675305, false, ComposableSingletons$AboutKt$lambda_43$lambda_ey9xcz));
+    tmp_41.d44_1 = ComposableLambda$invoke$ref_48(composableLambdaInstance(686675305, false, ComposableSingletons$AboutKt$lambda_43$lambda_ey9xcz));
     var tmp_42 = this;
-    tmp_42.e43_1 = ComposableLambda$invoke$ref_49(composableLambdaInstance(-384265622, false, ComposableSingletons$AboutKt$lambda_44$lambda_r97njy));
+    tmp_42.e44_1 = ComposableLambda$invoke$ref_49(composableLambdaInstance(-384265622, false, ComposableSingletons$AboutKt$lambda_44$lambda_r97njy));
     var tmp_43 = this;
-    tmp_43.f43_1 = ComposableLambda$invoke$ref_50(composableLambdaInstance(559278771, false, ComposableSingletons$AboutKt$lambda_45$lambda_1keti9));
+    tmp_43.f44_1 = ComposableLambda$invoke$ref_50(composableLambdaInstance(559278771, false, ComposableSingletons$AboutKt$lambda_45$lambda_1keti9));
     var tmp_44 = this;
-    tmp_44.g43_1 = ComposableLambda$invoke$ref_51(composableLambdaInstance(1478401541, false, ComposableSingletons$AboutKt$lambda_46$lambda_ue1akg));
+    tmp_44.g44_1 = ComposableLambda$invoke$ref_51(composableLambdaInstance(1478401541, false, ComposableSingletons$AboutKt$lambda_46$lambda_ue1akg));
     var tmp_45 = this;
-    tmp_45.h43_1 = ComposableLambda$invoke$ref_52(composableLambdaInstance(841980169, false, ComposableSingletons$AboutKt$lambda_47$lambda_btgach));
+    tmp_45.h44_1 = ComposableLambda$invoke$ref_52(composableLambdaInstance(841980169, false, ComposableSingletons$AboutKt$lambda_47$lambda_btgach));
     var tmp_46 = this;
-    tmp_46.i43_1 = ComposableLambda$invoke$ref_53(composableLambdaInstance(2068225960, false, ComposableSingletons$AboutKt$lambda_48$lambda_h066pq));
+    tmp_46.i44_1 = ComposableLambda$invoke$ref_53(composableLambdaInstance(2068225960, false, ComposableSingletons$AboutKt$lambda_48$lambda_h066pq));
     var tmp_47 = this;
-    tmp_47.j43_1 = ComposableLambda$invoke$ref_54(composableLambdaInstance(-187836906, false, ComposableSingletons$AboutKt$lambda_49$lambda_p7be77));
+    tmp_47.j44_1 = ComposableLambda$invoke$ref_54(composableLambdaInstance(-187836906, false, ComposableSingletons$AboutKt$lambda_49$lambda_p7be77));
     var tmp_48 = this;
-    tmp_48.k43_1 = ComposableLambda$invoke$ref_55(composableLambdaInstance(-1625879881, false, ComposableSingletons$AboutKt$lambda_50$lambda_udlgmx));
+    tmp_48.k44_1 = ComposableLambda$invoke$ref_55(composableLambdaInstance(-1625879881, false, ComposableSingletons$AboutKt$lambda_50$lambda_udlgmx));
     var tmp_49 = this;
-    tmp_49.l43_1 = ComposableLambda$invoke$ref_56(composableLambdaInstance(-1000495545, false, ComposableSingletons$AboutKt$lambda_51$lambda_1jyzkq));
+    tmp_49.l44_1 = ComposableLambda$invoke$ref_56(composableLambdaInstance(-1000495545, false, ComposableSingletons$AboutKt$lambda_51$lambda_1jyzkq));
     var tmp_50 = this;
-    tmp_50.m43_1 = ComposableLambda$invoke$ref_57(composableLambdaInstance(1785524562, false, ComposableSingletons$AboutKt$lambda_52$lambda_r9nhhh));
+    tmp_50.m44_1 = ComposableLambda$invoke$ref_57(composableLambdaInstance(1785524562, false, ComposableSingletons$AboutKt$lambda_52$lambda_r9nhhh));
     var tmp_51 = this;
-    tmp_51.n43_1 = ComposableLambda$invoke$ref_58(composableLambdaInstance(225750246, false, ComposableSingletons$AboutKt$lambda_53$lambda_exu3fg));
+    tmp_51.n44_1 = ComposableLambda$invoke$ref_58(composableLambdaInstance(225750246, false, ComposableSingletons$AboutKt$lambda_53$lambda_exu3fg));
     var tmp_52 = this;
-    tmp_52.o43_1 = ComposableLambda$invoke$ref_59(composableLambdaInstance(2088417409, false, ComposableSingletons$AboutKt$lambda_54$lambda_dvsdmr));
+    tmp_52.o44_1 = ComposableLambda$invoke$ref_59(composableLambdaInstance(2088417409, false, ComposableSingletons$AboutKt$lambda_54$lambda_dvsdmr));
     var tmp_53 = this;
-    tmp_53.p43_1 = ComposableLambda$invoke$ref_60(composableLambdaInstance(223327736, false, ComposableSingletons$AboutKt$lambda_55$lambda_sbp7a6));
+    tmp_53.p44_1 = ComposableLambda$invoke$ref_60(composableLambdaInstance(223327736, false, ComposableSingletons$AboutKt$lambda_55$lambda_sbp7a6));
     var tmp_54 = this;
-    tmp_54.q43_1 = ComposableLambda$invoke$ref_61(composableLambdaInstance(940845651, false, ComposableSingletons$AboutKt$lambda_56$lambda_hx9s1));
+    tmp_54.q44_1 = ComposableLambda$invoke$ref_61(composableLambdaInstance(940845651, false, ComposableSingletons$AboutKt$lambda_56$lambda_hx9s1));
     var tmp_55 = this;
-    tmp_55.r43_1 = ComposableLambda$invoke$ref_62(composableLambdaInstance(1451996037, false, ComposableSingletons$AboutKt$lambda_57$lambda_tbjqu8));
+    tmp_55.r44_1 = ComposableLambda$invoke$ref_62(composableLambdaInstance(1451996037, false, ComposableSingletons$AboutKt$lambda_57$lambda_tbjqu8));
     var tmp_56 = this;
-    tmp_56.s43_1 = ComposableLambda$invoke$ref_63(composableLambdaInstance(-1616725468, false, ComposableSingletons$AboutKt$lambda_58$lambda_cvxu2p));
+    tmp_56.s44_1 = ComposableLambda$invoke$ref_63(composableLambdaInstance(-1616725468, false, ComposableSingletons$AboutKt$lambda_58$lambda_cvxu2p));
     var tmp_57 = this;
-    tmp_57.t43_1 = ComposableLambda$invoke$ref_64(composableLambdaInstance(-112990337, false, ComposableSingletons$AboutKt$lambda_59$lambda_fxomzi));
+    tmp_57.t44_1 = ComposableLambda$invoke$ref_64(composableLambdaInstance(-112990337, false, ComposableSingletons$AboutKt$lambda_59$lambda_fxomzi));
     var tmp_58 = this;
-    tmp_58.u43_1 = ComposableLambda$invoke$ref_65(composableLambdaInstance(907180000, false, ComposableSingletons$AboutKt$lambda_60$lambda_arekjs));
+    tmp_58.u44_1 = ComposableLambda$invoke$ref_65(composableLambdaInstance(907180000, false, ComposableSingletons$AboutKt$lambda_60$lambda_arekjs));
     var tmp_59 = this;
-    tmp_59.v43_1 = ComposableLambda$invoke$ref_66(composableLambdaInstance(1239179588, false, ComposableSingletons$AboutKt$lambda_61$lambda_vg30d5));
+    tmp_59.v44_1 = ComposableLambda$invoke$ref_66(composableLambdaInstance(1239179588, false, ComposableSingletons$AboutKt$lambda_61$lambda_vg30d5));
     var tmp_60 = this;
-    tmp_60.w43_1 = ComposableLambda$invoke$ref_67(composableLambdaInstance(-390479677, false, ComposableSingletons$AboutKt$lambda_62$lambda_2mgjay));
+    tmp_60.w44_1 = ComposableLambda$invoke$ref_67(composableLambdaInstance(-390479677, false, ComposableSingletons$AboutKt$lambda_62$lambda_2mgjay));
     var tmp_61 = this;
-    tmp_61.x43_1 = ComposableLambda$invoke$ref_68(composableLambdaInstance(835766114, false, ComposableSingletons$AboutKt$lambda_63$lambda_q75xr9));
+    tmp_61.x44_1 = ComposableLambda$invoke$ref_68(composableLambdaInstance(835766114, false, ComposableSingletons$AboutKt$lambda_63$lambda_q75xr9));
     var tmp_62 = this;
-    tmp_62.y43_1 = ComposableLambda$invoke$ref_69(composableLambdaInstance(1113255454, false, ComposableSingletons$AboutKt$lambda_64$lambda_g0bn5o));
+    tmp_62.y44_1 = ComposableLambda$invoke$ref_69(composableLambdaInstance(1113255454, false, ComposableSingletons$AboutKt$lambda_64$lambda_g0bn5o));
     var tmp_63 = this;
-    tmp_63.z43_1 = ComposableLambda$invoke$ref_70(composableLambdaInstance(2133425791, false, ComposableSingletons$AboutKt$lambda_65$lambda_ctatwj));
+    tmp_63.z44_1 = ComposableLambda$invoke$ref_70(composableLambdaInstance(2133425791, false, ComposableSingletons$AboutKt$lambda_65$lambda_ctatwj));
     var tmp_64 = this;
-    tmp_64.a44_1 = ComposableLambda$invoke$ref_71(composableLambdaInstance(2043369740, false, ComposableSingletons$AboutKt$lambda_66$lambda_te6r0e));
+    tmp_64.a45_1 = ComposableLambda$invoke$ref_71(composableLambdaInstance(2043369740, false, ComposableSingletons$AboutKt$lambda_66$lambda_te6r0e));
     var tmp_65 = this;
-    tmp_65.b44_1 = ComposableLambda$invoke$ref_72(composableLambdaInstance(-1536502151, false, ComposableSingletons$AboutKt$lambda_67$lambda_kk9y7));
+    tmp_65.b45_1 = ComposableLambda$invoke$ref_72(composableLambdaInstance(-1536502151, false, ComposableSingletons$AboutKt$lambda_67$lambda_kk9y7));
     var tmp_66 = this;
-    tmp_66.c44_1 = ComposableLambda$invoke$ref_73(composableLambdaInstance(-1025351765, false, ComposableSingletons$AboutKt$lambda_68$lambda_s92740));
+    tmp_66.c45_1 = ComposableLambda$invoke$ref_73(composableLambdaInstance(-1025351765, false, ComposableSingletons$AboutKt$lambda_68$lambda_s92740));
     var tmp_67 = this;
-    tmp_67.d44_1 = ComposableLambda$invoke$ref_74(composableLambdaInstance(1129324712, false, ComposableSingletons$AboutKt$lambda_69$lambda_dyfdsx));
+    tmp_67.d45_1 = ComposableLambda$invoke$ref_74(composableLambdaInstance(1129324712, false, ComposableSingletons$AboutKt$lambda_69$lambda_dyfdsx));
   }
   var ComposableSingletons$AboutKt_instance;
   function ComposableSingletons$AboutKt_getInstance() {
@@ -2276,126 +2289,186 @@
       return Unit_instance;
     };
   }
+  function Category$Technology() {
+    Category.call(this, 'Technology', 0);
+    Category_Technology_instance = this;
+  }
+  var Category_Technology_instance;
+  function Category$Programming() {
+    Category.call(this, 'Programming', 1);
+    Category_Programming_instance = this;
+  }
+  var Category_Programming_instance;
+  function Category$Design() {
+    Category.call(this, 'Design', 2);
+    Category_Design_instance = this;
+  }
+  var Category_Design_instance;
+  function values() {
+    return [Category_Technology_getInstance(), Category_Programming_getInstance(), Category_Design_getInstance()];
+  }
+  var Category_entriesInitialized;
+  function Category_initEntries() {
+    if (Category_entriesInitialized)
+      return Unit_instance;
+    Category_entriesInitialized = true;
+    Category_Technology_instance = new Category$Technology();
+    Category_Programming_instance = new Category$Programming();
+    Category_Design_instance = new Category$Design();
+  }
+  function Category(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  function Category_Technology_getInstance() {
+    Category_initEntries();
+    return Category_Technology_instance;
+  }
+  function Category_Programming_getInstance() {
+    Category_initEntries();
+    return Category_Programming_instance;
+  }
+  function Category_Design_getInstance() {
+    Category_initEntries();
+    return Category_Design_instance;
+  }
   function Companion() {
+    Companion_instance_14 = this;
+    var tmp = this;
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    tmp.e45_1 = [null, null, null, null, null, null, null, new EnumSerializer('com.canerture.androidhub.models.Category', values()), null, null, null];
   }
   var Companion_instance_14;
   function Companion_getInstance_0() {
+    if (Companion_instance_14 == null)
+      new Companion();
     return Companion_instance_14;
   }
   function $serializer() {
     $serializer_instance = this;
-    var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.canerture.androidhub.serialization.Post', this, 10);
-    tmp0_serialDesc.j2y('id', false);
-    tmp0_serialDesc.j2y('post_author', false);
-    tmp0_serialDesc.j2y('post_date', false);
-    tmp0_serialDesc.j2y('post_date_gmt', false);
-    tmp0_serialDesc.j2y('post_content', false);
-    tmp0_serialDesc.j2y('post_title', false);
-    tmp0_serialDesc.j2y('post_name', false);
-    tmp0_serialDesc.j2y('post_modified', false);
-    tmp0_serialDesc.j2y('post_modified_gmt', false);
-    tmp0_serialDesc.j2y('comment_count', false);
-    this.e44_1 = tmp0_serialDesc;
+    var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.canerture.androidhub.models.Post', this, 11);
+    tmp0_serialDesc.u2y('id', true);
+    tmp0_serialDesc.u2y('author', true);
+    tmp0_serialDesc.u2y('date', true);
+    tmp0_serialDesc.u2y('title', false);
+    tmp0_serialDesc.u2y('subtitle', false);
+    tmp0_serialDesc.u2y('thumbnail', false);
+    tmp0_serialDesc.u2y('content', false);
+    tmp0_serialDesc.u2y('category', false);
+    tmp0_serialDesc.u2y('popular', true);
+    tmp0_serialDesc.u2y('main', true);
+    tmp0_serialDesc.u2y('sponsored', true);
+    this.f45_1 = tmp0_serialDesc;
   }
-  protoOf($serializer).i2q = function () {
-    return this.e44_1;
+  protoOf($serializer).k2q = function () {
+    return this.f45_1;
   };
-  protoOf($serializer).l2y = function () {
+  protoOf($serializer).j2z = function () {
+    var tmp0_cached = Companion_getInstance_0().e45_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [IntSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance()];
+    return [StringSerializer_getInstance(), StringSerializer_getInstance(), DoubleSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), StringSerializer_getInstance(), tmp0_cached[7], BooleanSerializer_getInstance(), BooleanSerializer_getInstance(), BooleanSerializer_getInstance()];
   };
-  protoOf($serializer).j2q = function (decoder) {
-    var tmp0_desc = this.e44_1;
+  protoOf($serializer).l2q = function (decoder) {
+    var tmp0_desc = this.f45_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
-    var tmp4_local0 = 0;
+    var tmp4_local0 = null;
     var tmp5_local1 = null;
-    var tmp6_local2 = null;
+    var tmp6_local2 = 0.0;
     var tmp7_local3 = null;
     var tmp8_local4 = null;
     var tmp9_local5 = null;
     var tmp10_local6 = null;
     var tmp11_local7 = null;
-    var tmp12_local8 = null;
-    var tmp13_local9 = null;
-    var tmp14_input = decoder.a2t(tmp0_desc);
-    if (tmp14_input.p2t()) {
-      tmp4_local0 = tmp14_input.f2t(tmp0_desc, 0);
+    var tmp12_local8 = false;
+    var tmp13_local9 = false;
+    var tmp14_local10 = false;
+    var tmp15_input = decoder.g2t(tmp0_desc);
+    var tmp16_cached = Companion_getInstance_0().e45_1;
+    if (tmp15_input.v2t()) {
+      tmp4_local0 = tmp15_input.q2t(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp14_input.k2t(tmp0_desc, 1);
+      tmp5_local1 = tmp15_input.q2t(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp14_input.k2t(tmp0_desc, 2);
+      tmp6_local2 = tmp15_input.o2t(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp14_input.k2t(tmp0_desc, 3);
+      tmp7_local3 = tmp15_input.q2t(tmp0_desc, 3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp14_input.k2t(tmp0_desc, 4);
+      tmp8_local4 = tmp15_input.q2t(tmp0_desc, 4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp14_input.k2t(tmp0_desc, 5);
+      tmp9_local5 = tmp15_input.q2t(tmp0_desc, 5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp14_input.k2t(tmp0_desc, 6);
+      tmp10_local6 = tmp15_input.q2t(tmp0_desc, 6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp14_input.k2t(tmp0_desc, 7);
+      tmp11_local7 = tmp15_input.s2t(tmp0_desc, 7, tmp16_cached[7], tmp11_local7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
-      tmp12_local8 = tmp14_input.k2t(tmp0_desc, 8);
+      tmp12_local8 = tmp15_input.i2t(tmp0_desc, 8);
       tmp3_bitMask0 = tmp3_bitMask0 | 256;
-      tmp13_local9 = tmp14_input.k2t(tmp0_desc, 9);
+      tmp13_local9 = tmp15_input.i2t(tmp0_desc, 9);
       tmp3_bitMask0 = tmp3_bitMask0 | 512;
+      tmp14_local10 = tmp15_input.i2t(tmp0_desc, 10);
+      tmp3_bitMask0 = tmp3_bitMask0 | 1024;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp14_input.q2t(tmp0_desc);
+        tmp2_index = tmp15_input.w2t(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp14_input.f2t(tmp0_desc, 0);
+            tmp4_local0 = tmp15_input.q2t(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp14_input.k2t(tmp0_desc, 1);
+            tmp5_local1 = tmp15_input.q2t(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp14_input.k2t(tmp0_desc, 2);
+            tmp6_local2 = tmp15_input.o2t(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp14_input.k2t(tmp0_desc, 3);
+            tmp7_local3 = tmp15_input.q2t(tmp0_desc, 3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp14_input.k2t(tmp0_desc, 4);
+            tmp8_local4 = tmp15_input.q2t(tmp0_desc, 4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp14_input.k2t(tmp0_desc, 5);
+            tmp9_local5 = tmp15_input.q2t(tmp0_desc, 5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp14_input.k2t(tmp0_desc, 6);
+            tmp10_local6 = tmp15_input.q2t(tmp0_desc, 6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp14_input.k2t(tmp0_desc, 7);
+            tmp11_local7 = tmp15_input.s2t(tmp0_desc, 7, tmp16_cached[7], tmp11_local7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           case 8:
-            tmp12_local8 = tmp14_input.k2t(tmp0_desc, 8);
+            tmp12_local8 = tmp15_input.i2t(tmp0_desc, 8);
             tmp3_bitMask0 = tmp3_bitMask0 | 256;
             break;
           case 9:
-            tmp13_local9 = tmp14_input.k2t(tmp0_desc, 9);
+            tmp13_local9 = tmp15_input.i2t(tmp0_desc, 9);
             tmp3_bitMask0 = tmp3_bitMask0 | 512;
+            break;
+          case 10:
+            tmp14_local10 = tmp15_input.i2t(tmp0_desc, 10);
+            tmp3_bitMask0 = tmp3_bitMask0 | 1024;
             break;
           default:
             throw UnknownFieldException_init_$Create$(tmp2_index);
         }
       }
-    tmp14_input.b2t(tmp0_desc);
-    return Post_init_$Create$(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, null);
+    tmp15_input.h2t(tmp0_desc);
+    return Post_init_$Create$(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, null);
   };
   var $serializer_instance;
   function $serializer_getInstance() {
@@ -2403,51 +2476,79 @@
       new $serializer();
     return $serializer_instance;
   }
-  function Post_init_$Init$(seen1, id, postAuthor, postDate, postDateGmt, postContent, postTitle, postName, postModified, postModifiedGmt, commentCount, serializationConstructorMarker, $this) {
-    if (!(1023 === (1023 & seen1))) {
-      throwMissingFieldException(seen1, 1023, $serializer_getInstance().e44_1);
+  function Post_init_$Init$(seen1, id, author, date, title, subtitle, thumbnail, content, category, popular, main, sponsored, serializationConstructorMarker, $this) {
+    if (!(248 === (248 & seen1))) {
+      throwMissingFieldException(seen1, 248, $serializer_getInstance().f45_1);
     }
-    $this.f44_1 = id;
-    $this.g44_1 = postAuthor;
-    $this.h44_1 = postDate;
-    $this.i44_1 = postDateGmt;
-    $this.j44_1 = postContent;
-    $this.k44_1 = postTitle;
-    $this.l44_1 = postName;
-    $this.m44_1 = postModified;
-    $this.n44_1 = postModifiedGmt;
-    $this.o44_1 = commentCount;
+    if (0 === (seen1 & 1))
+      $this.g45_1 = '';
+    else
+      $this.g45_1 = id;
+    if (0 === (seen1 & 2))
+      $this.h45_1 = '';
+    else
+      $this.h45_1 = author;
+    if (0 === (seen1 & 4))
+      $this.i45_1 = 0.0;
+    else
+      $this.i45_1 = date;
+    $this.j45_1 = title;
+    $this.k45_1 = subtitle;
+    $this.l45_1 = thumbnail;
+    $this.m45_1 = content;
+    $this.n45_1 = category;
+    if (0 === (seen1 & 256))
+      $this.o45_1 = false;
+    else
+      $this.o45_1 = popular;
+    if (0 === (seen1 & 512))
+      $this.p45_1 = false;
+    else
+      $this.p45_1 = main;
+    if (0 === (seen1 & 1024))
+      $this.q45_1 = false;
+    else
+      $this.q45_1 = sponsored;
     return $this;
   }
-  function Post_init_$Create$(seen1, id, postAuthor, postDate, postDateGmt, postContent, postTitle, postName, postModified, postModifiedGmt, commentCount, serializationConstructorMarker) {
-    return Post_init_$Init$(seen1, id, postAuthor, postDate, postDateGmt, postContent, postTitle, postName, postModified, postModifiedGmt, commentCount, serializationConstructorMarker, objectCreate(protoOf(Post)));
+  function Post_init_$Create$(seen1, id, author, date, title, subtitle, thumbnail, content, category, popular, main, sponsored, serializationConstructorMarker) {
+    return Post_init_$Init$(seen1, id, author, date, title, subtitle, thumbnail, content, category, popular, main, sponsored, serializationConstructorMarker, objectCreate(protoOf(Post)));
   }
-  function Post(id, postAuthor, postDate, postDateGmt, postContent, postTitle, postName, postModified, postModifiedGmt, commentCount) {
-    this.f44_1 = id;
-    this.g44_1 = postAuthor;
-    this.h44_1 = postDate;
-    this.i44_1 = postDateGmt;
-    this.j44_1 = postContent;
-    this.k44_1 = postTitle;
-    this.l44_1 = postName;
-    this.m44_1 = postModified;
-    this.n44_1 = postModifiedGmt;
-    this.o44_1 = commentCount;
+  function Post(id, author, date, title, subtitle, thumbnail, content, category, popular, main, sponsored) {
+    Companion_getInstance_0();
+    id = id === VOID ? '' : id;
+    author = author === VOID ? '' : author;
+    date = date === VOID ? 0.0 : date;
+    popular = popular === VOID ? false : popular;
+    main = main === VOID ? false : main;
+    sponsored = sponsored === VOID ? false : sponsored;
+    this.g45_1 = id;
+    this.h45_1 = author;
+    this.i45_1 = date;
+    this.j45_1 = title;
+    this.k45_1 = subtitle;
+    this.l45_1 = thumbnail;
+    this.m45_1 = content;
+    this.n45_1 = category;
+    this.o45_1 = popular;
+    this.p45_1 = main;
+    this.q45_1 = sponsored;
   }
   protoOf(Post).toString = function () {
-    return 'Post(id=' + this.f44_1 + ', postAuthor=' + this.g44_1 + ', postDate=' + this.h44_1 + ', postDateGmt=' + this.i44_1 + ', postContent=' + this.j44_1 + ', postTitle=' + this.k44_1 + ', postName=' + this.l44_1 + ', postModified=' + this.m44_1 + ', postModifiedGmt=' + this.n44_1 + ', commentCount=' + this.o44_1 + ')';
+    return 'Post(id=' + this.g45_1 + ', author=' + this.h45_1 + ', date=' + this.i45_1 + ', title=' + this.j45_1 + ', subtitle=' + this.k45_1 + ', thumbnail=' + this.l45_1 + ', content=' + this.m45_1 + ', category=' + this.n45_1 + ', popular=' + this.o45_1 + ', main=' + this.p45_1 + ', sponsored=' + this.q45_1 + ')';
   };
   protoOf(Post).hashCode = function () {
-    var result = this.f44_1;
-    result = imul(result, 31) + getStringHashCode(this.g44_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.h44_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.i44_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.j44_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.k44_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.l44_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.m44_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.n44_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.o44_1) | 0;
+    var result = getStringHashCode(this.g45_1);
+    result = imul(result, 31) + getStringHashCode(this.h45_1) | 0;
+    result = imul(result, 31) + getNumberHashCode(this.i45_1) | 0;
+    result = imul(result, 31) + getStringHashCode(this.j45_1) | 0;
+    result = imul(result, 31) + getStringHashCode(this.k45_1) | 0;
+    result = imul(result, 31) + getStringHashCode(this.l45_1) | 0;
+    result = imul(result, 31) + getStringHashCode(this.m45_1) | 0;
+    result = imul(result, 31) + this.n45_1.hashCode() | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.o45_1) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.p45_1) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.q45_1) | 0;
     return result;
   };
   protoOf(Post).equals = function (other) {
@@ -2456,38 +2557,40 @@
     if (!(other instanceof Post))
       return false;
     var tmp0_other_with_cast = other instanceof Post ? other : THROW_CCE();
-    if (!(this.f44_1 === tmp0_other_with_cast.f44_1))
+    if (!(this.g45_1 === tmp0_other_with_cast.g45_1))
       return false;
-    if (!(this.g44_1 === tmp0_other_with_cast.g44_1))
+    if (!(this.h45_1 === tmp0_other_with_cast.h45_1))
       return false;
-    if (!(this.h44_1 === tmp0_other_with_cast.h44_1))
+    if (!equals(this.i45_1, tmp0_other_with_cast.i45_1))
       return false;
-    if (!(this.i44_1 === tmp0_other_with_cast.i44_1))
+    if (!(this.j45_1 === tmp0_other_with_cast.j45_1))
       return false;
-    if (!(this.j44_1 === tmp0_other_with_cast.j44_1))
+    if (!(this.k45_1 === tmp0_other_with_cast.k45_1))
       return false;
-    if (!(this.k44_1 === tmp0_other_with_cast.k44_1))
+    if (!(this.l45_1 === tmp0_other_with_cast.l45_1))
       return false;
-    if (!(this.l44_1 === tmp0_other_with_cast.l44_1))
+    if (!(this.m45_1 === tmp0_other_with_cast.m45_1))
       return false;
-    if (!(this.m44_1 === tmp0_other_with_cast.m44_1))
+    if (!this.n45_1.equals(tmp0_other_with_cast.n45_1))
       return false;
-    if (!(this.n44_1 === tmp0_other_with_cast.n44_1))
+    if (!(this.o45_1 === tmp0_other_with_cast.o45_1))
       return false;
-    if (!(this.o44_1 === tmp0_other_with_cast.o44_1))
+    if (!(this.p45_1 === tmp0_other_with_cast.p45_1))
+      return false;
+    if (!(this.q45_1 === tmp0_other_with_cast.q45_1))
       return false;
     return true;
   };
   function initColorMode(ctx) {
-    ctx.w3n_1.m3o_1 = ColorMode_LIGHT_getInstance();
+    ctx.w3o_1.m3p_1 = ColorMode_LIGHT_getInstance();
   }
   function AppEntry(content, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-230830174);
+    $composer_0 = $composer_0.b1g(-230830174);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.c1f(content) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(content) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-230830174, $dirty, -1, 'com.canerture.androidhub.AppEntry (AppEntry.kt:27)');
       }
@@ -2498,42 +2601,42 @@
       var dispatchReceiver = composableLambda(tmp, -871536957, true, AppEntry$lambda(content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_0;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.AppEntry.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_76(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_0 = value;
       } else {
         tmp_0 = it;
       }
       var tmp_1 = tmp_0;
       var tmp0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       SilkApp(tmp0, $composer_0, 6);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(AppEntry$lambda_0(content, $changed));
+      tmp0_safe_receiver.y1k(AppEntry$lambda_0(content, $changed));
     }
   }
   function AppEntry$lambda$slambda($colorMode, resultContinuation) {
-    this.x44_1 = $colorMode;
+    this.z45_1 = $colorMode;
     CoroutineImpl.call(this, resultContinuation);
   }
   protoOf(AppEntry$lambda$slambda).az = function ($this$LaunchedEffect, $completion) {
@@ -2552,7 +2655,7 @@
         var tmp = this.ad_1;
         if (tmp === 0) {
           this.bd_1 = 1;
-          localStorage.setItem('androidhub:colorMode', this.x44_1.sa_1);
+          localStorage.setItem('androidhub:colorMode', this.z45_1.sa_1);
           return Unit_instance;
         } else if (tmp === 1) {
           throw this.dd_1;
@@ -2564,8 +2667,8 @@
      while (true);
   };
   protoOf(AppEntry$lambda$slambda).bz = function ($this$LaunchedEffect, completion) {
-    var i = new AppEntry$lambda$slambda(this.x44_1, completion);
-    i.y44_1 = $this$LaunchedEffect;
+    var i = new AppEntry$lambda$slambda(this.z45_1, completion);
+    i.a46_1 = $this$LaunchedEffect;
     return i;
   };
   function AppEntry$lambda$slambda_0($colorMode, resultContinuation) {
@@ -2593,39 +2696,39 @@
   }
   function ComposableLambda$invoke$ref_75($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function AppEntry$lambda($content) {
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
         if (isTraceInProgress()) {
           traceEventStart(-871536957, $changed, -1, 'com.canerture.androidhub.AppEntry.<anonymous> (AppEntry.kt:29)');
         }
-        var colorMode = Companion_instance_0.x3j($composer_0, 8);
-        $composer_0.h1e(-226072114);
+        var colorMode = Companion_instance_0.x3k($composer_0, 8);
+        $composer_0.j1e(-226072114);
         // Inline function 'androidx.compose.runtime.cache' call
-        var invalid = $composer_0.a16(colorMode);
+        var invalid = $composer_0.c16(colorMode);
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-        var it = $composer_0.l1f();
+        var it = $composer_0.n1f();
         var tmp_0;
-        if (invalid ? true : it === Companion_getInstance().z18_1) {
+        if (invalid ? true : it === Companion_getInstance().b19_1) {
           // Inline function 'com.canerture.androidhub.AppEntry.<anonymous>.<anonymous>.<anonymous>' call
           var value = AppEntry$lambda$slambda_0(colorMode, null);
-          $composer_0.r1f(value);
+          $composer_0.t1f(value);
           tmp_0 = value;
         } else {
           tmp_0 = it;
         }
         var tmp_1 = tmp_0;
         var tmp0_group = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-        $composer_0.i1e();
+        $composer_0.k1e();
         LaunchedEffect(colorMode, tmp0_group, $composer_0, 64);
-        var tmp_2 = scrollBehavior(minHeight(toModifier(get_SmoothColorStyle(), [], $composer_0, 64), get_vh(100)), Companion_instance_1.i2m());
+        var tmp_2 = scrollBehavior(minHeight(toModifier(get_SmoothColorStyle(), [], $composer_0, 64), get_vh(100)), Companion_instance_1.k2m());
         // Inline function 'kotlin.run' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'com.canerture.androidhub.AppEntry.<anonymous>.<anonymous>.<anonymous>' call
@@ -2633,26 +2736,26 @@
         var dispatchReceiver = composableLambda(tmp_3, -1381754019, true, AppEntry$lambda$lambda($content));
         // Inline function 'androidx.compose.runtime.remember' call
         var $composer_1 = $composer_0;
-        $composer_1.h1e(1157296644);
+        $composer_1.j1e(1157296644);
         sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
         // Inline function 'androidx.compose.runtime.cache' call
-        var invalid_0 = $composer_1.a16(dispatchReceiver);
+        var invalid_0 = $composer_1.c16(dispatchReceiver);
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-        var it_0 = $composer_1.l1f();
+        var it_0 = $composer_1.n1f();
         var tmp_4;
-        if (invalid_0 ? true : it_0 === Companion_getInstance().z18_1) {
+        if (invalid_0 ? true : it_0 === Companion_getInstance().b19_1) {
           // Inline function 'com.canerture.androidhub.AppEntry.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
           var value_0 = ComposableLambda$invoke$ref_75(dispatchReceiver);
-          $composer_1.r1f(value_0);
+          $composer_1.t1f(value_0);
           tmp_4 = value_0;
         } else {
           tmp_4 = it_0;
         }
         var tmp_5 = tmp_4;
         var tmp0 = (tmp_5 == null ? true : !(tmp_5 == null)) ? tmp_5 : THROW_CCE();
-        $composer_1.i1e();
+        $composer_1.k1e();
         Surface(tmp_2, null, null, null, null, tmp0, $composer_0, 196616, 30);
         var tmp_6;
         if (isTraceInProgress()) {
@@ -2661,7 +2764,7 @@
         }
         tmp = tmp_6;
       } else {
-        $composer_0.t18();
+        $composer_0.v18();
         tmp = Unit_instance;
       }
       return Unit_instance;
@@ -2669,7 +2772,7 @@
   }
   function ComposableLambda$invoke$ref_76($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function AppEntry$lambda_0($content, $$changed) {
@@ -2680,29 +2783,29 @@
   }
   function get_HeadlineTextStyle() {
     _init_properties_AppStyles_kt__9fg0zz();
-    return HeadlineTextStyle$delegate.x2m(null, HeadlineTextStyle$factory());
+    return HeadlineTextStyle$delegate.z2m(null, HeadlineTextStyle$factory());
   }
   var HeadlineTextStyle$delegate;
   function get_SubheadlineTextStyle() {
     _init_properties_AppStyles_kt__9fg0zz();
-    return SubheadlineTextStyle$delegate.x2m(null, SubheadlineTextStyle$factory());
+    return SubheadlineTextStyle$delegate.z2m(null, SubheadlineTextStyle$factory());
   }
   var SubheadlineTextStyle$delegate;
   function get_CircleButtonVariant() {
     _init_properties_AppStyles_kt__9fg0zz();
-    return CircleButtonVariant$delegate.x2m(null, CircleButtonVariant$factory());
+    return CircleButtonVariant$delegate.z2m(null, CircleButtonVariant$factory());
   }
   var CircleButtonVariant$delegate;
   function get_UncoloredButtonVariant() {
     _init_properties_AppStyles_kt__9fg0zz();
-    return UncoloredButtonVariant$delegate.x2m(null, UncoloredButtonVariant$factory());
+    return UncoloredButtonVariant$delegate.z2m(null, UncoloredButtonVariant$factory());
   }
   var UncoloredButtonVariant$delegate;
   function initSiteStyles(ctx) {
     _init_properties_AppStyles_kt__9fg0zz();
-    registerStyleBase(ctx.x3n_1, 'body', VOID, initSiteStyles$lambda);
+    registerStyleBase(ctx.x3o_1, 'body', VOID, initSiteStyles$lambda);
     var tmp = get_HorizontalDividerStyle();
-    modifyComponentStyleBase(ctx.y3n_1, tmp, VOID, initSiteStyles$lambda_0);
+    modifyComponentStyleBase(ctx.y3o_1, tmp, VOID, initSiteStyles$lambda_0);
   }
   function getHeadlineFontSize(breakpoint) {
     _init_properties_AppStyles_kt__9fg0zz();
@@ -2756,11 +2859,11 @@
   }
   function HeadlineTextStyle$delegate$lambda($this$base) {
     _init_properties_AppStyles_kt__9fg0zz();
-    return textAlign(fontWeight(fontSize(Companion_instance_2, get_cssRem(2)), 700), Companion_instance_3.s2j());
+    return textAlign(fontWeight(fontSize(Companion_instance_2, get_cssRem(2)), 700), Companion_instance_3.u2j());
   }
   function SubheadlineTextStyle$delegate$lambda($this$base) {
     _init_properties_AppStyles_kt__9fg0zz();
-    return color(textAlign(Companion_instance_2, Companion_instance_3.s2j()), getSitePalette().c45_1.f3i());
+    return color(textAlign(Companion_instance_2, Companion_instance_3.u2j()), getSitePalette().e46_1.f3j());
   }
   function CircleButtonVariant$delegate$lambda($this$addVariantBase) {
     _init_properties_AppStyles_kt__9fg0zz();
@@ -2768,7 +2871,7 @@
   }
   function UncoloredButtonVariant$delegate$lambda($this$addVariantBase) {
     _init_properties_AppStyles_kt__9fg0zz();
-    return setVariable(Companion_instance_2, ButtonVars_getInstance().v3s(), Colors_instance.i3i());
+    return setVariable(Companion_instance_2, ButtonVars_getInstance().v3t(), Colors_instance.i3j());
   }
   function initSiteStyles$lambda() {
     _init_properties_AppStyles_kt__9fg0zz();
@@ -2813,14 +2916,14 @@
     }
   }
   function SitePalette(nearBackground, green, white, blue) {
-    this.z44_1 = nearBackground;
-    this.a45_1 = green;
-    this.b45_1 = white;
-    this.c45_1 = blue;
+    this.b46_1 = nearBackground;
+    this.c46_1 = green;
+    this.d46_1 = white;
+    this.e46_1 = blue;
   }
   function SitePalettes() {
     SitePalettes_instance = this;
-    this.d45_1 = new SitePalette(Colors_instance.u3i(), Companion_instance_5.g3i(4053894), Colors_instance.u3i(), Companion_instance_5.g3i(601922));
+    this.f46_1 = new SitePalette(Colors_instance.u3j(), Companion_instance_5.g3j(4053894), Colors_instance.u3j(), Companion_instance_5.g3j(601922));
   }
   var SitePalettes_instance;
   function SitePalettes_getInstance() {
@@ -2829,27 +2932,27 @@
     return SitePalettes_instance;
   }
   function getSitePalette() {
-    return SitePalettes_getInstance().d45_1;
+    return SitePalettes_getInstance().f46_1;
   }
   function initTheme(ctx) {
-    set_background(ctx.y3n_1.f3o_1.p3q_1, Companion_instance_5.g3i(16447743));
-    set_color(ctx.y3n_1.f3o_1.p3q_1, Colors_instance.u3i());
+    set_background(ctx.y3o_1.f3p_1.p3r_1, Companion_instance_5.g3j(16447743));
+    set_color(ctx.y3o_1.f3p_1.p3r_1, Colors_instance.u3j());
   }
   function get_MarkdownStyle() {
     _init_properties_MarkdownLayout_kt__1k3pk7();
-    return MarkdownStyle$delegate.x2m(null, MarkdownStyle$factory());
+    return MarkdownStyle$delegate.z2m(null, MarkdownStyle$factory());
   }
   var MarkdownStyle$delegate;
   function MarkdownLayout(title, content, $composer, $changed) {
     _init_properties_MarkdownLayout_kt__1k3pk7();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(1489817358);
+    $composer_0 = $composer_0.b1g(1489817358);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.a16(title) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.c16(title) ? 4 : 2);
     if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.c1f(content) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(content) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1489817358, $dirty, -1, 'com.canerture.androidhub.components.layouts.MarkdownLayout (MarkdownLayout.kt:91)');
       }
@@ -2860,52 +2963,52 @@
       var dispatchReceiver = composableLambda(tmp, -1316703803, true, MarkdownLayout$lambda(content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_0;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.MarkdownLayout.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_78(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_0 = value;
       } else {
         tmp_0 = it;
       }
       var tmp_1 = tmp_0;
       var tmp0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       PageLayout(title, tmp0, $composer_0, 48 | 14 & $dirty);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(MarkdownLayout$lambda_0(title, content, $changed));
+      tmp0_safe_receiver.y1k(MarkdownLayout$lambda_0(title, content, $changed));
     }
   }
   function MarkdownStyle$delegate$lambda($this$ComponentStyle) {
     _init_properties_MarkdownLayout_kt__1k3pk7();
-    $this$ComponentStyle.i3l('h1', MarkdownStyle$delegate$lambda$lambda);
-    $this$ComponentStyle.i3l('h2', MarkdownStyle$delegate$lambda$lambda_0);
-    $this$ComponentStyle.i3l('h3', MarkdownStyle$delegate$lambda$lambda_1);
-    $this$ComponentStyle.i3l('h4', MarkdownStyle$delegate$lambda$lambda_2);
-    $this$ComponentStyle.i3l('p', MarkdownStyle$delegate$lambda$lambda_3);
-    $this$ComponentStyle.i3l('ul', MarkdownStyle$delegate$lambda$lambda_4);
-    $this$ComponentStyle.i3l('li,ol,ul', MarkdownStyle$delegate$lambda$lambda_5);
-    $this$ComponentStyle.i3l('code', MarkdownStyle$delegate$lambda$lambda_6($this$ComponentStyle));
-    $this$ComponentStyle.i3l('pre', MarkdownStyle$delegate$lambda$lambda_7);
-    $this$ComponentStyle.i3l('pre > code', MarkdownStyle$delegate$lambda$lambda_8($this$ComponentStyle));
+    $this$ComponentStyle.i3m('h1', MarkdownStyle$delegate$lambda$lambda);
+    $this$ComponentStyle.i3m('h2', MarkdownStyle$delegate$lambda$lambda_0);
+    $this$ComponentStyle.i3m('h3', MarkdownStyle$delegate$lambda$lambda_1);
+    $this$ComponentStyle.i3m('h4', MarkdownStyle$delegate$lambda$lambda_2);
+    $this$ComponentStyle.i3m('p', MarkdownStyle$delegate$lambda$lambda_3);
+    $this$ComponentStyle.i3m('ul', MarkdownStyle$delegate$lambda$lambda_4);
+    $this$ComponentStyle.i3m('li,ol,ul', MarkdownStyle$delegate$lambda$lambda_5);
+    $this$ComponentStyle.i3m('code', MarkdownStyle$delegate$lambda$lambda_6($this$ComponentStyle));
+    $this$ComponentStyle.i3m('pre', MarkdownStyle$delegate$lambda$lambda_7);
+    $this$ComponentStyle.i3m('pre > code', MarkdownStyle$delegate$lambda$lambda_8($this$ComponentStyle));
     return Unit_instance;
   }
   function MarkdownStyle$delegate$lambda$lambda() {
@@ -2922,7 +3025,7 @@
   }
   function MarkdownStyle$delegate$lambda$lambda_2() {
     _init_properties_MarkdownLayout_kt__1k3pk7();
-    return margin(fontWeight_0(fontSize(Companion_instance_2, get_cssRem(1.2)), Companion_instance_6.s2k()), get_cssRem(1), VOID, get_cssRem(0.5));
+    return margin(fontWeight_0(fontSize(Companion_instance_2, get_cssRem(1.2)), Companion_instance_6.u2k()), get_cssRem(1), VOID, get_cssRem(0.5));
   }
   function MarkdownStyle$delegate$lambda$lambda_3() {
     _init_properties_MarkdownLayout_kt__1k3pk7();
@@ -2930,7 +3033,7 @@
   }
   function MarkdownStyle$delegate$lambda$lambda_4() {
     _init_properties_MarkdownLayout_kt__1k3pk7();
-    return overflowWrap(fillMaxWidth(Companion_instance_2), Companion_instance_7.g2m());
+    return overflowWrap(fillMaxWidth(Companion_instance_2), Companion_instance_7.i2m());
   }
   function MarkdownStyle$delegate$lambda$lambda_5() {
     _init_properties_MarkdownLayout_kt__1k3pk7();
@@ -2938,7 +3041,7 @@
   }
   function MarkdownStyle$delegate$lambda$lambda_6($this_ComponentStyle) {
     return function () {
-      return fontWeight_0(color(Companion_instance_2, get_color(toPalette($this_ComponentStyle.e3l_1)).f3i().e3i(VOID, VOID, VOID, 0.8)), Companion_instance_6.s2k());
+      return fontWeight_0(color(Companion_instance_2, get_color(toPalette($this_ComponentStyle.e3m_1)).f3j().e3j(VOID, VOID, VOID, 0.8)), Companion_instance_6.u2k());
     };
   }
   function MarkdownStyle$delegate$lambda$lambda_7() {
@@ -2947,7 +3050,7 @@
   }
   function MarkdownStyle$delegate$lambda$lambda$lambda($this$overflow) {
     _init_properties_MarkdownLayout_kt__1k3pk7();
-    $this$overflow.b3j(Companion_instance_8.e2m());
+    $this$overflow.b3k(Companion_instance_8.g2m());
     return Unit_instance;
   }
   function MarkdownStyle$delegate$lambda$lambda_8($this_ComponentStyle) {
@@ -2957,13 +3060,13 @@
       // Inline function 'org.jetbrains.compose.web.css.DisplayStyle' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp_0 = backgroundColor(fillMaxWidth(display(tmp, 'block')), getSitePalette().z44_1);
+      var tmp_0 = backgroundColor(fillMaxWidth(display(tmp, 'block')), getSitePalette().b46_1);
       var tmp_1 = get_px(1);
       // Inline function 'org.jetbrains.compose.web.css.Companion.Solid' call
       // Inline function 'org.jetbrains.compose.web.css.LineStyle' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp_2 = fontSize(padding(borderRadius(border(tmp_0, tmp_1, 'solid', get_color(toPalette($this_ComponentStyle.e3l_1))), get_cssRem(0.25)), get_cssRem(0.5)), get_cssRem(1));
+      var tmp_2 = fontSize(padding(borderRadius(border(tmp_0, tmp_1, 'solid', get_color(toPalette($this_ComponentStyle.e3m_1))), get_cssRem(0.25)), get_cssRem(0.5)), get_cssRem(1));
       return overflow(tmp_2, MarkdownStyle$delegate$lambda$lambda$lambda);
     };
   }
@@ -2984,7 +3087,7 @@
   }
   function ComposableLambda$invoke$ref_77($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function MarkdownLayout$lambda($content) {
@@ -3002,26 +3105,26 @@
       var dispatchReceiver = composableLambda(tmp_1, -805280196, true, MarkdownLayout$lambda$lambda($content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_2;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.MarkdownLayout.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_77(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_2 = value;
       } else {
         tmp_2 = it;
       }
       var tmp_3 = tmp_2;
       var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Column(tmp, null, tmp_0, null, tmp0, $composer_0, 24584, 10);
       var tmp_4;
       if (isTraceInProgress()) {
@@ -3033,7 +3136,7 @@
   }
   function ComposableLambda$invoke$ref_78($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function MarkdownLayout$lambda_0($title, $content, $$changed) {
@@ -3056,63 +3159,63 @@
   }
   function get_PageContentStyle() {
     _init_properties_PageLayout_kt__pf69s7();
-    return PageContentStyle$delegate.x2m(null, PageContentStyle$factory());
+    return PageContentStyle$delegate.z2m(null, PageContentStyle$factory());
   }
   var PageContentStyle$delegate;
   function PageLayout(title, content, $composer, $changed) {
     _init_properties_PageLayout_kt__pf69s7();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(928443343);
+    $composer_0 = $composer_0.b1g(928443343);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.a16(title) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.c16(title) ? 4 : 2);
     if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.c1f(content) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(content) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(928443343, $dirty, -1, 'com.canerture.androidhub.components.layouts.PageLayout (PageLayout.kt:32)');
       }
-      $composer_0.h1e(-408735861);
+      $composer_0.j1e(-408735861);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       var invalid = ($dirty & 14) === 4;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.l1f();
+      var it = this_0.n1f();
       var tmp;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.PageLayout.<anonymous>' call
         var value = PageLayout$slambda_0(title, null);
-        this_0.r1f(value);
+        this_0.t1f(value);
         tmp = value;
       } else {
         tmp = it;
       }
       var tmp_0 = tmp;
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       LaunchedEffect(title, tmp0_group, $composer_0, 64 | 14 & $dirty);
       var tmp_1 = minHeight(fillMaxWidth(Companion_instance_2), get_percent(100));
-      $composer_0.h1e(-408735685);
+      $composer_0.j1e(-408735685);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_1 = $composer_0;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = this_1.l1f();
+      var it_0 = this_1.n1f();
       var tmp_2;
-      if (false ? true : it_0 === Companion_getInstance().z18_1) {
+      if (false ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.PageLayout.<anonymous>' call
         var value_0 = PageLayout$lambda;
-        this_1.r1f(value_0);
+        this_1.t1f(value_0);
         tmp_2 = value_0;
       } else {
         tmp_2 = it_0;
       }
       var tmp_3 = tmp_2;
       var tmp1_group = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       var tmp_4 = gridTemplateRows(tmp_1, tmp1_group);
       var tmp_5 = Center_instance;
       // Inline function 'kotlin.run' call
@@ -3122,45 +3225,45 @@
       var dispatchReceiver = composableLambda(tmp_6, -885316011, true, PageLayout$lambda_0(content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid_0 = $composer_1.a16(dispatchReceiver);
+      var invalid_0 = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_1 = $composer_1.l1f();
+      var it_1 = $composer_1.n1f();
       var tmp_7;
-      if (invalid_0 ? true : it_1 === Companion_getInstance().z18_1) {
+      if (invalid_0 ? true : it_1 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.PageLayout.<anonymous>.<anonymous>' call
         var value_1 = ComposableLambda$invoke$ref_81(dispatchReceiver);
-        $composer_1.r1f(value_1);
+        $composer_1.t1f(value_1);
         tmp_7 = value_1;
       } else {
         tmp_7 = it_1;
       }
       var tmp_8 = tmp_7;
       var tmp0 = (tmp_8 == null ? true : !(tmp_8 == null)) ? tmp_8 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Box(tmp_4, tmp_5, null, tmp0, $composer_0, 3080, 4);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp2_safe_receiver = $composer_0.a1g();
+    var tmp2_safe_receiver = $composer_0.c1g();
     if (tmp2_safe_receiver == null)
       null;
     else {
-      tmp2_safe_receiver.w1k(PageLayout$lambda_1(title, content, $changed));
+      tmp2_safe_receiver.y1k(PageLayout$lambda_1(title, content, $changed));
     }
   }
   function PageContentStyle$delegate$lambda($this$ComponentStyle) {
     _init_properties_PageLayout_kt__pf69s7();
-    $this$ComponentStyle.g3l(PageContentStyle$delegate$lambda$lambda);
+    $this$ComponentStyle.g3m(PageContentStyle$delegate$lambda$lambda);
     var tmp = Breakpoint_MD_getInstance();
-    $this$ComponentStyle.b3k(tmp, PageContentStyle$delegate$lambda$lambda_0);
+    $this$ComponentStyle.b3l(tmp, PageContentStyle$delegate$lambda$lambda_0);
     return Unit_instance;
   }
   function PageContentStyle$delegate$lambda$lambda() {
@@ -3175,7 +3278,7 @@
     return maxWidth(Companion_instance_2, get_cssRem(70));
   }
   function PageLayout$slambda($title, resultContinuation) {
-    this.m45_1 = $title;
+    this.o46_1 = $title;
     CoroutineImpl.call(this, resultContinuation);
   }
   protoOf(PageLayout$slambda).az = function ($this$LaunchedEffect, $completion) {
@@ -3194,7 +3297,7 @@
         var tmp = this.ad_1;
         if (tmp === 0) {
           this.bd_1 = 1;
-          document.title = 'AndroidHub - ' + this.m45_1;
+          document.title = 'AndroidHub - ' + this.o46_1;
           return Unit_instance;
         } else if (tmp === 1) {
           throw this.dd_1;
@@ -3206,8 +3309,8 @@
      while (true);
   };
   protoOf(PageLayout$slambda).bz = function ($this$LaunchedEffect, completion) {
-    var i = new PageLayout$slambda(this.m45_1, completion);
-    i.n45_1 = $this$LaunchedEffect;
+    var i = new PageLayout$slambda(this.o46_1, completion);
+    i.p46_1 = $this$LaunchedEffect;
     return i;
   };
   function PageLayout$slambda_0($title, resultContinuation) {
@@ -3220,8 +3323,8 @@
   }
   function PageLayout$lambda($this$gridTemplateRows) {
     _init_properties_PageLayout_kt__pf69s7();
-    $this$gridTemplateRows.a2l(get_fr(1));
-    $this$gridTemplateRows.z2k($this$gridTemplateRows.y2k());
+    $this$gridTemplateRows.c2l(get_fr(1));
+    $this$gridTemplateRows.b2l($this$gridTemplateRows.a2l());
     return Unit_instance;
   }
   function PageLayout$lambda$lambda$lambda($content) {
@@ -3241,7 +3344,7 @@
   }
   function ComposableLambda$invoke$ref_79($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function PageLayout$lambda$lambda($content) {
@@ -3260,26 +3363,26 @@
       var dispatchReceiver = composableLambda(tmp_1, -1846496957, true, PageLayout$lambda$lambda$lambda($content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_2;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.PageLayout.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_79(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_2 = value;
       } else {
         tmp_2 = it;
       }
       var tmp_3 = tmp_2;
       var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Column(tmp, null, tmp_0, null, tmp0, $composer_0, 24584, 10);
       Footer(gridRow(fillMaxWidth(Companion_instance_2), 2), $composer_0, 8, 0);
       var tmp_4;
@@ -3292,7 +3395,7 @@
   }
   function ComposableLambda$invoke$ref_80($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function PageLayout$lambda_0($content) {
@@ -3310,26 +3413,26 @@
       var dispatchReceiver = composableLambda(tmp_1, -1667179892, true, PageLayout$lambda$lambda($content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_2;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.PageLayout.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_80(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_2 = value;
       } else {
         tmp_2 = it;
       }
       var tmp_3 = tmp_2;
       var tmp0 = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Column(tmp, null, tmp_0, null, tmp0, $composer_0, 24584, 10);
       var tmp_4;
       if (isTraceInProgress()) {
@@ -3341,7 +3444,7 @@
   }
   function ComposableLambda$invoke$ref_81($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function PageLayout$lambda_1($title, $content, $$changed) {
@@ -3364,109 +3467,109 @@
   }
   function get_PostPageContentStyle() {
     _init_properties_PostPageLayout_kt__nbcuux();
-    return PostPageContentStyle$delegate.x2m(null, PostPageContentStyle$factory());
+    return PostPageContentStyle$delegate.z2m(null, PostPageContentStyle$factory());
   }
   var PostPageContentStyle$delegate;
   function PostPageLayout(title, $composer, $changed) {
     _init_properties_PostPageLayout_kt__nbcuux();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-991946174);
+    $composer_0 = $composer_0.b1g(-991946174);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.a16(title) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.c16(title) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-991946174, $dirty, -1, 'com.canerture.androidhub.components.layouts.PostPageLayout (PostPageLayout.kt:50)');
       }
-      $composer_0.h1e(-451652190);
+      $composer_0.j1e(-451652190);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       var invalid = ($dirty & 14) === 4;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.l1f();
+      var it = this_0.n1f();
       var tmp;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.PostPageLayout.<anonymous>' call
         var value = PostPageLayout$slambda_0(title, null);
-        this_0.r1f(value);
+        this_0.t1f(value);
         tmp = value;
       } else {
         tmp = it;
       }
       var tmp_0 = tmp;
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       LaunchedEffect(title, tmp0_group, $composer_0, 64 | 14 & $dirty);
       var tmp_1 = minHeight(fillMaxWidth(Companion_instance_2), get_percent(100));
-      $composer_0.h1e(-451652030);
+      $composer_0.j1e(-451652030);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_1 = $composer_0;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = this_1.l1f();
+      var it_0 = this_1.n1f();
       var tmp_2;
-      if (false ? true : it_0 === Companion_getInstance().z18_1) {
+      if (false ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.PostPageLayout.<anonymous>' call
         var value_0 = PostPageLayout$lambda;
-        this_1.r1f(value_0);
+        this_1.t1f(value_0);
         tmp_2 = value_0;
       } else {
         tmp_2 = it_0;
       }
       var tmp_3 = tmp_2;
       var tmp1_group = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       var tmp_4 = gridTemplateRows(tmp_1, tmp1_group);
       var tmp_5 = Center_instance;
-      Box(tmp_4, tmp_5, null, ComposableSingletons$PostPageLayoutKt_getInstance().q45_1, $composer_0, 3080, 4);
+      Box(tmp_4, tmp_5, null, ComposableSingletons$PostPageLayoutKt_getInstance().s46_1, $composer_0, 3080, 4);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp2_safe_receiver = $composer_0.a1g();
+    var tmp2_safe_receiver = $composer_0.c1g();
     if (tmp2_safe_receiver == null)
       null;
     else {
-      tmp2_safe_receiver.w1k(PostPageLayout$lambda_0(title, $changed));
+      tmp2_safe_receiver.y1k(PostPageLayout$lambda_0(title, $changed));
     }
   }
   function LeftSide($composer, $changed) {
     _init_properties_PostPageLayout_kt__nbcuux();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-1745680564);
-    if (!($changed === 0) ? true : !$composer_0.c1e()) {
+    $composer_0 = $composer_0.b1g(-1745680564);
+    if (!($changed === 0) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-1745680564, $changed, -1, 'com.canerture.androidhub.components.layouts.LeftSide (PostPageLayout.kt:79)');
       }
-      Column(null, null, null, null, ComposableSingletons$PostPageLayoutKt_getInstance().s45_1, $composer_0, 24576, 15);
+      Column(null, null, null, null, ComposableSingletons$PostPageLayoutKt_getInstance().u46_1, $composer_0, 24576, 15);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(LeftSide$lambda($changed));
+      tmp0_safe_receiver.y1k(LeftSide$lambda($changed));
     }
   }
   function LeftSideItem(title, value, $composer, $changed) {
     _init_properties_PostPageLayout_kt__nbcuux();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-1322085805);
+    $composer_0 = $composer_0.b1g(-1322085805);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.a16(title) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.c16(title) ? 4 : 2);
     if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.a16(value) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.c16(value) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-1322085805, $dirty, -1, 'com.canerture.androidhub.components.layouts.LeftSideItem (PostPageLayout.kt:120)');
       }
@@ -3478,49 +3581,49 @@
       var dispatchReceiver = composableLambda(tmp_0, 903088112, true, LeftSideItem$lambda(title, value));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_1;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.layouts.LeftSideItem.<anonymous>.<anonymous>' call
         var value_0 = ComposableLambda$invoke$ref_88(dispatchReceiver);
-        $composer_1.r1f(value_0);
+        $composer_1.t1f(value_0);
         tmp_1 = value_0;
       } else {
         tmp_1 = it;
       }
       var tmp_2 = tmp_1;
       var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Row(tmp, null, null, null, tmp0, $composer_0, 24584, 14);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(LeftSideItem$lambda_0(title, value, $changed));
+      tmp0_safe_receiver.y1k(LeftSideItem$lambda_0(title, value, $changed));
     }
   }
   function RightSide($composer, $changed) {
     _init_properties_PostPageLayout_kt__nbcuux();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-1918674957);
-    if (!($changed === 0) ? true : !$composer_0.c1e()) {
+    $composer_0 = $composer_0.b1g(-1918674957);
+    if (!($changed === 0) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-1918674957, $changed, -1, 'com.canerture.androidhub.components.layouts.RightSide (PostPageLayout.kt:140)');
       }
-      var tmp = padding(borderRadius(backgroundColor(margin_1(fillMaxWidth(Companion_instance_2), VOID, VOID, VOID, get_cssRem(4)), getSitePalette().b45_1), get_cssRem(1)), get_cssRem(1));
+      var tmp = padding(borderRadius(backgroundColor(margin_1(fillMaxWidth(Companion_instance_2), VOID, VOID, VOID, get_cssRem(4)), getSitePalette().d46_1), get_cssRem(1)), get_cssRem(1));
       var tmp_0 = get_px(0);
       var tmp_1 = get_px(0);
       var tmp_2 = get_px(5);
@@ -3532,23 +3635,23 @@
       var tmp2_topBottom = get_cssRem(4);
       var tmp_4 = padding_1(tmp0_$receiver, tmp2_topBottom, tmp1_leftRight);
       var tmp_5 = CenterHorizontally_instance;
-      Column(tmp_4, null, tmp_5, null, ComposableSingletons$PostPageLayoutKt_getInstance().t45_1, $composer_0, 24584, 10);
+      Column(tmp_4, null, tmp_5, null, ComposableSingletons$PostPageLayoutKt_getInstance().v46_1, $composer_0, 24584, 10);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(RightSide$lambda($changed));
+      tmp0_safe_receiver.y1k(RightSide$lambda($changed));
     }
   }
   function ComposableLambda$invoke$ref_82($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$PostPageLayoutKt$lambda_1$lambda_ndl3pv($this$Row, $composer, $changed) {
@@ -3565,7 +3668,7 @@
   }
   function ComposableLambda$invoke$ref_83($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$PostPageLayoutKt$lambda_2$lambda_5g1dcc($this$Column, $composer, $changed) {
@@ -3575,7 +3678,7 @@
     }
     NavHeader($composer_0, 0);
     var tmp = gridRow(toModifier(get_PostPageContentStyle(), [], $composer_0, 64), 2);
-    Row(tmp, null, null, null, ComposableSingletons$PostPageLayoutKt_getInstance().o45_1, $composer_0, 24584, 14);
+    Row(tmp, null, null, null, ComposableSingletons$PostPageLayoutKt_getInstance().q46_1, $composer_0, 24584, 14);
     Footer(gridRow(fillMaxWidth(Companion_instance_2), 2), $composer_0, 8, 0);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -3584,7 +3687,7 @@
   }
   function ComposableLambda$invoke$ref_84($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$PostPageLayoutKt$lambda_3$lambda_y9nuej($this$Box, $composer, $changed) {
@@ -3594,7 +3697,7 @@
     }
     var tmp = gridRow(fillMaxSize(Companion_instance_2), 1);
     var tmp_0 = CenterHorizontally_instance;
-    Column(tmp, null, tmp_0, null, ComposableSingletons$PostPageLayoutKt_getInstance().p45_1, $composer_0, 24584, 10);
+    Column(tmp, null, tmp_0, null, ComposableSingletons$PostPageLayoutKt_getInstance().r46_1, $composer_0, 24584, 10);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -3602,7 +3705,7 @@
   }
   function ComposableLambda$invoke$ref_85($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$PostPageLayoutKt$lambda_4$lambda_7xtqie($this$Column, $composer, $changed) {
@@ -3621,7 +3724,7 @@
   }
   function ComposableLambda$invoke$ref_86($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$PostPageLayoutKt$lambda_5$lambda_kvsqjt($this$Column, $composer, $changed) {
@@ -3629,9 +3732,9 @@
     if (isTraceInProgress()) {
       traceEventStart(575078403, $changed, -1, 'com.canerture.androidhub.components.layouts.ComposableSingletons$PostPageLayoutKt.lambda-5.<anonymous> (PostPageLayout.kt:81)');
     }
-    var tmp = margin(color(fontWeight_0(Companion_instance_2, Companion_instance_6.r2k()), getSitePalette().c45_1), VOID, VOID, get_cssRem(1));
+    var tmp = margin(color(fontWeight_0(Companion_instance_2, Companion_instance_6.t2k()), getSitePalette().e46_1), VOID, VOID, get_cssRem(1));
     SpanText('Post Information', tmp, null, null, $composer_0, 70, 12);
-    var tmp_0 = borderRadius(backgroundColor(Companion_instance_2, getSitePalette().b45_1), get_cssRem(1));
+    var tmp_0 = borderRadius(backgroundColor(Companion_instance_2, getSitePalette().d46_1), get_cssRem(1));
     var tmp_1 = get_px(0);
     var tmp_2 = get_px(0);
     var tmp_3 = get_px(5);
@@ -3639,7 +3742,7 @@
     // Inline function 'org.jetbrains.compose.web.css.Color.lightgray' call
     var tmp$ret$0 = Color('lightgray');
     var tmp_5 = padding(boxShadow(tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp$ret$0), get_cssRem(2));
-    Column(tmp_5, null, null, null, ComposableSingletons$PostPageLayoutKt_getInstance().r45_1, $composer_0, 24584, 14);
+    Column(tmp_5, null, null, null, ComposableSingletons$PostPageLayoutKt_getInstance().t46_1, $composer_0, 24584, 14);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -3647,7 +3750,7 @@
   }
   function ComposableLambda$invoke$ref_87($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$PostPageLayoutKt$lambda_6$lambda_lboud4($this$Column, $composer, $changed) {
@@ -3655,16 +3758,16 @@
     if (isTraceInProgress()) {
       traceEventStart(1305376284, $changed, -1, 'com.canerture.androidhub.components.layouts.ComposableSingletons$PostPageLayoutKt.lambda-6.<anonymous> (PostPageLayout.kt:152)');
     }
-    var tmp0_$receiver = color(fontSize(fontWeight_0(textAlign(Companion_instance_2, Companion_instance_3.r2j()), Companion_instance_6.r2k()), get_px(32)), getSitePalette().c45_1);
+    var tmp0_$receiver = color(fontSize(fontWeight_0(textAlign(Companion_instance_2, Companion_instance_3.t2j()), Companion_instance_6.t2k()), get_px(32)), getSitePalette().e46_1);
     var tmp1_bottom = get_cssRem(1);
     var tmp2_leftRight = get_cssRem(12);
     var tmp = padding_0(tmp0_$receiver, VOID, tmp2_leftRight, tmp1_bottom);
     SpanText('Valorant App Compose Multiplatform', tmp, null, null, $composer_0, 70, 12);
-    var tmp_0 = color(fontSize(fontWeight_0(Companion_instance_2, Companion_instance_6.r2k()), get_px(12)), getSitePalette().c45_1);
+    var tmp_0 = color(fontSize(fontWeight_0(Companion_instance_2, Companion_instance_6.t2k()), get_px(12)), getSitePalette().e46_1);
     SpanText('Published: 2024-03-22', tmp_0, null, null, $composer_0, 70, 12);
     var tmp_1 = margin_0(toModifier(get_HorizontalDividerStyle(), [], $composer_0, 64), get_cssRem(3));
     HorizontalDivider(tmp_1, null, $composer_0, 8, 2);
-    var tmp_2 = color(fontSize(fontWeight_0(textAlign(Companion_instance_2, Companion_instance_3.r2j()), Companion_instance_6.p2k()), get_px(16)), getSitePalette().c45_1);
+    var tmp_2 = color(fontSize(fontWeight_0(textAlign(Companion_instance_2, Companion_instance_3.t2j()), Companion_instance_6.r2k()), get_px(16)), getSitePalette().e46_1);
     SpanText('Share Article:', tmp_2, null, null, $composer_0, 70, 12);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -3674,17 +3777,17 @@
   function ComposableSingletons$PostPageLayoutKt() {
     ComposableSingletons$PostPageLayoutKt_instance = this;
     var tmp = this;
-    tmp.o45_1 = ComposableLambda$invoke$ref_82(composableLambdaInstance(-1143543870, false, ComposableSingletons$PostPageLayoutKt$lambda_1$lambda_ndl3pv));
+    tmp.q46_1 = ComposableLambda$invoke$ref_82(composableLambdaInstance(-1143543870, false, ComposableSingletons$PostPageLayoutKt$lambda_1$lambda_ndl3pv));
     var tmp_0 = this;
-    tmp_0.p45_1 = ComposableLambda$invoke$ref_83(composableLambdaInstance(140547135, false, ComposableSingletons$PostPageLayoutKt$lambda_2$lambda_5g1dcc));
+    tmp_0.r46_1 = ComposableLambda$invoke$ref_83(composableLambdaInstance(140547135, false, ComposableSingletons$PostPageLayoutKt$lambda_2$lambda_5g1dcc));
     var tmp_1 = this;
-    tmp_1.q45_1 = ComposableLambda$invoke$ref_84(composableLambdaInstance(-1954726328, false, ComposableSingletons$PostPageLayoutKt$lambda_3$lambda_y9nuej));
+    tmp_1.s46_1 = ComposableLambda$invoke$ref_84(composableLambdaInstance(-1954726328, false, ComposableSingletons$PostPageLayoutKt$lambda_3$lambda_y9nuej));
     var tmp_2 = this;
-    tmp_2.r45_1 = ComposableLambda$invoke$ref_85(composableLambdaInstance(168024890, false, ComposableSingletons$PostPageLayoutKt$lambda_4$lambda_7xtqie));
+    tmp_2.t46_1 = ComposableLambda$invoke$ref_85(composableLambdaInstance(168024890, false, ComposableSingletons$PostPageLayoutKt$lambda_4$lambda_7xtqie));
     var tmp_3 = this;
-    tmp_3.s45_1 = ComposableLambda$invoke$ref_86(composableLambdaInstance(575078403, false, ComposableSingletons$PostPageLayoutKt$lambda_5$lambda_kvsqjt));
+    tmp_3.u46_1 = ComposableLambda$invoke$ref_86(composableLambdaInstance(575078403, false, ComposableSingletons$PostPageLayoutKt$lambda_5$lambda_kvsqjt));
     var tmp_4 = this;
-    tmp_4.t45_1 = ComposableLambda$invoke$ref_87(composableLambdaInstance(1305376284, false, ComposableSingletons$PostPageLayoutKt$lambda_6$lambda_lboud4));
+    tmp_4.v46_1 = ComposableLambda$invoke$ref_87(composableLambdaInstance(1305376284, false, ComposableSingletons$PostPageLayoutKt$lambda_6$lambda_lboud4));
   }
   var ComposableSingletons$PostPageLayoutKt_instance;
   function ComposableSingletons$PostPageLayoutKt_getInstance() {
@@ -3694,9 +3797,9 @@
   }
   function PostPageContentStyle$delegate$lambda($this$ComponentStyle) {
     _init_properties_PostPageLayout_kt__nbcuux();
-    $this$ComponentStyle.g3l(PostPageContentStyle$delegate$lambda$lambda);
+    $this$ComponentStyle.g3m(PostPageContentStyle$delegate$lambda$lambda);
     var tmp = Breakpoint_MD_getInstance();
-    $this$ComponentStyle.b3k(tmp, PostPageContentStyle$delegate$lambda$lambda_0);
+    $this$ComponentStyle.b3l(tmp, PostPageContentStyle$delegate$lambda$lambda_0);
     return Unit_instance;
   }
   function PostPageContentStyle$delegate$lambda$lambda() {
@@ -3711,7 +3814,7 @@
     return maxWidth(Companion_instance_2, get_cssRem(75));
   }
   function PostPageLayout$slambda($title, resultContinuation) {
-    this.c46_1 = $title;
+    this.e47_1 = $title;
     CoroutineImpl.call(this, resultContinuation);
   }
   protoOf(PostPageLayout$slambda).az = function ($this$LaunchedEffect, $completion) {
@@ -3730,7 +3833,7 @@
         var tmp = this.ad_1;
         if (tmp === 0) {
           this.bd_1 = 1;
-          document.title = this.c46_1;
+          document.title = this.e47_1;
           return Unit_instance;
         } else if (tmp === 1) {
           throw this.dd_1;
@@ -3742,8 +3845,8 @@
      while (true);
   };
   protoOf(PostPageLayout$slambda).bz = function ($this$LaunchedEffect, completion) {
-    var i = new PostPageLayout$slambda(this.c46_1, completion);
-    i.d46_1 = $this$LaunchedEffect;
+    var i = new PostPageLayout$slambda(this.e47_1, completion);
+    i.f47_1 = $this$LaunchedEffect;
     return i;
   };
   function PostPageLayout$slambda_0($title, resultContinuation) {
@@ -3756,8 +3859,8 @@
   }
   function PostPageLayout$lambda($this$gridTemplateRows) {
     _init_properties_PostPageLayout_kt__nbcuux();
-    $this$gridTemplateRows.a2l(get_fr(1));
-    $this$gridTemplateRows.z2k($this$gridTemplateRows.y2k());
+    $this$gridTemplateRows.c2l(get_fr(1));
+    $this$gridTemplateRows.b2l($this$gridTemplateRows.a2l());
     return Unit_instance;
   }
   function PostPageLayout$lambda_0($title, $$changed) {
@@ -3779,9 +3882,9 @@
         traceEventStart(903088112, $changed, -1, 'com.canerture.androidhub.components.layouts.LeftSideItem.<anonymous> (PostPageLayout.kt:125)');
       }
       var tmp = $title + ': ';
-      var tmp_0 = color(Companion_instance_2, getSitePalette().c45_1);
+      var tmp_0 = color(Companion_instance_2, getSitePalette().e46_1);
       SpanText(tmp, tmp_0, null, null, $composer_0, 64, 12);
-      var tmp_1 = fontWeight_0(color(Companion_instance_2, getSitePalette().c45_1), Companion_instance_6.o2k());
+      var tmp_1 = fontWeight_0(color(Companion_instance_2, getSitePalette().e46_1), Companion_instance_6.q2k());
       SpanText($value, tmp_1, null, null, $composer_0, 64, 12);
       var tmp_2;
       if (isTraceInProgress()) {
@@ -3793,7 +3896,7 @@
   }
   function ComposableLambda$invoke$ref_88($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function LeftSideItem$lambda_0($title, $value, $$changed) {
@@ -3822,43 +3925,43 @@
   }
   function get_FooterStyle() {
     _init_properties_Footer_kt__fc6p2z();
-    return FooterStyle$delegate.x2m(null, FooterStyle$factory());
+    return FooterStyle$delegate.z2m(null, FooterStyle$factory());
   }
   var FooterStyle$delegate;
   function Footer(modifier, $composer, $changed, $default) {
     _init_properties_Footer_kt__fc6p2z();
     var modifier_0 = {_v: modifier};
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(571317305);
+    $composer_0 = $composer_0.b1g(571317305);
     var $dirty = $changed;
     if (!(($default & 1) === 0))
       $dirty = $dirty | 2;
-    if (!(($default & 1) === 1) ? true : !(($dirty & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($default & 1) === 1) ? true : !(($dirty & 11) === 2) ? true : !$composer_0.e1e()) {
       if (!(($default & 1) === 0)) {
         modifier_0._v = Companion_instance_2;
       }
       if (isTraceInProgress()) {
         traceEventStart(571317305, $dirty, -1, 'com.canerture.androidhub.components.sections.Footer (Footer.kt:27)');
       }
-      var tmp = toModifier(get_FooterStyle(), [], $composer_0, 64).k3h(modifier_0._v);
+      var tmp = toModifier(get_FooterStyle(), [], $composer_0, 64).k3i(modifier_0._v);
       var tmp_0 = Center_instance;
-      Box(tmp, tmp_0, null, ComposableSingletons$FooterKt_getInstance().f46_1, $composer_0, 3080, 4);
+      Box(tmp, tmp_0, null, ComposableSingletons$FooterKt_getInstance().h47_1, $composer_0, 3080, 4);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(Footer$lambda(modifier_0, $changed, $default));
+      tmp0_safe_receiver.y1k(Footer$lambda(modifier_0, $changed, $default));
     }
   }
   function ComposableLambda$invoke$ref_89($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$FooterKt$lambda_1$lambda_a73781($this$Span, $composer, $changed) {
@@ -3866,7 +3969,7 @@
     if (isTraceInProgress()) {
       traceEventStart(-1858395691, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$FooterKt.lambda-1.<anonymous> (Footer.kt:30)');
     }
-    var tmp = color(Companion_instance_2, getSitePalette().a45_1);
+    var tmp = color(Companion_instance_2, getSitePalette().c46_1);
     SpanText('2024 - Caner Ture', tmp, null, null, $composer_0, 70, 12);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -3875,7 +3978,7 @@
   }
   function ComposableLambda$invoke$ref_90($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$FooterKt$lambda_2$lambda_imj9u6($this$Box, $composer, $changed) {
@@ -3883,7 +3986,7 @@
     if (isTraceInProgress()) {
       traceEventStart(-284662157, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$FooterKt.lambda-2.<anonymous> (Footer.kt:29)');
     }
-    Span(toAttrs(textAlign(Companion_instance_2, Companion_instance_3.r2j())), ComposableSingletons$FooterKt_getInstance().e46_1, $composer_0, 48, 0);
+    Span(toAttrs(textAlign(Companion_instance_2, Companion_instance_3.t2j())), ComposableSingletons$FooterKt_getInstance().g47_1, $composer_0, 48, 0);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -3892,9 +3995,9 @@
   function ComposableSingletons$FooterKt() {
     ComposableSingletons$FooterKt_instance = this;
     var tmp = this;
-    tmp.e46_1 = ComposableLambda$invoke$ref_89(composableLambdaInstance(-1858395691, false, ComposableSingletons$FooterKt$lambda_1$lambda_a73781));
+    tmp.g47_1 = ComposableLambda$invoke$ref_89(composableLambdaInstance(-1858395691, false, ComposableSingletons$FooterKt$lambda_1$lambda_a73781));
     var tmp_0 = this;
-    tmp_0.f46_1 = ComposableLambda$invoke$ref_90(composableLambdaInstance(-284662157, false, ComposableSingletons$FooterKt$lambda_2$lambda_imj9u6));
+    tmp_0.h47_1 = ComposableLambda$invoke$ref_90(composableLambdaInstance(-284662157, false, ComposableSingletons$FooterKt$lambda_2$lambda_imj9u6));
   }
   var ComposableSingletons$FooterKt_instance;
   function ComposableSingletons$FooterKt_getInstance() {
@@ -3927,24 +4030,24 @@
   }
   function get_NavHeaderStyle() {
     _init_properties_NavHeader_kt__vdotjy();
-    return NavHeaderStyle$delegate.x2m(null, NavHeaderStyle$factory());
+    return NavHeaderStyle$delegate.z2m(null, NavHeaderStyle$factory());
   }
   var NavHeaderStyle$delegate;
   function get_SideMenuSlideInAnim() {
     _init_properties_NavHeader_kt__vdotjy();
-    return SideMenuSlideInAnim$delegate.x2m(null, SideMenuSlideInAnim$factory());
+    return SideMenuSlideInAnim$delegate.z2m(null, SideMenuSlideInAnim$factory());
   }
   var SideMenuSlideInAnim$delegate;
   function NavLink(path, text, $composer, $changed) {
     _init_properties_NavHeader_kt__vdotjy();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(844555591);
+    $composer_0 = $composer_0.b1g(844555591);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.a16(path) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.c16(path) ? 4 : 2);
     if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.a16(text) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.c16(text) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(844555591, $dirty, -1, 'com.canerture.androidhub.components.sections.NavLink (NavHeader.kt:71)');
       }
@@ -3959,20 +4062,20 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(NavLink$lambda(path, text, $changed));
+      tmp0_safe_receiver.y1k(NavLink$lambda(path, text, $changed));
     }
   }
   function MenuItems($composer, $changed) {
     _init_properties_NavHeader_kt__vdotjy();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-1327933143);
-    if (!($changed === 0) ? true : !$composer_0.c1e()) {
+    $composer_0 = $composer_0.b1g(-1327933143);
+    if (!($changed === 0) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-1327933143, $changed, -1, 'com.canerture.androidhub.components.sections.MenuItems (NavHeader.kt:81)');
       }
@@ -3986,88 +4089,88 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(MenuItems$lambda($changed));
+      tmp0_safe_receiver.y1k(MenuItems$lambda($changed));
     }
   }
   function HamburgerButton(onClick, $composer, $changed) {
     _init_properties_NavHeader_kt__vdotjy();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(1913630033);
+    $composer_0 = $composer_0.b1g(1913630033);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.c1f(onClick) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(onClick) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1913630033, $dirty, -1, 'com.canerture.androidhub.components.sections.HamburgerButton (NavHeader.kt:91)');
       }
-      IconButton(onClick, ComposableSingletons$NavHeaderKt_getInstance().g46_1, $composer_0, 48 | 14 & $dirty);
+      IconButton(onClick, ComposableSingletons$NavHeaderKt_getInstance().i47_1, $composer_0, 48 | 14 & $dirty);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(HamburgerButton$lambda(onClick, $changed));
+      tmp0_safe_receiver.y1k(HamburgerButton$lambda(onClick, $changed));
     }
   }
   function CloseButton(onClick, $composer, $changed) {
     _init_properties_NavHeader_kt__vdotjy();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(1136291648);
+    $composer_0 = $composer_0.b1g(1136291648);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.c1f(onClick) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(onClick) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1136291648, $dirty, -1, 'com.canerture.androidhub.components.sections.CloseButton (NavHeader.kt:98)');
       }
-      IconButton(onClick, ComposableSingletons$NavHeaderKt_getInstance().h46_1, $composer_0, 48 | 14 & $dirty);
+      IconButton(onClick, ComposableSingletons$NavHeaderKt_getInstance().j47_1, $composer_0, 48 | 14 & $dirty);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(CloseButton$lambda(onClick, $changed));
+      tmp0_safe_receiver.y1k(CloseButton$lambda(onClick, $changed));
     }
   }
   function SearchButton(onClick, $composer, $changed) {
     _init_properties_NavHeader_kt__vdotjy();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-32044788);
+    $composer_0 = $composer_0.b1g(-32044788);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.c1f(onClick) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(onClick) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-32044788, $dirty, -1, 'com.canerture.androidhub.components.sections.SearchButton (NavHeader.kt:105)');
       }
-      IconButton(onClick, ComposableSingletons$NavHeaderKt_getInstance().j46_1, $composer_0, 48 | 14 & $dirty);
+      IconButton(onClick, ComposableSingletons$NavHeaderKt_getInstance().l47_1, $composer_0, 48 | 14 & $dirty);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(SearchButton$lambda(onClick, $changed));
+      tmp0_safe_receiver.y1k(SearchButton$lambda(onClick, $changed));
     }
   }
   var SideMenuState_CLOSED_instance;
@@ -4085,7 +4188,7 @@
   function SideMenuState(name, ordinal) {
     Enum.call(this, name, ordinal);
   }
-  protoOf(SideMenuState).p46 = function () {
+  protoOf(SideMenuState).r47 = function () {
     var tmp;
     switch (this.ta_1) {
       case 0:
@@ -4106,30 +4209,30 @@
   function NavHeader($composer, $changed) {
     _init_properties_NavHeader_kt__vdotjy();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-1108811238);
-    if (!($changed === 0) ? true : !$composer_0.c1e()) {
+    $composer_0 = $composer_0.b1g(-1108811238);
+    if (!($changed === 0) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-1108811238, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader (NavHeader.kt:146)');
       }
-      $composer_0.h1e(-1812890251);
+      $composer_0.j1e(-1812890251);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.l1f();
+      var it = this_0.n1f();
       var tmp;
-      if (false ? true : it === Companion_getInstance().z18_1) {
+      if (false ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>' call
         var value = mutableStateOf(SideMenuState_CLOSED_getInstance());
-        this_0.r1f(value);
+        this_0.t1f(value);
         tmp = value;
       } else {
         tmp = it;
       }
       var tmp_0 = tmp;
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       var menuState$delegate = tmp0_group;
       var breakpoint = rememberBreakpoint($composer_0, 0);
       var tmp_1;
@@ -4162,78 +4265,78 @@
       var dispatchReceiver = composableLambda(tmp_2, -872052681, true, NavHeader$lambda_1(breakpoint, logoWidth, menuState$delegate));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = $composer_1.l1f();
+      var it_0 = $composer_1.n1f();
       var tmp_3;
-      if (invalid ? true : it_0 === Companion_getInstance().z18_1) {
+      if (invalid ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous>' call
         var value_0 = ComposableLambda$invoke$ref_100(dispatchReceiver);
-        $composer_1.r1f(value_0);
+        $composer_1.t1f(value_0);
         tmp_3 = value_0;
       } else {
         tmp_3 = it_0;
       }
       var tmp_4 = tmp_3;
       var tmp0 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Row(tmp1_modifier, Center_instance_0, CenterVertically_instance, null, tmp0, $composer_0, 24584, 8);
       var tmp4_modifier = padding_0(fillMaxWidth(Companion_instance_2), get_cssRem(2), get_cssRem(3));
-      Row(tmp4_modifier, Center_instance_0, CenterVertically_instance, null, ComposableSingletons$NavHeaderKt_getInstance().l46_1, $composer_0, 24584, 8);
+      Row(tmp4_modifier, Center_instance_0, CenterVertically_instance, null, ComposableSingletons$NavHeaderKt_getInstance().n47_1, $composer_0, 24584, 8);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp1_safe_receiver = $composer_0.a1g();
+    var tmp1_safe_receiver = $composer_0.c1g();
     if (tmp1_safe_receiver == null)
       null;
     else {
-      tmp1_safe_receiver.w1k(NavHeader$lambda_2($changed));
+      tmp1_safe_receiver.y1k(NavHeader$lambda_2($changed));
     }
   }
   function SideMenu(menuState, close, onAnimationEnd, $composer, $changed) {
     _init_properties_NavHeader_kt__vdotjy();
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(1445021827);
+    $composer_0 = $composer_0.b1g(1445021827);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.a16(menuState) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.c16(menuState) ? 4 : 2);
     if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.c1f(close) ? 32 : 16);
+      $dirty = $dirty | ($composer_0.e1f(close) ? 32 : 16);
     if (($changed & 896) === 0)
-      $dirty = $dirty | ($composer_0.c1f(onAnimationEnd) ? 256 : 128);
-    if (!(($dirty & 731) === 146) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(onAnimationEnd) ? 256 : 128);
+    if (!(($dirty & 731) === 146) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1445021827, $dirty, -1, 'com.canerture.androidhub.components.sections.SideMenu (NavHeader.kt:206)');
       }
-      var tmp = setVariable(Companion_instance_2, OverlayVars_getInstance().g3s(), Colors_instance.i3i());
-      $composer_0.h1e(-760352966);
+      var tmp = setVariable(Companion_instance_2, OverlayVars_getInstance().g3t(), Colors_instance.i3j());
+      $composer_0.j1e(-760352966);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       var invalid = ($dirty & 112) === 32;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.l1f();
+      var it = this_0.n1f();
       var tmp_0;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>' call
         var value = SideMenu$lambda(close);
-        this_0.r1f(value);
+        this_0.t1f(value);
         tmp_0 = value;
       } else {
         tmp_0 = it;
       }
       var tmp_1 = tmp_0;
       var tmp0_group = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       var tmp_2 = onClick(tmp, tmp0_group);
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
@@ -4242,68 +4345,68 @@
       var dispatchReceiver = composableLambda(tmp_3, -36487783, true, SideMenu$lambda_0(menuState, onAnimationEnd, close));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid_0 = $composer_1.a16(dispatchReceiver);
+      var invalid_0 = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = $composer_1.l1f();
+      var it_0 = $composer_1.n1f();
       var tmp_4;
-      if (invalid_0 ? true : it_0 === Companion_getInstance().z18_1) {
+      if (invalid_0 ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>' call
         var value_0 = ComposableLambda$invoke$ref_102(dispatchReceiver);
-        $composer_1.r1f(value_0);
+        $composer_1.t1f(value_0);
         tmp_4 = value_0;
       } else {
         tmp_4 = it_0;
       }
       var tmp_5 = tmp_4;
       var tmp0 = (tmp_5 == null ? true : !(tmp_5 == null)) ? tmp_5 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Overlay(tmp_2, null, null, null, tmp0, $composer_0, 24584, 14);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp1_safe_receiver = $composer_0.a1g();
+    var tmp1_safe_receiver = $composer_0.c1g();
     if (tmp1_safe_receiver == null)
       null;
     else {
-      tmp1_safe_receiver.w1k(SideMenu$lambda_1(menuState, close, onAnimationEnd, $changed));
+      tmp1_safe_receiver.y1k(SideMenu$lambda_1(menuState, close, onAnimationEnd, $changed));
     }
   }
   function ComposableLambda$invoke$ref_91($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$NavHeaderKt$lambda_1$lambda_vv16hm($composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1563565610, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-1.<anonymous> (NavHeader.kt:93)');
       }
-      HamburgerIcon(color(Companion_instance_2, getSitePalette().c45_1), $composer_0, 8, 0);
+      HamburgerIcon(color(Companion_instance_2, getSitePalette().e46_1), $composer_0, 8, 0);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_92($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$NavHeaderKt$lambda_2$lambda_31epff($composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1424045209, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-2.<anonymous> (NavHeader.kt:100)');
       }
@@ -4312,13 +4415,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_93($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$NavHeaderKt$lambda_3$lambda_ps7rms($this$createIcon, $composer, $changed) {
@@ -4326,43 +4429,43 @@
     if (isTraceInProgress()) {
       traceEventStart(-1815233913, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-3.<anonymous> (NavHeader.kt:108)');
     }
-    $composer_0.h1e(-1342297626);
+    $composer_0.j1e(-1342297626);
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_0.l1f();
+    var it = $composer_0.n1f();
     var tmp;
-    if (false ? true : it === Companion_getInstance().z18_1) {
+    if (false ? true : it === Companion_getInstance().b19_1) {
       // Inline function 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-3.<anonymous>.<anonymous>' call
       var value = ComposableSingletons$NavHeaderKt$lambda_3$lambda$lambda_kbp4qh;
-      $composer_0.r1f(value);
+      $composer_0.t1f(value);
       tmp = value;
     } else {
       tmp = it;
     }
     var tmp_0 = tmp;
     var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-    $composer_0.i1e();
+    $composer_0.k1e();
     Circle($this$createIcon, tmp0_group, $composer_0, 56);
-    $composer_0.h1e(-1342297526);
+    $composer_0.j1e(-1342297526);
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it_0 = $composer_0.l1f();
+    var it_0 = $composer_0.n1f();
     var tmp_1;
-    if (false ? true : it_0 === Companion_getInstance().z18_1) {
+    if (false ? true : it_0 === Companion_getInstance().b19_1) {
       // Inline function 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-3.<anonymous>.<anonymous>' call
       var value_0 = ComposableSingletons$NavHeaderKt$lambda_3$lambda$lambda_kbp4qh_0;
-      $composer_0.r1f(value_0);
+      $composer_0.t1f(value_0);
       tmp_1 = value_0;
     } else {
       tmp_1 = it_0;
     }
     var tmp_2 = tmp_1;
     var tmp1_group = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-    $composer_0.i1e();
+    $composer_0.k1e();
     Line($this$createIcon, tmp1_group, $composer_0, 56);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -4370,41 +4473,41 @@
     return Unit_instance;
   }
   function ComposableSingletons$NavHeaderKt$lambda_3$lambda$lambda_kbp4qh($this$Circle) {
-    $this$Circle.o2o(12);
-    $this$Circle.p2o(12);
-    $this$Circle.m2o(8);
+    $this$Circle.q2o(12);
+    $this$Circle.r2o(12);
+    $this$Circle.o2o(8);
     return Unit_instance;
   }
   function ComposableSingletons$NavHeaderKt$lambda_3$lambda$lambda_kbp4qh_0($this$Line) {
-    $this$Line.s2o(19);
     $this$Line.u2o(19);
-    $this$Line.t2o(56);
+    $this$Line.w2o(19);
     $this$Line.v2o(56);
+    $this$Line.x2o(56);
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_94($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$NavHeaderKt$lambda_4$lambda_gf9ta5($composer, $changed) {
     var $composer_0 = $composer;
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(298381011, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-4.<anonymous> (NavHeader.kt:107)');
       }
-      createIcon(null, null, new Stroke(3), toAttrs(color(Companion_instance_2, getSitePalette().c45_1)), ComposableSingletons$NavHeaderKt_getInstance().i46_1, $composer_0, 25088, 3);
+      createIcon(null, null, new Stroke(3), toAttrs(color(Companion_instance_2, getSitePalette().e46_1)), ComposableSingletons$NavHeaderKt_getInstance().k47_1, $composer_0, 25088, 3);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_95($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$NavHeaderKt$lambda_5$lambda_cecns2($this$Row, $composer, $changed) {
@@ -4413,24 +4516,24 @@
       traceEventStart(-342585411, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-5.<anonymous> (NavHeader.kt:199)');
     }
     MenuItems($composer_0, 0);
-    $composer_0.h1e(1941555018);
+    $composer_0.j1e(1941555018);
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_0.l1f();
+    var it = $composer_0.n1f();
     var tmp;
-    if (false ? true : it === Companion_getInstance().z18_1) {
+    if (false ? true : it === Companion_getInstance().b19_1) {
       // Inline function 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-5.<anonymous>.<anonymous>' call
       var value = ComposableSingletons$NavHeaderKt$lambda_5$lambda$lambda_tjf03t;
-      $composer_0.r1f(value);
+      $composer_0.t1f(value);
       tmp = value;
     } else {
       tmp = it;
     }
     var tmp_0 = tmp;
     var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-    $composer_0.i1e();
+    $composer_0.k1e();
     SearchButton(tmp0_group, $composer_0, 6);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -4442,7 +4545,7 @@
   }
   function ComposableLambda$invoke$ref_96($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$NavHeaderKt$lambda_6$lambda_tt4x4v($this$Row, $composer, $changed) {
@@ -4450,7 +4553,7 @@
     if (isTraceInProgress()) {
       traceEventStart(-653953120, $changed, -1, 'com.canerture.androidhub.components.sections.ComposableSingletons$NavHeaderKt.lambda-6.<anonymous> (NavHeader.kt:191)');
     }
-    var tmp = borderRadius(backgroundColor(displayIfAtLeast(gap(Companion_instance_2, get_cssRem(1.5)), Breakpoint_MD_getInstance()), getSitePalette().z44_1), get_cssRem(5));
+    var tmp = borderRadius(backgroundColor(displayIfAtLeast(gap(Companion_instance_2, get_cssRem(1.5)), Breakpoint_MD_getInstance()), getSitePalette().b46_1), get_cssRem(5));
     var tmp_0 = get_px(0);
     var tmp_1 = get_px(0);
     var tmp_2 = get_px(5);
@@ -4459,7 +4562,7 @@
     var tmp$ret$0 = Color('lightgray');
     var tmp_4 = padding_1(boxShadow(tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp$ret$0), get_cssRem(0.5), get_cssRem(3));
     var tmp_5 = CenterVertically_instance;
-    Row(tmp_4, null, tmp_5, null, ComposableSingletons$NavHeaderKt_getInstance().k46_1, $composer_0, 24584, 10);
+    Row(tmp_4, null, tmp_5, null, ComposableSingletons$NavHeaderKt_getInstance().m47_1, $composer_0, 24584, 10);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
@@ -4467,7 +4570,7 @@
   }
   function ComposableLambda$invoke$ref_97($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$NavHeaderKt$lambda_7$lambda_zig2o($this$Column, $composer, $changed) {
@@ -4484,19 +4587,19 @@
   function ComposableSingletons$NavHeaderKt() {
     ComposableSingletons$NavHeaderKt_instance = this;
     var tmp = this;
-    tmp.g46_1 = ComposableLambda$invoke$ref_91(composableLambdaInstance(1563565610, false, ComposableSingletons$NavHeaderKt$lambda_1$lambda_vv16hm));
+    tmp.i47_1 = ComposableLambda$invoke$ref_91(composableLambdaInstance(1563565610, false, ComposableSingletons$NavHeaderKt$lambda_1$lambda_vv16hm));
     var tmp_0 = this;
-    tmp_0.h46_1 = ComposableLambda$invoke$ref_92(composableLambdaInstance(1424045209, false, ComposableSingletons$NavHeaderKt$lambda_2$lambda_31epff));
+    tmp_0.j47_1 = ComposableLambda$invoke$ref_92(composableLambdaInstance(1424045209, false, ComposableSingletons$NavHeaderKt$lambda_2$lambda_31epff));
     var tmp_1 = this;
-    tmp_1.i46_1 = ComposableLambda$invoke$ref_93(composableLambdaInstance(-1815233913, false, ComposableSingletons$NavHeaderKt$lambda_3$lambda_ps7rms));
+    tmp_1.k47_1 = ComposableLambda$invoke$ref_93(composableLambdaInstance(-1815233913, false, ComposableSingletons$NavHeaderKt$lambda_3$lambda_ps7rms));
     var tmp_2 = this;
-    tmp_2.j46_1 = ComposableLambda$invoke$ref_94(composableLambdaInstance(298381011, false, ComposableSingletons$NavHeaderKt$lambda_4$lambda_gf9ta5));
+    tmp_2.l47_1 = ComposableLambda$invoke$ref_94(composableLambdaInstance(298381011, false, ComposableSingletons$NavHeaderKt$lambda_4$lambda_gf9ta5));
     var tmp_3 = this;
-    tmp_3.k46_1 = ComposableLambda$invoke$ref_95(composableLambdaInstance(-342585411, false, ComposableSingletons$NavHeaderKt$lambda_5$lambda_cecns2));
+    tmp_3.m47_1 = ComposableLambda$invoke$ref_95(composableLambdaInstance(-342585411, false, ComposableSingletons$NavHeaderKt$lambda_5$lambda_cecns2));
     var tmp_4 = this;
-    tmp_4.l46_1 = ComposableLambda$invoke$ref_96(composableLambdaInstance(-653953120, false, ComposableSingletons$NavHeaderKt$lambda_6$lambda_tt4x4v));
+    tmp_4.n47_1 = ComposableLambda$invoke$ref_96(composableLambdaInstance(-653953120, false, ComposableSingletons$NavHeaderKt$lambda_6$lambda_tt4x4v));
     var tmp_5 = this;
-    tmp_5.m46_1 = ComposableLambda$invoke$ref_97(composableLambdaInstance(1280507252, false, ComposableSingletons$NavHeaderKt$lambda_7$lambda_zig2o));
+    tmp_5.o47_1 = ComposableLambda$invoke$ref_97(composableLambdaInstance(1280507252, false, ComposableSingletons$NavHeaderKt$lambda_7$lambda_zig2o));
   }
   var ComposableSingletons$NavHeaderKt_instance;
   function ComposableSingletons$NavHeaderKt_getInstance() {
@@ -4526,8 +4629,8 @@
   }
   function SideMenuSlideInAnim$delegate$lambda($this$Keyframes) {
     _init_properties_NavHeader_kt__vdotjy();
-    $this$Keyframes.k3j(SideMenuSlideInAnim$delegate$lambda$lambda);
-    $this$Keyframes.l3j(SideMenuSlideInAnim$delegate$lambda$lambda_0);
+    $this$Keyframes.k3k(SideMenuSlideInAnim$delegate$lambda$lambda);
+    $this$Keyframes.l3k(SideMenuSlideInAnim$delegate$lambda$lambda_0);
     return Unit_instance;
   }
   function SideMenuSlideInAnim$delegate$lambda$lambda() {
@@ -4572,7 +4675,7 @@
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
         if (isTraceInProgress()) {
           traceEventStart(61045801, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous> (NavHeader.kt:165)');
         }
@@ -4590,7 +4693,7 @@
         }
         tmp = tmp_2;
       } else {
-        $composer_0.t18();
+        $composer_0.v18();
         tmp = Unit_instance;
       }
       return Unit_instance;
@@ -4598,7 +4701,7 @@
   }
   function ComposableLambda$invoke$ref_98($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function NavHeader$lambda$lambda$lambda($menuState$delegate) {
@@ -4609,7 +4712,7 @@
   }
   function NavHeader$lambda$lambda$lambda_0($menuState$delegate) {
     return function () {
-      NavHeader$lambda_0($menuState$delegate, NavHeader$lambda($menuState$delegate).p46());
+      NavHeader$lambda_0($menuState$delegate, NavHeader$lambda($menuState$delegate).r47());
       return Unit_instance;
     };
   }
@@ -4629,63 +4732,63 @@
       if (isTraceInProgress()) {
         traceEventStart(214303636, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous> (NavHeader.kt:174)');
       }
-      $composer_0.h1e(-1190397458);
+      $composer_0.j1e(-1190397458);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_0.l1f();
+      var it = $composer_0.n1f();
       var tmp;
-      if (false ? true : it === Companion_getInstance().z18_1) {
+      if (false ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = NavHeader$lambda$lambda$lambda($menuState$delegate);
-        $composer_0.r1f(value);
+        $composer_0.t1f(value);
         tmp = value;
       } else {
         tmp = it;
       }
       var tmp_0 = tmp;
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       HamburgerButton(tmp0_group, $composer_0, 6);
       if (!NavHeader$lambda($menuState$delegate).equals(SideMenuState_CLOSED_getInstance())) {
         var tmp_1 = NavHeader$lambda($menuState$delegate);
-        $composer_0.h1e(-1190397283);
+        $composer_0.j1e(-1190397283);
         // Inline function 'androidx.compose.runtime.cache' call
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-        var it_0 = $composer_0.l1f();
+        var it_0 = $composer_0.n1f();
         var tmp_2;
-        if (false ? true : it_0 === Companion_getInstance().z18_1) {
+        if (false ? true : it_0 === Companion_getInstance().b19_1) {
           // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
           var value_0 = NavHeader$lambda$lambda$lambda_0($menuState$delegate);
-          $composer_0.r1f(value_0);
+          $composer_0.t1f(value_0);
           tmp_2 = value_0;
         } else {
           tmp_2 = it_0;
         }
         var tmp_3 = tmp_2;
         var tmp1_group = (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
-        $composer_0.i1e();
-        $composer_0.h1e(-1190397211);
+        $composer_0.k1e();
+        $composer_0.j1e(-1190397211);
         // Inline function 'androidx.compose.runtime.cache' call
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-        var it_1 = $composer_0.l1f();
+        var it_1 = $composer_0.n1f();
         var tmp_4;
-        if (false ? true : it_1 === Companion_getInstance().z18_1) {
+        if (false ? true : it_1 === Companion_getInstance().b19_1) {
           // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
           var value_1 = NavHeader$lambda$lambda$lambda_1($menuState$delegate);
-          $composer_0.r1f(value_1);
+          $composer_0.t1f(value_1);
           tmp_4 = value_1;
         } else {
           tmp_4 = it_1;
         }
         var tmp_5 = tmp_4;
         var tmp2_group = (tmp_5 == null ? true : !(tmp_5 == null)) ? tmp_5 : THROW_CCE();
-        $composer_0.i1e();
+        $composer_0.k1e();
         SideMenu(tmp_1, tmp1_group, tmp2_group, $composer_0, 432);
       }
       var tmp_6;
@@ -4698,7 +4801,7 @@
   }
   function ComposableLambda$invoke$ref_99($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function NavHeader$lambda_1($breakpoint, $logoWidth, $menuState$delegate) {
@@ -4707,7 +4810,7 @@
       if (isTraceInProgress()) {
         traceEventStart(-872052681, $changed, -1, 'com.canerture.androidhub.components.sections.NavHeader.<anonymous> (NavHeader.kt:164)');
       }
-      var tmp = thenIf(Companion_instance_2, $breakpoint.ua(Breakpoint_MD_getInstance()) < 0, $this$Row.b3h(Companion_instance_2, 1.0));
+      var tmp = thenIf(Companion_instance_2, $breakpoint.ua(Breakpoint_MD_getInstance()) < 0, $this$Row.b3i(Companion_instance_2, 1.0));
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous>.<anonymous>' call
@@ -4715,26 +4818,26 @@
       var dispatchReceiver = composableLambda(tmp_0, 61045801, true, NavHeader$lambda$lambda($logoWidth));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_1;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_98(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_1 = value;
       } else {
         tmp_1 = it;
       }
       var tmp_2 = tmp_1;
       var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Link('https://androidhub.dev', tmp, null, null, null, false, null, tmp0, $composer_0, 12582982, 124);
       var tmp_3 = displayUntil(fontSize(Companion_instance_2, get_cssRem(1.5)), Breakpoint_MD_getInstance());
       var tmp_4 = CenterVertically_instance;
@@ -4745,26 +4848,26 @@
       var dispatchReceiver_0 = composableLambda(tmp_5, 214303636, true, NavHeader$lambda$lambda_0($menuState$delegate));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_2 = $composer_0;
-      $composer_2.h1e(1157296644);
+      $composer_2.j1e(1157296644);
       sourceInformation($composer_2, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid_0 = $composer_2.a16(dispatchReceiver_0);
+      var invalid_0 = $composer_2.c16(dispatchReceiver_0);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = $composer_2.l1f();
+      var it_0 = $composer_2.n1f();
       var tmp_6;
-      if (invalid_0 ? true : it_0 === Companion_getInstance().z18_1) {
+      if (invalid_0 ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.NavHeader.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value_0 = ComposableLambda$invoke$ref_99(dispatchReceiver_0);
-        $composer_2.r1f(value_0);
+        $composer_2.t1f(value_0);
         tmp_6 = value_0;
       } else {
         tmp_6 = it_0;
       }
       var tmp_7 = tmp_6;
       var tmp0_0 = (tmp_7 == null ? true : !(tmp_7 == null)) ? tmp_7 : THROW_CCE();
-      $composer_2.i1e();
+      $composer_2.k1e();
       Row(tmp_3, null, tmp_4, null, tmp0_0, $composer_0, 24584, 10);
       var tmp_8;
       if (isTraceInProgress()) {
@@ -4776,7 +4879,7 @@
   }
   function ComposableLambda$invoke$ref_100($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function NavHeader$lambda_2($$changed) {
@@ -4793,7 +4896,7 @@
   }
   function SideMenu$lambda$lambda(it) {
     _init_properties_NavHeader_kt__vdotjy();
-    it.d2i();
+    it.f2i();
     return Unit_instance;
   }
   function SideMenu$lambda$lambda_0($onAnimationEnd) {
@@ -4814,29 +4917,29 @@
       if (isTraceInProgress()) {
         traceEventStart(-206915651, $changed, -1, 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>.<anonymous> (NavHeader.kt:234)');
       }
-      $composer_0.h1e(-1518990362);
+      $composer_0.j1e(-1518990362);
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_0.a16($close);
+      var invalid = $composer_0.c16($close);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_0.l1f();
+      var it = $composer_0.n1f();
       var tmp;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = SideMenu$lambda$lambda$lambda($close);
-        $composer_0.r1f(value);
+        $composer_0.t1f(value);
         tmp = value;
       } else {
         tmp = it;
       }
       var tmp_0 = tmp;
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       CloseButton(tmp0_group, $composer_0, 0);
       var tmp_1 = fontSize(gap(padding_2(Companion_instance_2, VOID, get_cssRem(0.75)), get_cssRem(1.5)), get_cssRem(1.4));
       var tmp_2 = End_instance;
-      Column(tmp_1, null, tmp_2, null, ComposableSingletons$NavHeaderKt_getInstance().m46_1, $composer_0, 24584, 10);
+      Column(tmp_1, null, tmp_2, null, ComposableSingletons$NavHeaderKt_getInstance().o47_1, $composer_0, 24584, 10);
       var tmp_3;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -4847,7 +4950,7 @@
   }
   function ComposableLambda$invoke$ref_101($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function SideMenu$lambda_0($menuState, $onAnimationEnd, $close) {
@@ -4856,8 +4959,8 @@
       if (isTraceInProgress()) {
         traceEventStart(-36487783, $changed, -1, 'com.canerture.androidhub.components.sections.SideMenu.<anonymous> (NavHeader.kt:212)');
       }
-      $composer_0.k1b(629541751, $menuState);
-      var tmp = backgroundColor(gap(padding_0($this$Overlay.v3g(width(fillMaxHeight(Companion_instance_2), clamp(get_cssRem(8), get_percent(33), get_cssRem(10))), CenterEnd_instance), get_cssRem(1), get_cssRem(1)), get_cssRem(1.5)), getSitePalette().z44_1);
+      $composer_0.m1b(629541751, $menuState);
+      var tmp = backgroundColor(gap(padding_0($this$Overlay.v3h(width(fillMaxHeight(Companion_instance_2), clamp(get_cssRem(8), get_percent(33), get_cssRem(10))), CenterEnd_instance), get_cssRem(1), get_cssRem(1)), get_cssRem(1.5)), getSitePalette().b46_1);
       var tmp_0 = get_SideMenuSlideInAnim();
       var tmp_1 = get_ms(200);
       var tmp_2;
@@ -4896,44 +4999,44 @@
       // Inline function 'kotlin.js.asDynamic' call
       var tmp_6 = 'forwards';
       var tmp_7 = borderRadius_0(animation(tmp, [toAnimation(tmp_0, tmp_1, tmp_3, null, null, tmp_5, tmp_6, null, $composer_0, 2359880, 76)]), get_cssRem(2));
-      $composer_0.h1e(629542759);
+      $composer_0.j1e(629542759);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_0.l1f();
+      var it = $composer_0.n1f();
       var tmp_8;
-      if (false ? true : it === Companion_getInstance().z18_1) {
+      if (false ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>.<anonymous>' call
         var value = SideMenu$lambda$lambda;
-        $composer_0.r1f(value);
+        $composer_0.t1f(value);
         tmp_8 = value;
       } else {
         tmp_8 = it;
       }
       var tmp_9 = tmp_8;
       var tmp0_group = (tmp_9 == null ? true : !(tmp_9 == null)) ? tmp_9 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       var tmp_10 = onClick(tmp_7, tmp0_group);
-      $composer_0.h1e(629542820);
+      $composer_0.j1e(629542820);
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_0.a16($onAnimationEnd);
+      var invalid = $composer_0.c16($onAnimationEnd);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = $composer_0.l1f();
+      var it_0 = $composer_0.n1f();
       var tmp_11;
-      if (invalid ? true : it_0 === Companion_getInstance().z18_1) {
+      if (invalid ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>.<anonymous>' call
         var value_0 = SideMenu$lambda$lambda_0($onAnimationEnd);
-        $composer_0.r1f(value_0);
+        $composer_0.t1f(value_0);
         tmp_11 = value_0;
       } else {
         tmp_11 = it_0;
       }
       var tmp_12 = tmp_11;
       var tmp1_group = (tmp_12 == null ? true : !(tmp_12 == null)) ? tmp_12 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       var tmp_13 = onAnimationEnd(tmp_10, tmp1_group);
       var tmp_14 = End_instance;
       // Inline function 'kotlin.run' call
@@ -4943,28 +5046,28 @@
       var dispatchReceiver = composableLambda(tmp_15, -206915651, true, SideMenu$lambda$lambda_1($close));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid_0 = $composer_1.a16(dispatchReceiver);
+      var invalid_0 = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_1 = $composer_1.l1f();
+      var it_1 = $composer_1.n1f();
       var tmp_16;
-      if (invalid_0 ? true : it_1 === Companion_getInstance().z18_1) {
+      if (invalid_0 ? true : it_1 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.sections.SideMenu.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value_1 = ComposableLambda$invoke$ref_101(dispatchReceiver);
-        $composer_1.r1f(value_1);
+        $composer_1.t1f(value_1);
         tmp_16 = value_1;
       } else {
         tmp_16 = it_1;
       }
       var tmp_17 = tmp_16;
       var tmp0 = (tmp_17 == null ? true : !(tmp_17 == null)) ? tmp_17 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Column(tmp_13, null, tmp_14, null, tmp0, $composer_0, 24584, 10);
-      $composer_0.n1b();
+      $composer_0.p1b();
       var tmp_18;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -4975,7 +5078,7 @@
   }
   function ComposableLambda$invoke$ref_102($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function SideMenu$lambda_1($menuState, $close, $onAnimationEnd, $$changed) {
@@ -5017,38 +5120,38 @@
   }
   function IconButton(onClick, content, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-2093742643);
+    $composer_0 = $composer_0.b1g(-2093742643);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.c1f(onClick) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.e1f(onClick) ? 4 : 2);
     if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.c1f(content) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(content) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-2093742643, $dirty, -1, 'com.canerture.androidhub.components.widgets.IconButton (IconButton.kt:12)');
       }
-      $composer_0.h1e(-896661888);
+      $composer_0.j1e(-896661888);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       var invalid = ($dirty & 14) === 4;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.l1f();
+      var it = this_0.n1f();
       var tmp;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.widgets.IconButton.<anonymous>' call
         var value = IconButton$lambda(onClick);
-        this_0.r1f(value);
+        this_0.t1f(value);
         tmp = value;
       } else {
         tmp = it;
       }
       var tmp_0 = tmp;
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.i1e();
-      var tmp_1 = setVariable(Companion_instance_2, ButtonVars_getInstance().z3s(), get_em(1));
-      var tmp_2 = get_CircleButtonVariant().v3l(get_UncoloredButtonVariant());
+      $composer_0.k1e();
+      var tmp_1 = setVariable(Companion_instance_2, ButtonVars_getInstance().z3t(), get_em(1));
+      var tmp_2 = get_CircleButtonVariant().v3m(get_UncoloredButtonVariant());
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'com.canerture.androidhub.components.widgets.IconButton.<anonymous>' call
@@ -5056,38 +5159,38 @@
       var dispatchReceiver = composableLambda(tmp_3, -362128419, true, IconButton$lambda_0(content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid_0 = $composer_1.a16(dispatchReceiver);
+      var invalid_0 = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = $composer_1.l1f();
+      var it_0 = $composer_1.n1f();
       var tmp_4;
-      if (invalid_0 ? true : it_0 === Companion_getInstance().z18_1) {
+      if (invalid_0 ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.widgets.IconButton.<anonymous>.<anonymous>' call
         var value_0 = ComposableLambda$invoke$ref_103(dispatchReceiver);
-        $composer_1.r1f(value_0);
+        $composer_1.t1f(value_0);
         tmp_4 = value_0;
       } else {
         tmp_4 = it_0;
       }
       var tmp_5 = tmp_4;
       var tmp0 = (tmp_5 == null ? true : !(tmp_5 == null)) ? tmp_5 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Button(tmp0_group, tmp_1, tmp_2, null, false, null, null, null, null, tmp0, $composer_0, 805306432, 504);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp1_safe_receiver = $composer_0.a1g();
+    var tmp1_safe_receiver = $composer_0.c1g();
     if (tmp1_safe_receiver == null)
       null;
     else {
-      tmp1_safe_receiver.w1k(IconButton$lambda_1(onClick, content, $changed));
+      tmp1_safe_receiver.y1k(IconButton$lambda_1(onClick, content, $changed));
     }
   }
   function IconButton$lambda($onClick) {
@@ -5113,7 +5216,7 @@
   }
   function ComposableLambda$invoke$ref_103($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function IconButton$lambda_1($onClick, $content, $$changed) {
@@ -5124,17 +5227,17 @@
   }
   function LatestArticleItem(isLastItem, article, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(873134260);
+    $composer_0 = $composer_0.b1g(873134260);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.d1f(isLastItem) ? 4 : 2);
+      $dirty = $dirty | ($composer_0.f1f(isLastItem) ? 4 : 2);
     if (($changed & 112) === 0)
-      $dirty = $dirty | ($composer_0.a16(article) ? 32 : 16);
-    if (!(($dirty & 91) === 18) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.c16(article) ? 32 : 16);
+    if (!(($dirty & 91) === 18) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(873134260, $dirty, -1, 'com.canerture.androidhub.components.widgets.LatestArticleItem (LatestArticleItem.kt:32)');
       }
-      var tmp = borderRadius(backgroundColor(marginBlock(marginInline(Companion_instance_2, VOID, !isLastItem ? get_cssRem(1) : get_cssRem(0)), VOID, !isLastItem ? get_cssRem(1) : get_cssRem(0)), getSitePalette().b45_1), get_cssRem(1));
+      var tmp = borderRadius(backgroundColor(marginBlock(marginInline(Companion_instance_2, VOID, !isLastItem ? get_cssRem(1) : get_cssRem(0)), VOID, !isLastItem ? get_cssRem(1) : get_cssRem(0)), getSitePalette().d46_1), get_cssRem(1));
       var tmp_0 = get_px(0);
       var tmp_1 = get_px(0);
       var tmp_2 = get_px(5);
@@ -5149,38 +5252,38 @@
       var dispatchReceiver = composableLambda(tmp_5, -397278293, true, LatestArticleItem$lambda(article));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_6;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.widgets.LatestArticleItem.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_105(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_6 = value;
       } else {
         tmp_6 = it;
       }
       var tmp_7 = tmp_6;
       var tmp0 = (tmp_7 == null ? true : !(tmp_7 == null)) ? tmp_7 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Column(tmp_4, null, null, null, tmp0, $composer_0, 24584, 14);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(LatestArticleItem$lambda_0(isLastItem, article, $changed));
+      tmp0_safe_receiver.y1k(LatestArticleItem$lambda_0(isLastItem, article, $changed));
     }
   }
   function LatestArticleItem$lambda$lambda($article) {
@@ -5189,10 +5292,10 @@
       if (isTraceInProgress()) {
         traceEventStart(370470958, $changed, -1, 'com.canerture.androidhub.components.widgets.LatestArticleItem.<anonymous>.<anonymous> (LatestArticleItem.kt:67)');
       }
-      var tmp = margin_1(color(Companion_instance_2, getSitePalette().c45_1), VOID, get_cssRem(1));
-      SpanText($article.r46_1, tmp, null, null, $composer_0, 64, 12);
-      var tmp_0 = color(Companion_instance_2, getSitePalette().c45_1);
-      SpanText($article.s46_1, tmp_0, null, null, $composer_0, 64, 12);
+      var tmp = margin_1(color(Companion_instance_2, getSitePalette().e46_1), VOID, get_cssRem(1));
+      SpanText($article.t47_1, tmp, null, null, $composer_0, 64, 12);
+      var tmp_0 = color(Companion_instance_2, getSitePalette().e46_1);
+      SpanText($article.u47_1, tmp_0, null, null, $composer_0, 64, 12);
       var tmp_1;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -5203,7 +5306,7 @@
   }
   function ComposableLambda$invoke$ref_104($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function LatestArticleItem$lambda($article) {
@@ -5212,11 +5315,11 @@
       if (isTraceInProgress()) {
         traceEventStart(-397278293, $changed, -1, 'com.canerture.androidhub.components.widgets.LatestArticleItem.<anonymous> (LatestArticleItem.kt:41)');
       }
-      var tmp0_modifier = padding_1(borderRadius_1(backgroundColor(margin(Companion_instance_2, get_cssRem(1)), getSitePalette().c45_1), VOID, get_cssRem(1), get_cssRem(1)), get_cssRem(0.3), get_cssRem(1));
-      var tmp1_text = $article.q46_1;
+      var tmp0_modifier = padding_1(borderRadius_1(backgroundColor(margin(Companion_instance_2, get_cssRem(1)), getSitePalette().e46_1), VOID, get_cssRem(1), get_cssRem(1)), get_cssRem(0.3), get_cssRem(1));
+      var tmp1_text = $article.s47_1;
       SpanText(tmp1_text, tmp0_modifier, null, null, $composer_0, 64, 12);
-      var tmp = color(fontWeight_0(textAlign(padding(fillMaxWidth(Companion_instance_2), get_cssRem(1)), Companion_instance_3.r2j()), Companion_instance_6.r2k()), getSitePalette().c45_1);
-      Link_0('/post', $article.t46_1, tmp, null, null, null, false, null, $composer_0, 518, 248);
+      var tmp = color(fontWeight_0(textAlign(padding(fillMaxWidth(Companion_instance_2), get_cssRem(1)), Companion_instance_3.t2j()), Companion_instance_6.t2k()), getSitePalette().e46_1);
+      Link_0('/post', $article.v47_1, tmp, null, null, null, false, null, $composer_0, 518, 248);
       var tmp_0 = padding(fillMaxWidth(Companion_instance_2), get_cssRem(1));
       var tmp_1 = Center_instance_0;
       // Inline function 'kotlin.run' call
@@ -5226,26 +5329,26 @@
       var dispatchReceiver = composableLambda(tmp_2, 370470958, true, LatestArticleItem$lambda$lambda($article));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_3;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.widgets.LatestArticleItem.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_104(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_3 = value;
       } else {
         tmp_3 = it;
       }
       var tmp_4 = tmp_3;
       var tmp0 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Row(tmp_0, tmp_1, null, null, tmp0, $composer_0, 24584, 12);
       var tmp_5;
       if (isTraceInProgress()) {
@@ -5257,7 +5360,7 @@
   }
   function ComposableLambda$invoke$ref_105($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function LatestArticleItem$lambda_0($isLastItem, $article, $$changed) {
@@ -5268,11 +5371,11 @@
   }
   function PopularArticleItem(_this__u8e3s4, isLastItem, article, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(1541016390);
+    $composer_0 = $composer_0.b1g(1541016390);
     if (isTraceInProgress()) {
       traceEventStart(1541016390, $changed, -1, 'com.canerture.androidhub.components.widgets.PopularArticleItem (PopularArticleItem.kt:28)');
     }
-    var tmp = borderRadius(backgroundColor(margin_1(_this__u8e3s4.b3h(Companion_instance_2, 1.0), VOID, !isLastItem ? get_cssRem(1) : get_cssRem(0)), getSitePalette().a45_1.f3i()), get_cssRem(1));
+    var tmp = borderRadius(backgroundColor(margin_1(_this__u8e3s4.b3i(Companion_instance_2, 1.0), VOID, !isLastItem ? get_cssRem(1) : get_cssRem(0)), getSitePalette().c46_1.f3j()), get_cssRem(1));
     var tmp_0 = get_px(0);
     var tmp_1 = get_px(0);
     var tmp_2 = get_px(5);
@@ -5287,40 +5390,40 @@
     var dispatchReceiver = composableLambda(tmp_5, 1645170671, true, PopularArticleItem$lambda(article));
     // Inline function 'androidx.compose.runtime.remember' call
     var $composer_1 = $composer_0;
-    $composer_1.h1e(1157296644);
+    $composer_1.j1e(1157296644);
     sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var invalid = $composer_1.a16(dispatchReceiver);
+    var invalid = $composer_1.c16(dispatchReceiver);
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_1.l1f();
+    var it = $composer_1.n1f();
     var tmp_6;
-    if (invalid ? true : it === Companion_getInstance().z18_1) {
+    if (invalid ? true : it === Companion_getInstance().b19_1) {
       // Inline function 'com.canerture.androidhub.components.widgets.PopularArticleItem.<anonymous>.<anonymous>' call
       var value = ComposableLambda$invoke$ref_109(dispatchReceiver);
-      $composer_1.r1f(value);
+      $composer_1.t1f(value);
       tmp_6 = value;
     } else {
       tmp_6 = it;
     }
     var tmp_7 = tmp_6;
     var tmp0 = (tmp_7 == null ? true : !(tmp_7 == null)) ? tmp_7 : THROW_CCE();
-    $composer_1.i1e();
+    $composer_1.k1e();
     Column(tmp_4, null, null, null, tmp0, $composer_0, 24584, 14);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(PopularArticleItem$lambda_0(_this__u8e3s4, isLastItem, article, $changed));
+      tmp0_safe_receiver.y1k(PopularArticleItem$lambda_0(_this__u8e3s4, isLastItem, article, $changed));
     }
   }
   function ComposableLambda$invoke$ref_106($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$PopularArticleItemKt$lambda_1$lambda_ngbeak($this$Button, $composer, $changed) {
@@ -5337,7 +5440,7 @@
   function ComposableSingletons$PopularArticleItemKt() {
     ComposableSingletons$PopularArticleItemKt_instance = this;
     var tmp = this;
-    tmp.u46_1 = ComposableLambda$invoke$ref_106(composableLambdaInstance(-1212217857, false, ComposableSingletons$PopularArticleItemKt$lambda_1$lambda_ngbeak));
+    tmp.w47_1 = ComposableLambda$invoke$ref_106(composableLambdaInstance(-1212217857, false, ComposableSingletons$PopularArticleItemKt$lambda_1$lambda_ngbeak));
   }
   var ComposableSingletons$PopularArticleItemKt_instance;
   function ComposableSingletons$PopularArticleItemKt_getInstance() {
@@ -5351,9 +5454,9 @@
       if (isTraceInProgress()) {
         traceEventStart(-333736459, $changed, -1, 'com.canerture.androidhub.components.widgets.PopularArticleItem.<anonymous>.<anonymous>.<anonymous> (PopularArticleItem.kt:54)');
       }
-      Text($article.r46_1, $composer_0, 0);
+      Text($article.t47_1, $composer_0, 0);
       Spacer($composer_0, 0);
-      Text($article.s46_1, $composer_0, 0);
+      Text($article.u47_1, $composer_0, 0);
       var tmp;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -5364,7 +5467,7 @@
   }
   function ComposableLambda$invoke$ref_107($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function PopularArticleItem$lambda$lambda($article) {
@@ -5381,29 +5484,29 @@
       var dispatchReceiver = composableLambda(tmp_0, -333736459, true, PopularArticleItem$lambda$lambda$lambda($article));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_1;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.widgets.PopularArticleItem.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_107(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_1 = value;
       } else {
         tmp_1 = it;
       }
       var tmp_2 = tmp_1;
       var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Column(tmp, null, null, null, tmp0, $composer_0, 24584, 14);
-      var tmp0_modifier = $this$Row.b3h(Companion_instance_2, 1.0);
-      var tmp1_text = $article.t46_1;
+      var tmp0_modifier = $this$Row.b3i(Companion_instance_2, 1.0);
+      var tmp1_text = $article.v47_1;
       SpanText(tmp1_text, tmp0_modifier, null, null, $composer_0, 64, 12);
       var tmp_3;
       if (isTraceInProgress()) {
@@ -5415,7 +5518,7 @@
   }
   function ComposableLambda$invoke$ref_108($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function PopularArticleItem$lambda$lambda_0(it) {
@@ -5427,8 +5530,8 @@
       if (isTraceInProgress()) {
         traceEventStart(1645170671, $changed, -1, 'com.canerture.androidhub.components.widgets.PopularArticleItem.<anonymous> (PopularArticleItem.kt:37)');
       }
-      var tmp0_modifier = padding_1(borderRadius_1(backgroundColor(margin_0(Companion_instance_2, get_cssRem(1)), getSitePalette().c45_1), VOID, get_cssRem(1), get_cssRem(1)), get_cssRem(0.3), get_cssRem(1));
-      var tmp1_text = $article.q46_1;
+      var tmp0_modifier = padding_1(borderRadius_1(backgroundColor(margin_0(Companion_instance_2, get_cssRem(1)), getSitePalette().e46_1), VOID, get_cssRem(1), get_cssRem(1)), get_cssRem(0.3), get_cssRem(1));
+      var tmp1_text = $article.s47_1;
       SpanText(tmp1_text, tmp0_modifier, null, null, $composer_0, 64, 12);
       var tmp = padding_1(fillMaxWidth(Companion_instance_2), VOID, get_cssRem(1));
       // Inline function 'kotlin.run' call
@@ -5438,47 +5541,47 @@
       var dispatchReceiver = composableLambda(tmp_0, 459834252, true, PopularArticleItem$lambda$lambda($article));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_1;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.widgets.PopularArticleItem.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_108(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_1 = value;
       } else {
         tmp_1 = it;
       }
       var tmp_2 = tmp_1;
       var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Row(tmp, null, null, null, tmp0, $composer_0, 24584, 14);
-      var tmp2_modifier = $this$Column.y3g(margin_2(Companion_instance_2, get_cssRem(1)), End_instance);
-      $composer_0.h1e(1381317613);
+      var tmp2_modifier = $this$Column.y3h(margin_2(Companion_instance_2, get_cssRem(1)), End_instance);
+      $composer_0.j1e(1381317613);
       // Inline function 'androidx.compose.runtime.cache' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = $composer_0.l1f();
+      var it_0 = $composer_0.n1f();
       var tmp_3;
-      if (false ? true : it_0 === Companion_getInstance().z18_1) {
+      if (false ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.components.widgets.PopularArticleItem.<anonymous>.<anonymous>.<anonymous>' call
         var value_0 = PopularArticleItem$lambda$lambda_0;
-        $composer_0.r1f(value_0);
+        $composer_0.t1f(value_0);
         tmp_3 = value_0;
       } else {
         tmp_3 = it_0;
       }
       var tmp_4 = tmp_3;
       var tmp0_group = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
-      $composer_0.i1e();
-      Button(tmp0_group, tmp2_modifier, null, null, false, null, null, null, null, ComposableSingletons$PopularArticleItemKt_getInstance().u46_1, $composer_0, 805306438, 508);
+      $composer_0.k1e();
+      Button(tmp0_group, tmp2_modifier, null, null, false, null, null, null, null, ComposableSingletons$PopularArticleItemKt_getInstance().w47_1, $composer_0, 805306438, 508);
       var tmp_5;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -5489,7 +5592,7 @@
   }
   function ComposableLambda$invoke$ref_109($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function PopularArticleItem$lambda_0($this_PopularArticleItem, $isLastItem, $article, $$changed) {
@@ -5506,8 +5609,8 @@
   }
   function $getPostsCOROUTINE$0(onSuccess, onError, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this.d47_1 = onSuccess;
-    this.e47_1 = onError;
+    this.f48_1 = onSuccess;
+    this.g48_1 = onError;
   }
   protoOf($getPostsCOROUTINE$0).md = function () {
     var suspendResult = this.cd_1;
@@ -5519,7 +5622,7 @@
             this.bd_1 = 3;
             this.bd_1 = 2;
             this.ad_1 = 1;
-            suspendResult = get_api(window).h3d('get_posts.php', VOID, VOID, VOID, this);
+            suspendResult = get_api(window).h3e('get_posts.php', VOID, VOID, VOID, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -5530,11 +5633,11 @@
             var result = tmp0_safe_receiver == null ? null : decodeToString(tmp0_safe_receiver);
             if (!(result == null)) {
               var this_0 = Default_getInstance();
-              var this_1 = this_0.o2t();
+              var this_1 = this_0.u2t();
               var this_2 = serializer(this_1, createKType(getKClass(List), arrayOf([createInvariantKTypeProjection(createKType(getKClass(Post), arrayOf([]), false))]), false));
-              this.d47_1(this_0.d35(isInterface(this_2, KSerializer) ? this_2 : THROW_CCE(), result));
+              this.f48_1(this_0.c36(isInterface(this_2, KSerializer) ? this_2 : THROW_CCE(), result));
             } else {
-              this.e47_1(Exception_init_$Create$('Something went wrong'));
+              this.g48_1(Exception_init_$Create$('Something went wrong'));
             }
 
             this.bd_1 = 3;
@@ -5546,7 +5649,7 @@
             if (tmp_0 instanceof Exception) {
               var e = this.dd_1;
               println(e);
-              this.e47_1(e);
+              this.g48_1(e);
               this.ad_1 = 4;
               continue $sm;
             } else {
@@ -5571,19 +5674,19 @@
      while (true);
   };
   function PopularArticle(category, authorName, readTime, title) {
-    this.q46_1 = category;
-    this.r46_1 = authorName;
-    this.s46_1 = readTime;
-    this.t46_1 = title;
+    this.s47_1 = category;
+    this.t47_1 = authorName;
+    this.u47_1 = readTime;
+    this.v47_1 = title;
   }
   protoOf(PopularArticle).toString = function () {
-    return 'PopularArticle(category=' + this.q46_1 + ', authorName=' + this.r46_1 + ', readTime=' + this.s46_1 + ', title=' + this.t46_1 + ')';
+    return 'PopularArticle(category=' + this.s47_1 + ', authorName=' + this.t47_1 + ', readTime=' + this.u47_1 + ', title=' + this.v47_1 + ')';
   };
   protoOf(PopularArticle).hashCode = function () {
-    var result = getStringHashCode(this.q46_1);
-    result = imul(result, 31) + getStringHashCode(this.r46_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.s46_1) | 0;
-    result = imul(result, 31) + getStringHashCode(this.t46_1) | 0;
+    var result = getStringHashCode(this.s47_1);
+    result = imul(result, 31) + getStringHashCode(this.t47_1) | 0;
+    result = imul(result, 31) + getStringHashCode(this.u47_1) | 0;
+    result = imul(result, 31) + getStringHashCode(this.v47_1) | 0;
     return result;
   };
   protoOf(PopularArticle).equals = function (other) {
@@ -5592,83 +5695,83 @@
     if (!(other instanceof PopularArticle))
       return false;
     var tmp0_other_with_cast = other instanceof PopularArticle ? other : THROW_CCE();
-    if (!(this.q46_1 === tmp0_other_with_cast.q46_1))
+    if (!(this.s47_1 === tmp0_other_with_cast.s47_1))
       return false;
-    if (!(this.r46_1 === tmp0_other_with_cast.r46_1))
+    if (!(this.t47_1 === tmp0_other_with_cast.t47_1))
       return false;
-    if (!(this.s46_1 === tmp0_other_with_cast.s46_1))
+    if (!(this.u47_1 === tmp0_other_with_cast.u47_1))
       return false;
-    if (!(this.t46_1 === tmp0_other_with_cast.t46_1))
+    if (!(this.v47_1 === tmp0_other_with_cast.v47_1))
       return false;
     return true;
   };
   function HomePage($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-763277764);
-    if (!($changed === 0) ? true : !$composer_0.c1e()) {
+    $composer_0 = $composer_0.b1g(-763277764);
+    if (!($changed === 0) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
-        traceEventStart(-763277764, $changed, -1, 'com.canerture.androidhub.pages.HomePage (Index.kt:60)');
+        traceEventStart(-763277764, $changed, -1, 'com.canerture.androidhub.pages.HomePage (Index.kt:62)');
       }
       var breakpoint = rememberBreakpoint($composer_0, 0);
-      $composer_0.h1e(748809039);
+      $composer_0.j1e(748809107);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_0 = $composer_0;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = this_0.l1f();
+      var it = this_0.n1f();
       var tmp;
-      if (false ? true : it === Companion_getInstance().z18_1) {
+      if (false ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.HomePage.<anonymous>' call
         var value = mutableStateOf(emptyList());
-        this_0.r1f(value);
+        this_0.t1f(value);
         tmp = value;
       } else {
         tmp = it;
       }
       var tmp_0 = tmp;
       var tmp0_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       var postList$delegate = tmp0_group;
-      $composer_0.h1e(748809109);
+      $composer_0.j1e(748809177);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_1 = $composer_0;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_0 = this_1.l1f();
+      var it_0 = this_1.n1f();
       var tmp_1;
-      if (false ? true : it_0 === Companion_getInstance().z18_1) {
+      if (false ? true : it_0 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.HomePage.<anonymous>' call
         var value_0 = mutableStateOf(null);
-        this_1.r1f(value_0);
+        this_1.t1f(value_0);
         tmp_1 = value_0;
       } else {
         tmp_1 = it_0;
       }
       var tmp_2 = tmp_1;
       var tmp1_group = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       var error$delegate = tmp1_group;
-      $composer_0.h1e(748809177);
+      $composer_0.j1e(748809246);
       // Inline function 'androidx.compose.runtime.cache' call
       var this_2 = $composer_0;
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_1 = this_2.l1f();
+      var it_1 = this_2.n1f();
       var tmp_3;
-      if (false ? true : it_1 === Companion_getInstance().z18_1) {
+      if (false ? true : it_1 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.HomePage.<anonymous>' call
         var value_1 = HomePage$slambda_0(postList$delegate, error$delegate, null);
-        this_2.r1f(value_1);
+        this_2.t1f(value_1);
         tmp_3 = value_1;
       } else {
         tmp_3 = it_1;
       }
       var tmp_4 = tmp_3;
       var tmp2_group = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
-      $composer_0.i1e();
+      $composer_0.k1e();
       LaunchedEffect(Unit_instance, tmp2_group, $composer_0, 70);
       var popularList = listOf([new PopularArticle('Category 1', 'Author 1', '1 Min', 'Title 1'), new PopularArticle('Category 2', 'Author 2', '5 Min', 'Title 2'), new PopularArticle('Category 3', 'Author 2', '10 Min', 'Title 3')]);
       var latestList = listOf([new PopularArticle('Category 1', 'Author 1', '1 Min', 'Title 1'), new PopularArticle('Category 2', 'Author 2', '5 Min', 'Title 2'), new PopularArticle('Category 3', 'Author 2', '10 Min', 'Title 3'), new PopularArticle('Category 3', 'Author 2', '10 Min', 'Title 3'), new PopularArticle('Category 3', 'Author 2', '10 Min', 'Title 3')]);
@@ -5679,49 +5782,49 @@
       var dispatchReceiver = composableLambda(tmp_5, -1997478029, true, HomePage$lambda_3(breakpoint, popularList, latestList, postList$delegate, error$delegate));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it_2 = $composer_1.l1f();
+      var it_2 = $composer_1.n1f();
       var tmp_6;
-      if (invalid ? true : it_2 === Companion_getInstance().z18_1) {
+      if (invalid ? true : it_2 === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.HomePage.<anonymous>.<anonymous>' call
         var value_2 = ComposableLambda$invoke$ref_111(dispatchReceiver);
-        $composer_1.r1f(value_2);
+        $composer_1.t1f(value_2);
         tmp_6 = value_2;
       } else {
         tmp_6 = it_2;
       }
       var tmp_7 = tmp_6;
       var tmp0 = (tmp_7 == null ? true : !(tmp_7 == null)) ? tmp_7 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       PageLayout('Home', tmp0, $composer_0, 54);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp3_safe_receiver = $composer_0.a1g();
+    var tmp3_safe_receiver = $composer_0.c1g();
     if (tmp3_safe_receiver == null)
       null;
     else {
-      tmp3_safe_receiver.w1k(HomePage$lambda_4($changed));
+      tmp3_safe_receiver.y1k(HomePage$lambda_4($changed));
     }
   }
   function AndroidHeroContent(breakpoint, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-657681109);
+    $composer_0 = $composer_0.b1g(-657681109);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.a16(breakpoint) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.c16(breakpoint) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
-        traceEventStart(-657681109, $dirty, -1, 'com.canerture.androidhub.pages.AndroidHeroContent (Index.kt:155)');
+        traceEventStart(-657681109, $dirty, -1, 'com.canerture.androidhub.pages.AndroidHeroContent (Index.kt:159)');
       }
       var tmp = CenterVertically_instance;
       // Inline function 'kotlin.run' call
@@ -5731,47 +5834,47 @@
       var dispatchReceiver = composableLambda(tmp_0, -1908100434, true, AndroidHeroContent$lambda(breakpoint));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_1;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.AndroidHeroContent.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_113(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_1 = value;
       } else {
         tmp_1 = it;
       }
       var tmp_2 = tmp_1;
       var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Row(null, null, tmp, null, tmp0, $composer_0, 24576, 11);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(AndroidHeroContent$lambda_0(breakpoint, $changed));
+      tmp0_safe_receiver.y1k(AndroidHeroContent$lambda_0(breakpoint, $changed));
     }
   }
   function PopularPosts(list, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(1314021774);
+    $composer_0 = $composer_0.b1g(1314021774);
     if (isTraceInProgress()) {
-      traceEventStart(1314021774, $changed, -1, 'com.canerture.androidhub.pages.PopularPosts (Index.kt:203)');
+      traceEventStart(1314021774, $changed, -1, 'com.canerture.androidhub.pages.PopularPosts (Index.kt:207)');
     }
-    var tmp = margin(color(fontWeight_0(textAlign(Companion_instance_2, Companion_instance_3.r2j()), Companion_instance_6.r2k()), getSitePalette().c45_1.f3i()), VOID, VOID, get_cssRem(1));
+    var tmp = margin(color(fontWeight_0(textAlign(Companion_instance_2, Companion_instance_3.t2j()), Companion_instance_6.t2k()), getSitePalette().e46_1.f3j()), VOID, VOID, get_cssRem(1));
     SpanText('Popular Posts', tmp, null, null, $composer_0, 70, 12);
     var tmp_0 = fillMaxWidth(Companion_instance_2);
     var tmp_1 = CenterVertically_instance;
@@ -5782,44 +5885,44 @@
     var dispatchReceiver = composableLambda(tmp_2, -1358926959, true, PopularPosts$lambda(list));
     // Inline function 'androidx.compose.runtime.remember' call
     var $composer_1 = $composer_0;
-    $composer_1.h1e(1157296644);
+    $composer_1.j1e(1157296644);
     sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var invalid = $composer_1.a16(dispatchReceiver);
+    var invalid = $composer_1.c16(dispatchReceiver);
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_1.l1f();
+    var it = $composer_1.n1f();
     var tmp_3;
-    if (invalid ? true : it === Companion_getInstance().z18_1) {
+    if (invalid ? true : it === Companion_getInstance().b19_1) {
       // Inline function 'com.canerture.androidhub.pages.PopularPosts.<anonymous>.<anonymous>' call
       var value = ComposableLambda$invoke$ref_114(dispatchReceiver);
-      $composer_1.r1f(value);
+      $composer_1.t1f(value);
       tmp_3 = value;
     } else {
       tmp_3 = it;
     }
     var tmp_4 = tmp_3;
     var tmp0 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
-    $composer_1.i1e();
+    $composer_1.k1e();
     Row(tmp_0, null, tmp_1, null, tmp0, $composer_0, 24584, 10);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(PopularPosts$lambda_0(list, $changed));
+      tmp0_safe_receiver.y1k(PopularPosts$lambda_0(list, $changed));
     }
   }
   function LatestPosts(list, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(726270168);
+    $composer_0 = $composer_0.b1g(726270168);
     if (isTraceInProgress()) {
-      traceEventStart(726270168, $changed, -1, 'com.canerture.androidhub.pages.LatestPosts (Index.kt:228)');
+      traceEventStart(726270168, $changed, -1, 'com.canerture.androidhub.pages.LatestPosts (Index.kt:232)');
     }
-    var tmp = margin(color(fontWeight_0(textAlign(fillMaxWidth(Companion_instance_2), Companion_instance_3.s2j()), Companion_instance_6.r2k()), getSitePalette().c45_1.f3i()), get_cssRem(3), VOID, get_cssRem(1));
+    var tmp = margin(color(fontWeight_0(textAlign(fillMaxWidth(Companion_instance_2), Companion_instance_3.u2j()), Companion_instance_6.t2k()), getSitePalette().e46_1.f3j()), get_cssRem(3), VOID, get_cssRem(1));
     SpanText('Latest Posts', tmp, null, null, $composer_0, 70, 12);
     var tmp0_modifier = fillMaxWidth(Companion_instance_2);
     var tmp1_numColumns = new ResponsiveValues(2, 1, 3, 3, 3);
@@ -5830,48 +5933,48 @@
     var dispatchReceiver = composableLambda(tmp_0, -1740246897, true, LatestPosts$lambda(list));
     // Inline function 'androidx.compose.runtime.remember' call
     var $composer_1 = $composer_0;
-    $composer_1.h1e(1157296644);
+    $composer_1.j1e(1157296644);
     sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var invalid = $composer_1.a16(dispatchReceiver);
+    var invalid = $composer_1.c16(dispatchReceiver);
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_1.l1f();
+    var it = $composer_1.n1f();
     var tmp_1;
-    if (invalid ? true : it === Companion_getInstance().z18_1) {
+    if (invalid ? true : it === Companion_getInstance().b19_1) {
       // Inline function 'com.canerture.androidhub.pages.LatestPosts.<anonymous>.<anonymous>' call
       var value = ComposableLambda$invoke$ref_115(dispatchReceiver);
-      $composer_1.r1f(value);
+      $composer_1.t1f(value);
       tmp_1 = value;
     } else {
       tmp_1 = it;
     }
     var tmp_2 = tmp_1;
     var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-    $composer_1.i1e();
+    $composer_1.k1e();
     SimpleGrid(tmp1_numColumns, tmp0_modifier, null, null, tmp0, $composer_0, 24640, 12);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(LatestPosts$lambda_0(list, $changed));
+      tmp0_safe_receiver.y1k(LatestPosts$lambda_0(list, $changed));
     }
   }
   function ComposableLambda$invoke$ref_110($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function ComposableSingletons$IndexKt$lambda_1$lambda_5yb608($this$Button, $composer, $changed) {
     var $composer_0 = $composer;
     if (isTraceInProgress()) {
-      traceEventStart(1189674197, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-1.<anonymous> (Index.kt:185)');
+      traceEventStart(1189674197, $changed, -1, 'com.canerture.androidhub.pages.ComposableSingletons$IndexKt.lambda-1.<anonymous> (Index.kt:189)');
     }
-    var tmp = color(textAlign(lineHeight(fontSize(Companion_instance_2, get_cssRem(1.25)), 2), Companion_instance_3.s2j()), getSitePalette().b45_1);
+    var tmp = color(textAlign(lineHeight(fontSize(Companion_instance_2, get_cssRem(1.25)), 2), Companion_instance_3.u2j()), getSitePalette().d46_1);
     SpanText('Apply to be an author', tmp, null, null, $composer_0, 70, 12);
     if (isTraceInProgress()) {
       traceEventEnd();
@@ -5881,7 +5984,7 @@
   function ComposableSingletons$IndexKt() {
     ComposableSingletons$IndexKt_instance = this;
     var tmp = this;
-    tmp.f47_1 = ComposableLambda$invoke$ref_110(composableLambdaInstance(1189674197, false, ComposableSingletons$IndexKt$lambda_1$lambda_5yb608));
+    tmp.h48_1 = ComposableLambda$invoke$ref_110(composableLambdaInstance(1189674197, false, ComposableSingletons$IndexKt$lambda_1$lambda_5yb608));
   }
   var ComposableSingletons$IndexKt_instance;
   function ComposableSingletons$IndexKt_getInstance() {
@@ -5930,8 +6033,8 @@
     };
   }
   function HomePage$slambda($postList$delegate, $error$delegate, resultContinuation) {
-    this.o47_1 = $postList$delegate;
-    this.p47_1 = $error$delegate;
+    this.q48_1 = $postList$delegate;
+    this.r48_1 = $error$delegate;
     CoroutineImpl.call(this, resultContinuation);
   }
   protoOf(HomePage$slambda).az = function ($this$LaunchedEffect, $completion) {
@@ -5950,23 +6053,34 @@
         var tmp = this.ad_1;
         switch (tmp) {
           case 0:
-            this.bd_1 = 2;
+            this.bd_1 = 3;
             this.ad_1 = 1;
-            var tmp_0 = HomePage$slambda$lambda(this.o47_1);
-            suspendResult = getPosts(tmp_0, HomePage$slambda$lambda_0(this.p47_1), this);
+            suspendResult = get_http(window).fz('https://androidhub.dev/api/get_posts.php', VOID, VOID, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 1:
-            return Unit_instance;
+            this.t48_1 = suspendResult;
+            this.u48_1 = decodeToString(this.t48_1);
+            println(this.u48_1);
+            this.ad_1 = 2;
+            var tmp_0 = HomePage$slambda$lambda(this.q48_1);
+            suspendResult = getPosts(tmp_0, HomePage$slambda$lambda_0(this.r48_1), this);
+            if (suspendResult === get_COROUTINE_SUSPENDED()) {
+              return suspendResult;
+            }
+
+            continue $sm;
           case 2:
+            return Unit_instance;
+          case 3:
             throw this.dd_1;
         }
       } catch ($p) {
         var e = $p;
-        if (this.bd_1 === 2) {
+        if (this.bd_1 === 3) {
           throw e;
         } else {
           this.ad_1 = this.bd_1;
@@ -5976,8 +6090,8 @@
      while (true);
   };
   protoOf(HomePage$slambda).bz = function ($this$LaunchedEffect, completion) {
-    var i = new HomePage$slambda(this.o47_1, this.p47_1, completion);
-    i.q47_1 = $this$LaunchedEffect;
+    var i = new HomePage$slambda(this.q48_1, this.r48_1, completion);
+    i.s48_1 = $this$LaunchedEffect;
     return i;
   };
   function HomePage$slambda_0($postList$delegate, $error$delegate, resultContinuation) {
@@ -5992,20 +6106,20 @@
     return function ($this$PageLayout, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(-1997478029, $changed, -1, 'com.canerture.androidhub.pages.HomePage.<anonymous> (Index.kt:132)');
+        traceEventStart(-1997478029, $changed, -1, 'com.canerture.androidhub.pages.HomePage.<anonymous> (Index.kt:136)');
       }
       AndroidHeroContent($breakpoint, $composer_0, 0);
-      $composer_0.h1e(-219728473);
+      $composer_0.j1e(-219728282);
       // Inline function 'kotlin.collections.isNotEmpty' call
       if (!HomePage$lambda($postList$delegate).s()) {
         Text(toString_0(HomePage$lambda($postList$delegate)), $composer_0, 0);
       }
-      $composer_0.i1e();
-      $composer_0.h1e(-219728387);
+      $composer_0.k1e();
+      $composer_0.j1e(-219728196);
       if (!(HomePage$lambda_1($error$delegate) == null)) {
         Text('Error: ' + HomePage$lambda_1($error$delegate), $composer_0, 0);
       }
-      $composer_0.i1e();
+      $composer_0.k1e();
       PopularPosts($popularList, $composer_0, 0);
       LatestPosts($latestList, $composer_0, 0);
       var tmp;
@@ -6018,7 +6132,7 @@
   }
   function ComposableLambda$invoke$ref_111($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function HomePage$lambda_4($$changed) {
@@ -6029,7 +6143,7 @@
   }
   function AndroidHeroContent$lambda$lambda$lambda($ctx) {
     return function (it) {
-      $ctx.g3e_1.s3g('/about');
+      $ctx.g3f_1.s3h('/about');
       return Unit_instance;
     };
   }
@@ -6037,19 +6151,19 @@
     return function ($this$Column, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(1836037349, $changed, -1, 'com.canerture.androidhub.pages.AndroidHeroContent.<anonymous>.<anonymous> (Index.kt:160)');
+        traceEventStart(1836037349, $changed, -1, 'com.canerture.androidhub.pages.AndroidHeroContent.<anonymous>.<anonymous> (Index.kt:164)');
       }
-      var tmp = fontSize(color(toModifier(get_HeadlineTextStyle(), [], $composer_0, 64), getSitePalette().a45_1), getHeadlineFontSize($breakpoint));
+      var tmp = fontSize(color(toModifier(get_HeadlineTextStyle(), [], $composer_0, 64), getSitePalette().c46_1), getHeadlineFontSize($breakpoint));
       SpanText('Hi \uD83D\uDC4B', tmp, null, null, $composer_0, 70, 12);
       Spacer($composer_0, 0);
-      var tmp_0 = fontSize(color(toModifier(get_SubheadlineTextStyle(), [], $composer_0, 64), getSitePalette().c45_1), getSubheadlineFontSize($breakpoint));
+      var tmp_0 = fontSize(color(toModifier(get_SubheadlineTextStyle(), [], $composer_0, 64), getSitePalette().e46_1), getSubheadlineFontSize($breakpoint));
       SpanText('Let\u2019s explore everything about the exciting world of Android together. On this platform, you can delve into the vast opportunities offered by the Android operating system and examine the latest developments in the field. Come on, let\u2019s discover the limitless world of Android together!', tmp_0, null, null, $composer_0, 70, 12);
       Spacer($composer_0, 0);
       var ctx = rememberPageContext($composer_0, 0);
       var tmp_1 = AndroidHeroContent$lambda$lambda$lambda(ctx);
-      var tmp_2 = setVariable(setVariable(margin(Companion_instance_2, get_cssRem(1)), ButtonVars_getInstance().v3s(), getSitePalette().a45_1), ButtonVars_getInstance().x3s(), getSitePalette().c45_1);
+      var tmp_2 = setVariable(setVariable(margin(Companion_instance_2, get_cssRem(1)), ButtonVars_getInstance().v3t(), getSitePalette().c46_1), ButtonVars_getInstance().x3t(), getSitePalette().e46_1);
       var tmp_3 = LG_getInstance();
-      Button(tmp_1, tmp_2, null, null, false, tmp_3, null, null, null, ComposableSingletons$IndexKt_getInstance().f47_1, $composer_0, 805568576, 476);
+      Button(tmp_1, tmp_2, null, null, false, tmp_3, null, null, null, ComposableSingletons$IndexKt_getInstance().h48_1, $composer_0, 805568576, 476);
       var tmp_4;
       if (isTraceInProgress()) {
         traceEventEnd();
@@ -6060,14 +6174,14 @@
   }
   function ComposableLambda$invoke$ref_112($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function AndroidHeroContent$lambda($breakpoint) {
     return function ($this$Row, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(-1908100434, $changed, -1, 'com.canerture.androidhub.pages.AndroidHeroContent.<anonymous> (Index.kt:159)');
+        traceEventStart(-1908100434, $changed, -1, 'com.canerture.androidhub.pages.AndroidHeroContent.<anonymous> (Index.kt:163)');
       }
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
@@ -6076,26 +6190,26 @@
       var dispatchReceiver = composableLambda(tmp, 1836037349, true, AndroidHeroContent$lambda$lambda($breakpoint));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_0;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.canerture.androidhub.pages.AndroidHeroContent.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_112(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_0 = value;
       } else {
         tmp_0 = it;
       }
       var tmp_1 = tmp_0;
       var tmp0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       Column(null, null, null, null, tmp0, $composer_0, 24576, 15);
       var tmp_2 = height(Companion_instance_2, get_cssRem(28));
       // Inline function 'org.jetbrains.compose.web.css.Companion.Block' call
@@ -6114,7 +6228,7 @@
   }
   function ComposableLambda$invoke$ref_113($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function AndroidHeroContent$lambda_0($breakpoint, $$changed) {
@@ -6127,7 +6241,7 @@
     return function ($this$Row, $composer, $changed) {
       var $composer_0 = $composer;
       if (isTraceInProgress()) {
-        traceEventStart(-1358926959, $changed, -1, 'com.canerture.androidhub.pages.PopularPosts.<anonymous> (Index.kt:216)');
+        traceEventStart(-1358926959, $changed, -1, 'com.canerture.androidhub.pages.PopularPosts.<anonymous> (Index.kt:220)');
       }
       // Inline function 'kotlin.collections.forEachIndexed' call
       var index = 0;
@@ -6150,7 +6264,7 @@
   }
   function ComposableLambda$invoke$ref_114($boundThis) {
     return function (p0, p1, p2) {
-      return $boundThis.w29(p0, p1, p2);
+      return $boundThis.y29(p0, p1, p2);
     };
   }
   function PopularPosts$lambda_0($list, $$changed) {
@@ -6163,9 +6277,9 @@
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
         if (isTraceInProgress()) {
-          traceEventStart(-1740246897, $changed, -1, 'com.canerture.androidhub.pages.LatestPosts.<anonymous> (Index.kt:243)');
+          traceEventStart(-1740246897, $changed, -1, 'com.canerture.androidhub.pages.LatestPosts.<anonymous> (Index.kt:247)');
         }
         // Inline function 'kotlin.collections.forEachIndexed' call
         var index = 0;
@@ -6185,7 +6299,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.t18();
+        $composer_0.v18();
         tmp = Unit_instance;
       }
       return Unit_instance;
@@ -6193,7 +6307,7 @@
   }
   function ComposableLambda$invoke$ref_115($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function LatestPosts$lambda_0($list, $$changed) {
@@ -6204,8 +6318,8 @@
   }
   function PostPage($composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-96160543);
-    if (!($changed === 0) ? true : !$composer_0.c1e()) {
+    $composer_0 = $composer_0.b1g(-96160543);
+    if (!($changed === 0) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-96160543, $changed, -1, 'com.canerture.androidhub.pages.PostPage (Post.kt:8)');
       }
@@ -6214,13 +6328,13 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(PostPage$lambda($changed));
+      tmp0_safe_receiver.y1k(PostPage$lambda($changed));
     }
   }
   function PostPage$lambda($$changed) {
@@ -6230,10 +6344,7 @@
     };
   }
   //region block: post-declaration
-  protoOf($serializer).m2y = typeParametersSerializers;
-  //endregion
-  //region block: init
-  Companion_instance_14 = new Companion();
+  protoOf($serializer).k2z = typeParametersSerializers;
   //endregion
   main();
   return _;

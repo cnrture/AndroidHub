@@ -220,7 +220,7 @@
   var lightened = kotlin_com_varabyte_kobweb_kobweb_compose.$_$.g;
   var registerKeyframes = kotlin_com_varabyte_kobweb_silk_foundation.$_$.b;
   var suffixedWith = kotlin_com_varabyte_kobweb_silk_foundation.$_$.i1;
-  var removeClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.d;
+  var removeClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.c;
   var addClass = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.a;
   var ColorGroup = kotlin_com_varabyte_kobweb_silk_foundation.$_$.f1;
   var MutablePalette = kotlin_com_varabyte_kobweb_silk_foundation.$_$.g1;

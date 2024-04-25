@@ -153,7 +153,7 @@
   var produceState = kotlin_org_jetbrains_compose_runtime_runtime.$_$.v;
   var CoroutineImpl = kotlin_kotlin.$_$.ga;
   var ProduceStateScope = kotlin_org_jetbrains_compose_runtime_runtime.$_$.l;
-  var EventListener = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.e;
+  var EventListener = kotlin_org_jetbrains_kotlin_kotlin_dom_api_compat.$_$.d;
   var get_COROUTINE_SUSPENDED = kotlin_kotlin.$_$.r9;
   var throwKotlinNothingValueException = kotlin_kotlin.$_$.ph;
   var SuspendFunction1 = kotlin_kotlin.$_$.ha;

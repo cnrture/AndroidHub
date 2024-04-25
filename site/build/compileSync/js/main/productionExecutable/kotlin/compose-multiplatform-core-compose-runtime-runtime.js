@@ -189,13 +189,13 @@
   setMetadataFor(CompositionContextHolder, 'CompositionContextHolder', classMeta, VOID, [ReusableRememberObserver]);
   setMetadataFor(ComposerImpl$derivedStateObserver$1, VOID, classMeta);
   function changed(value) {
-    return this.d1f(value);
+    return this.f1f(value);
   }
   function changed_0(value) {
-    return this.e1f(value);
+    return this.g1f(value);
   }
   function changedInstance(value) {
-    return this.a16(value);
+    return this.c16(value);
   }
   setMetadataFor(Composer, 'Composer', interfaceMeta);
   setMetadataFor(ComposerImpl, 'ComposerImpl', classMeta, VOID, [Composer]);
@@ -333,10 +333,10 @@
   setMetadataFor(MutableVector, 'MutableVector', classMeta);
   setMetadataFor(ScopeMap, 'ScopeMap', classMeta, VOID, VOID, ScopeMap);
   setMetadataFor(AbstractListIterator, 'AbstractListIterator', classMeta);
-  setMetadataFor(AbstractPersistentList, 'AbstractPersistentList', classMeta, AbstractList, [List, Collection, AbstractList]);
+  setMetadataFor(AbstractPersistentList, 'AbstractPersistentList', classMeta, AbstractList, [Collection, List, AbstractList]);
   setMetadataFor(BufferIterator, 'BufferIterator', classMeta, AbstractListIterator);
-  setMetadataFor(PersistentVector, 'PersistentVector', classMeta, AbstractPersistentList, [List, Collection, AbstractPersistentList]);
-  setMetadataFor(PersistentVectorBuilder, 'PersistentVectorBuilder', classMeta, AbstractMutableList, [AbstractMutableList, MutableCollection, MutableList]);
+  setMetadataFor(PersistentVector, 'PersistentVector', classMeta, AbstractPersistentList, [Collection, List, AbstractPersistentList]);
+  setMetadataFor(PersistentVectorBuilder, 'PersistentVectorBuilder', classMeta, AbstractMutableList, [AbstractMutableList, MutableList, MutableCollection]);
   setMetadataFor(PersistentVectorIterator, 'PersistentVectorIterator', classMeta, AbstractListIterator);
   setMetadataFor(PersistentVectorMutableIterator, 'PersistentVectorMutableIterator', classMeta, AbstractListIterator);
   setMetadataFor(Companion_6, 'Companion', objectMeta);
@@ -403,82 +403,82 @@
   function Applier() {
   }
   function OffsetApplier(applier, offset) {
-    this.g12_1 = applier;
-    this.h12_1 = offset;
-    this.i12_1 = 0;
+    this.i12_1 = applier;
+    this.j12_1 = offset;
+    this.k12_1 = 0;
   }
-  protoOf(OffsetApplier).x11 = function () {
-    return this.g12_1.x11();
+  protoOf(OffsetApplier).z11 = function () {
+    return this.i12_1.z11();
   };
-  protoOf(OffsetApplier).a12 = function (node) {
-    this.i12_1 = this.i12_1 + 1 | 0;
-    this.g12_1.a12(node);
+  protoOf(OffsetApplier).c12 = function (node) {
+    this.k12_1 = this.k12_1 + 1 | 0;
+    this.i12_1.c12(node);
   };
-  protoOf(OffsetApplier).b12 = function () {
+  protoOf(OffsetApplier).d12 = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.i12_1 > 0)) {
+    if (!(this.k12_1 > 0)) {
       // Inline function 'androidx.compose.runtime.OffsetApplier.up.<anonymous>' call
       var message = 'OffsetApplier up called with no corresponding down';
       composeRuntimeError(toString(message));
     }
-    this.i12_1 = this.i12_1 - 1 | 0;
-    this.g12_1.b12();
+    this.k12_1 = this.k12_1 - 1 | 0;
+    this.i12_1.d12();
   };
-  protoOf(OffsetApplier).c12 = function (index, instance) {
-    this.g12_1.c12(index + (this.i12_1 === 0 ? this.h12_1 : 0) | 0, instance);
+  protoOf(OffsetApplier).e12 = function (index, instance) {
+    this.i12_1.e12(index + (this.k12_1 === 0 ? this.j12_1 : 0) | 0, instance);
   };
-  protoOf(OffsetApplier).d12 = function (index, instance) {
-    this.g12_1.d12(index + (this.i12_1 === 0 ? this.h12_1 : 0) | 0, instance);
+  protoOf(OffsetApplier).f12 = function (index, instance) {
+    this.i12_1.f12(index + (this.k12_1 === 0 ? this.j12_1 : 0) | 0, instance);
   };
-  protoOf(OffsetApplier).e12 = function (index, count) {
-    this.g12_1.e12(index + (this.i12_1 === 0 ? this.h12_1 : 0) | 0, count);
+  protoOf(OffsetApplier).g12 = function (index, count) {
+    this.i12_1.g12(index + (this.k12_1 === 0 ? this.j12_1 : 0) | 0, count);
   };
-  protoOf(OffsetApplier).f12 = function (from, to, count) {
-    var effectiveOffset = this.i12_1 === 0 ? this.h12_1 : 0;
-    this.g12_1.f12(from + effectiveOffset | 0, to + effectiveOffset | 0, count);
+  protoOf(OffsetApplier).h12 = function (from, to, count) {
+    var effectiveOffset = this.k12_1 === 0 ? this.j12_1 : 0;
+    this.i12_1.h12(from + effectiveOffset | 0, to + effectiveOffset | 0, count);
   };
   function AbstractApplier(root) {
-    this.j12_1 = root;
+    this.l12_1 = root;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.k12_1 = ArrayList_init_$Create$();
-    this.l12_1 = this.j12_1;
+    tmp.m12_1 = ArrayList_init_$Create$();
+    this.n12_1 = this.l12_1;
   }
-  protoOf(AbstractApplier).m12 = function (_set____db54di) {
-    this.l12_1 = _set____db54di;
+  protoOf(AbstractApplier).o12 = function (_set____db54di) {
+    this.n12_1 = _set____db54di;
   };
-  protoOf(AbstractApplier).x11 = function () {
-    return this.l12_1;
+  protoOf(AbstractApplier).z11 = function () {
+    return this.n12_1;
   };
-  protoOf(AbstractApplier).n12 = function (node) {
-    this.k12_1.y(this.x11());
-    this.m12(node);
+  protoOf(AbstractApplier).p12 = function (node) {
+    this.m12_1.y(this.z11());
+    this.o12(node);
   };
-  protoOf(AbstractApplier).a12 = function (node) {
-    return this.n12((node == null ? true : !(node == null)) ? node : THROW_CCE());
+  protoOf(AbstractApplier).c12 = function (node) {
+    return this.p12((node == null ? true : !(node == null)) ? node : THROW_CCE());
   };
-  protoOf(AbstractApplier).b12 = function () {
+  protoOf(AbstractApplier).d12 = function () {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.collections.isNotEmpty' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!this.k12_1.s()) {
+    if (!!this.m12_1.s()) {
       // Inline function 'androidx.compose.runtime.AbstractApplier.up.<anonymous>' call
       var message = 'empty stack';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    this.m12(this.k12_1.k1(this.k12_1.l() - 1 | 0));
+    this.o12(this.m12_1.k1(this.m12_1.l() - 1 | 0));
   };
   function FrameAwaiter(onFrame, continuation) {
-    this.o12_1 = onFrame;
-    this.p12_1 = continuation;
+    this.q12_1 = onFrame;
+    this.r12_1 = continuation;
   }
-  protoOf(FrameAwaiter).q12 = function (timeNanos) {
+  protoOf(FrameAwaiter).s12 = function (timeNanos) {
     // Inline function 'kotlin.runCatching' call
     var tmp;
     try {
       // Inline function 'kotlin.Companion.success' call
       // Inline function 'androidx.compose.runtime.FrameAwaiter.resume.<anonymous>' call
-      var value = this.o12_1(timeNanos);
+      var value = this.q12_1(timeNanos);
       tmp = _Result___init__impl__xyqfz8(value);
     } catch ($p) {
       var tmp_0;
@@ -492,17 +492,17 @@
       tmp = tmp_0;
     }
     var tmp$ret$3 = tmp;
-    this.p12_1.s6(tmp$ret$3);
+    this.r12_1.s6(tmp$ret$3);
   };
   function fail($this, cause) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.s12_1;
-    if (!($this.t12_1 == null))
+    $this.u12_1;
+    if (!($this.v12_1 == null))
       return Unit_instance;
-    $this.t12_1 = cause;
+    $this.v12_1 = cause;
     // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
-    var this_0 = $this.u12_1;
+    var this_0 = $this.w12_1;
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
     var last = this_0.l() - 1 | 0;
@@ -513,20 +513,20 @@
         var item = this_0.m(index);
         // Inline function 'androidx.compose.runtime.BroadcastFrameClock.fail.<anonymous>.<anonymous>' call
         // Inline function 'kotlin.coroutines.resumeWithException' call
-        var this_1 = item.p12_1;
+        var this_1 = item.r12_1;
         // Inline function 'kotlin.Companion.failure' call
         var tmp$ret$0 = _Result___init__impl__xyqfz8(createFailure(cause));
         this_1.s6(tmp$ret$0);
       }
        while (inductionVariable <= last);
-    $this.u12_1.f1();
+    $this.w12_1.f1();
   }
   function BroadcastFrameClock$withFrameNanos$lambda(this$0, $awaiter) {
     return function (it) {
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      this$0.s12_1;
-      var tmp = this$0.u12_1;
+      this$0.u12_1;
+      var tmp = this$0.w12_1;
       var tmp_0;
       if ($awaiter._v == null) {
         throwUninitializedPropertyAccessException('awaiter');
@@ -539,43 +539,43 @@
   }
   function BroadcastFrameClock(onNewAwaiters) {
     onNewAwaiters = onNewAwaiters === VOID ? null : onNewAwaiters;
-    this.r12_1 = onNewAwaiters;
-    this.s12_1 = createSynchronizedObject();
-    this.t12_1 = null;
+    this.t12_1 = onNewAwaiters;
+    this.u12_1 = createSynchronizedObject();
+    this.v12_1 = null;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.u12_1 = ArrayList_init_$Create$();
+    tmp.w12_1 = ArrayList_init_$Create$();
     var tmp_0 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_0.v12_1 = ArrayList_init_$Create$();
+    tmp_0.x12_1 = ArrayList_init_$Create$();
   }
-  protoOf(BroadcastFrameClock).w12 = function () {
+  protoOf(BroadcastFrameClock).y12 = function () {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.s12_1;
+    this.u12_1;
     // Inline function 'androidx.compose.runtime.BroadcastFrameClock.<get-hasAwaiters>.<anonymous>' call
     // Inline function 'kotlin.collections.isNotEmpty' call
-    return !this.u12_1.s();
+    return !this.w12_1.s();
   };
-  protoOf(BroadcastFrameClock).x12 = function (timeNanos) {
+  protoOf(BroadcastFrameClock).z12 = function (timeNanos) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.s12_1;
-    var toResume = this.u12_1;
-    this.u12_1 = this.v12_1;
-    this.v12_1 = toResume;
+    this.u12_1;
+    var toResume = this.w12_1;
+    this.w12_1 = this.x12_1;
+    this.x12_1 = toResume;
     var inductionVariable = 0;
     var last = toResume.l();
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        toResume.m(i).q12(timeNanos);
+        toResume.m(i).s12(timeNanos);
       }
        while (inductionVariable < last);
     toResume.f1();
   };
-  protoOf(BroadcastFrameClock).y12 = function (onFrame, $completion) {
+  protoOf(BroadcastFrameClock).a13 = function (onFrame, $completion) {
     // Inline function 'kotlinx.coroutines.suspendCancellableCoroutine.<anonymous>' call
     var cancellable = new CancellableContinuationImpl(intercepted($completion), get_MODE_CANCELLABLE());
     cancellable.mo();
@@ -584,9 +584,9 @@
       var awaiter = {_v: null};
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      this.s12_1;
+      this.u12_1;
       // Inline function 'androidx.compose.runtime.BroadcastFrameClock.withFrameNanos.<anonymous>.<anonymous>' call
-      var cause = this.t12_1;
+      var cause = this.v12_1;
       if (!(cause == null)) {
         // Inline function 'kotlin.coroutines.resumeWithException' call
         // Inline function 'kotlin.Companion.failure' call
@@ -596,8 +596,8 @@
       }
       awaiter._v = new FrameAwaiter(onFrame, cancellable);
       // Inline function 'kotlin.collections.isNotEmpty' call
-      var hadAwaiters = !this.u12_1.s();
-      var tmp = this.u12_1;
+      var hadAwaiters = !this.w12_1.s();
+      var tmp = this.w12_1;
       var tmp_0;
       if (awaiter._v == null) {
         throwUninitializedPropertyAccessException('awaiter');
@@ -607,9 +607,9 @@
       tmp.y(tmp_0);
       var hasNewAwaiters = !hadAwaiters;
       cancellable.cn(BroadcastFrameClock$withFrameNanos$lambda(this, awaiter));
-      if (hasNewAwaiters ? !(this.r12_1 == null) : false) {
+      if (hasNewAwaiters ? !(this.t12_1 == null) : false) {
         try {
-          this.r12_1();
+          this.t12_1();
         } catch ($p) {
           if ($p instanceof Error) {
             var t = $p;
@@ -661,90 +661,90 @@
   }
   var InvalidationLocationAscending;
   function Invalidation(scope, location, instances) {
-    this.c13_1 = scope;
-    this.d13_1 = location;
-    this.e13_1 = instances;
+    this.e13_1 = scope;
+    this.f13_1 = location;
+    this.g13_1 = instances;
   }
-  protoOf(Invalidation).f13 = function () {
-    return this.c13_1.o13(this.e13_1);
+  protoOf(Invalidation).h13 = function () {
+    return this.e13_1.q13(this.g13_1);
   };
   function startRoot($this) {
-    $this.w14_1 = $this.r13_1.u15();
+    $this.y14_1 = $this.t13_1.w15();
     startGroup($this, 100);
-    $this.q13_1.v15();
-    $this.j14_1 = $this.q13_1.w15();
-    $this.m14_1.z15(asInt($this.l14_1));
-    $this.l14_1 = $this.a16($this.j14_1);
-    $this.a15_1 = null;
-    if (!$this.e14_1) {
-      $this.e14_1 = $this.q13_1.b16();
+    $this.s13_1.x15();
+    $this.l14_1 = $this.s13_1.y15();
+    $this.o14_1.b16(asInt($this.n14_1));
+    $this.n14_1 = $this.c16($this.l14_1);
+    $this.c15_1 = null;
+    if (!$this.g14_1) {
+      $this.g14_1 = $this.s13_1.d16();
     }
-    if (!$this.r14_1) {
-      $this.r14_1 = $this.q13_1.c16();
+    if (!$this.t14_1) {
+      $this.t14_1 = $this.s13_1.e16();
     }
-    var tmp0_safe_receiver = read($this.j14_1, get_LocalInspectionTables());
+    var tmp0_safe_receiver = read($this.l14_1, get_LocalInspectionTables());
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      tmp0_safe_receiver.y($this.r13_1);
-      $this.q13_1.d16(tmp0_safe_receiver);
+      tmp0_safe_receiver.y($this.t13_1);
+      $this.s13_1.f16(tmp0_safe_receiver);
     }
-    startGroup($this, $this.q13_1.e16());
+    startGroup($this, $this.s13_1.g16());
   }
   function endRoot($this) {
     endGroup($this);
-    $this.q13_1.f16();
+    $this.s13_1.h16();
     endGroup($this);
-    $this.c15_1.s16();
+    $this.e15_1.u16();
     finalizeCompose($this);
-    $this.w14_1.g17();
-    $this.f14_1 = false;
+    $this.y14_1.i17();
+    $this.h14_1 = false;
   }
   function abortRoot($this) {
     cleanUpCompose($this);
-    $this.w13_1.f1();
-    $this.z13_1.f1();
+    $this.y13_1.f1();
     $this.b14_1.f1();
-    $this.i14_1.f1();
-    $this.m14_1.f1();
-    $this.k14_1 = null;
-    if (!$this.w14_1.z16_1) {
-      $this.w14_1.g17();
+    $this.d14_1.f1();
+    $this.k14_1.f1();
+    $this.o14_1.f1();
+    $this.m14_1 = null;
+    if (!$this.y14_1.b17_1) {
+      $this.y14_1.i17();
     }
-    if (!$this.y14_1.c18_1) {
-      $this.y14_1.g17();
+    if (!$this.a15_1.e18_1) {
+      $this.a15_1.i17();
     }
-    $this.e15_1.f1();
+    $this.g15_1.f1();
     createFreshInsertTable($this);
-    $this.g15_1 = 0;
-    $this.p14_1 = 0;
-    $this.g14_1 = false;
-    $this.f15_1 = false;
-    $this.n14_1 = false;
-    $this.u14_1 = false;
-    $this.f14_1 = false;
-    $this.o14_1 = -1;
+    $this.i15_1 = 0;
+    $this.r14_1 = 0;
+    $this.i14_1 = false;
+    $this.h15_1 = false;
+    $this.p14_1 = false;
+    $this.w14_1 = false;
+    $this.h14_1 = false;
+    $this.q14_1 = -1;
   }
   function startGroup($this, key) {
-    return start($this, key, null, Companion_getInstance_1().g18_1, null);
+    return start($this, key, null, Companion_getInstance_1().i18_1, null);
   }
   function startGroup_0($this, key, dataKey) {
-    return start($this, key, dataKey, Companion_getInstance_1().g18_1, null);
+    return start($this, key, dataKey, Companion_getInstance_1().i18_1, null);
   }
   function endGroup($this) {
     return end($this, false);
   }
   function skipGroup($this) {
-    $this.a14_1 = $this.a14_1 + $this.w14_1.j18() | 0;
+    $this.c14_1 = $this.c14_1 + $this.y14_1.l18() | 0;
   }
   function updateSlot($this, value) {
-    $this.k18();
-    $this.l18(value);
+    $this.m18();
+    $this.n18(value);
   }
   function currentCompositionLocalScope($this) {
-    var tmp0_safe_receiver = $this.a15_1;
+    var tmp0_safe_receiver = $this.c15_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
@@ -752,107 +752,107 @@
       // Inline function 'kotlin.contracts.contract' call
       return tmp0_safe_receiver;
     }
-    return currentCompositionLocalScope_0($this, $this.w14_1.c17_1);
+    return currentCompositionLocalScope_0($this, $this.y14_1.e17_1);
   }
   function currentCompositionLocalScope_0($this, group) {
-    if ($this.f15_1 ? $this.z14_1 : false) {
-      var current = $this.y14_1.b18_1;
+    if ($this.h15_1 ? $this.b15_1 : false) {
+      var current = $this.a15_1.d18_1;
       while (current > 0) {
-        if ($this.y14_1.o18(current) === 202 ? equals($this.y14_1.n18(current), get_compositionLocalMap()) : false) {
-          var tmp = $this.y14_1.m18(current);
+        if ($this.a15_1.q18(current) === 202 ? equals($this.a15_1.p18(current), get_compositionLocalMap()) : false) {
+          var tmp = $this.a15_1.o18(current);
           var providers = (!(tmp == null) ? isInterface(tmp, PersistentCompositionLocalMap) : false) ? tmp : THROW_CCE();
-          $this.a15_1 = providers;
+          $this.c15_1 = providers;
           return providers;
         }
-        current = $this.y14_1.p18(current);
+        current = $this.a15_1.r18(current);
       }
     }
-    if ($this.w14_1.l() > 0) {
+    if ($this.y14_1.l() > 0) {
       var current_0 = group;
       while (current_0 > 0) {
-        if ($this.w14_1.o18(current_0) === 202 ? equals($this.w14_1.n18(current_0), get_compositionLocalMap()) : false) {
-          var tmp0_safe_receiver = $this.k14_1;
+        if ($this.y14_1.q18(current_0) === 202 ? equals($this.y14_1.p18(current_0), get_compositionLocalMap()) : false) {
+          var tmp0_safe_receiver = $this.m14_1;
           var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.m(current_0);
           var tmp_0;
           if (tmp1_elvis_lhs == null) {
-            var tmp_1 = $this.w14_1.m18(current_0);
+            var tmp_1 = $this.y14_1.o18(current_0);
             tmp_0 = (!(tmp_1 == null) ? isInterface(tmp_1, PersistentCompositionLocalMap) : false) ? tmp_1 : THROW_CCE();
           } else {
             tmp_0 = tmp1_elvis_lhs;
           }
           var providers_0 = tmp_0;
-          $this.a15_1 = providers_0;
+          $this.c15_1 = providers_0;
           return providers_0;
         }
-        current_0 = $this.w14_1.p18(current_0);
+        current_0 = $this.y14_1.r18(current_0);
       }
     }
-    $this.a15_1 = $this.j14_1;
-    return $this.j14_1;
+    $this.c15_1 = $this.l14_1;
+    return $this.l14_1;
   }
   function recordProviderUpdate($this, providers) {
-    var tmp0_elvis_lhs = $this.k14_1;
+    var tmp0_elvis_lhs = $this.m14_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.ComposerImpl.recordProviderUpdate.<anonymous>' call
       var newProviderUpdates = new IntMap();
-      $this.k14_1 = newProviderUpdates;
+      $this.m14_1 = newProviderUpdates;
       tmp = newProviderUpdates;
     } else {
       tmp = tmp0_elvis_lhs;
     }
     var providerUpdates = tmp;
-    providerUpdates.r18($this.w14_1.a17_1, providers);
+    providerUpdates.t18($this.y14_1.c17_1, providers);
   }
   function ensureWriter($this) {
-    if ($this.y14_1.c18_1) {
-      $this.y14_1 = $this.x14_1.s18();
-      $this.y14_1.t18();
-      $this.z14_1 = false;
-      $this.a15_1 = null;
+    if ($this.a15_1.e18_1) {
+      $this.a15_1 = $this.z14_1.u18();
+      $this.a15_1.v18();
+      $this.b15_1 = false;
+      $this.c15_1 = null;
     }
   }
   function createFreshInsertTable($this) {
-    runtimeCheck($this.y14_1.c18_1);
-    $this.x14_1 = new SlotTable();
+    runtimeCheck($this.a15_1.e18_1);
+    $this.z14_1 = new SlotTable();
     var tmp = $this;
     // Inline function 'kotlin.also' call
-    var this_0 = $this.x14_1.s18();
+    var this_0 = $this.z14_1.u18();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.ComposerImpl.createFreshInsertTable.<anonymous>' call
-    this_0.g17();
-    tmp.y14_1 = this_0;
+    this_0.i17();
+    tmp.a15_1 = this_0;
   }
   function startReaderGroup($this, isNode, data) {
     if (isNode) {
-      $this.w14_1.x18();
+      $this.y14_1.z18();
     } else {
-      if (!(data == null) ? !($this.w14_1.v18() === data) : false) {
-        $this.c15_1.u18(data);
+      if (!(data == null) ? !($this.y14_1.x18() === data) : false) {
+        $this.e15_1.w18(data);
       }
-      $this.w14_1.w18();
+      $this.y14_1.y18();
     }
   }
   function start($this, key, objectKey, kind, data) {
     validateNodeNotExpected($this);
     updateCompoundKeyWhenWeEnterGroup($this, key, objectKey, data);
     // Inline function 'androidx.compose.runtime.GroupKind.isNode' call
-    var isNode = !(_GroupKind___get_value__impl__cf5pqe(kind) === _GroupKind___get_value__impl__cf5pqe(Companion_getInstance_1().g18_1));
-    if ($this.f15_1) {
-      $this.w14_1.y18();
-      var startIndex = $this.y14_1.z17_1;
+    var isNode = !(_GroupKind___get_value__impl__cf5pqe(kind) === _GroupKind___get_value__impl__cf5pqe(Companion_getInstance_1().i18_1));
+    if ($this.h15_1) {
+      $this.y14_1.a19();
+      var startIndex = $this.a15_1.b18_1;
       if (isNode) {
-        $this.y14_1.c19(key, Companion_getInstance_0().z18_1);
+        $this.a15_1.e19(key, Companion_getInstance_0().b19_1);
       } else if (!(data == null)) {
-        var tmp = $this.y14_1;
-        tmp.b19(key, objectKey == null ? Companion_getInstance_0().z18_1 : objectKey, data);
+        var tmp = $this.a15_1;
+        tmp.d19(key, objectKey == null ? Companion_getInstance_0().b19_1 : objectKey, data);
       } else {
-        var tmp_0 = $this.y14_1;
-        tmp_0.a19(key, objectKey == null ? Companion_getInstance_0().z18_1 : objectKey);
+        var tmp_0 = $this.a15_1;
+        tmp_0.c19(key, objectKey == null ? Companion_getInstance_0().b19_1 : objectKey);
       }
-      var tmp2_safe_receiver = $this.x13_1;
+      var tmp2_safe_receiver = $this.z13_1;
       if (tmp2_safe_receiver == null)
         null;
       else {
@@ -860,103 +860,103 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.ComposerImpl.start.<anonymous>' call
         var insertKeyInfo = new KeyInfo(key, -1, insertedGroupVirtualIndex($this, startIndex), -1, 0);
-        tmp2_safe_receiver.j19(insertKeyInfo, $this.y13_1 - tmp2_safe_receiver.e19_1 | 0);
-        tmp2_safe_receiver.k19(insertKeyInfo);
+        tmp2_safe_receiver.l19(insertKeyInfo, $this.a14_1 - tmp2_safe_receiver.g19_1 | 0);
+        tmp2_safe_receiver.m19(insertKeyInfo);
       }
       enterGroup($this, isNode, null);
       return Unit_instance;
     }
     var tmp_1;
     // Inline function 'androidx.compose.runtime.GroupKind.isReusable' call
-    if (!!(_GroupKind___get_value__impl__cf5pqe(kind) === _GroupKind___get_value__impl__cf5pqe(Companion_getInstance_1().h18_1))) {
-      tmp_1 = $this.n14_1;
+    if (!!(_GroupKind___get_value__impl__cf5pqe(kind) === _GroupKind___get_value__impl__cf5pqe(Companion_getInstance_1().j18_1))) {
+      tmp_1 = $this.p14_1;
     } else {
       tmp_1 = false;
     }
     var forceReplace = tmp_1;
-    if ($this.x13_1 == null) {
-      var slotKey = $this.w14_1.l19();
-      if ((!forceReplace ? slotKey === key : false) ? equals(objectKey, $this.w14_1.n19()) : false) {
+    if ($this.z13_1 == null) {
+      var slotKey = $this.y14_1.n19();
+      if ((!forceReplace ? slotKey === key : false) ? equals(objectKey, $this.y14_1.p19()) : false) {
         startReaderGroup($this, isNode, data);
       } else {
-        $this.x13_1 = new Pending($this.w14_1.m19(), $this.y13_1);
+        $this.z13_1 = new Pending($this.y14_1.o19(), $this.a14_1);
       }
     }
-    var pending = $this.x13_1;
+    var pending = $this.z13_1;
     var newPending = null;
     if (!(pending == null)) {
-      var keyInfo = pending.o19(key, objectKey);
+      var keyInfo = pending.q19(key, objectKey);
       if (!forceReplace ? !(keyInfo == null) : false) {
-        pending.k19(keyInfo);
-        var location = keyInfo.t19_1;
-        $this.y13_1 = pending.w19(keyInfo) + pending.e19_1 | 0;
-        var relativePosition = pending.x19(keyInfo);
-        var currentRelativePosition = relativePosition - pending.f19_1 | 0;
-        pending.y19(relativePosition, pending.f19_1);
-        $this.c15_1.z19(location);
-        $this.w14_1.a1a(location);
+        pending.m19(keyInfo);
+        var location = keyInfo.v19_1;
+        $this.a14_1 = pending.y19(keyInfo) + pending.g19_1 | 0;
+        var relativePosition = pending.z19(keyInfo);
+        var currentRelativePosition = relativePosition - pending.h19_1 | 0;
+        pending.a1a(relativePosition, pending.h19_1);
+        $this.e15_1.b1a(location);
+        $this.y14_1.c1a(location);
         if (currentRelativePosition > 0) {
-          $this.c15_1.b1a(currentRelativePosition);
+          $this.e15_1.d1a(currentRelativePosition);
         }
         startReaderGroup($this, isNode, data);
       } else {
-        $this.w14_1.y18();
-        $this.f15_1 = true;
-        $this.a15_1 = null;
+        $this.y14_1.a19();
+        $this.h15_1 = true;
+        $this.c15_1 = null;
         ensureWriter($this);
-        $this.y14_1.p19();
-        var startIndex_0 = $this.y14_1.z17_1;
+        $this.a15_1.r19();
+        var startIndex_0 = $this.a15_1.b18_1;
         if (isNode) {
-          $this.y14_1.c19(key, Companion_getInstance_0().z18_1);
+          $this.a15_1.e19(key, Companion_getInstance_0().b19_1);
         } else if (!(data == null)) {
-          var tmp_2 = $this.y14_1;
-          tmp_2.b19(key, objectKey == null ? Companion_getInstance_0().z18_1 : objectKey, data);
+          var tmp_2 = $this.a15_1;
+          tmp_2.d19(key, objectKey == null ? Companion_getInstance_0().b19_1 : objectKey, data);
         } else {
-          var tmp_3 = $this.y14_1;
-          tmp_3.a19(key, objectKey == null ? Companion_getInstance_0().z18_1 : objectKey);
+          var tmp_3 = $this.a15_1;
+          tmp_3.c19(key, objectKey == null ? Companion_getInstance_0().b19_1 : objectKey);
         }
-        $this.d15_1 = $this.y14_1.q19(startIndex_0);
+        $this.f15_1 = $this.a15_1.s19(startIndex_0);
         var insertKeyInfo_0 = new KeyInfo(key, -1, insertedGroupVirtualIndex($this, startIndex_0), -1, 0);
-        pending.j19(insertKeyInfo_0, $this.y13_1 - pending.e19_1 | 0);
-        pending.k19(insertKeyInfo_0);
+        pending.l19(insertKeyInfo_0, $this.a14_1 - pending.g19_1 | 0);
+        pending.m19(insertKeyInfo_0);
         // Inline function 'kotlin.collections.mutableListOf' call
         var tmp$ret$4 = ArrayList_init_$Create$();
-        newPending = new Pending(tmp$ret$4, isNode ? 0 : $this.y13_1);
+        newPending = new Pending(tmp$ret$4, isNode ? 0 : $this.a14_1);
       }
     }
     enterGroup($this, isNode, newPending);
   }
   function enterGroup($this, isNode, newPending) {
-    $this.w13_1.c1a($this.x13_1);
-    $this.x13_1 = newPending;
-    $this.z13_1.z15($this.y13_1);
+    $this.y13_1.e1a($this.z13_1);
+    $this.z13_1 = newPending;
+    $this.b14_1.b16($this.a14_1);
     if (isNode)
-      $this.y13_1 = 0;
-    $this.b14_1.z15($this.a14_1);
-    $this.a14_1 = 0;
+      $this.a14_1 = 0;
+    $this.d14_1.b16($this.c14_1);
+    $this.c14_1 = 0;
   }
   function exitGroup($this, expectedNodeCount, inserting) {
-    var previousPending = $this.w13_1.d1a();
+    var previousPending = $this.y13_1.f1a();
     if (!(previousPending == null) ? !inserting : false) {
-      previousPending.f19_1 = previousPending.f19_1 + 1 | 0;
+      previousPending.h19_1 = previousPending.h19_1 + 1 | 0;
     }
-    $this.x13_1 = previousPending;
-    $this.y13_1 = $this.z13_1.d1a() + expectedNodeCount | 0;
-    $this.a14_1 = $this.b14_1.d1a() + expectedNodeCount | 0;
+    $this.z13_1 = previousPending;
+    $this.a14_1 = $this.b14_1.f1a() + expectedNodeCount | 0;
+    $this.c14_1 = $this.d14_1.f1a() + expectedNodeCount | 0;
   }
   function end($this, isNode) {
-    if ($this.f15_1) {
-      var parent = $this.y14_1.b18_1;
-      updateCompoundKeyWhenWeExitGroup($this, $this.y14_1.o18(parent), $this.y14_1.n18(parent), $this.y14_1.m18(parent));
+    if ($this.h15_1) {
+      var parent = $this.a15_1.d18_1;
+      updateCompoundKeyWhenWeExitGroup($this, $this.a15_1.q18(parent), $this.a15_1.p18(parent), $this.a15_1.o18(parent));
     } else {
-      var parent_0 = $this.w14_1.c17_1;
-      updateCompoundKeyWhenWeExitGroup($this, $this.w14_1.o18(parent_0), $this.w14_1.n18(parent_0), $this.w14_1.m18(parent_0));
+      var parent_0 = $this.y14_1.e17_1;
+      updateCompoundKeyWhenWeExitGroup($this, $this.y14_1.q18(parent_0), $this.y14_1.p18(parent_0), $this.y14_1.o18(parent_0));
     }
-    var expectedNodeCount = $this.a14_1;
-    var pending = $this.x13_1;
-    if (!(pending == null) ? pending.d19_1.l() > 0 : false) {
-      var previous = pending.d19_1;
-      var current = pending.e1a();
+    var expectedNodeCount = $this.c14_1;
+    var pending = $this.z13_1;
+    if (!(pending == null) ? pending.f19_1.l() > 0 : false) {
+      var previous = pending.f19_1;
+      var current = pending.g1a();
       var usedKeys = fastToSet(current);
       // Inline function 'kotlin.collections.mutableSetOf' call
       var placedKeys = LinkedHashSet_init_$Create$();
@@ -968,14 +968,14 @@
       $l$loop_0: while (previousIndex < previousEnd) {
         var previousInfo = previous.m(previousIndex);
         if (!usedKeys.q(previousInfo)) {
-          var deleteOffset = pending.w19(previousInfo);
-          $this.c15_1.f1a(deleteOffset + pending.e19_1 | 0, previousInfo.u19_1);
-          pending.g1a(previousInfo.t19_1, 0);
-          $this.c15_1.z19(previousInfo.t19_1);
-          $this.w14_1.a1a(previousInfo.t19_1);
+          var deleteOffset = pending.y19(previousInfo);
+          $this.e15_1.h1a(deleteOffset + pending.g19_1 | 0, previousInfo.w19_1);
+          pending.i1a(previousInfo.v19_1, 0);
+          $this.e15_1.b1a(previousInfo.v19_1);
+          $this.y14_1.c1a(previousInfo.v19_1);
           recordDelete($this);
-          $this.w14_1.j18();
-          removeRange($this.h14_1, previousInfo.t19_1, previousInfo.t19_1 + $this.w14_1.h1a(previousInfo.t19_1) | 0);
+          $this.y14_1.l18();
+          removeRange($this.j14_1, previousInfo.v19_1, previousInfo.v19_1 + $this.y14_1.j1a(previousInfo.v19_1) | 0);
           previousIndex = previousIndex + 1 | 0;
           continue $l$loop_0;
         }
@@ -986,60 +986,60 @@
         if (currentIndex < currentEnd) {
           var currentInfo = current.m(currentIndex);
           if (!(currentInfo === previousInfo)) {
-            var nodePosition = pending.w19(currentInfo);
+            var nodePosition = pending.y19(currentInfo);
             placedKeys.y(currentInfo);
             if (!(nodePosition === nodeOffset)) {
-              var updatedCount = pending.i1a(currentInfo);
-              $this.c15_1.j1a(nodePosition + pending.e19_1 | 0, nodeOffset + pending.e19_1 | 0, updatedCount);
-              pending.k1a(nodePosition, nodeOffset, updatedCount);
+              var updatedCount = pending.k1a(currentInfo);
+              $this.e15_1.l1a(nodePosition + pending.g19_1 | 0, nodeOffset + pending.g19_1 | 0, updatedCount);
+              pending.m1a(nodePosition, nodeOffset, updatedCount);
             }
           } else {
             previousIndex = previousIndex + 1 | 0;
           }
           currentIndex = currentIndex + 1 | 0;
-          nodeOffset = nodeOffset + pending.i1a(currentInfo) | 0;
+          nodeOffset = nodeOffset + pending.k1a(currentInfo) | 0;
         }
       }
-      $this.c15_1.l1a();
+      $this.e15_1.n1a();
       if (previous.l() > 0) {
-        $this.c15_1.z19($this.w14_1.m1a());
-        $this.w14_1.t18();
+        $this.e15_1.b1a($this.y14_1.o1a());
+        $this.y14_1.v18();
       }
     }
-    var removeIndex = $this.y13_1;
-    while (!$this.w14_1.n1a()) {
-      var startSlot = $this.w14_1.a17_1;
+    var removeIndex = $this.a14_1;
+    while (!$this.y14_1.p1a()) {
+      var startSlot = $this.y14_1.c17_1;
       recordDelete($this);
-      var nodesToRemove = $this.w14_1.j18();
-      $this.c15_1.f1a(removeIndex, nodesToRemove);
-      removeRange($this.h14_1, startSlot, $this.w14_1.a17_1);
+      var nodesToRemove = $this.y14_1.l18();
+      $this.e15_1.h1a(removeIndex, nodesToRemove);
+      removeRange($this.j14_1, startSlot, $this.y14_1.c17_1);
     }
-    var inserting = $this.f15_1;
+    var inserting = $this.h15_1;
     if (inserting) {
       if (isNode) {
-        $this.e15_1.r1a();
+        $this.g15_1.t1a();
         expectedNodeCount = 1;
       }
-      $this.w14_1.s1a();
-      var parentGroup = $this.y14_1.b18_1;
-      $this.y14_1.t1a();
-      if (!$this.w14_1.w1a()) {
+      $this.y14_1.u1a();
+      var parentGroup = $this.a15_1.d18_1;
+      $this.a15_1.v1a();
+      if (!$this.y14_1.y1a()) {
         var virtualIndex = insertedGroupVirtualIndex($this, parentGroup);
-        $this.y14_1.u1a();
-        $this.y14_1.g17();
-        recordInsert($this, $this.d15_1);
-        $this.f15_1 = false;
-        if (!$this.r13_1.v1a()) {
+        $this.a15_1.w1a();
+        $this.a15_1.i17();
+        recordInsert($this, $this.f15_1);
+        $this.h15_1 = false;
+        if (!$this.t13_1.x1a()) {
           updateNodeCount($this, virtualIndex, 0);
           updateNodeCountOverrides($this, virtualIndex, expectedNodeCount);
         }
       }
     } else {
       if (isNode) {
-        $this.c15_1.o1a();
+        $this.e15_1.q1a();
       }
-      $this.c15_1.p1a();
-      var parentGroup_0 = $this.w14_1.c17_1;
+      $this.e15_1.r1a();
+      var parentGroup_0 = $this.y14_1.e17_1;
       var parentNodeCount = updatedNodeCount($this, parentGroup_0);
       if (!(expectedNodeCount === parentNodeCount)) {
         updateNodeCountOverrides($this, parentGroup_0, expectedNodeCount);
@@ -1047,55 +1047,55 @@
       if (isNode) {
         expectedNodeCount = 1;
       }
-      $this.w14_1.q1a();
-      $this.c15_1.l1a();
+      $this.y14_1.s1a();
+      $this.e15_1.n1a();
     }
     exitGroup($this, expectedNodeCount, inserting);
   }
   function recomposeToGroupEnd($this) {
-    var wasComposing = $this.u14_1;
-    $this.u14_1 = true;
+    var wasComposing = $this.w14_1;
+    $this.w14_1 = true;
     var recomposed = false;
-    var parent = $this.w14_1.c17_1;
-    var end = parent + $this.w14_1.h1a(parent) | 0;
-    var recomposeIndex = $this.y13_1;
-    var recomposeCompoundKey = $this.g15_1;
-    var oldGroupNodeCount = $this.a14_1;
+    var parent = $this.y14_1.e17_1;
+    var end = parent + $this.y14_1.j1a(parent) | 0;
+    var recomposeIndex = $this.a14_1;
+    var recomposeCompoundKey = $this.i15_1;
+    var oldGroupNodeCount = $this.c14_1;
     var oldGroup = parent;
-    var firstInRange_0 = firstInRange($this.h14_1, $this.w14_1.a17_1, end);
+    var firstInRange_0 = firstInRange($this.j14_1, $this.y14_1.c17_1, end);
     while (!(firstInRange_0 == null)) {
-      var location = firstInRange_0.d13_1;
-      removeLocation($this.h14_1, location);
-      if (firstInRange_0.f13()) {
+      var location = firstInRange_0.f13_1;
+      removeLocation($this.j14_1, location);
+      if (firstInRange_0.h13()) {
         recomposed = true;
-        $this.w14_1.a1a(location);
-        var newGroup = $this.w14_1.a17_1;
+        $this.y14_1.c1a(location);
+        var newGroup = $this.y14_1.c17_1;
         recordUpsAndDowns($this, oldGroup, newGroup, parent);
         oldGroup = newGroup;
-        $this.y13_1 = nodeIndexOf($this, location, newGroup, parent, recomposeIndex);
-        $this.g15_1 = compoundKeyOf($this, $this.w14_1.p18(newGroup), parent, recomposeCompoundKey);
-        $this.a15_1 = null;
-        firstInRange_0.c13_1.y1a($this);
-        $this.a15_1 = null;
-        $this.w14_1.z1a(parent);
+        $this.a14_1 = nodeIndexOf($this, location, newGroup, parent, recomposeIndex);
+        $this.i15_1 = compoundKeyOf($this, $this.y14_1.r18(newGroup), parent, recomposeCompoundKey);
+        $this.c15_1 = null;
+        firstInRange_0.e13_1.a1b($this);
+        $this.c15_1 = null;
+        $this.y14_1.b1b(parent);
       } else {
-        $this.t14_1.c1a(firstInRange_0.c13_1);
-        firstInRange_0.c13_1.x1a();
-        $this.t14_1.d1a();
+        $this.v14_1.e1a(firstInRange_0.e13_1);
+        firstInRange_0.e13_1.z1a();
+        $this.v14_1.f1a();
       }
-      firstInRange_0 = firstInRange($this.h14_1, $this.w14_1.a17_1, end);
+      firstInRange_0 = firstInRange($this.j14_1, $this.y14_1.c17_1, end);
     }
     if (recomposed) {
       recordUpsAndDowns($this, oldGroup, parent, parent);
-      $this.w14_1.t18();
+      $this.y14_1.v18();
       var parentGroupNodes = updatedNodeCount($this, parent);
-      $this.y13_1 = recomposeIndex + parentGroupNodes | 0;
-      $this.a14_1 = oldGroupNodeCount + parentGroupNodes | 0;
+      $this.a14_1 = recomposeIndex + parentGroupNodes | 0;
+      $this.c14_1 = oldGroupNodeCount + parentGroupNodes | 0;
     } else {
       skipReaderToGroupEnd($this);
     }
-    $this.g15_1 = recomposeCompoundKey;
-    $this.u14_1 = wasComposing;
+    $this.i15_1 = recomposeCompoundKey;
+    $this.w14_1 = wasComposing;
   }
   function insertedGroupVirtualIndex($this, index) {
     return -2 - index | 0;
@@ -1105,7 +1105,7 @@
     if (!(currentCount === newCount)) {
       var delta = newCount - currentCount | 0;
       var current = group;
-      var minPending = $this.w13_1.l() - 1 | 0;
+      var minPending = $this.y13_1.l() - 1 | 0;
       $l$loop_0: while (!(current === -1)) {
         var newCurrentNodes = updatedNodeCount($this, current) + delta | 0;
         updateNodeCount($this, current, newCurrentNodes);
@@ -1114,37 +1114,37 @@
           $l$loop: do {
             var pendingIndex = inductionVariable;
             inductionVariable = inductionVariable + -1 | 0;
-            var pending = $this.w13_1.a1b(pendingIndex);
-            if (!(pending == null) ? pending.g1a(current, newCurrentNodes) : false) {
+            var pending = $this.y13_1.c1b(pendingIndex);
+            if (!(pending == null) ? pending.i1a(current, newCurrentNodes) : false) {
               minPending = pendingIndex - 1 | 0;
               break $l$loop;
             }
           }
            while (0 <= inductionVariable);
         if (current < 0) {
-          current = $this.w14_1.c17_1;
+          current = $this.y14_1.e17_1;
         } else {
-          if ($this.w14_1.b1b(current))
+          if ($this.y14_1.d1b(current))
             break $l$loop_0;
-          current = $this.w14_1.p18(current);
+          current = $this.y14_1.r18(current);
         }
       }
     }
   }
   function nodeIndexOf($this, groupLocation, group, recomposeGroup, recomposeIndex) {
-    var anchorGroup = $this.w14_1.p18(group);
-    $l$loop: while (!(anchorGroup === recomposeGroup) && !$this.w14_1.b1b(anchorGroup)) {
-      anchorGroup = $this.w14_1.p18(anchorGroup);
+    var anchorGroup = $this.y14_1.r18(group);
+    $l$loop: while (!(anchorGroup === recomposeGroup) && !$this.y14_1.d1b(anchorGroup)) {
+      anchorGroup = $this.y14_1.r18(anchorGroup);
     }
-    var index = $this.w14_1.b1b(anchorGroup) ? 0 : recomposeIndex;
+    var index = $this.y14_1.d1b(anchorGroup) ? 0 : recomposeIndex;
     if (anchorGroup === group)
       return index;
     var current = anchorGroup;
-    var nodeIndexLimit = index + (updatedNodeCount($this, anchorGroup) - $this.w14_1.c1b(group) | 0) | 0;
+    var nodeIndexLimit = index + (updatedNodeCount($this, anchorGroup) - $this.y14_1.e1b(group) | 0) | 0;
     loop: while (index < nodeIndexLimit && current !== groupLocation) {
       current = current + 1 | 0;
       while (current < groupLocation) {
-        var end = current + $this.w14_1.h1a(current) | 0;
+        var end = current + $this.y14_1.j1a(current) | 0;
         if (groupLocation < end)
           continue loop;
         index = index + updatedNodeCount($this, current) | 0;
@@ -1156,7 +1156,7 @@
   }
   function updatedNodeCount($this, group) {
     if (group < 0) {
-      var tmp0_safe_receiver = $this.d14_1;
+      var tmp0_safe_receiver = $this.f14_1;
       var tmp;
       if (tmp0_safe_receiver == null) {
         tmp = null;
@@ -1169,41 +1169,41 @@
       var tmp1_elvis_lhs = tmp;
       return tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
     }
-    var nodeCounts = $this.c14_1;
+    var nodeCounts = $this.e14_1;
     if (!(nodeCounts == null)) {
       var override = nodeCounts[group];
       if (override >= 0)
         return override;
     }
-    return $this.w14_1.c1b(group);
+    return $this.y14_1.e1b(group);
   }
   function updateNodeCount($this, group, count) {
     if (!(updatedNodeCount($this, group) === count)) {
       if (group < 0) {
-        var tmp0_elvis_lhs = $this.d14_1;
+        var tmp0_elvis_lhs = $this.f14_1;
         var tmp;
         if (tmp0_elvis_lhs == null) {
           // Inline function 'kotlin.run' call
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.ComposerImpl.updateNodeCount.<anonymous>' call
           var newCounts = new MutableIntIntMap();
-          $this.d14_1 = newCounts;
+          $this.f14_1 = newCounts;
           tmp = newCounts;
         } else {
           tmp = tmp0_elvis_lhs;
         }
         var virtualCounts = tmp;
-        virtualCounts.vz(group, count);
+        virtualCounts.xz(group, count);
       } else {
-        var tmp1_elvis_lhs = $this.c14_1;
+        var tmp1_elvis_lhs = $this.e14_1;
         var tmp_0;
         if (tmp1_elvis_lhs == null) {
           // Inline function 'kotlin.run' call
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.ComposerImpl.updateNodeCount.<anonymous>' call
-          var newCounts_0 = new Int32Array($this.w14_1.l());
+          var newCounts_0 = new Int32Array($this.y14_1.l());
           fill(newCounts_0, -1);
-          $this.c14_1 = newCounts_0;
+          $this.e14_1 = newCounts_0;
           tmp_0 = newCounts_0;
         } else {
           tmp_0 = tmp1_elvis_lhs;
@@ -1214,26 +1214,26 @@
     }
   }
   function clearUpdatedNodeCounts($this) {
-    $this.c14_1 = null;
-    $this.d14_1 = null;
+    $this.e14_1 = null;
+    $this.f14_1 = null;
   }
   function recordUpsAndDowns($this, oldGroup, newGroup, commonRoot) {
-    var reader = $this.w14_1;
+    var reader = $this.y14_1;
     var nearestCommonRoot = nearestCommonRootOf(reader, oldGroup, newGroup, commonRoot);
     var current = oldGroup;
     while (current > 0 ? !(current === nearestCommonRoot) : false) {
-      if (reader.b1b(current)) {
-        $this.c15_1.o1a();
+      if (reader.d1b(current)) {
+        $this.e15_1.q1a();
       }
-      current = reader.p18(current);
+      current = reader.r18(current);
     }
     doRecordDownsFor($this, newGroup, nearestCommonRoot);
   }
   function doRecordDownsFor($this, group, nearestCommonRoot) {
     if (group > 0 ? !(group === nearestCommonRoot) : false) {
-      doRecordDownsFor($this, $this.w14_1.p18(group), nearestCommonRoot);
-      if ($this.w14_1.b1b(group)) {
-        $this.c15_1.d1b(nodeAt($this.w14_1, $this, group));
+      doRecordDownsFor($this, $this.y14_1.r18(group), nearestCommonRoot);
+      if ($this.y14_1.d1b(group)) {
+        $this.e15_1.f1b(nodeAt($this.y14_1, $this, group));
       }
     }
   }
@@ -1245,13 +1245,13 @@
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.ComposerImpl.compoundKeyOf.<anonymous>' call
-      var groupKey = groupCompoundKeyPart($this.w14_1, $this, group);
+      var groupKey = groupCompoundKeyPart($this.y14_1, $this, group);
       var tmp_0;
       if (groupKey === get_movableContentKey()) {
         tmp_0 = groupKey;
       } else {
         // Inline function 'androidx.compose.runtime.rol' call
-        var this_0 = compoundKeyOf($this, $this.w14_1.p18(group), recomposeGroup, recomposeKey);
+        var this_0 = compoundKeyOf($this, $this.y14_1.r18(group), recomposeGroup, recomposeKey);
         tmp_0 = rotateLeft(this_0, 3) ^ groupKey;
       }
       tmp = tmp_0;
@@ -1260,8 +1260,8 @@
   }
   function groupCompoundKeyPart(_this__u8e3s4, $this, group) {
     var tmp;
-    if (_this__u8e3s4.e1b(group)) {
-      var tmp0_safe_receiver = _this__u8e3s4.n18(group);
+    if (_this__u8e3s4.g1b(group)) {
+      var tmp0_safe_receiver = _this__u8e3s4.p18(group);
       var tmp_0;
       if (tmp0_safe_receiver == null) {
         tmp_0 = null;
@@ -1287,10 +1287,10 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.ComposerImpl.groupCompoundKeyPart.<anonymous>' call
-      var it = _this__u8e3s4.o18(group);
+      var it = _this__u8e3s4.q18(group);
       var tmp_2;
       if (it === 207) {
-        var tmp0_safe_receiver_0 = _this__u8e3s4.m18(group);
+        var tmp0_safe_receiver_0 = _this__u8e3s4.o18(group);
         var tmp_3;
         if (tmp0_safe_receiver_0 == null) {
           tmp_3 = null;
@@ -1298,7 +1298,7 @@
           // Inline function 'kotlin.let' call
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.ComposerImpl.groupCompoundKeyPart.<anonymous>.<anonymous>' call
-          tmp_3 = equals(tmp0_safe_receiver_0, Companion_getInstance_0().z18_1) ? it : hashCode(tmp0_safe_receiver_0);
+          tmp_3 = equals(tmp0_safe_receiver_0, Companion_getInstance_0().b19_1) ? it : hashCode(tmp0_safe_receiver_0);
         }
         var tmp1_elvis_lhs_0 = tmp_3;
         tmp_2 = tmp1_elvis_lhs_0 == null ? it : tmp1_elvis_lhs_0;
@@ -1310,24 +1310,24 @@
     return tmp;
   }
   function skipReaderToGroupEnd($this) {
-    $this.a14_1 = $this.w14_1.f1b();
-    $this.w14_1.t18();
+    $this.c14_1 = $this.y14_1.h1b();
+    $this.y14_1.v18();
   }
   function addRecomposeScope($this) {
-    if ($this.f15_1) {
-      var tmp = $this.v13_1;
+    if ($this.h15_1) {
+      var tmp = $this.x13_1;
       var scope = new RecomposeScopeImpl(tmp instanceof CompositionImpl ? tmp : THROW_CCE());
-      $this.t14_1.c1a(scope);
-      $this.l18(scope);
-      scope.j1b($this.q14_1);
+      $this.v14_1.e1a(scope);
+      $this.n18(scope);
+      scope.l1b($this.s14_1);
     } else {
-      var invalidation = removeLocation($this.h14_1, $this.w14_1.c17_1);
-      var slot = $this.w14_1.d1();
+      var invalidation = removeLocation($this.j14_1, $this.y14_1.e17_1);
+      var slot = $this.y14_1.d1();
       var tmp_0;
-      if (equals(slot, Companion_getInstance_0().z18_1)) {
-        var tmp_1 = $this.v13_1;
+      if (equals(slot, Companion_getInstance_0().b19_1)) {
+        var tmp_1 = $this.x13_1;
         var newScope = new RecomposeScopeImpl(tmp_1 instanceof CompositionImpl ? tmp_1 : THROW_CCE());
-        $this.l18(newScope);
+        $this.n18(newScope);
         tmp_0 = newScope;
       } else {
         tmp_0 = slot instanceof RecomposeScopeImpl ? slot : THROW_CCE();
@@ -1338,61 +1338,61 @@
         tmp_2 = true;
       } else {
         // Inline function 'kotlin.also' call
-        var this_0 = scope_0.g1b();
+        var this_0 = scope_0.i1b();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.ComposerImpl.addRecomposeScope.<anonymous>' call
         if (this_0) {
-          scope_0.h1b(false);
+          scope_0.j1b(false);
         }
         tmp_2 = this_0;
       }
-      scope_0.i1b(tmp_2);
-      $this.t14_1.c1a(scope_0);
-      scope_0.j1b($this.q14_1);
+      scope_0.k1b(tmp_2);
+      $this.v14_1.e1a(scope_0);
+      scope_0.l1b($this.s14_1);
     }
   }
   function invokeMovableContentLambda($this, content, locals, parameter, force) {
-    $this.k1b(get_movableContentKey(), content);
+    $this.m1b(get_movableContentKey(), content);
     updateSlot($this, parameter);
-    var savedCompoundKeyHash = $this.g15_1;
+    var savedCompoundKeyHash = $this.i15_1;
     try {
-      $this.g15_1 = get_movableContentKey();
-      if ($this.f15_1) {
-        $this.y14_1.l1b();
+      $this.i15_1 = get_movableContentKey();
+      if ($this.h15_1) {
+        $this.a15_1.n1b();
       }
-      var providersChanged = $this.f15_1 ? false : !equals($this.w14_1.v18(), locals);
+      var providersChanged = $this.h15_1 ? false : !equals($this.y14_1.x18(), locals);
       if (providersChanged) {
         recordProviderUpdate($this, locals);
       }
-      start($this, 202, get_compositionLocalMap(), Companion_getInstance_1().g18_1, locals);
-      $this.a15_1 = null;
-      if ($this.f15_1 ? !force : false) {
-        $this.z14_1 = true;
-        var anchor = $this.y14_1.q19($this.y14_1.p18($this.y14_1.b18_1));
-        var reference = new MovableContentStateReference(content, parameter, $this.v13_1, $this.x14_1, anchor, emptyList(), currentCompositionLocalScope($this));
-        $this.q13_1.m1b(reference);
+      start($this, 202, get_compositionLocalMap(), Companion_getInstance_1().i18_1, locals);
+      $this.c15_1 = null;
+      if ($this.h15_1 ? !force : false) {
+        $this.b15_1 = true;
+        var anchor = $this.a15_1.s19($this.a15_1.r18($this.a15_1.d18_1));
+        var reference = new MovableContentStateReference(content, parameter, $this.x13_1, $this.z14_1, anchor, emptyList(), currentCompositionLocalScope($this));
+        $this.s13_1.o1b(reference);
       } else {
-        var savedProvidersInvalid = $this.l14_1;
-        $this.l14_1 = providersChanged;
+        var savedProvidersInvalid = $this.n14_1;
+        $this.n14_1 = providersChanged;
         invokeComposable($this, ComposableLambda$invoke$ref(composableLambdaInstance(316014703, true, ComposerImpl$invokeMovableContentLambda$lambda(content, parameter))));
-        $this.l14_1 = savedProvidersInvalid;
+        $this.n14_1 = savedProvidersInvalid;
       }
     }finally {
       endGroup($this);
-      $this.a15_1 = null;
-      $this.g15_1 = savedCompoundKeyHash;
-      $this.n1b();
+      $this.c15_1 = null;
+      $this.i15_1 = savedCompoundKeyHash;
+      $this.p1b();
     }
   }
   function insertMovableContentGuarded($this, references) {
     // Inline function 'androidx.compose.runtime.changelist.ComposerChangeListWriter.withChangeList' call
-    var this_0 = $this.c15_1;
-    var newChangeList = $this.u13_1;
-    var previousChangeList = this_0.h16_1;
+    var this_0 = $this.e15_1;
+    var newChangeList = $this.w13_1;
+    var previousChangeList = this_0.j16_1;
     try {
-      this_0.h16_1 = newChangeList;
+      this_0.j16_1 = newChangeList;
       // Inline function 'androidx.compose.runtime.ComposerImpl.insertMovableContentGuarded.<anonymous>' call
-      $this.c15_1.o1b();
+      $this.e15_1.q1b();
       // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
@@ -1405,117 +1405,117 @@
           // Inline function 'androidx.compose.runtime.ComposerImpl.insertMovableContentGuarded.<anonymous>.<anonymous>' call
           var to = item.z6();
           var from = item.a7();
-          var anchor = to.t1b_1;
-          var location = to.s1b_1.w1b(anchor);
+          var anchor = to.v1b_1;
+          var location = to.u1b_1.y1b(anchor);
           var effectiveNodeIndex = new IntRef();
-          $this.c15_1.x1b(effectiveNodeIndex, anchor);
+          $this.e15_1.z1b(effectiveNodeIndex, anchor);
           if (from == null) {
-            var toSlotTable = to.s1b_1;
-            if (equals(toSlotTable, $this.x14_1)) {
+            var toSlotTable = to.u1b_1;
+            if (equals(toSlotTable, $this.z14_1)) {
               createFreshInsertTable($this);
             }
             // Inline function 'androidx.compose.runtime.SlotTable.read' call
             // Inline function 'kotlin.let' call
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.runtime.SlotTable.read.<anonymous>' call
-            var reader = to.s1b_1.u15();
+            var reader = to.u1b_1.w15();
             var tmp;
             try {
-              reader.a1a(location);
-              $this.c15_1.c1c(location);
+              reader.c1a(location);
+              $this.e15_1.e1c(location);
               var offsetChanges = new ChangeList();
               recomposeMovableContent$default($this, VOID, VOID, VOID, VOID, ComposerImpl$insertMovableContentGuarded$lambda($this, offsetChanges, reader, to));
-              $this.c15_1.d1c(offsetChanges, effectiveNodeIndex);
+              $this.e15_1.f1c(offsetChanges, effectiveNodeIndex);
               tmp = Unit_instance;
             }finally {
-              reader.g17();
+              reader.i17();
             }
           } else {
-            var resolvedState = $this.q13_1.y1b(from);
-            var tmp1_elvis_lhs = resolvedState == null ? null : resolvedState.z1b_1;
-            var fromTable = tmp1_elvis_lhs == null ? from.s1b_1 : tmp1_elvis_lhs;
-            var tmp3_safe_receiver = resolvedState == null ? null : resolvedState.z1b_1;
-            var tmp4_elvis_lhs = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.q19(0);
-            var fromAnchor = tmp4_elvis_lhs == null ? from.t1b_1 : tmp4_elvis_lhs;
+            var resolvedState = $this.s13_1.a1c(from);
+            var tmp1_elvis_lhs = resolvedState == null ? null : resolvedState.b1c_1;
+            var fromTable = tmp1_elvis_lhs == null ? from.u1b_1 : tmp1_elvis_lhs;
+            var tmp3_safe_receiver = resolvedState == null ? null : resolvedState.b1c_1;
+            var tmp4_elvis_lhs = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.s19(0);
+            var fromAnchor = tmp4_elvis_lhs == null ? from.v1b_1 : tmp4_elvis_lhs;
             var nodesToInsert = collectNodesFrom(fromTable, fromAnchor);
             // Inline function 'kotlin.collections.isNotEmpty' call
             if (!nodesToInsert.s()) {
-              $this.c15_1.a1c(nodesToInsert, effectiveNodeIndex);
-              if (equals(to.s1b_1, $this.r13_1)) {
-                var group = $this.r13_1.w1b(anchor);
+              $this.e15_1.c1c(nodesToInsert, effectiveNodeIndex);
+              if (equals(to.u1b_1, $this.t13_1)) {
+                var group = $this.t13_1.y1b(anchor);
                 updateNodeCount($this, group, updatedNodeCount($this, group) + nodesToInsert.l() | 0);
               }
             }
-            $this.c15_1.b1c(resolvedState, $this.q13_1, from, to);
+            $this.e15_1.d1c(resolvedState, $this.s13_1, from, to);
             // Inline function 'androidx.compose.runtime.SlotTable.read' call
             // Inline function 'kotlin.let' call
             // Inline function 'kotlin.contracts.contract' call
             // Inline function 'androidx.compose.runtime.SlotTable.read.<anonymous>' call
-            var reader_0 = fromTable.u15();
+            var reader_0 = fromTable.w15();
             var tmp_0;
             try {
               $l$block: {
                 // Inline function 'androidx.compose.runtime.ComposerImpl.withReader' call
-                var savedReader = $this.w14_1;
-                var savedCountOverrides = $this.c14_1;
-                var savedProviderUpdates = $this.k14_1;
-                $this.c14_1 = null;
-                $this.k14_1 = null;
+                var savedReader = $this.y14_1;
+                var savedCountOverrides = $this.e14_1;
+                var savedProviderUpdates = $this.m14_1;
+                $this.e14_1 = null;
+                $this.m14_1 = null;
                 try {
-                  $this.w14_1 = reader_0;
-                  var newLocation = fromTable.w1b(fromAnchor);
-                  reader_0.a1a(newLocation);
-                  $this.c15_1.c1c(newLocation);
+                  $this.y14_1 = reader_0;
+                  var newLocation = fromTable.y1b(fromAnchor);
+                  reader_0.c1a(newLocation);
+                  $this.e15_1.e1c(newLocation);
                   var offsetChanges_0 = new ChangeList();
                   // Inline function 'androidx.compose.runtime.changelist.ComposerChangeListWriter.withChangeList' call
-                  var this_1 = $this.c15_1;
-                  var previousChangeList_0 = this_1.h16_1;
+                  var this_1 = $this.e15_1;
+                  var previousChangeList_0 = this_1.j16_1;
                   try {
-                    this_1.h16_1 = offsetChanges_0;
+                    this_1.j16_1 = offsetChanges_0;
                     // Inline function 'androidx.compose.runtime.ComposerImpl.insertMovableContentGuarded.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
                     // Inline function 'androidx.compose.runtime.changelist.ComposerChangeListWriter.withoutImplicitRootStart' call
-                    var this_2 = $this.c15_1;
-                    var previousImplicitRootStart = this_2.k16_1;
+                    var this_2 = $this.e15_1;
+                    var previousImplicitRootStart = this_2.m16_1;
                     try {
-                      this_2.k16_1 = false;
+                      this_2.m16_1 = false;
                       // Inline function 'androidx.compose.runtime.ComposerImpl.insertMovableContentGuarded.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-                      var tmp_1 = reader_0.a17_1;
-                      var tmp_2 = from.u1b_1;
-                      recomposeMovableContent($this, from.r1b_1, to.r1b_1, tmp_1, tmp_2, ComposerImpl$insertMovableContentGuarded$lambda_0($this, to));
+                      var tmp_1 = reader_0.c17_1;
+                      var tmp_2 = from.w1b_1;
+                      recomposeMovableContent($this, from.t1b_1, to.t1b_1, tmp_1, tmp_2, ComposerImpl$insertMovableContentGuarded$lambda_0($this, to));
                     }finally {
-                      this_2.k16_1 = previousImplicitRootStart;
+                      this_2.m16_1 = previousImplicitRootStart;
                     }
                   }finally {
-                    this_1.h16_1 = previousChangeList_0;
+                    this_1.j16_1 = previousChangeList_0;
                   }
-                  $this.c15_1.d1c(offsetChanges_0, effectiveNodeIndex);
+                  $this.e15_1.f1c(offsetChanges_0, effectiveNodeIndex);
                   break $l$block;
                 }finally {
-                  $this.w14_1 = savedReader;
-                  $this.c14_1 = savedCountOverrides;
-                  $this.k14_1 = savedProviderUpdates;
+                  $this.y14_1 = savedReader;
+                  $this.e14_1 = savedCountOverrides;
+                  $this.m14_1 = savedProviderUpdates;
                 }
               }
               tmp_0 = Unit_instance;
             }finally {
-              reader_0.g17();
+              reader_0.i17();
             }
           }
-          $this.c15_1.e1c();
+          $this.e15_1.g1c();
         }
          while (inductionVariable <= last);
-      $this.c15_1.f1c();
-      $this.c15_1.c1c(0);
+      $this.e15_1.h1c();
+      $this.e15_1.e1c(0);
     }finally {
-      this_0.h16_1 = previousChangeList;
+      this_0.j16_1 = previousChangeList;
     }
   }
   function recomposeMovableContent($this, from, to, index, invalidations, block) {
-    var savedIsComposing = $this.u14_1;
-    var savedNodeIndex = $this.y13_1;
+    var savedIsComposing = $this.w14_1;
+    var savedNodeIndex = $this.a14_1;
     try {
-      $this.u14_1 = true;
-      $this.y13_1 = 0;
+      $this.w14_1 = true;
+      $this.a14_1 = 0;
       // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
@@ -1531,9 +1531,9 @@
           if (!(instances == null)) {
             // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
             // Inline function 'kotlin.contracts.contract' call
-            var values = instances.i1c_1;
+            var values = instances.k1c_1;
             var inductionVariable_0 = 0;
-            var last_0 = instances.h1c_1;
+            var last_0 = instances.j1c_1;
             if (inductionVariable_0 < last_0)
               do {
                 var i = inductionVariable_0;
@@ -1541,11 +1541,11 @@
                 // Inline function 'androidx.compose.runtime.ComposerImpl.recomposeMovableContent.<anonymous>.<anonymous>' call
                 var tmp = values[i];
                 var instance = !(tmp == null) ? tmp : THROW_CCE();
-                $this.g1c(scope, instance);
+                $this.i1c(scope, instance);
               }
                while (inductionVariable_0 < last_0);
           } else {
-            $this.g1c(scope, null);
+            $this.i1c(scope, null);
           }
         }
          while (inductionVariable <= last);
@@ -1553,13 +1553,13 @@
       if (from == null) {
         tmp_0 = null;
       } else {
-        tmp_0 = from.j1c(to, index == null ? -1 : index, block);
+        tmp_0 = from.l1c(to, index == null ? -1 : index, block);
       }
       var tmp2_elvis_lhs = tmp_0;
       return tmp2_elvis_lhs == null ? block() : tmp2_elvis_lhs;
     }finally {
-      $this.u14_1 = savedIsComposing;
-      $this.y13_1 = savedNodeIndex;
+      $this.w14_1 = savedIsComposing;
+      $this.a14_1 = savedNodeIndex;
     }
   }
   function recomposeMovableContent$default($this, from, to, index, invalidations, block, $super) {
@@ -1571,7 +1571,7 @@
   }
   function doCompose($this, invalidationsRequested, content) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!!$this.u14_1) {
+    if (!!$this.w14_1) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.doCompose.<anonymous>' call
       var message = 'Reentrant composition is not supported';
       composeRuntimeError(toString(message));
@@ -1579,24 +1579,24 @@
     $l$block: {
       // Inline function 'androidx.compose.runtime.trace' call
       var sectionName = 'Compose:recompose';
-      var token = Trace_instance.k1c(sectionName);
+      var token = Trace_instance.m1c(sectionName);
       try {
-        $this.q14_1 = currentSnapshot().p1c();
-        $this.k14_1 = null;
+        $this.s14_1 = currentSnapshot().r1c();
+        $this.m14_1 = null;
         // Inline function 'androidx.compose.runtime.collection.IdentityArrayMap.forEach' call
         var inductionVariable = 0;
-        var last = invalidationsRequested.s1c_1;
+        var last = invalidationsRequested.u1c_1;
         if (inductionVariable < last)
           do {
             var index = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
             // Inline function 'androidx.compose.runtime.ComposerImpl.doCompose.<anonymous>.<anonymous>' call
-            var tmp = invalidationsRequested.q1c_1[index];
+            var tmp = invalidationsRequested.s1c_1[index];
             var scope = !(tmp == null) ? tmp : THROW_CCE();
-            var tmp_0 = invalidationsRequested.r1c_1[index];
+            var tmp_0 = invalidationsRequested.t1c_1[index];
             var set = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-            var tmp0_safe_receiver = scope.i13_1;
-            var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.t1c_1;
+            var tmp0_safe_receiver = scope.k13_1;
+            var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.v1c_1;
             var tmp_1;
             if (tmp1_elvis_lhs == null) {
               return Unit_instance;
@@ -1604,48 +1604,48 @@
               tmp_1 = tmp1_elvis_lhs;
             }
             var location = tmp_1;
-            $this.h14_1.y(new Invalidation(scope, location, set));
+            $this.j14_1.y(new Invalidation(scope, location, set));
           }
            while (inductionVariable < last);
-        sortWith($this.h14_1, get_InvalidationLocationAscending());
-        $this.y13_1 = 0;
+        sortWith($this.j14_1, get_InvalidationLocationAscending());
+        $this.a14_1 = 0;
         var complete = false;
-        $this.u14_1 = true;
+        $this.w14_1 = true;
         var tmp_2;
         try {
           startRoot($this);
-          var savedContent = $this.k18();
+          var savedContent = $this.m18();
           if (!(savedContent === content) ? !(content == null) : false) {
-            $this.l18((content == null ? true : !(content == null)) ? content : THROW_CCE());
+            $this.n18((content == null ? true : !(content == null)) ? content : THROW_CCE());
           }
           // Inline function 'androidx.compose.runtime.observeDerivedStateRecalculations' call
-          var observer = $this.s14_1;
+          var observer = $this.u14_1;
           var observers = derivedStateObservers_0();
           try {
-            observers.x1c(observer);
+            observers.z1c(observer);
             // Inline function 'androidx.compose.runtime.ComposerImpl.doCompose.<anonymous>.<anonymous>' call
             if (!(content == null)) {
               startGroup_0($this, 200, get_invocation());
               invokeComposable($this, content);
               endGroup($this);
-            } else if ((($this.f14_1 ? true : $this.l14_1) ? !(savedContent == null) : false) ? !equals(savedContent, Companion_getInstance_0().z18_1) : false) {
+            } else if ((($this.h14_1 ? true : $this.n14_1) ? !(savedContent == null) : false) ? !equals(savedContent, Companion_getInstance_0().b19_1) : false) {
               startGroup_0($this, 200, get_invocation());
               invokeComposable($this, (!(savedContent == null) ? typeof savedContent === 'function' : false) ? savedContent : THROW_CCE());
               endGroup($this);
             } else {
-              $this.y1c();
+              $this.a1d();
             }
           }finally {
             // Inline function 'androidx.compose.runtime.collection.MutableVector.lastIndex' call
-            var tmp$ret$1 = observers.w1c_1 - 1 | 0;
+            var tmp$ret$1 = observers.y1c_1 - 1 | 0;
             observers.k1(tmp$ret$1);
           }
           endRoot($this);
           complete = true;
           tmp_2 = Unit_instance;
         }finally {
-          $this.u14_1 = false;
-          $this.h14_1.f1();
+          $this.w14_1 = false;
+          $this.j14_1.f1();
           if (!complete) {
             abortRoot($this);
           }
@@ -1653,82 +1653,82 @@
         }
         break $l$block;
       }finally {
-        Trace_instance.z1c(token);
+        Trace_instance.b1d(token);
       }
     }
   }
   function _get_node__db0vwp(_this__u8e3s4, $this) {
-    return _this__u8e3s4.a1d(_this__u8e3s4.c17_1);
+    return _this__u8e3s4.c1d(_this__u8e3s4.e17_1);
   }
   function nodeAt(_this__u8e3s4, $this, index) {
-    return _this__u8e3s4.a1d(index);
+    return _this__u8e3s4.c1d(index);
   }
   function validateNodeExpected($this) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!$this.g14_1) {
+    if (!$this.i14_1) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.validateNodeExpected.<anonymous>' call
       var message = 'A call to createNode(), emitNode() or useNode() expected was not expected';
       composeRuntimeError(toString(message));
     }
-    $this.g14_1 = false;
+    $this.i14_1 = false;
   }
   function validateNodeNotExpected($this) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!!$this.g14_1) {
+    if (!!$this.i14_1) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.validateNodeNotExpected.<anonymous>' call
       var message = 'A call to createNode(), emitNode() or useNode() expected';
       composeRuntimeError(toString(message));
     }
   }
   function recordInsert($this, anchor) {
-    if ($this.e15_1.s()) {
-      $this.c15_1.c1d(anchor, $this.x14_1);
+    if ($this.g15_1.s()) {
+      $this.e15_1.e1d(anchor, $this.z14_1);
     } else {
-      $this.c15_1.b1d(anchor, $this.x14_1, $this.e15_1);
-      $this.e15_1 = new FixupList();
+      $this.e15_1.d1d(anchor, $this.z14_1, $this.g15_1);
+      $this.g15_1 = new FixupList();
     }
   }
   function recordDelete($this) {
-    reportFreeMovableContent($this, $this.w14_1.a17_1);
-    $this.c15_1.d1d();
+    reportFreeMovableContent($this, $this.y14_1.c17_1);
+    $this.e15_1.f1d();
   }
   function reportFreeMovableContent($this, groupBeingRemoved) {
     reportFreeMovableContent$reportGroup($this, groupBeingRemoved, false, 0);
-    $this.c15_1.l1a();
+    $this.e15_1.n1a();
   }
   function reportAllMovableContent($this) {
-    if ($this.r13_1.f1d()) {
+    if ($this.t13_1.h1d()) {
       var changes = new ChangeList();
-      $this.b15_1 = changes;
+      $this.d15_1 = changes;
       // Inline function 'androidx.compose.runtime.SlotTable.read' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.SlotTable.read.<anonymous>' call
-      var reader = $this.r13_1.u15();
+      var reader = $this.t13_1.w15();
       var tmp;
       try {
-        $this.w14_1 = reader;
-        var this_0 = $this.c15_1;
-        var previousChangeList = this_0.h16_1;
+        $this.y14_1 = reader;
+        var this_0 = $this.e15_1;
+        var previousChangeList = this_0.j16_1;
         var tmp_0;
         try {
-          this_0.h16_1 = changes;
+          this_0.j16_1 = changes;
           reportFreeMovableContent($this, 0);
-          $this.c15_1.e1d();
+          $this.e15_1.g1d();
           tmp_0 = Unit_instance;
         }finally {
-          this_0.h16_1 = previousChangeList;
+          this_0.j16_1 = previousChangeList;
         }
         tmp = tmp_0;
       }finally {
-        reader.g17();
+        reader.i17();
       }
     }
   }
   function finalizeCompose($this) {
-    $this.c15_1.g1d();
+    $this.e15_1.i1d();
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!$this.w13_1.s()) {
+    if (!$this.y13_1.s()) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.finalizeCompose.<anonymous>' call
       var message = 'Start/end imbalance';
       composeRuntimeError(toString(message));
@@ -1736,20 +1736,20 @@
     cleanUpCompose($this);
   }
   function cleanUpCompose($this) {
-    $this.x13_1 = null;
-    $this.y13_1 = 0;
+    $this.z13_1 = null;
     $this.a14_1 = 0;
-    $this.g15_1 = 0;
-    $this.g14_1 = false;
-    $this.c15_1.h1d();
-    $this.t14_1.f1();
+    $this.c14_1 = 0;
+    $this.i15_1 = 0;
+    $this.i14_1 = false;
+    $this.e15_1.j1d();
+    $this.v14_1.f1();
     clearUpdatedNodeCounts($this);
   }
   function CompositionContextHolder() {
   }
   function updateCompoundKeyWhenWeEnterGroup($this, groupKey, dataKey, data) {
     if (dataKey == null)
-      if ((!(data == null) ? groupKey === 207 : false) ? !equals(data, Companion_getInstance_0().z18_1) : false) {
+      if ((!(data == null) ? groupKey === 207 : false) ? !equals(data, Companion_getInstance_0().b19_1) : false) {
         updateCompoundKeyWhenWeEnterGroupKeyHash($this, hashCode(data));
       } else {
         updateCompoundKeyWhenWeEnterGroupKeyHash($this, groupKey);
@@ -1765,12 +1765,12 @@
   function updateCompoundKeyWhenWeEnterGroupKeyHash($this, keyHash) {
     var tmp = $this;
     // Inline function 'androidx.compose.runtime.rol' call
-    var this_0 = $this.g15_1;
-    tmp.g15_1 = rotateLeft(this_0, 3) ^ keyHash;
+    var this_0 = $this.i15_1;
+    tmp.i15_1 = rotateLeft(this_0, 3) ^ keyHash;
   }
   function updateCompoundKeyWhenWeExitGroup($this, groupKey, dataKey, data) {
     if (dataKey == null)
-      if ((!(data == null) ? groupKey === 207 : false) ? !equals(data, Companion_getInstance_0().z18_1) : false) {
+      if ((!(data == null) ? groupKey === 207 : false) ? !equals(data, Companion_getInstance_0().b19_1) : false) {
         updateCompoundKeyWhenWeExitGroupKeyHash($this, hashCode(data));
       } else {
         updateCompoundKeyWhenWeExitGroupKeyHash($this, groupKey);
@@ -1786,15 +1786,15 @@
   function updateCompoundKeyWhenWeExitGroupKeyHash($this, groupKey) {
     var tmp = $this;
     // Inline function 'androidx.compose.runtime.ror' call
-    var this_0 = $this.g15_1 ^ groupKey;
-    tmp.g15_1 = rotateRight(this_0, 3);
+    var this_0 = $this.i15_1 ^ groupKey;
+    tmp.i15_1 = rotateRight(this_0, 3);
   }
   function reportFreeMovableContent$reportGroup(this$0, group, needsNodeDelete, nodeIndex) {
-    var reader = this$0.w14_1;
+    var reader = this$0.y14_1;
     var tmp;
-    if (reader.y1d(group)) {
-      var key = reader.o18(group);
-      var objectKey = reader.n18(group);
+    if (reader.a1e(group)) {
+      var key = reader.q18(group);
+      var objectKey = reader.p18(group);
       var tmp_0;
       var tmp_1;
       if (key === get_movableContentKey()) {
@@ -1804,11 +1804,11 @@
       }
       if (tmp_1) {
         var movableContent = objectKey instanceof MovableContent ? objectKey : THROW_CCE();
-        var parameter = reader.j1d(group, 0);
-        var anchor = reader.q19(group);
-        var end = group + reader.h1a(group) | 0;
+        var parameter = reader.l1d(group, 0);
+        var anchor = reader.s19(group);
+        var end = group + reader.j1a(group) | 0;
         // Inline function 'androidx.compose.runtime.snapshots.fastMap' call
-        var this_0 = filterToRange(this$0.h14_1, group, end);
+        var this_0 = filterToRange(this$0.j14_1, group, end);
         // Inline function 'kotlin.contracts.contract' call
         var target = ArrayList_init_$Create$_0(this_0.l());
         // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
@@ -1823,80 +1823,80 @@
             // Inline function 'androidx.compose.runtime.snapshots.fastMap.<anonymous>' call
             // Inline function 'kotlin.collections.plusAssign' call
             // Inline function 'androidx.compose.runtime.ComposerImpl.reportFreeMovableContent.reportGroup.<anonymous>' call
-            var element = to(item.c13_1, item.e13_1);
+            var element = to(item.e13_1, item.g13_1);
             target.y(element);
           }
            while (inductionVariable <= last);
         var invalidations = target;
-        var reference = new MovableContentStateReference(movableContent, parameter, this$0.v13_1, this$0.r13_1, anchor, invalidations, currentCompositionLocalScope_0(this$0, group));
-        this$0.q13_1.u1d(reference);
-        this$0.c15_1.v1d();
-        this$0.c15_1.w1d(this$0.v13_1, this$0.q13_1, reference);
+        var reference = new MovableContentStateReference(movableContent, parameter, this$0.x13_1, this$0.t13_1, anchor, invalidations, currentCompositionLocalScope_0(this$0, group));
+        this$0.s13_1.w1d(reference);
+        this$0.e15_1.x1d();
+        this$0.e15_1.y1d(this$0.x13_1, this$0.s13_1, reference);
         var tmp_2;
         if (needsNodeDelete) {
-          this$0.c15_1.x1d(nodeIndex, group);
+          this$0.e15_1.z1d(nodeIndex, group);
           tmp_2 = 0;
         } else {
-          tmp_2 = reader.c1b(group);
+          tmp_2 = reader.e1b(group);
         }
         tmp_0 = tmp_2;
       } else {
         if (key === 206 ? equals(objectKey, get_reference()) : false) {
-          var tmp_3 = reader.j1d(group, 0);
+          var tmp_3 = reader.l1d(group, 0);
           var contextHolder = tmp_3 instanceof CompositionContextHolder ? tmp_3 : null;
           if (!(contextHolder == null)) {
-            var compositionContext = contextHolder.k1d_1;
+            var compositionContext = contextHolder.m1d_1;
             // Inline function 'kotlin.collections.forEach' call
-            var tmp0_iterator = compositionContext.q1d_1.n();
+            var tmp0_iterator = compositionContext.s1d_1.n();
             while (tmp0_iterator.b1()) {
               var element_0 = tmp0_iterator.d1();
               // Inline function 'androidx.compose.runtime.ComposerImpl.reportFreeMovableContent.reportGroup.<anonymous>' call
               reportAllMovableContent(element_0);
-              this$0.q13_1.t1d(element_0.v13_1);
+              this$0.s13_1.v1d(element_0.x13_1);
             }
           }
-          tmp_0 = reader.c1b(group);
+          tmp_0 = reader.e1b(group);
         } else {
-          if (reader.b1b(group)) {
+          if (reader.d1b(group)) {
             tmp_0 = 1;
           } else {
-            tmp_0 = reader.c1b(group);
+            tmp_0 = reader.e1b(group);
           }
         }
       }
       tmp = tmp_0;
-    } else if (reader.i1d(group)) {
-      var size = reader.h1a(group);
+    } else if (reader.k1d(group)) {
+      var size = reader.j1a(group);
       var end_0 = group + size | 0;
       var current = group + 1 | 0;
       var runningNodeCount = 0;
       while (current < end_0) {
-        var isNode = reader.b1b(current);
+        var isNode = reader.d1b(current);
         if (isNode) {
-          this$0.c15_1.l1a();
-          this$0.c15_1.d1b(reader.a1d(current));
+          this$0.e15_1.n1a();
+          this$0.e15_1.f1b(reader.c1d(current));
         }
         runningNodeCount = runningNodeCount + reportFreeMovableContent$reportGroup(this$0, current, isNode ? true : needsNodeDelete, isNode ? 0 : nodeIndex + runningNodeCount | 0) | 0;
         if (isNode) {
-          this$0.c15_1.l1a();
-          this$0.c15_1.o1a();
+          this$0.e15_1.n1a();
+          this$0.e15_1.q1a();
         }
-        current = current + reader.h1a(current) | 0;
+        current = current + reader.j1a(current) | 0;
       }
-      tmp = reader.b1b(group) ? 1 : runningNodeCount;
-    } else if (reader.b1b(group)) {
+      tmp = reader.d1b(group) ? 1 : runningNodeCount;
+    } else if (reader.d1b(group)) {
       tmp = 1;
     } else {
-      tmp = reader.c1b(group);
+      tmp = reader.e1b(group);
     }
     return tmp;
   }
   function ComposerImpl$derivedStateObserver$1(this$0) {
-    this.z1d_1 = this$0;
+    this.b1e_1 = this$0;
   }
   function ComposableLambda$invoke$ref($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposerImpl$invokeMovableContentLambda$lambda($content, $parameter) {
@@ -1904,11 +1904,11 @@
       var $composer_0 = $composer;
       sourceInformation($composer_0, 'C3005@114008L18:Composer.kt#9igjgp');
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
         if (isTraceInProgress()) {
           traceEventStart(316014703, $changed, -1, 'androidx.compose.runtime.ComposerImpl.invokeMovableContentLambda.<anonymous> (Composer.kt:3005)');
         }
-        $content.b1e_1($parameter, $composer_0, 8);
+        $content.d1e_1($parameter, $composer_0, 8);
         var tmp_0;
         if (isTraceInProgress()) {
           traceEventEnd();
@@ -1916,7 +1916,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.t18();
+        $composer_0.v18();
         tmp = Unit_instance;
       }
       return Unit_instance;
@@ -1924,259 +1924,259 @@
   }
   function ComposerImpl$insertMovableContentGuarded$lambda(this$0, $offsetChanges, $reader, $to) {
     return function () {
-      var this_0 = this$0.c15_1;
+      var this_0 = this$0.e15_1;
       var newChangeList = $offsetChanges;
-      var previousChangeList = this_0.h16_1;
+      var previousChangeList = this_0.j16_1;
       var tmp;
       try {
-        this_0.h16_1 = newChangeList;
+        this_0.j16_1 = newChangeList;
         $l$block: {
           // Inline function 'androidx.compose.runtime.ComposerImpl.withReader' call
           var this_1 = this$0;
           var reader = $reader;
-          var savedReader = this_1.w14_1;
-          var savedCountOverrides = this_1.c14_1;
-          var savedProviderUpdates = this_1.k14_1;
-          this_1.c14_1 = null;
-          this_1.k14_1 = null;
+          var savedReader = this_1.y14_1;
+          var savedCountOverrides = this_1.e14_1;
+          var savedProviderUpdates = this_1.m14_1;
+          this_1.e14_1 = null;
+          this_1.m14_1 = null;
           try {
-            this_1.w14_1 = reader;
-            var this_2 = this$0.c15_1;
-            var previousImplicitRootStart = this_2.k16_1;
+            this_1.y14_1 = reader;
+            var this_2 = this$0.e15_1;
+            var previousImplicitRootStart = this_2.m16_1;
             var tmp_0;
             try {
-              this_2.k16_1 = false;
-              invokeMovableContentLambda(this$0, $to.p1b_1, $to.v1b_1, $to.q1b_1, true);
+              this_2.m16_1 = false;
+              invokeMovableContentLambda(this$0, $to.r1b_1, $to.x1b_1, $to.s1b_1, true);
               tmp_0 = Unit_instance;
             }finally {
-              this_2.k16_1 = previousImplicitRootStart;
+              this_2.m16_1 = previousImplicitRootStart;
             }
             break $l$block;
           }finally {
-            this_1.w14_1 = savedReader;
-            this_1.c14_1 = savedCountOverrides;
-            this_1.k14_1 = savedProviderUpdates;
+            this_1.y14_1 = savedReader;
+            this_1.e14_1 = savedCountOverrides;
+            this_1.m14_1 = savedProviderUpdates;
           }
         }
         tmp = tmp_0;
       }finally {
-        this_0.h16_1 = previousChangeList;
+        this_0.j16_1 = previousChangeList;
       }
       return Unit_instance;
     };
   }
   function ComposerImpl$insertMovableContentGuarded$lambda_0(this$0, $to) {
     return function () {
-      invokeMovableContentLambda(this$0, $to.p1b_1, $to.v1b_1, $to.q1b_1, true);
+      invokeMovableContentLambda(this$0, $to.r1b_1, $to.x1b_1, $to.s1b_1, true);
       return Unit_instance;
     };
   }
   function ComposerImpl(applier, parentContext, slotTable, abandonSet, changes, lateChanges, composition) {
-    this.p13_1 = applier;
-    this.q13_1 = parentContext;
-    this.r13_1 = slotTable;
-    this.s13_1 = abandonSet;
-    this.t13_1 = changes;
-    this.u13_1 = lateChanges;
-    this.v13_1 = composition;
-    this.w13_1 = new Stack();
-    this.x13_1 = null;
-    this.y13_1 = 0;
-    this.z13_1 = new IntStack();
+    this.r13_1 = applier;
+    this.s13_1 = parentContext;
+    this.t13_1 = slotTable;
+    this.u13_1 = abandonSet;
+    this.v13_1 = changes;
+    this.w13_1 = lateChanges;
+    this.x13_1 = composition;
+    this.y13_1 = new Stack();
+    this.z13_1 = null;
     this.a14_1 = 0;
     this.b14_1 = new IntStack();
-    this.c14_1 = null;
-    this.d14_1 = null;
-    this.e14_1 = false;
-    this.f14_1 = false;
+    this.c14_1 = 0;
+    this.d14_1 = new IntStack();
+    this.e14_1 = null;
+    this.f14_1 = null;
     this.g14_1 = false;
+    this.h14_1 = false;
+    this.i14_1 = false;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.h14_1 = ArrayList_init_$Create$();
-    this.i14_1 = new IntStack();
-    this.j14_1 = persistentCompositionLocalHashMapOf();
-    this.k14_1 = null;
-    this.l14_1 = false;
-    this.m14_1 = new IntStack();
+    tmp.j14_1 = ArrayList_init_$Create$();
+    this.k14_1 = new IntStack();
+    this.l14_1 = persistentCompositionLocalHashMapOf();
+    this.m14_1 = null;
     this.n14_1 = false;
-    this.o14_1 = -1;
-    this.p14_1 = 0;
-    this.q14_1 = 0;
-    this.r14_1 = false;
+    this.o14_1 = new IntStack();
+    this.p14_1 = false;
+    this.q14_1 = -1;
+    this.r14_1 = 0;
+    this.s14_1 = 0;
+    this.t14_1 = false;
     var tmp_0 = this;
-    tmp_0.s14_1 = new ComposerImpl$derivedStateObserver$1(this);
-    this.t14_1 = new Stack();
-    this.u14_1 = false;
-    this.v14_1 = false;
+    tmp_0.u14_1 = new ComposerImpl$derivedStateObserver$1(this);
+    this.v14_1 = new Stack();
+    this.w14_1 = false;
+    this.x14_1 = false;
     var tmp_1 = this;
     // Inline function 'kotlin.also' call
-    var this_0 = this.r13_1.u15();
+    var this_0 = this.t13_1.w15();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.ComposerImpl.reader.<anonymous>' call
-    this_0.g17();
-    tmp_1.w14_1 = this_0;
-    this.x14_1 = new SlotTable();
+    this_0.i17();
+    tmp_1.y14_1 = this_0;
+    this.z14_1 = new SlotTable();
     var tmp_2 = this;
     // Inline function 'kotlin.also' call
-    var this_1 = this.x14_1.s18();
+    var this_1 = this.z14_1.u18();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.ComposerImpl.writer.<anonymous>' call
-    this_1.g17();
-    tmp_2.y14_1 = this_1;
-    this.z14_1 = false;
-    this.a15_1 = null;
-    this.b15_1 = null;
-    this.c15_1 = new ComposerChangeListWriter(this, this.t13_1);
+    this_1.i17();
+    tmp_2.a15_1 = this_1;
+    this.b15_1 = false;
+    this.c15_1 = null;
+    this.d15_1 = null;
+    this.e15_1 = new ComposerChangeListWriter(this, this.v13_1);
     var tmp_3 = this;
     // Inline function 'androidx.compose.runtime.SlotTable.read' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotTable.read.<anonymous>' call
-    var reader = this.x14_1.u15();
+    var reader = this.z14_1.w15();
     var tmp_4;
     try {
       // Inline function 'androidx.compose.runtime.ComposerImpl.insertAnchor.<anonymous>' call
-      tmp_4 = reader.q19(0);
+      tmp_4 = reader.s19(0);
     }finally {
-      reader.g17();
+      reader.i17();
     }
-    tmp_3.d15_1 = tmp_4;
-    this.e15_1 = new FixupList();
-    this.f15_1 = false;
-    this.g15_1 = 0;
+    tmp_3.f15_1 = tmp_4;
+    this.g15_1 = new FixupList();
     this.h15_1 = false;
-    this.i15_1 = true;
-    this.j15_1 = new IntStack();
+    this.i15_1 = 0;
+    this.j15_1 = false;
+    this.k15_1 = true;
+    this.l15_1 = new IntStack();
   }
-  protoOf(ComposerImpl).d1e = function () {
-    return this.p13_1;
-  };
-  protoOf(ComposerImpl).e1e = function () {
-    return this.p14_1 > 0;
-  };
   protoOf(ComposerImpl).f1e = function () {
-    return this.q13_1.g1e();
+    return this.r13_1;
   };
-  protoOf(ComposerImpl).h1e = function (key) {
-    return start(this, key, null, Companion_getInstance_1().g18_1, null);
+  protoOf(ComposerImpl).g1e = function () {
+    return this.r14_1 > 0;
   };
-  protoOf(ComposerImpl).i1e = function () {
-    return endGroup(this);
+  protoOf(ComposerImpl).h1e = function () {
+    return this.s13_1.i1e();
   };
-  protoOf(ComposerImpl).j1e = function () {
-    return start(this, -127, null, Companion_getInstance_1().g18_1, null);
+  protoOf(ComposerImpl).j1e = function (key) {
+    return start(this, key, null, Companion_getInstance_1().i18_1, null);
   };
   protoOf(ComposerImpl).k1e = function () {
+    return endGroup(this);
+  };
+  protoOf(ComposerImpl).l1e = function () {
+    return start(this, -127, null, Companion_getInstance_1().i18_1, null);
+  };
+  protoOf(ComposerImpl).m1e = function () {
     endGroup(this);
-    var scope = this.l1e();
-    if (!(scope == null) ? scope.e1a() : false) {
-      scope.m1e(true);
+    var scope = this.n1e();
+    if (!(scope == null) ? scope.g1a() : false) {
+      scope.o1e(true);
     }
   };
-  protoOf(ComposerImpl).n1e = function () {
+  protoOf(ComposerImpl).p1e = function () {
     var tmp;
-    if (!this.c1e() ? true : this.l14_1) {
+    if (!this.e1e() ? true : this.n14_1) {
       tmp = true;
     } else {
-      var tmp0_safe_receiver = this.l1e();
-      tmp = (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.n1e()) === true;
+      var tmp0_safe_receiver = this.n1e();
+      tmp = (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.p1e()) === true;
     }
     return tmp;
   };
-  protoOf(ComposerImpl).k1b = function (key, dataKey) {
-    return start(this, key, dataKey, Companion_getInstance_1().g18_1, null);
+  protoOf(ComposerImpl).m1b = function (key, dataKey) {
+    return start(this, key, dataKey, Companion_getInstance_1().i18_1, null);
   };
-  protoOf(ComposerImpl).n1b = function () {
+  protoOf(ComposerImpl).p1b = function () {
     return endGroup(this);
   };
-  protoOf(ComposerImpl).o1e = function () {
-    this.k14_1 = null;
+  protoOf(ComposerImpl).q1e = function () {
+    this.m14_1 = null;
   };
-  protoOf(ComposerImpl).p1e = function () {
-    return this.f15_1;
+  protoOf(ComposerImpl).r1e = function () {
+    return this.h15_1;
   };
-  protoOf(ComposerImpl).c1e = function () {
+  protoOf(ComposerImpl).e1e = function () {
     var tmp;
     var tmp_0;
-    if ((!this.f15_1 ? !this.n14_1 : false) ? !this.l14_1 : false) {
-      var tmp0_safe_receiver = this.l1e();
-      tmp_0 = (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q1e()) === false;
+    if ((!this.h15_1 ? !this.p14_1 : false) ? !this.n14_1 : false) {
+      var tmp0_safe_receiver = this.n1e();
+      tmp_0 = (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.s1e()) === false;
     } else {
       tmp_0 = false;
     }
     if (tmp_0) {
-      tmp = !this.f14_1;
+      tmp = !this.h14_1;
     } else {
       tmp = false;
     }
     return tmp;
   };
-  protoOf(ComposerImpl).x18 = function () {
-    start(this, 125, null, Companion_getInstance_1().h18_1, null);
-    this.g14_1 = true;
+  protoOf(ComposerImpl).z18 = function () {
+    start(this, 125, null, Companion_getInstance_1().j18_1, null);
+    this.i14_1 = true;
   };
-  protoOf(ComposerImpl).r1e = function (factory) {
+  protoOf(ComposerImpl).t1e = function (factory) {
     validateNodeExpected(this);
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!this.f15_1) {
+    if (!this.h15_1) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.createNode.<anonymous>' call
       var message = 'createNode() can only be called when inserting';
       composeRuntimeError(toString(message));
     }
-    var insertIndex = this.z13_1.s1e();
-    var groupAnchor = this.y14_1.q19(this.y14_1.b18_1);
-    this.a14_1 = this.a14_1 + 1 | 0;
-    this.e15_1.t1e(factory, insertIndex, groupAnchor);
+    var insertIndex = this.b14_1.u1e();
+    var groupAnchor = this.a15_1.s19(this.a15_1.d18_1);
+    this.c14_1 = this.c14_1 + 1 | 0;
+    this.g15_1.v1e(factory, insertIndex, groupAnchor);
   };
-  protoOf(ComposerImpl).u1e = function () {
+  protoOf(ComposerImpl).w1e = function () {
     validateNodeExpected(this);
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!!this.f15_1) {
+    if (!!this.h15_1) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.useNode.<anonymous>' call
       var message = 'useNode() called while inserting';
       composeRuntimeError(toString(message));
     }
-    var node = _get_node__db0vwp(this.w14_1, this);
-    this.c15_1.d1b(node);
+    var node = _get_node__db0vwp(this.y14_1, this);
+    this.e15_1.f1b(node);
     var tmp;
-    if (this.n14_1) {
+    if (this.p14_1) {
       tmp = !(node == null) ? isInterface(node, ComposeNodeLifecycleCallback) : false;
     } else {
       tmp = false;
     }
     if (tmp) {
-      this.c15_1.v1e(node);
+      this.e15_1.x1e(node);
     }
   };
-  protoOf(ComposerImpl).w1e = function () {
+  protoOf(ComposerImpl).y1e = function () {
     return end(this, true);
   };
-  protoOf(ComposerImpl).x1e = function (value, block) {
-    if (this.f15_1) {
-      this.e15_1.z1e(value, block);
+  protoOf(ComposerImpl).z1e = function (value, block) {
+    if (this.h15_1) {
+      this.g15_1.b1f(value, block);
     } else {
-      this.c15_1.y1e(value, block);
+      this.e15_1.a1f(value, block);
     }
   };
-  protoOf(ComposerImpl).k18 = function () {
+  protoOf(ComposerImpl).m18 = function () {
     var tmp;
-    if (this.f15_1) {
+    if (this.h15_1) {
       validateNodeNotExpected(this);
-      tmp = Companion_getInstance_0().z18_1;
+      tmp = Companion_getInstance_0().b19_1;
     } else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.ComposerImpl.nextSlot.<anonymous>' call
-      var it = this.w14_1.d1();
+      var it = this.y14_1.d1();
       var tmp_0;
       var tmp_1;
-      if (this.n14_1) {
+      if (this.p14_1) {
         tmp_1 = !(!(it == null) ? isInterface(it, ReusableRememberObserver) : false);
       } else {
         tmp_1 = false;
       }
       if (tmp_1) {
-        tmp_0 = Companion_getInstance_0().z18_1;
+        tmp_0 = Companion_getInstance_0().b19_1;
       } else {
         tmp_0 = it;
       }
@@ -2184,28 +2184,28 @@
     }
     return tmp;
   };
-  protoOf(ComposerImpl).a1f = function () {
+  protoOf(ComposerImpl).c1f = function () {
     var tmp;
-    if (this.f15_1) {
+    if (this.h15_1) {
       validateNodeNotExpected(this);
-      tmp = Companion_getInstance_0().z18_1;
+      tmp = Companion_getInstance_0().b19_1;
     } else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.ComposerImpl.nextSlotForCache.<anonymous>' call
-      var it = this.w14_1.d1();
+      var it = this.y14_1.d1();
       var tmp_0;
       var tmp_1;
-      if (this.n14_1) {
+      if (this.p14_1) {
         tmp_1 = !(!(it == null) ? isInterface(it, ReusableRememberObserver) : false);
       } else {
         tmp_1 = false;
       }
       if (tmp_1) {
-        tmp_0 = Companion_getInstance_0().z18_1;
+        tmp_0 = Companion_getInstance_0().b19_1;
       } else {
         if (it instanceof RememberObserverHolder) {
-          tmp_0 = it.b1f_1;
+          tmp_0 = it.d1f_1;
         } else {
           tmp_0 = it;
         }
@@ -2214,127 +2214,127 @@
     }
     return tmp;
   };
-  protoOf(ComposerImpl).a16 = function (value) {
+  protoOf(ComposerImpl).c16 = function (value) {
     var tmp;
-    if (!equals(this.k18(), value)) {
-      this.l18(value);
+    if (!equals(this.m18(), value)) {
+      this.n18(value);
       tmp = true;
     } else {
       tmp = false;
     }
     return tmp;
   };
-  protoOf(ComposerImpl).c1f = function (value) {
+  protoOf(ComposerImpl).e1f = function (value) {
     var tmp;
-    if (!(this.k18() === value)) {
-      this.l18(value);
+    if (!(this.m18() === value)) {
+      this.n18(value);
       tmp = true;
     } else {
       tmp = false;
     }
     return tmp;
   };
-  protoOf(ComposerImpl).d1f = function (value) {
-    var next = this.k18();
+  protoOf(ComposerImpl).f1f = function (value) {
+    var next = this.m18();
     if (!(next == null) ? typeof next === 'boolean' : false) {
       var nextPrimitive = next;
       if (value === nextPrimitive)
         return false;
     }
-    this.l18(value);
+    this.n18(value);
     return true;
   };
-  protoOf(ComposerImpl).e1f = function (value) {
-    var next = this.k18();
+  protoOf(ComposerImpl).g1f = function (value) {
+    var next = this.m18();
     if (!(next == null) ? typeof next === 'number' : false) {
       var nextPrimitive = next;
       if (value === nextPrimitive)
         return false;
     }
-    this.l18(value);
+    this.n18(value);
     return true;
   };
-  protoOf(ComposerImpl).l18 = function (value) {
-    if (this.f15_1) {
-      this.y14_1.h1f(value);
+  protoOf(ComposerImpl).n18 = function (value) {
+    if (this.h15_1) {
+      this.a15_1.j1f(value);
     } else {
-      var groupSlotIndex = this.w14_1.f1f() - 1 | 0;
-      this.c15_1.g1f(value, groupSlotIndex);
+      var groupSlotIndex = this.y14_1.h1f() - 1 | 0;
+      this.e15_1.i1f(value, groupSlotIndex);
     }
   };
-  protoOf(ComposerImpl).i1f = function (value) {
+  protoOf(ComposerImpl).k1f = function (value) {
     var tmp;
     if (!(value == null) ? isInterface(value, RememberObserver) : false) {
-      if (this.f15_1) {
-        this.c15_1.j1f(value);
+      if (this.h15_1) {
+        this.e15_1.l1f(value);
       }
-      this.s13_1.y(value);
+      this.u13_1.y(value);
       tmp = new RememberObserverHolder(value);
     } else {
       tmp = value;
     }
     var toStore = tmp;
-    this.l18(toStore);
+    this.n18(toStore);
   };
-  protoOf(ComposerImpl).k1f = function (value) {
+  protoOf(ComposerImpl).m1f = function (value) {
     var parentScope = currentCompositionLocalScope(this);
     startGroup_0(this, 201, get_provider());
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.ComposerImpl.startProvider.<anonymous>' call
-    var it = this.l1f();
+    var it = this.n1f();
     var tmp;
-    if (equals(it, Companion_getInstance_0().z18_1)) {
+    if (equals(it, Companion_getInstance_0().b19_1)) {
       tmp = null;
     } else {
       tmp = (!(it == null) ? isInterface(it, State_0) : false) ? it : THROW_CCE();
     }
     var oldState = tmp;
-    var tmp_0 = value.m1f_1;
+    var tmp_0 = value.o1f_1;
     var local = tmp_0 instanceof CompositionLocal ? tmp_0 : THROW_CCE();
-    var state = local.q1f(value.n1f_1, oldState);
+    var state = local.s1f(value.p1f_1, oldState);
     var change = !equals(state, oldState);
     if (change) {
-      this.r1f(state);
+      this.t1f(state);
     }
     var providers;
     var invalid;
-    if (this.f15_1) {
-      providers = parentScope.s1f(local, state);
+    if (this.h15_1) {
+      providers = parentScope.u1f(local, state);
       invalid = false;
-      this.z14_1 = true;
+      this.b15_1 = true;
     } else {
-      var tmp_1 = this.w14_1.m18(this.w14_1.a17_1);
+      var tmp_1 = this.y14_1.o18(this.y14_1.c17_1);
       var oldScope = (!(tmp_1 == null) ? isInterface(tmp_1, PersistentCompositionLocalMap) : false) ? tmp_1 : THROW_CCE();
-      providers = ((!this.c1e() ? true : change) ? value.o1f_1 ? true : !contains_0(parentScope, local) : false) ? parentScope.s1f(local, state) : oldScope;
-      invalid = this.n14_1 ? true : !(oldScope === providers);
+      providers = ((!this.e1e() ? true : change) ? value.q1f_1 ? true : !contains_0(parentScope, local) : false) ? parentScope.u1f(local, state) : oldScope;
+      invalid = this.p14_1 ? true : !(oldScope === providers);
     }
-    if (invalid ? !this.f15_1 : false) {
+    if (invalid ? !this.h15_1 : false) {
       recordProviderUpdate(this, providers);
     }
-    this.m14_1.z15(asInt(this.l14_1));
-    this.l14_1 = invalid;
-    this.a15_1 = providers;
-    start(this, 202, get_compositionLocalMap(), Companion_getInstance_1().g18_1, providers);
+    this.o14_1.b16(asInt(this.n14_1));
+    this.n14_1 = invalid;
+    this.c15_1 = providers;
+    start(this, 202, get_compositionLocalMap(), Companion_getInstance_1().i18_1, providers);
   };
-  protoOf(ComposerImpl).t1f = function () {
+  protoOf(ComposerImpl).v1f = function () {
     endGroup(this);
     endGroup(this);
-    this.l14_1 = asBool(this.m14_1.d1a());
-    this.a15_1 = null;
+    this.n14_1 = asBool(this.o14_1.f1a());
+    this.c15_1 = null;
   };
-  protoOf(ComposerImpl).u1f = function (key) {
+  protoOf(ComposerImpl).w1f = function (key) {
     return read(currentCompositionLocalScope(this), key);
   };
-  protoOf(ComposerImpl).l1e = function () {
+  protoOf(ComposerImpl).n1e = function () {
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.ComposerImpl.<get-currentRecomposeScope>.<anonymous>' call
-    var it = this.t14_1;
-    return (this.p14_1 === 0 ? it.v1f() : false) ? it.s1e() : null;
+    var it = this.v14_1;
+    return (this.r14_1 === 0 ? it.x1f() : false) ? it.u1e() : null;
   };
-  protoOf(ComposerImpl).g1c = function (scope, instance) {
-    var tmp0_elvis_lhs = scope.i13_1;
+  protoOf(ComposerImpl).i1c = function (scope, instance) {
+    var tmp0_elvis_lhs = scope.k13_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return false;
@@ -2342,79 +2342,79 @@
       tmp = tmp0_elvis_lhs;
     }
     var anchor = tmp;
-    var slotTable = this.w14_1.t16_1;
-    var location = anchor.w1f(slotTable);
-    if (this.u14_1 ? location >= this.w14_1.a17_1 : false) {
-      insertIfMissing(this.h14_1, location, scope, instance);
+    var slotTable = this.y14_1.v16_1;
+    var location = anchor.y1f(slotTable);
+    if (this.w14_1 ? location >= this.y14_1.c17_1 : false) {
+      insertIfMissing(this.j14_1, location, scope, instance);
       return true;
     }
     return false;
   };
-  protoOf(ComposerImpl).y1c = function () {
-    if (this.h14_1.s()) {
+  protoOf(ComposerImpl).a1d = function () {
+    if (this.j14_1.s()) {
       skipGroup(this);
     } else {
-      var reader = this.w14_1;
-      var key = reader.l19();
-      var dataKey = reader.n19();
-      var aux = reader.v18();
+      var reader = this.y14_1;
+      var key = reader.n19();
+      var dataKey = reader.p19();
+      var aux = reader.x18();
       updateCompoundKeyWhenWeEnterGroup(this, key, dataKey, aux);
-      startReaderGroup(this, reader.x1f(), null);
+      startReaderGroup(this, reader.z1f(), null);
       recomposeToGroupEnd(this);
-      reader.q1a();
+      reader.s1a();
       updateCompoundKeyWhenWeExitGroup(this, key, dataKey, aux);
     }
   };
-  protoOf(ComposerImpl).t18 = function () {
+  protoOf(ComposerImpl).v18 = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.a14_1 === 0)) {
+    if (!(this.c14_1 === 0)) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.skipToGroupEnd.<anonymous>' call
       var message = 'No nodes can be emitted before calling skipAndEndGroup';
       composeRuntimeError(toString(message));
     }
-    var tmp0_safe_receiver = this.l1e();
+    var tmp0_safe_receiver = this.n1e();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.y1f();
+      tmp0_safe_receiver.a1g();
     }
-    if (this.h14_1.s()) {
+    if (this.j14_1.s()) {
       skipReaderToGroupEnd(this);
     } else {
       recomposeToGroupEnd(this);
     }
   };
-  protoOf(ComposerImpl).z1f = function (key) {
-    start(this, key, null, Companion_getInstance_1().g18_1, null);
+  protoOf(ComposerImpl).b1g = function (key) {
+    start(this, key, null, Companion_getInstance_1().i18_1, null);
     addRecomposeScope(this);
     return this;
   };
-  protoOf(ComposerImpl).a1g = function () {
-    var scope = this.t14_1.v1f() ? this.t14_1.d1a() : null;
+  protoOf(ComposerImpl).c1g = function () {
+    var scope = this.v14_1.x1f() ? this.v14_1.f1a() : null;
     if (scope != null) {
-      scope.i1b(false);
+      scope.k1b(false);
     }
-    var tmp2_safe_receiver = scope == null ? null : scope.b1g(this.q14_1);
+    var tmp2_safe_receiver = scope == null ? null : scope.d1g(this.s14_1);
     if (tmp2_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      this.c15_1.c1g(tmp2_safe_receiver, this.v13_1);
+      this.e15_1.e1g(tmp2_safe_receiver, this.x13_1);
     }
     var tmp;
-    if ((!(scope == null) ? !scope.e1g() : false) ? scope.e1a() ? true : this.e14_1 : false) {
-      if (scope.i13_1 == null) {
+    if ((!(scope == null) ? !scope.g1g() : false) ? scope.g1a() ? true : this.g14_1 : false) {
+      if (scope.k13_1 == null) {
         var tmp_0 = scope;
         var tmp_1;
-        if (this.f15_1) {
-          tmp_1 = this.y14_1.q19(this.y14_1.b18_1);
+        if (this.h15_1) {
+          tmp_1 = this.a15_1.s19(this.a15_1.d18_1);
         } else {
-          tmp_1 = this.w14_1.q19(this.w14_1.c17_1);
+          tmp_1 = this.y14_1.s19(this.y14_1.e17_1);
         }
-        tmp_0.i13_1 = tmp_1;
+        tmp_0.k13_1 = tmp_1;
       }
-      scope.d1g(false);
+      scope.f1g(false);
       tmp = scope;
     } else {
       tmp = null;
@@ -2423,7 +2423,7 @@
     end(this, false);
     return result;
   };
-  protoOf(ComposerImpl).f1g = function (references) {
+  protoOf(ComposerImpl).h1g = function (references) {
     var completed = false;
     try {
       insertMovableContentGuarded(this, references);
@@ -2436,83 +2436,83 @@
       }
     }
   };
-  protoOf(ComposerImpl).g1g = function (sourceInformation) {
-    if (this.f15_1 ? this.r14_1 : false) {
-      this.y14_1.h1g(sourceInformation);
+  protoOf(ComposerImpl).i1g = function (sourceInformation) {
+    if (this.h15_1 ? this.t14_1 : false) {
+      this.a15_1.j1g(sourceInformation);
     }
   };
-  protoOf(ComposerImpl).i1g = function (key, sourceInformation) {
-    if (this.f15_1 ? this.r14_1 : false) {
-      this.y14_1.j1g(key, sourceInformation);
+  protoOf(ComposerImpl).k1g = function (key, sourceInformation) {
+    if (this.h15_1 ? this.t14_1 : false) {
+      this.a15_1.l1g(key, sourceInformation);
     }
   };
-  protoOf(ComposerImpl).k1g = function () {
-    if (this.f15_1 ? this.r14_1 : false) {
-      this.y14_1.l1g();
+  protoOf(ComposerImpl).m1g = function () {
+    if (this.h15_1 ? this.t14_1 : false) {
+      this.a15_1.n1g();
     }
   };
-  protoOf(ComposerImpl).m1g = function (invalidationsRequested, content) {
+  protoOf(ComposerImpl).o1g = function (invalidationsRequested, content) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!this.t13_1.s()) {
+    if (!this.v13_1.s()) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.composeContent.<anonymous>' call
       var message = 'Expected applyChanges() to have been called';
       composeRuntimeError(toString(message));
     }
     doCompose(this, invalidationsRequested, content);
   };
-  protoOf(ComposerImpl).o1g = function (block) {
+  protoOf(ComposerImpl).q1g = function (block) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!!this.u14_1) {
+    if (!!this.w14_1) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.prepareCompose.<anonymous>' call
       var message = 'Preparing a composition while composing is not supported';
       composeRuntimeError(toString(message));
     }
-    this.u14_1 = true;
+    this.w14_1 = true;
     try {
       block();
     }finally {
-      this.u14_1 = false;
+      this.w14_1 = false;
     }
   };
-  protoOf(ComposerImpl).p1g = function (invalidationsRequested) {
+  protoOf(ComposerImpl).r1g = function (invalidationsRequested) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!this.t13_1.s()) {
+    if (!this.v13_1.s()) {
       // Inline function 'androidx.compose.runtime.ComposerImpl.recompose.<anonymous>' call
       var message = 'Expected applyChanges() to have been called';
       composeRuntimeError(toString(message));
     }
     var tmp;
     var tmp_0;
-    if (invalidationsRequested.v1f()) {
+    if (invalidationsRequested.x1f()) {
       tmp_0 = true;
     } else {
       // Inline function 'kotlin.collections.isNotEmpty' call
-      tmp_0 = !this.h14_1.s();
+      tmp_0 = !this.j14_1.s();
     }
     if (tmp_0) {
       tmp = true;
     } else {
-      tmp = this.f14_1;
+      tmp = this.h14_1;
     }
     if (tmp) {
       doCompose(this, invalidationsRequested, null);
-      return this.t13_1.v1f();
+      return this.v13_1.x1f();
     }
     return false;
   };
-  protoOf(ComposerImpl).q1g = function () {
-    return this.l1e();
+  protoOf(ComposerImpl).s1g = function () {
+    return this.n1e();
   };
-  protoOf(ComposerImpl).l1f = function () {
-    return this.a1f();
+  protoOf(ComposerImpl).n1f = function () {
+    return this.c1f();
   };
-  protoOf(ComposerImpl).r1f = function (value) {
-    return this.i1f(value);
+  protoOf(ComposerImpl).t1f = function (value) {
+    return this.k1f(value);
   };
-  protoOf(ComposerImpl).r1g = function (scope) {
+  protoOf(ComposerImpl).t1g = function (scope) {
     var tmp0_safe_receiver = scope instanceof RecomposeScopeImpl ? scope : null;
     if (tmp0_safe_receiver != null) {
-      tmp0_safe_receiver.s1g(true);
+      tmp0_safe_receiver.u1g(true);
     }
   };
   function Composer$Companion$Empty$1() {
@@ -2523,7 +2523,7 @@
   function Companion() {
     Companion_instance_0 = this;
     var tmp = this;
-    tmp.z18_1 = new Composer$Companion$Empty$1();
+    tmp.b19_1 = new Composer$Companion$Empty$1();
   }
   var Companion_instance_0;
   function Companion_getInstance_0() {
@@ -2557,29 +2557,29 @@
   function removeCurrentGroup(_this__u8e3s4, rememberManager) {
     _init_properties_Composer_kt__bmp4g0();
     // Inline function 'kotlin.collections.iterator' call
-    var tmp0_iterator = _this__u8e3s4.t1g();
+    var tmp0_iterator = _this__u8e3s4.v1g();
     while (tmp0_iterator.b1()) {
       var slot = tmp0_iterator.d1();
       if (!(slot == null) ? isInterface(slot, ComposeNodeLifecycleCallback) : false) {
-        rememberManager.u1g(slot);
+        rememberManager.w1g(slot);
       }
       if (slot instanceof RememberObserverHolder) {
-        rememberManager.v1g(slot.b1f_1);
+        rememberManager.x1g(slot.d1f_1);
       }
       if (slot instanceof RecomposeScopeImpl) {
         slot.vp();
       }
     }
-    _this__u8e3s4.w1g();
+    _this__u8e3s4.y1g();
   }
   function MovableContentStateReference(content, parameter, composition, slotTable, anchor, invalidations, locals) {
-    this.p1b_1 = content;
-    this.q1b_1 = parameter;
-    this.r1b_1 = composition;
-    this.s1b_1 = slotTable;
-    this.t1b_1 = anchor;
-    this.u1b_1 = invalidations;
-    this.v1b_1 = locals;
+    this.r1b_1 = content;
+    this.s1b_1 = parameter;
+    this.t1b_1 = composition;
+    this.u1b_1 = slotTable;
+    this.v1b_1 = anchor;
+    this.w1b_1 = invalidations;
+    this.x1b_1 = locals;
   }
   function runtimeCheck(value) {
     _init_properties_Composer_kt__bmp4g0();
@@ -2592,11 +2592,11 @@
     return tmp;
   }
   function MovableContentState(slotTable) {
-    this.z1b_1 = slotTable;
+    this.b1c_1 = slotTable;
   }
   function sourceInformation(composer, sourceInformation) {
     _init_properties_Composer_kt__bmp4g0();
-    composer.g1g(sourceInformation);
+    composer.i1g(sourceInformation);
   }
   function isTraceInProgress() {
     _init_properties_Composer_kt__bmp4g0();
@@ -2604,7 +2604,7 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.isTraceInProgress.<anonymous>' call
     var it = get_compositionTracer();
-    return !(it == null) ? it.x1g() : false;
+    return !(it == null) ? it.z1g() : false;
   }
   function traceEventStart(key, dirty1, dirty2, info) {
     _init_properties_Composer_kt__bmp4g0();
@@ -2612,7 +2612,7 @@
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.y1g(key, dirty1, dirty2, info);
+      tmp0_safe_receiver.a1h(key, dirty1, dirty2, info);
     }
   }
   function traceEventEnd() {
@@ -2621,7 +2621,7 @@
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.z1g();
+      tmp0_safe_receiver.b1h();
     }
   }
   function MovableContent() {
@@ -2629,13 +2629,13 @@
   function ComposeRuntimeError(message) {
     IllegalStateException_init_$Init$(this);
     captureStack(this, ComposeRuntimeError);
-    this.a1h_1 = message;
+    this.c1h_1 = message;
   }
   protoOf(ComposeRuntimeError).v6 = function () {
-    return this.a1h_1;
+    return this.c1h_1;
   };
   function RememberObserverHolder(wrapped) {
-    this.b1f_1 = wrapped;
+    this.d1f_1 = wrapped;
   }
   function Pending$keyMap$delegate$lambda(this$0) {
     return function () {
@@ -2644,12 +2644,12 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.Pending.keyMap$delegate.<anonymous>.<anonymous>' call
       var inductionVariable = 0;
-      var last = this$0.d19_1.l();
+      var last = this$0.f19_1.l();
       if (inductionVariable < last)
         do {
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var keyInfo = this$0.d19_1.m(index);
+          var keyInfo = this$0.f19_1.m(index);
           put(this_0, get_joinedKey(keyInfo), keyInfo);
         }
          while (inductionVariable < last);
@@ -2657,19 +2657,19 @@
     };
   }
   function Pending(keyInfos, startIndex) {
-    this.d19_1 = keyInfos;
-    this.e19_1 = startIndex;
-    this.f19_1 = 0;
+    this.f19_1 = keyInfos;
+    this.g19_1 = startIndex;
+    this.h19_1 = 0;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this.e19_1 >= 0)) {
+    if (!(this.g19_1 >= 0)) {
       // Inline function 'androidx.compose.runtime.Pending.<anonymous>' call
       var message = 'Invalid start index';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.g19_1 = ArrayList_init_$Create$();
+    tmp.i19_1 = ArrayList_init_$Create$();
     var tmp_0 = this;
     // Inline function 'kotlin.run' call
     // Inline function 'kotlin.contracts.contract' call
@@ -2678,116 +2678,116 @@
     // Inline function 'kotlin.collections.hashMapOf' call
     var result = HashMap_init_$Create$();
     var inductionVariable = 0;
-    var last = this.d19_1.l();
+    var last = this.f19_1.l();
     if (inductionVariable < last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var keyInfo = this.d19_1.m(index);
+        var keyInfo = this.f19_1.m(index);
         // Inline function 'kotlin.collections.set' call
-        var key = keyInfo.t19_1;
-        var value = new GroupInfo(index, runningNodeIndex, keyInfo.u19_1);
+        var key = keyInfo.v19_1;
+        var value = new GroupInfo(index, runningNodeIndex, keyInfo.w19_1);
         result.l2(key, value);
-        runningNodeIndex = runningNodeIndex + keyInfo.u19_1 | 0;
+        runningNodeIndex = runningNodeIndex + keyInfo.w19_1 | 0;
       }
        while (inductionVariable < last);
-    tmp_0.h19_1 = result;
+    tmp_0.j19_1 = result;
     var tmp_1 = this;
-    tmp_1.i19_1 = lazy(Pending$keyMap$delegate$lambda(this));
+    tmp_1.k19_1 = lazy(Pending$keyMap$delegate$lambda(this));
   }
-  protoOf(Pending).b1h = function () {
+  protoOf(Pending).d1h = function () {
     // Inline function 'kotlin.getValue' call
-    var this_0 = this.i19_1;
+    var this_0 = this.k19_1;
     keyMap$factory();
     return this_0.o2();
   };
-  protoOf(Pending).o19 = function (key, dataKey) {
+  protoOf(Pending).q19 = function (key, dataKey) {
     var joinedKey = !(dataKey == null) ? new JoinedKey(key, dataKey) : key;
-    return pop(this.b1h(), joinedKey);
+    return pop(this.d1h(), joinedKey);
   };
-  protoOf(Pending).k19 = function (keyInfo) {
-    return this.g19_1.y(keyInfo);
+  protoOf(Pending).m19 = function (keyInfo) {
+    return this.i19_1.y(keyInfo);
   };
-  protoOf(Pending).e1a = function () {
-    return this.g19_1;
+  protoOf(Pending).g1a = function () {
+    return this.i19_1;
   };
-  protoOf(Pending).y19 = function (from, to) {
+  protoOf(Pending).a1a = function (from, to) {
     if (from > to) {
       // Inline function 'kotlin.collections.forEach' call
-      var tmp0_iterator = this.h19_1.j2().n();
+      var tmp0_iterator = this.j19_1.j2().n();
       while (tmp0_iterator.b1()) {
         var element = tmp0_iterator.d1();
         // Inline function 'androidx.compose.runtime.Pending.registerMoveSlot.<anonymous>' call
-        var position = element.c1h_1;
+        var position = element.e1h_1;
         if (position === from)
-          element.c1h_1 = to;
+          element.e1h_1 = to;
         else if (to <= position ? position < from : false)
-          element.c1h_1 = position + 1 | 0;
+          element.e1h_1 = position + 1 | 0;
       }
     } else if (to > from) {
       // Inline function 'kotlin.collections.forEach' call
-      var tmp0_iterator_0 = this.h19_1.j2().n();
+      var tmp0_iterator_0 = this.j19_1.j2().n();
       while (tmp0_iterator_0.b1()) {
         var element_0 = tmp0_iterator_0.d1();
         // Inline function 'androidx.compose.runtime.Pending.registerMoveSlot.<anonymous>' call
-        var position_0 = element_0.c1h_1;
+        var position_0 = element_0.e1h_1;
         if (position_0 === from)
-          element_0.c1h_1 = to;
+          element_0.e1h_1 = to;
         else if ((from + 1 | 0) <= position_0 ? position_0 < to : false)
-          element_0.c1h_1 = position_0 - 1 | 0;
+          element_0.e1h_1 = position_0 - 1 | 0;
       }
     }
   };
-  protoOf(Pending).k1a = function (from, to, count) {
+  protoOf(Pending).m1a = function (from, to, count) {
     if (from > to) {
       // Inline function 'kotlin.collections.forEach' call
-      var tmp0_iterator = this.h19_1.j2().n();
+      var tmp0_iterator = this.j19_1.j2().n();
       while (tmp0_iterator.b1()) {
         var element = tmp0_iterator.d1();
         // Inline function 'androidx.compose.runtime.Pending.registerMoveNode.<anonymous>' call
-        var position = element.d1h_1;
+        var position = element.f1h_1;
         if (from <= position ? position < (from + count | 0) : false)
-          element.d1h_1 = to + (position - from | 0) | 0;
+          element.f1h_1 = to + (position - from | 0) | 0;
         else if (to <= position ? position < from : false)
-          element.d1h_1 = position + count | 0;
+          element.f1h_1 = position + count | 0;
       }
     } else if (to > from) {
       // Inline function 'kotlin.collections.forEach' call
-      var tmp0_iterator_0 = this.h19_1.j2().n();
+      var tmp0_iterator_0 = this.j19_1.j2().n();
       while (tmp0_iterator_0.b1()) {
         var element_0 = tmp0_iterator_0.d1();
         // Inline function 'androidx.compose.runtime.Pending.registerMoveNode.<anonymous>' call
-        var position_0 = element_0.d1h_1;
+        var position_0 = element_0.f1h_1;
         if (from <= position_0 ? position_0 < (from + count | 0) : false)
-          element_0.d1h_1 = to + (position_0 - from | 0) | 0;
+          element_0.f1h_1 = to + (position_0 - from | 0) | 0;
         else if ((from + 1 | 0) <= position_0 ? position_0 < to : false)
-          element_0.d1h_1 = position_0 - count | 0;
+          element_0.f1h_1 = position_0 - count | 0;
       }
     }
   };
-  protoOf(Pending).j19 = function (keyInfo, insertIndex) {
+  protoOf(Pending).l19 = function (keyInfo, insertIndex) {
     // Inline function 'kotlin.collections.set' call
-    var this_0 = this.h19_1;
-    var key = keyInfo.t19_1;
+    var this_0 = this.j19_1;
+    var key = keyInfo.v19_1;
     var value = new GroupInfo(-1, insertIndex, 0);
     this_0.l2(key, value);
   };
-  protoOf(Pending).g1a = function (group, newCount) {
-    var groupInfo = this.h19_1.u2(group);
+  protoOf(Pending).i1a = function (group, newCount) {
+    var groupInfo = this.j19_1.u2(group);
     if (!(groupInfo == null)) {
-      var index = groupInfo.d1h_1;
-      var difference = newCount - groupInfo.e1h_1 | 0;
-      groupInfo.e1h_1 = newCount;
+      var index = groupInfo.f1h_1;
+      var difference = newCount - groupInfo.g1h_1 | 0;
+      groupInfo.g1h_1 = newCount;
       if (!(difference === 0)) {
         // Inline function 'kotlin.collections.forEach' call
-        var tmp0_iterator = this.h19_1.j2().n();
+        var tmp0_iterator = this.j19_1.j2().n();
         while (tmp0_iterator.b1()) {
           var element = tmp0_iterator.d1();
           // Inline function 'androidx.compose.runtime.Pending.updateNodeCount.<anonymous>' call
-          if (element.d1h_1 >= index ? !equals(element, groupInfo) : false) {
-            var newIndex = element.d1h_1 + difference | 0;
+          if (element.f1h_1 >= index ? !equals(element, groupInfo) : false) {
+            var newIndex = element.f1h_1 + difference | 0;
             if (newIndex >= 0)
-              element.d1h_1 = newIndex;
+              element.f1h_1 = newIndex;
           }
         }
       }
@@ -2795,20 +2795,20 @@
     }
     return false;
   };
-  protoOf(Pending).x19 = function (keyInfo) {
-    var tmp0_safe_receiver = this.h19_1.u2(keyInfo.t19_1);
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.c1h_1;
-    return tmp1_elvis_lhs == null ? -1 : tmp1_elvis_lhs;
-  };
-  protoOf(Pending).w19 = function (keyInfo) {
-    var tmp0_safe_receiver = this.h19_1.u2(keyInfo.t19_1);
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d1h_1;
-    return tmp1_elvis_lhs == null ? -1 : tmp1_elvis_lhs;
-  };
-  protoOf(Pending).i1a = function (keyInfo) {
-    var tmp0_safe_receiver = this.h19_1.u2(keyInfo.t19_1);
+  protoOf(Pending).z19 = function (keyInfo) {
+    var tmp0_safe_receiver = this.j19_1.u2(keyInfo.v19_1);
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.e1h_1;
-    return tmp1_elvis_lhs == null ? keyInfo.u19_1 : tmp1_elvis_lhs;
+    return tmp1_elvis_lhs == null ? -1 : tmp1_elvis_lhs;
+  };
+  protoOf(Pending).y19 = function (keyInfo) {
+    var tmp0_safe_receiver = this.j19_1.u2(keyInfo.v19_1);
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f1h_1;
+    return tmp1_elvis_lhs == null ? -1 : tmp1_elvis_lhs;
+  };
+  protoOf(Pending).k1a = function (keyInfo) {
+    var tmp0_safe_receiver = this.j19_1.u2(keyInfo.v19_1);
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.g1h_1;
+    return tmp1_elvis_lhs == null ? keyInfo.w19_1 : tmp1_elvis_lhs;
   };
   function _GroupKind___init__impl__iwqg06(value) {
     return value;
@@ -2818,9 +2818,9 @@
   }
   function Companion_0() {
     Companion_instance_1 = this;
-    this.g18_1 = _GroupKind___init__impl__iwqg06(0);
-    this.h18_1 = _GroupKind___init__impl__iwqg06(1);
-    this.i18_1 = _GroupKind___init__impl__iwqg06(2);
+    this.i18_1 = _GroupKind___init__impl__iwqg06(0);
+    this.j18_1 = _GroupKind___init__impl__iwqg06(1);
+    this.k18_1 = _GroupKind___init__impl__iwqg06(2);
   }
   var Companion_instance_1;
   function Companion_getInstance_1() {
@@ -2835,9 +2835,9 @@
   function ReusableRememberObserver() {
   }
   function ProvidedValue(compositionLocal, value, canOverride) {
-    this.m1f_1 = compositionLocal;
-    this.n1f_1 = value;
-    this.o1f_1 = canOverride;
+    this.o1f_1 = compositionLocal;
+    this.p1f_1 = value;
+    this.q1f_1 = canOverride;
   }
   function asBool(_this__u8e3s4) {
     _init_properties_Composer_kt__bmp4g0();
@@ -2848,7 +2848,7 @@
     var index = findInsertLocation(_this__u8e3s4, start);
     $l$loop: while (index < _this__u8e3s4.l()) {
       var validation = _this__u8e3s4.m(index);
-      if (validation.d13_1 < end) {
+      if (validation.f13_1 < end) {
         _this__u8e3s4.k1(index);
       } else
         break $l$loop;
@@ -2859,7 +2859,7 @@
     var index = findInsertLocation(_this__u8e3s4, start);
     if (index < _this__u8e3s4.l()) {
       var firstInvalidation = _this__u8e3s4.m(index);
-      if (firstInvalidation.d13_1 < end)
+      if (firstInvalidation.f13_1 < end)
         return firstInvalidation;
     }
     return null;
@@ -2875,12 +2875,12 @@
       return a;
     if (a === common ? true : b === common)
       return common;
-    if (_this__u8e3s4.p18(a) === b)
+    if (_this__u8e3s4.r18(a) === b)
       return b;
-    if (_this__u8e3s4.p18(b) === a)
+    if (_this__u8e3s4.r18(b) === a)
       return a;
-    if (_this__u8e3s4.p18(a) === _this__u8e3s4.p18(b))
-      return _this__u8e3s4.p18(a);
+    if (_this__u8e3s4.r18(a) === _this__u8e3s4.r18(b))
+      return _this__u8e3s4.r18(a);
     var currentA = a;
     var currentB = b;
     var aDistance = distanceFrom(_this__u8e3s4, a, common);
@@ -2894,7 +2894,7 @@
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'androidx.compose.runtime.nearestCommonRootOf.<anonymous>' call
-        currentA = _this__u8e3s4.p18(currentA);
+        currentA = _this__u8e3s4.r18(currentA);
       }
        while (inductionVariable < times);
     // Inline function 'kotlin.repeat' call
@@ -2906,12 +2906,12 @@
         var index_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
         // Inline function 'androidx.compose.runtime.nearestCommonRootOf.<anonymous>' call
-        currentB = _this__u8e3s4.p18(currentB);
+        currentB = _this__u8e3s4.r18(currentB);
       }
        while (inductionVariable_0 < times_0);
     while (!(currentA === currentB)) {
-      currentA = _this__u8e3s4.p18(currentA);
-      currentB = _this__u8e3s4.p18(currentB);
+      currentA = _this__u8e3s4.r18(currentA);
+      currentB = _this__u8e3s4.r18(currentB);
     }
     return currentA;
   }
@@ -2931,19 +2931,19 @@
         var this_0 = new IdentityArraySet();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.insertIfMissing.<anonymous>.<anonymous>' call
-        this_0.f1h(instance);
+        this_0.h1h(instance);
         tmp_0 = this_0;
       }
       _this__u8e3s4.w1(tmp, new Invalidation(scope, location, tmp_0));
     } else {
       if (instance == null) {
-        _this__u8e3s4.m(index).e13_1 = null;
+        _this__u8e3s4.m(index).g13_1 = null;
       } else {
-        var tmp1_safe_receiver = _this__u8e3s4.m(index).e13_1;
+        var tmp1_safe_receiver = _this__u8e3s4.m(index).g13_1;
         if (tmp1_safe_receiver == null)
           null;
         else
-          tmp1_safe_receiver.f1h(instance);
+          tmp1_safe_receiver.h1h(instance);
       }
     }
   }
@@ -2955,14 +2955,14 @@
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotTable.read.<anonymous>' call
-    var reader = _this__u8e3s4.u15();
+    var reader = _this__u8e3s4.w15();
     var tmp;
     try {
-      var index = _this__u8e3s4.w1b(anchor);
+      var index = _this__u8e3s4.y1b(anchor);
       collectNodesFrom$_anonymous_$collectFromGroup_lmwduz(reader, result, index);
       tmp = Unit_instance;
     }finally {
-      reader.g17();
+      reader.i17();
     }
     return result;
   }
@@ -2973,7 +2973,7 @@
     var index = findInsertLocation(_this__u8e3s4, start);
     $l$loop: while (index < _this__u8e3s4.l()) {
       var invalidation = _this__u8e3s4.m(index);
-      if (invalidation.d13_1 < end) {
+      if (invalidation.f13_1 < end) {
         result.y(invalidation);
       } else
         break $l$loop;
@@ -2982,9 +2982,9 @@
     return result;
   }
   function GroupInfo(slotIndex, nodeIndex, nodeCount) {
-    this.c1h_1 = slotIndex;
-    this.d1h_1 = nodeIndex;
-    this.e1h_1 = nodeCount;
+    this.e1h_1 = slotIndex;
+    this.f1h_1 = nodeIndex;
+    this.g1h_1 = nodeCount;
   }
   function put(_this__u8e3s4, key, value) {
     _init_properties_Composer_kt__bmp4g0();
@@ -3003,7 +3003,7 @@
   }
   function get_joinedKey(_this__u8e3s4) {
     _init_properties_Composer_kt__bmp4g0();
-    return !(_this__u8e3s4.s19_1 == null) ? new JoinedKey(_this__u8e3s4.r19_1, _this__u8e3s4.s19_1) : _this__u8e3s4.r19_1;
+    return !(_this__u8e3s4.u19_1 == null) ? new JoinedKey(_this__u8e3s4.t19_1, _this__u8e3s4.u19_1) : _this__u8e3s4.t19_1;
   }
   function multiMap() {
     _init_properties_Composer_kt__bmp4g0();
@@ -3040,7 +3040,7 @@
     while (low <= high) {
       var mid = (low + high | 0) >>> 1 | 0;
       var midVal = _this__u8e3s4.m(mid);
-      var cmp = compareTo(midVal.d13_1, location);
+      var cmp = compareTo(midVal.f13_1, location);
       if (cmp < 0)
         low = mid + 1 | 0;
       else if (cmp > 0)
@@ -3055,7 +3055,7 @@
     var count = 0;
     var current = index;
     while (current > 0 ? !(current === root) : false) {
-      current = _this__u8e3s4.p18(current);
+      current = _this__u8e3s4.r18(current);
       count = count + 1 | 0;
     }
     return count;
@@ -3081,11 +3081,11 @@
   }
   function sourceInformationMarkerStart(composer, key, sourceInformation) {
     _init_properties_Composer_kt__bmp4g0();
-    composer.i1g(key, sourceInformation);
+    composer.k1g(key, sourceInformation);
   }
   function sourceInformationMarkerEnd(composer) {
     _init_properties_Composer_kt__bmp4g0();
-    composer.k1g();
+    composer.m1g();
   }
   function _Updater___init__impl__rbfxm8(composer) {
     return composer;
@@ -3098,9 +3098,9 @@
     // Inline function 'kotlin.contracts.contract' call
     var $this$with = _Updater___get_composer__impl__9ty7av($this);
     var tmp;
-    if ($this$with.p1e() ? true : !equals($this$with.l1f(), value)) {
-      $this$with.r1f(value);
-      _Updater___get_composer__impl__9ty7av($this).x1e(value, block);
+    if ($this$with.r1e() ? true : !equals($this$with.n1f(), value)) {
+      $this$with.t1f(value);
+      _Updater___get_composer__impl__9ty7av($this).z1e(value, block);
       tmp = Unit_instance;
     }
     return tmp;
@@ -3112,29 +3112,29 @@
     return $this;
   }
   function sam$kotlin_Comparator$0(function_0) {
-    this.g1h_1 = function_0;
+    this.i1h_1 = function_0;
   }
   protoOf(sam$kotlin_Comparator$0).ja = function (a, b) {
-    return this.g1h_1(a, b);
+    return this.i1h_1(a, b);
   };
   protoOf(sam$kotlin_Comparator$0).compare = function (a, b) {
     return this.ja(a, b);
   };
   function collectNodesFrom$_anonymous_$collectFromGroup_lmwduz($reader, result, group) {
-    if ($reader.b1b(group)) {
-      result.y($reader.a1d(group));
+    if ($reader.d1b(group)) {
+      result.y($reader.c1d(group));
     } else {
       var current = group + 1 | 0;
-      var end = group + $reader.h1a(group) | 0;
+      var end = group + $reader.j1a(group) | 0;
       while (current < end) {
         collectNodesFrom$_anonymous_$collectFromGroup_lmwduz($reader, result, current);
-        current = current + $reader.h1a(current) | 0;
+        current = current + $reader.j1a(current) | 0;
       }
     }
   }
   function InvalidationLocationAscending$lambda(i1, i2) {
     _init_properties_Composer_kt__bmp4g0();
-    return compareTo(i1.d13_1, i2.d13_1);
+    return compareTo(i1.f13_1, i2.f13_1);
   }
   function InvalidationResult_IGNORED_getInstance() {
     InvalidationResult_initEntries();
@@ -3154,7 +3154,7 @@
   }
   function keyMap$factory() {
     return getPropertyCallableRef('keyMap', 1, KProperty1, function (receiver) {
-      return receiver.b1h();
+      return receiver.d1h();
     }, null);
   }
   var properties_initialized_Composer_kt_89qzc2;
@@ -3179,21 +3179,21 @@
   var PendingApplyNoModifications;
   var CompositionImplServiceKey;
   function _get_areChildrenComposing__c1uwup($this) {
-    return $this.y1h_1.e1e();
+    return $this.a1i_1.g1e();
   }
   function composeInitial($this, content) {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!$this.b1i_1) {
+    if (!!$this.d1i_1) {
       // Inline function 'androidx.compose.runtime.CompositionImpl.composeInitial.<anonymous>' call
       var message = 'The composition is disposed';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    $this.c1i_1 = content;
-    $this.h1h_1.d1i($this, $this.c1i_1);
+    $this.e1i_1 = content;
+    $this.j1h_1.f1i($this, $this.e1i_1);
   }
   function drainPendingModificationsForCompositionLocked($this) {
-    var toRecord = $this.j1h_1.f1i(get_PendingApplyNoModifications());
+    var toRecord = $this.l1h_1.h1i(get_PendingApplyNoModifications());
     if (toRecord != null) {
       if (equals(toRecord, get_PendingApplyNoModifications())) {
         composeRuntimeError('pending composition has not been applied');
@@ -3211,14 +3211,14 @@
               addPendingInvalidationsLocked_0($this, changed, true);
             }
           } else {
-            composeRuntimeError('corrupt pendingModifications drain: ' + $this.j1h_1);
+            composeRuntimeError('corrupt pendingModifications drain: ' + $this.l1h_1);
           }
         }
       }
     }
   }
   function drainPendingModificationsLocked($this) {
-    var toRecord = $this.j1h_1.f1i(null);
+    var toRecord = $this.l1h_1.h1i(null);
     if (!equals(toRecord, get_PendingApplyNoModifications())) {
       if (!(toRecord == null) ? isInterface(toRecord, Set) : false) {
         addPendingInvalidationsLocked_0($this, (!(toRecord == null) ? isInterface(toRecord, Set) : false) ? toRecord : THROW_CCE(), false);
@@ -3236,7 +3236,7 @@
           if (toRecord == null) {
             composeRuntimeError('calling recordModificationsOf and applyChanges concurrently is not supported');
           } else {
-            composeRuntimeError('corrupt pendingModifications drain: ' + $this.j1h_1);
+            composeRuntimeError('corrupt pendingModifications drain: ' + $this.l1h_1);
           }
         }
       }
@@ -3245,17 +3245,17 @@
   function addPendingInvalidationsLocked(_this__u8e3s4, $this, value, forgetConditionalScopes) {
     var set = _this__u8e3s4;
     // Inline function 'androidx.compose.runtime.collection.ScopeMap.forEachScopeOf' call
-    var value_0 = $this.n1h_1.g1i_1.u2(value);
+    var value_0 = $this.p1h_1.i1i_1.u2(value);
     if (value_0 != null) {
       if (value_0 instanceof MutableScatterSet) {
         // Inline function 'androidx.collection.ScatterSet.forEach' call
         var this_0 = value_0 instanceof MutableScatterSet ? value_0 : THROW_CCE();
         // Inline function 'kotlin.contracts.contract' call
-        var k = this_0.l11_1;
+        var k = this_0.n11_1;
         $l$block: {
           // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
           // Inline function 'kotlin.contracts.contract' call
-          var m = this_0.k11_1;
+          var m = this_0.m11_1;
           var lastIndex = m.length - 2 | 0;
           var inductionVariable = 0;
           if (inductionVariable <= lastIndex)
@@ -3279,9 +3279,9 @@
                       // Inline function 'androidx.compose.runtime.CompositionImpl.addPendingInvalidationsLocked.<anonymous>' call
                       var tmp = k[index];
                       var scope = (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
-                      if (!$this.s1h_1.j1i(value, scope) ? !scope.i1i(value).equals(InvalidationResult_IGNORED_getInstance()) : false) {
-                        if (scope.h1i() ? !forgetConditionalScopes : false) {
-                          $this.o1h_1.y(scope);
+                      if (!$this.u1h_1.l1i(value, scope) ? !scope.k1i(value).equals(InvalidationResult_IGNORED_getInstance()) : false) {
+                        if (scope.j1i() ? !forgetConditionalScopes : false) {
+                          $this.q1h_1.y(scope);
                         } else {
                           if (set == null)
                             set = HashSet_init_$Create$();
@@ -3306,9 +3306,9 @@
       } else {
         // Inline function 'androidx.compose.runtime.CompositionImpl.addPendingInvalidationsLocked.<anonymous>' call
         var scope_0 = !(value_0 == null) ? value_0 : THROW_CCE();
-        if (!$this.s1h_1.j1i(value, scope_0) ? !scope_0.i1i(value).equals(InvalidationResult_IGNORED_getInstance()) : false) {
-          if (scope_0.h1i() ? !forgetConditionalScopes : false) {
-            $this.o1h_1.y(scope_0);
+        if (!$this.u1h_1.l1i(value, scope_0) ? !scope_0.k1i(value).equals(InvalidationResult_IGNORED_getInstance()) : false) {
+          if (scope_0.j1i() ? !forgetConditionalScopes : false) {
+            $this.q1h_1.y(scope_0);
           } else {
             if (set == null)
               set = HashSet_init_$Create$();
@@ -3329,9 +3329,9 @@
     if (values instanceof IdentityArraySet) {
       // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
       // Inline function 'kotlin.contracts.contract' call
-      var values_0 = values.i1c_1;
+      var values_0 = values.k1c_1;
       var inductionVariable = 0;
-      var last = values.h1c_1;
+      var last = values.j1c_1;
       if (inductionVariable < last)
         do {
           var i = inductionVariable;
@@ -3340,21 +3340,21 @@
           var tmp = values_0[i];
           var value = !(tmp == null) ? tmp : THROW_CCE();
           if (value instanceof RecomposeScopeImpl) {
-            value.i1i(null);
+            value.k1i(null);
           } else {
             invalidated._v = addPendingInvalidationsLocked(invalidated._v, $this, value, forgetConditionalScopes);
             // Inline function 'androidx.compose.runtime.collection.ScopeMap.forEachScopeOf' call
-            var value_0 = $this.p1h_1.g1i_1.u2(value);
+            var value_0 = $this.r1h_1.i1i_1.u2(value);
             if (value_0 != null) {
               if (value_0 instanceof MutableScatterSet) {
                 // Inline function 'androidx.collection.ScatterSet.forEach' call
                 var this_0 = value_0 instanceof MutableScatterSet ? value_0 : THROW_CCE();
                 // Inline function 'kotlin.contracts.contract' call
-                var k = this_0.l11_1;
+                var k = this_0.n11_1;
                 $l$block: {
                   // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
                   // Inline function 'kotlin.contracts.contract' call
-                  var m = this_0.k11_1;
+                  var m = this_0.m11_1;
                   var lastIndex = m.length - 2 | 0;
                   var inductionVariable_0 = 0;
                   if (inductionVariable_0 <= lastIndex)
@@ -3406,21 +3406,21 @@
         var element = tmp0_iterator.d1();
         // Inline function 'androidx.compose.runtime.CompositionImpl.addPendingInvalidationsLocked.<anonymous>' call
         if (element instanceof RecomposeScopeImpl) {
-          element.i1i(null);
+          element.k1i(null);
         } else {
           invalidated._v = addPendingInvalidationsLocked(invalidated._v, $this, element, forgetConditionalScopes);
           // Inline function 'androidx.compose.runtime.collection.ScopeMap.forEachScopeOf' call
-          var value_1 = $this.p1h_1.g1i_1.u2(element);
+          var value_1 = $this.r1h_1.i1i_1.u2(element);
           if (value_1 != null) {
             if (value_1 instanceof MutableScatterSet) {
               // Inline function 'androidx.collection.ScatterSet.forEach' call
               var this_2 = value_1 instanceof MutableScatterSet ? value_1 : THROW_CCE();
               // Inline function 'kotlin.contracts.contract' call
-              var k_0 = this_2.l11_1;
+              var k_0 = this_2.n11_1;
               $l$block_0: {
                 // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
                 // Inline function 'kotlin.contracts.contract' call
-                var m_0 = this_2.k11_1;
+                var m_0 = this_2.m11_1;
                 var lastIndex_0 = m_0.length - 2 | 0;
                 var inductionVariable_2 = 0;
                 if (inductionVariable_2 <= lastIndex_0)
@@ -3468,17 +3468,17 @@
     var tmp_2;
     if (forgetConditionalScopes) {
       // Inline function 'kotlin.collections.isNotEmpty' call
-      tmp_2 = !$this.o1h_1.s();
+      tmp_2 = !$this.q1h_1.s();
     } else {
       tmp_2 = false;
     }
     if (tmp_2) {
       // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf' call
       // Inline function 'androidx.collection.MutableScatterMap.removeIf' call
-      var this_4 = $this.n1h_1.g1i_1;
+      var this_4 = $this.p1h_1.i1i_1;
       $l$block_2: {
         // Inline function 'androidx.collection.ScatterMap.forEachIndexed' call
-        var m_1 = this_4.w10_1;
+        var m_1 = this_4.y10_1;
         var lastIndex_1 = m_1.length - 2 | 0;
         var inductionVariable_4 = 0;
         if (inductionVariable_4 <= lastIndex_1)
@@ -3500,19 +3500,19 @@
                     var index_1 = (i_2 << 3) + j_1 | 0;
                     // Inline function 'androidx.collection.MutableScatterMap.removeIf.<anonymous>' call
                     // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf.<anonymous>' call
-                    var tmp_3 = this_4.x10_1[index_1];
+                    var tmp_3 = this_4.z10_1[index_1];
                     (tmp_3 == null ? true : !(tmp_3 == null)) || THROW_CCE();
-                    var tmp_4 = this_4.y10_1[index_1];
+                    var tmp_4 = this_4.a11_1[index_1];
                     var value_2 = (tmp_4 == null ? true : !(tmp_4 == null)) ? tmp_4 : THROW_CCE();
                     var tmp_5;
                     if (value_2 instanceof MutableScatterSet) {
                       var set = value_2 instanceof MutableScatterSet ? value_2 : THROW_CCE();
                       // Inline function 'androidx.collection.MutableScatterSet.removeIf' call
-                      var elements = set.l11_1;
+                      var elements = set.n11_1;
                       $l$block_1: {
                         // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
                         // Inline function 'kotlin.contracts.contract' call
-                        var m_2 = set.k11_1;
+                        var m_2 = set.m11_1;
                         var lastIndex_2 = m_2.length - 2 | 0;
                         var inductionVariable_6 = 0;
                         if (inductionVariable_6 <= lastIndex_2)
@@ -3537,7 +3537,7 @@
                                     var tmp_6 = elements[index_2];
                                     var scope = (tmp_6 == null ? true : !(tmp_6 == null)) ? tmp_6 : THROW_CCE();
                                     var tmp_7;
-                                    if ($this.o1h_1.q(scope)) {
+                                    if ($this.q1h_1.q(scope)) {
                                       tmp_7 = true;
                                     } else {
                                       var tmp0_safe_receiver = invalidated._v;
@@ -3553,7 +3553,7 @@
                                       tmp_7 = tmp_8 === true;
                                     }
                                     if (tmp_7) {
-                                      set.w11(index_2);
+                                      set.y11(index_2);
                                     }
                                   }
                                   slot_2 = slot_2.mc(8);
@@ -3571,7 +3571,7 @@
                       // Inline function 'androidx.compose.runtime.CompositionImpl.addPendingInvalidationsLocked.<anonymous>' call
                       var scope_0 = !(value_2 == null) ? value_2 : THROW_CCE();
                       var tmp_9;
-                      if ($this.o1h_1.q(scope_0)) {
+                      if ($this.q1h_1.q(scope_0)) {
                         tmp_9 = true;
                       } else {
                         var tmp0_safe_receiver_0 = invalidated._v;
@@ -3589,7 +3589,7 @@
                       tmp_5 = tmp_9;
                     }
                     if (tmp_5) {
-                      this_4.j11(index_1);
+                      this_4.l11(index_1);
                     }
                   }
                   slot_1 = slot_1.mc(8);
@@ -3602,7 +3602,7 @@
           }
            while (!(i_2 === lastIndex_1));
       }
-      $this.o1h_1.f1();
+      $this.q1h_1.f1();
       cleanUpDerivedStateObservations($this);
     } else {
       var tmp0_safe_receiver_1 = invalidated._v;
@@ -3613,10 +3613,10 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf' call
         // Inline function 'androidx.collection.MutableScatterMap.removeIf' call
-        var this_7 = $this.n1h_1.g1i_1;
+        var this_7 = $this.p1h_1.i1i_1;
         $l$block_4: {
           // Inline function 'androidx.collection.ScatterMap.forEachIndexed' call
-          var m_3 = this_7.w10_1;
+          var m_3 = this_7.y10_1;
           var lastIndex_3 = m_3.length - 2 | 0;
           var inductionVariable_8 = 0;
           if (inductionVariable_8 <= lastIndex_3)
@@ -3638,19 +3638,19 @@
                       var index_3 = (i_4 << 3) + j_3 | 0;
                       // Inline function 'androidx.collection.MutableScatterMap.removeIf.<anonymous>' call
                       // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf.<anonymous>' call
-                      var tmp_11 = this_7.x10_1[index_3];
+                      var tmp_11 = this_7.z10_1[index_3];
                       (tmp_11 == null ? true : !(tmp_11 == null)) || THROW_CCE();
-                      var tmp_12 = this_7.y10_1[index_3];
+                      var tmp_12 = this_7.a11_1[index_3];
                       var value_3 = (tmp_12 == null ? true : !(tmp_12 == null)) ? tmp_12 : THROW_CCE();
                       var tmp_13;
                       if (value_3 instanceof MutableScatterSet) {
                         var set_0 = value_3 instanceof MutableScatterSet ? value_3 : THROW_CCE();
                         // Inline function 'androidx.collection.MutableScatterSet.removeIf' call
-                        var elements_0 = set_0.l11_1;
+                        var elements_0 = set_0.n11_1;
                         $l$block_3: {
                           // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
                           // Inline function 'kotlin.contracts.contract' call
-                          var m_4 = set_0.k11_1;
+                          var m_4 = set_0.m11_1;
                           var lastIndex_4 = m_4.length - 2 | 0;
                           var inductionVariable_10 = 0;
                           if (inductionVariable_10 <= lastIndex_4)
@@ -3675,7 +3675,7 @@
                                       var tmp_14 = elements_0[index_4];
                                       var scope_1 = (tmp_14 == null ? true : !(tmp_14 == null)) ? tmp_14 : THROW_CCE();
                                       if (tmp0_safe_receiver_1.q(scope_1)) {
-                                        set_0.w11(index_4);
+                                        set_0.y11(index_4);
                                       }
                                     }
                                     slot_4 = slot_4.mc(8);
@@ -3695,7 +3695,7 @@
                         tmp_13 = tmp0_safe_receiver_1.q(scope_2);
                       }
                       if (tmp_13) {
-                        this_7.j11(index_3);
+                        this_7.l11(index_3);
                       }
                     }
                     slot_3 = slot_3.mc(8);
@@ -3715,10 +3715,10 @@
   function cleanUpDerivedStateObservations($this) {
     // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf' call
     // Inline function 'androidx.collection.MutableScatterMap.removeIf' call
-    var this_0 = $this.p1h_1.g1i_1;
+    var this_0 = $this.r1h_1.i1i_1;
     $l$block_0: {
       // Inline function 'androidx.collection.ScatterMap.forEachIndexed' call
-      var m = this_0.w10_1;
+      var m = this_0.y10_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -3740,19 +3740,19 @@
                   var index = (i << 3) + j | 0;
                   // Inline function 'androidx.collection.MutableScatterMap.removeIf.<anonymous>' call
                   // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf.<anonymous>' call
-                  var tmp = this_0.x10_1[index];
+                  var tmp = this_0.z10_1[index];
                   (tmp == null ? true : !(tmp == null)) || THROW_CCE();
-                  var tmp_0 = this_0.y10_1[index];
+                  var tmp_0 = this_0.a11_1[index];
                   var value = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
                   var tmp_1;
                   if (value instanceof MutableScatterSet) {
                     var set = value instanceof MutableScatterSet ? value : THROW_CCE();
                     // Inline function 'androidx.collection.MutableScatterSet.removeIf' call
-                    var elements = set.l11_1;
+                    var elements = set.n11_1;
                     $l$block: {
                       // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
                       // Inline function 'kotlin.contracts.contract' call
-                      var m_0 = set.k11_1;
+                      var m_0 = set.m11_1;
                       var lastIndex_0 = m_0.length - 2 | 0;
                       var inductionVariable_1 = 0;
                       if (inductionVariable_1 <= lastIndex_0)
@@ -3776,8 +3776,8 @@
                                   // Inline function 'androidx.compose.runtime.CompositionImpl.cleanUpDerivedStateObservations.<anonymous>' call
                                   var tmp_2 = elements[index_0];
                                   var derivedState = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-                                  if (!$this.n1h_1.k1i(derivedState)) {
-                                    set.w11(index_0);
+                                  if (!$this.p1h_1.m1i(derivedState)) {
+                                    set.y11(index_0);
                                   }
                                 }
                                 slot_0 = slot_0.mc(8);
@@ -3794,10 +3794,10 @@
                   } else {
                     // Inline function 'androidx.compose.runtime.CompositionImpl.cleanUpDerivedStateObservations.<anonymous>' call
                     var derivedState_0 = !(value == null) ? value : THROW_CCE();
-                    tmp_1 = !$this.n1h_1.k1i(derivedState_0);
+                    tmp_1 = !$this.p1h_1.m1i(derivedState_0);
                   }
                   if (tmp_1) {
-                    this_0.j11(index);
+                    this_0.l11(index);
                   }
                 }
                 slot = slot.mc(8);
@@ -3811,12 +3811,12 @@
          while (!(i === lastIndex));
     }
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!$this.o1h_1.s()) {
+    if (!$this.q1h_1.s()) {
       // Inline function 'androidx.compose.runtime.removeValueIf' call
-      var iter = $this.o1h_1.n();
+      var iter = $this.q1h_1.n();
       while (iter.b1()) {
         // Inline function 'androidx.compose.runtime.CompositionImpl.cleanUpDerivedStateObservations.<anonymous>' call
-        if (!iter.d1().h1i()) {
+        if (!iter.d1().j1i()) {
           iter.c1();
         }
       }
@@ -3824,17 +3824,17 @@
   }
   function invalidateScopeOfLocked($this, value) {
     // Inline function 'androidx.compose.runtime.collection.ScopeMap.forEachScopeOf' call
-    var value_0 = $this.n1h_1.g1i_1.u2(value);
+    var value_0 = $this.p1h_1.i1i_1.u2(value);
     if (value_0 != null) {
       if (value_0 instanceof MutableScatterSet) {
         // Inline function 'androidx.collection.ScatterSet.forEach' call
         var this_0 = value_0 instanceof MutableScatterSet ? value_0 : THROW_CCE();
         // Inline function 'kotlin.contracts.contract' call
-        var k = this_0.l11_1;
+        var k = this_0.n11_1;
         $l$block: {
           // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
           // Inline function 'kotlin.contracts.contract' call
-          var m = this_0.k11_1;
+          var m = this_0.m11_1;
           var lastIndex = m.length - 2 | 0;
           var inductionVariable = 0;
           if (inductionVariable <= lastIndex)
@@ -3858,8 +3858,8 @@
                       // Inline function 'androidx.compose.runtime.CompositionImpl.invalidateScopeOfLocked.<anonymous>' call
                       var tmp = k[index];
                       var scope = (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
-                      if (scope.i1i(value).equals(InvalidationResult_IMMINENT_getInstance())) {
-                        $this.s1h_1.l1i(value, scope);
+                      if (scope.k1i(value).equals(InvalidationResult_IMMINENT_getInstance())) {
+                        $this.u1h_1.n1i(value, scope);
                       }
                     }
                     slot = slot.mc(8);
@@ -3875,56 +3875,56 @@
       } else {
         // Inline function 'androidx.compose.runtime.CompositionImpl.invalidateScopeOfLocked.<anonymous>' call
         var scope_0 = !(value_0 == null) ? value_0 : THROW_CCE();
-        if (scope_0.i1i(value).equals(InvalidationResult_IMMINENT_getInstance())) {
-          $this.s1h_1.l1i(value, scope_0);
+        if (scope_0.k1i(value).equals(InvalidationResult_IMMINENT_getInstance())) {
+          $this.u1h_1.n1i(value, scope_0);
         }
       }
     }
   }
   function applyChangesInLocked($this, changes) {
-    var manager = new RememberEventDispatcher($this.l1h_1);
+    var manager = new RememberEventDispatcher($this.n1h_1);
     try {
       if (changes.s())
         return Unit_instance;
       $l$block: {
         // Inline function 'androidx.compose.runtime.trace' call
         var sectionName = 'Compose:applyChanges';
-        var token = Trace_instance.k1c(sectionName);
+        var token = Trace_instance.m1c(sectionName);
         try {
-          $this.i1h_1.y11();
+          $this.k1h_1.a12();
           // Inline function 'androidx.compose.runtime.SlotTable.write' call
           // Inline function 'kotlin.let' call
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.SlotTable.write.<anonymous>' call
-          var writer = $this.m1h_1.s18();
+          var writer = $this.o1h_1.u18();
           var tmp;
           try {
-            changes.m1i($this.i1h_1, writer, manager);
+            changes.o1i($this.k1h_1, writer, manager);
             tmp = Unit_instance;
           }finally {
-            writer.g17();
+            writer.i17();
           }
-          $this.i1h_1.z11();
+          $this.k1h_1.b12();
           break $l$block;
         }finally {
-          Trace_instance.z1c(token);
+          Trace_instance.b1d(token);
         }
       }
-      manager.s1i();
-      manager.t1i();
-      if ($this.u1h_1) {
+      manager.u1i();
+      manager.v1i();
+      if ($this.w1h_1) {
         $l$block_2: {
           // Inline function 'androidx.compose.runtime.trace' call
           var sectionName_0 = 'Compose:unobserve';
-          var token_0 = Trace_instance.k1c(sectionName_0);
+          var token_0 = Trace_instance.m1c(sectionName_0);
           try {
-            $this.u1h_1 = false;
+            $this.w1h_1 = false;
             // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf' call
             // Inline function 'androidx.collection.MutableScatterMap.removeIf' call
-            var this_0 = $this.n1h_1.g1i_1;
+            var this_0 = $this.p1h_1.i1i_1;
             $l$block_1: {
               // Inline function 'androidx.collection.ScatterMap.forEachIndexed' call
-              var m = this_0.w10_1;
+              var m = this_0.y10_1;
               var lastIndex = m.length - 2 | 0;
               var inductionVariable = 0;
               if (inductionVariable <= lastIndex)
@@ -3946,19 +3946,19 @@
                           var index = (i << 3) + j | 0;
                           // Inline function 'androidx.collection.MutableScatterMap.removeIf.<anonymous>' call
                           // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf.<anonymous>' call
-                          var tmp_0 = this_0.x10_1[index];
+                          var tmp_0 = this_0.z10_1[index];
                           (tmp_0 == null ? true : !(tmp_0 == null)) || THROW_CCE();
-                          var tmp_1 = this_0.y10_1[index];
+                          var tmp_1 = this_0.a11_1[index];
                           var value = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
                           var tmp_2;
                           if (value instanceof MutableScatterSet) {
                             var set = value instanceof MutableScatterSet ? value : THROW_CCE();
                             // Inline function 'androidx.collection.MutableScatterSet.removeIf' call
-                            var elements = set.l11_1;
+                            var elements = set.n11_1;
                             $l$block_0: {
                               // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
                               // Inline function 'kotlin.contracts.contract' call
-                              var m_0 = set.k11_1;
+                              var m_0 = set.m11_1;
                               var lastIndex_0 = m_0.length - 2 | 0;
                               var inductionVariable_1 = 0;
                               if (inductionVariable_1 <= lastIndex_0)
@@ -3981,8 +3981,8 @@
                                           // Inline function 'androidx.collection.MutableScatterSet.removeIf.<anonymous>' call
                                           // Inline function 'androidx.compose.runtime.CompositionImpl.applyChangesInLocked.<anonymous>.<anonymous>' call
                                           var tmp_3 = elements[index_0];
-                                          if (!((tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE()).u1i()) {
-                                            set.w11(index_0);
+                                          if (!((tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE()).w1i()) {
+                                            set.y11(index_0);
                                           }
                                         }
                                         slot_0 = slot_0.mc(8);
@@ -3998,10 +3998,10 @@
                             tmp_2 = set.s();
                           } else {
                             // Inline function 'androidx.compose.runtime.CompositionImpl.applyChangesInLocked.<anonymous>.<anonymous>' call
-                            tmp_2 = !(!(value == null) ? value : THROW_CCE()).u1i();
+                            tmp_2 = !(!(value == null) ? value : THROW_CCE()).w1i();
                           }
                           if (tmp_2) {
-                            this_0.j11(index);
+                            this_0.l11(index);
                           }
                         }
                         slot = slot.mc(8);
@@ -4017,31 +4017,31 @@
             cleanUpDerivedStateObservations($this);
             break $l$block_2;
           }finally {
-            Trace_instance.z1c(token_0);
+            Trace_instance.b1d(token_0);
           }
         }
       }
     }finally {
-      if ($this.r1h_1.s()) {
-        manager.v1i();
+      if ($this.t1h_1.s()) {
+        manager.x1i();
       }
     }
   }
   function abandonChanges($this) {
-    $this.j1h_1.w1i(null);
-    $this.q1h_1.f1();
-    $this.r1h_1.f1();
-    $this.l1h_1.f1();
+    $this.l1h_1.y1i(null);
+    $this.s1h_1.f1();
+    $this.t1h_1.f1();
+    $this.n1h_1.f1();
   }
   function tryImminentInvalidation($this, scope, instance) {
-    return $this.x1i() ? $this.y1h_1.g1c(scope, instance) : false;
+    return $this.z1i() ? $this.a1i_1.i1c(scope, instance) : false;
   }
   function invalidateChecked($this, scope, anchor, instance) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.k1h_1;
+    $this.m1h_1;
     // Inline function 'androidx.compose.runtime.CompositionImpl.invalidateChecked.<anonymous>' call
-    var tmp0_safe_receiver = $this.v1h_1;
+    var tmp0_safe_receiver = $this.x1h_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -4050,7 +4050,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.CompositionImpl.invalidateChecked.<anonymous>.<anonymous>' call
       var tmp_0;
-      if ($this.m1h_1.y1i($this.w1h_1, anchor)) {
+      if ($this.o1h_1.a1j($this.y1h_1, anchor)) {
         tmp_0 = tmp0_safe_receiver;
       } else {
         tmp_0 = null;
@@ -4063,102 +4063,102 @@
         return InvalidationResult_IMMINENT_getInstance();
       }
       if (instance == null) {
-        $this.t1h_1.z1i(scope, null);
+        $this.v1h_1.b1j(scope, null);
       } else {
-        addValue($this.t1h_1, scope, instance);
+        addValue($this.v1h_1, scope, instance);
       }
     }
     var delegate_0 = delegate;
     if (!(delegate_0 == null)) {
       return invalidateChecked(delegate_0, scope, anchor, instance);
     }
-    $this.h1h_1.a1j($this);
-    return $this.x1i() ? InvalidationResult_DEFERRED_getInstance() : InvalidationResult_SCHEDULED_getInstance();
+    $this.j1h_1.c1j($this);
+    return $this.z1i() ? InvalidationResult_DEFERRED_getInstance() : InvalidationResult_SCHEDULED_getInstance();
   }
   function takeInvalidations($this) {
-    var invalidations = $this.t1h_1;
-    $this.t1h_1 = new IdentityArrayMap();
+    var invalidations = $this.v1h_1;
+    $this.v1h_1 = new IdentityArrayMap();
     return invalidations;
   }
   function observer($this) {
-    var holder = $this.x1h_1;
+    var holder = $this.z1h_1;
     var tmp;
-    if (holder.d1j_1) {
-      tmp = holder.c1j_1;
+    if (holder.f1j_1) {
+      tmp = holder.e1j_1;
     } else {
-      var parentHolder = $this.h1h_1.b1j();
-      var parentObserver = parentHolder == null ? null : parentHolder.c1j_1;
-      if (!equals(parentObserver, holder.c1j_1)) {
-        holder.c1j_1 = parentObserver;
+      var parentHolder = $this.j1h_1.d1j();
+      var parentObserver = parentHolder == null ? null : parentHolder.e1j_1;
+      if (!equals(parentObserver, holder.e1j_1)) {
+        holder.e1j_1 = parentObserver;
       }
       tmp = parentObserver;
     }
     return tmp;
   }
   function RememberEventDispatcher(abandoning) {
-    this.n1i_1 = abandoning;
+    this.p1i_1 = abandoning;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.o1i_1 = ArrayList_init_$Create$();
+    tmp.q1i_1 = ArrayList_init_$Create$();
     var tmp_0 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_0.p1i_1 = ArrayList_init_$Create$();
+    tmp_0.r1i_1 = ArrayList_init_$Create$();
     var tmp_1 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_1.q1i_1 = ArrayList_init_$Create$();
-    this.r1i_1 = null;
+    tmp_1.s1i_1 = ArrayList_init_$Create$();
+    this.t1i_1 = null;
   }
-  protoOf(RememberEventDispatcher).e1j = function (instance) {
-    this.o1i_1.y(instance);
+  protoOf(RememberEventDispatcher).g1j = function (instance) {
+    this.q1i_1.y(instance);
   };
-  protoOf(RememberEventDispatcher).v1g = function (instance) {
-    this.p1i_1.y(instance);
+  protoOf(RememberEventDispatcher).x1g = function (instance) {
+    this.r1i_1.y(instance);
   };
-  protoOf(RememberEventDispatcher).u1g = function (instance) {
-    var tmp0_elvis_lhs = this.r1i_1;
+  protoOf(RememberEventDispatcher).w1g = function (instance) {
+    var tmp0_elvis_lhs = this.t1i_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.also' call
       var this_0 = mutableScatterSetOf();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.RememberEventDispatcher.releasing.<anonymous>' call
-      this.r1i_1 = this_0;
+      this.t1i_1 = this_0;
       tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
     }
     var releasing = tmp;
-    releasing.v11(instance);
+    releasing.x11(instance);
     // Inline function 'kotlin.collections.plusAssign' call
-    this.p1i_1.y(instance);
+    this.r1i_1.y(instance);
   };
-  protoOf(RememberEventDispatcher).s1i = function () {
+  protoOf(RememberEventDispatcher).u1i = function () {
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!this.p1i_1.s()) {
+    if (!this.r1i_1.s()) {
       $l$block: {
         // Inline function 'androidx.compose.runtime.trace' call
         var sectionName = 'Compose:onForgotten';
-        var token = Trace_instance.k1c(sectionName);
+        var token = Trace_instance.m1c(sectionName);
         try {
-          var releasing = this.r1i_1;
-          var inductionVariable = this.p1i_1.l() - 1 | 0;
+          var releasing = this.t1i_1;
+          var inductionVariable = this.r1i_1.l() - 1 | 0;
           var tmp;
           if (0 <= inductionVariable) {
             do {
               var i = inductionVariable;
               inductionVariable = inductionVariable + -1 | 0;
-              var instance = this.p1i_1.m(i);
+              var instance = this.r1i_1.m(i);
               // Inline function 'kotlin.collections.remove' call
-              var this_0 = this.n1i_1;
+              var this_0 = this.p1i_1;
               (isInterface(this_0, MutableCollection) ? this_0 : THROW_CCE()).z(instance);
               if (isInterface(instance, RememberObserver)) {
-                instance.f1j();
+                instance.h1j();
               }
               if (isInterface(instance, ComposeNodeLifecycleCallback)) {
                 if (!(releasing == null) ? releasing.q(instance) : false) {
-                  instance.b13();
+                  instance.d13();
                 } else {
-                  instance.a13();
+                  instance.c13();
                 }
               }
             }
@@ -4167,18 +4167,18 @@
           }
           break $l$block;
         }finally {
-          Trace_instance.z1c(token);
+          Trace_instance.b1d(token);
         }
       }
     }
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!this.o1i_1.s()) {
+    if (!this.q1i_1.s()) {
       $l$block_0: {
         // Inline function 'androidx.compose.runtime.trace' call
         var sectionName_0 = 'Compose:onRemembered';
-        var token_0 = Trace_instance.k1c(sectionName_0);
+        var token_0 = Trace_instance.m1c(sectionName_0);
         try {
-          var this_1 = this.o1i_1;
+          var this_1 = this.q1i_1;
           // Inline function 'kotlin.contracts.contract' call
           var inductionVariable_0 = 0;
           var last = this_1.l() - 1 | 0;
@@ -4189,29 +4189,29 @@
               inductionVariable_0 = inductionVariable_0 + 1 | 0;
               var item = this_1.m(index);
               // Inline function 'androidx.compose.runtime.RememberEventDispatcher.dispatchRememberObservers.<anonymous>.<anonymous>' call
-              this.n1i_1.z(item);
-              item.g1j();
+              this.p1i_1.z(item);
+              item.i1j();
             }
              while (inductionVariable_0 <= last);
             tmp_0 = Unit_instance;
           }
           break $l$block_0;
         }finally {
-          Trace_instance.z1c(token_0);
+          Trace_instance.b1d(token_0);
         }
       }
     }
   };
-  protoOf(RememberEventDispatcher).t1i = function () {
+  protoOf(RememberEventDispatcher).v1i = function () {
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!this.q1i_1.s()) {
+    if (!this.s1i_1.s()) {
       $l$block: {
         // Inline function 'androidx.compose.runtime.trace' call
         var sectionName = 'Compose:sideeffects';
-        var token = Trace_instance.k1c(sectionName);
+        var token = Trace_instance.m1c(sectionName);
         try {
           // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
-          var this_0 = this.q1i_1;
+          var this_0 = this.s1i_1;
           // Inline function 'kotlin.contracts.contract' call
           var inductionVariable = 0;
           var last = this_0.l() - 1 | 0;
@@ -4224,78 +4224,78 @@
               item();
             }
              while (inductionVariable <= last);
-          this.q1i_1.f1();
+          this.s1i_1.f1();
           break $l$block;
         }finally {
-          Trace_instance.z1c(token);
+          Trace_instance.b1d(token);
         }
       }
     }
   };
-  protoOf(RememberEventDispatcher).v1i = function () {
+  protoOf(RememberEventDispatcher).x1i = function () {
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!this.n1i_1.s()) {
+    if (!this.p1i_1.s()) {
       $l$block: {
         // Inline function 'androidx.compose.runtime.trace' call
         var sectionName = 'Compose:abandons';
-        var token = Trace_instance.k1c(sectionName);
+        var token = Trace_instance.m1c(sectionName);
         try {
-          var iterator = this.n1i_1.n();
+          var iterator = this.p1i_1.n();
           while (iterator.b1()) {
             var instance = iterator.d1();
             iterator.c1();
-            instance.h1j();
+            instance.j1j();
           }
           break $l$block;
         }finally {
-          Trace_instance.z1c(token);
+          Trace_instance.b1d(token);
         }
       }
     }
   };
   function CompositionImpl(parent, applier, recomposeContext) {
     recomposeContext = recomposeContext === VOID ? null : recomposeContext;
-    this.h1h_1 = parent;
-    this.i1h_1 = applier;
-    this.j1h_1 = new AtomicReference(null);
-    this.k1h_1 = createSynchronizedObject();
-    this.l1h_1 = HashSet_init_$Create$();
-    this.m1h_1 = new SlotTable();
-    this.n1h_1 = new ScopeMap();
-    this.o1h_1 = HashSet_init_$Create$();
+    this.j1h_1 = parent;
+    this.k1h_1 = applier;
+    this.l1h_1 = new AtomicReference(null);
+    this.m1h_1 = createSynchronizedObject();
+    this.n1h_1 = HashSet_init_$Create$();
+    this.o1h_1 = new SlotTable();
     this.p1h_1 = new ScopeMap();
-    this.q1h_1 = new ChangeList();
-    this.r1h_1 = new ChangeList();
-    this.s1h_1 = new ScopeMap();
-    this.t1h_1 = new IdentityArrayMap();
-    this.u1h_1 = false;
-    this.v1h_1 = null;
-    this.w1h_1 = 0;
-    this.x1h_1 = new CompositionObserverHolder();
+    this.q1h_1 = HashSet_init_$Create$();
+    this.r1h_1 = new ScopeMap();
+    this.s1h_1 = new ChangeList();
+    this.t1h_1 = new ChangeList();
+    this.u1h_1 = new ScopeMap();
+    this.v1h_1 = new IdentityArrayMap();
+    this.w1h_1 = false;
+    this.x1h_1 = null;
+    this.y1h_1 = 0;
+    this.z1h_1 = new CompositionObserverHolder();
     var tmp = this;
     // Inline function 'kotlin.also' call
-    var this_0 = new ComposerImpl(this.i1h_1, this.h1h_1, this.m1h_1, this.l1h_1, this.q1h_1, this.r1h_1, this);
+    var this_0 = new ComposerImpl(this.k1h_1, this.j1h_1, this.o1h_1, this.n1h_1, this.s1h_1, this.t1h_1, this);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.CompositionImpl.composer.<anonymous>' call
-    this.h1h_1.i1j(this_0);
-    tmp.y1h_1 = this_0;
-    this.z1h_1 = recomposeContext;
+    this.j1h_1.k1j(this_0);
+    tmp.a1i_1 = this_0;
+    this.b1i_1 = recomposeContext;
     var tmp_0 = this;
-    var tmp_1 = this.h1h_1;
-    tmp_0.a1i_1 = tmp_1 instanceof Recomposer;
-    this.b1i_1 = false;
-    this.c1i_1 = ComposableSingletons$CompositionKt_getInstance().j1j_1;
+    var tmp_1 = this.j1h_1;
+    tmp_0.c1i_1 = tmp_1 instanceof Recomposer;
+    this.d1i_1 = false;
+    this.e1i_1 = ComposableSingletons$CompositionKt_getInstance().l1j_1;
   }
-  protoOf(CompositionImpl).x1i = function () {
-    return this.y1h_1.u14_1;
+  protoOf(CompositionImpl).z1i = function () {
+    return this.a1i_1.w14_1;
   };
-  protoOf(CompositionImpl).l1j = function () {
-    return this.b1i_1;
+  protoOf(CompositionImpl).n1j = function () {
+    return this.d1i_1;
   };
-  protoOf(CompositionImpl).m1j = function (content) {
+  protoOf(CompositionImpl).o1j = function (content) {
     composeInitial(this, content);
   };
-  protoOf(CompositionImpl).n1j = function (content) {
+  protoOf(CompositionImpl).p1j = function (content) {
     // Inline function 'androidx.compose.runtime.CompositionImpl.guardChanges' call
     var tmp;
     try {
@@ -4307,7 +4307,7 @@
         // Inline function 'androidx.compose.runtime.CompositionImpl.composeContent.<anonymous>' call
         // Inline function 'androidx.compose.runtime.synchronized' call
         // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-        this.k1h_1;
+        this.m1h_1;
         // Inline function 'androidx.compose.runtime.CompositionImpl.composeContent.<anonymous>.<anonymous>' call
         drainPendingModificationsForCompositionLocked(this);
         // Inline function 'androidx.compose.runtime.CompositionImpl.guardInvalidationsLocked' call
@@ -4319,15 +4319,15 @@
           if (observer_0 == null)
             null;
           else {
-            var tmp_2 = invalidations.o1j();
-            observer_0.p1j(this, isInterface(tmp_2, Map) ? tmp_2 : THROW_CCE());
+            var tmp_2 = invalidations.q1j();
+            observer_0.r1j(this, isInterface(tmp_2, Map) ? tmp_2 : THROW_CCE());
           }
-          this.y1h_1.m1g(invalidations, content);
+          this.a1i_1.o1g(invalidations, content);
           var tmp_3;
           if (observer_0 == null) {
             tmp_3 = null;
           } else {
-            observer_0.q1j(this);
+            observer_0.s1j(this);
             tmp_3 = Unit_instance;
           }
           tmp_1 = tmp_3;
@@ -4335,7 +4335,7 @@
           var tmp_4;
           if ($p instanceof Exception) {
             var e = $p;
-            this.t1h_1 = invalidations;
+            this.v1h_1 = invalidations;
             throw e;
           } else {
             throw $p;
@@ -4349,12 +4349,12 @@
         var tmp_5;
         if (!success) {
           // Inline function 'kotlin.collections.isNotEmpty' call
-          tmp_5 = !this.l1h_1.s();
+          tmp_5 = !this.n1h_1.s();
         } else {
           tmp_5 = false;
         }
         if (tmp_5) {
-          (new RememberEventDispatcher(this.l1h_1)).v1i();
+          (new RememberEventDispatcher(this.n1h_1)).x1i();
         }
       }
       tmp = tmp_0;
@@ -4369,9 +4369,9 @@
       }
     }
   };
-  protoOf(CompositionImpl).r1j = function (values) {
+  protoOf(CompositionImpl).t1j = function (values) {
     $l$loop: while (true) {
-      var old = this.j1h_1.lq();
+      var old = this.l1h_1.lq();
       var tmp;
       if (old == null ? true : equals(old, get_PendingApplyNoModifications())) {
         tmp = values;
@@ -4385,30 +4385,30 @@
           if (!(old == null) ? isArray(old) : false) {
             tmp = plus_0((!(old == null) ? isArray(old) : false) ? old : THROW_CCE(), values);
           } else {
-            var message = 'corrupt pendingModifications: ' + this.j1h_1;
+            var message = 'corrupt pendingModifications: ' + this.l1h_1;
             throw IllegalStateException_init_$Create$(toString(message));
           }
         }
       }
       var new_0 = tmp;
-      if (this.j1h_1.s1j(old, new_0)) {
+      if (this.l1h_1.u1j(old, new_0)) {
         if (old == null) {
           // Inline function 'androidx.compose.runtime.synchronized' call
           // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-          this.k1h_1;
+          this.m1h_1;
           drainPendingModificationsLocked(this);
         }
         break $l$loop;
       }
     }
   };
-  protoOf(CompositionImpl).t1j = function (values) {
+  protoOf(CompositionImpl).v1j = function (values) {
     if (values instanceof IdentityArraySet) {
       // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
       // Inline function 'kotlin.contracts.contract' call
-      var values_0 = values.i1c_1;
+      var values_0 = values.k1c_1;
       var inductionVariable = 0;
-      var last = values.h1c_1;
+      var last = values.j1c_1;
       if (inductionVariable < last)
         do {
           var i = inductionVariable;
@@ -4416,7 +4416,7 @@
           // Inline function 'androidx.compose.runtime.CompositionImpl.observesAnyOf.<anonymous>' call
           var tmp = values_0[i];
           var value = !(tmp == null) ? tmp : THROW_CCE();
-          if (this.n1h_1.k1i(value) ? true : this.p1h_1.k1i(value))
+          if (this.p1h_1.m1i(value) ? true : this.r1h_1.m1i(value))
             return true;
         }
          while (inductionVariable < last);
@@ -4425,41 +4425,41 @@
     var tmp0_iterator = values.n();
     while (tmp0_iterator.b1()) {
       var value_0 = tmp0_iterator.d1();
-      if (this.n1h_1.k1i(value_0) ? true : this.p1h_1.k1i(value_0))
+      if (this.p1h_1.m1i(value_0) ? true : this.r1h_1.m1i(value_0))
         return true;
     }
     return false;
   };
-  protoOf(CompositionImpl).o1g = function (block) {
-    return this.y1h_1.o1g(block);
+  protoOf(CompositionImpl).q1g = function (block) {
+    return this.a1i_1.q1g(block);
   };
-  protoOf(CompositionImpl).u1j = function (value) {
+  protoOf(CompositionImpl).w1j = function (value) {
     if (!_get_areChildrenComposing__c1uwup(this)) {
-      var tmp0_safe_receiver = this.y1h_1.l1e();
+      var tmp0_safe_receiver = this.a1i_1.n1e();
       if (tmp0_safe_receiver == null)
         null;
       else {
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
-        tmp0_safe_receiver.s1g(true);
-        var alreadyRead = tmp0_safe_receiver.v1j(value);
+        tmp0_safe_receiver.u1g(true);
+        var alreadyRead = tmp0_safe_receiver.x1j(value);
         var tmp;
         if (!alreadyRead) {
           if (value instanceof StateObjectImpl) {
             // Inline function 'androidx.compose.runtime.snapshots.Companion.Composition' call
             var tmp$ret$0 = _ReaderKind___init__impl__jqeebu(1);
-            value.x1j(tmp$ret$0);
+            value.z1j(tmp$ret$0);
           }
-          this.n1h_1.l1i(value, tmp0_safe_receiver);
+          this.p1h_1.n1i(value, tmp0_safe_receiver);
           var tmp_0;
           if (isInterface(value, DerivedState)) {
-            this.p1h_1.y1j(value);
-            var this_0 = value.z1j().a1k();
-            var k = this_0.j10_1;
+            this.r1h_1.a1k(value);
+            var this_0 = value.b1k().c1k();
+            var k = this_0.l10_1;
             var tmp$ret$4;
             $l$block: {
               // Inline function 'androidx.collection.ObjectIntMap.forEachIndexed' call
-              var m = this_0.i10_1;
+              var m = this_0.k10_1;
               var lastIndex = m.length - 2 | 0;
               var inductionVariable = 0;
               if (inductionVariable <= lastIndex)
@@ -4486,9 +4486,9 @@
                           if (dependency instanceof StateObjectImpl) {
                             // Inline function 'androidx.compose.runtime.snapshots.Companion.Composition' call
                             var tmp$ret$3 = _ReaderKind___init__impl__jqeebu(1);
-                            dependency.x1j(tmp$ret$3);
+                            dependency.z1j(tmp$ret$3);
                           }
-                          this.p1h_1.l1i(dependency, value);
+                          this.r1h_1.n1i(dependency, value);
                         }
                         slot = slot.mc(8);
                       }
@@ -4508,12 +4508,12 @@
       }
     }
   };
-  protoOf(CompositionImpl).b1k = function (value) {
+  protoOf(CompositionImpl).d1k = function (value) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.k1h_1;
+    this.m1h_1;
     invalidateScopeOfLocked(this, value);
-    var value_0 = this.p1h_1.g1i_1.u2(value);
+    var value_0 = this.r1h_1.i1i_1.u2(value);
     var tmp;
     if (value_0 == null) {
       tmp = Unit_instance;
@@ -4521,12 +4521,12 @@
       if (value_0 instanceof MutableScatterSet) {
         var this_0 = value_0 instanceof MutableScatterSet ? value_0 : THROW_CCE();
         // Inline function 'kotlin.contracts.contract' call
-        var k = this_0.l11_1;
+        var k = this_0.n11_1;
         var tmp$ret$2;
         $l$block: {
           // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
           // Inline function 'kotlin.contracts.contract' call
-          var m = this_0.k11_1;
+          var m = this_0.m11_1;
           var lastIndex = m.length - 2 | 0;
           var inductionVariable = 0;
           if (inductionVariable <= lastIndex)
@@ -4572,10 +4572,10 @@
     }
     return tmp;
   };
-  protoOf(CompositionImpl).c1k = function () {
+  protoOf(CompositionImpl).e1k = function () {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.k1h_1;
+    this.m1h_1;
     // Inline function 'androidx.compose.runtime.CompositionImpl.recompose.<anonymous>' call
     drainPendingModificationsForCompositionLocked(this);
     // Inline function 'androidx.compose.runtime.CompositionImpl.guardChanges' call
@@ -4596,11 +4596,11 @@
           if (observer_0 == null)
             null;
           else {
-            var tmp_2 = invalidations.o1j();
-            observer_0.p1j(this, isInterface(tmp_2, Map) ? tmp_2 : THROW_CCE());
+            var tmp_2 = invalidations.q1j();
+            observer_0.r1j(this, isInterface(tmp_2, Map) ? tmp_2 : THROW_CCE());
           }
           // Inline function 'kotlin.also' call
-          var this_0 = this.y1h_1.p1g(invalidations);
+          var this_0 = this.a1i_1.r1g(invalidations);
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.CompositionImpl.recompose.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
           if (!this_0) {
@@ -4609,14 +4609,14 @@
           if (observer_0 == null)
             null;
           else {
-            observer_0.q1j(this);
+            observer_0.s1j(this);
           }
           tmp_1 = this_0;
         } catch ($p) {
           var tmp_3;
           if ($p instanceof Exception) {
             var e = $p;
-            this.t1h_1 = invalidations;
+            this.v1h_1 = invalidations;
             throw e;
           } else {
             throw $p;
@@ -4630,12 +4630,12 @@
         var tmp_4;
         if (!success) {
           // Inline function 'kotlin.collections.isNotEmpty' call
-          tmp_4 = !this.l1h_1.s();
+          tmp_4 = !this.n1h_1.s();
         } else {
           tmp_4 = false;
         }
         if (tmp_4) {
-          (new RememberEventDispatcher(this.l1h_1)).v1i();
+          (new RememberEventDispatcher(this.n1h_1)).x1i();
         }
       }
       tmp = tmp_0;
@@ -4651,7 +4651,7 @@
     }
     return tmp;
   };
-  protoOf(CompositionImpl).d1k = function (references) {
+  protoOf(CompositionImpl).f1k = function (references) {
     var tmp$ret$1;
     $l$block: {
       // Inline function 'androidx.compose.runtime.snapshots.fastAll' call
@@ -4667,7 +4667,7 @@
           var item = references.m(index);
           // Inline function 'androidx.compose.runtime.snapshots.fastAll.<anonymous>' call
           // Inline function 'androidx.compose.runtime.CompositionImpl.insertMovableContent.<anonymous>' call
-          if (!equals(item.x6_1.r1b_1, this)) {
+          if (!equals(item.x6_1.t1b_1, this)) {
             tmp$ret$1 = false;
             break $l$block;
           }
@@ -4684,7 +4684,7 @@
       var tmp_0;
       try {
         // Inline function 'kotlin.also' call
-        this.y1h_1.f1g(references);
+        this.a1i_1.h1g(references);
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.CompositionImpl.trackAbandonedValues.<anonymous>' call
         success = true;
@@ -4693,12 +4693,12 @@
         var tmp_1;
         if (!success) {
           // Inline function 'kotlin.collections.isNotEmpty' call
-          tmp_1 = !this.l1h_1.s();
+          tmp_1 = !this.n1h_1.s();
         } else {
           tmp_1 = false;
         }
         if (tmp_1) {
-          (new RememberEventDispatcher(this.l1h_1)).v1i();
+          (new RememberEventDispatcher(this.n1h_1)).x1i();
         }
       }
       tmp = tmp_0;
@@ -4713,27 +4713,27 @@
       }
     }
   };
-  protoOf(CompositionImpl).e1k = function (state) {
-    var manager = new RememberEventDispatcher(this.l1h_1);
-    var slotTable = state.z1b_1;
+  protoOf(CompositionImpl).g1k = function (state) {
+    var manager = new RememberEventDispatcher(this.n1h_1);
+    var slotTable = state.b1c_1;
     // Inline function 'androidx.compose.runtime.SlotTable.write' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotTable.write.<anonymous>' call
-    var writer = slotTable.s18();
+    var writer = slotTable.u18();
     var tmp;
     try {
       removeCurrentGroup(writer, manager);
       tmp = Unit_instance;
     }finally {
-      writer.g17();
+      writer.i17();
     }
-    manager.s1i();
+    manager.u1i();
   };
-  protoOf(CompositionImpl).f1k = function () {
+  protoOf(CompositionImpl).h1k = function () {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.k1h_1;
+    this.m1h_1;
     // Inline function 'androidx.compose.runtime.CompositionImpl.guardChanges' call
     var tmp;
     try {
@@ -4742,7 +4742,7 @@
       var tmp_0;
       try {
         // Inline function 'kotlin.also' call
-        applyChangesInLocked(this, this.q1h_1);
+        applyChangesInLocked(this, this.s1h_1);
         drainPendingModificationsLocked(this);
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.CompositionImpl.trackAbandonedValues.<anonymous>' call
@@ -4752,12 +4752,12 @@
         var tmp_1;
         if (!success) {
           // Inline function 'kotlin.collections.isNotEmpty' call
-          tmp_1 = !this.l1h_1.s();
+          tmp_1 = !this.n1h_1.s();
         } else {
           tmp_1 = false;
         }
         if (tmp_1) {
-          (new RememberEventDispatcher(this.l1h_1)).v1i();
+          (new RememberEventDispatcher(this.n1h_1)).x1i();
         }
       }
       tmp = tmp_0;
@@ -4772,10 +4772,10 @@
       }
     }
   };
-  protoOf(CompositionImpl).g1k = function () {
+  protoOf(CompositionImpl).i1k = function () {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.k1h_1;
+    this.m1h_1;
     // Inline function 'androidx.compose.runtime.CompositionImpl.guardChanges' call
     var tmp;
     try {
@@ -4785,8 +4785,8 @@
       try {
         // Inline function 'kotlin.also' call
         // Inline function 'androidx.compose.runtime.CompositionImpl.applyLateChanges.<anonymous>.<anonymous>' call
-        if (this.r1h_1.v1f()) {
-          applyChangesInLocked(this, this.r1h_1);
+        if (this.t1h_1.x1f()) {
+          applyChangesInLocked(this, this.t1h_1);
         }
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.CompositionImpl.trackAbandonedValues.<anonymous>' call
@@ -4796,12 +4796,12 @@
         var tmp_1;
         if (!success) {
           // Inline function 'kotlin.collections.isNotEmpty' call
-          tmp_1 = !this.l1h_1.s();
+          tmp_1 = !this.n1h_1.s();
         } else {
           tmp_1 = false;
         }
         if (tmp_1) {
-          (new RememberEventDispatcher(this.l1h_1)).v1i();
+          (new RememberEventDispatcher(this.n1h_1)).x1i();
         }
       }
       tmp = tmp_0;
@@ -4816,10 +4816,10 @@
       }
     }
   };
-  protoOf(CompositionImpl).o1e = function () {
+  protoOf(CompositionImpl).q1e = function () {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.k1h_1;
+    this.m1h_1;
     // Inline function 'androidx.compose.runtime.CompositionImpl.guardChanges' call
     var tmp;
     try {
@@ -4829,10 +4829,10 @@
       try {
         // Inline function 'kotlin.also' call
         // Inline function 'androidx.compose.runtime.CompositionImpl.changesApplied.<anonymous>.<anonymous>' call
-        this.y1h_1.o1e();
+        this.a1i_1.q1e();
         // Inline function 'kotlin.collections.isNotEmpty' call
-        if (!this.l1h_1.s()) {
-          (new RememberEventDispatcher(this.l1h_1)).v1i();
+        if (!this.n1h_1.s()) {
+          (new RememberEventDispatcher(this.n1h_1)).x1i();
         }
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.CompositionImpl.trackAbandonedValues.<anonymous>' call
@@ -4842,12 +4842,12 @@
         var tmp_1;
         if (!success) {
           // Inline function 'kotlin.collections.isNotEmpty' call
-          tmp_1 = !this.l1h_1.s();
+          tmp_1 = !this.n1h_1.s();
         } else {
           tmp_1 = false;
         }
         if (tmp_1) {
-          (new RememberEventDispatcher(this.l1h_1)).v1i();
+          (new RememberEventDispatcher(this.n1h_1)).x1i();
         }
       }
       tmp = tmp_0;
@@ -4862,11 +4862,11 @@
       }
     }
   };
-  protoOf(CompositionImpl).h1k = function () {
+  protoOf(CompositionImpl).j1k = function () {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.k1h_1;
-    var indexedObject = this.m1h_1.m15_1;
+    this.m1h_1;
+    var indexedObject = this.o1h_1.o15_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     while (inductionVariable < last) {
@@ -4877,22 +4877,22 @@
       if (tmp0_safe_receiver == null)
         null;
       else {
-        tmp0_safe_receiver.i1k();
+        tmp0_safe_receiver.k1k();
       }
     }
   };
-  protoOf(CompositionImpl).j1c = function (to, groupIndex, block) {
+  protoOf(CompositionImpl).l1c = function (to, groupIndex, block) {
     var tmp;
     if ((!(to == null) ? !equals(to, this) : false) ? groupIndex >= 0 : false) {
       var tmp_0 = this;
-      tmp_0.v1h_1 = to instanceof CompositionImpl ? to : THROW_CCE();
-      this.w1h_1 = groupIndex;
+      tmp_0.x1h_1 = to instanceof CompositionImpl ? to : THROW_CCE();
+      this.y1h_1 = groupIndex;
       var tmp_1;
       try {
         tmp_1 = block();
       }finally {
-        this.v1h_1 = null;
-        this.w1h_1 = 0;
+        this.x1h_1 = null;
+        this.y1h_1 = 0;
       }
       tmp = tmp_1;
     } else {
@@ -4900,53 +4900,53 @@
     }
     return tmp;
   };
-  protoOf(CompositionImpl).j1k = function (scope, instance) {
-    if (scope.k1k()) {
-      scope.d1g(true);
+  protoOf(CompositionImpl).l1k = function (scope, instance) {
+    if (scope.m1k()) {
+      scope.f1g(true);
     }
-    var anchor = scope.i13_1;
-    if (anchor == null ? true : !anchor.u1i())
+    var anchor = scope.k13_1;
+    if (anchor == null ? true : !anchor.w1i())
       return InvalidationResult_IGNORED_getInstance();
-    if (!this.m1h_1.l1k(anchor)) {
+    if (!this.o1h_1.n1k(anchor)) {
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      this.k1h_1;
+      this.m1h_1;
       // Inline function 'androidx.compose.runtime.CompositionImpl.invalidate.<anonymous>' call
-      var delegate = this.v1h_1;
+      var delegate = this.x1h_1;
       if ((delegate == null ? null : tryImminentInvalidation(delegate, scope, instance)) === true)
         return InvalidationResult_IMMINENT_getInstance();
       return InvalidationResult_IGNORED_getInstance();
     }
-    if (!scope.m1k())
+    if (!scope.o1k())
       return InvalidationResult_IGNORED_getInstance();
     return invalidateChecked(this, scope, anchor, instance);
   };
-  protoOf(CompositionImpl).n1k = function (scope) {
-    this.u1h_1 = true;
+  protoOf(CompositionImpl).p1k = function (scope) {
+    this.w1h_1 = true;
   };
-  protoOf(CompositionImpl).o1k = function (instance, scope) {
-    this.n1h_1.j1i(instance, scope);
+  protoOf(CompositionImpl).q1k = function (instance, scope) {
+    this.p1h_1.l1i(instance, scope);
   };
-  protoOf(CompositionImpl).p1k = function (state) {
-    if (!this.n1h_1.k1i(state)) {
-      this.p1h_1.y1j(state);
+  protoOf(CompositionImpl).r1k = function (state) {
+    if (!this.p1h_1.m1i(state)) {
+      this.r1h_1.a1k(state);
     }
   };
   function CompositionObserverHolder(observer, root) {
     observer = observer === VOID ? null : observer;
     root = root === VOID ? false : root;
-    this.c1j_1 = observer;
-    this.d1j_1 = root;
+    this.e1j_1 = observer;
+    this.f1j_1 = root;
   }
   function ComposableLambda$invoke$ref_0($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$CompositionKt$lambda_1$lambda_xm0u9s($composer, $changed) {
     var $composer_0 = $composer;
     sourceInformation($composer_0, 'C:Composition.kt#9igjgp');
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(954879418, $changed, -1, 'androidx.compose.runtime.ComposableSingletons$CompositionKt.lambda-1.<anonymous> (Composition.kt:607)');
       }
@@ -4954,19 +4954,19 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableLambda$invoke$ref_1($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function ComposableSingletons$CompositionKt$lambda_2$lambda_8lgqn5($composer, $changed) {
     var $composer_0 = $composer;
     sourceInformation($composer_0, 'C:Composition.kt#9igjgp');
-    if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+    if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(1918065384, $changed, -1, 'androidx.compose.runtime.ComposableSingletons$CompositionKt.lambda-2.<anonymous> (Composition.kt:739)');
       }
@@ -4974,16 +4974,16 @@
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
     return Unit_instance;
   }
   function ComposableSingletons$CompositionKt() {
     ComposableSingletons$CompositionKt_instance = this;
     var tmp = this;
-    tmp.j1j_1 = ComposableLambda$invoke$ref_0(composableLambdaInstance(954879418, false, ComposableSingletons$CompositionKt$lambda_1$lambda_xm0u9s));
+    tmp.l1j_1 = ComposableLambda$invoke$ref_0(composableLambdaInstance(954879418, false, ComposableSingletons$CompositionKt$lambda_1$lambda_xm0u9s));
     var tmp_0 = this;
-    tmp_0.k1j_1 = ComposableLambda$invoke$ref_1(composableLambdaInstance(1918065384, false, ComposableSingletons$CompositionKt$lambda_2$lambda_8lgqn5));
+    tmp_0.m1j_1 = ComposableLambda$invoke$ref_1(composableLambdaInstance(1918065384, false, ComposableSingletons$CompositionKt$lambda_2$lambda_8lgqn5));
   }
   var ComposableSingletons$CompositionKt_instance;
   function ComposableSingletons$CompositionKt_getInstance() {
@@ -4993,19 +4993,19 @@
   }
   function addValue(_this__u8e3s4, key, value) {
     _init_properties_Composition_kt__t5pjw8();
-    if (_this__u8e3s4.r1k(key)) {
-      var tmp0_safe_receiver = _this__u8e3s4.q1k(key);
+    if (_this__u8e3s4.t1k(key)) {
+      var tmp0_safe_receiver = _this__u8e3s4.s1k(key);
       if (tmp0_safe_receiver == null)
         null;
       else
-        tmp0_safe_receiver.f1h(value);
+        tmp0_safe_receiver.h1h(value);
     } else {
       // Inline function 'kotlin.also' call
       var this_0 = new IdentityArraySet();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.addValue.<anonymous>' call
-      this_0.f1h(value);
-      _this__u8e3s4.z1i(key, this_0);
+      this_0.h1h(value);
+      _this__u8e3s4.b1j(key, this_0);
     }
   }
   function ControlledComposition(applier, parent) {
@@ -5029,21 +5029,21 @@
   var EmptyPersistentCompositionLocalMap;
   function CompositionContext() {
   }
-  protoOf(CompositionContext).b1j = function () {
+  protoOf(CompositionContext).d1j = function () {
     return null;
   };
-  protoOf(CompositionContext).d16 = function (table) {
+  protoOf(CompositionContext).f16 = function (table) {
   };
-  protoOf(CompositionContext).i1j = function (composer) {
+  protoOf(CompositionContext).k1j = function (composer) {
   };
-  protoOf(CompositionContext).w15 = function () {
+  protoOf(CompositionContext).y15 = function () {
     return get_EmptyPersistentCompositionLocalMap();
   };
-  protoOf(CompositionContext).v15 = function () {
+  protoOf(CompositionContext).x15 = function () {
   };
-  protoOf(CompositionContext).f16 = function () {
+  protoOf(CompositionContext).h16 = function () {
   };
-  protoOf(CompositionContext).y1b = function (reference) {
+  protoOf(CompositionContext).a1c = function (reference) {
     return null;
   };
   var properties_initialized_CompositionContext_kt_mk393b;
@@ -5054,12 +5054,12 @@
     }
   }
   function CompositionLocal(defaultFactory) {
-    this.p1f_1 = new LazyValueHolder(defaultFactory);
+    this.r1f_1 = new LazyValueHolder(defaultFactory);
   }
   function ProvidableCompositionLocal(defaultFactory) {
     CompositionLocal.call(this, defaultFactory);
   }
-  protoOf(ProvidableCompositionLocal).u1k = function (value) {
+  protoOf(ProvidableCompositionLocal).w1k = function (value) {
     return new ProvidedValue(this, value, true);
   };
   function staticCompositionLocalOf(defaultFactory) {
@@ -5068,7 +5068,7 @@
   function StaticProvidableCompositionLocal(defaultFactory) {
     ProvidableCompositionLocal.call(this, defaultFactory);
   }
-  protoOf(StaticProvidableCompositionLocal).q1f = function (value, previous) {
+  protoOf(StaticProvidableCompositionLocal).s1f = function (value, previous) {
     return (!(previous == null) ? equals(previous.o2(), value) : false) ? previous : new StaticValueHolder(value);
   };
   function compositionLocalOf(policy, defaultFactory) {
@@ -5077,30 +5077,30 @@
   }
   function CompositionLocalProvider(value, content, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-1350970552);
+    $composer_0 = $composer_0.b1g(-1350970552);
     sourceInformation($composer_0, 'C(CompositionLocalProvider)P(1)247@10835L9:CompositionLocal.kt#9igjgp');
     var $dirty = $changed;
     if (isTraceInProgress()) {
       traceEventStart(-1350970552, $dirty, -1, 'androidx.compose.runtime.CompositionLocalProvider (CompositionLocal.kt:245)');
     }
-    $composer_0.k1f(value);
+    $composer_0.m1f(value);
     content($composer_0, 14 & $dirty >> 3);
-    $composer_0.t1f();
+    $composer_0.v1f();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(CompositionLocalProvider$lambda(value, content, $changed));
+      tmp0_safe_receiver.y1k(CompositionLocalProvider$lambda(value, content, $changed));
     }
   }
   function DynamicProvidableCompositionLocal(policy, defaultFactory) {
     ProvidableCompositionLocal.call(this, defaultFactory);
-    this.y1k_1 = policy;
+    this.a1l_1 = policy;
   }
-  protoOf(DynamicProvidableCompositionLocal).q1f = function (value, previous) {
+  protoOf(DynamicProvidableCompositionLocal).s1f = function (value, previous) {
     var tmp;
     var tmp_0;
     if (!(previous == null)) {
@@ -5112,7 +5112,7 @@
       previous.kv(value);
       tmp = previous;
     } else {
-      tmp = mutableStateOf(value, this.y1k_1);
+      tmp = mutableStateOf(value, this.a1l_1);
     }
     return tmp;
   };
@@ -5129,7 +5129,7 @@
     if (contains_0(_this__u8e3s4, key)) {
       tmp = getValueOf(_this__u8e3s4, key);
     } else {
-      tmp = key.p1f_1.o2();
+      tmp = key.r1f_1.o2();
     }
     return tmp;
   }
@@ -5161,7 +5161,7 @@
       var this_0 = new MutableVector(tmp$ret$0, 0);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.derivedStateObservers.<anonymous>' call
-      get_derivedStateObservers().d1l(this_0);
+      get_derivedStateObservers().f1l(this_0);
       tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
@@ -5186,68 +5186,68 @@
   function LaunchedEffect(key1, block, $composer, $changed) {
     _init_properties_Effects_kt__be5lps();
     var $composer_0 = $composer;
-    $composer_0.h1e(1179185413);
+    $composer_0.j1e(1179185413);
     sourceInformation($composer_0, 'C(LaunchedEffect)P(1)338@14267L58:Effects.kt#9igjgp');
     if (isTraceInProgress()) {
       traceEventStart(1179185413, $changed, -1, 'androidx.compose.runtime.LaunchedEffect (Effects.kt:336)');
     }
-    var applyContext = $composer_0.f1e();
-    $composer_0.h1e(1036442561);
+    var applyContext = $composer_0.h1e();
+    $composer_0.j1e(1036442561);
     sourceInformation($composer_0, 'CC(remember):Effects.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var invalid = $composer_0.a16(key1);
+    var invalid = $composer_0.c16(key1);
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_0.l1f();
+    var it = $composer_0.n1f();
     var tmp;
-    if (invalid ? true : it === Companion_getInstance_0().z18_1) {
+    if (invalid ? true : it === Companion_getInstance_0().b19_1) {
       // Inline function 'androidx.compose.runtime.LaunchedEffect.<anonymous>' call
       var value = new LaunchedEffectImpl(applyContext, block);
-      $composer_0.r1f(value);
+      $composer_0.t1f(value);
       tmp = value;
     } else {
       tmp = it;
     }
     var tmp_0 = tmp;
     (tmp_0 == null ? true : !(tmp_0 == null)) || THROW_CCE();
-    $composer_0.i1e();
+    $composer_0.k1e();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.i1e();
+    $composer_0.k1e();
   }
   function LaunchedEffectImpl(parentCoroutineContext, task) {
-    this.e1l_1 = task;
-    this.f1l_1 = CoroutineScope(parentCoroutineContext);
-    this.g1l_1 = null;
+    this.g1l_1 = task;
+    this.h1l_1 = CoroutineScope(parentCoroutineContext);
+    this.i1l_1 = null;
   }
-  protoOf(LaunchedEffectImpl).g1j = function () {
-    var tmp0_safe_receiver = this.g1l_1;
+  protoOf(LaunchedEffectImpl).i1j = function () {
+    var tmp0_safe_receiver = this.i1l_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
       cancel(tmp0_safe_receiver, 'Old job was still running!');
     }
-    this.g1l_1 = launch(this.f1l_1, VOID, VOID, this.e1l_1);
-  };
-  protoOf(LaunchedEffectImpl).f1j = function () {
-    var tmp0_safe_receiver = this.g1l_1;
-    if (tmp0_safe_receiver == null)
-      null;
-    else {
-      tmp0_safe_receiver.wl(new LeftCompositionCancellationException());
-    }
-    this.g1l_1 = null;
+    this.i1l_1 = launch(this.h1l_1, VOID, VOID, this.g1l_1);
   };
   protoOf(LaunchedEffectImpl).h1j = function () {
-    var tmp0_safe_receiver = this.g1l_1;
+    var tmp0_safe_receiver = this.i1l_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
       tmp0_safe_receiver.wl(new LeftCompositionCancellationException());
     }
-    this.g1l_1 = null;
+    this.i1l_1 = null;
+  };
+  protoOf(LaunchedEffectImpl).j1j = function () {
+    var tmp0_safe_receiver = this.i1l_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      tmp0_safe_receiver.wl(new LeftCompositionCancellationException());
+    }
+    this.i1l_1 = null;
   };
   function LeftCompositionCancellationException() {
     PlatformOptimizedCancellationException.call(this, 'The coroutine scope left the composition');
@@ -5256,40 +5256,40 @@
   function DisposableEffect(key1, effect, $composer, $changed) {
     _init_properties_Effects_kt__be5lps();
     var $composer_0 = $composer;
-    $composer_0.h1e(-1371986847);
+    $composer_0.j1e(-1371986847);
     sourceInformation($composer_0, 'C(DisposableEffect)P(1)155@6197L47:Effects.kt#9igjgp');
     if (isTraceInProgress()) {
       traceEventStart(-1371986847, $changed, -1, 'androidx.compose.runtime.DisposableEffect (Effects.kt:154)');
     }
-    $composer_0.h1e(592131181);
+    $composer_0.j1e(592131181);
     sourceInformation($composer_0, 'CC(remember):Effects.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var invalid = $composer_0.a16(key1);
+    var invalid = $composer_0.c16(key1);
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_0.l1f();
+    var it = $composer_0.n1f();
     var tmp;
-    if (invalid ? true : it === Companion_getInstance_0().z18_1) {
+    if (invalid ? true : it === Companion_getInstance_0().b19_1) {
       // Inline function 'androidx.compose.runtime.DisposableEffect.<anonymous>' call
       var value = new DisposableEffectImpl(effect);
-      $composer_0.r1f(value);
+      $composer_0.t1f(value);
       tmp = value;
     } else {
       tmp = it;
     }
     var tmp_0 = tmp;
     (tmp_0 == null ? true : !(tmp_0 == null)) || THROW_CCE();
-    $composer_0.i1e();
+    $composer_0.k1e();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.i1e();
+    $composer_0.k1e();
   }
   function DisposableEffect_0(keys, effect, $composer, $changed) {
     _init_properties_Effects_kt__be5lps();
     var $composer_0 = $composer;
-    $composer_0.h1e(-1307627122);
+    $composer_0.j1e(-1307627122);
     sourceInformation($composer_0, 'C(DisposableEffect)P(1)276@11903L48:Effects.kt#9igjgp');
     if (isTraceInProgress()) {
       traceEventStart(-1307627122, $changed, -1, 'androidx.compose.runtime.DisposableEffect (Effects.kt:275)');
@@ -5297,7 +5297,7 @@
     // Inline function 'androidx.compose.runtime.remember' call
     var keys_0 = keys.slice();
     var $composer_1 = $composer_0;
-    $composer_1.h1e(-568225417);
+    $composer_1.j1e(-568225417);
     sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
     var invalid = false;
     var inductionVariable = 0;
@@ -5305,81 +5305,81 @@
     while (inductionVariable < last) {
       var key = keys_0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      invalid = !!(invalid | $composer_1.a16(key));
+      invalid = !!(invalid | $composer_1.c16(key));
     }
     // Inline function 'androidx.compose.runtime.cache' call
     var invalid_0 = invalid;
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_1.l1f();
+    var it = $composer_1.n1f();
     var tmp;
-    if (invalid_0 ? true : it === Companion_getInstance_0().z18_1) {
+    if (invalid_0 ? true : it === Companion_getInstance_0().b19_1) {
       // Inline function 'androidx.compose.runtime.DisposableEffect.<anonymous>' call
       var value = new DisposableEffectImpl(effect);
-      $composer_1.r1f(value);
+      $composer_1.t1f(value);
       tmp = value;
     } else {
       tmp = it;
     }
     var tmp_0 = tmp;
     (tmp_0 == null ? true : !(tmp_0 == null)) || THROW_CCE();
-    $composer_1.i1e();
+    $composer_1.k1e();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.i1e();
+    $composer_0.k1e();
   }
   function DisposableEffectImpl(effect) {
-    this.h1l_1 = effect;
-    this.i1l_1 = null;
+    this.j1l_1 = effect;
+    this.k1l_1 = null;
   }
-  protoOf(DisposableEffectImpl).g1j = function () {
-    this.i1l_1 = this.h1l_1(get_InternalDisposableEffectScope());
+  protoOf(DisposableEffectImpl).i1j = function () {
+    this.k1l_1 = this.j1l_1(get_InternalDisposableEffectScope());
   };
-  protoOf(DisposableEffectImpl).f1j = function () {
-    var tmp0_safe_receiver = this.i1l_1;
+  protoOf(DisposableEffectImpl).h1j = function () {
+    var tmp0_safe_receiver = this.k1l_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
       tmp0_safe_receiver.fn();
     }
-    this.i1l_1 = null;
+    this.k1l_1 = null;
   };
-  protoOf(DisposableEffectImpl).h1j = function () {
+  protoOf(DisposableEffectImpl).j1j = function () {
   };
   function DisposableEffect_1(key1, key2, effect, $composer, $changed) {
     _init_properties_Effects_kt__be5lps();
     var $composer_0 = $composer;
-    $composer_0.h1e(1429097729);
+    $composer_0.j1e(1429097729);
     sourceInformation($composer_0, 'C(DisposableEffect)P(1,2)195@8083L53:Effects.kt#9igjgp');
     if (isTraceInProgress()) {
       traceEventStart(1429097729, $changed, -1, 'androidx.compose.runtime.DisposableEffect (Effects.kt:194)');
     }
-    $composer_0.h1e(592133067);
+    $composer_0.j1e(592133067);
     sourceInformation($composer_0, 'CC(remember):Effects.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
-    var invalid = !!($composer_0.a16(key1) | $composer_0.a16(key2));
+    var invalid = !!($composer_0.c16(key1) | $composer_0.c16(key2));
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_0.l1f();
+    var it = $composer_0.n1f();
     var tmp;
-    if (invalid ? true : it === Companion_getInstance_0().z18_1) {
+    if (invalid ? true : it === Companion_getInstance_0().b19_1) {
       // Inline function 'androidx.compose.runtime.DisposableEffect.<anonymous>' call
       var value = new DisposableEffectImpl(effect);
-      $composer_0.r1f(value);
+      $composer_0.t1f(value);
       tmp = value;
     } else {
       tmp = it;
     }
     var tmp_0 = tmp;
     (tmp_0 == null ? true : !(tmp_0 == null)) || THROW_CCE();
-    $composer_0.i1e();
+    $composer_0.k1e();
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.i1e();
+    $composer_0.k1e();
   }
   var properties_initialized_Effects_kt_cj8kem;
   function _init_properties_Effects_kt__be5lps() {
@@ -5399,14 +5399,14 @@
     return tmp;
   }
   function JoinedKey(left, right) {
-    this.j1l_1 = left;
-    this.k1l_1 = right;
+    this.l1l_1 = left;
+    this.m1l_1 = right;
   }
   protoOf(JoinedKey).hashCode = function () {
-    return imul(hashCodeOf(this, this.j1l_1), 31) + hashCodeOf(this, this.k1l_1) | 0;
+    return imul(hashCodeOf(this, this.l1l_1), 31) + hashCodeOf(this, this.m1l_1) | 0;
   };
   protoOf(JoinedKey).toString = function () {
-    return 'JoinedKey(left=' + toString_0(this.j1l_1) + ', right=' + toString_0(this.k1l_1) + ')';
+    return 'JoinedKey(left=' + toString_0(this.l1l_1) + ', right=' + toString_0(this.m1l_1) + ')';
   };
   protoOf(JoinedKey).equals = function (other) {
     if (this === other)
@@ -5414,9 +5414,9 @@
     if (!(other instanceof JoinedKey))
       return false;
     var tmp0_other_with_cast = other instanceof JoinedKey ? other : THROW_CCE();
-    if (!equals(this.j1l_1, tmp0_other_with_cast.j1l_1))
+    if (!equals(this.l1l_1, tmp0_other_with_cast.l1l_1))
       return false;
-    if (!equals(this.k1l_1, tmp0_other_with_cast.k1l_1))
+    if (!equals(this.m1l_1, tmp0_other_with_cast.m1l_1))
       return false;
     return true;
   };
@@ -5444,13 +5444,13 @@
   }
   var movableContentKey;
   function OpaqueKey(key) {
-    this.l1l_1 = key;
+    this.n1l_1 = key;
   }
   protoOf(OpaqueKey).toString = function () {
-    return 'OpaqueKey(key=' + this.l1l_1 + ')';
+    return 'OpaqueKey(key=' + this.n1l_1 + ')';
   };
   protoOf(OpaqueKey).hashCode = function () {
-    return getStringHashCode(this.l1l_1);
+    return getStringHashCode(this.n1l_1);
   };
   protoOf(OpaqueKey).equals = function (other) {
     if (this === other)
@@ -5458,50 +5458,50 @@
     if (!(other instanceof OpaqueKey))
       return false;
     var tmp0_other_with_cast = other instanceof OpaqueKey ? other : THROW_CCE();
-    if (!(this.l1l_1 === tmp0_other_with_cast.l1l_1))
+    if (!(this.n1l_1 === tmp0_other_with_cast.n1l_1))
       return false;
     return true;
   };
   function produceState(initialValue, producer, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0.h1e(10454275);
+    $composer_0.j1e(10454275);
     sourceInformation($composer_0, 'C(produceState)80@2911L41,81@2957L95:ProduceState.kt#9igjgp');
     if (isTraceInProgress()) {
       traceEventStart(10454275, $changed, -1, 'androidx.compose.runtime.produceState (ProduceState.kt:79)');
     }
-    $composer_0.h1e(-1870533705);
+    $composer_0.j1e(-1870533705);
     sourceInformation($composer_0, 'CC(remember):ProduceState.kt#9igjgp');
     // Inline function 'androidx.compose.runtime.cache' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-    var it = $composer_0.l1f();
+    var it = $composer_0.n1f();
     var tmp;
-    if (false ? true : it === Companion_getInstance_0().z18_1) {
+    if (false ? true : it === Companion_getInstance_0().b19_1) {
       // Inline function 'androidx.compose.runtime.produceState.<anonymous>' call
       var value = mutableStateOf(initialValue);
-      $composer_0.r1f(value);
+      $composer_0.t1f(value);
       tmp = value;
     } else {
       tmp = it;
     }
     var tmp_0 = tmp;
     var tmp1_group = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
-    $composer_0.i1e();
+    $composer_0.k1e();
     var result = tmp1_group;
     LaunchedEffect(Unit_instance, produceState$slambda_0(producer, result, null), $composer_0, 70);
     if (isTraceInProgress()) {
       traceEventEnd();
     }
-    $composer_0.i1e();
+    $composer_0.k1e();
     return result;
   }
   function ProduceStateScope() {
   }
   function $awaitDisposeCOROUTINE$0(_this__u8e3s4, onDispose, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this.v1l_1 = _this__u8e3s4;
-    this.w1l_1 = onDispose;
+    this.x1l_1 = _this__u8e3s4;
+    this.y1l_1 = onDispose;
   }
   protoOf($awaitDisposeCOROUTINE$0).md = function () {
     var suspendResult = this.cd_1;
@@ -5525,18 +5525,18 @@
 
             continue $sm;
           case 2:
-            this.x1l_1 = throwKotlinNothingValueException();
+            this.z1l_1 = throwKotlinNothingValueException();
             this.bd_1 = 5;
             this.ad_1 = 3;
             continue $sm;
           case 3:
             this.bd_1 = 5;
-            this.w1l_1();
+            this.y1l_1();
             return Unit_instance;
           case 4:
             this.bd_1 = 5;
             var t = this.dd_1;
-            this.w1l_1();
+            this.y1l_1();
             throw t;
           case 5:
             throw this.dd_1;
@@ -5553,27 +5553,27 @@
      while (true);
   };
   function ProduceStateScopeImpl(state, coroutineContext) {
-    this.y1l_1 = coroutineContext;
-    this.z1l_1 = state;
+    this.a1m_1 = coroutineContext;
+    this.b1m_1 = state;
   }
   protoOf(ProduceStateScopeImpl).qk = function () {
-    return this.y1l_1;
+    return this.a1m_1;
   };
   protoOf(ProduceStateScopeImpl).kv = function (_set____db54di) {
-    this.z1l_1.kv(_set____db54di);
+    this.b1m_1.kv(_set____db54di);
   };
   protoOf(ProduceStateScopeImpl).o2 = function () {
-    return this.z1l_1.o2();
+    return this.b1m_1.o2();
   };
-  protoOf(ProduceStateScopeImpl).m1l = function (onDispose, $completion) {
+  protoOf(ProduceStateScopeImpl).o1l = function (onDispose, $completion) {
     var tmp = new $awaitDisposeCOROUTINE$0(this, onDispose, $completion);
     tmp.cd_1 = Unit_instance;
     tmp.dd_1 = null;
     return tmp.md();
   };
   function produceState$slambda($producer, $result, resultContinuation) {
-    this.i1m_1 = $producer;
-    this.j1m_1 = $result;
+    this.k1m_1 = $producer;
+    this.l1m_1 = $result;
     CoroutineImpl.call(this, resultContinuation);
   }
   protoOf(produceState$slambda).az = function ($this$LaunchedEffect, $completion) {
@@ -5594,7 +5594,7 @@
           case 0:
             this.bd_1 = 2;
             this.ad_1 = 1;
-            suspendResult = this.i1m_1(new ProduceStateScopeImpl(this.j1m_1, this.k1m_1.qk()), this);
+            suspendResult = this.k1m_1(new ProduceStateScopeImpl(this.l1m_1, this.m1m_1.qk()), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -5617,8 +5617,8 @@
      while (true);
   };
   protoOf(produceState$slambda).bz = function ($this$LaunchedEffect, completion) {
-    var i = new produceState$slambda(this.i1m_1, this.j1m_1, completion);
-    i.k1m_1 = $this$LaunchedEffect;
+    var i = new produceState$slambda(this.k1m_1, this.l1m_1, completion);
+    i.m1m_1 = $this$LaunchedEffect;
     return i;
   };
   function produceState$slambda_0($producer, $result, resultContinuation) {
@@ -5632,24 +5632,24 @@
   var callbackLock;
   function _set_rereading__pnqtpo($this, value) {
     if (value) {
-      $this.g13_1 = $this.g13_1 | 32;
+      $this.i13_1 = $this.i13_1 | 32;
     } else {
-      $this.g13_1 = $this.g13_1 & -33;
+      $this.i13_1 = $this.i13_1 & -33;
     }
   }
   function _get_rereading__g2iruw($this) {
-    return !(($this.g13_1 & 32) === 0);
+    return !(($this.i13_1 & 32) === 0);
   }
   function _set_skipped__p8q2c5($this, value) {
     if (value) {
-      $this.g13_1 = $this.g13_1 | 16;
+      $this.i13_1 = $this.i13_1 | 16;
     } else {
-      $this.g13_1 = $this.g13_1 & -17;
+      $this.i13_1 = $this.i13_1 & -17;
     }
   }
   function Companion_1() {
   }
-  protoOf(Companion_1).l1m = function (slots, anchors, newOwner) {
+  protoOf(Companion_1).n1m = function (slots, anchors, newOwner) {
     // Inline function 'kotlin.collections.isNotEmpty' call
     if (!anchors.s()) {
       // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
@@ -5662,18 +5662,18 @@
           inductionVariable = inductionVariable + 1 | 0;
           var item = anchors.m(index);
           // Inline function 'androidx.compose.runtime.Companion.adoptAnchoredScopes.<anonymous>' call
-          var tmp = slots.m1m(item, 0);
+          var tmp = slots.o1m(item, 0);
           var recomposeScope = tmp instanceof RecomposeScopeImpl ? tmp : null;
           if (recomposeScope == null)
             null;
           else {
-            recomposeScope.n1m(newOwner);
+            recomposeScope.p1m(newOwner);
           }
         }
          while (inductionVariable <= last);
     }
   };
-  protoOf(Companion_1).o1m = function (slots, anchors) {
+  protoOf(Companion_1).q1m = function (slots, anchors) {
     var tmp;
     // Inline function 'kotlin.collections.isNotEmpty' call
     if (!anchors.s()) {
@@ -5693,8 +5693,8 @@
             // Inline function 'androidx.compose.runtime.snapshots.fastAny.<anonymous>' call
             // Inline function 'androidx.compose.runtime.Companion.hasAnchoredRecomposeScopes.<anonymous>' call
             var tmp_0;
-            if (slots.l1k(item)) {
-              var tmp_1 = slots.p1m(slots.w1b(item), 0);
+            if (slots.n1k(item)) {
+              var tmp_1 = slots.r1m(slots.y1b(item), 0);
               tmp_0 = tmp_1 instanceof RecomposeScopeImpl;
             } else {
               tmp_0 = false;
@@ -5721,7 +5721,7 @@
     return function (composition) {
       var tmp;
       var tmp_0;
-      if (this$0.l13_1 === $token ? $instances.equals(this$0.m13_1) : false) {
+      if (this$0.n13_1 === $token ? $instances.equals(this$0.o13_1) : false) {
         tmp_0 = composition instanceof CompositionImpl;
       } else {
         tmp_0 = false;
@@ -5731,7 +5731,7 @@
         var this_0 = $instances;
         $l$block: {
           // Inline function 'androidx.collection.ObjectIntMap.forEachIndexed' call
-          var m = this_0.i10_1;
+          var m = this_0.k10_1;
           var lastIndex = m.length - 2 | 0;
           var inductionVariable = 0;
           if (inductionVariable <= lastIndex)
@@ -5753,14 +5753,14 @@
                       var index = (i << 3) + j | 0;
                       // Inline function 'androidx.collection.MutableObjectIntMap.removeIf.<anonymous>' call
                       // Inline function 'androidx.compose.runtime.RecomposeScopeImpl.end.<anonymous>.<anonymous>.<anonymous>' call
-                      var tmp_1 = this_0.j10_1[index];
+                      var tmp_1 = this_0.l10_1[index];
                       var instance = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
                       // Inline function 'kotlin.also' call
-                      var this_2 = !(this_0.k10_1[index] === $token);
+                      var this_2 = !(this_0.m10_1[index] === $token);
                       // Inline function 'kotlin.contracts.contract' call
                       // Inline function 'androidx.compose.runtime.RecomposeScopeImpl.end.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
                       if (this_2) {
-                        composition.o1k(instance, this$0);
+                        composition.q1k(instance, this$0);
                         var tmp0_safe_receiver = isInterface(instance, DerivedState) ? instance : null;
                         if (tmp0_safe_receiver == null)
                           null;
@@ -5768,8 +5768,8 @@
                           // Inline function 'kotlin.let' call
                           // Inline function 'kotlin.contracts.contract' call
                           // Inline function 'androidx.compose.runtime.RecomposeScopeImpl.end.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-                          composition.p1k(tmp0_safe_receiver);
-                          var tmp0_safe_receiver_0 = this$0.n13_1;
+                          composition.r1k(tmp0_safe_receiver);
+                          var tmp0_safe_receiver_0 = this$0.p13_1;
                           var tmp_2;
                           if (tmp0_safe_receiver_0 == null) {
                             tmp_2 = null;
@@ -5779,7 +5779,7 @@
                             tmp0_safe_receiver_0.m2(tmp0_safe_receiver);
                             var tmp_3;
                             if (tmp0_safe_receiver_0.l() === 0) {
-                              this$0.n13_1 = null;
+                              this$0.p13_1 = null;
                               tmp_3 = Unit_instance;
                             }
                             tmp_2 = Unit_instance;
@@ -5787,7 +5787,7 @@
                         }
                       }
                       if (this_2) {
-                        this_0.u10(index);
+                        this_0.w10(index);
                       }
                     }
                     slot = slot.mc(8);
@@ -5802,7 +5802,7 @@
         }
         var tmp_4;
         if ($instances.l() === 0) {
-          this$0.m13_1 = null;
+          this$0.o13_1 = null;
           tmp_4 = Unit_instance;
         }
         tmp = tmp_4;
@@ -5811,78 +5811,78 @@
     };
   }
   function RecomposeScopeImpl(owner) {
-    this.g13_1 = 0;
-    this.h13_1 = owner;
-    this.i13_1 = null;
-    this.j13_1 = null;
+    this.i13_1 = 0;
+    this.j13_1 = owner;
     this.k13_1 = null;
-    this.l13_1 = 0;
+    this.l13_1 = null;
     this.m13_1 = null;
-    this.n13_1 = null;
+    this.n13_1 = 0;
+    this.o13_1 = null;
+    this.p13_1 = null;
   }
-  protoOf(RecomposeScopeImpl).u1i = function () {
+  protoOf(RecomposeScopeImpl).w1i = function () {
     var tmp;
-    if (!(this.h13_1 == null)) {
-      var tmp0_safe_receiver = this.i13_1;
-      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.u1i();
+    if (!(this.j13_1 == null)) {
+      var tmp0_safe_receiver = this.k13_1;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.w1i();
       tmp = tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
     } else {
       tmp = false;
     }
     return tmp;
   };
+  protoOf(RecomposeScopeImpl).o1k = function () {
+    return !(this.l13_1 == null);
+  };
+  protoOf(RecomposeScopeImpl).u1g = function (value) {
+    if (value) {
+      this.i13_1 = this.i13_1 | 1;
+    } else {
+      this.i13_1 = this.i13_1 & -2;
+    }
+  };
+  protoOf(RecomposeScopeImpl).g1a = function () {
+    return !((this.i13_1 & 1) === 0);
+  };
+  protoOf(RecomposeScopeImpl).o1e = function (value) {
+    if (value) {
+      this.i13_1 = this.i13_1 | 2;
+    } else {
+      this.i13_1 = this.i13_1 & -3;
+    }
+  };
   protoOf(RecomposeScopeImpl).m1k = function () {
-    return !(this.j13_1 == null);
+    return !((this.i13_1 & 2) === 0);
   };
-  protoOf(RecomposeScopeImpl).s1g = function (value) {
+  protoOf(RecomposeScopeImpl).f1g = function (value) {
     if (value) {
-      this.g13_1 = this.g13_1 | 1;
+      this.i13_1 = this.i13_1 | 4;
     } else {
-      this.g13_1 = this.g13_1 & -2;
+      this.i13_1 = this.i13_1 & -5;
     }
   };
-  protoOf(RecomposeScopeImpl).e1a = function () {
-    return !((this.g13_1 & 1) === 0);
+  protoOf(RecomposeScopeImpl).p1e = function () {
+    return !((this.i13_1 & 4) === 0);
   };
-  protoOf(RecomposeScopeImpl).m1e = function (value) {
+  protoOf(RecomposeScopeImpl).k1b = function (value) {
     if (value) {
-      this.g13_1 = this.g13_1 | 2;
+      this.i13_1 = this.i13_1 | 8;
     } else {
-      this.g13_1 = this.g13_1 & -3;
+      this.i13_1 = this.i13_1 & -9;
     }
   };
-  protoOf(RecomposeScopeImpl).k1k = function () {
-    return !((this.g13_1 & 2) === 0);
+  protoOf(RecomposeScopeImpl).s1e = function () {
+    return !((this.i13_1 & 8) === 0);
   };
-  protoOf(RecomposeScopeImpl).d1g = function (value) {
-    if (value) {
-      this.g13_1 = this.g13_1 | 4;
-    } else {
-      this.g13_1 = this.g13_1 & -5;
-    }
-  };
-  protoOf(RecomposeScopeImpl).n1e = function () {
-    return !((this.g13_1 & 4) === 0);
-  };
-  protoOf(RecomposeScopeImpl).i1b = function (value) {
-    if (value) {
-      this.g13_1 = this.g13_1 | 8;
-    } else {
-      this.g13_1 = this.g13_1 & -9;
-    }
-  };
-  protoOf(RecomposeScopeImpl).q1e = function () {
-    return !((this.g13_1 & 8) === 0);
-  };
-  protoOf(RecomposeScopeImpl).y1a = function (composer) {
-    var block = this.j13_1;
-    var observer = this.k13_1;
+  protoOf(RecomposeScopeImpl).a1b = function (composer) {
+    var block = this.l13_1;
+    var observer = this.m13_1;
     if (!(observer == null) ? !(block == null) : false) {
-      observer.q1m(this);
+      observer.s1m(this);
       try {
         block(composer, 1);
       }finally {
-        observer.r1m(this);
+        observer.t1m(this);
       }
       return Unit_instance;
     }
@@ -5892,105 +5892,105 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(RecomposeScopeImpl).i1i = function (value) {
-    var tmp0_safe_receiver = this.h13_1;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.j1k(this, value);
+  protoOf(RecomposeScopeImpl).k1i = function (value) {
+    var tmp0_safe_receiver = this.j13_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.l1k(this, value);
     return tmp1_elvis_lhs == null ? InvalidationResult_IGNORED_getInstance() : tmp1_elvis_lhs;
   };
   protoOf(RecomposeScopeImpl).vp = function () {
-    var tmp0_safe_receiver = this.h13_1;
+    var tmp0_safe_receiver = this.j13_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.n1k(this);
+      tmp0_safe_receiver.p1k(this);
     }
-    this.h13_1 = null;
-    this.m13_1 = null;
-    this.n13_1 = null;
-    var tmp1_safe_receiver = this.k13_1;
+    this.j13_1 = null;
+    this.o13_1 = null;
+    this.p13_1 = null;
+    var tmp1_safe_receiver = this.m13_1;
     if (tmp1_safe_receiver == null)
       null;
     else {
-      tmp1_safe_receiver.s1m(this);
+      tmp1_safe_receiver.u1m(this);
     }
   };
-  protoOf(RecomposeScopeImpl).n1m = function (owner) {
-    this.h13_1 = owner;
+  protoOf(RecomposeScopeImpl).p1m = function (owner) {
+    this.j13_1 = owner;
   };
-  protoOf(RecomposeScopeImpl).i1k = function () {
-    var tmp0_safe_receiver = this.h13_1;
+  protoOf(RecomposeScopeImpl).k1k = function () {
+    var tmp0_safe_receiver = this.j13_1;
     if (tmp0_safe_receiver == null)
       null;
     else
-      tmp0_safe_receiver.j1k(this, null);
+      tmp0_safe_receiver.l1k(this, null);
   };
-  protoOf(RecomposeScopeImpl).w1k = function (block) {
-    this.j13_1 = block;
+  protoOf(RecomposeScopeImpl).y1k = function (block) {
+    this.l13_1 = block;
   };
-  protoOf(RecomposeScopeImpl).h1b = function (value) {
+  protoOf(RecomposeScopeImpl).j1b = function (value) {
     if (value) {
-      this.g13_1 = this.g13_1 | 64;
+      this.i13_1 = this.i13_1 | 64;
     } else {
-      this.g13_1 = this.g13_1 & -65;
+      this.i13_1 = this.i13_1 & -65;
     }
   };
-  protoOf(RecomposeScopeImpl).g1b = function () {
-    return !((this.g13_1 & 64) === 0);
+  protoOf(RecomposeScopeImpl).i1b = function () {
+    return !((this.i13_1 & 64) === 0);
   };
-  protoOf(RecomposeScopeImpl).e1g = function () {
-    return !((this.g13_1 & 16) === 0);
+  protoOf(RecomposeScopeImpl).g1g = function () {
+    return !((this.i13_1 & 16) === 0);
   };
-  protoOf(RecomposeScopeImpl).j1b = function (token) {
-    this.l13_1 = token;
+  protoOf(RecomposeScopeImpl).l1b = function (token) {
+    this.n13_1 = token;
     _set_skipped__p8q2c5(this, false);
   };
-  protoOf(RecomposeScopeImpl).y1f = function () {
+  protoOf(RecomposeScopeImpl).a1g = function () {
     _set_skipped__p8q2c5(this, true);
   };
-  protoOf(RecomposeScopeImpl).v1j = function (instance) {
+  protoOf(RecomposeScopeImpl).x1j = function (instance) {
     if (_get_rereading__g2iruw(this))
       return false;
-    var tmp0_elvis_lhs = this.m13_1;
+    var tmp0_elvis_lhs = this.o13_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.also' call
       var this_0 = new MutableObjectIntMap();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.RecomposeScopeImpl.recordRead.<anonymous>' call
-      this.m13_1 = this_0;
+      this.o13_1 = this_0;
       tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
     }
-    var token = tmp.t10(instance, this.l13_1, -1);
-    if (token === this.l13_1) {
+    var token = tmp.v10(instance, this.n13_1, -1);
+    if (token === this.n13_1) {
       return true;
     }
     if (isInterface(instance, DerivedState)) {
-      var tmp1_elvis_lhs = this.n13_1;
+      var tmp1_elvis_lhs = this.p13_1;
       var tmp_0;
       if (tmp1_elvis_lhs == null) {
         // Inline function 'kotlin.also' call
         var this_1 = new MutableScatterMap();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.RecomposeScopeImpl.recordRead.<anonymous>' call
-        this.n13_1 = this_1;
+        this.p13_1 = this_1;
         tmp_0 = this_1;
       } else {
         tmp_0 = tmp1_elvis_lhs;
       }
       var tracked = tmp_0;
-      tracked.h11(instance, instance.z1j().t1m());
+      tracked.j11(instance, instance.b1k().v1m());
     }
     return false;
   };
-  protoOf(RecomposeScopeImpl).h1i = function () {
-    return !(this.n13_1 == null);
+  protoOf(RecomposeScopeImpl).j1i = function () {
+    return !(this.p13_1 == null);
   };
-  protoOf(RecomposeScopeImpl).o13 = function (instances) {
+  protoOf(RecomposeScopeImpl).q13 = function (instances) {
     if (instances == null)
       return true;
-    var tmp0_elvis_lhs = this.n13_1;
+    var tmp0_elvis_lhs = this.p13_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return true;
@@ -5999,7 +5999,7 @@
     }
     var trackedDependencies = tmp;
     var tmp_0;
-    if (instances.v1f()) {
+    if (instances.x1f()) {
       var tmp$ret$0;
       $l$block_0: {
         // Inline function 'kotlin.collections.all' call
@@ -6024,9 +6024,9 @@
             // Inline function 'androidx.compose.runtime.RecomposeScopeImpl.isInvalidFor.<anonymous>.<anonymous>' call
             if (!isInterface(element, DerivedState))
               THROW_CCE();
-            var tmp0_elvis_lhs_0 = element.a1l();
+            var tmp0_elvis_lhs_0 = element.c1l();
             var policy = tmp0_elvis_lhs_0 == null ? structuralEqualityPolicy() : tmp0_elvis_lhs_0;
-            tmp_2 = policy.u1m(element.z1j().t1m(), trackedDependencies.u2(element));
+            tmp_2 = policy.w1m(element.b1k().v1m(), trackedDependencies.u2(element));
           } else {
             tmp_2 = false;
           }
@@ -6045,15 +6045,15 @@
       return false;
     return true;
   };
-  protoOf(RecomposeScopeImpl).x1a = function () {
-    var tmp0_safe_receiver = this.h13_1;
+  protoOf(RecomposeScopeImpl).z1a = function () {
+    var tmp0_safe_receiver = this.j13_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.RecomposeScopeImpl.rereadTrackedInstances.<anonymous>' call
-      var tmp0_safe_receiver_0 = this.m13_1;
+      var tmp0_safe_receiver_0 = this.o13_1;
       var tmp;
       if (tmp0_safe_receiver_0 == null) {
         tmp = null;
@@ -6063,12 +6063,12 @@
         _set_rereading__pnqtpo(this, true);
         var tmp_0;
         try {
-          var k = tmp0_safe_receiver_0.j10_1;
-          var v = tmp0_safe_receiver_0.k10_1;
+          var k = tmp0_safe_receiver_0.l10_1;
+          var v = tmp0_safe_receiver_0.m10_1;
           var tmp$ret$2;
           $l$block: {
             // Inline function 'androidx.collection.ObjectIntMap.forEachIndexed' call
-            var m = tmp0_safe_receiver_0.i10_1;
+            var m = tmp0_safe_receiver_0.k10_1;
             var lastIndex = m.length - 2 | 0;
             var inductionVariable = 0;
             if (inductionVariable <= lastIndex)
@@ -6093,7 +6093,7 @@
                         var tmp_1 = k[index];
                         var value = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
                         v[index];
-                        tmp0_safe_receiver.u1j(value);
+                        tmp0_safe_receiver.w1j(value);
                       }
                       slot = slot.mc(8);
                     }
@@ -6114,8 +6114,8 @@
       }
     }
   };
-  protoOf(RecomposeScopeImpl).b1g = function (token) {
-    var tmp0_safe_receiver = this.m13_1;
+  protoOf(RecomposeScopeImpl).d1g = function (token) {
+    var tmp0_safe_receiver = this.o13_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -6125,16 +6125,16 @@
       // Inline function 'androidx.compose.runtime.RecomposeScopeImpl.end.<anonymous>' call
       var tmp_0;
       var tmp_1;
-      if (!this.e1g()) {
+      if (!this.g1g()) {
         var tmp$ret$3;
         $l$block: {
           // Inline function 'androidx.collection.ObjectIntMap.any' call
           // Inline function 'androidx.collection.ObjectIntMap.forEach' call
-          var k = tmp0_safe_receiver.j10_1;
-          var v = tmp0_safe_receiver.k10_1;
+          var k = tmp0_safe_receiver.l10_1;
+          var v = tmp0_safe_receiver.m10_1;
           $l$block_0: {
             // Inline function 'androidx.collection.ObjectIntMap.forEachIndexed' call
-            var m = tmp0_safe_receiver.i10_1;
+            var m = tmp0_safe_receiver.k10_1;
             var lastIndex = m.length - 2 | 0;
             var inductionVariable = 0;
             if (inductionVariable <= lastIndex)
@@ -6226,17 +6226,17 @@
   }
   function addRunning($this, info) {
     $l$loop: while (true) {
-      var old = $this.v1m_1.o2();
+      var old = $this.x1m_1.o2();
       var new_0 = old.y(info);
-      if (old === new_0 ? true : $this.v1m_1.lv(old, new_0))
+      if (old === new_0 ? true : $this.x1m_1.lv(old, new_0))
         break $l$loop;
     }
   }
   function removeRunning($this, info) {
     $l$loop: while (true) {
-      var old = $this.v1m_1.o2();
+      var old = $this.x1m_1.o2();
       var new_0 = old.z(info);
-      if (old === new_0 ? true : $this.v1m_1.lv(old, new_0))
+      if (old === new_0 ? true : $this.x1m_1.lv(old, new_0))
         break $l$loop;
     }
   }
@@ -6253,9 +6253,9 @@
     toInsert.f1();
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this$0.z1m_1;
+    this$0.b1n_1;
     // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
-    var this_0 = this$0.h1n_1;
+    var this_0 = this$0.j1n_1;
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
     var last = this_0.l() - 1 | 0;
@@ -6269,7 +6269,7 @@
         toInsert.y(item);
       }
        while (inductionVariable <= last);
-    this$0.h1n_1.f1();
+    this$0.j1n_1.f1();
   }
   function Recomposer$runRecomposeAndApplyChanges$slambda$lambda(this$0, $toRecompose, $modifiedValues, $alreadyComposed, $toInsert, $toApply, $toLateApply, $toComplete) {
     return function (frameTime) {
@@ -6278,13 +6278,13 @@
         $l$block: {
           // Inline function 'androidx.compose.runtime.trace' call
           var sectionName = 'Recomposer:animation';
-          var token = Trace_instance.k1c(sectionName);
+          var token = Trace_instance.m1c(sectionName);
           try {
-            this$0.y1m_1.x12(frameTime);
-            Companion_instance_12.v1n();
+            this$0.a1n_1.z12(frameTime);
+            Companion_instance_12.x1n();
             break $l$block;
           }finally {
-            Trace_instance.z1c(token);
+            Trace_instance.b1d(token);
           }
         }
         tmp = Unit_instance;
@@ -6292,14 +6292,14 @@
       $l$block_0: {
         // Inline function 'androidx.compose.runtime.trace' call
         var sectionName_0 = 'Recomposer:recompose';
-        var token_0 = Trace_instance.k1c(sectionName_0);
+        var token_0 = Trace_instance.m1c(sectionName_0);
         try {
           recordComposerModifications(this$0);
           // Inline function 'androidx.compose.runtime.synchronized' call
           // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-          this$0.z1m_1;
+          this$0.b1n_1;
           // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
-          var this_0 = this$0.f1n_1;
+          var this_0 = this$0.h1n_1;
           // Inline function 'kotlin.contracts.contract' call
           var inductionVariable = 0;
           var last = this_0.l() - 1 | 0;
@@ -6313,7 +6313,7 @@
               $toRecompose.y(item);
             }
              while (inductionVariable <= last);
-          this$0.f1n_1.f1();
+          this$0.h1n_1.f1();
           $modifiedValues.f1();
           $alreadyComposed.f1();
           $l$loop: while (true) {
@@ -6340,7 +6340,7 @@
                   inductionVariable_0 = inductionVariable_0 + 1 | 0;
                   var item_0 = this_1.m(index_0);
                   // Inline function 'androidx.compose.runtime.Recomposer.runRecomposeAndApplyChanges.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-                  $alreadyComposed.f1h(item_0);
+                  $alreadyComposed.h1h(item_0);
                   var tmp0_safe_receiver = performRecompose(this$0, item_0, $modifiedValues);
                   if (tmp0_safe_receiver == null)
                     null;
@@ -6364,10 +6364,10 @@
             finally {
               $toRecompose.f1();
             }
-            if ($modifiedValues.v1f()) {
+            if ($modifiedValues.x1f()) {
               // Inline function 'androidx.compose.runtime.synchronized' call
               // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-              this$0.z1m_1;
+              this$0.b1n_1;
               var this_2 = _get_knownCompositions__y8veaj(this$0);
               // Inline function 'kotlin.contracts.contract' call
               var inductionVariable_1 = 0;
@@ -6379,7 +6379,7 @@
                   inductionVariable_1 = inductionVariable_1 + 1 | 0;
                   var item_1 = this_2.m(index_1);
                   // Inline function 'androidx.compose.runtime.Recomposer.runRecomposeAndApplyChanges.<anonymous>.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-                  if (!$alreadyComposed.w1n(item_1) ? item_1.t1j($modifiedValues) : false) {
+                  if (!$alreadyComposed.y1n(item_1) ? item_1.v1j($modifiedValues) : false) {
                     // Inline function 'kotlin.collections.plusAssign' call
                     $toRecompose.y(item_1);
                   }
@@ -6417,7 +6417,7 @@
           // Inline function 'kotlin.collections.isNotEmpty' call
           if (!$toApply.s()) {
             var tmp0_this = this$0;
-            tmp0_this.x1m_1 = tmp0_this.x1m_1.ic();
+            tmp0_this.z1m_1 = tmp0_this.z1m_1.ic();
             try {
               // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
               var this_4 = $toApply;
@@ -6444,7 +6444,7 @@
                   inductionVariable_3 = inductionVariable_3 + 1 | 0;
                   var item_3 = this_5.m(index_3);
                   // Inline function 'androidx.compose.runtime.Recomposer.runRecomposeAndApplyChanges.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-                  item_3.f1k();
+                  item_3.h1k();
                 }
                  while (inductionVariable_3 <= last_3);
             } catch ($p) {
@@ -6473,7 +6473,7 @@
               while (tmp0_iterator.b1()) {
                 var element = tmp0_iterator.d1();
                 // Inline function 'androidx.compose.runtime.Recomposer.runRecomposeAndApplyChanges.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-                element.g1k();
+                element.i1k();
               }
             } catch ($p) {
               if ($p instanceof Exception) {
@@ -6497,7 +6497,7 @@
               while (tmp0_iterator_0.b1()) {
                 var element_0 = tmp0_iterator_0.d1();
                 // Inline function 'androidx.compose.runtime.Recomposer.runRecomposeAndApplyChanges.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
-                element_0.o1e();
+                element_0.q1e();
               }
             } catch ($p) {
               if ($p instanceof Exception) {
@@ -6515,16 +6515,16 @@
           }
           // Inline function 'androidx.compose.runtime.synchronized' call
           // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-          this$0.z1m_1;
+          this$0.b1n_1;
           // Inline function 'androidx.compose.runtime.Recomposer.runRecomposeAndApplyChanges.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
           deriveStateLocked(this$0);
-          Companion_instance_12.x1n();
+          Companion_instance_12.z1n();
           $alreadyComposed.f1();
           $modifiedValues.f1();
-          this$0.l1n_1 = null;
+          this$0.n1n_1 = null;
           break $l$block_0;
         }finally {
-          Trace_instance.z1c(token_0);
+          Trace_instance.b1d(token_0);
         }
       }
       return Unit_instance;
@@ -6534,17 +6534,17 @@
     return function (changed, _anonymous_parameter_1__qggqgd) {
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      this$0.z1m_1;
+      this$0.b1n_1;
       // Inline function 'androidx.compose.runtime.Recomposer.recompositionRunner.<anonymous>.<anonymous>.<anonymous>' call
       var tmp;
-      if (this$0.r1n_1.o2().ua(State_Idle_getInstance()) >= 0) {
+      if (this$0.t1n_1.o2().ua(State_Idle_getInstance()) >= 0) {
         // Inline function 'androidx.compose.runtime.collection.fastForEach' call
         if (changed instanceof IdentityArraySet) {
           // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
           // Inline function 'kotlin.contracts.contract' call
-          var values = changed.i1c_1;
+          var values = changed.k1c_1;
           var inductionVariable = 0;
-          var last = changed.h1c_1;
+          var last = changed.j1c_1;
           if (inductionVariable < last)
             do {
               var i = inductionVariable;
@@ -6557,14 +6557,14 @@
                 if (it instanceof StateObjectImpl) {
                   // Inline function 'androidx.compose.runtime.snapshots.Companion.Composition' call
                   var tmp$ret$0 = _ReaderKind___init__impl__jqeebu(1);
-                  tmp_1 = !it.y1n(tmp$ret$0);
+                  tmp_1 = !it.a1o(tmp$ret$0);
                 } else {
                   tmp_1 = false;
                 }
                 if (tmp_1) {
                   break $l$block;
                 }
-                this$0.e1n_1.f1h(it);
+                this$0.g1n_1.h1h(it);
               }
             }
              while (inductionVariable < last);
@@ -6579,14 +6579,14 @@
               if (element instanceof StateObjectImpl) {
                 // Inline function 'androidx.compose.runtime.snapshots.Companion.Composition' call
                 var tmp$ret$2 = _ReaderKind___init__impl__jqeebu(1);
-                tmp_2 = !element.y1n(tmp$ret$2);
+                tmp_2 = !element.a1o(tmp$ret$2);
               } else {
                 tmp_2 = false;
               }
               if (tmp_2) {
                 break $l$block_0;
               }
-              this$0.e1n_1.f1h(element);
+              this$0.g1n_1.h1h(element);
             }
           }
         }
@@ -6607,8 +6607,8 @@
     };
   }
   function Recomposer$recompositionRunner$slambda$slambda($block, $parentFrameClock, resultContinuation) {
-    this.h1o_1 = $block;
-    this.i1o_1 = $parentFrameClock;
+    this.j1o_1 = $block;
+    this.k1o_1 = $parentFrameClock;
     CoroutineImpl.call(this, resultContinuation);
   }
   protoOf(Recomposer$recompositionRunner$slambda$slambda).az = function ($this$coroutineScope, $completion) {
@@ -6629,7 +6629,7 @@
           case 0:
             this.bd_1 = 2;
             this.ad_1 = 1;
-            suspendResult = this.h1o_1(this.j1o_1, this.i1o_1, this);
+            suspendResult = this.j1o_1(this.l1o_1, this.k1o_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -6652,8 +6652,8 @@
      while (true);
   };
   protoOf(Recomposer$recompositionRunner$slambda$slambda).bz = function ($this$coroutineScope, completion) {
-    var i = new Recomposer$recompositionRunner$slambda$slambda(this.h1o_1, this.i1o_1, completion);
-    i.j1o_1 = $this$coroutineScope;
+    var i = new Recomposer$recompositionRunner$slambda$slambda(this.j1o_1, this.k1o_1, completion);
+    i.l1o_1 = $this$coroutineScope;
     return i;
   };
   function Recomposer$recompositionRunner$slambda$slambda_0($block, $parentFrameClock, resultContinuation) {
@@ -6668,15 +6668,15 @@
     Enum.call(this, name, ordinal);
   }
   function _get_knownCompositions__y8veaj($this) {
-    var tmp0_elvis_lhs = $this.d1n_1;
+    var tmp0_elvis_lhs = $this.f1n_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.run' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.Recomposer.<get-knownCompositions>.<anonymous>' call
-      var compositions = $this.c1n_1;
+      var compositions = $this.e1n_1;
       var newCache = compositions.s() ? emptyList() : ArrayList_init_$Create$_1(compositions);
-      $this.d1n_1 = newCache;
+      $this.f1n_1 = newCache;
       tmp = newCache;
     } else {
       tmp = tmp0_elvis_lhs;
@@ -6684,39 +6684,39 @@
     return tmp;
   }
   function _get_hasBroadcastFrameClockAwaitersLocked__7l4pm1($this) {
-    return !$this.q1n_1 ? $this.y1m_1.w12() : false;
+    return !$this.s1n_1 ? $this.a1n_1.y12() : false;
   }
   function _get_hasBroadcastFrameClockAwaiters__y6inql($this) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.z1m_1;
+    $this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.<get-hasBroadcastFrameClockAwaiters>.<anonymous>' call
     return _get_hasBroadcastFrameClockAwaitersLocked__7l4pm1($this);
   }
   function deriveStateLocked($this) {
-    if ($this.r1n_1.o2().ua(State_ShuttingDown_getInstance()) <= 0) {
+    if ($this.t1n_1.o2().ua(State_ShuttingDown_getInstance()) <= 0) {
       clearKnownCompositionsLocked($this);
-      $this.e1n_1 = new IdentityArraySet();
-      $this.f1n_1.f1();
-      $this.g1n_1.f1();
+      $this.g1n_1 = new IdentityArraySet();
       $this.h1n_1.f1();
-      $this.k1n_1 = null;
-      var tmp0_safe_receiver = $this.m1n_1;
+      $this.i1n_1.f1();
+      $this.j1n_1.f1();
+      $this.m1n_1 = null;
+      var tmp0_safe_receiver = $this.o1n_1;
       if (tmp0_safe_receiver == null)
         null;
       else
         tmp0_safe_receiver.bn();
-      $this.m1n_1 = null;
-      $this.p1n_1 = null;
+      $this.o1n_1 = null;
+      $this.r1n_1 = null;
       return null;
     }
     var tmp;
-    if (!($this.p1n_1 == null)) {
+    if (!($this.r1n_1 == null)) {
       tmp = State_Inactive_getInstance();
     } else {
-      if ($this.a1n_1 == null) {
-        $this.e1n_1 = new IdentityArraySet();
-        $this.f1n_1.f1();
+      if ($this.c1n_1 == null) {
+        $this.g1n_1 = new IdentityArraySet();
+        $this.h1n_1.f1();
         tmp = _get_hasBroadcastFrameClockAwaitersLocked__7l4pm1($this) ? State_InactivePendingWork_getInstance() : State_Inactive_getInstance();
       } else {
         var tmp_0;
@@ -6725,27 +6725,27 @@
         var tmp_3;
         var tmp_4;
         // Inline function 'kotlin.collections.isNotEmpty' call
-        if (!$this.f1n_1.s()) {
+        if (!$this.h1n_1.s()) {
           tmp_4 = true;
         } else {
-          tmp_4 = $this.e1n_1.v1f();
+          tmp_4 = $this.g1n_1.x1f();
         }
         if (tmp_4) {
           tmp_3 = true;
         } else {
           // Inline function 'kotlin.collections.isNotEmpty' call
-          tmp_3 = !$this.g1n_1.s();
+          tmp_3 = !$this.i1n_1.s();
         }
         if (tmp_3) {
           tmp_2 = true;
         } else {
           // Inline function 'kotlin.collections.isNotEmpty' call
-          tmp_2 = !$this.h1n_1.s();
+          tmp_2 = !$this.j1n_1.s();
         }
         if (tmp_2) {
           tmp_1 = true;
         } else {
-          tmp_1 = $this.n1n_1 > 0;
+          tmp_1 = $this.p1n_1 > 0;
         }
         if (tmp_1) {
           tmp_0 = true;
@@ -6760,14 +6760,14 @@
       }
     }
     var newState = tmp;
-    $this.r1n_1.kv(newState);
+    $this.t1n_1.kv(newState);
     var tmp_5;
     if (newState.equals(State_PendingWork_getInstance())) {
       // Inline function 'kotlin.also' call
-      var this_0 = $this.m1n_1;
+      var this_0 = $this.o1n_1;
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.Recomposer.deriveStateLocked.<anonymous>' call
-      $this.m1n_1 = null;
+      $this.o1n_1 = null;
       tmp_5 = this_0;
     } else {
       tmp_5 = null;
@@ -6778,15 +6778,15 @@
     var tmp;
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.z1m_1;
+    $this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.<get-shouldKeepRecomposing>.<anonymous>' call
-    if (!$this.o1n_1) {
+    if (!$this.q1n_1) {
       tmp = true;
     } else {
       var tmp$ret$4;
       $l$block: {
         // Inline function 'kotlin.sequences.any' call
-        var tmp0_iterator = $this.s1n_1.nq().n();
+        var tmp0_iterator = $this.u1n_1.nq().n();
         while (tmp0_iterator.b1()) {
           var element = tmp0_iterator.d1();
           // Inline function 'androidx.compose.runtime.Recomposer.<get-shouldKeepRecomposing>.<anonymous>' call
@@ -6802,28 +6802,28 @@
     return tmp;
   }
   function RecomposerInfoImpl($outer) {
-    this.k1o_1 = $outer;
+    this.m1o_1 = $outer;
   }
   function RecomposerErrorState(recoverable, cause) {
-    this.l1o_1 = recoverable;
-    this.m1o_1 = cause;
+    this.n1o_1 = recoverable;
+    this.o1o_1 = cause;
   }
   function recordComposerModifications($this) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.z1m_1;
+    $this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.recordComposerModifications.<anonymous>' call
-    if ($this.e1n_1.s())
+    if ($this.g1n_1.s())
       return _get_hasFrameWorkLocked__1gtyf7($this);
     // Inline function 'kotlin.also' call
-    var this_0 = $this.e1n_1;
+    var this_0 = $this.g1n_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.Recomposer.recordComposerModifications.<anonymous>.<anonymous>' call
-    $this.e1n_1 = new IdentityArraySet();
+    $this.g1n_1 = new IdentityArraySet();
     var changes = this_0;
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.z1m_1;
+    $this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.recordComposerModifications.<anonymous>' call
     var compositions = _get_knownCompositions__y8veaj($this);
     var complete = false;
@@ -6842,26 +6842,26 @@
             inductionVariable = inductionVariable + 1 | 0;
             var item = compositions.m(index);
             // Inline function 'androidx.compose.runtime.Recomposer.recordComposerModifications.<anonymous>.<anonymous>' call
-            item.r1j(changes);
-            if ($this.r1n_1.o2().ua(State_ShuttingDown_getInstance()) <= 0) {
+            item.t1j(changes);
+            if ($this.t1n_1.o2().ua(State_ShuttingDown_getInstance()) <= 0) {
               break $l$block;
             }
           }
            while (inductionVariable <= last);
       }
-      $this.e1n_1 = new IdentityArraySet();
+      $this.g1n_1 = new IdentityArraySet();
       complete = true;
     }finally {
       if (!complete) {
         // Inline function 'androidx.compose.runtime.synchronized' call
         // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-        $this.z1m_1;
-        $this.e1n_1.n1o(changes);
+        $this.b1n_1;
+        $this.g1n_1.p1o(changes);
       }
     }
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.z1m_1;
+    $this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.recordComposerModifications.<anonymous>' call
     if (!(deriveStateLocked($this) == null)) {
       // Inline function 'kotlin.error' call
@@ -6873,9 +6873,9 @@
   function registerRunnerJob($this, callingJob) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.z1m_1;
+    $this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.registerRunnerJob.<anonymous>' call
-    var tmp0_safe_receiver = $this.b1n_1;
+    var tmp0_safe_receiver = $this.d1n_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
@@ -6883,22 +6883,22 @@
       // Inline function 'kotlin.contracts.contract' call
       throw tmp0_safe_receiver;
     }
-    if ($this.r1n_1.o2().ua(State_ShuttingDown_getInstance()) <= 0) {
+    if ($this.t1n_1.o2().ua(State_ShuttingDown_getInstance()) <= 0) {
       // Inline function 'kotlin.error' call
       var message = 'Recomposer shut down';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    if (!($this.a1n_1 == null)) {
+    if (!($this.c1n_1 == null)) {
       // Inline function 'kotlin.error' call
       var message_0 = 'Recomposer already running';
       throw IllegalStateException_init_$Create$(toString(message_0));
     }
-    $this.a1n_1 = callingJob;
+    $this.c1n_1 = callingJob;
     deriveStateLocked($this);
   }
   function processCompositionError($this, e, failedInitialComposition, recoverable) {
     var tmp;
-    if (Companion_getInstance_3().w1m_1.lq()) {
+    if (Companion_getInstance_3().y1m_1.lq()) {
       tmp = !(e instanceof ComposeRuntimeError);
     } else {
       tmp = false;
@@ -6906,18 +6906,18 @@
     if (tmp) {
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      $this.z1m_1;
+      $this.b1n_1;
       // Inline function 'androidx.compose.runtime.Recomposer.processCompositionError.<anonymous>' call
       logError('Error was captured in composition while live edit was enabled.', e);
-      $this.g1n_1.f1();
-      $this.f1n_1.f1();
-      $this.e1n_1 = new IdentityArraySet();
-      $this.h1n_1.f1();
       $this.i1n_1.f1();
+      $this.h1n_1.f1();
+      $this.g1n_1 = new IdentityArraySet();
       $this.j1n_1.f1();
-      $this.p1n_1 = new RecomposerErrorState(recoverable, e);
+      $this.k1n_1.f1();
+      $this.l1n_1.f1();
+      $this.r1n_1 = new RecomposerErrorState(recoverable, e);
       if (!(failedInitialComposition == null)) {
-        var tmp0_elvis_lhs = $this.k1n_1;
+        var tmp0_elvis_lhs = $this.m1n_1;
         var tmp_0;
         if (tmp0_elvis_lhs == null) {
           // Inline function 'kotlin.also' call
@@ -6925,7 +6925,7 @@
           var this_0 = ArrayList_init_$Create$();
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'androidx.compose.runtime.Recomposer.processCompositionError.<anonymous>.<anonymous>' call
-          $this.k1n_1 = this_0;
+          $this.m1n_1 = this_0;
           tmp_0 = this_0;
         } else {
           tmp_0 = tmp0_elvis_lhs;
@@ -6941,14 +6941,14 @@
     } else {
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      $this.z1m_1;
-      var errorState = $this.p1n_1;
+      $this.b1n_1;
+      var errorState = $this.r1n_1;
       var tmp_1;
       if (errorState == null) {
-        $this.p1n_1 = new RecomposerErrorState(false, e);
+        $this.r1n_1 = new RecomposerErrorState(false, e);
         tmp_1 = Unit_instance;
       } else {
-        throw errorState.m1o_1;
+        throw errorState.o1o_1;
       }
       throw e;
     }
@@ -6959,31 +6959,31 @@
     return processCompositionError($this, e, failedInitialComposition, recoverable);
   }
   function clearKnownCompositionsLocked($this) {
-    $this.c1n_1.f1();
-    $this.d1n_1 = emptyList();
+    $this.e1n_1.f1();
+    $this.f1n_1 = emptyList();
   }
   function removeKnownCompositionLocked($this, composition) {
     // Inline function 'kotlin.collections.minusAssign' call
-    $this.c1n_1.z(composition);
-    $this.d1n_1 = null;
+    $this.e1n_1.z(composition);
+    $this.f1n_1 = null;
   }
   function addKnownCompositionLocked($this, composition) {
     // Inline function 'kotlin.collections.plusAssign' call
-    $this.c1n_1.y(composition);
-    $this.d1n_1 = null;
+    $this.e1n_1.y(composition);
+    $this.f1n_1 = null;
   }
   function _get_hasSchedulingWork__b617oy($this) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.z1m_1;
+    $this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.<get-hasSchedulingWork>.<anonymous>' call
     var tmp;
     var tmp_0;
-    if ($this.e1n_1.v1f()) {
+    if ($this.g1n_1.x1f()) {
       tmp_0 = true;
     } else {
       // Inline function 'kotlin.collections.isNotEmpty' call
-      tmp_0 = !$this.f1n_1.s();
+      tmp_0 = !$this.h1n_1.s();
     }
     if (tmp_0) {
       tmp = true;
@@ -7002,19 +7002,19 @@
     // Inline function 'kotlin.js.getCoroutineContext' call
     var tmp$ret$0 = $completion.r6();
     var parentFrameClock = get_monotonicFrameClock(tmp$ret$0);
-    return withContext($this.y1m_1, Recomposer$recompositionRunner$slambda_0($this, block, parentFrameClock, null), $completion);
+    return withContext($this.a1n_1, Recomposer$recompositionRunner$slambda_0($this, block, parentFrameClock, null), $completion);
   }
   function performInitialMovableContentInserts($this, composition) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.z1m_1;
+    $this.b1n_1;
     var tmp;
     var tmp$ret$1;
     $l$block: {
       // Inline function 'androidx.compose.runtime.snapshots.fastAny' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
-      var this_0 = $this.h1n_1;
+      var this_0 = $this.j1n_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       var last = this_0.l() - 1 | 0;
@@ -7025,7 +7025,7 @@
           var item = this_0.m(index);
           // Inline function 'androidx.compose.runtime.snapshots.fastAny.<anonymous>' call
           // Inline function 'androidx.compose.runtime.Recomposer.performInitialMovableContentInserts.<anonymous>.<anonymous>' call
-          if (equals(item.r1b_1, composition)) {
+          if (equals(item.t1b_1, composition)) {
             tmp$ret$1 = true;
             break $l$block;
           }
@@ -7050,10 +7050,10 @@
   }
   function performRecompose($this, composition, modifiedValues) {
     var tmp;
-    if (composition.x1i() ? true : composition.l1j()) {
+    if (composition.z1i() ? true : composition.n1j()) {
       tmp = true;
     } else {
-      var tmp0_safe_receiver = $this.l1n_1;
+      var tmp0_safe_receiver = $this.n1n_1;
       tmp = (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q(composition)) === true;
     }
     if (tmp)
@@ -7061,21 +7061,21 @@
     var tmp_0;
     $l$block_0: {
       // Inline function 'androidx.compose.runtime.Recomposer.composing' call
-      var snapshot = Companion_instance_12.x1o(readObserverOf($this, composition), writeObserverOf($this, composition, modifiedValues));
+      var snapshot = Companion_instance_12.z1o(readObserverOf($this, composition), writeObserverOf($this, composition, modifiedValues));
       try {
         var tmp$ret$1;
         $l$block: {
           // Inline function 'androidx.compose.runtime.snapshots.Snapshot.enter' call
-          var previous = snapshot.y1o();
+          var previous = snapshot.a1p();
           try {
             // Inline function 'androidx.compose.runtime.Recomposer.performRecompose.<anonymous>' call
-            if ((modifiedValues == null ? null : modifiedValues.v1f()) === true) {
-              composition.o1g(Recomposer$performRecompose$lambda(modifiedValues, composition));
+            if ((modifiedValues == null ? null : modifiedValues.x1f()) === true) {
+              composition.q1g(Recomposer$performRecompose$lambda(modifiedValues, composition));
             }
-            tmp$ret$1 = composition.c1k();
+            tmp$ret$1 = composition.e1k();
             break $l$block;
           }finally {
-            snapshot.z1o(previous);
+            snapshot.b1p(previous);
           }
         }
         break $l$block_0;
@@ -7105,7 +7105,7 @@
         var item = references.m(index);
         // Inline function 'androidx.compose.runtime.snapshots.fastGroupBy.<anonymous>' call
         // Inline function 'androidx.compose.runtime.Recomposer.performInsertValues.<anonymous>' call
-        var key = item.r1b_1;
+        var key = item.t1b_1;
         // Inline function 'kotlin.collections.getOrPut' call
         var value = destination.u2(key);
         var tmp;
@@ -7130,18 +7130,18 @@
       var composition = tmp1_loop_parameter.n2();
       // Inline function 'kotlin.collections.component2' call
       var refs = tmp1_loop_parameter.o2();
-      runtimeCheck(!composition.x1i());
+      runtimeCheck(!composition.z1i());
       $l$block_0: {
         // Inline function 'androidx.compose.runtime.Recomposer.composing' call
-        var snapshot = Companion_instance_12.x1o(readObserverOf($this, composition), writeObserverOf($this, composition, modifiedValues));
+        var snapshot = Companion_instance_12.z1o(readObserverOf($this, composition), writeObserverOf($this, composition, modifiedValues));
         try {
           $l$block: {
             // Inline function 'androidx.compose.runtime.snapshots.Snapshot.enter' call
-            var previous = snapshot.y1o();
+            var previous = snapshot.a1p();
             try {
               // Inline function 'androidx.compose.runtime.synchronized' call
               // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-              $this.z1m_1;
+              $this.b1n_1;
               // Inline function 'androidx.compose.runtime.Recomposer.performInsertValues.<anonymous>.<anonymous>' call
               // Inline function 'androidx.compose.runtime.snapshots.fastMap' call
               // Inline function 'kotlin.contracts.contract' call
@@ -7158,15 +7158,15 @@
                   // Inline function 'androidx.compose.runtime.snapshots.fastMap.<anonymous>' call
                   // Inline function 'kotlin.collections.plusAssign' call
                   // Inline function 'androidx.compose.runtime.Recomposer.performInsertValues.<anonymous>.<anonymous>.<anonymous>' call
-                  var element = to(item_0, removeLastMultiValue($this.i1n_1, item_0.p1b_1));
+                  var element = to(item_0, removeLastMultiValue($this.k1n_1, item_0.r1b_1));
                   target.y(element);
                 }
                  while (inductionVariable_0 <= last_0);
               var pairs = target;
-              composition.d1k(pairs);
+              composition.f1k(pairs);
               break $l$block;
             }finally {
-              snapshot.z1o(previous);
+              snapshot.b1p(previous);
             }
           }
           break $l$block_0;
@@ -7180,13 +7180,13 @@
   function discardUnusedValues($this) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    $this.z1m_1;
+    $this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.discardUnusedValues.<anonymous>' call
     var tmp;
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!$this.i1n_1.s()) {
-      var references = flatten($this.i1n_1.j2());
-      $this.i1n_1.f1();
+    if (!$this.k1n_1.s()) {
+      var references = flatten($this.k1n_1.j2());
+      $this.k1n_1.f1();
       // Inline function 'androidx.compose.runtime.snapshots.fastMap' call
       // Inline function 'kotlin.contracts.contract' call
       var target = ArrayList_init_$Create$_0(references.l());
@@ -7202,12 +7202,12 @@
           // Inline function 'androidx.compose.runtime.snapshots.fastMap.<anonymous>' call
           // Inline function 'kotlin.collections.plusAssign' call
           // Inline function 'androidx.compose.runtime.Recomposer.discardUnusedValues.<anonymous>.<anonymous>' call
-          var element = to(item, $this.j1n_1.u2(item));
+          var element = to(item, $this.l1n_1.u2(item));
           target.y(element);
         }
          while (inductionVariable <= last);
       var unusedValues = target;
-      $this.j1n_1.f1();
+      $this.l1n_1.f1();
       tmp = unusedValues;
     } else {
       tmp = emptyList();
@@ -7226,7 +7226,7 @@
         var reference = item_0.z6();
         var state = item_0.a7();
         if (!(state == null)) {
-          reference.r1b_1.e1k(state);
+          reference.t1b_1.g1k(state);
         }
       }
        while (inductionVariable_0 <= last_0);
@@ -7239,7 +7239,7 @@
   }
   function applyAndCheck($this, snapshot) {
     try {
-      var applyResult = snapshot.n1p();
+      var applyResult = snapshot.p1p();
       if (applyResult instanceof Failure) {
         // Inline function 'kotlin.error' call
         var message = 'Unsupported concurrent change during composition. A state object was modified by composition as well as being modified outside composition.';
@@ -7252,7 +7252,7 @@
   function _get_hasFrameWorkLocked__1gtyf7($this) {
     var tmp;
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!$this.f1n_1.s()) {
+    if (!$this.h1n_1.s()) {
       tmp = true;
     } else {
       tmp = _get_hasBroadcastFrameClockAwaitersLocked__7l4pm1($this);
@@ -7261,8 +7261,8 @@
   }
   function Companion_2() {
     Companion_instance_3 = this;
-    this.v1m_1 = MutableStateFlow(persistentSetOf());
-    this.w1m_1 = new AtomicReference(false);
+    this.x1m_1 = MutableStateFlow(persistentSetOf());
+    this.y1m_1 = new AtomicReference(false);
   }
   var Companion_instance_3;
   function Companion_getInstance_3() {
@@ -7274,11 +7274,11 @@
     toInsert.f1();
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this$0.z1m_1;
-    var iterator = this$0.h1n_1.n();
+    this$0.b1n_1;
+    var iterator = this$0.j1n_1.n();
     while (iterator.b1()) {
       var value = iterator.d1();
-      if (equals(value.r1b_1, $composition)) {
+      if (equals(value.t1b_1, $composition)) {
         toInsert.y(value);
         iterator.c1();
       }
@@ -7288,14 +7288,14 @@
     return function () {
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      this$0.z1m_1;
+      this$0.b1n_1;
       // Inline function 'androidx.compose.runtime.Recomposer.broadcastFrameClock.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.also' call
       var this_0 = deriveStateLocked(this$0);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.Recomposer.broadcastFrameClock.<anonymous>.<anonymous>.<anonymous>' call
-      if (this$0.r1n_1.o2().ua(State_ShuttingDown_getInstance()) <= 0)
-        throw CancellationException_init_$Create$('Recomposer shutdown; frame clock awaiter will never resume', this$0.b1n_1);
+      if (this$0.t1n_1.o2().ua(State_ShuttingDown_getInstance()) <= 0)
+        throw CancellationException_init_$Create$('Recomposer shutdown; frame clock awaiter will never resume', this$0.d1n_1);
       if (this_0 == null)
         null;
       else {
@@ -7311,7 +7311,7 @@
     return function (runnerJobCause) {
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      this$0.z1m_1;
+      this$0.b1n_1;
       var tmp = this$0;
       var tmp0_safe_receiver = $throwable;
       var tmp_0;
@@ -7346,8 +7346,8 @@
         }
         tmp_0 = tmp0_safe_receiver;
       }
-      tmp.b1n_1 = tmp_0;
-      this$0.r1n_1.kv(State_ShutDown_getInstance());
+      tmp.d1n_1 = tmp_0;
+      this$0.t1n_1.kv(State_ShutDown_getInstance());
       return Unit_instance;
     };
   }
@@ -7357,22 +7357,22 @@
       var continuationToResume = null;
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      this$0.z1m_1;
+      this$0.b1n_1;
       // Inline function 'androidx.compose.runtime.Recomposer.effectJob.<anonymous>.<anonymous>.<anonymous>' call
-      var runnerJob = this$0.a1n_1;
+      var runnerJob = this$0.c1n_1;
       var tmp;
       if (!(runnerJob == null)) {
-        this$0.r1n_1.kv(State_ShuttingDown_getInstance());
-        if (!this$0.o1n_1) {
+        this$0.t1n_1.kv(State_ShuttingDown_getInstance());
+        if (!this$0.q1n_1) {
           runnerJob.wl(cancellation);
-        } else if (!(this$0.m1n_1 == null)) {
-          continuationToResume = this$0.m1n_1;
+        } else if (!(this$0.o1n_1 == null)) {
+          continuationToResume = this$0.o1n_1;
         }
-        this$0.m1n_1 = null;
+        this$0.o1n_1 = null;
         tmp = runnerJob.rl(Recomposer$effectJob$lambda$lambda(this$0, throwable));
       } else {
-        this$0.b1n_1 = cancellation;
-        this$0.r1n_1.kv(State_ShutDown_getInstance());
+        this$0.d1n_1 = cancellation;
+        this$0.t1n_1.kv(State_ShutDown_getInstance());
         tmp = Unit_instance;
       }
       var tmp0_safe_receiver = continuationToResume;
@@ -7388,18 +7388,18 @@
     };
   }
   function Recomposer$runRecomposeAndApplyChanges$slambda(this$0, resultContinuation) {
-    this.w1p_1 = this$0;
+    this.y1p_1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(Recomposer$runRecomposeAndApplyChanges$slambda).g1q = function ($this$recompositionRunner, parentFrameClock, $completion) {
-    var tmp = this.h1q($this$recompositionRunner, parentFrameClock, $completion);
+  protoOf(Recomposer$runRecomposeAndApplyChanges$slambda).i1q = function ($this$recompositionRunner, parentFrameClock, $completion) {
+    var tmp = this.j1q($this$recompositionRunner, parentFrameClock, $completion);
     tmp.cd_1 = Unit_instance;
     tmp.dd_1 = null;
     return tmp.md();
   };
   protoOf(Recomposer$runRecomposeAndApplyChanges$slambda).ai = function (p1, p2, $completion) {
     var tmp = (!(p1 == null) ? isInterface(p1, CoroutineScope_0) : false) ? p1 : THROW_CCE();
-    return this.g1q(tmp, (!(p2 == null) ? isInterface(p2, MonotonicFrameClock) : false) ? p2 : THROW_CCE(), $completion);
+    return this.i1q(tmp, (!(p2 == null) ? isInterface(p2, MonotonicFrameClock) : false) ? p2 : THROW_CCE(), $completion);
   };
   protoOf(Recomposer$runRecomposeAndApplyChanges$slambda).md = function () {
     var suspendResult = this.cd_1;
@@ -7410,34 +7410,34 @@
           case 0:
             this.bd_1 = 6;
             var tmp_0 = this;
-            tmp_0.z1p_1 = ArrayList_init_$Create$();
+            tmp_0.b1q_1 = ArrayList_init_$Create$();
             var tmp_1 = this;
-            tmp_1.a1q_1 = ArrayList_init_$Create$();
+            tmp_1.c1q_1 = ArrayList_init_$Create$();
             var tmp_2 = this;
-            tmp_2.b1q_1 = ArrayList_init_$Create$();
+            tmp_2.d1q_1 = ArrayList_init_$Create$();
             var tmp_3 = this;
-            tmp_3.c1q_1 = LinkedHashSet_init_$Create$();
+            tmp_3.e1q_1 = LinkedHashSet_init_$Create$();
             var tmp_4 = this;
-            tmp_4.d1q_1 = LinkedHashSet_init_$Create$();
-            this.e1q_1 = new IdentityArraySet();
-            this.f1q_1 = new IdentityArraySet();
+            tmp_4.f1q_1 = LinkedHashSet_init_$Create$();
+            this.g1q_1 = new IdentityArraySet();
+            this.h1q_1 = new IdentityArraySet();
             this.ad_1 = 1;
             continue $sm;
           case 1:
-            if (!_get_shouldKeepRecomposing__5j79sd(this.w1p_1)) {
+            if (!_get_shouldKeepRecomposing__5j79sd(this.y1p_1)) {
               this.ad_1 = 5;
               continue $sm;
             }
 
             this.ad_1 = 2;
-            suspendResult = awaitWorkAvailable(this.w1p_1, this);
+            suspendResult = awaitWorkAvailable(this.y1p_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 2:
-            if (!recordComposerModifications(this.w1p_1)) {
+            if (!recordComposerModifications(this.y1p_1)) {
               this.ad_1 = 1;
               continue $sm;
             } else {
@@ -7447,14 +7447,14 @@
 
           case 3:
             this.ad_1 = 4;
-            suspendResult = this.y1p_1.y12(Recomposer$runRecomposeAndApplyChanges$slambda$lambda(this.w1p_1, this.z1p_1, this.e1q_1, this.f1q_1, this.a1q_1, this.b1q_1, this.c1q_1, this.d1q_1), this);
+            suspendResult = this.a1q_1.a13(Recomposer$runRecomposeAndApplyChanges$slambda$lambda(this.y1p_1, this.b1q_1, this.g1q_1, this.h1q_1, this.c1q_1, this.d1q_1, this.e1q_1, this.f1q_1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 4:
-            discardUnusedValues(this.w1p_1);
+            discardUnusedValues(this.y1p_1);
             this.ad_1 = 1;
             continue $sm;
           case 5:
@@ -7473,24 +7473,24 @@
       }
      while (true);
   };
-  protoOf(Recomposer$runRecomposeAndApplyChanges$slambda).h1q = function ($this$recompositionRunner, parentFrameClock, completion) {
-    var i = new Recomposer$runRecomposeAndApplyChanges$slambda(this.w1p_1, completion);
-    i.x1p_1 = $this$recompositionRunner;
-    i.y1p_1 = parentFrameClock;
+  protoOf(Recomposer$runRecomposeAndApplyChanges$slambda).j1q = function ($this$recompositionRunner, parentFrameClock, completion) {
+    var i = new Recomposer$runRecomposeAndApplyChanges$slambda(this.y1p_1, completion);
+    i.z1p_1 = $this$recompositionRunner;
+    i.a1q_1 = parentFrameClock;
     return i;
   };
   function Recomposer$runRecomposeAndApplyChanges$slambda_0(this$0, resultContinuation) {
     var i = new Recomposer$runRecomposeAndApplyChanges$slambda(this$0, resultContinuation);
     var l = function ($this$recompositionRunner, parentFrameClock, $completion) {
-      return i.g1q($this$recompositionRunner, parentFrameClock, $completion);
+      return i.i1q($this$recompositionRunner, parentFrameClock, $completion);
     };
     l.$arity = 2;
     return l;
   }
   function Recomposer$recompositionRunner$slambda(this$0, $block, $parentFrameClock, resultContinuation) {
-    this.q1q_1 = this$0;
-    this.r1q_1 = $block;
-    this.s1q_1 = $parentFrameClock;
+    this.s1q_1 = this$0;
+    this.t1q_1 = $block;
+    this.u1q_1 = $parentFrameClock;
     CoroutineImpl.call(this, resultContinuation);
   }
   protoOf(Recomposer$recompositionRunner$slambda).az = function ($this$withContext, $completion) {
@@ -7510,18 +7510,18 @@
         switch (tmp) {
           case 0:
             this.bd_1 = 5;
-            this.u1q_1 = get_job(this.t1q_1.qk());
-            registerRunnerJob(this.q1q_1, this.u1q_1);
+            this.w1q_1 = get_job(this.v1q_1.qk());
+            registerRunnerJob(this.s1q_1, this.w1q_1);
             var tmp_0 = this;
             var tmp_1 = Companion_instance_12;
-            tmp_0.v1q_1 = tmp_1.x1q(Recomposer$recompositionRunner$slambda$lambda(this.q1q_1));
-            addRunning(Companion_getInstance_3(), this.q1q_1.u1n_1);
+            tmp_0.x1q_1 = tmp_1.z1q(Recomposer$recompositionRunner$slambda$lambda(this.s1q_1));
+            addRunning(Companion_getInstance_3(), this.s1q_1.w1n_1);
             this.ad_1 = 1;
             continue $sm;
           case 1:
             this.bd_1 = 4;
-            this.q1q_1.z1m_1;
-            var this_0 = _get_knownCompositions__y8veaj(this.q1q_1);
+            this.s1q_1.b1n_1;
+            var this_0 = _get_knownCompositions__y8veaj(this.s1q_1);
             var inductionVariable = 0;
             var last = this_0.l() - 1 | 0;
             if (inductionVariable <= last)
@@ -7529,43 +7529,43 @@
                 var index = inductionVariable;
                 inductionVariable = inductionVariable + 1 | 0;
                 var item = this_0.m(index);
-                item.h1k();
+                item.j1k();
               }
                while (inductionVariable <= last);
             this.ad_1 = 2;
-            suspendResult = coroutineScope(Recomposer$recompositionRunner$slambda$slambda_0(this.r1q_1, this.s1q_1, null), this);
+            suspendResult = coroutineScope(Recomposer$recompositionRunner$slambda$slambda_0(this.t1q_1, this.u1q_1, null), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
 
             continue $sm;
           case 2:
-            this.w1q_1 = suspendResult;
+            this.y1q_1 = suspendResult;
             this.bd_1 = 5;
             this.ad_1 = 3;
             continue $sm;
           case 3:
             this.bd_1 = 5;
-            this.v1q_1.fn();
-            this.q1q_1.z1m_1;
-            if (this.q1q_1.a1n_1 === this.u1q_1) {
-              this.q1q_1.a1n_1 = null;
+            this.x1q_1.fn();
+            this.s1q_1.b1n_1;
+            if (this.s1q_1.c1n_1 === this.w1q_1) {
+              this.s1q_1.c1n_1 = null;
             }
 
-            deriveStateLocked(this.q1q_1);
-            removeRunning(Companion_getInstance_3(), this.q1q_1.u1n_1);
+            deriveStateLocked(this.s1q_1);
+            removeRunning(Companion_getInstance_3(), this.s1q_1.w1n_1);
             return Unit_instance;
           case 4:
             this.bd_1 = 5;
             var t = this.dd_1;
-            this.v1q_1.fn();
-            this.q1q_1.z1m_1;
-            if (this.q1q_1.a1n_1 === this.u1q_1) {
-              this.q1q_1.a1n_1 = null;
+            this.x1q_1.fn();
+            this.s1q_1.b1n_1;
+            if (this.s1q_1.c1n_1 === this.w1q_1) {
+              this.s1q_1.c1n_1 = null;
             }
 
-            deriveStateLocked(this.q1q_1);
-            removeRunning(Companion_getInstance_3(), this.q1q_1.u1n_1);
+            deriveStateLocked(this.s1q_1);
+            removeRunning(Companion_getInstance_3(), this.s1q_1.w1n_1);
             throw t;
           case 5:
             throw this.dd_1;
@@ -7582,8 +7582,8 @@
      while (true);
   };
   protoOf(Recomposer$recompositionRunner$slambda).bz = function ($this$withContext, completion) {
-    var i = new Recomposer$recompositionRunner$slambda(this.q1q_1, this.r1q_1, this.s1q_1, completion);
-    i.t1q_1 = $this$withContext;
+    var i = new Recomposer$recompositionRunner$slambda(this.s1q_1, this.t1q_1, this.u1q_1, completion);
+    i.v1q_1 = $this$withContext;
     return i;
   };
   function Recomposer$recompositionRunner$slambda_0(this$0, $block, $parentFrameClock, resultContinuation) {
@@ -7598,9 +7598,9 @@
     return function () {
       var this_0 = $modifiedValues;
       // Inline function 'kotlin.contracts.contract' call
-      var values = this_0.i1c_1;
+      var values = this_0.k1c_1;
       var inductionVariable = 0;
-      var last = this_0.h1c_1;
+      var last = this_0.j1c_1;
       var tmp;
       if (inductionVariable < last) {
         do {
@@ -7609,7 +7609,7 @@
           // Inline function 'androidx.compose.runtime.Recomposer.performRecompose.<anonymous>.<anonymous>.<anonymous>' call
           var tmp_0 = values[i];
           var it = !(tmp_0 == null) ? tmp_0 : THROW_CCE();
-          $composition.b1k(it);
+          $composition.d1k(it);
         }
          while (inductionVariable < last);
         tmp = Unit_instance;
@@ -7619,18 +7619,18 @@
   }
   function Recomposer$readObserverOf$lambda($composition) {
     return function (value) {
-      $composition.u1j(value);
+      $composition.w1j(value);
       return Unit_instance;
     };
   }
   function Recomposer$writeObserverOf$lambda($composition, $modifiedValues) {
     return function (value) {
-      $composition.b1k(value);
+      $composition.d1k(value);
       var tmp0_safe_receiver = $modifiedValues;
       if (tmp0_safe_receiver == null)
         null;
       else
-        tmp0_safe_receiver.f1h(value);
+        tmp0_safe_receiver.h1h(value);
       return Unit_instance;
     };
   }
@@ -7660,7 +7660,7 @@
   }
   function $awaitWorkAvailableCOROUTINE$2(_this__u8e3s4, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this.w1o_1 = _this__u8e3s4;
+    this.y1o_1 = _this__u8e3s4;
   }
   protoOf($awaitWorkAvailableCOROUTINE$2).md = function () {
     var suspendResult = this.cd_1;
@@ -7670,16 +7670,16 @@
         switch (tmp) {
           case 0:
             this.bd_1 = 3;
-            if (!_get_hasSchedulingWork__b617oy(this.w1o_1)) {
+            if (!_get_hasSchedulingWork__b617oy(this.y1o_1)) {
               this.ad_1 = 1;
               var cancellable = new CancellableContinuationImpl(intercepted(this), get_MODE_CANCELLABLE());
               cancellable.mo();
-              this.w1o_1.z1m_1;
+              this.y1o_1.b1n_1;
               var tmp_0;
-              if (_get_hasSchedulingWork__b617oy(this.w1o_1)) {
+              if (_get_hasSchedulingWork__b617oy(this.y1o_1)) {
                 tmp_0 = cancellable;
               } else {
-                this.w1o_1.m1n_1 = cancellable;
+                this.y1o_1.o1n_1 = cancellable;
                 tmp_0 = null;
               }
               var tmp0_safe_receiver = tmp_0;
@@ -7720,71 +7720,71 @@
   function Recomposer(effectCoroutineContext) {
     Companion_getInstance_3();
     CompositionContext.call(this);
-    this.x1m_1 = new Long(0, 0);
+    this.z1m_1 = new Long(0, 0);
     var tmp = this;
-    tmp.y1m_1 = new BroadcastFrameClock(Recomposer$broadcastFrameClock$lambda(this));
-    this.z1m_1 = createSynchronizedObject();
-    this.a1n_1 = null;
-    this.b1n_1 = null;
+    tmp.a1n_1 = new BroadcastFrameClock(Recomposer$broadcastFrameClock$lambda(this));
+    this.b1n_1 = createSynchronizedObject();
+    this.c1n_1 = null;
+    this.d1n_1 = null;
     var tmp_0 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_0.c1n_1 = ArrayList_init_$Create$();
-    this.d1n_1 = null;
-    this.e1n_1 = new IdentityArraySet();
+    tmp_0.e1n_1 = ArrayList_init_$Create$();
+    this.f1n_1 = null;
+    this.g1n_1 = new IdentityArraySet();
     var tmp_1 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_1.f1n_1 = ArrayList_init_$Create$();
+    tmp_1.h1n_1 = ArrayList_init_$Create$();
     var tmp_2 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_2.g1n_1 = ArrayList_init_$Create$();
+    tmp_2.i1n_1 = ArrayList_init_$Create$();
     var tmp_3 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_3.h1n_1 = ArrayList_init_$Create$();
+    tmp_3.j1n_1 = ArrayList_init_$Create$();
     var tmp_4 = this;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp_4.i1n_1 = LinkedHashMap_init_$Create$();
+    tmp_4.k1n_1 = LinkedHashMap_init_$Create$();
     var tmp_5 = this;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp_5.j1n_1 = LinkedHashMap_init_$Create$();
-    this.k1n_1 = null;
-    this.l1n_1 = null;
+    tmp_5.l1n_1 = LinkedHashMap_init_$Create$();
     this.m1n_1 = null;
-    this.n1n_1 = 0;
-    this.o1n_1 = false;
-    this.p1n_1 = null;
+    this.n1n_1 = null;
+    this.o1n_1 = null;
+    this.p1n_1 = 0;
     this.q1n_1 = false;
-    this.r1n_1 = MutableStateFlow(State_Inactive_getInstance());
+    this.r1n_1 = null;
+    this.s1n_1 = false;
+    this.t1n_1 = MutableStateFlow(State_Inactive_getInstance());
     var tmp_6 = this;
     // Inline function 'kotlin.apply' call
     var this_0 = Job(effectCoroutineContext.hd(Key_instance));
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.Recomposer.effectJob.<anonymous>' call
     this_0.rl(Recomposer$effectJob$lambda(this));
-    tmp_6.s1n_1 = this_0;
-    this.t1n_1 = effectCoroutineContext.ng(this.y1m_1).ng(this.s1n_1);
-    this.u1n_1 = new RecomposerInfoImpl(this);
+    tmp_6.u1n_1 = this_0;
+    this.v1n_1 = effectCoroutineContext.ng(this.a1n_1).ng(this.u1n_1);
+    this.w1n_1 = new RecomposerInfoImpl(this);
   }
-  protoOf(Recomposer).g1e = function () {
-    return this.t1n_1;
+  protoOf(Recomposer).i1e = function () {
+    return this.v1n_1;
   };
-  protoOf(Recomposer).y1q = function ($completion) {
+  protoOf(Recomposer).a1r = function ($completion) {
     return recompositionRunner(this, Recomposer$runRecomposeAndApplyChanges$slambda_0(this, null), $completion);
   };
-  protoOf(Recomposer).d1i = function (composition, content) {
-    var composerWasComposing = composition.x1i();
+  protoOf(Recomposer).f1i = function (composition, content) {
+    var composerWasComposing = composition.z1i();
     try {
       $l$block_0: {
         // Inline function 'androidx.compose.runtime.Recomposer.composing' call
-        var snapshot = Companion_instance_12.x1o(readObserverOf(this, composition), writeObserverOf(this, composition, null));
+        var snapshot = Companion_instance_12.z1o(readObserverOf(this, composition), writeObserverOf(this, composition, null));
         try {
           $l$block: {
             // Inline function 'androidx.compose.runtime.snapshots.Snapshot.enter' call
-            var previous = snapshot.y1o();
+            var previous = snapshot.a1p();
             try {
-              composition.n1j(content);
+              composition.p1j(content);
               break $l$block;
             }finally {
-              snapshot.z1o(previous);
+              snapshot.b1p(previous);
             }
           }
           break $l$block_0;
@@ -7802,13 +7802,13 @@
       }
     }
     if (!composerWasComposing) {
-      Companion_instance_12.x1n();
+      Companion_instance_12.z1n();
     }
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.z1m_1;
+    this.b1n_1;
     var tmp;
-    if (this.r1n_1.o2().ua(State_ShuttingDown_getInstance()) > 0) {
+    if (this.t1n_1.o2().ua(State_ShuttingDown_getInstance()) > 0) {
       var tmp_0;
       if (!_get_knownCompositions__y8veaj(this).q(composition)) {
         addKnownCompositionLocked(this, composition);
@@ -7828,8 +7828,8 @@
       }
     }
     try {
-      composition.f1k();
-      composition.g1k();
+      composition.h1k();
+      composition.i1k();
     } catch ($p) {
       if ($p instanceof Exception) {
         var e_1 = $p;
@@ -7840,29 +7840,29 @@
       }
     }
     if (!composerWasComposing) {
-      Companion_instance_12.x1n();
+      Companion_instance_12.z1n();
     }
   };
-  protoOf(Recomposer).e16 = function () {
+  protoOf(Recomposer).g16 = function () {
     return 1000;
   };
-  protoOf(Recomposer).b16 = function () {
+  protoOf(Recomposer).d16 = function () {
     return false;
   };
-  protoOf(Recomposer).c16 = function () {
+  protoOf(Recomposer).e16 = function () {
     return false;
   };
-  protoOf(Recomposer).d16 = function (table) {
+  protoOf(Recomposer).f16 = function (table) {
   };
-  protoOf(Recomposer).a1j = function (composition) {
+  protoOf(Recomposer).c1j = function (composition) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.z1m_1;
+    this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.invalidate.<anonymous>' call
     var tmp;
-    if (!this.f1n_1.q(composition)) {
+    if (!this.h1n_1.q(composition)) {
       // Inline function 'kotlin.collections.plusAssign' call
-      this.f1n_1.y(composition);
+      this.h1n_1.y(composition);
       tmp = deriveStateLocked(this);
     } else {
       tmp = null;
@@ -7877,13 +7877,13 @@
       tmp0_safe_receiver.s6(tmp$ret$3);
     }
   };
-  protoOf(Recomposer).m1b = function (reference) {
+  protoOf(Recomposer).o1b = function (reference) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.z1m_1;
+    this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.insertMovableContent.<anonymous>' call
     // Inline function 'kotlin.collections.plusAssign' call
-    this.h1n_1.y(reference);
+    this.j1n_1.y(reference);
     var tmp0_safe_receiver = deriveStateLocked(this);
     if (tmp0_safe_receiver == null)
       null;
@@ -7894,25 +7894,25 @@
       tmp0_safe_receiver.s6(tmp$ret$3);
     }
   };
-  protoOf(Recomposer).u1d = function (reference) {
+  protoOf(Recomposer).w1d = function (reference) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.z1m_1;
+    this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.deletedMovableContent.<anonymous>' call
-    addMultiValue(this.i1n_1, reference.p1b_1, reference);
+    addMultiValue(this.k1n_1, reference.r1b_1, reference);
   };
-  protoOf(Recomposer).s1k = function (reference, data) {
+  protoOf(Recomposer).u1k = function (reference, data) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.z1m_1;
-    this.j1n_1.l2(reference, data);
+    this.b1n_1;
+    this.l1n_1.l2(reference, data);
   };
-  protoOf(Recomposer).t1d = function (composition) {
+  protoOf(Recomposer).v1d = function (composition) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.z1m_1;
+    this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.reportRemovedComposition.<anonymous>' call
-    var tmp0_elvis_lhs = this.l1n_1;
+    var tmp0_elvis_lhs = this.n1n_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.also' call
@@ -7920,7 +7920,7 @@
       var this_0 = LinkedHashSet_init_$Create$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.Recomposer.reportRemovedComposition.<anonymous>.<anonymous>' call
-      this.l1n_1 = this_0;
+      this.n1n_1 = this_0;
       tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
@@ -7928,12 +7928,12 @@
     var compositionsRemoved = tmp;
     compositionsRemoved.y(composition);
   };
-  protoOf(Recomposer).y1b = function (reference) {
+  protoOf(Recomposer).a1c = function (reference) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.z1m_1;
+    this.b1n_1;
     // Inline function 'androidx.compose.runtime.Recomposer.movableContentStateResolve.<anonymous>' call
-    return this.j1n_1.m2(reference);
+    return this.l1n_1.m2(reference);
   };
   function removeLastMultiValue(_this__u8e3s4, key) {
     _init_properties_Recomposer_kt__nj7w3x();
@@ -7983,8 +7983,8 @@
   function RememberObserver() {
   }
   function SlotTable() {
-    this.k15_1 = new Int32Array(0);
-    this.l15_1 = 0;
+    this.m15_1 = new Int32Array(0);
+    this.n15_1 = 0;
     var tmp = this;
     var tmp_0 = 0;
     // Inline function 'kotlin.arrayOfNulls' call
@@ -7993,63 +7993,63 @@
       tmp_1[tmp_0] = null;
       tmp_0 = tmp_0 + 1 | 0;
     }
-    tmp.m15_1 = tmp_1;
-    this.n15_1 = 0;
-    this.o15_1 = 0;
-    this.p15_1 = new SynchronizedObject();
-    this.q15_1 = false;
-    this.r15_1 = 0;
+    tmp.o15_1 = tmp_1;
+    this.p15_1 = 0;
+    this.q15_1 = 0;
+    this.r15_1 = new SynchronizedObject();
+    this.s15_1 = false;
+    this.t15_1 = 0;
     var tmp_2 = this;
     // Inline function 'kotlin.collections.arrayListOf' call
-    tmp_2.s15_1 = ArrayList_init_$Create$();
-    this.t15_1 = null;
+    tmp_2.u15_1 = ArrayList_init_$Create$();
+    this.v15_1 = null;
   }
-  protoOf(SlotTable).v1a = function () {
-    return this.l15_1 === 0;
+  protoOf(SlotTable).x1a = function () {
+    return this.n15_1 === 0;
   };
-  protoOf(SlotTable).u15 = function () {
-    if (this.q15_1) {
+  protoOf(SlotTable).w15 = function () {
+    if (this.s15_1) {
       // Inline function 'kotlin.error' call
       var message = 'Cannot read while a writer is pending';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    this.o15_1 = this.o15_1 + 1 | 0;
+    this.q15_1 = this.q15_1 + 1 | 0;
     return new SlotReader(this);
   };
-  protoOf(SlotTable).s18 = function () {
+  protoOf(SlotTable).u18 = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!!this.q15_1) {
+    if (!!this.s15_1) {
       // Inline function 'androidx.compose.runtime.SlotTable.openWriter.<anonymous>' call
       var message = 'Cannot start a writer when another writer is pending';
       composeRuntimeError(toString(message));
     }
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.o15_1 <= 0)) {
+    if (!(this.q15_1 <= 0)) {
       // Inline function 'androidx.compose.runtime.SlotTable.openWriter.<anonymous>' call
       var message_0 = 'Cannot start a writer when a reader is pending';
       composeRuntimeError(toString(message_0));
     }
-    this.q15_1 = true;
-    this.r15_1 = this.r15_1 + 1 | 0;
+    this.s15_1 = true;
+    this.t15_1 = this.t15_1 + 1 | 0;
     return new SlotWriter(this);
   };
-  protoOf(SlotTable).q19 = function (index) {
+  protoOf(SlotTable).s19 = function (index) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!!this.q15_1) {
+    if (!!this.s15_1) {
       // Inline function 'androidx.compose.runtime.SlotTable.anchor.<anonymous>' call
       var message = 'use active SlotWriter to create an anchor location instead';
       composeRuntimeError(toString(message));
     }
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(0 <= index ? index < this.l15_1 : false)) {
+    if (!(0 <= index ? index < this.n15_1 : false)) {
       // Inline function 'androidx.compose.runtime.SlotTable.anchor.<anonymous>' call
       var message_0 = 'Parameter index is out of range';
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
     // Inline function 'androidx.compose.runtime.getOrAdd' call
-    var this_0 = this.s15_1;
-    var effectiveSize = this.l15_1;
+    var this_0 = this.u15_1;
+    var effectiveSize = this.n15_1;
     var location = search$accessor$145qfty(this_0, index, effectiveSize);
     var tmp;
     if (location < 0) {
@@ -8062,114 +8062,114 @@
     }
     return tmp;
   };
-  protoOf(SlotTable).z1q = function (index) {
+  protoOf(SlotTable).b1r = function (index) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!!this.q15_1) {
+    if (!!this.s15_1) {
       // Inline function 'androidx.compose.runtime.SlotTable.tryAnchor.<anonymous>' call
       var message = 'use active SlotWriter to crate an anchor for location instead';
       composeRuntimeError(toString(message));
     }
-    return (0 <= index ? index < this.l15_1 : false) ? find(this.s15_1, index, this.l15_1) : null;
+    return (0 <= index ? index < this.n15_1 : false) ? find(this.u15_1, index, this.n15_1) : null;
   };
-  protoOf(SlotTable).w1b = function (anchor) {
+  protoOf(SlotTable).y1b = function (anchor) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!!this.q15_1) {
+    if (!!this.s15_1) {
       // Inline function 'androidx.compose.runtime.SlotTable.anchorIndex.<anonymous>' call
       var message = 'Use active SlotWriter to determine anchor location instead';
       composeRuntimeError(toString(message));
     }
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!anchor.u1i()) {
+    if (!anchor.w1i()) {
       // Inline function 'androidx.compose.runtime.SlotTable.anchorIndex.<anonymous>' call
       var message_0 = 'Anchor refers to a group that was removed';
       throw IllegalArgumentException_init_$Create$(toString(message_0));
     }
-    return anchor.t1c_1;
+    return anchor.v1c_1;
   };
-  protoOf(SlotTable).l1k = function (anchor) {
+  protoOf(SlotTable).n1k = function (anchor) {
     var tmp;
-    if (anchor.u1i()) {
+    if (anchor.w1i()) {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.SlotTable.ownsAnchor.<anonymous>' call
-      var it = search$accessor$145qfty(this.s15_1, anchor.t1c_1, this.l15_1);
-      tmp = it >= 0 ? equals(this.s15_1.m(it), anchor) : false;
+      var it = search$accessor$145qfty(this.u15_1, anchor.v1c_1, this.n15_1);
+      tmp = it >= 0 ? equals(this.u15_1.m(it), anchor) : false;
     } else {
       tmp = false;
     }
     return tmp;
   };
-  protoOf(SlotTable).y1i = function (groupIndex, anchor) {
+  protoOf(SlotTable).a1j = function (groupIndex, anchor) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!!this.q15_1) {
+    if (!!this.s15_1) {
       // Inline function 'androidx.compose.runtime.SlotTable.groupContainsAnchor.<anonymous>' call
       var message = 'Writer is active';
       composeRuntimeError(toString(message));
     }
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(0 <= groupIndex ? groupIndex < this.l15_1 : false)) {
+    if (!(0 <= groupIndex ? groupIndex < this.n15_1 : false)) {
       // Inline function 'androidx.compose.runtime.SlotTable.groupContainsAnchor.<anonymous>' call
       var message_0 = 'Invalid group index';
       composeRuntimeError(toString(message_0));
     }
     var tmp;
-    if (this.l1k(anchor)) {
-      var containsUpper = groupIndex + groupSize(this.k15_1, groupIndex) | 0;
-      var containsArg = anchor.t1c_1;
+    if (this.n1k(anchor)) {
+      var containsUpper = groupIndex + groupSize(this.m15_1, groupIndex) | 0;
+      var containsArg = anchor.v1c_1;
       tmp = groupIndex <= containsArg ? containsArg < containsUpper : false;
     } else {
       tmp = false;
     }
     return tmp;
   };
-  protoOf(SlotTable).a1r = function (reader, sourceInformationMap) {
+  protoOf(SlotTable).c1r = function (reader, sourceInformationMap) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(reader.t16_1 === this ? this.o15_1 > 0 : false)) {
+    if (!(reader.v16_1 === this ? this.q15_1 > 0 : false)) {
       // Inline function 'androidx.compose.runtime.SlotTable.close.<anonymous>' call
       var message = 'Unexpected reader close()';
       composeRuntimeError(toString(message));
     }
-    this.o15_1 = this.o15_1 - 1 | 0;
+    this.q15_1 = this.q15_1 - 1 | 0;
     if (!(sourceInformationMap == null)) {
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-      this.p15_1;
-      var thisMap = this.t15_1;
+      this.r15_1;
+      var thisMap = this.v15_1;
       var tmp;
       if (!(thisMap == null)) {
         thisMap.m3(sourceInformationMap);
         tmp = Unit_instance;
       } else {
-        this.t15_1 = sourceInformationMap;
+        this.v15_1 = sourceInformationMap;
         tmp = Unit_instance;
       }
     }
   };
-  protoOf(SlotTable).b1r = function (writer, groups, groupsSize, slots, slotsSize, anchors, sourceInformationMap) {
+  protoOf(SlotTable).d1r = function (writer, groups, groupsSize, slots, slotsSize, anchors, sourceInformationMap) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(writer.i17_1 === this ? this.q15_1 : false)) {
+    if (!(writer.k17_1 === this ? this.s15_1 : false)) {
       // Inline function 'androidx.compose.runtime.SlotTable.close.<anonymous>' call
       var message = 'Unexpected writer close()';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    this.q15_1 = false;
-    this.c1r(groups, groupsSize, slots, slotsSize, anchors, sourceInformationMap);
+    this.s15_1 = false;
+    this.e1r(groups, groupsSize, slots, slotsSize, anchors, sourceInformationMap);
   };
-  protoOf(SlotTable).c1r = function (groups, groupsSize, slots, slotsSize, anchors, sourceInformationMap) {
-    this.k15_1 = groups;
-    this.l15_1 = groupsSize;
-    this.m15_1 = slots;
-    this.n15_1 = slotsSize;
-    this.s15_1 = anchors;
-    this.t15_1 = sourceInformationMap;
+  protoOf(SlotTable).e1r = function (groups, groupsSize, slots, slotsSize, anchors, sourceInformationMap) {
+    this.m15_1 = groups;
+    this.n15_1 = groupsSize;
+    this.o15_1 = slots;
+    this.p15_1 = slotsSize;
+    this.u15_1 = anchors;
+    this.v15_1 = sourceInformationMap;
   };
-  protoOf(SlotTable).f1d = function () {
-    return this.l15_1 > 0 ? containsMark(this.k15_1, 0) : false;
+  protoOf(SlotTable).h1d = function () {
+    return this.n15_1 > 0 ? containsMark(this.m15_1, 0) : false;
   };
-  protoOf(SlotTable).d1r = function (group) {
-    var tmp0_safe_receiver = this.t15_1;
+  protoOf(SlotTable).f1r = function (group) {
+    var tmp0_safe_receiver = this.v15_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -8177,7 +8177,7 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.SlotTable.sourceInformationOf.<anonymous>' call
-      var tmp0_safe_receiver_0 = this.z1q(group);
+      var tmp0_safe_receiver_0 = this.b1r(group);
       var tmp_0;
       if (tmp0_safe_receiver_0 == null) {
         tmp_0 = null;
@@ -8191,40 +8191,40 @@
     }
     return tmp;
   };
-  protoOf(SlotTable).p1m = function (group, slotIndex) {
-    var start = slotAnchor(this.k15_1, group);
-    var end = (group + 1 | 0) < this.l15_1 ? dataAnchor(this.k15_1, group + 1 | 0) : this.m15_1.length;
+  protoOf(SlotTable).r1m = function (group, slotIndex) {
+    var start = slotAnchor(this.m15_1, group);
+    var end = (group + 1 | 0) < this.n15_1 ? dataAnchor(this.m15_1, group + 1 | 0) : this.o15_1.length;
     var len = end - start | 0;
     var tmp;
     if (0 <= slotIndex ? slotIndex < len : false) {
-      return this.m15_1[start + slotIndex | 0];
+      return this.o15_1[start + slotIndex | 0];
     } else {
-      tmp = Companion_getInstance_0().z18_1;
+      tmp = Companion_getInstance_0().b19_1;
     }
     return tmp;
   };
   protoOf(SlotTable).n = function () {
-    return new GroupIterator(this, 0, this.l15_1);
+    return new GroupIterator(this, 0, this.n15_1);
   };
   function moveGroup($this, fromWriter, fromIndex, toWriter, updateFromCursor, updateToCursor, removeSourceGroup) {
-    var groupsToMove = fromWriter.h1a(fromIndex);
+    var groupsToMove = fromWriter.j1a(fromIndex);
     var sourceGroupsEnd = fromIndex + groupsToMove | 0;
     var sourceSlotsStart = dataIndex(fromWriter, fromIndex);
     var sourceSlotsEnd = dataIndex(fromWriter, sourceGroupsEnd);
     var slotsToMove = sourceSlotsEnd - sourceSlotsStart | 0;
     var hasMarks = containsAnyGroupMarks(fromWriter, fromIndex);
     insertGroups(toWriter, groupsToMove);
-    insertSlots(toWriter, slotsToMove, toWriter.z17_1);
-    if (fromWriter.n17_1 < sourceGroupsEnd) {
+    insertSlots(toWriter, slotsToMove, toWriter.b18_1);
+    if (fromWriter.p17_1 < sourceGroupsEnd) {
       moveGroupGapTo(fromWriter, sourceGroupsEnd);
     }
-    if (fromWriter.r17_1 < sourceSlotsEnd) {
+    if (fromWriter.t17_1 < sourceSlotsEnd) {
       moveSlotGapTo(fromWriter, sourceSlotsEnd, sourceGroupsEnd);
     }
-    var groups = toWriter.j17_1;
-    var currentGroup = toWriter.z17_1;
+    var groups = toWriter.l17_1;
+    var currentGroup = toWriter.b18_1;
     // Inline function 'kotlin.collections.copyInto' call
-    var this_0 = fromWriter.j17_1;
+    var this_0 = fromWriter.l17_1;
     var destinationOffset = imul(currentGroup, 5);
     var startIndex = imul(fromIndex, 5);
     var endIndex = imul(sourceGroupsEnd, 5);
@@ -8234,12 +8234,12 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     arrayCopy(tmp, groups, destinationOffset, startIndex, endIndex);
-    var slots = toWriter.k17_1;
-    var currentSlot = toWriter.p17_1;
+    var slots = toWriter.m17_1;
+    var currentSlot = toWriter.r17_1;
     // Inline function 'kotlin.collections.copyInto' call
-    var this_1 = fromWriter.k17_1;
+    var this_1 = fromWriter.m17_1;
     arrayCopy(this_1, slots, currentSlot, sourceSlotsStart, sourceSlotsEnd);
-    var parent = toWriter.b18_1;
+    var parent = toWriter.d18_1;
     updateParentAnchor(groups, currentGroup, parent);
     var parentDelta = currentGroup - fromIndex | 0;
     var moveEnd = currentGroup + groupsToMove | 0;
@@ -8247,8 +8247,8 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.Companion.moveGroup.<anonymous>' call
     var dataIndexDelta = currentSlot - dataIndex_0(groups, toWriter, currentGroup) | 0;
-    var slotsGapOwner = toWriter.t17_1;
-    var slotsGapLen = toWriter.s17_1;
+    var slotsGapOwner = toWriter.v17_1;
+    var slotsGapLen = toWriter.u17_1;
     var slotsCapacity = slots.length;
     var inductionVariable = currentGroup;
     if (inductionVariable < moveEnd)
@@ -8266,19 +8266,19 @@
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.Companion.moveGroup.<anonymous>' call
-        var newDataAnchor = dataIndexToDataAnchor(toWriter, newDataIndex, slotsGapOwner < groupAddress ? 0 : toWriter.r17_1, slotsGapLen, slotsCapacity);
+        var newDataAnchor = dataIndexToDataAnchor(toWriter, newDataIndex, slotsGapOwner < groupAddress ? 0 : toWriter.t17_1, slotsGapLen, slotsCapacity);
         updateDataAnchor(groups, groupAddress, newDataAnchor);
         if (groupAddress === slotsGapOwner) {
           slotsGapOwner = slotsGapOwner + 1 | 0;
         }
       }
        while (inductionVariable < moveEnd);
-    toWriter.t17_1 = slotsGapOwner;
-    var startAnchors = locationOf(fromWriter.l17_1, fromIndex, fromWriter.l());
-    var endAnchors = locationOf(fromWriter.l17_1, sourceGroupsEnd, fromWriter.l());
+    toWriter.v17_1 = slotsGapOwner;
+    var startAnchors = locationOf(fromWriter.n17_1, fromIndex, fromWriter.l());
+    var endAnchors = locationOf(fromWriter.n17_1, sourceGroupsEnd, fromWriter.l());
     var tmp_0;
     if (startAnchors < endAnchors) {
-      var sourceAnchors = fromWriter.l17_1;
+      var sourceAnchors = fromWriter.n17_1;
       var anchors = ArrayList_init_$Create$_0(endAnchors - startAnchors | 0);
       var anchorDelta = currentGroup - fromIndex | 0;
       var inductionVariable_0 = startAnchors;
@@ -8287,12 +8287,12 @@
           var anchorIndex = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           var sourceAnchor = sourceAnchors.m(anchorIndex);
-          sourceAnchor.t1c_1 = sourceAnchor.t1c_1 + anchorDelta | 0;
+          sourceAnchor.v1c_1 = sourceAnchor.v1c_1 + anchorDelta | 0;
           anchors.y(sourceAnchor);
         }
          while (inductionVariable_0 < endAnchors);
-      var insertLocation = locationOf(toWriter.l17_1, toWriter.z17_1, toWriter.l());
-      toWriter.l17_1.d3(insertLocation, anchors);
+      var insertLocation = locationOf(toWriter.n17_1, toWriter.b18_1, toWriter.l());
+      toWriter.n17_1.d3(insertLocation, anchors);
       sourceAnchors.z1(startAnchors, endAnchors).f1();
       tmp_0 = anchors;
     } else {
@@ -8301,9 +8301,9 @@
     var anchors_0 = tmp_0;
     // Inline function 'kotlin.collections.isNotEmpty' call
     if (!anchors_0.s()) {
-      var sourceSourceInformationMap = fromWriter.m17_1;
+      var sourceSourceInformationMap = fromWriter.o17_1;
       if (!(sourceSourceInformationMap == null)) {
-        var destinationSourceInformation = toWriter.m17_1;
+        var destinationSourceInformation = toWriter.o17_1;
         // Inline function 'androidx.compose.runtime.snapshots.fastForEach' call
         // Inline function 'kotlin.contracts.contract' call
         var inductionVariable_1 = 0;
@@ -8325,7 +8325,7 @@
                 // Inline function 'androidx.compose.runtime.Companion.moveGroup.<anonymous>.<anonymous>' call
                 var map = HashMap_init_$Create$();
                 destinationSourceInformation = map;
-                toWriter.m17_1 = destinationSourceInformation;
+                toWriter.o17_1 = destinationSourceInformation;
                 tmp_1 = map;
               } else {
                 tmp_1 = tmp0_elvis_lhs;
@@ -8337,11 +8337,11 @@
           }
            while (inductionVariable_1 <= last);
         if (sourceSourceInformationMap.s()) {
-          fromWriter.m17_1 = null;
+          fromWriter.o17_1 = null;
         }
       }
     }
-    var toWriterParent = toWriter.b18_1;
+    var toWriterParent = toWriter.d18_1;
     var tmp4_safe_receiver = sourceInformationOf(toWriter, parent);
     if (tmp4_safe_receiver == null)
       null;
@@ -8350,31 +8350,31 @@
       // Inline function 'kotlin.contracts.contract' call
       var predecessor = -1;
       var child = toWriterParent + 1 | 0;
-      var endGroup = toWriter.z17_1;
+      var endGroup = toWriter.b18_1;
       while (child < endGroup) {
         predecessor = child;
-        child = child + groupSize(toWriter.j17_1, child) | 0;
+        child = child + groupSize(toWriter.l17_1, child) | 0;
       }
-      tmp4_safe_receiver.i1r(toWriter, predecessor, endGroup);
+      tmp4_safe_receiver.k1r(toWriter, predecessor, endGroup);
     }
-    var parentGroup = fromWriter.p18(fromIndex);
+    var parentGroup = fromWriter.r18(fromIndex);
     var tmp_2;
     if (!removeSourceGroup) {
       tmp_2 = false;
     } else if (updateFromCursor) {
       var needsStartGroups = parentGroup >= 0;
       if (needsStartGroups) {
-        fromWriter.w18();
-        fromWriter.j1r(parentGroup - fromWriter.z17_1 | 0);
-        fromWriter.w18();
+        fromWriter.y18();
+        fromWriter.l1r(parentGroup - fromWriter.b18_1 | 0);
+        fromWriter.y18();
       }
-      fromWriter.j1r(fromIndex - fromWriter.z17_1 | 0);
-      var anchorsRemoved = fromWriter.w1g();
+      fromWriter.l1r(fromIndex - fromWriter.b18_1 | 0);
+      var anchorsRemoved = fromWriter.y1g();
       if (needsStartGroups) {
-        fromWriter.t18();
-        fromWriter.t1a();
-        fromWriter.t18();
-        fromWriter.t1a();
+        fromWriter.v18();
+        fromWriter.v1a();
+        fromWriter.v18();
+        fromWriter.v1a();
       }
       tmp_2 = anchorsRemoved;
     } else {
@@ -8389,10 +8389,10 @@
       var message = 'Unexpectedly removed anchors';
       composeRuntimeError(toString(message));
     }
-    toWriter.v17_1 = toWriter.v17_1 + (isNode(groups, currentGroup) ? 1 : nodeCount(groups, currentGroup)) | 0;
+    toWriter.x17_1 = toWriter.x17_1 + (isNode(groups, currentGroup) ? 1 : nodeCount(groups, currentGroup)) | 0;
     if (updateToCursor) {
-      toWriter.z17_1 = currentGroup + groupsToMove | 0;
-      toWriter.p17_1 = currentSlot + slotsToMove | 0;
+      toWriter.b18_1 = currentGroup + groupsToMove | 0;
+      toWriter.r17_1 = currentSlot + slotsToMove | 0;
     }
     if (hasMarks) {
       updateContainsMark(toWriter, parent);
@@ -8404,11 +8404,11 @@
     return moveGroup($this, fromWriter, fromIndex, toWriter, updateFromCursor, updateToCursor, removeSourceGroup);
   }
   function groupSourceInformationFor($this, parent, sourceInformation) {
-    var tmp0_elvis_lhs = $this.m17_1;
+    var tmp0_elvis_lhs = $this.o17_1;
     var map = tmp0_elvis_lhs == null ? HashMap_init_$Create$() : tmp0_elvis_lhs;
-    $this.m17_1 = map;
+    $this.o17_1 = map;
     // Inline function 'kotlin.collections.getOrPut' call
-    var key = $this.q19(parent);
+    var key = $this.s19(parent);
     var value = map.u2(key);
     var tmp;
     if (value == null) {
@@ -8416,10 +8416,10 @@
       var result = new GroupSourceInformation(0, sourceInformation);
       if (sourceInformation == null) {
         var child = parent + 1 | 0;
-        var end = $this.z17_1;
+        var end = $this.b18_1;
         while (child < end) {
-          result.k1r($this, child);
-          child = child + groupSize($this.j17_1, child) | 0;
+          result.m1r($this, child);
+          child = child + groupSize($this.l17_1, child) | 0;
         }
       }
       var answer = result;
@@ -8431,24 +8431,24 @@
     return tmp;
   }
   function startGroup_1($this, key, objectKey, isNode, aux) {
-    var previousParent = $this.b18_1;
-    var inserting = $this.u17_1 > 0;
-    $this.y17_1.z15($this.v17_1);
+    var previousParent = $this.d18_1;
+    var inserting = $this.w17_1 > 0;
+    $this.a18_1.b16($this.x17_1);
     var tmp = $this;
     var tmp_0;
     if (inserting) {
       insertGroups($this, 1);
-      var current = $this.z17_1;
+      var current = $this.b18_1;
       var currentAddress = groupIndexToAddress($this, current);
-      var hasObjectKey = !(objectKey === Companion_getInstance_0().z18_1);
-      var hasAux = !isNode ? !(aux === Companion_getInstance_0().z18_1) : false;
-      initGroup($this.j17_1, currentAddress, key, isNode, hasObjectKey, hasAux, $this.b18_1, $this.p17_1);
-      $this.q17_1 = $this.p17_1;
+      var hasObjectKey = !(objectKey === Companion_getInstance_0().b19_1);
+      var hasAux = !isNode ? !(aux === Companion_getInstance_0().b19_1) : false;
+      initGroup($this.l17_1, currentAddress, key, isNode, hasObjectKey, hasAux, $this.d18_1, $this.r17_1);
+      $this.s17_1 = $this.r17_1;
       var dataSlotsNeeded = ((isNode ? 1 : 0) + (hasObjectKey ? 1 : 0) | 0) + (hasAux ? 1 : 0) | 0;
       if (dataSlotsNeeded > 0) {
         insertSlots($this, dataSlotsNeeded, current);
-        var slots = $this.k17_1;
-        var currentSlot = $this.p17_1;
+        var slots = $this.m17_1;
+        var currentSlot = $this.r17_1;
         if (isNode) {
           var tmp0 = currentSlot;
           currentSlot = tmp0 + 1 | 0;
@@ -8464,41 +8464,41 @@
           currentSlot = tmp2 + 1 | 0;
           slots[tmp2] = aux;
         }
-        $this.p17_1 = currentSlot;
+        $this.r17_1 = currentSlot;
       }
-      $this.v17_1 = 0;
+      $this.x17_1 = 0;
       var newCurrent = current + 1 | 0;
-      $this.b18_1 = current;
-      $this.z17_1 = newCurrent;
+      $this.d18_1 = current;
+      $this.b18_1 = newCurrent;
       if (previousParent >= 0) {
         var tmp3_safe_receiver = sourceInformationOf($this, previousParent);
         if (tmp3_safe_receiver == null)
           null;
         else {
-          tmp3_safe_receiver.k1r($this, current);
+          tmp3_safe_receiver.m1r($this, current);
         }
       }
       tmp_0 = newCurrent;
     } else {
-      $this.w17_1.z15(previousParent);
+      $this.y17_1.b16(previousParent);
       saveCurrentGroupEnd($this);
-      var currentGroup = $this.z17_1;
+      var currentGroup = $this.b18_1;
       var currentGroupAddress = groupIndexToAddress($this, currentGroup);
-      if (!equals(aux, Companion_getInstance_0().z18_1)) {
+      if (!equals(aux, Companion_getInstance_0().b19_1)) {
         if (isNode) {
-          $this.m1r(aux);
+          $this.o1r(aux);
         } else {
-          $this.l1r(aux);
+          $this.n1r(aux);
         }
       }
-      $this.p17_1 = slotIndex($this.j17_1, $this, currentGroupAddress);
-      $this.q17_1 = dataIndex_0($this.j17_1, $this, groupIndexToAddress($this, $this.z17_1 + 1 | 0));
-      $this.v17_1 = nodeCount($this.j17_1, currentGroupAddress);
-      $this.b18_1 = currentGroup;
-      $this.z17_1 = currentGroup + 1 | 0;
-      tmp_0 = currentGroup + groupSize($this.j17_1, currentGroupAddress) | 0;
+      $this.r17_1 = slotIndex($this.l17_1, $this, currentGroupAddress);
+      $this.s17_1 = dataIndex_0($this.l17_1, $this, groupIndexToAddress($this, $this.b18_1 + 1 | 0));
+      $this.x17_1 = nodeCount($this.l17_1, currentGroupAddress);
+      $this.d18_1 = currentGroup;
+      $this.b18_1 = currentGroup + 1 | 0;
+      tmp_0 = currentGroup + groupSize($this.l17_1, currentGroupAddress) | 0;
     }
-    tmp.a18_1 = tmp_0;
+    tmp.c18_1 = tmp_0;
   }
   function Companion_3() {
   }
@@ -8507,90 +8507,90 @@
     return Companion_instance_4;
   }
   function containsGroupMark($this, group) {
-    return group >= 0 ? containsMark($this.j17_1, groupIndexToAddress($this, group)) : false;
+    return group >= 0 ? containsMark($this.l17_1, groupIndexToAddress($this, group)) : false;
   }
   function containsAnyGroupMarks($this, group) {
-    return group >= 0 ? containsAnyMark($this.j17_1, groupIndexToAddress($this, group)) : false;
+    return group >= 0 ? containsAnyMark($this.l17_1, groupIndexToAddress($this, group)) : false;
   }
   function recalculateMarks($this) {
-    var tmp0_safe_receiver = $this.d18_1;
+    var tmp0_safe_receiver = $this.f18_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      while (tmp0_safe_receiver.v1f()) {
-        updateContainsMarkNow($this, tmp0_safe_receiver.o1r(), tmp0_safe_receiver);
+      while (tmp0_safe_receiver.x1f()) {
+        updateContainsMarkNow($this, tmp0_safe_receiver.q1r(), tmp0_safe_receiver);
       }
     }
   }
   function updateContainsMark($this, group) {
     if (group >= 0) {
-      var tmp0_elvis_lhs = $this.d18_1;
+      var tmp0_elvis_lhs = $this.f18_1;
       var tmp;
       if (tmp0_elvis_lhs == null) {
         // Inline function 'kotlin.also' call
         var this_0 = new PrioritySet();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.SlotWriter.updateContainsMark.<anonymous>' call
-        $this.d18_1 = this_0;
+        $this.f18_1 = this_0;
         tmp = this_0;
       } else {
         tmp = tmp0_elvis_lhs;
       }
-      tmp.p1r(group);
+      tmp.r1r(group);
     }
   }
   function updateContainsMarkNow($this, group, set) {
     var groupAddress = groupIndexToAddress($this, group);
     var containsAnyMarks = childContainsAnyMarks($this, group);
-    var markChanges = !(containsMark($this.j17_1, groupAddress) === containsAnyMarks);
+    var markChanges = !(containsMark($this.l17_1, groupAddress) === containsAnyMarks);
     if (markChanges) {
-      updateContainsMark_0($this.j17_1, groupAddress, containsAnyMarks);
-      var parent = $this.p18(group);
+      updateContainsMark_0($this.l17_1, groupAddress, containsAnyMarks);
+      var parent = $this.r18(group);
       if (parent >= 0) {
-        set.p1r(parent);
+        set.r1r(parent);
       }
     }
   }
   function childContainsAnyMarks($this, group) {
     var child = group + 1 | 0;
-    var end = group + $this.h1a(group) | 0;
+    var end = group + $this.j1a(group) | 0;
     while (child < end) {
-      if (containsAnyMark($this.j17_1, groupIndexToAddress($this, child)))
+      if (containsAnyMark($this.l17_1, groupIndexToAddress($this, child)))
         return true;
-      child = child + $this.h1a(child) | 0;
+      child = child + $this.j1a(child) | 0;
     }
     return false;
   }
   function saveCurrentGroupEnd($this) {
-    $this.x17_1.z15((_get_capacity__a9k9f3($this) - $this.o17_1 | 0) - $this.a18_1 | 0);
+    $this.z17_1.b16((_get_capacity__a9k9f3($this) - $this.q17_1 | 0) - $this.c18_1 | 0);
   }
   function restoreCurrentGroupEnd($this) {
-    var newGroupEnd = (_get_capacity__a9k9f3($this) - $this.o17_1 | 0) - $this.x17_1.d1a() | 0;
-    $this.a18_1 = newGroupEnd;
+    var newGroupEnd = (_get_capacity__a9k9f3($this) - $this.q17_1 | 0) - $this.z17_1.f1a() | 0;
+    $this.c18_1 = newGroupEnd;
     return newGroupEnd;
   }
   function fixParentAnchorsFor($this, parent, endGroup, firstChild) {
-    var parentAnchor = parentIndexToAnchor($this, parent, $this.n17_1);
+    var parentAnchor = parentIndexToAnchor($this, parent, $this.p17_1);
     var child = firstChild;
     while (child < endGroup) {
-      updateParentAnchor($this.j17_1, groupIndexToAddress($this, child), parentAnchor);
-      var childEnd = child + groupSize($this.j17_1, groupIndexToAddress($this, child)) | 0;
+      updateParentAnchor($this.l17_1, groupIndexToAddress($this, child), parentAnchor);
+      var childEnd = child + groupSize($this.l17_1, groupIndexToAddress($this, child)) | 0;
       fixParentAnchorsFor($this, child, childEnd, child + 1 | 0);
       child = childEnd;
     }
   }
   function moveGroupGapTo($this, index) {
-    var gapLen = $this.o17_1;
-    var gapStart = $this.n17_1;
+    var gapLen = $this.q17_1;
+    var gapStart = $this.p17_1;
     if (!(gapStart === index)) {
       // Inline function 'kotlin.collections.isNotEmpty' call
-      if (!$this.l17_1.s()) {
+      if (!$this.n17_1.s()) {
         updateAnchors($this, gapStart, index);
       }
       if (gapLen > 0) {
-        var groups = $this.j17_1;
+        var groups = $this.l17_1;
         var groupPhysicalAddress = imul(index, 5);
         var groupPhysicalGapLen = imul(gapLen, 5);
         var groupPhysicalGapStart = imul(gapStart, 5);
@@ -8619,25 +8619,25 @@
       var capacity = _get_capacity__a9k9f3($this);
       runtimeCheck(groupAddress < capacity);
       while (groupAddress < capacity) {
-        var oldAnchor = parentAnchor($this.j17_1, groupAddress);
+        var oldAnchor = parentAnchor($this.l17_1, groupAddress);
         var oldIndex = parentAnchorToIndex($this, oldAnchor);
         var newAnchor = parentIndexToAnchor($this, oldIndex, index);
         if (!(newAnchor === oldAnchor)) {
-          updateParentAnchor($this.j17_1, groupAddress, newAnchor);
+          updateParentAnchor($this.l17_1, groupAddress, newAnchor);
         }
         groupAddress = groupAddress + 1 | 0;
         if (groupAddress === index)
           groupAddress = groupAddress + gapLen | 0;
       }
     }
-    $this.n17_1 = index;
+    $this.p17_1 = index;
   }
   function moveSlotGapTo($this, index, group) {
-    var gapLen = $this.s17_1;
-    var gapStart = $this.r17_1;
-    var slotsGapOwner = $this.t17_1;
+    var gapLen = $this.u17_1;
+    var gapStart = $this.t17_1;
+    var slotsGapOwner = $this.v17_1;
     if (!(gapStart === index)) {
-      var slots = $this.k17_1;
+      var slots = $this.m17_1;
       if (index < gapStart) {
         // Inline function 'kotlin.collections.copyInto' call
         var destinationOffset = index + gapLen | 0;
@@ -8654,60 +8654,60 @@
     var b = $this.l();
     var newSlotsGapOwner = Math.min(a, b);
     if (!(slotsGapOwner === newSlotsGapOwner)) {
-      var slotsSize = $this.k17_1.length - gapLen | 0;
+      var slotsSize = $this.m17_1.length - gapLen | 0;
       if (newSlotsGapOwner < slotsGapOwner) {
         var updateAddress = groupIndexToAddress($this, newSlotsGapOwner);
         var stopUpdateAddress = groupIndexToAddress($this, slotsGapOwner);
-        var groupGapStart = $this.n17_1;
+        var groupGapStart = $this.p17_1;
         while (updateAddress < stopUpdateAddress) {
-          var anchor = dataAnchor($this.j17_1, updateAddress);
+          var anchor = dataAnchor($this.l17_1, updateAddress);
           // Inline function 'androidx.compose.runtime.runtimeCheck' call
           if (!(anchor >= 0)) {
             // Inline function 'androidx.compose.runtime.SlotWriter.moveSlotGapTo.<anonymous>' call
             var message = 'Unexpected anchor value, expected a positive anchor';
             composeRuntimeError(toString(message));
           }
-          updateDataAnchor($this.j17_1, updateAddress, -((slotsSize - anchor | 0) + 1 | 0) | 0);
+          updateDataAnchor($this.l17_1, updateAddress, -((slotsSize - anchor | 0) + 1 | 0) | 0);
           updateAddress = updateAddress + 1 | 0;
           if (updateAddress === groupGapStart)
-            updateAddress = updateAddress + $this.o17_1 | 0;
+            updateAddress = updateAddress + $this.q17_1 | 0;
         }
       } else {
         var updateAddress_0 = groupIndexToAddress($this, slotsGapOwner);
         var stopUpdateAddress_0 = groupIndexToAddress($this, newSlotsGapOwner);
         while (updateAddress_0 < stopUpdateAddress_0) {
-          var anchor_0 = dataAnchor($this.j17_1, updateAddress_0);
+          var anchor_0 = dataAnchor($this.l17_1, updateAddress_0);
           // Inline function 'androidx.compose.runtime.runtimeCheck' call
           if (!(anchor_0 < 0)) {
             // Inline function 'androidx.compose.runtime.SlotWriter.moveSlotGapTo.<anonymous>' call
             var message_0 = 'Unexpected anchor value, expected a negative anchor';
             composeRuntimeError(toString(message_0));
           }
-          updateDataAnchor($this.j17_1, updateAddress_0, (slotsSize + anchor_0 | 0) + 1 | 0);
+          updateDataAnchor($this.l17_1, updateAddress_0, (slotsSize + anchor_0 | 0) + 1 | 0);
           updateAddress_0 = updateAddress_0 + 1 | 0;
-          if (updateAddress_0 === $this.n17_1)
-            updateAddress_0 = updateAddress_0 + $this.o17_1 | 0;
+          if (updateAddress_0 === $this.p17_1)
+            updateAddress_0 = updateAddress_0 + $this.q17_1 | 0;
         }
       }
-      $this.t17_1 = newSlotsGapOwner;
+      $this.v17_1 = newSlotsGapOwner;
     }
-    $this.r17_1 = index;
+    $this.t17_1 = index;
   }
   function clearSlotGap($this) {
-    var slotsGapStart = $this.r17_1;
-    var slotsGapEnd = slotsGapStart + $this.s17_1 | 0;
-    fill_0($this.k17_1, null, slotsGapStart, slotsGapEnd);
+    var slotsGapStart = $this.t17_1;
+    var slotsGapEnd = slotsGapStart + $this.u17_1 | 0;
+    fill_0($this.m17_1, null, slotsGapStart, slotsGapEnd);
   }
   function insertGroups($this, size) {
     if (size > 0) {
-      var currentGroup = $this.z17_1;
+      var currentGroup = $this.b18_1;
       moveGroupGapTo($this, currentGroup);
-      var gapStart = $this.n17_1;
-      var gapLen = $this.o17_1;
-      var oldCapacity = $this.j17_1.length / 5 | 0;
+      var gapStart = $this.p17_1;
+      var gapLen = $this.q17_1;
+      var oldCapacity = $this.l17_1.length / 5 | 0;
       var oldSize = oldCapacity - gapLen | 0;
       if (gapLen < size) {
-        var groups = $this.j17_1;
+        var groups = $this.l17_1;
         // Inline function 'kotlin.math.max' call
         // Inline function 'kotlin.math.max' call
         var a = imul(oldCapacity, 2);
@@ -8736,38 +8736,38 @@
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
         arrayCopy(tmp_0, newGroups, destinationOffset, startIndex, endIndex_0);
-        $this.j17_1 = newGroups;
+        $this.l17_1 = newGroups;
         gapLen = newGapLen;
       }
-      var currentEnd = $this.a18_1;
+      var currentEnd = $this.c18_1;
       if (currentEnd >= gapStart)
-        $this.a18_1 = currentEnd + size | 0;
-      $this.n17_1 = gapStart + size | 0;
-      $this.o17_1 = gapLen - size | 0;
+        $this.c18_1 = currentEnd + size | 0;
+      $this.p17_1 = gapStart + size | 0;
+      $this.q17_1 = gapLen - size | 0;
       var index = oldSize > 0 ? dataIndex($this, currentGroup + size | 0) : 0;
-      var anchor = dataIndexToDataAnchor($this, index, $this.t17_1 < gapStart ? 0 : $this.r17_1, $this.s17_1, $this.k17_1.length);
+      var anchor = dataIndexToDataAnchor($this, index, $this.v17_1 < gapStart ? 0 : $this.t17_1, $this.u17_1, $this.m17_1.length);
       var inductionVariable = gapStart;
       var last = gapStart + size | 0;
       if (inductionVariable < last)
         do {
           var groupAddress = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          updateDataAnchor($this.j17_1, groupAddress, anchor);
+          updateDataAnchor($this.l17_1, groupAddress, anchor);
         }
          while (inductionVariable < last);
-      var slotsGapOwner = $this.t17_1;
+      var slotsGapOwner = $this.v17_1;
       if (slotsGapOwner >= gapStart) {
-        $this.t17_1 = slotsGapOwner + size | 0;
+        $this.v17_1 = slotsGapOwner + size | 0;
       }
     }
   }
   function insertSlots($this, size, group) {
     if (size > 0) {
-      moveSlotGapTo($this, $this.p17_1, group);
-      var gapStart = $this.r17_1;
-      var gapLen = $this.s17_1;
+      moveSlotGapTo($this, $this.r17_1, group);
+      var gapStart = $this.t17_1;
+      var gapLen = $this.u17_1;
       if (gapLen < size) {
-        var slots = $this.k17_1;
+        var slots = $this.m17_1;
         var oldCapacity = slots.length;
         var oldSize = oldCapacity - gapLen | 0;
         // Inline function 'kotlin.math.max' call
@@ -8791,41 +8791,41 @@
         arrayCopy(slots, newData, 0, 0, gapStart);
         // Inline function 'kotlin.collections.copyInto' call
         arrayCopy(slots, newData, newGapEndAddress, oldGapEndAddress, oldCapacity);
-        $this.k17_1 = newData;
+        $this.m17_1 = newData;
         gapLen = newGapLen;
       }
-      var currentDataEnd = $this.q17_1;
+      var currentDataEnd = $this.s17_1;
       if (currentDataEnd >= gapStart)
-        $this.q17_1 = currentDataEnd + size | 0;
-      $this.r17_1 = gapStart + size | 0;
-      $this.s17_1 = gapLen - size | 0;
+        $this.s17_1 = currentDataEnd + size | 0;
+      $this.t17_1 = gapStart + size | 0;
+      $this.u17_1 = gapLen - size | 0;
     }
   }
   function removeGroups($this, start, len) {
     var tmp;
     if (len > 0) {
       var anchorsRemoved = false;
-      var anchors = $this.l17_1;
+      var anchors = $this.n17_1;
       moveGroupGapTo($this, start);
       // Inline function 'kotlin.collections.isNotEmpty' call
       if (!anchors.s()) {
-        anchorsRemoved = removeAnchors($this, start, len, $this.m17_1);
+        anchorsRemoved = removeAnchors($this, start, len, $this.o17_1);
       }
-      $this.n17_1 = start;
-      var previousGapLen = $this.o17_1;
+      $this.p17_1 = start;
+      var previousGapLen = $this.q17_1;
       var newGapLen = previousGapLen + len | 0;
-      $this.o17_1 = newGapLen;
-      var slotsGapOwner = $this.t17_1;
+      $this.q17_1 = newGapLen;
+      var slotsGapOwner = $this.v17_1;
       if (slotsGapOwner > start) {
         var tmp_0 = $this;
         // Inline function 'kotlin.math.max' call
         var b = slotsGapOwner - len | 0;
-        tmp_0.t17_1 = Math.max(start, b);
+        tmp_0.v17_1 = Math.max(start, b);
       }
-      if ($this.a18_1 >= $this.n17_1) {
-        $this.a18_1 = $this.a18_1 - len | 0;
+      if ($this.c18_1 >= $this.p17_1) {
+        $this.c18_1 = $this.c18_1 - len | 0;
       }
-      var parent = $this.b18_1;
+      var parent = $this.d18_1;
       if (containsGroupMark($this, parent)) {
         updateContainsMark($this, parent);
       }
@@ -8836,7 +8836,7 @@
     return tmp;
   }
   function sourceInformationOf($this, group) {
-    var tmp0_safe_receiver = $this.m17_1;
+    var tmp0_safe_receiver = $this.o17_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -8844,7 +8844,7 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.SlotWriter.sourceInformationOf.<anonymous>' call
-      var tmp0_safe_receiver_0 = $this.z1q(group);
+      var tmp0_safe_receiver_0 = $this.b1r(group);
       var tmp_0;
       if (tmp0_safe_receiver_0 == null) {
         tmp_0 = null;
@@ -8860,39 +8860,39 @@
   }
   function removeSlots($this, start, len, group) {
     if (len > 0) {
-      var gapLen = $this.s17_1;
+      var gapLen = $this.u17_1;
       var removeEnd = start + len | 0;
       moveSlotGapTo($this, removeEnd, group);
-      $this.r17_1 = start;
-      $this.s17_1 = gapLen + len | 0;
-      fill_0($this.k17_1, null, start, start + len | 0);
-      var currentDataEnd = $this.q17_1;
+      $this.t17_1 = start;
+      $this.u17_1 = gapLen + len | 0;
+      fill_0($this.m17_1, null, start, start + len | 0);
+      var currentDataEnd = $this.s17_1;
       if (currentDataEnd >= start)
-        $this.q17_1 = currentDataEnd - len | 0;
+        $this.s17_1 = currentDataEnd - len | 0;
     }
   }
   function updateNodeOfGroup($this, index, value) {
     var address = groupIndexToAddress($this, index);
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(address < $this.j17_1.length ? isNode($this.j17_1, address) : false)) {
+    if (!(address < $this.l17_1.length ? isNode($this.l17_1, address) : false)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.updateNodeOfGroup.<anonymous>' call
       var message = 'Updating the node of a group at ' + index + ' that was not created with as a node group';
       composeRuntimeError(toString(message));
     }
-    $this.k17_1[dataIndexToDataAddress($this, nodeIndex($this.j17_1, $this, address))] = value;
+    $this.m17_1[dataIndexToDataAddress($this, nodeIndex($this.l17_1, $this, address))] = value;
   }
   function updateAnchors($this, previousGapStart, newGapStart) {
-    var gapLen = $this.o17_1;
+    var gapLen = $this.q17_1;
     var size = _get_capacity__a9k9f3($this) - gapLen | 0;
     if (previousGapStart < newGapStart) {
-      var index = locationOf($this.l17_1, previousGapStart, size);
-      $l$loop_0: while (index < $this.l17_1.l()) {
-        var anchor = $this.l17_1.m(index);
-        var location = anchor.t1c_1;
+      var index = locationOf($this.n17_1, previousGapStart, size);
+      $l$loop_0: while (index < $this.n17_1.l()) {
+        var anchor = $this.n17_1.m(index);
+        var location = anchor.v1c_1;
         if (location < 0) {
           var newLocation = size + location | 0;
           if (newLocation < newGapStart) {
-            anchor.t1c_1 = size + location | 0;
+            anchor.v1c_1 = size + location | 0;
             index = index + 1 | 0;
           } else
             break $l$loop_0;
@@ -8900,12 +8900,12 @@
           break $l$loop_0;
       }
     } else {
-      var index_0 = locationOf($this.l17_1, newGapStart, size);
-      $l$loop_1: while (index_0 < $this.l17_1.l()) {
-        var anchor_0 = $this.l17_1.m(index_0);
-        var location_0 = anchor_0.t1c_1;
+      var index_0 = locationOf($this.n17_1, newGapStart, size);
+      $l$loop_1: while (index_0 < $this.n17_1.l()) {
+        var anchor_0 = $this.n17_1.m(index_0);
+        var location_0 = anchor_0.v1c_1;
         if (location_0 >= 0) {
-          anchor_0.t1c_1 = -(size - location_0 | 0) | 0;
+          anchor_0.v1c_1 = -(size - location_0 | 0) | 0;
           index_0 = index_0 + 1 | 0;
         } else
           break $l$loop_1;
@@ -8913,22 +8913,22 @@
     }
   }
   function removeAnchors($this, gapStart, size, sourceInformationMap) {
-    var gapLen = $this.o17_1;
+    var gapLen = $this.q17_1;
     var removeEnd = gapStart + size | 0;
     var groupsSize = _get_capacity__a9k9f3($this) - gapLen | 0;
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotWriter.removeAnchors.<anonymous>' call
-    var it = locationOf($this.l17_1, gapStart + size | 0, groupsSize);
-    var index = it >= $this.l17_1.l() ? it - 1 | 0 : it;
+    var it = locationOf($this.n17_1, gapStart + size | 0, groupsSize);
+    var index = it >= $this.n17_1.l() ? it - 1 | 0 : it;
     var removeAnchorEnd = 0;
     var removeAnchorStart = index + 1 | 0;
     $l$loop: while (index >= 0) {
-      var anchor = $this.l17_1.m(index);
-      var location = $this.w1b(anchor);
+      var anchor = $this.n17_1.m(index);
+      var location = $this.y1b(anchor);
       if (location >= gapStart) {
         if (location < removeEnd) {
-          anchor.t1c_1 = IntCompanionObject_instance.MIN_VALUE;
+          anchor.v1c_1 = IntCompanionObject_instance.MIN_VALUE;
           if (sourceInformationMap == null)
             null;
           else
@@ -8946,23 +8946,23 @@
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotWriter.removeAnchors.<anonymous>' call
     if (this_0) {
-      $this.l17_1.z1(removeAnchorStart, removeAnchorEnd).f1();
+      $this.n17_1.z1(removeAnchorStart, removeAnchorEnd).f1();
     }
     return this_0;
   }
   function moveAnchors($this, originalLocation, newLocation, size) {
     var end = originalLocation + size | 0;
     var groupsSize = $this.l();
-    var index = locationOf($this.l17_1, originalLocation, groupsSize);
+    var index = locationOf($this.n17_1, originalLocation, groupsSize);
     // Inline function 'kotlin.collections.mutableListOf' call
     var removedAnchors = ArrayList_init_$Create$();
     if (index >= 0) {
-      $l$loop: while (index < $this.l17_1.l()) {
-        var anchor = $this.l17_1.m(index);
-        var location = $this.w1b(anchor);
+      $l$loop: while (index < $this.n17_1.l()) {
+        var anchor = $this.n17_1.m(index);
+        var location = $this.y1b(anchor);
         if (location >= originalLocation ? location < end : false) {
           removedAnchors.y(anchor);
-          $this.l17_1.k1(index);
+          $this.n17_1.k1(index);
         } else
           break $l$loop;
       }
@@ -8978,41 +8978,41 @@
         inductionVariable = inductionVariable + 1 | 0;
         var item = removedAnchors.m(index_0);
         // Inline function 'androidx.compose.runtime.SlotWriter.moveAnchors.<anonymous>' call
-        var anchorIndex = $this.w1b(item);
+        var anchorIndex = $this.y1b(item);
         var newAnchorIndex = anchorIndex + moveDelta | 0;
-        if (newAnchorIndex >= $this.n17_1) {
-          item.t1c_1 = -(groupsSize - newAnchorIndex | 0) | 0;
+        if (newAnchorIndex >= $this.p17_1) {
+          item.v1c_1 = -(groupsSize - newAnchorIndex | 0) | 0;
         } else {
-          item.t1c_1 = newAnchorIndex;
+          item.v1c_1 = newAnchorIndex;
         }
-        var insertIndex = locationOf($this.l17_1, newAnchorIndex, groupsSize);
-        $this.l17_1.w1(insertIndex, item);
+        var insertIndex = locationOf($this.n17_1, newAnchorIndex, groupsSize);
+        $this.n17_1.w1(insertIndex, item);
       }
        while (inductionVariable <= last);
   }
   function _get_capacity__a9k9f3($this) {
-    return $this.j17_1.length / 5 | 0;
+    return $this.l17_1.length / 5 | 0;
   }
   function groupIndexToAddress($this, index) {
-    return index < $this.n17_1 ? index : index + $this.o17_1 | 0;
+    return index < $this.p17_1 ? index : index + $this.q17_1 | 0;
   }
   function dataIndexToDataAddress($this, dataIndex) {
-    return dataIndex < $this.r17_1 ? dataIndex : dataIndex + $this.s17_1 | 0;
+    return dataIndex < $this.t17_1 ? dataIndex : dataIndex + $this.u17_1 | 0;
   }
   function parent(_this__u8e3s4, $this, index) {
     return parentAnchorToIndex($this, parentAnchor(_this__u8e3s4, groupIndexToAddress($this, index)));
   }
   function dataIndex($this, index) {
-    return dataIndex_0($this.j17_1, $this, groupIndexToAddress($this, index));
+    return dataIndex_0($this.l17_1, $this, groupIndexToAddress($this, index));
   }
   function dataIndex_0(_this__u8e3s4, $this, address) {
-    return address >= _get_capacity__a9k9f3($this) ? $this.k17_1.length - $this.s17_1 | 0 : dataAnchorToDataIndex($this, dataAnchor(_this__u8e3s4, address), $this.s17_1, $this.k17_1.length);
+    return address >= _get_capacity__a9k9f3($this) ? $this.m17_1.length - $this.u17_1 | 0 : dataAnchorToDataIndex($this, dataAnchor(_this__u8e3s4, address), $this.u17_1, $this.m17_1.length);
   }
   function slotIndex(_this__u8e3s4, $this, address) {
-    return address >= _get_capacity__a9k9f3($this) ? $this.k17_1.length - $this.s17_1 | 0 : dataAnchorToDataIndex($this, slotAnchor(_this__u8e3s4, address), $this.s17_1, $this.k17_1.length);
+    return address >= _get_capacity__a9k9f3($this) ? $this.m17_1.length - $this.u17_1 | 0 : dataAnchorToDataIndex($this, slotAnchor(_this__u8e3s4, address), $this.u17_1, $this.m17_1.length);
   }
   function updateDataIndex(_this__u8e3s4, $this, address, dataIndex) {
-    updateDataAnchor(_this__u8e3s4, address, dataIndexToDataAnchor($this, dataIndex, $this.r17_1, $this.s17_1, $this.k17_1.length));
+    updateDataAnchor(_this__u8e3s4, address, dataIndexToDataAnchor($this, dataIndex, $this.t17_1, $this.u17_1, $this.m17_1.length));
   }
   function nodeIndex(_this__u8e3s4, $this, address) {
     return dataIndex_0(_this__u8e3s4, $this, address);
@@ -9033,177 +9033,177 @@
     return index > -2 ? index : ($this.l() + index | 0) - -2 | 0;
   }
   function SlotWriter$groupSlots$1($start, $end, this$0) {
-    this.r1r_1 = $end;
-    this.s1r_1 = this$0;
-    this.q1r_1 = $start;
+    this.t1r_1 = $end;
+    this.u1r_1 = this$0;
+    this.s1r_1 = $start;
   }
   protoOf(SlotWriter$groupSlots$1).b1 = function () {
-    return this.q1r_1 < this.r1r_1;
+    return this.s1r_1 < this.t1r_1;
   };
   protoOf(SlotWriter$groupSlots$1).d1 = function () {
     var tmp;
     if (this.b1()) {
-      var tmp_0 = this.s1r_1.k17_1;
-      var tmp1 = this.q1r_1;
-      this.q1r_1 = tmp1 + 1 | 0;
-      tmp = tmp_0[dataIndexToDataAddress(this.s1r_1, tmp1)];
+      var tmp_0 = this.u1r_1.m17_1;
+      var tmp1 = this.s1r_1;
+      this.s1r_1 = tmp1 + 1 | 0;
+      tmp = tmp_0[dataIndexToDataAddress(this.u1r_1, tmp1)];
     } else {
       tmp = null;
     }
     return tmp;
   };
   function SlotWriter(table) {
-    this.i17_1 = table;
-    this.j17_1 = this.i17_1.k15_1;
-    this.k17_1 = this.i17_1.m15_1;
-    this.l17_1 = this.i17_1.s15_1;
-    this.m17_1 = this.i17_1.t15_1;
-    this.n17_1 = this.i17_1.l15_1;
-    this.o17_1 = (this.j17_1.length / 5 | 0) - this.i17_1.l15_1 | 0;
-    this.p17_1 = 0;
-    this.q17_1 = 0;
-    this.r17_1 = this.i17_1.n15_1;
-    this.s17_1 = this.k17_1.length - this.i17_1.n15_1 | 0;
-    this.t17_1 = this.i17_1.l15_1;
-    this.u17_1 = 0;
-    this.v17_1 = 0;
-    this.w17_1 = new IntStack();
-    this.x17_1 = new IntStack();
+    this.k17_1 = table;
+    this.l17_1 = this.k17_1.m15_1;
+    this.m17_1 = this.k17_1.o15_1;
+    this.n17_1 = this.k17_1.u15_1;
+    this.o17_1 = this.k17_1.v15_1;
+    this.p17_1 = this.k17_1.n15_1;
+    this.q17_1 = (this.l17_1.length / 5 | 0) - this.k17_1.n15_1 | 0;
+    this.r17_1 = 0;
+    this.s17_1 = 0;
+    this.t17_1 = this.k17_1.p15_1;
+    this.u17_1 = this.m17_1.length - this.k17_1.p15_1 | 0;
+    this.v17_1 = this.k17_1.n15_1;
+    this.w17_1 = 0;
+    this.x17_1 = 0;
     this.y17_1 = new IntStack();
-    this.z17_1 = 0;
-    this.a18_1 = this.i17_1.l15_1;
-    this.b18_1 = -1;
-    this.c18_1 = false;
-    this.d18_1 = null;
+    this.z17_1 = new IntStack();
+    this.a18_1 = new IntStack();
+    this.b18_1 = 0;
+    this.c18_1 = this.k17_1.n15_1;
+    this.d18_1 = -1;
+    this.e18_1 = false;
+    this.f18_1 = null;
   }
-  protoOf(SlotWriter).x1f = function () {
-    return this.z17_1 < this.a18_1 ? isNode(this.j17_1, groupIndexToAddress(this, this.z17_1)) : false;
+  protoOf(SlotWriter).z1f = function () {
+    return this.b18_1 < this.c18_1 ? isNode(this.l17_1, groupIndexToAddress(this, this.b18_1)) : false;
   };
-  protoOf(SlotWriter).b1b = function (index) {
-    return isNode(this.j17_1, groupIndexToAddress(this, index));
+  protoOf(SlotWriter).d1b = function (index) {
+    return isNode(this.l17_1, groupIndexToAddress(this, index));
   };
-  protoOf(SlotWriter).c1b = function (index) {
-    return nodeCount(this.j17_1, groupIndexToAddress(this, index));
+  protoOf(SlotWriter).e1b = function (index) {
+    return nodeCount(this.l17_1, groupIndexToAddress(this, index));
+  };
+  protoOf(SlotWriter).q18 = function (index) {
+    return key(this.l17_1, groupIndexToAddress(this, index));
+  };
+  protoOf(SlotWriter).p18 = function (index) {
+    var address = groupIndexToAddress(this, index);
+    return hasObjectKey(this.l17_1, address) ? this.m17_1[objectKeyIndex(this.l17_1, address)] : null;
+  };
+  protoOf(SlotWriter).j1a = function (index) {
+    return groupSize(this.l17_1, groupIndexToAddress(this, index));
   };
   protoOf(SlotWriter).o18 = function (index) {
-    return key(this.j17_1, groupIndexToAddress(this, index));
-  };
-  protoOf(SlotWriter).n18 = function (index) {
     var address = groupIndexToAddress(this, index);
-    return hasObjectKey(this.j17_1, address) ? this.k17_1[objectKeyIndex(this.j17_1, address)] : null;
+    return hasAux(this.l17_1, address) ? this.m17_1[auxIndex(this.l17_1, this, address)] : Companion_getInstance_0().b19_1;
   };
-  protoOf(SlotWriter).h1a = function (index) {
-    return groupSize(this.j17_1, groupIndexToAddress(this, index));
+  protoOf(SlotWriter).v1r = function (index) {
+    return (index > this.d18_1 ? index < this.c18_1 : false) ? true : this.d18_1 === 0 ? index === 0 : false;
   };
-  protoOf(SlotWriter).m18 = function (index) {
-    var address = groupIndexToAddress(this, index);
-    return hasAux(this.j17_1, address) ? this.k17_1[auxIndex(this.j17_1, this, address)] : Companion_getInstance_0().z18_1;
+  protoOf(SlotWriter).w1r = function (index) {
+    return this.x1r(index, this.b18_1);
   };
-  protoOf(SlotWriter).t1r = function (index) {
-    return (index > this.b18_1 ? index < this.a18_1 : false) ? true : this.b18_1 === 0 ? index === 0 : false;
-  };
-  protoOf(SlotWriter).u1r = function (index) {
-    return this.v1r(index, this.z17_1);
-  };
-  protoOf(SlotWriter).v1r = function (index, group) {
+  protoOf(SlotWriter).x1r = function (index, group) {
     var tmp;
-    if (group === this.b18_1) {
-      tmp = this.a18_1;
-    } else if (group > this.w17_1.x1r(0)) {
-      tmp = group + this.h1a(group) | 0;
+    if (group === this.d18_1) {
+      tmp = this.c18_1;
+    } else if (group > this.y17_1.z1r(0)) {
+      tmp = group + this.j1a(group) | 0;
     } else {
-      var openIndex = this.w17_1.w1r(group);
-      tmp = openIndex < 0 ? group + this.h1a(group) | 0 : (_get_capacity__a9k9f3(this) - this.o17_1 | 0) - this.x17_1.a1b(openIndex) | 0;
+      var openIndex = this.y17_1.y1r(group);
+      tmp = openIndex < 0 ? group + this.j1a(group) | 0 : (_get_capacity__a9k9f3(this) - this.q17_1 | 0) - this.z17_1.c1b(openIndex) | 0;
     }
     var end = tmp;
     return index > group ? index < end : false;
   };
-  protoOf(SlotWriter).a1d = function (index) {
+  protoOf(SlotWriter).c1d = function (index) {
     var address = groupIndexToAddress(this, index);
-    return isNode(this.j17_1, address) ? this.k17_1[dataIndexToDataAddress(this, nodeIndex(this.j17_1, this, address))] : null;
+    return isNode(this.l17_1, address) ? this.m17_1[dataIndexToDataAddress(this, nodeIndex(this.l17_1, this, address))] : null;
   };
-  protoOf(SlotWriter).y1r = function (anchor) {
-    return this.a1d(anchor.z1r(this));
+  protoOf(SlotWriter).a1s = function (anchor) {
+    return this.c1d(anchor.b1s(this));
   };
-  protoOf(SlotWriter).p18 = function (index) {
-    return parent(this.j17_1, this, index);
+  protoOf(SlotWriter).r18 = function (index) {
+    return parent(this.l17_1, this, index);
   };
-  protoOf(SlotWriter).g17 = function () {
-    this.c18_1 = true;
-    if (this.w17_1.s()) {
+  protoOf(SlotWriter).i17 = function () {
+    this.e18_1 = true;
+    if (this.y17_1.s()) {
       moveGroupGapTo(this, this.l());
-      moveSlotGapTo(this, this.k17_1.length - this.s17_1 | 0, this.n17_1);
+      moveSlotGapTo(this, this.m17_1.length - this.u17_1 | 0, this.p17_1);
       clearSlotGap(this);
       recalculateMarks(this);
     }
-    this.i17_1.b1r(this, this.j17_1, this.n17_1, this.k17_1, this.r17_1, this.l17_1, this.m17_1);
+    this.k17_1.d1r(this, this.l17_1, this.p17_1, this.m17_1, this.t17_1, this.n17_1, this.o17_1);
   };
-  protoOf(SlotWriter).a1s = function () {
+  protoOf(SlotWriter).c1s = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.u17_1 === 0)) {
+    if (!(this.w17_1 === 0)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.reset.<anonymous>' call
       var message = 'Cannot reset when inserting';
       composeRuntimeError(toString(message));
     }
     recalculateMarks(this);
-    this.z17_1 = 0;
-    this.a18_1 = _get_capacity__a9k9f3(this) - this.o17_1 | 0;
-    this.p17_1 = 0;
-    this.q17_1 = 0;
-    this.v17_1 = 0;
+    this.b18_1 = 0;
+    this.c18_1 = _get_capacity__a9k9f3(this) - this.q17_1 | 0;
+    this.r17_1 = 0;
+    this.s17_1 = 0;
+    this.x17_1 = 0;
   };
-  protoOf(SlotWriter).h1f = function (value) {
-    var result = this.b1s();
-    this.c1s(value);
+  protoOf(SlotWriter).j1f = function (value) {
+    var result = this.d1s();
+    this.e1s(value);
     return result;
   };
-  protoOf(SlotWriter).l1r = function (value) {
-    var address = groupIndexToAddress(this, this.z17_1);
+  protoOf(SlotWriter).n1r = function (value) {
+    var address = groupIndexToAddress(this, this.b18_1);
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!hasAux(this.j17_1, address)) {
+    if (!hasAux(this.l17_1, address)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.updateAux.<anonymous>' call
       var message = 'Updating the data of a group that was not created with a data slot';
       composeRuntimeError(toString(message));
     }
-    this.k17_1[dataIndexToDataAddress(this, auxIndex(this.j17_1, this, address))] = value;
+    this.m17_1[dataIndexToDataAddress(this, auxIndex(this.l17_1, this, address))] = value;
   };
-  protoOf(SlotWriter).h1g = function (sourceInformation) {
-    if (this.u17_1 > 0) {
-      groupSourceInformationFor(this, this.b18_1, sourceInformation);
+  protoOf(SlotWriter).j1g = function (sourceInformation) {
+    if (this.w17_1 > 0) {
+      groupSourceInformationFor(this, this.d18_1, sourceInformation);
     }
   };
-  protoOf(SlotWriter).j1g = function (key, value) {
-    if (this.u17_1 > 0) {
-      groupSourceInformationFor(this, this.b18_1, null).d1s(key, value);
+  protoOf(SlotWriter).l1g = function (key, value) {
+    if (this.w17_1 > 0) {
+      groupSourceInformationFor(this, this.d18_1, null).f1s(key, value);
     }
   };
-  protoOf(SlotWriter).l1g = function () {
-    if (this.u17_1 > 0) {
-      groupSourceInformationFor(this, this.b18_1, null).e1s();
+  protoOf(SlotWriter).n1g = function () {
+    if (this.w17_1 > 0) {
+      groupSourceInformationFor(this, this.d18_1, null).g1s();
     }
   };
-  protoOf(SlotWriter).m1r = function (value) {
-    return updateNodeOfGroup(this, this.z17_1, value);
+  protoOf(SlotWriter).o1r = function (value) {
+    return updateNodeOfGroup(this, this.b18_1, value);
   };
-  protoOf(SlotWriter).f1s = function (anchor, value) {
-    return updateNodeOfGroup(this, anchor.z1r(this), value);
+  protoOf(SlotWriter).h1s = function (anchor, value) {
+    return updateNodeOfGroup(this, anchor.b1s(this), value);
   };
-  protoOf(SlotWriter).c1s = function (value) {
+  protoOf(SlotWriter).e1s = function (value) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.p17_1 <= this.q17_1)) {
+    if (!(this.r17_1 <= this.s17_1)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.set.<anonymous>' call
       var message = 'Writing to an invalid slot';
       composeRuntimeError(toString(message));
     }
-    this.k17_1[dataIndexToDataAddress(this, this.p17_1 - 1 | 0)] = value;
+    this.m17_1[dataIndexToDataAddress(this, this.r17_1 - 1 | 0)] = value;
   };
-  protoOf(SlotWriter).g1s = function (index, value) {
-    return this.h1s(this.z17_1, index, value);
+  protoOf(SlotWriter).i1s = function (index, value) {
+    return this.j1s(this.b18_1, index, value);
   };
-  protoOf(SlotWriter).h1s = function (group, index, value) {
+  protoOf(SlotWriter).j1s = function (group, index, value) {
     var address = groupIndexToAddress(this, group);
-    var slotsStart = slotIndex(this.j17_1, this, address);
-    var slotsEnd = dataIndex_0(this.j17_1, this, groupIndexToAddress(this, group + 1 | 0));
+    var slotsStart = slotIndex(this.l17_1, this, address);
+    var slotsEnd = dataIndex_0(this.l17_1, this, groupIndexToAddress(this, group + 1 | 0));
     var slotsIndex = slotsStart + index | 0;
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
     if (!(slotsIndex >= slotsStart ? slotsIndex < slotsEnd : false)) {
@@ -9212,34 +9212,34 @@
       composeRuntimeError(toString(message));
     }
     var slotAddress = dataIndexToDataAddress(this, slotsIndex);
-    var result = this.k17_1[slotAddress];
-    this.k17_1[slotAddress] = value;
+    var result = this.m17_1[slotAddress];
+    this.m17_1[slotAddress] = value;
     return result;
   };
-  protoOf(SlotWriter).b1s = function () {
-    if (this.u17_1 > 0) {
-      insertSlots(this, 1, this.b18_1);
+  protoOf(SlotWriter).d1s = function () {
+    if (this.w17_1 > 0) {
+      insertSlots(this, 1, this.d18_1);
     }
-    var tmp = this.k17_1;
-    var tmp1 = this.p17_1;
-    this.p17_1 = tmp1 + 1 | 0;
+    var tmp = this.m17_1;
+    var tmp1 = this.r17_1;
+    this.r17_1 = tmp1 + 1 | 0;
     return tmp[dataIndexToDataAddress(this, tmp1)];
   };
-  protoOf(SlotWriter).m1m = function (anchor, index) {
-    return this.p1m(this.w1b(anchor), index);
+  protoOf(SlotWriter).o1m = function (anchor, index) {
+    return this.r1m(this.y1b(anchor), index);
   };
-  protoOf(SlotWriter).p1m = function (groupIndex, index) {
+  protoOf(SlotWriter).r1m = function (groupIndex, index) {
     var address = groupIndexToAddress(this, groupIndex);
-    var slotsStart = slotIndex(this.j17_1, this, address);
-    var slotsEnd = dataIndex_0(this.j17_1, this, groupIndexToAddress(this, groupIndex + 1 | 0));
+    var slotsStart = slotIndex(this.l17_1, this, address);
+    var slotsEnd = dataIndex_0(this.l17_1, this, groupIndexToAddress(this, groupIndex + 1 | 0));
     var slotsIndex = slotsStart + index | 0;
     if (!(slotsStart <= slotsIndex ? slotsIndex < slotsEnd : false)) {
-      return Companion_getInstance_0().z18_1;
+      return Companion_getInstance_0().b19_1;
     }
     var slotAddress = dataIndexToDataAddress(this, slotsIndex);
-    return this.k17_1[slotAddress];
+    return this.m17_1[slotAddress];
   };
-  protoOf(SlotWriter).j1r = function (amount) {
+  protoOf(SlotWriter).l1r = function (amount) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
     if (!(amount >= 0)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.advanceBy.<anonymous>' call
@@ -9248,49 +9248,49 @@
     }
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this.u17_1 <= 0)) {
+    if (!(this.w17_1 <= 0)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.advanceBy.<anonymous>' call
       var message_0 = 'Cannot call seek() while inserting';
       throw IllegalStateException_init_$Create$(toString(message_0));
     }
     if (amount === 0)
       return Unit_instance;
-    var index = this.z17_1 + amount | 0;
+    var index = this.b18_1 + amount | 0;
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(index >= this.b18_1 ? index <= this.a18_1 : false)) {
+    if (!(index >= this.d18_1 ? index <= this.c18_1 : false)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.advanceBy.<anonymous>' call
-      var message_1 = 'Cannot seek outside the current group (' + this.b18_1 + '-' + this.a18_1 + ')';
+      var message_1 = 'Cannot seek outside the current group (' + this.d18_1 + '-' + this.c18_1 + ')';
       composeRuntimeError(toString(message_1));
     }
-    this.z17_1 = index;
-    var newSlot = dataIndex_0(this.j17_1, this, groupIndexToAddress(this, index));
-    this.p17_1 = newSlot;
-    this.q17_1 = newSlot;
+    this.b18_1 = index;
+    var newSlot = dataIndex_0(this.l17_1, this, groupIndexToAddress(this, index));
+    this.r17_1 = newSlot;
+    this.s17_1 = newSlot;
   };
-  protoOf(SlotWriter).t18 = function () {
-    var newGroup = this.a18_1;
-    this.z17_1 = newGroup;
-    this.p17_1 = dataIndex_0(this.j17_1, this, groupIndexToAddress(this, newGroup));
+  protoOf(SlotWriter).v18 = function () {
+    var newGroup = this.c18_1;
+    this.b18_1 = newGroup;
+    this.r17_1 = dataIndex_0(this.l17_1, this, groupIndexToAddress(this, newGroup));
   };
-  protoOf(SlotWriter).p19 = function () {
-    var tmp1 = this.u17_1;
-    this.u17_1 = tmp1 + 1 | 0;
+  protoOf(SlotWriter).r19 = function () {
+    var tmp1 = this.w17_1;
+    this.w17_1 = tmp1 + 1 | 0;
     if (tmp1 === 0) {
       saveCurrentGroupEnd(this);
     }
   };
-  protoOf(SlotWriter).u1a = function () {
+  protoOf(SlotWriter).w1a = function () {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this.u17_1 > 0)) {
+    if (!(this.w17_1 > 0)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.endInsert.<anonymous>' call
       var message = 'Unbalanced begin/end insert';
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    this.u17_1 = this.u17_1 - 1 | 0;
-    if (this.u17_1 === 0) {
+    this.w17_1 = this.w17_1 - 1 | 0;
+    if (this.w17_1 === 0) {
       // Inline function 'androidx.compose.runtime.runtimeCheck' call
-      if (!(this.y17_1.l() === this.w17_1.l())) {
+      if (!(this.a18_1.l() === this.y17_1.l())) {
         // Inline function 'androidx.compose.runtime.SlotWriter.endInsert.<anonymous>' call
         var message_0 = 'startGroup/endGroup mismatch while inserting';
         composeRuntimeError(toString(message_0));
@@ -9298,38 +9298,38 @@
       restoreCurrentGroupEnd(this);
     }
   };
-  protoOf(SlotWriter).w18 = function () {
+  protoOf(SlotWriter).y18 = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.u17_1 === 0)) {
+    if (!(this.w17_1 === 0)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.startGroup.<anonymous>' call
       var message = 'Key must be supplied when inserting';
       composeRuntimeError(toString(message));
     }
-    startGroup_1(this, 0, Companion_getInstance_0().z18_1, false, Companion_getInstance_0().z18_1);
+    startGroup_1(this, 0, Companion_getInstance_0().b19_1, false, Companion_getInstance_0().b19_1);
   };
-  protoOf(SlotWriter).a19 = function (key, dataKey) {
-    return startGroup_1(this, key, dataKey, false, Companion_getInstance_0().z18_1);
+  protoOf(SlotWriter).c19 = function (key, dataKey) {
+    return startGroup_1(this, key, dataKey, false, Companion_getInstance_0().b19_1);
   };
-  protoOf(SlotWriter).c19 = function (key, objectKey) {
-    return startGroup_1(this, key, objectKey, true, Companion_getInstance_0().z18_1);
+  protoOf(SlotWriter).e19 = function (key, objectKey) {
+    return startGroup_1(this, key, objectKey, true, Companion_getInstance_0().b19_1);
   };
-  protoOf(SlotWriter).b19 = function (key, objectKey, aux) {
+  protoOf(SlotWriter).d19 = function (key, objectKey, aux) {
     return startGroup_1(this, key, objectKey, false, aux);
   };
-  protoOf(SlotWriter).t1a = function () {
-    var inserting = this.u17_1 > 0;
-    var currentGroup = this.z17_1;
-    var currentGroupEnd = this.a18_1;
-    var groupIndex = this.b18_1;
+  protoOf(SlotWriter).v1a = function () {
+    var inserting = this.w17_1 > 0;
+    var currentGroup = this.b18_1;
+    var currentGroupEnd = this.c18_1;
+    var groupIndex = this.d18_1;
     var groupAddress = groupIndexToAddress(this, groupIndex);
-    var newNodes = this.v17_1;
+    var newNodes = this.x17_1;
     var newGroupSize = currentGroup - groupIndex | 0;
-    var isNode_0 = isNode(this.j17_1, groupAddress);
+    var isNode_0 = isNode(this.l17_1, groupAddress);
     if (inserting) {
-      updateGroupSize(this.j17_1, groupAddress, newGroupSize);
-      updateNodeCount_0(this.j17_1, groupAddress, newNodes);
-      this.v17_1 = this.y17_1.d1a() + (isNode_0 ? 1 : newNodes) | 0;
-      this.b18_1 = parent(this.j17_1, this, groupIndex);
+      updateGroupSize(this.l17_1, groupAddress, newGroupSize);
+      updateNodeCount_0(this.l17_1, groupAddress, newNodes);
+      this.x17_1 = this.a18_1.f1a() + (isNode_0 ? 1 : newNodes) | 0;
+      this.d18_1 = parent(this.l17_1, this, groupIndex);
     } else {
       // Inline function 'androidx.compose.runtime.runtimeCheck' call
       if (!(currentGroup === currentGroupEnd)) {
@@ -9337,17 +9337,17 @@
         var message = 'Expected to be at the end of a group';
         composeRuntimeError(toString(message));
       }
-      var oldGroupSize = groupSize(this.j17_1, groupAddress);
-      var oldNodes = nodeCount(this.j17_1, groupAddress);
-      updateGroupSize(this.j17_1, groupAddress, newGroupSize);
-      updateNodeCount_0(this.j17_1, groupAddress, newNodes);
-      var newParent = this.w17_1.d1a();
+      var oldGroupSize = groupSize(this.l17_1, groupAddress);
+      var oldNodes = nodeCount(this.l17_1, groupAddress);
+      updateGroupSize(this.l17_1, groupAddress, newGroupSize);
+      updateNodeCount_0(this.l17_1, groupAddress, newNodes);
+      var newParent = this.y17_1.f1a();
       restoreCurrentGroupEnd(this);
-      this.b18_1 = newParent;
-      var groupParent = parent(this.j17_1, this, groupIndex);
-      this.v17_1 = this.y17_1.d1a();
+      this.d18_1 = newParent;
+      var groupParent = parent(this.l17_1, this, groupIndex);
+      this.x17_1 = this.a18_1.f1a();
       if (groupParent === newParent) {
-        this.v17_1 = this.v17_1 + (isNode_0 ? 0 : newNodes - oldNodes | 0) | 0;
+        this.x17_1 = this.x17_1 + (isNode_0 ? 0 : newNodes - oldNodes | 0) | 0;
       } else {
         var groupSizeDelta = newGroupSize - oldGroupSize | 0;
         var nodesDelta = isNode_0 ? 0 : newNodes - oldNodes | 0;
@@ -9356,75 +9356,75 @@
           while ((!(current === 0) ? !(current === newParent) : false) ? !(nodesDelta === 0) ? true : !(groupSizeDelta === 0) : false) {
             var currentAddress = groupIndexToAddress(this, current);
             if (!(groupSizeDelta === 0)) {
-              var newSize = groupSize(this.j17_1, currentAddress) + groupSizeDelta | 0;
-              updateGroupSize(this.j17_1, currentAddress, newSize);
+              var newSize = groupSize(this.l17_1, currentAddress) + groupSizeDelta | 0;
+              updateGroupSize(this.l17_1, currentAddress, newSize);
             }
             if (!(nodesDelta === 0)) {
-              updateNodeCount_0(this.j17_1, currentAddress, nodeCount(this.j17_1, currentAddress) + nodesDelta | 0);
+              updateNodeCount_0(this.l17_1, currentAddress, nodeCount(this.l17_1, currentAddress) + nodesDelta | 0);
             }
-            if (isNode(this.j17_1, currentAddress))
+            if (isNode(this.l17_1, currentAddress))
               nodesDelta = 0;
-            current = parent(this.j17_1, this, current);
+            current = parent(this.l17_1, this, current);
           }
         }
-        this.v17_1 = this.v17_1 + nodesDelta | 0;
+        this.x17_1 = this.x17_1 + nodesDelta | 0;
       }
     }
     return newNodes;
   };
-  protoOf(SlotWriter).i1s = function (index) {
+  protoOf(SlotWriter).k1s = function (index) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.u17_1 <= 0)) {
+    if (!(this.w17_1 <= 0)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.ensureStarted.<anonymous>' call
       var message = 'Cannot call ensureStarted() while inserting';
       composeRuntimeError(toString(message));
     }
-    var parent = this.b18_1;
+    var parent = this.d18_1;
     if (!(parent === index)) {
       // Inline function 'androidx.compose.runtime.runtimeCheck' call
-      if (!(index >= parent ? index < this.a18_1 : false)) {
+      if (!(index >= parent ? index < this.c18_1 : false)) {
         // Inline function 'androidx.compose.runtime.SlotWriter.ensureStarted.<anonymous>' call
         var message_0 = 'Started group at ' + index + ' must be a subgroup of the group at ' + parent;
         composeRuntimeError(toString(message_0));
       }
-      var oldCurrent = this.z17_1;
-      var oldCurrentSlot = this.p17_1;
-      var oldCurrentSlotEnd = this.q17_1;
-      this.z17_1 = index;
-      this.w18();
-      this.z17_1 = oldCurrent;
-      this.p17_1 = oldCurrentSlot;
-      this.q17_1 = oldCurrentSlotEnd;
+      var oldCurrent = this.b18_1;
+      var oldCurrentSlot = this.r17_1;
+      var oldCurrentSlotEnd = this.s17_1;
+      this.b18_1 = index;
+      this.y18();
+      this.b18_1 = oldCurrent;
+      this.r17_1 = oldCurrentSlot;
+      this.s17_1 = oldCurrentSlotEnd;
     }
   };
-  protoOf(SlotWriter).j1s = function (anchor) {
-    return this.i1s(anchor.z1r(this));
+  protoOf(SlotWriter).l1s = function (anchor) {
+    return this.k1s(anchor.b1s(this));
   };
-  protoOf(SlotWriter).j18 = function () {
-    var groupAddress = groupIndexToAddress(this, this.z17_1);
-    var newGroup = this.z17_1 + groupSize(this.j17_1, groupAddress) | 0;
-    this.z17_1 = newGroup;
-    this.p17_1 = dataIndex_0(this.j17_1, this, groupIndexToAddress(this, newGroup));
-    return isNode(this.j17_1, groupAddress) ? 1 : nodeCount(this.j17_1, groupAddress);
+  protoOf(SlotWriter).l18 = function () {
+    var groupAddress = groupIndexToAddress(this, this.b18_1);
+    var newGroup = this.b18_1 + groupSize(this.l17_1, groupAddress) | 0;
+    this.b18_1 = newGroup;
+    this.r17_1 = dataIndex_0(this.l17_1, this, groupIndexToAddress(this, newGroup));
+    return isNode(this.l17_1, groupAddress) ? 1 : nodeCount(this.l17_1, groupAddress);
   };
-  protoOf(SlotWriter).w1g = function () {
+  protoOf(SlotWriter).y1g = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.u17_1 === 0)) {
+    if (!(this.w17_1 === 0)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.removeGroup.<anonymous>' call
       var message = 'Cannot remove group while inserting';
       composeRuntimeError(toString(message));
     }
-    var oldGroup = this.z17_1;
-    var oldSlot = this.p17_1;
-    var count = this.j18();
-    var tmp0_safe_receiver = sourceInformationOf(this, this.b18_1);
+    var oldGroup = this.b18_1;
+    var oldSlot = this.r17_1;
+    var count = this.l18();
+    var tmp0_safe_receiver = sourceInformationOf(this, this.d18_1);
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.SlotWriter.removeGroup.<anonymous>' call
-      var tmp0_safe_receiver_0 = this.z1q(oldGroup);
+      var tmp0_safe_receiver_0 = this.b1r(oldGroup);
       var tmp;
       if (tmp0_safe_receiver_0 == null) {
         tmp = null;
@@ -9432,34 +9432,34 @@
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.SlotWriter.removeGroup.<anonymous>.<anonymous>' call
-        tmp = tmp0_safe_receiver.k1s(tmp0_safe_receiver_0);
+        tmp = tmp0_safe_receiver.m1s(tmp0_safe_receiver_0);
       }
     }
-    var tmp1_safe_receiver = this.d18_1;
+    var tmp1_safe_receiver = this.f18_1;
     if (tmp1_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      while (tmp1_safe_receiver.v1f() ? tmp1_safe_receiver.s1e() >= oldGroup : false) {
-        tmp1_safe_receiver.o1r();
+      while (tmp1_safe_receiver.x1f() ? tmp1_safe_receiver.u1e() >= oldGroup : false) {
+        tmp1_safe_receiver.q1r();
       }
     }
-    var anchorsRemoved = removeGroups(this, oldGroup, this.z17_1 - oldGroup | 0);
-    removeSlots(this, oldSlot, this.p17_1 - oldSlot | 0, oldGroup - 1 | 0);
-    this.z17_1 = oldGroup;
-    this.p17_1 = oldSlot;
-    this.v17_1 = this.v17_1 - count | 0;
+    var anchorsRemoved = removeGroups(this, oldGroup, this.b18_1 - oldGroup | 0);
+    removeSlots(this, oldSlot, this.r17_1 - oldSlot | 0, oldGroup - 1 | 0);
+    this.b18_1 = oldGroup;
+    this.r17_1 = oldSlot;
+    this.x17_1 = this.x17_1 - count | 0;
     return anchorsRemoved;
   };
-  protoOf(SlotWriter).t1g = function () {
-    var start = dataIndex_0(this.j17_1, this, groupIndexToAddress(this, this.z17_1));
-    var end = dataIndex_0(this.j17_1, this, groupIndexToAddress(this, this.z17_1 + this.h1a(this.z17_1) | 0));
+  protoOf(SlotWriter).v1g = function () {
+    var start = dataIndex_0(this.l17_1, this, groupIndexToAddress(this, this.b18_1));
+    var end = dataIndex_0(this.l17_1, this, groupIndexToAddress(this, this.b18_1 + this.j1a(this.b18_1) | 0));
     return new SlotWriter$groupSlots$1(start, end, this);
   };
-  protoOf(SlotWriter).l1s = function (offset) {
+  protoOf(SlotWriter).n1s = function (offset) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.u17_1 === 0)) {
+    if (!(this.w17_1 === 0)) {
       // Inline function 'androidx.compose.runtime.SlotWriter.moveGroup.<anonymous>' call
       var message = 'Cannot move a group while inserting';
       composeRuntimeError(toString(message));
@@ -9472,13 +9472,13 @@
     }
     if (offset === 0)
       return Unit_instance;
-    var current = this.z17_1;
-    var parent = this.b18_1;
-    var parentEnd = this.a18_1;
+    var current = this.b18_1;
+    var parent = this.d18_1;
+    var parentEnd = this.c18_1;
     var count = offset;
     var groupToMove = current;
     while (count > 0) {
-      groupToMove = groupToMove + groupSize(this.j17_1, groupIndexToAddress(this, groupToMove)) | 0;
+      groupToMove = groupToMove + groupSize(this.l17_1, groupIndexToAddress(this, groupToMove)) | 0;
       // Inline function 'androidx.compose.runtime.runtimeCheck' call
       if (!(groupToMove <= parentEnd)) {
         // Inline function 'androidx.compose.runtime.SlotWriter.moveGroup.<anonymous>' call
@@ -9487,17 +9487,17 @@
       }
       count = count - 1 | 0;
     }
-    var moveLen = groupSize(this.j17_1, groupIndexToAddress(this, groupToMove));
-    var currentSlot = this.p17_1;
-    var dataStart = dataIndex_0(this.j17_1, this, groupIndexToAddress(this, groupToMove));
-    var dataEnd = dataIndex_0(this.j17_1, this, groupIndexToAddress(this, groupToMove + moveLen | 0));
+    var moveLen = groupSize(this.l17_1, groupIndexToAddress(this, groupToMove));
+    var currentSlot = this.r17_1;
+    var dataStart = dataIndex_0(this.l17_1, this, groupIndexToAddress(this, groupToMove));
+    var dataEnd = dataIndex_0(this.l17_1, this, groupIndexToAddress(this, groupToMove + moveLen | 0));
     var moveDataLen = dataEnd - dataStart | 0;
     // Inline function 'kotlin.math.max' call
-    var a = this.z17_1 - 1 | 0;
+    var a = this.b18_1 - 1 | 0;
     var tmp$ret$3 = Math.max(a, 0);
     insertSlots(this, moveDataLen, tmp$ret$3);
     insertGroups(this, moveLen);
-    var groups = this.j17_1;
+    var groups = this.l17_1;
     var moveLocationAddress = groupIndexToAddress(this, groupToMove + moveLen | 0);
     var moveLocationOffset = imul(moveLocationAddress, 5);
     var currentAddress = groupIndexToAddress(this, current);
@@ -9511,17 +9511,17 @@
     // Inline function 'kotlin.js.asDynamic' call
     arrayCopy(tmp, groups, destinationOffset, moveLocationOffset, endIndex);
     if (moveDataLen > 0) {
-      var slots = this.k17_1;
+      var slots = this.m17_1;
       // Inline function 'kotlin.collections.copyInto' call
       var startIndex = dataIndexToDataAddress(this, dataStart + moveDataLen | 0);
       var endIndex_0 = dataIndexToDataAddress(this, dataEnd + moveDataLen | 0);
       arrayCopy(slots, slots, currentSlot, startIndex, endIndex_0);
     }
     var dataMoveDistance = (dataStart + moveDataLen | 0) - currentSlot | 0;
-    var slotsGapStart = this.r17_1;
-    var slotsGapLen = this.s17_1;
-    var slotsCapacity = this.k17_1.length;
-    var slotsGapOwner = this.t17_1;
+    var slotsGapStart = this.t17_1;
+    var slotsGapLen = this.u17_1;
+    var slotsCapacity = this.m17_1.length;
+    var slotsGapOwner = this.v17_1;
     var inductionVariable = current;
     var last = current + moveLen | 0;
     if (inductionVariable < last)
@@ -9543,118 +9543,118 @@
       var message_2 = 'Unexpectedly removed anchors';
       composeRuntimeError(toString(message_2));
     }
-    fixParentAnchorsFor(this, parent, this.a18_1, current);
+    fixParentAnchorsFor(this, parent, this.c18_1, current);
     if (moveDataLen > 0) {
       removeSlots(this, dataStart + moveDataLen | 0, moveDataLen, (groupToMove + moveLen | 0) - 1 | 0);
     }
   };
-  protoOf(SlotWriter).m1s = function (anchor, offset, writer) {
-    runtimeCheck(writer.u17_1 > 0);
-    runtimeCheck(this.u17_1 === 0);
-    runtimeCheck(anchor.u1i());
-    var location = this.w1b(anchor) + offset | 0;
-    var currentGroup = this.z17_1;
-    runtimeCheck(currentGroup <= location ? location < this.a18_1 : false);
-    var parent = this.p18(location);
-    var size = this.h1a(location);
-    var nodes = this.b1b(location) ? 1 : this.c1b(location);
+  protoOf(SlotWriter).o1s = function (anchor, offset, writer) {
+    runtimeCheck(writer.w17_1 > 0);
+    runtimeCheck(this.w17_1 === 0);
+    runtimeCheck(anchor.w1i());
+    var location = this.y1b(anchor) + offset | 0;
+    var currentGroup = this.b18_1;
+    runtimeCheck(currentGroup <= location ? location < this.c18_1 : false);
+    var parent = this.r18(location);
+    var size = this.j1a(location);
+    var nodes = this.d1b(location) ? 1 : this.e1b(location);
     var result = moveGroup$default(Companion_instance_4, this, location, writer, false, false);
     updateContainsMark(this, parent);
     var current = parent;
     var updatingNodes = nodes > 0;
     while (current >= currentGroup) {
       var currentAddress = groupIndexToAddress(this, current);
-      updateGroupSize(this.j17_1, currentAddress, groupSize(this.j17_1, currentAddress) - size | 0);
+      updateGroupSize(this.l17_1, currentAddress, groupSize(this.l17_1, currentAddress) - size | 0);
       if (updatingNodes) {
-        if (isNode(this.j17_1, currentAddress))
+        if (isNode(this.l17_1, currentAddress))
           updatingNodes = false;
         else {
-          updateNodeCount_0(this.j17_1, currentAddress, nodeCount(this.j17_1, currentAddress) - nodes | 0);
+          updateNodeCount_0(this.l17_1, currentAddress, nodeCount(this.l17_1, currentAddress) - nodes | 0);
         }
       }
-      current = this.p18(current);
+      current = this.r18(current);
     }
     if (updatingNodes) {
-      runtimeCheck(this.v17_1 >= nodes);
-      this.v17_1 = this.v17_1 - nodes | 0;
+      runtimeCheck(this.x17_1 >= nodes);
+      this.x17_1 = this.x17_1 - nodes | 0;
     }
     return result;
   };
-  protoOf(SlotWriter).n1s = function (table, index, removeSourceGroup) {
-    runtimeCheck(this.u17_1 > 0);
-    if (((index === 0 ? this.z17_1 === 0 : false) ? this.i17_1.l15_1 === 0 : false) ? groupSize(table.k15_1, index) === table.l15_1 : false) {
-      var myGroups = this.j17_1;
-      var mySlots = this.k17_1;
-      var myAnchors = this.l17_1;
-      var mySourceInformation = this.m17_1;
-      var groups = table.k15_1;
-      var groupsSize = table.l15_1;
-      var slots = table.m15_1;
-      var slotsSize = table.n15_1;
-      var sourceInformation = table.t15_1;
-      this.j17_1 = groups;
-      this.k17_1 = slots;
-      this.l17_1 = table.s15_1;
-      this.n17_1 = groupsSize;
-      this.o17_1 = (groups.length / 5 | 0) - groupsSize | 0;
-      this.r17_1 = slotsSize;
-      this.s17_1 = slots.length - slotsSize | 0;
-      this.t17_1 = groupsSize;
-      this.m17_1 = sourceInformation;
-      table.c1r(myGroups, 0, mySlots, 0, myAnchors, mySourceInformation);
-      return this.l17_1;
+  protoOf(SlotWriter).p1s = function (table, index, removeSourceGroup) {
+    runtimeCheck(this.w17_1 > 0);
+    if (((index === 0 ? this.b18_1 === 0 : false) ? this.k17_1.n15_1 === 0 : false) ? groupSize(table.m15_1, index) === table.n15_1 : false) {
+      var myGroups = this.l17_1;
+      var mySlots = this.m17_1;
+      var myAnchors = this.n17_1;
+      var mySourceInformation = this.o17_1;
+      var groups = table.m15_1;
+      var groupsSize = table.n15_1;
+      var slots = table.o15_1;
+      var slotsSize = table.p15_1;
+      var sourceInformation = table.v15_1;
+      this.l17_1 = groups;
+      this.m17_1 = slots;
+      this.n17_1 = table.u15_1;
+      this.p17_1 = groupsSize;
+      this.q17_1 = (groups.length / 5 | 0) - groupsSize | 0;
+      this.t17_1 = slotsSize;
+      this.u17_1 = slots.length - slotsSize | 0;
+      this.v17_1 = groupsSize;
+      this.o17_1 = sourceInformation;
+      table.e1r(myGroups, 0, mySlots, 0, myAnchors, mySourceInformation);
+      return this.n17_1;
     }
     // Inline function 'androidx.compose.runtime.SlotTable.write' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotTable.write.<anonymous>' call
-    var writer = table.s18();
+    var writer = table.u18();
     var tmp;
     try {
       // Inline function 'androidx.compose.runtime.SlotWriter.moveFrom.<anonymous>' call
       tmp = moveGroup(Companion_instance_4, writer, index, this, true, true, removeSourceGroup);
     }finally {
-      writer.g17();
+      writer.i17();
     }
     return tmp;
   };
-  protoOf(SlotWriter).o1s = function (offset, table, index) {
-    runtimeCheck(this.u17_1 <= 0 ? this.h1a(this.z17_1 + offset | 0) === 1 : false);
-    var previousCurrentGroup = this.z17_1;
-    var previousCurrentSlot = this.p17_1;
-    var previousCurrentSlotEnd = this.q17_1;
-    this.j1r(offset);
-    this.w18();
-    this.p19();
+  protoOf(SlotWriter).q1s = function (offset, table, index) {
+    runtimeCheck(this.w17_1 <= 0 ? this.j1a(this.b18_1 + offset | 0) === 1 : false);
+    var previousCurrentGroup = this.b18_1;
+    var previousCurrentSlot = this.r17_1;
+    var previousCurrentSlotEnd = this.s17_1;
+    this.l1r(offset);
+    this.y18();
+    this.r19();
     // Inline function 'androidx.compose.runtime.SlotTable.write' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotTable.write.<anonymous>' call
-    var writer = table.s18();
+    var writer = table.u18();
     var tmp;
     try {
       // Inline function 'androidx.compose.runtime.SlotWriter.moveIntoGroupFrom.<anonymous>' call
       tmp = moveGroup$default(Companion_instance_4, writer, index, this, false, true);
     }finally {
-      writer.g17();
+      writer.i17();
     }
     var anchors = tmp;
-    this.u1a();
-    this.t1a();
-    this.z17_1 = previousCurrentGroup;
-    this.p17_1 = previousCurrentSlot;
-    this.q17_1 = previousCurrentSlotEnd;
+    this.w1a();
+    this.v1a();
+    this.b18_1 = previousCurrentGroup;
+    this.r17_1 = previousCurrentSlot;
+    this.s17_1 = previousCurrentSlotEnd;
     return anchors;
   };
-  protoOf(SlotWriter).q19 = function (index) {
+  protoOf(SlotWriter).s19 = function (index) {
     // Inline function 'androidx.compose.runtime.getOrAdd' call
-    var this_0 = this.l17_1;
+    var this_0 = this.n17_1;
     var effectiveSize = this.l();
     var location = search$accessor$145qfty(this_0, index, effectiveSize);
     var tmp;
     if (location < 0) {
       // Inline function 'androidx.compose.runtime.SlotWriter.anchor.<anonymous>' call
-      var anchor = new Anchor(index <= this.n17_1 ? index : -(this.l() - index | 0) | 0);
+      var anchor = new Anchor(index <= this.p17_1 ? index : -(this.l() - index | 0) | 0);
       this_0.w1(-(location + 1 | 0) | 0, anchor);
       tmp = anchor;
     } else {
@@ -9662,59 +9662,59 @@
     }
     return tmp;
   };
-  protoOf(SlotWriter).p1s = function (group) {
+  protoOf(SlotWriter).r1s = function (group) {
     var groupAddress = groupIndexToAddress(this, group);
-    if (!hasMark(this.j17_1, groupAddress)) {
-      updateMark(this.j17_1, groupAddress, true);
-      if (!containsMark(this.j17_1, groupAddress)) {
-        updateContainsMark(this, this.p18(group));
+    if (!hasMark(this.l17_1, groupAddress)) {
+      updateMark(this.l17_1, groupAddress, true);
+      if (!containsMark(this.l17_1, groupAddress)) {
+        updateContainsMark(this, this.r18(group));
       }
     }
   };
-  protoOf(SlotWriter).l1b = function (group, $super) {
-    group = group === VOID ? this.b18_1 : group;
+  protoOf(SlotWriter).n1b = function (group, $super) {
+    group = group === VOID ? this.d18_1 : group;
     var tmp;
     if ($super === VOID) {
-      this.p1s(group);
+      this.r1s(group);
       tmp = Unit_instance;
     } else {
-      tmp = $super.p1s.call(this, group);
+      tmp = $super.r1s.call(this, group);
     }
     return tmp;
   };
-  protoOf(SlotWriter).w1b = function (anchor) {
+  protoOf(SlotWriter).y1b = function (anchor) {
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotWriter.anchorIndex.<anonymous>' call
-    var it = anchor.t1c_1;
+    var it = anchor.v1c_1;
     return it < 0 ? this.l() + it | 0 : it;
   };
   protoOf(SlotWriter).toString = function () {
-    return 'SlotWriter(current = ' + this.z17_1 + ' end=' + this.a18_1 + ' size = ' + this.l() + ' ' + ('gap=' + this.n17_1 + '-' + (this.n17_1 + this.o17_1 | 0) + ')');
+    return 'SlotWriter(current = ' + this.b18_1 + ' end=' + this.c18_1 + ' size = ' + this.l() + ' ' + ('gap=' + this.p17_1 + '-' + (this.p17_1 + this.q17_1 | 0) + ')');
   };
-  protoOf(SlotWriter).z1q = function (group) {
-    return (0 <= group ? group < this.l() : false) ? find(this.l17_1, group, this.l()) : null;
+  protoOf(SlotWriter).b1r = function (group) {
+    return (0 <= group ? group < this.l() : false) ? find(this.n17_1, group, this.l()) : null;
   };
   protoOf(SlotWriter).l = function () {
-    return _get_capacity__a9k9f3(this) - this.o17_1 | 0;
+    return _get_capacity__a9k9f3(this) - this.q17_1 | 0;
   };
   function Anchor(loc) {
-    this.t1c_1 = loc;
+    this.v1c_1 = loc;
   }
-  protoOf(Anchor).u1i = function () {
-    return !(this.t1c_1 === IntCompanionObject_instance.MIN_VALUE);
+  protoOf(Anchor).w1i = function () {
+    return !(this.v1c_1 === IntCompanionObject_instance.MIN_VALUE);
   };
-  protoOf(Anchor).w1f = function (slots) {
-    return slots.w1b(this);
+  protoOf(Anchor).y1f = function (slots) {
+    return slots.y1b(this);
   };
-  protoOf(Anchor).z1r = function (writer) {
-    return writer.w1b(this);
+  protoOf(Anchor).b1s = function (writer) {
+    return writer.y1b(this);
   };
   protoOf(Anchor).toString = function () {
-    return anyToString(this) + '{ location = ' + this.t1c_1 + ' }';
+    return anyToString(this) + '{ location = ' + this.v1c_1 + ' }';
   };
   function openInformation($this) {
-    var tmp0_safe_receiver = $this.g1r_1;
+    var tmp0_safe_receiver = $this.i1r_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -9731,7 +9731,7 @@
           // Inline function 'androidx.compose.runtime.GroupSourceInformation.openInformation.<anonymous>.<anonymous>' call
           var tmp_0;
           if (value instanceof GroupSourceInformation) {
-            tmp_0 = !value.h1r_1;
+            tmp_0 = !value.j1r_1;
           } else {
             tmp_0 = false;
           }
@@ -9751,13 +9751,13 @@
     return tmp2_elvis_lhs == null ? $this : tmp2_elvis_lhs;
   }
   function add($this, group) {
-    var tmp0_elvis_lhs = $this.g1r_1;
+    var tmp0_elvis_lhs = $this.i1r_1;
     var groups = tmp0_elvis_lhs == null ? ArrayList_init_$Create$() : tmp0_elvis_lhs;
-    $this.g1r_1 = groups;
+    $this.i1r_1 = groups;
     groups.y(group);
   }
   function hasAnchor($this, anchor) {
-    var tmp0_safe_receiver = $this.g1r_1;
+    var tmp0_safe_receiver = $this.i1r_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -9802,32 +9802,32 @@
     return tmp === true;
   }
   function GroupSourceInformation(key, sourceInformation) {
-    this.e1r_1 = key;
-    this.f1r_1 = sourceInformation;
-    this.g1r_1 = null;
-    this.h1r_1 = false;
+    this.g1r_1 = key;
+    this.h1r_1 = sourceInformation;
+    this.i1r_1 = null;
+    this.j1r_1 = false;
   }
-  protoOf(GroupSourceInformation).d1s = function (key, sourceInformation) {
+  protoOf(GroupSourceInformation).f1s = function (key, sourceInformation) {
     add(openInformation(this), new GroupSourceInformation(key, sourceInformation));
   };
-  protoOf(GroupSourceInformation).e1s = function () {
-    openInformation(this).g17();
+  protoOf(GroupSourceInformation).g1s = function () {
+    openInformation(this).i17();
   };
-  protoOf(GroupSourceInformation).k1r = function (writer, group) {
-    add(openInformation(this), writer.q19(group));
+  protoOf(GroupSourceInformation).m1r = function (writer, group) {
+    add(openInformation(this), writer.s19(group));
   };
-  protoOf(GroupSourceInformation).q1s = function (table, group) {
-    add(openInformation(this), table.q19(group));
+  protoOf(GroupSourceInformation).s1s = function (table, group) {
+    add(openInformation(this), table.s19(group));
   };
-  protoOf(GroupSourceInformation).i1r = function (writer, predecessor, group) {
-    var tmp0_elvis_lhs = this.g1r_1;
+  protoOf(GroupSourceInformation).k1r = function (writer, predecessor, group) {
+    var tmp0_elvis_lhs = this.i1r_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.also' call
       var this_0 = ArrayList_init_$Create$();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.GroupSourceInformation.addGroupAfter.<anonymous>' call
-      this.g1r_1 = this_0;
+      this.i1r_1 = this_0;
       tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
@@ -9835,7 +9835,7 @@
     var groups = tmp;
     var tmp_0;
     if (predecessor >= 0) {
-      var anchor = writer.z1q(predecessor);
+      var anchor = writer.b1r(predecessor);
       var tmp_1;
       if (!(anchor == null)) {
         var tmp$ret$2;
@@ -9875,13 +9875,13 @@
       tmp_0 = 0;
     }
     var index_0 = tmp_0;
-    groups.w1(index_0, writer.q19(group));
+    groups.w1(index_0, writer.s19(group));
   };
-  protoOf(GroupSourceInformation).g17 = function () {
-    this.h1r_1 = true;
+  protoOf(GroupSourceInformation).i17 = function () {
+    this.j1r_1 = true;
   };
-  protoOf(GroupSourceInformation).k1s = function (anchor) {
-    var groups = this.g1r_1;
+  protoOf(GroupSourceInformation).m1s = function (anchor) {
+    var groups = this.i1r_1;
     if (!(groups == null)) {
       var index = groups.l() - 1 | 0;
       while (index >= 0) {
@@ -9892,14 +9892,14 @@
           }
         } else {
           if (item instanceof GroupSourceInformation)
-            if (!item.k1s(anchor)) {
+            if (!item.m1s(anchor)) {
               groups.k1(index);
             }
         }
         index = index - 1 | 0;
       }
       if (groups.s()) {
-        this.g1r_1 = null;
+        this.i1r_1 = null;
         return false;
       }
       return true;
@@ -9909,275 +9909,275 @@
   function node(_this__u8e3s4, $this, index) {
     var tmp;
     if (isNode(_this__u8e3s4, index)) {
-      tmp = $this.w16_1[nodeIndex_0(_this__u8e3s4, index)];
+      tmp = $this.y16_1[nodeIndex_0(_this__u8e3s4, index)];
     } else {
-      tmp = Companion_getInstance_0().z18_1;
+      tmp = Companion_getInstance_0().b19_1;
     }
     return tmp;
   }
   function aux(_this__u8e3s4, $this, index) {
     var tmp;
     if (hasAux(_this__u8e3s4, index)) {
-      tmp = $this.w16_1[auxIndex_0(_this__u8e3s4, index)];
+      tmp = $this.y16_1[auxIndex_0(_this__u8e3s4, index)];
     } else {
-      tmp = Companion_getInstance_0().z18_1;
+      tmp = Companion_getInstance_0().b19_1;
     }
     return tmp;
   }
   function objectKey(_this__u8e3s4, $this, index) {
     var tmp;
     if (hasObjectKey(_this__u8e3s4, index)) {
-      tmp = $this.w16_1[objectKeyIndex(_this__u8e3s4, index)];
+      tmp = $this.y16_1[objectKeyIndex(_this__u8e3s4, index)];
     } else {
       tmp = null;
     }
     return tmp;
   }
   function SlotReader(table) {
-    this.t16_1 = table;
-    this.u16_1 = this.t16_1.k15_1;
-    this.v16_1 = this.t16_1.l15_1;
-    this.w16_1 = this.t16_1.m15_1;
-    this.x16_1 = this.t16_1.n15_1;
-    this.y16_1 = null;
-    this.z16_1 = false;
-    this.a17_1 = 0;
-    this.b17_1 = this.v16_1;
-    this.c17_1 = -1;
-    this.d17_1 = 0;
-    this.e17_1 = 0;
+    this.v16_1 = table;
+    this.w16_1 = this.v16_1.m15_1;
+    this.x16_1 = this.v16_1.n15_1;
+    this.y16_1 = this.v16_1.o15_1;
+    this.z16_1 = this.v16_1.p15_1;
+    this.a17_1 = null;
+    this.b17_1 = false;
+    this.c17_1 = 0;
+    this.d17_1 = this.x16_1;
+    this.e17_1 = -1;
     this.f17_1 = 0;
+    this.g17_1 = 0;
+    this.h17_1 = 0;
   }
   protoOf(SlotReader).l = function () {
-    return this.v16_1;
+    return this.x16_1;
   };
-  protoOf(SlotReader).p18 = function (index) {
-    return parentAnchor(this.u16_1, index);
+  protoOf(SlotReader).r18 = function (index) {
+    return parentAnchor(this.w16_1, index);
   };
-  protoOf(SlotReader).x1f = function () {
-    return isNode(this.u16_1, this.a17_1);
+  protoOf(SlotReader).z1f = function () {
+    return isNode(this.w16_1, this.c17_1);
   };
-  protoOf(SlotReader).b1b = function (index) {
-    return isNode(this.u16_1, index);
+  protoOf(SlotReader).d1b = function (index) {
+    return isNode(this.w16_1, index);
   };
-  protoOf(SlotReader).c1b = function (index) {
-    return nodeCount(this.u16_1, index);
+  protoOf(SlotReader).e1b = function (index) {
+    return nodeCount(this.w16_1, index);
   };
-  protoOf(SlotReader).a1d = function (index) {
-    return isNode(this.u16_1, index) ? node(this.u16_1, this, index) : null;
+  protoOf(SlotReader).c1d = function (index) {
+    return isNode(this.w16_1, index) ? node(this.w16_1, this, index) : null;
   };
-  protoOf(SlotReader).n1a = function () {
-    return this.w1a() ? true : this.a17_1 === this.b17_1;
+  protoOf(SlotReader).p1a = function () {
+    return this.y1a() ? true : this.c17_1 === this.d17_1;
   };
-  protoOf(SlotReader).w1a = function () {
-    return this.d17_1 > 0;
+  protoOf(SlotReader).y1a = function () {
+    return this.f17_1 > 0;
   };
-  protoOf(SlotReader).r1s = function () {
-    return groupSize(this.u16_1, this.a17_1);
+  protoOf(SlotReader).t1s = function () {
+    return groupSize(this.w16_1, this.c17_1);
   };
-  protoOf(SlotReader).h1a = function (index) {
-    return groupSize(this.u16_1, index);
+  protoOf(SlotReader).j1a = function (index) {
+    return groupSize(this.w16_1, index);
   };
-  protoOf(SlotReader).m1a = function () {
-    return this.b17_1;
+  protoOf(SlotReader).o1a = function () {
+    return this.d17_1;
   };
-  protoOf(SlotReader).l19 = function () {
+  protoOf(SlotReader).n19 = function () {
     var tmp;
-    if (this.a17_1 < this.b17_1) {
-      tmp = key(this.u16_1, this.a17_1);
+    if (this.c17_1 < this.d17_1) {
+      tmp = key(this.w16_1, this.c17_1);
     } else {
       tmp = 0;
     }
     return tmp;
   };
+  protoOf(SlotReader).q18 = function (index) {
+    return key(this.w16_1, index);
+  };
+  protoOf(SlotReader).h1f = function () {
+    return this.g17_1 - slotAnchor(this.w16_1, this.e17_1) | 0;
+  };
+  protoOf(SlotReader).g1b = function (index) {
+    return hasObjectKey(this.w16_1, index);
+  };
+  protoOf(SlotReader).p19 = function () {
+    return this.c17_1 < this.d17_1 ? objectKey(this.w16_1, this, this.c17_1) : null;
+  };
+  protoOf(SlotReader).p18 = function (index) {
+    return objectKey(this.w16_1, this, index);
+  };
+  protoOf(SlotReader).x18 = function () {
+    return this.c17_1 < this.d17_1 ? aux(this.w16_1, this, this.c17_1) : 0;
+  };
   protoOf(SlotReader).o18 = function (index) {
-    return key(this.u16_1, index);
+    return aux(this.w16_1, this, index);
   };
-  protoOf(SlotReader).f1f = function () {
-    return this.e17_1 - slotAnchor(this.u16_1, this.c17_1) | 0;
+  protoOf(SlotReader).a1e = function (index) {
+    return hasMark(this.w16_1, index);
   };
-  protoOf(SlotReader).e1b = function (index) {
-    return hasObjectKey(this.u16_1, index);
+  protoOf(SlotReader).k1d = function (index) {
+    return containsMark(this.w16_1, index);
   };
-  protoOf(SlotReader).n19 = function () {
-    return this.a17_1 < this.b17_1 ? objectKey(this.u16_1, this, this.a17_1) : null;
+  protoOf(SlotReader).h1b = function () {
+    return this.e17_1 >= 0 ? nodeCount(this.w16_1, this.e17_1) : 0;
   };
-  protoOf(SlotReader).n18 = function (index) {
-    return objectKey(this.u16_1, this, index);
-  };
-  protoOf(SlotReader).v18 = function () {
-    return this.a17_1 < this.b17_1 ? aux(this.u16_1, this, this.a17_1) : 0;
-  };
-  protoOf(SlotReader).m18 = function (index) {
-    return aux(this.u16_1, this, index);
-  };
-  protoOf(SlotReader).y1d = function (index) {
-    return hasMark(this.u16_1, index);
-  };
-  protoOf(SlotReader).i1d = function (index) {
-    return containsMark(this.u16_1, index);
-  };
-  protoOf(SlotReader).f1b = function () {
-    return this.c17_1 >= 0 ? nodeCount(this.u16_1, this.c17_1) : 0;
-  };
-  protoOf(SlotReader).j1d = function (group, index) {
-    var start = slotAnchor(this.u16_1, group);
+  protoOf(SlotReader).l1d = function (group, index) {
+    var start = slotAnchor(this.w16_1, group);
     var next = group + 1 | 0;
-    var end = next < this.v16_1 ? dataAnchor(this.u16_1, next) : this.x16_1;
+    var end = next < this.x16_1 ? dataAnchor(this.w16_1, next) : this.z16_1;
     var address = start + index | 0;
-    return address < end ? this.w16_1[address] : Companion_getInstance_0().z18_1;
+    return address < end ? this.y16_1[address] : Companion_getInstance_0().b19_1;
   };
   protoOf(SlotReader).d1 = function () {
-    if (this.d17_1 > 0 ? true : this.e17_1 >= this.f17_1)
-      return Companion_getInstance_0().z18_1;
-    var tmp1 = this.e17_1;
-    this.e17_1 = tmp1 + 1 | 0;
-    return this.w16_1[tmp1];
+    if (this.f17_1 > 0 ? true : this.g17_1 >= this.h17_1)
+      return Companion_getInstance_0().b19_1;
+    var tmp1 = this.g17_1;
+    this.g17_1 = tmp1 + 1 | 0;
+    return this.y16_1[tmp1];
   };
-  protoOf(SlotReader).y18 = function () {
-    this.d17_1 = this.d17_1 + 1 | 0;
+  protoOf(SlotReader).a19 = function () {
+    this.f17_1 = this.f17_1 + 1 | 0;
   };
-  protoOf(SlotReader).s1a = function () {
+  protoOf(SlotReader).u1a = function () {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this.d17_1 > 0)) {
+    if (!(this.f17_1 > 0)) {
       // Inline function 'androidx.compose.runtime.SlotReader.endEmpty.<anonymous>' call
       var message = 'Unbalanced begin/end empty';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    this.d17_1 = this.d17_1 - 1 | 0;
+    this.f17_1 = this.f17_1 - 1 | 0;
   };
-  protoOf(SlotReader).g17 = function () {
-    this.z16_1 = true;
-    this.t16_1.a1r(this, this.y16_1);
+  protoOf(SlotReader).i17 = function () {
+    this.b17_1 = true;
+    this.v16_1.c1r(this, this.a17_1);
   };
-  protoOf(SlotReader).w18 = function () {
-    if (this.d17_1 <= 0) {
-      var parent = this.c17_1;
-      var currentGroup = this.a17_1;
+  protoOf(SlotReader).y18 = function () {
+    if (this.f17_1 <= 0) {
+      var parent = this.e17_1;
+      var currentGroup = this.c17_1;
       // Inline function 'kotlin.require' call
       // Inline function 'kotlin.contracts.contract' call
-      if (!(parentAnchor(this.u16_1, currentGroup) === parent)) {
+      if (!(parentAnchor(this.w16_1, currentGroup) === parent)) {
         // Inline function 'androidx.compose.runtime.SlotReader.startGroup.<anonymous>' call
         var message = 'Invalid slot table detected';
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      var tmp0_safe_receiver = this.y16_1;
-      var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.u2(this.q19(parent));
+      var tmp0_safe_receiver = this.a17_1;
+      var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.u2(this.s19(parent));
       if (tmp1_safe_receiver == null)
         null;
       else {
-        tmp1_safe_receiver.q1s(this.t16_1, currentGroup);
+        tmp1_safe_receiver.s1s(this.v16_1, currentGroup);
       }
-      this.c17_1 = currentGroup;
-      this.b17_1 = currentGroup + groupSize(this.u16_1, currentGroup) | 0;
-      this.a17_1 = currentGroup + 1 | 0;
-      this.e17_1 = slotAnchor(this.u16_1, currentGroup);
-      this.f17_1 = currentGroup >= (this.v16_1 - 1 | 0) ? this.x16_1 : dataAnchor(this.u16_1, currentGroup + 1 | 0);
+      this.e17_1 = currentGroup;
+      this.d17_1 = currentGroup + groupSize(this.w16_1, currentGroup) | 0;
+      this.c17_1 = currentGroup + 1 | 0;
+      this.g17_1 = slotAnchor(this.w16_1, currentGroup);
+      this.h17_1 = currentGroup >= (this.x16_1 - 1 | 0) ? this.z16_1 : dataAnchor(this.w16_1, currentGroup + 1 | 0);
     }
   };
-  protoOf(SlotReader).x18 = function () {
-    if (this.d17_1 <= 0) {
+  protoOf(SlotReader).z18 = function () {
+    if (this.f17_1 <= 0) {
       // Inline function 'kotlin.require' call
       // Inline function 'kotlin.contracts.contract' call
-      if (!isNode(this.u16_1, this.a17_1)) {
+      if (!isNode(this.w16_1, this.c17_1)) {
         // Inline function 'androidx.compose.runtime.SlotReader.startNode.<anonymous>' call
         var message = 'Expected a node group';
         throw IllegalArgumentException_init_$Create$(toString(message));
       }
-      this.w18();
+      this.y18();
     }
   };
-  protoOf(SlotReader).j18 = function () {
+  protoOf(SlotReader).l18 = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.d17_1 === 0)) {
+    if (!(this.f17_1 === 0)) {
       // Inline function 'androidx.compose.runtime.SlotReader.skipGroup.<anonymous>' call
       var message = 'Cannot skip while in an empty region';
       composeRuntimeError(toString(message));
     }
-    var count = isNode(this.u16_1, this.a17_1) ? 1 : nodeCount(this.u16_1, this.a17_1);
-    this.a17_1 = this.a17_1 + groupSize(this.u16_1, this.a17_1) | 0;
+    var count = isNode(this.w16_1, this.c17_1) ? 1 : nodeCount(this.w16_1, this.c17_1);
+    this.c17_1 = this.c17_1 + groupSize(this.w16_1, this.c17_1) | 0;
     return count;
   };
-  protoOf(SlotReader).t18 = function () {
+  protoOf(SlotReader).v18 = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.d17_1 === 0)) {
+    if (!(this.f17_1 === 0)) {
       // Inline function 'androidx.compose.runtime.SlotReader.skipToGroupEnd.<anonymous>' call
       var message = 'Cannot skip the enclosing group while in an empty region';
       composeRuntimeError(toString(message));
     }
-    this.a17_1 = this.b17_1;
+    this.c17_1 = this.d17_1;
   };
-  protoOf(SlotReader).a1a = function (index) {
+  protoOf(SlotReader).c1a = function (index) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.d17_1 === 0)) {
+    if (!(this.f17_1 === 0)) {
       // Inline function 'androidx.compose.runtime.SlotReader.reposition.<anonymous>' call
       var message = 'Cannot reposition while in an empty region';
       composeRuntimeError(toString(message));
     }
-    this.a17_1 = index;
-    var parent = index < this.v16_1 ? parentAnchor(this.u16_1, index) : -1;
-    this.c17_1 = parent;
+    this.c17_1 = index;
+    var parent = index < this.x16_1 ? parentAnchor(this.w16_1, index) : -1;
+    this.e17_1 = parent;
     if (parent < 0)
-      this.b17_1 = this.v16_1;
+      this.d17_1 = this.x16_1;
     else
-      this.b17_1 = parent + groupSize(this.u16_1, parent) | 0;
-    this.e17_1 = 0;
-    this.f17_1 = 0;
+      this.d17_1 = parent + groupSize(this.w16_1, parent) | 0;
+    this.g17_1 = 0;
+    this.h17_1 = 0;
   };
-  protoOf(SlotReader).z1a = function (index) {
-    var newCurrentEnd = index + groupSize(this.u16_1, index) | 0;
-    var current = this.a17_1;
+  protoOf(SlotReader).b1b = function (index) {
+    var newCurrentEnd = index + groupSize(this.w16_1, index) | 0;
+    var current = this.c17_1;
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
     if (!(current >= index ? current <= newCurrentEnd : false)) {
       // Inline function 'androidx.compose.runtime.SlotReader.restoreParent.<anonymous>' call
       var message = 'Index ' + index + ' is not a parent of ' + current;
       composeRuntimeError(toString(message));
     }
-    this.c17_1 = index;
-    this.b17_1 = newCurrentEnd;
-    this.e17_1 = 0;
-    this.f17_1 = 0;
+    this.e17_1 = index;
+    this.d17_1 = newCurrentEnd;
+    this.g17_1 = 0;
+    this.h17_1 = 0;
   };
-  protoOf(SlotReader).q1a = function () {
-    if (this.d17_1 === 0) {
+  protoOf(SlotReader).s1a = function () {
+    if (this.f17_1 === 0) {
       // Inline function 'androidx.compose.runtime.runtimeCheck' call
-      if (!(this.a17_1 === this.b17_1)) {
+      if (!(this.c17_1 === this.d17_1)) {
         // Inline function 'androidx.compose.runtime.SlotReader.endGroup.<anonymous>' call
         var message = 'endGroup() not called at the end of a group';
         composeRuntimeError(toString(message));
       }
-      var parent = parentAnchor(this.u16_1, this.c17_1);
-      this.c17_1 = parent;
-      this.b17_1 = parent < 0 ? this.v16_1 : parent + groupSize(this.u16_1, parent) | 0;
+      var parent = parentAnchor(this.w16_1, this.e17_1);
+      this.e17_1 = parent;
+      this.d17_1 = parent < 0 ? this.x16_1 : parent + groupSize(this.w16_1, parent) | 0;
     }
   };
-  protoOf(SlotReader).m19 = function () {
+  protoOf(SlotReader).o19 = function () {
     // Inline function 'kotlin.collections.mutableListOf' call
     var result = ArrayList_init_$Create$();
-    if (this.d17_1 > 0)
+    if (this.f17_1 > 0)
       return result;
     var index = 0;
-    var childIndex = this.a17_1;
-    while (childIndex < this.b17_1) {
-      var tmp = key(this.u16_1, childIndex);
-      var tmp_0 = objectKey(this.u16_1, this, childIndex);
+    var childIndex = this.c17_1;
+    while (childIndex < this.d17_1) {
+      var tmp = key(this.w16_1, childIndex);
+      var tmp_0 = objectKey(this.w16_1, this, childIndex);
       var tmp_1 = childIndex;
-      var tmp_2 = isNode(this.u16_1, childIndex) ? 1 : nodeCount(this.u16_1, childIndex);
+      var tmp_2 = isNode(this.w16_1, childIndex) ? 1 : nodeCount(this.w16_1, childIndex);
       var tmp0 = index;
       index = tmp0 + 1 | 0;
       result.y(new KeyInfo(tmp, tmp_0, tmp_1, tmp_2, tmp0));
-      childIndex = childIndex + groupSize(this.u16_1, childIndex) | 0;
+      childIndex = childIndex + groupSize(this.w16_1, childIndex) | 0;
     }
     return result;
   };
   protoOf(SlotReader).toString = function () {
-    return 'SlotReader(current=' + this.a17_1 + ', key=' + this.l19() + ', ' + ('parent=' + this.c17_1 + ', end=' + this.b17_1 + ')');
+    return 'SlotReader(current=' + this.c17_1 + ', key=' + this.n19() + ', ' + ('parent=' + this.e17_1 + ', end=' + this.d17_1 + ')');
   };
-  protoOf(SlotReader).q19 = function (index) {
+  protoOf(SlotReader).s19 = function (index) {
     // Inline function 'androidx.compose.runtime.getOrAdd' call
-    var this_0 = this.t16_1.s15_1;
-    var effectiveSize = this.v16_1;
+    var this_0 = this.v16_1.u15_1;
+    var effectiveSize = this.x16_1;
     var location = search$accessor$145qfty(this_0, index, effectiveSize);
     var tmp;
     if (location < 0) {
@@ -10202,7 +10202,7 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.search.<anonymous>' call
-      var it = _this__u8e3s4.m(mid).t1c_1;
+      var it = _this__u8e3s4.m(mid).v1c_1;
       var midVal = it < 0 ? effectiveSize + it | 0 : it;
       var cmp = compareTo(midVal, location);
       if (cmp < 0)
@@ -10272,41 +10272,41 @@
     return slot >= _this__u8e3s4.length ? _this__u8e3s4.length : _this__u8e3s4[slot + 4 | 0] + countOneBits_0(_this__u8e3s4[slot + 1 | 0] >> 29) | 0;
   }
   function validateRead($this) {
-    if (!($this.s1s_1.r15_1 === $this.v1s_1)) {
+    if (!($this.u1s_1.t15_1 === $this.x1s_1)) {
       throw ConcurrentModificationException_init_$Create$();
     }
   }
   function GroupIterator(table, start, end) {
-    this.s1s_1 = table;
-    this.t1s_1 = end;
-    this.u1s_1 = start;
-    this.v1s_1 = this.s1s_1.r15_1;
-    if (this.s1s_1.q15_1)
+    this.u1s_1 = table;
+    this.v1s_1 = end;
+    this.w1s_1 = start;
+    this.x1s_1 = this.u1s_1.t15_1;
+    if (this.u1s_1.s15_1)
       throw ConcurrentModificationException_init_$Create$();
   }
   protoOf(GroupIterator).b1 = function () {
-    return this.u1s_1 < this.t1s_1;
+    return this.w1s_1 < this.v1s_1;
   };
   protoOf(GroupIterator).d1 = function () {
     validateRead(this);
-    var group = this.u1s_1;
-    this.u1s_1 = this.u1s_1 + groupSize(this.s1s_1.k15_1, group) | 0;
-    return new SlotTableGroup(this.s1s_1, group, this.v1s_1);
+    var group = this.w1s_1;
+    this.w1s_1 = this.w1s_1 + groupSize(this.u1s_1.m15_1, group) | 0;
+    return new SlotTableGroup(this.u1s_1, group, this.x1s_1);
   };
   function validateRead_0($this) {
-    if (!($this.w1s_1.r15_1 === $this.y1s_1)) {
+    if (!($this.y1s_1.t15_1 === $this.a1t_1)) {
       throw ConcurrentModificationException_init_$Create$();
     }
   }
   function SlotTableGroup(table, group, version) {
-    version = version === VOID ? table.r15_1 : version;
-    this.w1s_1 = table;
-    this.x1s_1 = group;
-    this.y1s_1 = version;
+    version = version === VOID ? table.t15_1 : version;
+    this.y1s_1 = table;
+    this.z1s_1 = group;
+    this.a1t_1 = version;
   }
   protoOf(SlotTableGroup).n = function () {
     validateRead_0(this);
-    var tmp0_safe_receiver = this.w1s_1.d1r(this.x1s_1);
+    var tmp0_safe_receiver = this.y1s_1.f1r(this.z1s_1);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -10314,10 +10314,10 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.SlotTableGroup.iterator.<anonymous>' call
-      tmp = new SourceInformationGroupIterator(this.w1s_1, tmp0_safe_receiver);
+      tmp = new SourceInformationGroupIterator(this.y1s_1, tmp0_safe_receiver);
     }
     var tmp1_elvis_lhs = tmp;
-    return tmp1_elvis_lhs == null ? new GroupIterator(this.w1s_1, this.x1s_1 + 1 | 0, this.x1s_1 + groupSize(this.w1s_1.k15_1, this.x1s_1) | 0) : tmp1_elvis_lhs;
+    return tmp1_elvis_lhs == null ? new GroupIterator(this.y1s_1, this.z1s_1 + 1 | 0, this.z1s_1 + groupSize(this.y1s_1.m15_1, this.z1s_1) | 0) : tmp1_elvis_lhs;
   };
   function initGroup(_this__u8e3s4, address, key, isNode, hasDataKey, hasData, parentAnchor, dataAnchor) {
     var nodeBit = isNode ? 1073741824 : 0;
@@ -10347,73 +10347,73 @@
       tmp = list;
     }
     list = tmp;
-    this.n1r_1 = list;
+    this.p1r_1 = list;
   }
-  protoOf(PrioritySet).p1r = function (value) {
+  protoOf(PrioritySet).r1r = function (value) {
     var tmp;
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!this.n1r_1.s()) {
-      tmp = this.n1r_1.m(0) === value ? true : this.n1r_1.m(this.n1r_1.l() - 1 | 0) === value;
+    if (!this.p1r_1.s()) {
+      tmp = this.p1r_1.m(0) === value ? true : this.p1r_1.m(this.p1r_1.l() - 1 | 0) === value;
     } else {
       tmp = false;
     }
     if (tmp)
       return Unit_instance;
-    var index = this.n1r_1.l();
-    this.n1r_1.y(value);
+    var index = this.p1r_1.l();
+    this.p1r_1.y(value);
     $l$loop: while (index > 0) {
       var parent = ((index + 1 | 0) >>> 1 | 0) - 1 | 0;
-      var parentValue = this.n1r_1.m(parent);
+      var parentValue = this.p1r_1.m(parent);
       if (value > parentValue) {
-        this.n1r_1.v(index, parentValue);
+        this.p1r_1.v(index, parentValue);
       } else
         break $l$loop;
       index = parent;
     }
-    this.n1r_1.v(index, value);
+    this.p1r_1.v(index, value);
   };
-  protoOf(PrioritySet).v1f = function () {
+  protoOf(PrioritySet).x1f = function () {
     // Inline function 'kotlin.collections.isNotEmpty' call
-    return !this.n1r_1.s();
+    return !this.p1r_1.s();
   };
-  protoOf(PrioritySet).s1e = function () {
-    return first(this.n1r_1);
+  protoOf(PrioritySet).u1e = function () {
+    return first(this.p1r_1);
   };
-  protoOf(PrioritySet).o1r = function () {
+  protoOf(PrioritySet).q1r = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!(this.n1r_1.l() > 0)) {
+    if (!(this.p1r_1.l() > 0)) {
       // Inline function 'androidx.compose.runtime.PrioritySet.takeMax.<anonymous>' call
       var message = 'Set is empty';
       composeRuntimeError(toString(message));
     }
-    var value = this.n1r_1.m(0);
+    var value = this.p1r_1.m(0);
     $l$loop: while (true) {
       var tmp;
       // Inline function 'kotlin.collections.isNotEmpty' call
-      if (!this.n1r_1.s()) {
-        tmp = this.n1r_1.m(0) === value;
+      if (!this.p1r_1.s()) {
+        tmp = this.p1r_1.m(0) === value;
       } else {
         tmp = false;
       }
       if (!tmp) {
         break $l$loop;
       }
-      this.n1r_1.v(0, last(this.n1r_1));
-      this.n1r_1.k1(this.n1r_1.l() - 1 | 0);
+      this.p1r_1.v(0, last(this.p1r_1));
+      this.p1r_1.k1(this.p1r_1.l() - 1 | 0);
       var index = 0;
-      var size = this.n1r_1.l();
-      var max = this.n1r_1.l() >>> 1 | 0;
+      var size = this.p1r_1.l();
+      var max = this.p1r_1.l() >>> 1 | 0;
       $l$loop_2: while (index < max) {
-        var indexValue = this.n1r_1.m(index);
+        var indexValue = this.p1r_1.m(index);
         var left = imul(index + 1 | 0, 2) - 1 | 0;
-        var leftValue = this.n1r_1.m(left);
+        var leftValue = this.p1r_1.m(left);
         var right = imul(index + 1 | 0, 2);
         if (right < size) {
-          var rightValue = this.n1r_1.m(right);
+          var rightValue = this.p1r_1.m(right);
           if (rightValue > leftValue) {
             if (rightValue > indexValue) {
-              this.n1r_1.v(index, rightValue);
-              this.n1r_1.v(right, indexValue);
+              this.p1r_1.v(index, rightValue);
+              this.p1r_1.v(right, indexValue);
               index = right;
               continue $l$loop_2;
             } else
@@ -10421,8 +10421,8 @@
           }
         }
         if (leftValue > indexValue) {
-          this.n1r_1.v(index, leftValue);
-          this.n1r_1.v(left, indexValue);
+          this.p1r_1.v(index, leftValue);
+          this.p1r_1.v(left, indexValue);
           index = left;
         } else
           break $l$loop_2;
@@ -10483,20 +10483,20 @@
     return _this__u8e3s4[imul(address, 5) + 1 | 0];
   }
   function KeyInfo(key, objectKey, location, nodes, index) {
-    this.r19_1 = key;
-    this.s19_1 = objectKey;
-    this.t19_1 = location;
-    this.u19_1 = nodes;
-    this.v19_1 = index;
+    this.t19_1 = key;
+    this.u19_1 = objectKey;
+    this.v19_1 = location;
+    this.w19_1 = nodes;
+    this.x19_1 = index;
   }
   function SourceInformationGroupIterator(table, group) {
-    this.z1s_1 = table;
-    this.a1t_1 = group;
-    this.b1t_1 = this.z1s_1.r15_1;
-    this.c1t_1 = 0;
+    this.b1t_1 = table;
+    this.c1t_1 = group;
+    this.d1t_1 = this.b1t_1.t15_1;
+    this.e1t_1 = 0;
   }
   protoOf(SourceInformationGroupIterator).b1 = function () {
-    var tmp0_safe_receiver = this.a1t_1.g1r_1;
+    var tmp0_safe_receiver = this.c1t_1.i1r_1;
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -10504,28 +10504,28 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.SourceInformationGroupIterator.hasNext.<anonymous>' call
-      tmp = this.c1t_1 < tmp0_safe_receiver.l();
+      tmp = this.e1t_1 < tmp0_safe_receiver.l();
     }
     var tmp1_elvis_lhs = tmp;
     return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
   };
   protoOf(SourceInformationGroupIterator).d1 = function () {
-    var tmp2_safe_receiver = this.a1t_1.g1r_1;
+    var tmp2_safe_receiver = this.c1t_1.i1r_1;
     var tmp;
     if (tmp2_safe_receiver == null) {
       tmp = null;
     } else {
-      var tmp1 = this.c1t_1;
-      this.c1t_1 = tmp1 + 1 | 0;
+      var tmp1 = this.e1t_1;
+      this.e1t_1 = tmp1 + 1 | 0;
       tmp = tmp2_safe_receiver.m(tmp1);
     }
     var group = tmp;
     var tmp_0;
     if (group instanceof Anchor) {
-      tmp_0 = new SlotTableGroup(this.z1s_1, group.t1c_1, this.b1t_1);
+      tmp_0 = new SlotTableGroup(this.b1t_1, group.v1c_1, this.d1t_1);
     } else {
       if (group instanceof GroupSourceInformation) {
-        tmp_0 = new SourceInformationSlotTableGroup(this.z1s_1, group);
+        tmp_0 = new SourceInformationSlotTableGroup(this.b1t_1, group);
       } else {
         composeRuntimeError('Unexpected group information structure');
       }
@@ -10533,14 +10533,14 @@
     return tmp_0;
   };
   function SourceInformationSlotTableGroup(table, sourceInformation) {
-    this.d1t_1 = table;
-    this.e1t_1 = sourceInformation;
-    this.f1t_1 = this.e1t_1.e1r_1;
-    this.g1t_1 = emptyList();
-    this.h1t_1 = this;
+    this.f1t_1 = table;
+    this.g1t_1 = sourceInformation;
+    this.h1t_1 = this.g1t_1.g1r_1;
+    this.i1t_1 = emptyList();
+    this.j1t_1 = this;
   }
   protoOf(SourceInformationSlotTableGroup).n = function () {
-    return new SourceInformationGroupIterator(this.d1t_1, this.e1t_1);
+    return new SourceInformationGroupIterator(this.f1t_1, this.g1t_1);
   };
   function search$accessor$145qfty(_this__u8e3s4, location, effectiveSize) {
     return search(_this__u8e3s4, location, effectiveSize);
@@ -10553,12 +10553,12 @@
   }
   function StructuralEqualityPolicy() {
   }
-  protoOf(StructuralEqualityPolicy).j1t = function (a, b) {
+  protoOf(StructuralEqualityPolicy).l1t = function (a, b) {
     return equals(a, b);
   };
-  protoOf(StructuralEqualityPolicy).u1m = function (a, b) {
+  protoOf(StructuralEqualityPolicy).w1m = function (a, b) {
     var tmp = (a == null ? true : !(a == null)) ? a : THROW_CCE();
-    return this.j1t(tmp, (b == null ? true : !(b == null)) ? b : THROW_CCE());
+    return this.l1t(tmp, (b == null ? true : !(b == null)) ? b : THROW_CCE());
   };
   protoOf(StructuralEqualityPolicy).toString = function () {
     return 'StructuralEqualityPolicy';
@@ -10577,31 +10577,31 @@
   }
   function StateStateRecord(myValue) {
     StateRecord.call(this);
-    this.m1t_1 = myValue;
+    this.o1t_1 = myValue;
   }
-  protoOf(StateStateRecord).n1t = function (value) {
+  protoOf(StateStateRecord).p1t = function (value) {
     var tmp = this;
-    tmp.m1t_1 = (value instanceof StateStateRecord ? value : THROW_CCE()).m1t_1;
+    tmp.o1t_1 = (value instanceof StateStateRecord ? value : THROW_CCE()).o1t_1;
   };
-  protoOf(StateStateRecord).o1t = function () {
-    return new StateStateRecord(this.m1t_1);
+  protoOf(StateStateRecord).q1t = function () {
+    return new StateStateRecord(this.o1t_1);
   };
   function SnapshotMutableStateImpl(value, policy) {
     StateObjectImpl.call(this);
-    this.q1t_1 = policy;
-    this.r1t_1 = new StateStateRecord(value);
+    this.s1t_1 = policy;
+    this.t1t_1 = new StateStateRecord(value);
   }
-  protoOf(SnapshotMutableStateImpl).a1l = function () {
-    return this.q1t_1;
+  protoOf(SnapshotMutableStateImpl).c1l = function () {
+    return this.s1t_1;
   };
   protoOf(SnapshotMutableStateImpl).kv = function (value) {
     // Inline function 'androidx.compose.runtime.snapshots.withCurrent' call
-    var this_0 = this.r1t_1;
+    var this_0 = this.t1t_1;
     var it = current(this_0);
     var tmp;
-    if (!this.a1l().u1m(it.m1t_1, value)) {
+    if (!this.c1l().w1m(it.o1t_1, value)) {
       // Inline function 'androidx.compose.runtime.snapshots.overwritable' call
-      var this_1 = this.r1t_1;
+      var this_1 = this.t1t_1;
       var snapshot = get_snapshotInitializer();
       // Inline function 'kotlin.also' call
       // Inline function 'androidx.compose.runtime.snapshots.sync' call
@@ -10609,8 +10609,8 @@
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       // Inline function 'androidx.compose.runtime.snapshots.overwritable.<anonymous>' call
-      snapshot = Companion_instance_12.x11();
-      overwritableRecord(this_1, this, snapshot, it).m1t_1 = value;
+      snapshot = Companion_instance_12.z11();
+      overwritableRecord(this_1, this, snapshot, it).o1t_1 = value;
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.snapshots.overwritable.<anonymous>' call
       notifyWrite(snapshot, this);
@@ -10619,31 +10619,31 @@
     return tmp;
   };
   protoOf(SnapshotMutableStateImpl).o2 = function () {
-    return readable_0(this.r1t_1, this).m1t_1;
+    return readable_0(this.t1t_1, this).o1t_1;
   };
-  protoOf(SnapshotMutableStateImpl).s1t = function () {
-    return this.r1t_1;
+  protoOf(SnapshotMutableStateImpl).u1t = function () {
+    return this.t1t_1;
   };
-  protoOf(SnapshotMutableStateImpl).t1t = function (value) {
+  protoOf(SnapshotMutableStateImpl).v1t = function (value) {
     var tmp = this;
-    tmp.r1t_1 = value instanceof StateStateRecord ? value : THROW_CCE();
+    tmp.t1t_1 = value instanceof StateStateRecord ? value : THROW_CCE();
   };
-  protoOf(SnapshotMutableStateImpl).u1t = function (previous, current, applied) {
+  protoOf(SnapshotMutableStateImpl).w1t = function (previous, current, applied) {
     var previousRecord = previous instanceof StateStateRecord ? previous : THROW_CCE();
     var currentRecord = current instanceof StateStateRecord ? current : THROW_CCE();
     var appliedRecord = applied instanceof StateStateRecord ? applied : THROW_CCE();
     var tmp;
-    if (this.a1l().u1m(currentRecord.m1t_1, appliedRecord.m1t_1)) {
+    if (this.c1l().w1m(currentRecord.o1t_1, appliedRecord.o1t_1)) {
       tmp = current;
     } else {
-      var merged = this.a1l().i1t(previousRecord.m1t_1, currentRecord.m1t_1, appliedRecord.m1t_1);
+      var merged = this.c1l().k1t(previousRecord.o1t_1, currentRecord.o1t_1, appliedRecord.o1t_1);
       var tmp_0;
       if (!(merged == null)) {
         // Inline function 'kotlin.also' call
-        var this_0 = appliedRecord.o1t();
+        var this_0 = appliedRecord.q1t();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.SnapshotMutableStateImpl.mergeRecords.<anonymous>' call
-        (this_0 instanceof StateStateRecord ? this_0 : THROW_CCE()).m1t_1 = merged;
+        (this_0 instanceof StateStateRecord ? this_0 : THROW_CCE()).o1t_1 = merged;
         tmp_0 = this_0;
       } else {
         tmp_0 = null;
@@ -10654,115 +10654,115 @@
   };
   protoOf(SnapshotMutableStateImpl).toString = function () {
     // Inline function 'androidx.compose.runtime.snapshots.withCurrent' call
-    var this_0 = this.r1t_1;
+    var this_0 = this.t1t_1;
     // Inline function 'androidx.compose.runtime.SnapshotMutableStateImpl.toString.<anonymous>' call
-    return 'MutableState(value=' + current(this_0).m1t_1 + ')@' + hashCode(this);
+    return 'MutableState(value=' + current(this_0).o1t_1 + ')@' + hashCode(this);
   };
   function mutableStateListOf() {
     return new SnapshotStateList();
   }
   function SnapshotThreadLocal() {
-    this.b1l_1 = new AtomicReference(get_emptyThreadMap());
-    this.c1l_1 = new SynchronizedObject();
+    this.d1l_1 = new AtomicReference(get_emptyThreadMap());
+    this.e1l_1 = new SynchronizedObject();
   }
   protoOf(SnapshotThreadLocal).lq = function () {
-    var tmp = this.b1l_1.lq().y1t(currentThreadId());
+    var tmp = this.d1l_1.lq().a1u(currentThreadId());
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
-  protoOf(SnapshotThreadLocal).d1l = function (value) {
+  protoOf(SnapshotThreadLocal).f1l = function (value) {
     var key = currentThreadId();
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
-    this.c1l_1;
-    var current = this.b1l_1.lq();
-    if (current.z1t(key, value))
+    this.e1l_1;
+    var current = this.d1l_1.lq();
+    if (current.b1u(key, value))
       return Unit_instance;
-    this.b1l_1.w1i(current.a1u(key, value));
+    this.d1l_1.y1i(current.c1u(key, value));
   };
   function IntStack() {
-    this.x15_1 = new Int32Array(10);
-    this.y15_1 = 0;
+    this.z15_1 = new Int32Array(10);
+    this.a16_1 = 0;
   }
   protoOf(IntStack).l = function () {
-    return this.y15_1;
+    return this.a16_1;
   };
-  protoOf(IntStack).z15 = function (value) {
-    if (this.y15_1 >= this.x15_1.length) {
-      this.x15_1 = copyOf(this.x15_1, imul(this.x15_1.length, 2));
+  protoOf(IntStack).b16 = function (value) {
+    if (this.a16_1 >= this.z15_1.length) {
+      this.z15_1 = copyOf(this.z15_1, imul(this.z15_1.length, 2));
     }
-    var tmp = this.x15_1;
-    var tmp1 = this.y15_1;
-    this.y15_1 = tmp1 + 1 | 0;
+    var tmp = this.z15_1;
+    var tmp1 = this.a16_1;
+    this.a16_1 = tmp1 + 1 | 0;
     tmp[tmp1] = value;
   };
-  protoOf(IntStack).d1a = function () {
-    var tmp = this.x15_1;
-    this.y15_1 = this.y15_1 - 1 | 0;
-    return tmp[this.y15_1];
+  protoOf(IntStack).f1a = function () {
+    var tmp = this.z15_1;
+    this.a16_1 = this.a16_1 - 1 | 0;
+    return tmp[this.a16_1];
   };
-  protoOf(IntStack).x1r = function (default_0) {
-    return this.y15_1 > 0 ? this.s1e() : default_0;
+  protoOf(IntStack).z1r = function (default_0) {
+    return this.a16_1 > 0 ? this.u1e() : default_0;
   };
-  protoOf(IntStack).s1e = function () {
-    return this.x15_1[this.y15_1 - 1 | 0];
+  protoOf(IntStack).u1e = function () {
+    return this.z15_1[this.a16_1 - 1 | 0];
   };
-  protoOf(IntStack).a1b = function (index) {
-    return this.x15_1[index];
+  protoOf(IntStack).c1b = function (index) {
+    return this.z15_1[index];
   };
   protoOf(IntStack).s = function () {
-    return this.y15_1 === 0;
+    return this.a16_1 === 0;
   };
   protoOf(IntStack).f1 = function () {
-    this.y15_1 = 0;
+    this.a16_1 = 0;
   };
-  protoOf(IntStack).w1r = function (value) {
+  protoOf(IntStack).y1r = function (value) {
     var inductionVariable = 0;
-    var last = this.y15_1;
+    var last = this.a16_1;
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        if (this.x15_1[i] === value)
+        if (this.z15_1[i] === value)
           return i;
       }
        while (inductionVariable < last);
     return -1;
   };
   function Stack() {
-    this.h17_1 = ArrayList_init_$Create$();
+    this.j17_1 = ArrayList_init_$Create$();
   }
   protoOf(Stack).l = function () {
-    return this.h17_1.l();
+    return this.j17_1.l();
   };
-  protoOf(Stack).c1a = function (value) {
-    return this.h17_1.y(value);
+  protoOf(Stack).e1a = function (value) {
+    return this.j17_1.y(value);
   };
-  protoOf(Stack).d1a = function () {
-    return this.h17_1.k1(this.l() - 1 | 0);
+  protoOf(Stack).f1a = function () {
+    return this.j17_1.k1(this.l() - 1 | 0);
   };
-  protoOf(Stack).s1e = function () {
-    return this.h17_1.m(this.l() - 1 | 0);
+  protoOf(Stack).u1e = function () {
+    return this.j17_1.m(this.l() - 1 | 0);
   };
-  protoOf(Stack).a1b = function (index) {
-    return this.h17_1.m(index);
+  protoOf(Stack).c1b = function (index) {
+    return this.j17_1.m(index);
   };
   protoOf(Stack).s = function () {
-    return this.h17_1.s();
+    return this.j17_1.s();
   };
-  protoOf(Stack).v1f = function () {
+  protoOf(Stack).x1f = function () {
     return !this.s();
   };
   protoOf(Stack).f1 = function () {
-    return this.h17_1.f1();
+    return this.j17_1.f1();
   };
   protoOf(Stack).e3 = function () {
     var tmp = 0;
-    var tmp_0 = this.h17_1.l();
+    var tmp_0 = this.j17_1.l();
     // Inline function 'kotlin.arrayOfNulls' call
     var tmp_1 = fillArrayVal(Array(tmp_0), null);
     while (tmp < tmp_0) {
       var tmp_2 = tmp;
-      tmp_1[tmp_2] = this.h17_1.m(tmp_2);
+      tmp_1[tmp_2] = this.j17_1.m(tmp_2);
       tmp = tmp + 1 | 0;
     }
     var tmp_3 = tmp_1;
@@ -10775,27 +10775,27 @@
   }
   function _get_current__qcrdxk($this) {
     // Inline function 'kotlin.getValue' call
-    var this_0 = $this.z1k_1;
+    var this_0 = $this.b1l_1;
     current$factory();
     return this_0.o2();
   }
   function LazyValueHolder(valueProducer) {
-    this.z1k_1 = lazy(valueProducer);
+    this.b1l_1 = lazy(valueProducer);
   }
   protoOf(LazyValueHolder).o2 = function () {
     return _get_current__qcrdxk(this);
   };
   function StaticValueHolder(value) {
-    this.b1u_1 = value;
+    this.d1u_1 = value;
   }
   protoOf(StaticValueHolder).o2 = function () {
-    return this.b1u_1;
+    return this.d1u_1;
   };
   protoOf(StaticValueHolder).toString = function () {
-    return 'StaticValueHolder(value=' + this.b1u_1 + ')';
+    return 'StaticValueHolder(value=' + this.d1u_1 + ')';
   };
   protoOf(StaticValueHolder).hashCode = function () {
-    return this.b1u_1 == null ? 0 : hashCode(this.b1u_1);
+    return this.d1u_1 == null ? 0 : hashCode(this.d1u_1);
   };
   protoOf(StaticValueHolder).equals = function (other) {
     if (this === other)
@@ -10803,7 +10803,7 @@
     if (!(other instanceof StaticValueHolder))
       return false;
     var tmp0_other_with_cast = other instanceof StaticValueHolder ? other : THROW_CCE();
-    if (!equals(this.b1u_1, tmp0_other_with_cast.b1u_1))
+    if (!equals(this.d1u_1, tmp0_other_with_cast.d1u_1))
       return false;
     return true;
   };
@@ -10813,26 +10813,26 @@
     }, null);
   }
   function ChangeList() {
-    this.n1g_1 = new Operations();
+    this.p1g_1 = new Operations();
   }
   protoOf(ChangeList).s = function () {
-    return this.n1g_1.s();
+    return this.p1g_1.s();
   };
-  protoOf(ChangeList).v1f = function () {
-    return this.n1g_1.v1f();
+  protoOf(ChangeList).x1f = function () {
+    return this.p1g_1.x1f();
   };
   protoOf(ChangeList).f1 = function () {
-    this.n1g_1.f1();
+    this.p1g_1.f1();
   };
-  protoOf(ChangeList).m1i = function (applier, slots, rememberManager) {
-    return this.n1g_1.k1u(applier, slots, rememberManager);
+  protoOf(ChangeList).o1i = function (applier, slots, rememberManager) {
+    return this.p1g_1.m1u(applier, slots, rememberManager);
   };
-  protoOf(ChangeList).l1u = function (value) {
+  protoOf(ChangeList).n1u = function (value) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = Remember_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushRemember.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.Remember.Value' call
@@ -10841,7 +10841,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$0, value);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -10851,7 +10851,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -10859,11 +10859,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -10877,7 +10877,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -10885,11 +10885,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -10899,12 +10899,12 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).r1u = function (value, groupSlotIndex) {
+  protoOf(ChangeList).t1u = function (value, groupSlotIndex) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = UpdateValue_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushUpdateValue.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.UpdateValue.Value' call
@@ -10917,7 +10917,7 @@
     WriteScope__setInt_impl_yt2o8b($this$push, tmp$ret$1, groupSlotIndex);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -10927,7 +10927,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -10935,11 +10935,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -10953,7 +10953,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -10961,11 +10961,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -10975,15 +10975,15 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).s1u = function () {
-    this.n1g_1.t1u(ResetSlots_getInstance());
+  protoOf(ChangeList).u1u = function () {
+    this.p1g_1.v1u(ResetSlots_getInstance());
   };
-  protoOf(ChangeList).u1u = function (data) {
+  protoOf(ChangeList).w1u = function (data) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = UpdateAuxData_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushUpdateAuxData.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.UpdateAuxData.Data' call
@@ -10992,7 +10992,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$0, data);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11002,7 +11002,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11010,11 +11010,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11028,7 +11028,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11036,86 +11036,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
-            missingObjectCount = missingObjectCount + 1 | 0;
-          }
-        }
-         while (inductionVariable_0 < times_0);
-      var missingObjects = this_2.toString();
-      var message = 'Error while pushing ' + operation + '. Not all arguments were provided. ' + ('Missing ' + missingIntCount + ' int arguments (' + missingInts + ') ') + ('and ' + missingObjectCount + ' object arguments (' + missingObjects + ').');
-      throw IllegalStateException_init_$Create$(toString(message));
-    }
-  };
-  protoOf(ChangeList).v1u = function () {
-    this.n1g_1.t1u(EnsureRootGroupStarted_getInstance());
-  };
-  protoOf(ChangeList).w1u = function (anchor) {
-    // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
-    var operation = EnsureGroupStarted_getInstance();
-    // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
-    // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushEnsureGroupStarted.<anonymous>' call
-    var $this$push = _WriteScope___init__impl__4xwato(this_0);
-    // Inline function 'androidx.compose.runtime.changelist.EnsureGroupStarted.Anchor' call
-    EnsureGroupStarted_getInstance();
-    var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$0, anchor);
-    // Inline function 'kotlin.check' call
-    // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
-      // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
-      var missingIntCount = 0;
-      // Inline function 'kotlin.text.buildString' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'kotlin.apply' call
-      var this_1 = StringBuilder_init_$Create$();
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
-      // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
-      // Inline function 'kotlin.contracts.contract' call
-      var inductionVariable = 0;
-      if (inductionVariable < times)
-        do {
-          var index = inductionVariable;
-          inductionVariable = inductionVariable + 1 | 0;
-          // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
-            if (missingIntCount > 0) {
-              this_1.w5(', ');
-            }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
-            missingIntCount = missingIntCount + 1 | 0;
-          }
-        }
-         while (inductionVariable < times);
-      var missingInts = this_1.toString();
-      var missingObjectCount = 0;
-      // Inline function 'kotlin.text.buildString' call
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'kotlin.apply' call
-      var this_2 = StringBuilder_init_$Create$();
-      // Inline function 'kotlin.contracts.contract' call
-      // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
-      // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
-      // Inline function 'kotlin.contracts.contract' call
-      var inductionVariable_0 = 0;
-      if (inductionVariable_0 < times_0)
-        do {
-          var index_0 = inductionVariable_0;
-          inductionVariable_0 = inductionVariable_0 + 1 | 0;
-          // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
-            if (missingIntCount > 0) {
-              this_2.w5(', ');
-            }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11126,20 +11051,95 @@
     }
   };
   protoOf(ChangeList).x1u = function () {
-    this.n1g_1.t1u(EndCurrentGroup_getInstance());
+    this.p1g_1.v1u(EnsureRootGroupStarted_getInstance());
   };
-  protoOf(ChangeList).y1u = function () {
-    this.n1g_1.t1u(SkipToEndOfCurrentGroup_getInstance());
+  protoOf(ChangeList).y1u = function (anchor) {
+    // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
+    var this_0 = this.p1g_1;
+    var operation = EnsureGroupStarted_getInstance();
+    // Inline function 'kotlin.contracts.contract' call
+    this_0.o1u(operation);
+    // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushEnsureGroupStarted.<anonymous>' call
+    var $this$push = _WriteScope___init__impl__4xwato(this_0);
+    // Inline function 'androidx.compose.runtime.changelist.EnsureGroupStarted.Anchor' call
+    EnsureGroupStarted_getInstance();
+    var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
+    WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$0, anchor);
+    // Inline function 'kotlin.check' call
+    // Inline function 'kotlin.contracts.contract' call
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
+      // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
+      var missingIntCount = 0;
+      // Inline function 'kotlin.text.buildString' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'kotlin.apply' call
+      var this_1 = StringBuilder_init_$Create$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
+      // Inline function 'kotlin.repeat' call
+      var times = operation.p1u_1;
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable = 0;
+      if (inductionVariable < times)
+        do {
+          var index = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
+          if (!((1 << index & this_0.k1u_1) === 0)) {
+            if (missingIntCount > 0) {
+              this_1.w5(', ');
+            }
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
+            missingIntCount = missingIntCount + 1 | 0;
+          }
+        }
+         while (inductionVariable < times);
+      var missingInts = this_1.toString();
+      var missingObjectCount = 0;
+      // Inline function 'kotlin.text.buildString' call
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'kotlin.apply' call
+      var this_2 = StringBuilder_init_$Create$();
+      // Inline function 'kotlin.contracts.contract' call
+      // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
+      // Inline function 'kotlin.repeat' call
+      var times_0 = operation.q1u_1;
+      // Inline function 'kotlin.contracts.contract' call
+      var inductionVariable_0 = 0;
+      if (inductionVariable_0 < times_0)
+        do {
+          var index_0 = inductionVariable_0;
+          inductionVariable_0 = inductionVariable_0 + 1 | 0;
+          // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
+            if (missingIntCount > 0) {
+              this_2.w5(', ');
+            }
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            missingObjectCount = missingObjectCount + 1 | 0;
+          }
+        }
+         while (inductionVariable_0 < times_0);
+      var missingObjects = this_2.toString();
+      var message = 'Error while pushing ' + operation + '. Not all arguments were provided. ' + ('Missing ' + missingIntCount + ' int arguments (' + missingInts + ') ') + ('and ' + missingObjectCount + ' object arguments (' + missingObjects + ').');
+      throw IllegalStateException_init_$Create$(toString(message));
+    }
   };
   protoOf(ChangeList).z1u = function () {
-    this.n1g_1.t1u(RemoveCurrentGroup_getInstance());
+    this.p1g_1.v1u(EndCurrentGroup_getInstance());
   };
-  protoOf(ChangeList).a1v = function (anchor, from) {
+  protoOf(ChangeList).a1v = function () {
+    this.p1g_1.v1u(SkipToEndOfCurrentGroup_getInstance());
+  };
+  protoOf(ChangeList).b1v = function () {
+    this.p1g_1.v1u(RemoveCurrentGroup_getInstance());
+  };
+  protoOf(ChangeList).c1v = function (anchor, from) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = InsertSlots_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushInsertSlots.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.InsertSlots.Anchor' call
@@ -11152,7 +11152,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$1, from);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11162,7 +11162,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11170,11 +11170,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11188,7 +11188,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11196,11 +11196,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11210,12 +11210,12 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).b1v = function (anchor, from, fixups) {
+  protoOf(ChangeList).d1v = function (anchor, from, fixups) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = InsertSlotsWithFixups_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushInsertSlots.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.InsertSlotsWithFixups.Anchor' call
@@ -11232,7 +11232,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$2, fixups);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11242,7 +11242,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11250,11 +11250,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11268,7 +11268,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11276,11 +11276,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11290,12 +11290,12 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).c1v = function (offset) {
+  protoOf(ChangeList).e1v = function (offset) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = MoveCurrentGroup_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushMoveCurrentGroup.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.MoveCurrentGroup.Offset' call
@@ -11304,7 +11304,7 @@
     WriteScope__setInt_impl_yt2o8b($this$push, tmp$ret$0, offset);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11314,7 +11314,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11322,11 +11322,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11340,7 +11340,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11348,11 +11348,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11362,12 +11362,12 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).d1v = function (action, composition) {
+  protoOf(ChangeList).f1v = function (action, composition) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = EndCompositionScope_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushEndCompositionScope.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.EndCompositionScope.Action' call
@@ -11380,7 +11380,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$1, composition);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11390,7 +11390,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11398,11 +11398,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11416,7 +11416,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11424,11 +11424,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11438,17 +11438,17 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).e1v = function (node) {
+  protoOf(ChangeList).g1v = function (node) {
     if (!(node == null) ? isInterface(node, ComposeNodeLifecycleCallback) : false) {
-      this.n1g_1.t1u(UseCurrentNode_getInstance());
+      this.p1g_1.v1u(UseCurrentNode_getInstance());
     }
   };
-  protoOf(ChangeList).f1v = function (value, block) {
+  protoOf(ChangeList).h1v = function (value, block) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = UpdateNode_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushUpdateNode.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.UpdateNode.Value' call
@@ -11461,7 +11461,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp, typeof block === 'function' ? block : THROW_CCE());
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11471,7 +11471,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11479,11 +11479,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11497,7 +11497,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11505,11 +11505,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11519,12 +11519,12 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).g1v = function (removeFrom, moveCount) {
+  protoOf(ChangeList).i1v = function (removeFrom, moveCount) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = RemoveNode_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushRemoveNode.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.RemoveNode.RemoveIndex' call
@@ -11537,7 +11537,7 @@
     WriteScope__setInt_impl_yt2o8b($this$push, tmp$ret$1, moveCount);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11547,7 +11547,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11555,11 +11555,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11573,7 +11573,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11581,11 +11581,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11595,12 +11595,12 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).h1v = function (to, from, count) {
+  protoOf(ChangeList).j1v = function (to, from, count) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = MoveNode_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushMoveNode.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.MoveNode.To' call
@@ -11617,7 +11617,7 @@
     WriteScope__setInt_impl_yt2o8b($this$push, tmp$ret$2, count);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11627,7 +11627,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11635,11 +11635,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11653,7 +11653,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11661,11 +11661,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11675,12 +11675,12 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).i1v = function (distance) {
+  protoOf(ChangeList).k1v = function (distance) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = AdvanceSlotsBy_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushAdvanceSlotsBy.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.AdvanceSlotsBy.Distance' call
@@ -11689,7 +11689,7 @@
     WriteScope__setInt_impl_yt2o8b($this$push, tmp$ret$0, distance);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11699,7 +11699,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11707,11 +11707,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11725,7 +11725,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11733,11 +11733,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11747,12 +11747,12 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).j1v = function (count) {
+  protoOf(ChangeList).l1v = function (count) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = Ups_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushUps.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.Ups.Count' call
@@ -11761,7 +11761,7 @@
     WriteScope__setInt_impl_yt2o8b($this$push, tmp$ret$0, count);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11771,7 +11771,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11779,11 +11779,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11797,7 +11797,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11805,11 +11805,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11819,15 +11819,15 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).k1v = function (nodes) {
+  protoOf(ChangeList).m1v = function (nodes) {
     // Inline function 'kotlin.collections.isNotEmpty' call
     // Inline function 'kotlin.collections.isEmpty' call
     if (!(nodes.length === 0)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-      var this_0 = this.n1g_1;
+      var this_0 = this.p1g_1;
       var operation = Downs_getInstance();
       // Inline function 'kotlin.contracts.contract' call
-      this_0.m1u(operation);
+      this_0.o1u(operation);
       // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushDowns.<anonymous>' call
       var $this$push = _WriteScope___init__impl__4xwato(this_0);
       // Inline function 'androidx.compose.runtime.changelist.Downs.Nodes' call
@@ -11836,7 +11836,7 @@
       WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$2, nodes);
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
-      if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+      if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
         // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
         var missingIntCount = 0;
         // Inline function 'kotlin.text.buildString' call
@@ -11846,7 +11846,7 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
         // Inline function 'kotlin.repeat' call
-        var times = operation.n1u_1;
+        var times = operation.p1u_1;
         // Inline function 'kotlin.contracts.contract' call
         var inductionVariable = 0;
         if (inductionVariable < times)
@@ -11854,11 +11854,11 @@
             var index = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
             // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-            if (!((1 << index & this_0.i1u_1) === 0)) {
+            if (!((1 << index & this_0.k1u_1) === 0)) {
               if (missingIntCount > 0) {
                 this_1.w5(', ');
               }
-              this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+              this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
               missingIntCount = missingIntCount + 1 | 0;
             }
           }
@@ -11872,7 +11872,7 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
         // Inline function 'kotlin.repeat' call
-        var times_0 = operation.o1u_1;
+        var times_0 = operation.q1u_1;
         // Inline function 'kotlin.contracts.contract' call
         var inductionVariable_0 = 0;
         if (inductionVariable_0 < times_0)
@@ -11880,11 +11880,11 @@
             var index_0 = inductionVariable_0;
             inductionVariable_0 = inductionVariable_0 + 1 | 0;
             // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-            if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+            if (!((1 << index_0 & this_0.l1u_1) === 0)) {
               if (missingIntCount > 0) {
                 this_2.w5(', ');
               }
-              this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+              this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
               missingObjectCount = missingObjectCount + 1 | 0;
             }
           }
@@ -11895,12 +11895,12 @@
       }
     }
   };
-  protoOf(ChangeList).l1v = function (effectiveNodeIndexOut, anchor) {
+  protoOf(ChangeList).n1v = function (effectiveNodeIndexOut, anchor) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = DetermineMovableContentNodeIndex_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushDetermineMovableContentNodeIndex.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.DetermineMovableContentNodeIndex.EffectiveNodeIndexOut' call
@@ -11913,7 +11913,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$1, anchor);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -11923,7 +11923,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -11931,11 +11931,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -11949,7 +11949,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -11957,11 +11957,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -11971,14 +11971,14 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).m1v = function (nodes, effectiveNodeIndex) {
+  protoOf(ChangeList).o1v = function (nodes, effectiveNodeIndex) {
     // Inline function 'kotlin.collections.isNotEmpty' call
     if (!nodes.s()) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-      var this_0 = this.n1g_1;
+      var this_0 = this.p1g_1;
       var operation = CopyNodesToNewAnchorLocation_getInstance();
       // Inline function 'kotlin.contracts.contract' call
-      this_0.m1u(operation);
+      this_0.o1u(operation);
       // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushCopyNodesToNewAnchorLocation.<anonymous>' call
       var $this$push = _WriteScope___init__impl__4xwato(this_0);
       // Inline function 'androidx.compose.runtime.changelist.CopyNodesToNewAnchorLocation.Nodes' call
@@ -11991,7 +11991,7 @@
       WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$2, effectiveNodeIndex);
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
-      if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+      if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
         // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
         var missingIntCount = 0;
         // Inline function 'kotlin.text.buildString' call
@@ -12001,7 +12001,7 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
         // Inline function 'kotlin.repeat' call
-        var times = operation.n1u_1;
+        var times = operation.p1u_1;
         // Inline function 'kotlin.contracts.contract' call
         var inductionVariable = 0;
         if (inductionVariable < times)
@@ -12009,11 +12009,11 @@
             var index = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
             // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-            if (!((1 << index & this_0.i1u_1) === 0)) {
+            if (!((1 << index & this_0.k1u_1) === 0)) {
               if (missingIntCount > 0) {
                 this_1.w5(', ');
               }
-              this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+              this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
               missingIntCount = missingIntCount + 1 | 0;
             }
           }
@@ -12027,7 +12027,7 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
         // Inline function 'kotlin.repeat' call
-        var times_0 = operation.o1u_1;
+        var times_0 = operation.q1u_1;
         // Inline function 'kotlin.contracts.contract' call
         var inductionVariable_0 = 0;
         if (inductionVariable_0 < times_0)
@@ -12035,11 +12035,11 @@
             var index_0 = inductionVariable_0;
             inductionVariable_0 = inductionVariable_0 + 1 | 0;
             // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-            if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+            if (!((1 << index_0 & this_0.l1u_1) === 0)) {
               if (missingIntCount > 0) {
                 this_2.w5(', ');
               }
-              this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+              this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
               missingObjectCount = missingObjectCount + 1 | 0;
             }
           }
@@ -12050,12 +12050,12 @@
       }
     }
   };
-  protoOf(ChangeList).n1v = function (resolvedState, parentContext, from, to) {
+  protoOf(ChangeList).p1v = function (resolvedState, parentContext, from, to) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = CopySlotTableToAnchorLocation_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushCopySlotTableToAnchorLocation.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.CopySlotTableToAnchorLocation.ResolvedState' call
@@ -12076,7 +12076,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$3, from);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -12086,7 +12086,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -12094,11 +12094,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -12112,7 +12112,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -12120,11 +12120,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -12134,12 +12134,12 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).o1v = function (composition, parentContext, reference) {
+  protoOf(ChangeList).q1v = function (composition, parentContext, reference) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.n1g_1;
+    var this_0 = this.p1g_1;
     var operation = ReleaseMovableGroupAtCurrent_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushReleaseMovableGroupAtCurrent.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.ReleaseMovableGroupAtCurrent.Composition' call
@@ -12156,7 +12156,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$2, reference);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -12166,7 +12166,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -12174,11 +12174,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -12192,7 +12192,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -12200,11 +12200,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -12214,16 +12214,16 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
   };
-  protoOf(ChangeList).p1v = function () {
-    this.n1g_1.t1u(EndMovableContentPlacement_getInstance());
+  protoOf(ChangeList).r1v = function () {
+    this.p1g_1.v1u(EndMovableContentPlacement_getInstance());
   };
-  protoOf(ChangeList).q1v = function (changeList, effectiveNodeIndex) {
-    if (changeList.v1f()) {
+  protoOf(ChangeList).s1v = function (changeList, effectiveNodeIndex) {
+    if (changeList.x1f()) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-      var this_0 = this.n1g_1;
+      var this_0 = this.p1g_1;
       var operation = ApplyChangeList_getInstance();
       // Inline function 'kotlin.contracts.contract' call
-      this_0.m1u(operation);
+      this_0.o1u(operation);
       // Inline function 'androidx.compose.runtime.changelist.ChangeList.pushExecuteOperationsIn.<anonymous>' call
       var $this$push = _WriteScope___init__impl__4xwato(this_0);
       // Inline function 'androidx.compose.runtime.changelist.ApplyChangeList.Changes' call
@@ -12236,7 +12236,7 @@
       WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$1, effectiveNodeIndex);
       // Inline function 'kotlin.check' call
       // Inline function 'kotlin.contracts.contract' call
-      if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+      if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
         // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
         var missingIntCount = 0;
         // Inline function 'kotlin.text.buildString' call
@@ -12246,7 +12246,7 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
         // Inline function 'kotlin.repeat' call
-        var times = operation.n1u_1;
+        var times = operation.p1u_1;
         // Inline function 'kotlin.contracts.contract' call
         var inductionVariable = 0;
         if (inductionVariable < times)
@@ -12254,11 +12254,11 @@
             var index = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
             // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-            if (!((1 << index & this_0.i1u_1) === 0)) {
+            if (!((1 << index & this_0.k1u_1) === 0)) {
               if (missingIntCount > 0) {
                 this_1.w5(', ');
               }
-              this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+              this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
               missingIntCount = missingIntCount + 1 | 0;
             }
           }
@@ -12272,7 +12272,7 @@
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
         // Inline function 'kotlin.repeat' call
-        var times_0 = operation.o1u_1;
+        var times_0 = operation.q1u_1;
         // Inline function 'kotlin.contracts.contract' call
         var inductionVariable_0 = 0;
         if (inductionVariable_0 < times_0)
@@ -12280,11 +12280,11 @@
             var index_0 = inductionVariable_0;
             inductionVariable_0 = inductionVariable_0 + 1 | 0;
             // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-            if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+            if (!((1 << index_0 & this_0.l1u_1) === 0)) {
               if (missingIntCount > 0) {
                 this_2.w5(', ');
               }
-              this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+              this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
               missingObjectCount = missingObjectCount + 1 | 0;
             }
           }
@@ -12296,14 +12296,14 @@
     }
   };
   function _get_reader__fd8dw8($this) {
-    return $this.g16_1.w14_1;
+    return $this.i16_1.y14_1;
   }
   function pushApplierOperationPreamble($this) {
     pushPendingUpsAndDowns($this);
   }
   function pushSlotEditingOperationPreamble($this) {
     realizeOperationLocation$default($this);
-    $this.v1d();
+    $this.x1d();
   }
   function pushSlotTableOperationPreamble($this, useParentSlot) {
     realizeOperationLocation($this, useParentSlot);
@@ -12313,20 +12313,20 @@
     return pushSlotTableOperationPreamble($this, useParentSlot);
   }
   function ensureRootStarted($this) {
-    if (!$this.i16_1 ? $this.k16_1 : false) {
+    if (!$this.k16_1 ? $this.m16_1 : false) {
       pushSlotTableOperationPreamble$default($this);
-      $this.h16_1.v1u();
-      $this.i16_1 = true;
+      $this.j16_1.x1u();
+      $this.k16_1 = true;
     }
   }
   function ensureGroupStarted($this, anchor) {
     pushSlotTableOperationPreamble$default($this);
-    $this.h16_1.w1u(anchor);
-    $this.i16_1 = true;
+    $this.j16_1.y1u(anchor);
+    $this.k16_1 = true;
   }
   function realizeOperationLocation($this, forParent) {
-    var location = forParent ? _get_reader__fd8dw8($this).c17_1 : _get_reader__fd8dw8($this).a17_1;
-    var distance = location - $this.l16_1 | 0;
+    var location = forParent ? _get_reader__fd8dw8($this).e17_1 : _get_reader__fd8dw8($this).c17_1;
+    var distance = location - $this.n16_1 | 0;
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
     if (!(distance >= 0)) {
       // Inline function 'androidx.compose.runtime.changelist.ComposerChangeListWriter.realizeOperationLocation.<anonymous>' call
@@ -12334,8 +12334,8 @@
       composeRuntimeError(toString(message));
     }
     if (distance > 0) {
-      $this.h16_1.i1v(distance);
-      $this.l16_1 = location;
+      $this.j16_1.k1v(distance);
+      $this.n16_1 = location;
     }
   }
   function realizeOperationLocation$default($this, forParent, $super) {
@@ -12343,148 +12343,148 @@
     return realizeOperationLocation($this, forParent);
   }
   function realizeNodeMovementOperations($this) {
-    if ($this.r16_1 > 0) {
-      if ($this.o16_1 >= 0) {
-        realizeRemoveNode($this, $this.o16_1, $this.r16_1);
-        $this.o16_1 = -1;
-      } else {
-        realizeMoveNode($this, $this.q16_1, $this.p16_1, $this.r16_1);
-        $this.p16_1 = -1;
+    if ($this.t16_1 > 0) {
+      if ($this.q16_1 >= 0) {
+        realizeRemoveNode($this, $this.q16_1, $this.t16_1);
         $this.q16_1 = -1;
+      } else {
+        realizeMoveNode($this, $this.s16_1, $this.r16_1, $this.t16_1);
+        $this.r16_1 = -1;
+        $this.s16_1 = -1;
       }
-      $this.r16_1 = 0;
+      $this.t16_1 = 0;
     }
   }
   function realizeRemoveNode($this, removeFrom, moveCount) {
     pushApplierOperationPreamble($this);
-    $this.h16_1.g1v(removeFrom, moveCount);
+    $this.j16_1.i1v(removeFrom, moveCount);
   }
   function realizeMoveNode($this, to, from, count) {
     pushApplierOperationPreamble($this);
-    $this.h16_1.h1v(to, from, count);
+    $this.j16_1.j1v(to, from, count);
   }
   function pushPendingUpsAndDowns($this) {
-    if ($this.m16_1 > 0) {
-      $this.h16_1.j1v($this.m16_1);
-      $this.m16_1 = 0;
+    if ($this.o16_1 > 0) {
+      $this.j16_1.l1v($this.o16_1);
+      $this.o16_1 = 0;
     }
-    if ($this.n16_1.v1f()) {
-      $this.h16_1.k1v($this.n16_1.e3());
-      $this.n16_1.f1();
+    if ($this.p16_1.x1f()) {
+      $this.j16_1.m1v($this.p16_1.e3());
+      $this.p16_1.f1();
     }
   }
   function Companion_4() {
-    this.r1v_1 = -2;
+    this.t1v_1 = -2;
   }
   var Companion_instance_5;
   function Companion_getInstance_5() {
     return Companion_instance_5;
   }
   function ComposerChangeListWriter(composer, changeList) {
-    this.g16_1 = composer;
-    this.h16_1 = changeList;
-    this.i16_1 = false;
-    this.j16_1 = new IntStack();
-    this.k16_1 = true;
-    this.l16_1 = 0;
-    this.m16_1 = 0;
-    this.n16_1 = new Stack();
-    this.o16_1 = -1;
-    this.p16_1 = -1;
+    this.i16_1 = composer;
+    this.j16_1 = changeList;
+    this.k16_1 = false;
+    this.l16_1 = new IntStack();
+    this.m16_1 = true;
+    this.n16_1 = 0;
+    this.o16_1 = 0;
+    this.p16_1 = new Stack();
     this.q16_1 = -1;
-    this.r16_1 = 0;
+    this.r16_1 = -1;
+    this.s16_1 = -1;
+    this.t16_1 = 0;
   }
-  protoOf(ComposerChangeListWriter).z19 = function (location) {
-    this.l16_1 = this.l16_1 + (location - _get_reader__fd8dw8(this).a17_1 | 0) | 0;
+  protoOf(ComposerChangeListWriter).b1a = function (location) {
+    this.n16_1 = this.n16_1 + (location - _get_reader__fd8dw8(this).c17_1 | 0) | 0;
   };
-  protoOf(ComposerChangeListWriter).c1c = function (location) {
-    this.l16_1 = location;
+  protoOf(ComposerChangeListWriter).e1c = function (location) {
+    this.n16_1 = location;
   };
-  protoOf(ComposerChangeListWriter).v1d = function () {
+  protoOf(ComposerChangeListWriter).x1d = function () {
     if (_get_reader__fd8dw8(this).l() > 0) {
       var reader = _get_reader__fd8dw8(this);
-      var location = reader.c17_1;
-      if (!(this.j16_1.x1r(-2) === location)) {
+      var location = reader.e17_1;
+      if (!(this.l16_1.z1r(-2) === location)) {
         ensureRootStarted(this);
         if (location > 0) {
-          var anchor = reader.q19(location);
-          this.j16_1.z15(location);
+          var anchor = reader.s19(location);
+          this.l16_1.b16(location);
           ensureGroupStarted(this, anchor);
         }
       }
     }
   };
-  protoOf(ComposerChangeListWriter).j1f = function (value) {
-    this.h16_1.l1u(value);
+  protoOf(ComposerChangeListWriter).l1f = function (value) {
+    this.j16_1.n1u(value);
   };
-  protoOf(ComposerChangeListWriter).g1f = function (value, groupSlotIndex) {
+  protoOf(ComposerChangeListWriter).i1f = function (value, groupSlotIndex) {
     pushSlotTableOperationPreamble(this, true);
-    this.h16_1.r1u(value, groupSlotIndex);
+    this.j16_1.t1u(value, groupSlotIndex);
   };
-  protoOf(ComposerChangeListWriter).o1b = function () {
-    this.h16_1.s1u();
+  protoOf(ComposerChangeListWriter).q1b = function () {
+    this.j16_1.u1u();
   };
-  protoOf(ComposerChangeListWriter).u18 = function (data) {
+  protoOf(ComposerChangeListWriter).w18 = function (data) {
     pushSlotTableOperationPreamble$default(this);
-    this.h16_1.u1u(data);
+    this.j16_1.w1u(data);
   };
-  protoOf(ComposerChangeListWriter).s16 = function () {
-    if (this.i16_1) {
+  protoOf(ComposerChangeListWriter).u16 = function () {
+    if (this.k16_1) {
       pushSlotTableOperationPreamble$default(this);
       pushSlotTableOperationPreamble$default(this);
-      this.h16_1.x1u();
-      this.i16_1 = false;
+      this.j16_1.z1u();
+      this.k16_1 = false;
     }
   };
-  protoOf(ComposerChangeListWriter).p1a = function () {
-    var location = _get_reader__fd8dw8(this).c17_1;
-    var currentStartedGroup = this.j16_1.x1r(-1);
+  protoOf(ComposerChangeListWriter).r1a = function () {
+    var location = _get_reader__fd8dw8(this).e17_1;
+    var currentStartedGroup = this.l16_1.z1r(-1);
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
     if (!(currentStartedGroup <= location)) {
       // Inline function 'androidx.compose.runtime.changelist.ComposerChangeListWriter.endCurrentGroup.<anonymous>' call
       var message = 'Missed recording an endGroup';
       composeRuntimeError(toString(message));
     }
-    if (this.j16_1.x1r(-1) === location) {
+    if (this.l16_1.z1r(-1) === location) {
       pushSlotTableOperationPreamble$default(this);
-      this.j16_1.d1a();
-      this.h16_1.x1u();
+      this.l16_1.f1a();
+      this.j16_1.z1u();
     }
   };
-  protoOf(ComposerChangeListWriter).e1c = function () {
-    this.h16_1.y1u();
+  protoOf(ComposerChangeListWriter).g1c = function () {
+    this.j16_1.a1v();
   };
-  protoOf(ComposerChangeListWriter).d1d = function () {
+  protoOf(ComposerChangeListWriter).f1d = function () {
     pushSlotEditingOperationPreamble(this);
-    this.h16_1.z1u();
-    this.l16_1 = this.l16_1 + _get_reader__fd8dw8(this).r1s() | 0;
+    this.j16_1.b1v();
+    this.n16_1 = this.n16_1 + _get_reader__fd8dw8(this).t1s() | 0;
   };
-  protoOf(ComposerChangeListWriter).c1d = function (anchor, from) {
+  protoOf(ComposerChangeListWriter).e1d = function (anchor, from) {
     pushPendingUpsAndDowns(this);
     pushSlotEditingOperationPreamble(this);
-    this.h16_1.a1v(anchor, from);
+    this.j16_1.c1v(anchor, from);
   };
-  protoOf(ComposerChangeListWriter).b1d = function (anchor, from, fixups) {
+  protoOf(ComposerChangeListWriter).d1d = function (anchor, from, fixups) {
     pushPendingUpsAndDowns(this);
     pushSlotEditingOperationPreamble(this);
-    this.h16_1.b1v(anchor, from, fixups);
+    this.j16_1.d1v(anchor, from, fixups);
   };
-  protoOf(ComposerChangeListWriter).b1a = function (offset) {
+  protoOf(ComposerChangeListWriter).d1a = function (offset) {
     pushSlotEditingOperationPreamble(this);
-    this.h16_1.c1v(offset);
+    this.j16_1.e1v(offset);
   };
-  protoOf(ComposerChangeListWriter).c1g = function (action, composition) {
-    this.h16_1.d1v(action, composition);
+  protoOf(ComposerChangeListWriter).e1g = function (action, composition) {
+    this.j16_1.f1v(action, composition);
   };
-  protoOf(ComposerChangeListWriter).v1e = function (node) {
+  protoOf(ComposerChangeListWriter).x1e = function (node) {
     pushApplierOperationPreamble(this);
-    this.h16_1.e1v(node);
+    this.j16_1.g1v(node);
   };
-  protoOf(ComposerChangeListWriter).y1e = function (value, block) {
+  protoOf(ComposerChangeListWriter).a1f = function (value, block) {
     pushApplierOperationPreamble(this);
-    this.h16_1.f1v(value, block);
+    this.j16_1.h1v(value, block);
   };
-  protoOf(ComposerChangeListWriter).f1a = function (nodeIndex, count) {
+  protoOf(ComposerChangeListWriter).h1a = function (nodeIndex, count) {
     if (count > 0) {
       // Inline function 'androidx.compose.runtime.runtimeCheck' call
       if (!(nodeIndex >= 0)) {
@@ -12492,115 +12492,115 @@
         var message = 'Invalid remove index ' + nodeIndex;
         composeRuntimeError(toString(message));
       }
-      if (this.o16_1 === nodeIndex) {
-        this.r16_1 = this.r16_1 + count | 0;
+      if (this.q16_1 === nodeIndex) {
+        this.t16_1 = this.t16_1 + count | 0;
       } else {
         realizeNodeMovementOperations(this);
-        this.o16_1 = nodeIndex;
-        this.r16_1 = count;
+        this.q16_1 = nodeIndex;
+        this.t16_1 = count;
       }
     }
   };
-  protoOf(ComposerChangeListWriter).j1a = function (from, to, count) {
+  protoOf(ComposerChangeListWriter).l1a = function (from, to, count) {
     if (count > 0) {
-      if ((this.r16_1 > 0 ? this.p16_1 === (from - this.r16_1 | 0) : false) ? this.q16_1 === (to - this.r16_1 | 0) : false) {
-        this.r16_1 = this.r16_1 + count | 0;
+      if ((this.t16_1 > 0 ? this.r16_1 === (from - this.t16_1 | 0) : false) ? this.s16_1 === (to - this.t16_1 | 0) : false) {
+        this.t16_1 = this.t16_1 + count | 0;
       } else {
         realizeNodeMovementOperations(this);
-        this.p16_1 = from;
-        this.q16_1 = to;
-        this.r16_1 = count;
+        this.r16_1 = from;
+        this.s16_1 = to;
+        this.t16_1 = count;
       }
     }
-  };
-  protoOf(ComposerChangeListWriter).e1d = function () {
-    pushPendingUpsAndDowns(this);
-    if (this.i16_1) {
-      this.e1c();
-      this.s16();
-    }
-  };
-  protoOf(ComposerChangeListWriter).l1a = function () {
-    realizeNodeMovementOperations(this);
-  };
-  protoOf(ComposerChangeListWriter).x1d = function (nodeIndex, group) {
-    this.l1a();
-    pushPendingUpsAndDowns(this);
-    var nodeCount = _get_reader__fd8dw8(this).b1b(group) ? 1 : _get_reader__fd8dw8(this).c1b(group);
-    if (nodeCount > 0) {
-      this.f1a(nodeIndex, nodeCount);
-    }
-  };
-  protoOf(ComposerChangeListWriter).o1a = function () {
-    if (this.n16_1.v1f()) {
-      this.n16_1.d1a();
-    } else {
-      this.m16_1 = this.m16_1 + 1 | 0;
-    }
-  };
-  protoOf(ComposerChangeListWriter).d1b = function (node) {
-    this.n16_1.c1a(node);
-  };
-  protoOf(ComposerChangeListWriter).x1b = function (effectiveNodeIndexOut, anchor) {
-    pushPendingUpsAndDowns(this);
-    this.h16_1.l1v(effectiveNodeIndexOut, anchor);
-  };
-  protoOf(ComposerChangeListWriter).a1c = function (nodes, effectiveNodeIndex) {
-    this.h16_1.m1v(nodes, effectiveNodeIndex);
-  };
-  protoOf(ComposerChangeListWriter).b1c = function (resolvedState, parentContext, from, to) {
-    this.h16_1.n1v(resolvedState, parentContext, from, to);
-  };
-  protoOf(ComposerChangeListWriter).w1d = function (composition, parentContext, reference) {
-    this.h16_1.o1v(composition, parentContext, reference);
-  };
-  protoOf(ComposerChangeListWriter).f1c = function () {
-    this.h16_1.p1v();
-    this.l16_1 = 0;
-  };
-  protoOf(ComposerChangeListWriter).d1c = function (other, effectiveNodeIndex) {
-    this.h16_1.q1v(other, effectiveNodeIndex);
   };
   protoOf(ComposerChangeListWriter).g1d = function () {
     pushPendingUpsAndDowns(this);
+    if (this.k16_1) {
+      this.g1c();
+      this.u16();
+    }
+  };
+  protoOf(ComposerChangeListWriter).n1a = function () {
+    realizeNodeMovementOperations(this);
+  };
+  protoOf(ComposerChangeListWriter).z1d = function (nodeIndex, group) {
+    this.n1a();
+    pushPendingUpsAndDowns(this);
+    var nodeCount = _get_reader__fd8dw8(this).d1b(group) ? 1 : _get_reader__fd8dw8(this).e1b(group);
+    if (nodeCount > 0) {
+      this.h1a(nodeIndex, nodeCount);
+    }
+  };
+  protoOf(ComposerChangeListWriter).q1a = function () {
+    if (this.p16_1.x1f()) {
+      this.p16_1.f1a();
+    } else {
+      this.o16_1 = this.o16_1 + 1 | 0;
+    }
+  };
+  protoOf(ComposerChangeListWriter).f1b = function (node) {
+    this.p16_1.e1a(node);
+  };
+  protoOf(ComposerChangeListWriter).z1b = function (effectiveNodeIndexOut, anchor) {
+    pushPendingUpsAndDowns(this);
+    this.j16_1.n1v(effectiveNodeIndexOut, anchor);
+  };
+  protoOf(ComposerChangeListWriter).c1c = function (nodes, effectiveNodeIndex) {
+    this.j16_1.o1v(nodes, effectiveNodeIndex);
+  };
+  protoOf(ComposerChangeListWriter).d1c = function (resolvedState, parentContext, from, to) {
+    this.j16_1.p1v(resolvedState, parentContext, from, to);
+  };
+  protoOf(ComposerChangeListWriter).y1d = function (composition, parentContext, reference) {
+    this.j16_1.q1v(composition, parentContext, reference);
+  };
+  protoOf(ComposerChangeListWriter).h1c = function () {
+    this.j16_1.r1v();
+    this.n16_1 = 0;
+  };
+  protoOf(ComposerChangeListWriter).f1c = function (other, effectiveNodeIndex) {
+    this.j16_1.s1v(other, effectiveNodeIndex);
+  };
+  protoOf(ComposerChangeListWriter).i1d = function () {
+    pushPendingUpsAndDowns(this);
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!this.j16_1.s()) {
+    if (!this.l16_1.s()) {
       // Inline function 'androidx.compose.runtime.changelist.ComposerChangeListWriter.finalizeComposition.<anonymous>' call
       var message = 'Missed recording an endGroup()';
       composeRuntimeError(toString(message));
     }
   };
-  protoOf(ComposerChangeListWriter).h1d = function () {
-    this.i16_1 = false;
-    this.j16_1.f1();
-    this.l16_1 = 0;
+  protoOf(ComposerChangeListWriter).j1d = function () {
+    this.k16_1 = false;
+    this.l16_1.f1();
+    this.n16_1 = 0;
   };
   function FixupList() {
-    this.e18_1 = new Operations();
-    this.f18_1 = new Operations();
+    this.g18_1 = new Operations();
+    this.h18_1 = new Operations();
   }
   protoOf(FixupList).s = function () {
-    return this.e18_1.s();
+    return this.g18_1.s();
   };
   protoOf(FixupList).f1 = function () {
-    this.f18_1.f1();
-    this.e18_1.f1();
+    this.h18_1.f1();
+    this.g18_1.f1();
   };
-  protoOf(FixupList).s1v = function (applier, slots, rememberManager) {
+  protoOf(FixupList).u1v = function (applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!this.f18_1.s()) {
+    if (!this.h18_1.s()) {
       // Inline function 'androidx.compose.runtime.changelist.FixupList.executeAndFlushAllPendingFixups.<anonymous>' call
       var message = 'FixupList has pending fixup operations that were not realized. Were there mismatched insertNode() and endNodeInsert() calls?';
       composeRuntimeError(toString(message));
     }
-    this.e18_1.k1u(applier, slots, rememberManager);
+    this.g18_1.m1u(applier, slots, rememberManager);
   };
-  protoOf(FixupList).t1e = function (factory, insertIndex, groupAnchor) {
+  protoOf(FixupList).v1e = function (factory, insertIndex, groupAnchor) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.e18_1;
+    var this_0 = this.g18_1;
     var operation = InsertNodeFixup_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.FixupList.createAndInsertNode.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.InsertNodeFixup.Factory' call
@@ -12617,7 +12617,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp$ret$2, groupAnchor);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -12627,7 +12627,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -12635,11 +12635,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -12653,7 +12653,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -12661,11 +12661,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -12675,10 +12675,10 @@
       throw IllegalStateException_init_$Create$(toString(message));
     }
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_3 = this.f18_1;
+    var this_3 = this.h18_1;
     var operation_0 = PostInsertNodeFixup_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_3.m1u(operation_0);
+    this_3.o1u(operation_0);
     // Inline function 'androidx.compose.runtime.changelist.FixupList.createAndInsertNode.<anonymous>' call
     var $this$push_0 = _WriteScope___init__impl__4xwato(this_3);
     // Inline function 'androidx.compose.runtime.changelist.PostInsertNodeFixup.InsertIndex' call
@@ -12691,7 +12691,7 @@
     WriteScope__setObject_impl_rr41y9($this$push_0, tmp$ret$9, groupAnchor);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_3.i1u_1 === createExpectedArgMask(this_3, operation_0.n1u_1) ? this_3.j1u_1 === createExpectedArgMask(this_3, operation_0.o1u_1) : false)) {
+    if (!(this_3.k1u_1 === createExpectedArgMask(this_3, operation_0.p1u_1) ? this_3.l1u_1 === createExpectedArgMask(this_3, operation_0.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount_0 = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -12701,7 +12701,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_1 = operation_0.n1u_1;
+      var times_1 = operation_0.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_1 = 0;
       if (inductionVariable_1 < times_1)
@@ -12709,11 +12709,11 @@
           var index_1 = inductionVariable_1;
           inductionVariable_1 = inductionVariable_1 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_1 & this_3.i1u_1) === 0)) {
+          if (!((1 << index_1 & this_3.k1u_1) === 0)) {
             if (missingIntCount_0 > 0) {
               this_4.w5(', ');
             }
-            this_4.w5(operation_0.p1u(_IntParameter___init__impl__oy5xkp(index_1)));
+            this_4.w5(operation_0.r1u(_IntParameter___init__impl__oy5xkp(index_1)));
             missingIntCount_0 = missingIntCount_0 + 1 | 0;
           }
         }
@@ -12727,7 +12727,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_2 = operation_0.o1u_1;
+      var times_2 = operation_0.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_2 = 0;
       if (inductionVariable_2 < times_2)
@@ -12735,11 +12735,11 @@
           var index_2 = inductionVariable_2;
           inductionVariable_2 = inductionVariable_2 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_2 & this_3.j1u_1) === 0)) {
+          if (!((1 << index_2 & this_3.l1u_1) === 0)) {
             if (missingIntCount_0 > 0) {
               this_5.w5(', ');
             }
-            this_5.w5(operation_0.q1u(_ObjectParameter___init__impl__iyg1ip(index_2)));
+            this_5.w5(operation_0.s1u(_ObjectParameter___init__impl__iyg1ip(index_2)));
             missingObjectCount_0 = missingObjectCount_0 + 1 | 0;
           }
         }
@@ -12749,21 +12749,21 @@
       throw IllegalStateException_init_$Create$(toString(message_0));
     }
   };
-  protoOf(FixupList).r1a = function () {
+  protoOf(FixupList).t1a = function () {
     // Inline function 'androidx.compose.runtime.runtimeCheck' call
-    if (!this.f18_1.v1f()) {
+    if (!this.h18_1.x1f()) {
       // Inline function 'androidx.compose.runtime.changelist.FixupList.endNodeInsert.<anonymous>' call
       var message = 'Cannot end node insertion, there are no pending operations that can be realized.';
       composeRuntimeError(toString(message));
     }
-    this.f18_1.t1v(this.e18_1);
+    this.h18_1.v1v(this.g18_1);
   };
-  protoOf(FixupList).z1e = function (value, block) {
+  protoOf(FixupList).b1f = function (value, block) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.push' call
-    var this_0 = this.e18_1;
+    var this_0 = this.g18_1;
     var operation = UpdateNode_getInstance();
     // Inline function 'kotlin.contracts.contract' call
-    this_0.m1u(operation);
+    this_0.o1u(operation);
     // Inline function 'androidx.compose.runtime.changelist.FixupList.updateNode.<anonymous>' call
     var $this$push = _WriteScope___init__impl__4xwato(this_0);
     // Inline function 'androidx.compose.runtime.changelist.UpdateNode.Value' call
@@ -12776,7 +12776,7 @@
     WriteScope__setObject_impl_rr41y9($this$push, tmp, typeof block === 'function' ? block : THROW_CCE());
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this_0.i1u_1 === createExpectedArgMask(this_0, operation.n1u_1) ? this_0.j1u_1 === createExpectedArgMask(this_0, operation.o1u_1) : false)) {
+    if (!(this_0.k1u_1 === createExpectedArgMask(this_0, operation.p1u_1) ? this_0.l1u_1 === createExpectedArgMask(this_0, operation.q1u_1) : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
       var missingIntCount = 0;
       // Inline function 'kotlin.text.buildString' call
@@ -12786,7 +12786,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times = operation.n1u_1;
+      var times = operation.p1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable = 0;
       if (inductionVariable < times)
@@ -12794,11 +12794,11 @@
           var index = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index & this_0.i1u_1) === 0)) {
+          if (!((1 << index & this_0.k1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_1.w5(', ');
             }
-            this_1.w5(operation.p1u(_IntParameter___init__impl__oy5xkp(index)));
+            this_1.w5(operation.r1u(_IntParameter___init__impl__oy5xkp(index)));
             missingIntCount = missingIntCount + 1 | 0;
           }
         }
@@ -12812,7 +12812,7 @@
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>' call
       // Inline function 'kotlin.repeat' call
-      var times_0 = operation.o1u_1;
+      var times_0 = operation.q1u_1;
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < times_0)
@@ -12820,11 +12820,11 @@
           var index_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>.<anonymous>.<anonymous>' call
-          if (!((1 << index_0 & this_0.j1u_1) === 0)) {
+          if (!((1 << index_0 & this_0.l1u_1) === 0)) {
             if (missingIntCount > 0) {
               this_2.w5(', ');
             }
-            this_2.w5(operation.q1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
+            this_2.w5(operation.s1u(_ObjectParameter___init__impl__iyg1ip(index_0)));
             missingObjectCount = missingObjectCount + 1 | 0;
           }
         }
@@ -12850,21 +12850,21 @@
     Ups_instance = this;
     Operation.call(this, 1);
   }
-  protoOf(Ups).p1u = function (parameter) {
+  protoOf(Ups).r1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.Ups.Count' call
     if (parameter === _IntParameter___init__impl__oy5xkp(0)) {
       tmp = 'count';
     } else {
-      tmp = protoOf(Operation).p1u.call(this, parameter);
+      tmp = protoOf(Operation).r1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(Ups).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(Ups).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'kotlin.repeat' call
     // Inline function 'androidx.compose.runtime.changelist.Ups.Count' call
     var tmp$ret$0 = _IntParameter___init__impl__oy5xkp(0);
-    var times = _this__u8e3s4.x1v(tmp$ret$0);
+    var times = _this__u8e3s4.z1v(tmp$ret$0);
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
     if (inductionVariable < times)
@@ -12872,7 +12872,7 @@
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'androidx.compose.runtime.changelist.Ups.execute.<anonymous>' call
-        applier.b12();
+        applier.d12();
       }
        while (inductionVariable < times);
   };
@@ -12886,28 +12886,28 @@
     Downs_instance = this;
     Operation.call(this, VOID, 1);
   }
-  protoOf(Downs).q1u = function (parameter) {
+  protoOf(Downs).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.Downs.Nodes' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
       tmp = 'nodes';
     } else {
-      tmp = protoOf(Operation).q1u.call(this, parameter);
+      tmp = protoOf(Operation).s1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(Downs).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(Downs).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     var nodeApplier = isInterface(applier, Applier) ? applier : THROW_CCE();
     // Inline function 'androidx.compose.runtime.changelist.Downs.Nodes' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    var nodes = _this__u8e3s4.b1w(tmp$ret$0);
+    var nodes = _this__u8e3s4.d1w(tmp$ret$0);
     var inductionVariable = 0;
     var last = nodes.length - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        nodeApplier.a12(nodes[index]);
+        nodeApplier.c12(nodes[index]);
       }
        while (inductionVariable <= last);
   };
@@ -12921,20 +12921,20 @@
     AdvanceSlotsBy_instance = this;
     Operation.call(this, 1);
   }
-  protoOf(AdvanceSlotsBy).p1u = function (parameter) {
+  protoOf(AdvanceSlotsBy).r1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.AdvanceSlotsBy.Distance' call
     if (parameter === _IntParameter___init__impl__oy5xkp(0)) {
       tmp = 'distance';
     } else {
-      tmp = protoOf(Operation).p1u.call(this, parameter);
+      tmp = protoOf(Operation).r1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(AdvanceSlotsBy).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(AdvanceSlotsBy).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.AdvanceSlotsBy.Distance' call
     var tmp$ret$0 = _IntParameter___init__impl__oy5xkp(0);
-    slots.j1r(_this__u8e3s4.x1v(tmp$ret$0));
+    slots.l1r(_this__u8e3s4.z1v(tmp$ret$0));
   };
   var AdvanceSlotsBy_instance;
   function AdvanceSlotsBy_getInstance() {
@@ -12946,20 +12946,20 @@
     Remember_instance = this;
     Operation.call(this, VOID, 1);
   }
-  protoOf(Remember).q1u = function (parameter) {
+  protoOf(Remember).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.Remember.Value' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
       tmp = 'value';
     } else {
-      tmp = protoOf(Operation).q1u.call(this, parameter);
+      tmp = protoOf(Operation).s1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(Remember).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(Remember).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.Remember.Value' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    rememberManager.e1j(_this__u8e3s4.b1w(tmp$ret$0));
+    rememberManager.g1j(_this__u8e3s4.d1w(tmp$ret$0));
   };
   var Remember_instance;
   function Remember_getInstance() {
@@ -12971,39 +12971,39 @@
     UpdateValue_instance = this;
     Operation.call(this, 1, 1);
   }
-  protoOf(UpdateValue).p1u = function (parameter) {
+  protoOf(UpdateValue).r1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.UpdateValue.GroupSlotIndex' call
     if (parameter === _IntParameter___init__impl__oy5xkp(0)) {
       tmp = 'groupSlotIndex';
     } else {
-      tmp = protoOf(Operation).p1u.call(this, parameter);
+      tmp = protoOf(Operation).r1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(UpdateValue).q1u = function (parameter) {
+  protoOf(UpdateValue).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.UpdateValue.Value' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
       tmp = 'value';
     } else {
-      tmp = protoOf(Operation).q1u.call(this, parameter);
+      tmp = protoOf(Operation).s1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(UpdateValue).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(UpdateValue).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.UpdateValue.Value' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    var value = _this__u8e3s4.b1w(tmp$ret$0);
+    var value = _this__u8e3s4.d1w(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.UpdateValue.GroupSlotIndex' call
     var tmp$ret$1 = _IntParameter___init__impl__oy5xkp(0);
-    var groupSlotIndex = _this__u8e3s4.x1v(tmp$ret$1);
+    var groupSlotIndex = _this__u8e3s4.z1v(tmp$ret$1);
     if (value instanceof RememberObserverHolder) {
-      rememberManager.e1j(value.b1f_1);
+      rememberManager.g1j(value.d1f_1);
     }
-    var previous = slots.g1s(groupSlotIndex, value);
+    var previous = slots.i1s(groupSlotIndex, value);
     if (previous instanceof RememberObserverHolder) {
-      rememberManager.v1g(previous.b1f_1);
+      rememberManager.x1g(previous.d1f_1);
     } else {
       if (previous instanceof RecomposeScopeImpl) {
         previous.vp();
@@ -13020,20 +13020,20 @@
     UpdateAuxData_instance = this;
     Operation.call(this, VOID, 1);
   }
-  protoOf(UpdateAuxData).q1u = function (parameter) {
+  protoOf(UpdateAuxData).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.UpdateAuxData.Data' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
       tmp = 'data';
     } else {
-      tmp = protoOf(Operation).q1u.call(this, parameter);
+      tmp = protoOf(Operation).s1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(UpdateAuxData).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(UpdateAuxData).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.UpdateAuxData.Data' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    slots.l1r(_this__u8e3s4.b1w(tmp$ret$0));
+    slots.n1r(_this__u8e3s4.d1w(tmp$ret$0));
   };
   var UpdateAuxData_instance;
   function UpdateAuxData_getInstance() {
@@ -13045,8 +13045,8 @@
     EnsureRootGroupStarted_instance = this;
     Operation.call(this);
   }
-  protoOf(EnsureRootGroupStarted).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
-    slots.i1s(0);
+  protoOf(EnsureRootGroupStarted).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+    slots.k1s(0);
   };
   var EnsureRootGroupStarted_instance;
   function EnsureRootGroupStarted_getInstance() {
@@ -13058,20 +13058,20 @@
     EnsureGroupStarted_instance = this;
     Operation.call(this, VOID, 1);
   }
-  protoOf(EnsureGroupStarted).q1u = function (parameter) {
+  protoOf(EnsureGroupStarted).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.EnsureGroupStarted.Anchor' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
       tmp = 'anchor';
     } else {
-      tmp = protoOf(Operation).q1u.call(this, parameter);
+      tmp = protoOf(Operation).s1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(EnsureGroupStarted).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(EnsureGroupStarted).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.EnsureGroupStarted.Anchor' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    slots.j1s(_this__u8e3s4.b1w(tmp$ret$0));
+    slots.l1s(_this__u8e3s4.d1w(tmp$ret$0));
   };
   var EnsureGroupStarted_instance;
   function EnsureGroupStarted_getInstance() {
@@ -13083,7 +13083,7 @@
     RemoveCurrentGroup_instance = this;
     Operation.call(this);
   }
-  protoOf(RemoveCurrentGroup).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(RemoveCurrentGroup).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     removeCurrentGroup(slots, rememberManager);
   };
   var RemoveCurrentGroup_instance;
@@ -13096,20 +13096,20 @@
     MoveCurrentGroup_instance = this;
     Operation.call(this, 1);
   }
-  protoOf(MoveCurrentGroup).p1u = function (parameter) {
+  protoOf(MoveCurrentGroup).r1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.MoveCurrentGroup.Offset' call
     if (parameter === _IntParameter___init__impl__oy5xkp(0)) {
       tmp = 'offset';
     } else {
-      tmp = protoOf(Operation).p1u.call(this, parameter);
+      tmp = protoOf(Operation).r1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(MoveCurrentGroup).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(MoveCurrentGroup).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.MoveCurrentGroup.Offset' call
     var tmp$ret$0 = _IntParameter___init__impl__oy5xkp(0);
-    slots.l1s(_this__u8e3s4.x1v(tmp$ret$0));
+    slots.n1s(_this__u8e3s4.z1v(tmp$ret$0));
   };
   var MoveCurrentGroup_instance;
   function MoveCurrentGroup_getInstance() {
@@ -13121,8 +13121,8 @@
     EndCurrentGroup_instance = this;
     Operation.call(this);
   }
-  protoOf(EndCurrentGroup).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
-    slots.t1a();
+  protoOf(EndCurrentGroup).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+    slots.v1a();
   };
   var EndCurrentGroup_instance;
   function EndCurrentGroup_getInstance() {
@@ -13134,8 +13134,8 @@
     SkipToEndOfCurrentGroup_instance = this;
     Operation.call(this);
   }
-  protoOf(SkipToEndOfCurrentGroup).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
-    slots.t18();
+  protoOf(SkipToEndOfCurrentGroup).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+    slots.v18();
   };
   var SkipToEndOfCurrentGroup_instance;
   function SkipToEndOfCurrentGroup_getInstance() {
@@ -13147,7 +13147,7 @@
     EndCompositionScope_instance = this;
     Operation.call(this, VOID, 2);
   }
-  protoOf(EndCompositionScope).q1u = function (parameter) {
+  protoOf(EndCompositionScope).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.EndCompositionScope.Action' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13157,18 +13157,18 @@
       if (parameter === _ObjectParameter___init__impl__iyg1ip(1)) {
         tmp = 'composition';
       } else {
-        tmp = protoOf(Operation).q1u.call(this, parameter);
+        tmp = protoOf(Operation).s1u.call(this, parameter);
       }
     }
     return tmp;
   };
-  protoOf(EndCompositionScope).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(EndCompositionScope).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.EndCompositionScope.Action' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    var action = _this__u8e3s4.b1w(tmp$ret$0);
+    var action = _this__u8e3s4.d1w(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.EndCompositionScope.Composition' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(1);
-    var composition = _this__u8e3s4.b1w(tmp$ret$1);
+    var composition = _this__u8e3s4.d1w(tmp$ret$1);
     action(composition);
   };
   var EndCompositionScope_instance;
@@ -13181,9 +13181,9 @@
     UseCurrentNode_instance = this;
     Operation.call(this);
   }
-  protoOf(UseCurrentNode).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
-    var tmp = applier.x11();
-    ((!(tmp == null) ? isInterface(tmp, ComposeNodeLifecycleCallback) : false) ? tmp : THROW_CCE()).z12();
+  protoOf(UseCurrentNode).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+    var tmp = applier.z11();
+    ((!(tmp == null) ? isInterface(tmp, ComposeNodeLifecycleCallback) : false) ? tmp : THROW_CCE()).b13();
   };
   var UseCurrentNode_instance;
   function UseCurrentNode_getInstance() {
@@ -13195,7 +13195,7 @@
     UpdateNode_instance = this;
     Operation.call(this, VOID, 2);
   }
-  protoOf(UpdateNode).q1u = function (parameter) {
+  protoOf(UpdateNode).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.UpdateNode.Value' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13205,19 +13205,19 @@
       if (parameter === _ObjectParameter___init__impl__iyg1ip(1)) {
         tmp = 'block';
       } else {
-        tmp = protoOf(Operation).q1u.call(this, parameter);
+        tmp = protoOf(Operation).s1u.call(this, parameter);
       }
     }
     return tmp;
   };
-  protoOf(UpdateNode).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(UpdateNode).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.UpdateNode.Value' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    var value = _this__u8e3s4.b1w(tmp$ret$0);
+    var value = _this__u8e3s4.d1w(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.UpdateNode.Block' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(1);
-    var block = _this__u8e3s4.b1w(tmp$ret$1);
-    block(applier.x11(), value);
+    var block = _this__u8e3s4.d1w(tmp$ret$1);
+    block(applier.z11(), value);
   };
   var UpdateNode_instance;
   function UpdateNode_getInstance() {
@@ -13229,7 +13229,7 @@
     RemoveNode_instance = this;
     Operation.call(this, 2);
   }
-  protoOf(RemoveNode).p1u = function (parameter) {
+  protoOf(RemoveNode).r1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.RemoveNode.RemoveIndex' call
     if (parameter === _IntParameter___init__impl__oy5xkp(0)) {
@@ -13239,18 +13239,18 @@
       if (parameter === _IntParameter___init__impl__oy5xkp(1)) {
         tmp = 'count';
       } else {
-        tmp = protoOf(Operation).p1u.call(this, parameter);
+        tmp = protoOf(Operation).r1u.call(this, parameter);
       }
     }
     return tmp;
   };
-  protoOf(RemoveNode).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(RemoveNode).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.RemoveNode.RemoveIndex' call
     var tmp$ret$0 = _IntParameter___init__impl__oy5xkp(0);
-    var tmp = _this__u8e3s4.x1v(tmp$ret$0);
+    var tmp = _this__u8e3s4.z1v(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.RemoveNode.Count' call
     var tmp$ret$1 = _IntParameter___init__impl__oy5xkp(1);
-    applier.e12(tmp, _this__u8e3s4.x1v(tmp$ret$1));
+    applier.g12(tmp, _this__u8e3s4.z1v(tmp$ret$1));
   };
   var RemoveNode_instance;
   function RemoveNode_getInstance() {
@@ -13262,7 +13262,7 @@
     MoveNode_instance = this;
     Operation.call(this, 3);
   }
-  protoOf(MoveNode).p1u = function (parameter) {
+  protoOf(MoveNode).r1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.MoveNode.From' call
     if (parameter === _IntParameter___init__impl__oy5xkp(0)) {
@@ -13276,22 +13276,22 @@
         if (parameter === _IntParameter___init__impl__oy5xkp(2)) {
           tmp = 'count';
         } else {
-          tmp = protoOf(Operation).p1u.call(this, parameter);
+          tmp = protoOf(Operation).r1u.call(this, parameter);
         }
       }
     }
     return tmp;
   };
-  protoOf(MoveNode).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(MoveNode).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.MoveNode.From' call
     var tmp$ret$0 = _IntParameter___init__impl__oy5xkp(0);
-    var tmp = _this__u8e3s4.x1v(tmp$ret$0);
+    var tmp = _this__u8e3s4.z1v(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.MoveNode.To' call
     var tmp$ret$1 = _IntParameter___init__impl__oy5xkp(1);
-    var tmp_0 = _this__u8e3s4.x1v(tmp$ret$1);
+    var tmp_0 = _this__u8e3s4.z1v(tmp$ret$1);
     // Inline function 'androidx.compose.runtime.changelist.MoveNode.Count' call
     var tmp$ret$2 = _IntParameter___init__impl__oy5xkp(2);
-    applier.f12(tmp, tmp_0, _this__u8e3s4.x1v(tmp$ret$2));
+    applier.h12(tmp, tmp_0, _this__u8e3s4.z1v(tmp$ret$2));
   };
   var MoveNode_instance;
   function MoveNode_getInstance() {
@@ -13303,7 +13303,7 @@
     InsertSlots_instance = this;
     Operation.call(this, VOID, 2);
   }
-  protoOf(InsertSlots).q1u = function (parameter) {
+  protoOf(InsertSlots).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.InsertSlots.Anchor' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13313,21 +13313,21 @@
       if (parameter === _ObjectParameter___init__impl__iyg1ip(1)) {
         tmp = 'from';
       } else {
-        tmp = protoOf(Operation).q1u.call(this, parameter);
+        tmp = protoOf(Operation).s1u.call(this, parameter);
       }
     }
     return tmp;
   };
-  protoOf(InsertSlots).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(InsertSlots).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.InsertSlots.FromSlotTable' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(1);
-    var insertTable = _this__u8e3s4.b1w(tmp$ret$0);
+    var insertTable = _this__u8e3s4.d1w(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.InsertSlots.Anchor' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(0);
-    var anchor = _this__u8e3s4.b1w(tmp$ret$1);
-    slots.p19();
-    slots.n1s(insertTable, anchor.w1f(insertTable), false);
-    slots.u1a();
+    var anchor = _this__u8e3s4.d1w(tmp$ret$1);
+    slots.r19();
+    slots.p1s(insertTable, anchor.y1f(insertTable), false);
+    slots.w1a();
   };
   var InsertSlots_instance;
   function InsertSlots_getInstance() {
@@ -13339,7 +13339,7 @@
     InsertSlotsWithFixups_instance = this;
     Operation.call(this, VOID, 3);
   }
-  protoOf(InsertSlotsWithFixups).q1u = function (parameter) {
+  protoOf(InsertSlotsWithFixups).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.InsertSlotsWithFixups.Anchor' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13353,37 +13353,37 @@
         if (parameter === _ObjectParameter___init__impl__iyg1ip(2)) {
           tmp = 'fixups';
         } else {
-          tmp = protoOf(Operation).q1u.call(this, parameter);
+          tmp = protoOf(Operation).s1u.call(this, parameter);
         }
       }
     }
     return tmp;
   };
-  protoOf(InsertSlotsWithFixups).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(InsertSlotsWithFixups).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.InsertSlotsWithFixups.FromSlotTable' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(1);
-    var insertTable = _this__u8e3s4.b1w(tmp$ret$0);
+    var insertTable = _this__u8e3s4.d1w(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.InsertSlotsWithFixups.Anchor' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(0);
-    var anchor = _this__u8e3s4.b1w(tmp$ret$1);
+    var anchor = _this__u8e3s4.d1w(tmp$ret$1);
     // Inline function 'androidx.compose.runtime.changelist.InsertSlotsWithFixups.Fixups' call
     var tmp$ret$2 = _ObjectParameter___init__impl__iyg1ip(2);
-    var fixups = _this__u8e3s4.b1w(tmp$ret$2);
+    var fixups = _this__u8e3s4.d1w(tmp$ret$2);
     // Inline function 'androidx.compose.runtime.SlotTable.write' call
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotTable.write.<anonymous>' call
-    var writer = insertTable.s18();
+    var writer = insertTable.u18();
     var tmp;
     try {
-      fixups.s1v(applier, writer, rememberManager);
+      fixups.u1v(applier, writer, rememberManager);
       tmp = Unit_instance;
     }finally {
-      writer.g17();
+      writer.i17();
     }
-    slots.p19();
-    slots.n1s(insertTable, anchor.w1f(insertTable), false);
-    slots.u1a();
+    slots.r19();
+    slots.p1s(insertTable, anchor.y1f(insertTable), false);
+    slots.w1a();
   };
   var InsertSlotsWithFixups_instance;
   function InsertSlotsWithFixups_getInstance() {
@@ -13395,17 +13395,17 @@
     InsertNodeFixup_instance = this;
     Operation.call(this, 1, 2);
   }
-  protoOf(InsertNodeFixup).p1u = function (parameter) {
+  protoOf(InsertNodeFixup).r1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.InsertNodeFixup.InsertIndex' call
     if (parameter === _IntParameter___init__impl__oy5xkp(0)) {
       tmp = 'insertIndex';
     } else {
-      tmp = protoOf(Operation).p1u.call(this, parameter);
+      tmp = protoOf(Operation).r1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(InsertNodeFixup).q1u = function (parameter) {
+  protoOf(InsertNodeFixup).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.InsertNodeFixup.Factory' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13415,25 +13415,25 @@
       if (parameter === _ObjectParameter___init__impl__iyg1ip(1)) {
         tmp = 'groupAnchor';
       } else {
-        tmp = protoOf(Operation).q1u.call(this, parameter);
+        tmp = protoOf(Operation).s1u.call(this, parameter);
       }
     }
     return tmp;
   };
-  protoOf(InsertNodeFixup).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(InsertNodeFixup).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.InsertNodeFixup.Factory' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    var node = _this__u8e3s4.b1w(tmp$ret$0)();
+    var node = _this__u8e3s4.d1w(tmp$ret$0)();
     // Inline function 'androidx.compose.runtime.changelist.InsertNodeFixup.GroupAnchor' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(1);
-    var groupAnchor = _this__u8e3s4.b1w(tmp$ret$1);
+    var groupAnchor = _this__u8e3s4.d1w(tmp$ret$1);
     // Inline function 'androidx.compose.runtime.changelist.InsertNodeFixup.InsertIndex' call
     var tmp$ret$2 = _IntParameter___init__impl__oy5xkp(0);
-    var insertIndex = _this__u8e3s4.x1v(tmp$ret$2);
+    var insertIndex = _this__u8e3s4.z1v(tmp$ret$2);
     var nodeApplier = isInterface(applier, Applier) ? applier : THROW_CCE();
-    slots.f1s(groupAnchor, node);
-    nodeApplier.c12(insertIndex, node);
-    nodeApplier.a12(node);
+    slots.h1s(groupAnchor, node);
+    nodeApplier.e12(insertIndex, node);
+    nodeApplier.c12(node);
   };
   var InsertNodeFixup_instance;
   function InsertNodeFixup_getInstance() {
@@ -13445,37 +13445,37 @@
     PostInsertNodeFixup_instance = this;
     Operation.call(this, 1, 1);
   }
-  protoOf(PostInsertNodeFixup).p1u = function (parameter) {
+  protoOf(PostInsertNodeFixup).r1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.PostInsertNodeFixup.InsertIndex' call
     if (parameter === _IntParameter___init__impl__oy5xkp(0)) {
       tmp = 'insertIndex';
     } else {
-      tmp = protoOf(Operation).p1u.call(this, parameter);
+      tmp = protoOf(Operation).r1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(PostInsertNodeFixup).q1u = function (parameter) {
+  protoOf(PostInsertNodeFixup).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.PostInsertNodeFixup.GroupAnchor' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
       tmp = 'groupAnchor';
     } else {
-      tmp = protoOf(Operation).q1u.call(this, parameter);
+      tmp = protoOf(Operation).s1u.call(this, parameter);
     }
     return tmp;
   };
-  protoOf(PostInsertNodeFixup).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(PostInsertNodeFixup).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.PostInsertNodeFixup.GroupAnchor' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    var groupAnchor = _this__u8e3s4.b1w(tmp$ret$0);
+    var groupAnchor = _this__u8e3s4.d1w(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.PostInsertNodeFixup.InsertIndex' call
     var tmp$ret$1 = _IntParameter___init__impl__oy5xkp(0);
-    var insertIndex = _this__u8e3s4.x1v(tmp$ret$1);
-    applier.b12();
+    var insertIndex = _this__u8e3s4.z1v(tmp$ret$1);
+    applier.d12();
     var nodeApplier = isInterface(applier, Applier) ? applier : THROW_CCE();
-    var nodeToInsert = slots.y1r(groupAnchor);
-    nodeApplier.d12(insertIndex, nodeToInsert);
+    var nodeToInsert = slots.a1s(groupAnchor);
+    nodeApplier.f12(insertIndex, nodeToInsert);
   };
   var PostInsertNodeFixup_instance;
   function PostInsertNodeFixup_getInstance() {
@@ -13487,8 +13487,8 @@
     ResetSlots_instance = this;
     Operation.call(this);
   }
-  protoOf(ResetSlots).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
-    slots.a1s();
+  protoOf(ResetSlots).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+    slots.c1s();
   };
   var ResetSlots_instance;
   function ResetSlots_getInstance() {
@@ -13500,7 +13500,7 @@
     DetermineMovableContentNodeIndex_instance = this;
     Operation.call(this, VOID, 2);
   }
-  protoOf(DetermineMovableContentNodeIndex).q1u = function (parameter) {
+  protoOf(DetermineMovableContentNodeIndex).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.DetermineMovableContentNodeIndex.EffectiveNodeIndexOut' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13510,20 +13510,20 @@
       if (parameter === _ObjectParameter___init__impl__iyg1ip(1)) {
         tmp = 'anchor';
       } else {
-        tmp = protoOf(Operation).q1u.call(this, parameter);
+        tmp = protoOf(Operation).s1u.call(this, parameter);
       }
     }
     return tmp;
   };
-  protoOf(DetermineMovableContentNodeIndex).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(DetermineMovableContentNodeIndex).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.DetermineMovableContentNodeIndex.EffectiveNodeIndexOut' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    var effectiveNodeIndexOut = _this__u8e3s4.b1w(tmp$ret$0);
+    var effectiveNodeIndexOut = _this__u8e3s4.d1w(tmp$ret$0);
     var tmp = effectiveNodeIndexOut;
     // Inline function 'androidx.compose.runtime.changelist.DetermineMovableContentNodeIndex.Anchor' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(1);
-    var tmp_0 = _this__u8e3s4.b1w(tmp$ret$1);
-    tmp.s1x_1 = positionToInsert(slots, tmp_0, isInterface(applier, Applier) ? applier : THROW_CCE());
+    var tmp_0 = _this__u8e3s4.d1w(tmp$ret$1);
+    tmp.u1x_1 = positionToInsert(slots, tmp_0, isInterface(applier, Applier) ? applier : THROW_CCE());
   };
   var DetermineMovableContentNodeIndex_instance;
   function DetermineMovableContentNodeIndex_getInstance() {
@@ -13535,7 +13535,7 @@
     CopyNodesToNewAnchorLocation_instance = this;
     Operation.call(this, VOID, 2);
   }
-  protoOf(CopyNodesToNewAnchorLocation).q1u = function (parameter) {
+  protoOf(CopyNodesToNewAnchorLocation).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.CopyNodesToNewAnchorLocation.EffectiveNodeIndex' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13545,18 +13545,18 @@
       if (parameter === _ObjectParameter___init__impl__iyg1ip(1)) {
         tmp = 'nodes';
       } else {
-        tmp = protoOf(Operation).q1u.call(this, parameter);
+        tmp = protoOf(Operation).s1u.call(this, parameter);
       }
     }
     return tmp;
   };
-  protoOf(CopyNodesToNewAnchorLocation).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(CopyNodesToNewAnchorLocation).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.CopyNodesToNewAnchorLocation.EffectiveNodeIndex' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    var effectiveNodeIndex = _this__u8e3s4.b1w(tmp$ret$0).s1x_1;
+    var effectiveNodeIndex = _this__u8e3s4.d1w(tmp$ret$0).u1x_1;
     // Inline function 'androidx.compose.runtime.changelist.CopyNodesToNewAnchorLocation.Nodes' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(1);
-    var nodesToInsert = _this__u8e3s4.b1w(tmp$ret$1);
+    var nodesToInsert = _this__u8e3s4.d1w(tmp$ret$1);
     // Inline function 'androidx.compose.runtime.snapshots.fastForEachIndexed' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
@@ -13569,8 +13569,8 @@
         // Inline function 'androidx.compose.runtime.changelist.CopyNodesToNewAnchorLocation.execute.<anonymous>' call
         if (!isInterface(applier, Applier))
           THROW_CCE();
-        applier.d12(effectiveNodeIndex + index | 0, item);
-        applier.c12(effectiveNodeIndex + index | 0, item);
+        applier.f12(effectiveNodeIndex + index | 0, item);
+        applier.e12(effectiveNodeIndex + index | 0, item);
       }
        while (inductionVariable <= last);
   };
@@ -13584,7 +13584,7 @@
     CopySlotTableToAnchorLocation_instance = this;
     Operation.call(this, VOID, 4);
   }
-  protoOf(CopySlotTableToAnchorLocation).q1u = function (parameter) {
+  protoOf(CopySlotTableToAnchorLocation).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.CopySlotTableToAnchorLocation.ResolvedState' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13602,27 +13602,27 @@
           if (parameter === _ObjectParameter___init__impl__iyg1ip(3)) {
             tmp = 'to';
           } else {
-            tmp = protoOf(Operation).q1u.call(this, parameter);
+            tmp = protoOf(Operation).s1u.call(this, parameter);
           }
         }
       }
     }
     return tmp;
   };
-  protoOf(CopySlotTableToAnchorLocation).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(CopySlotTableToAnchorLocation).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.CopySlotTableToAnchorLocation.From' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(2);
-    var from = _this__u8e3s4.b1w(tmp$ret$0);
+    var from = _this__u8e3s4.d1w(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.CopySlotTableToAnchorLocation.To' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(3);
-    var to = _this__u8e3s4.b1w(tmp$ret$1);
+    var to = _this__u8e3s4.d1w(tmp$ret$1);
     // Inline function 'androidx.compose.runtime.changelist.CopySlotTableToAnchorLocation.ParentCompositionContext' call
     var tmp$ret$2 = _ObjectParameter___init__impl__iyg1ip(1);
-    var parentCompositionContext = _this__u8e3s4.b1w(tmp$ret$2);
+    var parentCompositionContext = _this__u8e3s4.d1w(tmp$ret$2);
     // Inline function 'androidx.compose.runtime.changelist.CopySlotTableToAnchorLocation.ResolvedState' call
     var tmp$ret$3 = _ObjectParameter___init__impl__iyg1ip(0);
-    var tmp0_elvis_lhs = _this__u8e3s4.b1w(tmp$ret$3);
-    var tmp1_elvis_lhs = tmp0_elvis_lhs == null ? parentCompositionContext.y1b(from) : tmp0_elvis_lhs;
+    var tmp0_elvis_lhs = _this__u8e3s4.d1w(tmp$ret$3);
+    var tmp1_elvis_lhs = tmp0_elvis_lhs == null ? parentCompositionContext.a1c(from) : tmp0_elvis_lhs;
     var tmp;
     if (tmp1_elvis_lhs == null) {
       composeRuntimeError('Could not resolve state for movable content');
@@ -13630,10 +13630,10 @@
       tmp = tmp1_elvis_lhs;
     }
     var resolvedState = tmp;
-    var anchors = slots.o1s(1, resolvedState.z1b_1, 2);
+    var anchors = slots.q1s(1, resolvedState.b1c_1, 2);
     var tmp_0 = Companion_instance_2;
-    var tmp_1 = to.r1b_1;
-    tmp_0.l1m(slots, anchors, isInterface(tmp_1, RecomposeScopeOwner) ? tmp_1 : THROW_CCE());
+    var tmp_1 = to.t1b_1;
+    tmp_0.n1m(slots, anchors, isInterface(tmp_1, RecomposeScopeOwner) ? tmp_1 : THROW_CCE());
   };
   var CopySlotTableToAnchorLocation_instance;
   function CopySlotTableToAnchorLocation_getInstance() {
@@ -13645,9 +13645,9 @@
     EndMovableContentPlacement_instance = this;
     Operation.call(this);
   }
-  protoOf(EndMovableContentPlacement).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(EndMovableContentPlacement).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     positionToParentOf(slots, isInterface(applier, Applier) ? applier : THROW_CCE(), 0);
-    slots.t1a();
+    slots.v1a();
   };
   var EndMovableContentPlacement_instance;
   function EndMovableContentPlacement_getInstance() {
@@ -13659,7 +13659,7 @@
     ReleaseMovableGroupAtCurrent_instance = this;
     Operation.call(this, VOID, 3);
   }
-  protoOf(ReleaseMovableGroupAtCurrent).q1u = function (parameter) {
+  protoOf(ReleaseMovableGroupAtCurrent).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.ReleaseMovableGroupAtCurrent.Composition' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13673,22 +13673,22 @@
         if (parameter === _ObjectParameter___init__impl__iyg1ip(2)) {
           tmp = 'reference';
         } else {
-          tmp = protoOf(Operation).q1u.call(this, parameter);
+          tmp = protoOf(Operation).s1u.call(this, parameter);
         }
       }
     }
     return tmp;
   };
-  protoOf(ReleaseMovableGroupAtCurrent).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(ReleaseMovableGroupAtCurrent).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.ReleaseMovableGroupAtCurrent.Composition' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(0);
-    var tmp = _this__u8e3s4.b1w(tmp$ret$0);
+    var tmp = _this__u8e3s4.d1w(tmp$ret$0);
     // Inline function 'androidx.compose.runtime.changelist.ReleaseMovableGroupAtCurrent.ParentCompositionContext' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(1);
-    var tmp_0 = _this__u8e3s4.b1w(tmp$ret$1);
+    var tmp_0 = _this__u8e3s4.d1w(tmp$ret$1);
     // Inline function 'androidx.compose.runtime.changelist.ReleaseMovableGroupAtCurrent.Reference' call
     var tmp$ret$2 = _ObjectParameter___init__impl__iyg1ip(2);
-    releaseMovableGroupAtCurrent(tmp, tmp_0, _this__u8e3s4.b1w(tmp$ret$2), slots);
+    releaseMovableGroupAtCurrent(tmp, tmp_0, _this__u8e3s4.d1w(tmp$ret$2), slots);
   };
   var ReleaseMovableGroupAtCurrent_instance;
   function ReleaseMovableGroupAtCurrent_getInstance() {
@@ -13700,7 +13700,7 @@
     ApplyChangeList_instance = this;
     Operation.call(this, VOID, 2);
   }
-  protoOf(ApplyChangeList).q1u = function (parameter) {
+  protoOf(ApplyChangeList).s1u = function (parameter) {
     var tmp;
     // Inline function 'androidx.compose.runtime.changelist.ApplyChangeList.Changes' call
     if (parameter === _ObjectParameter___init__impl__iyg1ip(0)) {
@@ -13710,27 +13710,27 @@
       if (parameter === _ObjectParameter___init__impl__iyg1ip(1)) {
         tmp = 'effectiveNodeIndex';
       } else {
-        tmp = protoOf(Operation).q1u.call(this, parameter);
+        tmp = protoOf(Operation).s1u.call(this, parameter);
       }
     }
     return tmp;
   };
-  protoOf(ApplyChangeList).w1v = function (_this__u8e3s4, applier, slots, rememberManager) {
+  protoOf(ApplyChangeList).y1v = function (_this__u8e3s4, applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.ApplyChangeList.EffectiveNodeIndex' call
     var tmp$ret$0 = _ObjectParameter___init__impl__iyg1ip(1);
-    var tmp0_safe_receiver = _this__u8e3s4.b1w(tmp$ret$0);
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.s1x_1;
+    var tmp0_safe_receiver = _this__u8e3s4.d1w(tmp$ret$0);
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.u1x_1;
     var effectiveNodeIndex = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
     // Inline function 'androidx.compose.runtime.changelist.ApplyChangeList.Changes' call
     var tmp$ret$1 = _ObjectParameter___init__impl__iyg1ip(0);
-    var tmp = _this__u8e3s4.b1w(tmp$ret$1);
+    var tmp = _this__u8e3s4.d1w(tmp$ret$1);
     var tmp_0;
     if (effectiveNodeIndex > 0) {
       tmp_0 = new OffsetApplier(applier, effectiveNodeIndex);
     } else {
       tmp_0 = applier;
     }
-    tmp.m1i(tmp_0, slots, rememberManager);
+    tmp.o1i(tmp_0, slots, rememberManager);
   };
   var ApplyChangeList_instance;
   function ApplyChangeList_getInstance() {
@@ -13741,48 +13741,48 @@
   function Operation(ints, objects) {
     ints = ints === VOID ? 0 : ints;
     objects = objects === VOID ? 0 : objects;
-    this.n1u_1 = ints;
-    this.o1u_1 = objects;
+    this.p1u_1 = ints;
+    this.q1u_1 = objects;
   }
-  protoOf(Operation).y1v = function () {
+  protoOf(Operation).a1w = function () {
     // Inline function 'kotlin.text.orEmpty' call
     var tmp0_elvis_lhs = getKClassFromExpression(this).e7();
     return tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
   };
-  protoOf(Operation).p1u = function (parameter) {
+  protoOf(Operation).r1u = function (parameter) {
     return 'IntParameter(' + _IntParameter___get_offset__impl__xsdcin(parameter) + ')';
   };
-  protoOf(Operation).q1u = function (parameter) {
+  protoOf(Operation).s1u = function (parameter) {
     return 'ObjectParameter(' + _ObjectParameter___get_offset__impl__x7fx93(parameter) + ')';
   };
   protoOf(Operation).toString = function () {
-    return this.y1v();
+    return this.a1w();
   };
   function positionToInsert(slots, anchor, applier) {
-    var destination = slots.w1b(anchor);
-    runtimeCheck(slots.z17_1 < destination);
+    var destination = slots.y1b(anchor);
+    runtimeCheck(slots.b18_1 < destination);
     positionToParentOf(slots, applier, destination);
     var nodeIndex = currentNodeIndex(slots);
-    while (slots.z17_1 < destination) {
-      if (slots.u1r(destination)) {
-        if (slots.x1f()) {
-          applier.a12(slots.a1d(slots.z17_1));
+    while (slots.b18_1 < destination) {
+      if (slots.w1r(destination)) {
+        if (slots.z1f()) {
+          applier.c12(slots.c1d(slots.b18_1));
           nodeIndex = 0;
         }
-        slots.w18();
+        slots.y18();
       } else
-        nodeIndex = nodeIndex + slots.j18() | 0;
+        nodeIndex = nodeIndex + slots.l18() | 0;
     }
-    runtimeCheck(slots.z17_1 === destination);
+    runtimeCheck(slots.b18_1 === destination);
     return nodeIndex;
   }
   function positionToParentOf(slots, applier, index) {
-    while (!slots.t1r(index)) {
-      slots.t18();
-      if (slots.b1b(slots.b18_1)) {
-        applier.b12();
+    while (!slots.v1r(index)) {
+      slots.v18();
+      if (slots.d1b(slots.d18_1)) {
+        applier.d12();
       }
-      slots.t1a();
+      slots.v1a();
     }
   }
   function releaseMovableGroupAtCurrent(composition, parentContext, reference, slots) {
@@ -13791,74 +13791,74 @@
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.SlotTable.write.<anonymous>' call
-    var writer = slotTable.s18();
+    var writer = slotTable.u18();
     var tmp;
     try {
       // Inline function 'androidx.compose.runtime.changelist.releaseMovableGroupAtCurrent.<anonymous>' call
-      writer.p19();
-      writer.a19(get_movableContentKey(), reference.p1b_1);
-      writer.l1b();
-      writer.h1f(reference.q1b_1);
-      var anchors = slots.m1s(reference.t1b_1, 1, writer);
-      writer.j18();
-      writer.t1a();
-      writer.u1a();
+      writer.r19();
+      writer.c19(get_movableContentKey(), reference.r1b_1);
+      writer.n1b();
+      writer.j1f(reference.s1b_1);
+      var anchors = slots.o1s(reference.v1b_1, 1, writer);
+      writer.l18();
+      writer.v1a();
+      writer.w1a();
       tmp = anchors;
     }finally {
-      writer.g17();
+      writer.i17();
     }
     var anchors_0 = tmp;
     var state = new MovableContentState(slotTable);
-    if (Companion_instance_2.o1m(slotTable, anchors_0)) {
+    if (Companion_instance_2.q1m(slotTable, anchors_0)) {
       var movableContentRecomposeScopeOwner = new releaseMovableGroupAtCurrent$movableContentRecomposeScopeOwner$1(composition, reference);
       // Inline function 'androidx.compose.runtime.SlotTable.write' call
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.SlotTable.write.<anonymous>' call
-      var writer_0 = slotTable.s18();
+      var writer_0 = slotTable.u18();
       var tmp_0;
       try {
-        Companion_instance_2.l1m(writer_0, anchors_0, movableContentRecomposeScopeOwner);
+        Companion_instance_2.n1m(writer_0, anchors_0, movableContentRecomposeScopeOwner);
         tmp_0 = Unit_instance;
       }finally {
-        writer_0.g17();
+        writer_0.i17();
       }
     }
-    parentContext.s1k(reference, state);
+    parentContext.u1k(reference, state);
   }
   function currentNodeIndex(slots) {
-    var original = slots.z17_1;
-    var current = slots.b18_1;
-    while (current >= 0 ? !slots.b1b(current) : false) {
-      current = slots.p18(current);
+    var original = slots.b18_1;
+    var current = slots.d18_1;
+    while (current >= 0 ? !slots.d1b(current) : false) {
+      current = slots.r18(current);
     }
     var index = 0;
     current = current + 1 | 0;
     while (current < original) {
-      if (slots.v1r(original, current)) {
-        if (slots.b1b(current))
+      if (slots.x1r(original, current)) {
+        if (slots.d1b(current))
           index = 0;
         current = current + 1 | 0;
       } else {
-        index = index + (slots.b1b(current) ? 1 : slots.c1b(current)) | 0;
-        current = current + slots.h1a(current) | 0;
+        index = index + (slots.d1b(current) ? 1 : slots.e1b(current)) | 0;
+        current = current + slots.j1a(current) | 0;
       }
     }
     return index;
   }
   function releaseMovableGroupAtCurrent$movableContentRecomposeScopeOwner$1($composition, $reference) {
-    this.d1y_1 = $composition;
-    this.e1y_1 = $reference;
+    this.f1y_1 = $composition;
+    this.g1y_1 = $reference;
   }
-  protoOf(releaseMovableGroupAtCurrent$movableContentRecomposeScopeOwner$1).j1k = function (scope, instance) {
-    var tmp = this.d1y_1;
+  protoOf(releaseMovableGroupAtCurrent$movableContentRecomposeScopeOwner$1).l1k = function (scope, instance) {
+    var tmp = this.f1y_1;
     var tmp0_safe_receiver = isInterface(tmp, RecomposeScopeOwner) ? tmp : null;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.j1k(scope, instance);
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.l1k(scope, instance);
     var result = tmp1_elvis_lhs == null ? InvalidationResult_IGNORED_getInstance() : tmp1_elvis_lhs;
     if (result.equals(InvalidationResult_IGNORED_getInstance())) {
-      var tmp2_this = this.e1y_1;
+      var tmp2_this = this.g1y_1;
       var tmp_0 = tmp2_this;
-      var tmp_1 = tmp2_this.u1b_1;
+      var tmp_1 = tmp2_this.w1b_1;
       var tmp_2;
       if (instance == null) {
         tmp_2 = null;
@@ -13870,17 +13870,17 @@
         var this_0 = new IdentityArraySet();
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.changelist.<no name provided>.invalidate.<anonymous>.<anonymous>' call
-        this_0.f1h(this_0);
+        this_0.h1h(this_0);
         tmp_2 = this_0;
       }
-      tmp_0.u1b_1 = plus_1(tmp_1, to(scope, tmp_2));
+      tmp_0.w1b_1 = plus_1(tmp_1, to(scope, tmp_2));
       return InvalidationResult_SCHEDULED_getInstance();
     }
     return result;
   };
-  protoOf(releaseMovableGroupAtCurrent$movableContentRecomposeScopeOwner$1).n1k = function (scope) {
+  protoOf(releaseMovableGroupAtCurrent$movableContentRecomposeScopeOwner$1).p1k = function (scope) {
   };
-  protoOf(releaseMovableGroupAtCurrent$movableContentRecomposeScopeOwner$1).u1j = function (value) {
+  protoOf(releaseMovableGroupAtCurrent$movableContentRecomposeScopeOwner$1).w1j = function (value) {
   };
   function _WriteScope___init__impl__4xwato(stack) {
     return stack;
@@ -13898,13 +13898,13 @@
     var mask = 1 << _IntParameter___get_offset__impl__xsdcin(parameter);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(($this$with.i1u_1 & mask) === 0)) {
+    if (!(($this$with.k1u_1 & mask) === 0)) {
       // Inline function 'androidx.compose.runtime.changelist.WriteScope.setInt.<anonymous>.<anonymous>' call
-      var message = 'Already pushed argument ' + _WriteScope___get_operation__impl__krvgwa($this).p1u(parameter);
+      var message = 'Already pushed argument ' + _WriteScope___get_operation__impl__krvgwa($this).r1u(parameter);
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    $this$with.i1u_1 = $this$with.i1u_1 | mask;
-    $this$with.e1u_1[topIntIndexOf($this$with, parameter)] = value;
+    $this$with.k1u_1 = $this$with.k1u_1 | mask;
+    $this$with.g1u_1[topIntIndexOf($this$with, parameter)] = value;
     return Unit_instance;
   }
   function WriteScope__setObject_impl_rr41y9($this, parameter, value) {
@@ -13914,13 +13914,13 @@
     var mask = 1 << _ObjectParameter___get_offset__impl__x7fx93(parameter);
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(($this$with.j1u_1 & mask) === 0)) {
+    if (!(($this$with.l1u_1 & mask) === 0)) {
       // Inline function 'androidx.compose.runtime.changelist.WriteScope.setObject.<anonymous>.<anonymous>' call
-      var message = 'Already pushed argument ' + _WriteScope___get_operation__impl__krvgwa($this).q1u(parameter);
+      var message = 'Already pushed argument ' + _WriteScope___get_operation__impl__krvgwa($this).s1u(parameter);
       throw IllegalStateException_init_$Create$(toString(message));
     }
-    $this$with.j1u_1 = $this$with.j1u_1 | mask;
-    $this$with.g1u_1[topObjectIndexOf($this$with, parameter)] = value;
+    $this$with.l1u_1 = $this$with.l1u_1 | mask;
+    $this$with.i1u_1[topObjectIndexOf($this$with, parameter)] = value;
     return Unit_instance;
   }
   function determineNewSize($this, currentSize, requiredSize) {
@@ -13928,15 +13928,15 @@
     return coerceAtLeast(currentSize + resizeAmount | 0, requiredSize);
   }
   function ensureIntArgsSizeAtLeast($this, requiredSize) {
-    var currentSize = $this.e1u_1.length;
+    var currentSize = $this.g1u_1.length;
     if (requiredSize > currentSize) {
-      $this.e1u_1 = copyOf($this.e1u_1, determineNewSize($this, currentSize, requiredSize));
+      $this.g1u_1 = copyOf($this.g1u_1, determineNewSize($this, currentSize, requiredSize));
     }
   }
   function ensureObjectArgsSizeAtLeast($this, requiredSize) {
-    var currentSize = $this.g1u_1.length;
+    var currentSize = $this.i1u_1.length;
     if (requiredSize > currentSize) {
-      $this.g1u_1 = copyOf_0($this.g1u_1, determineNewSize($this, currentSize, requiredSize));
+      $this.i1u_1 = copyOf_0($this.i1u_1, determineNewSize($this, currentSize, requiredSize));
     }
   }
   function createExpectedArgMask($this, paramCount) {
@@ -13949,42 +13949,42 @@
     return tmp;
   }
   function peekOperation($this) {
-    return ensureNotNull($this.c1u_1[$this.d1u_1 - 1 | 0]);
+    return ensureNotNull($this.e1u_1[$this.f1u_1 - 1 | 0]);
   }
   function topIntIndexOf($this, parameter) {
-    return ($this.f1u_1 - peekOperation($this).n1u_1 | 0) + _IntParameter___get_offset__impl__xsdcin(parameter) | 0;
+    return ($this.h1u_1 - peekOperation($this).p1u_1 | 0) + _IntParameter___get_offset__impl__xsdcin(parameter) | 0;
   }
   function topObjectIndexOf($this, parameter) {
-    return ($this.h1u_1 - peekOperation($this).o1u_1 | 0) + _ObjectParameter___get_offset__impl__x7fx93(parameter) | 0;
+    return ($this.j1u_1 - peekOperation($this).q1u_1 | 0) + _ObjectParameter___get_offset__impl__x7fx93(parameter) | 0;
   }
   function OpIterator($outer) {
-    this.i1y_1 = $outer;
-    this.f1y_1 = 0;
-    this.g1y_1 = 0;
+    this.k1y_1 = $outer;
     this.h1y_1 = 0;
+    this.i1y_1 = 0;
+    this.j1y_1 = 0;
   }
   protoOf(OpIterator).d1 = function () {
-    if (this.f1y_1 >= this.i1y_1.d1u_1)
+    if (this.h1y_1 >= this.k1y_1.f1u_1)
       return false;
-    var op = this.j1y();
-    this.g1y_1 = this.g1y_1 + op.n1u_1 | 0;
-    this.h1y_1 = this.h1y_1 + op.o1u_1 | 0;
-    this.f1y_1 = this.f1y_1 + 1 | 0;
-    return this.f1y_1 < this.i1y_1.d1u_1;
+    var op = this.l1y();
+    this.i1y_1 = this.i1y_1 + op.p1u_1 | 0;
+    this.j1y_1 = this.j1y_1 + op.q1u_1 | 0;
+    this.h1y_1 = this.h1y_1 + 1 | 0;
+    return this.h1y_1 < this.k1y_1.f1u_1;
   };
-  protoOf(OpIterator).j1y = function () {
-    return ensureNotNull(this.i1y_1.c1u_1[this.f1y_1]);
+  protoOf(OpIterator).l1y = function () {
+    return ensureNotNull(this.k1y_1.e1u_1[this.h1y_1]);
   };
-  protoOf(OpIterator).x1v = function (parameter) {
-    return this.i1y_1.e1u_1[this.g1y_1 + _IntParameter___get_offset__impl__xsdcin(parameter) | 0];
+  protoOf(OpIterator).z1v = function (parameter) {
+    return this.k1y_1.g1u_1[this.i1y_1 + _IntParameter___get_offset__impl__xsdcin(parameter) | 0];
   };
-  protoOf(OpIterator).b1w = function (parameter) {
-    var tmp = this.i1y_1.g1u_1[this.h1y_1 + _ObjectParameter___get_offset__impl__x7fx93(parameter) | 0];
+  protoOf(OpIterator).d1w = function (parameter) {
+    var tmp = this.k1y_1.i1u_1[this.j1y_1 + _ObjectParameter___get_offset__impl__x7fx93(parameter) | 0];
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
   function Companion_5() {
-    this.k1y_1 = 1024;
-    this.l1y_1 = 16;
+    this.m1y_1 = 1024;
+    this.n1y_1 = 16;
   }
   var Companion_instance_6;
   function Companion_getInstance_6() {
@@ -13993,71 +13993,71 @@
   function Operations() {
     var tmp = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp.c1u_1 = fillArrayVal(Array(16), null);
-    this.d1u_1 = 0;
-    this.e1u_1 = new Int32Array(16);
+    tmp.e1u_1 = fillArrayVal(Array(16), null);
     this.f1u_1 = 0;
+    this.g1u_1 = new Int32Array(16);
+    this.h1u_1 = 0;
     var tmp_0 = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp_0.g1u_1 = fillArrayVal(Array(16), null);
-    this.h1u_1 = 0;
-    this.i1u_1 = 0;
+    tmp_0.i1u_1 = fillArrayVal(Array(16), null);
     this.j1u_1 = 0;
+    this.k1u_1 = 0;
+    this.l1u_1 = 0;
   }
   protoOf(Operations).l = function () {
-    return this.d1u_1;
+    return this.f1u_1;
   };
   protoOf(Operations).s = function () {
     return this.l() === 0;
   };
-  protoOf(Operations).v1f = function () {
+  protoOf(Operations).x1f = function () {
     return !(this.l() === 0);
   };
   protoOf(Operations).f1 = function () {
-    this.d1u_1 = 0;
     this.f1u_1 = 0;
-    fill_0(this.g1u_1, null, 0, this.h1u_1);
     this.h1u_1 = 0;
-  };
-  protoOf(Operations).m1u = function (operation) {
-    this.i1u_1 = 0;
+    fill_0(this.i1u_1, null, 0, this.j1u_1);
     this.j1u_1 = 0;
-    if (this.d1u_1 === this.c1u_1.length) {
-      var resizeAmount = coerceAtMost(this.d1u_1, 1024);
-      this.c1u_1 = copyOf_0(this.c1u_1, this.d1u_1 + resizeAmount | 0);
-    }
-    ensureIntArgsSizeAtLeast(this, this.f1u_1 + operation.n1u_1 | 0);
-    ensureObjectArgsSizeAtLeast(this, this.h1u_1 + operation.o1u_1 | 0);
-    var tmp = this.c1u_1;
-    var tmp1 = this.d1u_1;
-    this.d1u_1 = tmp1 + 1 | 0;
-    tmp[tmp1] = operation;
-    this.f1u_1 = this.f1u_1 + operation.n1u_1 | 0;
-    this.h1u_1 = this.h1u_1 + operation.o1u_1 | 0;
   };
-  protoOf(Operations).t1u = function (operation) {
+  protoOf(Operations).o1u = function (operation) {
+    this.k1u_1 = 0;
+    this.l1u_1 = 0;
+    if (this.f1u_1 === this.e1u_1.length) {
+      var resizeAmount = coerceAtMost(this.f1u_1, 1024);
+      this.e1u_1 = copyOf_0(this.e1u_1, this.f1u_1 + resizeAmount | 0);
+    }
+    ensureIntArgsSizeAtLeast(this, this.h1u_1 + operation.p1u_1 | 0);
+    ensureObjectArgsSizeAtLeast(this, this.j1u_1 + operation.q1u_1 | 0);
+    var tmp = this.e1u_1;
+    var tmp1 = this.f1u_1;
+    this.f1u_1 = tmp1 + 1 | 0;
+    tmp[tmp1] = operation;
+    this.h1u_1 = this.h1u_1 + operation.p1u_1 | 0;
+    this.j1u_1 = this.j1u_1 + operation.q1u_1 | 0;
+  };
+  protoOf(Operations).v1u = function (operation) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(operation.n1u_1 === 0 ? operation.o1u_1 === 0 : false)) {
+    if (!(operation.p1u_1 === 0 ? operation.q1u_1 === 0 : false)) {
       // Inline function 'androidx.compose.runtime.changelist.Operations.push.<anonymous>' call
-      var message = 'Cannot push ' + operation + ' without arguments because it expects ' + ('' + operation.n1u_1 + ' ints and ' + operation.o1u_1 + ' objects.');
+      var message = 'Cannot push ' + operation + ' without arguments because it expects ' + ('' + operation.p1u_1 + ' ints and ' + operation.q1u_1 + ' objects.');
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    this.m1u(operation);
+    this.o1u(operation);
   };
-  protoOf(Operations).t1v = function (other) {
+  protoOf(Operations).v1v = function (other) {
     if (this.s()) {
       throw NoSuchElementException_init_$Create$('Cannot pop(), because the stack is empty.');
     }
-    var tmp = this.c1u_1;
-    this.d1u_1 = this.d1u_1 - 1 | 0;
-    var op = ensureNotNull(tmp[this.d1u_1]);
-    this.c1u_1[this.d1u_1] = null;
-    other.m1u(op);
-    var thisObjIdx = this.h1u_1;
-    var otherObjIdx = other.h1u_1;
+    var tmp = this.e1u_1;
+    this.f1u_1 = this.f1u_1 - 1 | 0;
+    var op = ensureNotNull(tmp[this.f1u_1]);
+    this.e1u_1[this.f1u_1] = null;
+    other.o1u(op);
+    var thisObjIdx = this.j1u_1;
+    var otherObjIdx = other.j1u_1;
     // Inline function 'kotlin.repeat' call
-    var times = op.o1u_1;
+    var times = op.q1u_1;
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
     if (inductionVariable < times)
@@ -14067,14 +14067,14 @@
         // Inline function 'androidx.compose.runtime.changelist.Operations.popInto.<anonymous>' call
         otherObjIdx = otherObjIdx - 1 | 0;
         thisObjIdx = thisObjIdx - 1 | 0;
-        other.g1u_1[otherObjIdx] = this.g1u_1[thisObjIdx];
-        this.g1u_1[thisObjIdx] = null;
+        other.i1u_1[otherObjIdx] = this.i1u_1[thisObjIdx];
+        this.i1u_1[thisObjIdx] = null;
       }
        while (inductionVariable < times);
-    var thisIntIdx = this.f1u_1;
-    var otherIntIdx = other.f1u_1;
+    var thisIntIdx = this.h1u_1;
+    var otherIntIdx = other.h1u_1;
     // Inline function 'kotlin.repeat' call
-    var times_0 = op.n1u_1;
+    var times_0 = op.p1u_1;
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable_0 = 0;
     if (inductionVariable_0 < times_0)
@@ -14084,23 +14084,23 @@
         // Inline function 'androidx.compose.runtime.changelist.Operations.popInto.<anonymous>' call
         otherIntIdx = otherIntIdx - 1 | 0;
         thisIntIdx = thisIntIdx - 1 | 0;
-        other.e1u_1[otherIntIdx] = this.e1u_1[thisIntIdx];
-        this.e1u_1[thisIntIdx] = 0;
+        other.g1u_1[otherIntIdx] = this.g1u_1[thisIntIdx];
+        this.g1u_1[thisIntIdx] = 0;
       }
        while (inductionVariable_0 < times_0);
-    this.h1u_1 = this.h1u_1 - op.o1u_1 | 0;
-    this.f1u_1 = this.f1u_1 - op.n1u_1 | 0;
+    this.j1u_1 = this.j1u_1 - op.q1u_1 | 0;
+    this.h1u_1 = this.h1u_1 - op.p1u_1 | 0;
   };
-  protoOf(Operations).k1u = function (applier, slots, rememberManager) {
+  protoOf(Operations).m1u = function (applier, slots, rememberManager) {
     // Inline function 'androidx.compose.runtime.changelist.Operations.drain' call
     // Inline function 'androidx.compose.runtime.changelist.Operations.forEach' call
-    if (this.v1f()) {
+    if (this.x1f()) {
       var iterator = new OpIterator(this);
       do {
         // Inline function 'androidx.compose.runtime.changelist.Operations.executeAndFlushAllPendingOperations.<anonymous>' call
         // Inline function 'kotlin.with' call
         // Inline function 'kotlin.contracts.contract' call
-        iterator.j1y().w1v(iterator, applier, slots, rememberManager);
+        iterator.l1y().y1v(iterator, applier, slots, rememberManager);
       }
        while (iterator.d1());
     }
@@ -14111,30 +14111,30 @@
   };
   function IdentityArrayMap$asMap$1$entries$1$iterator$1$1(this$0, $index) {
     var tmp = this;
-    var tmp_0 = this$0.q1c_1[$index];
-    tmp.m1y_1 = !(tmp_0 == null) ? tmp_0 : THROW_CCE();
+    var tmp_0 = this$0.s1c_1[$index];
+    tmp.o1y_1 = !(tmp_0 == null) ? tmp_0 : THROW_CCE();
     var tmp_1 = this;
-    var tmp_2 = this$0.r1c_1[$index];
-    tmp_1.n1y_1 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
+    var tmp_2 = this$0.t1c_1[$index];
+    tmp_1.p1y_1 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
   }
   protoOf(IdentityArrayMap$asMap$1$entries$1$iterator$1$1).n2 = function () {
-    return this.m1y_1;
+    return this.o1y_1;
   };
   protoOf(IdentityArrayMap$asMap$1$entries$1$iterator$1$1).o2 = function () {
-    return this.n1y_1;
+    return this.p1y_1;
   };
   function IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he(this$0, resultContinuation) {
-    this.w1y_1 = this$0;
+    this.y1y_1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he).a1z = function ($this$sequence, $completion) {
-    var tmp = this.b1z($this$sequence, $completion);
+  protoOf(IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he).c1z = function ($this$sequence, $completion) {
+    var tmp = this.d1z($this$sequence, $completion);
     tmp.cd_1 = Unit_instance;
     tmp.dd_1 = null;
     return tmp.md();
   };
   protoOf(IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he).yd = function (p1, $completion) {
-    return this.a1z(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
+    return this.c1z(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
   };
   protoOf(IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he).md = function () {
     var suspendResult = this.cd_1;
@@ -14144,18 +14144,18 @@
         switch (tmp) {
           case 0:
             this.bd_1 = 4;
-            this.y1y_1 = until(0, this.w1y_1.s1c_1).n();
+            this.a1z_1 = until(0, this.y1y_1.u1c_1).n();
             this.ad_1 = 1;
             continue $sm;
           case 1:
-            if (!this.y1y_1.b1()) {
+            if (!this.a1z_1.b1()) {
               this.ad_1 = 3;
               continue $sm;
             }
 
-            this.z1y_1 = this.y1y_1.d1();
+            this.b1z_1 = this.a1z_1.d1();
             this.ad_1 = 2;
-            suspendResult = this.x1y_1.mf(new IdentityArrayMap$asMap$1$entries$1$iterator$1$1(this.w1y_1, this.z1y_1), this);
+            suspendResult = this.z1y_1.mf(new IdentityArrayMap$asMap$1$entries$1$iterator$1$1(this.y1y_1, this.b1z_1), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -14180,31 +14180,31 @@
       }
      while (true);
   };
-  protoOf(IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he).b1z = function ($this$sequence, completion) {
-    var i = new IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he(this.w1y_1, completion);
-    i.x1y_1 = $this$sequence;
+  protoOf(IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he).d1z = function ($this$sequence, completion) {
+    var i = new IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he(this.y1y_1, completion);
+    i.z1y_1 = $this$sequence;
     return i;
   };
   function IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he_0(this$0, resultContinuation) {
     var i = new IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he(this$0, resultContinuation);
     var l = function ($this$sequence, $completion) {
-      return i.a1z($this$sequence, $completion);
+      return i.c1z($this$sequence, $completion);
     };
     l.$arity = 1;
     return l;
   }
   function IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw(this$0, resultContinuation) {
-    this.k1z_1 = this$0;
+    this.m1z_1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw).o1z = function ($this$sequence, $completion) {
-    var tmp = this.p1z($this$sequence, $completion);
+  protoOf(IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw).q1z = function ($this$sequence, $completion) {
+    var tmp = this.r1z($this$sequence, $completion);
     tmp.cd_1 = Unit_instance;
     tmp.dd_1 = null;
     return tmp.md();
   };
   protoOf(IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw).yd = function (p1, $completion) {
-    return this.o1z(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
+    return this.q1z(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
   };
   protoOf(IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw).md = function () {
     var suspendResult = this.cd_1;
@@ -14214,19 +14214,19 @@
         switch (tmp) {
           case 0:
             this.bd_1 = 4;
-            this.m1z_1 = until(0, this.k1z_1.s1c_1).n();
+            this.o1z_1 = until(0, this.m1z_1.u1c_1).n();
             this.ad_1 = 1;
             continue $sm;
           case 1:
-            if (!this.m1z_1.b1()) {
+            if (!this.o1z_1.b1()) {
               this.ad_1 = 3;
               continue $sm;
             }
 
-            this.n1z_1 = this.m1z_1.d1();
+            this.p1z_1 = this.o1z_1.d1();
             this.ad_1 = 2;
-            var tmp_0 = this.k1z_1.q1c_1[this.n1z_1];
-            suspendResult = this.l1z_1.mf(!(tmp_0 == null) ? tmp_0 : THROW_CCE(), this);
+            var tmp_0 = this.m1z_1.s1c_1[this.p1z_1];
+            suspendResult = this.n1z_1.mf(!(tmp_0 == null) ? tmp_0 : THROW_CCE(), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -14251,31 +14251,31 @@
       }
      while (true);
   };
-  protoOf(IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw).p1z = function ($this$sequence, completion) {
-    var i = new IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw(this.k1z_1, completion);
-    i.l1z_1 = $this$sequence;
+  protoOf(IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw).r1z = function ($this$sequence, completion) {
+    var i = new IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw(this.m1z_1, completion);
+    i.n1z_1 = $this$sequence;
     return i;
   };
   function IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw_0(this$0, resultContinuation) {
     var i = new IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw(this$0, resultContinuation);
     var l = function ($this$sequence, $completion) {
-      return i.o1z($this$sequence, $completion);
+      return i.q1z($this$sequence, $completion);
     };
     l.$arity = 1;
     return l;
   }
   function IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu(this$0, resultContinuation) {
-    this.y1z_1 = this$0;
+    this.a20_1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu).c20 = function ($this$sequence, $completion) {
-    var tmp = this.d20($this$sequence, $completion);
+  protoOf(IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu).e20 = function ($this$sequence, $completion) {
+    var tmp = this.f20($this$sequence, $completion);
     tmp.cd_1 = Unit_instance;
     tmp.dd_1 = null;
     return tmp.md();
   };
   protoOf(IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu).yd = function (p1, $completion) {
-    return this.c20(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
+    return this.e20(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
   };
   protoOf(IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu).md = function () {
     var suspendResult = this.cd_1;
@@ -14285,19 +14285,19 @@
         switch (tmp) {
           case 0:
             this.bd_1 = 4;
-            this.a20_1 = until(0, this.y1z_1.s1c_1).n();
+            this.c20_1 = until(0, this.a20_1.u1c_1).n();
             this.ad_1 = 1;
             continue $sm;
           case 1:
-            if (!this.a20_1.b1()) {
+            if (!this.c20_1.b1()) {
               this.ad_1 = 3;
               continue $sm;
             }
 
-            this.b20_1 = this.a20_1.d1();
+            this.d20_1 = this.c20_1.d1();
             this.ad_1 = 2;
-            var tmp_0 = this.y1z_1.r1c_1[this.b20_1];
-            suspendResult = this.z1z_1.mf((tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE(), this);
+            var tmp_0 = this.a20_1.t1c_1[this.d20_1];
+            suspendResult = this.b20_1.mf((tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE(), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -14322,32 +14322,32 @@
       }
      while (true);
   };
-  protoOf(IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu).d20 = function ($this$sequence, completion) {
-    var i = new IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu(this.y1z_1, completion);
-    i.z1z_1 = $this$sequence;
+  protoOf(IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu).f20 = function ($this$sequence, completion) {
+    var i = new IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu(this.a20_1, completion);
+    i.b20_1 = $this$sequence;
     return i;
   };
   function IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu_0(this$0, resultContinuation) {
     var i = new IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu(this$0, resultContinuation);
     var l = function ($this$sequence, $completion) {
-      return i.c20($this$sequence, $completion);
+      return i.e20($this$sequence, $completion);
     };
     l.$arity = 1;
     return l;
   }
   function IdentityArrayMap$asMap$1$entries$1(this$0) {
-    this.e20_1 = this$0;
+    this.g20_1 = this$0;
   }
   protoOf(IdentityArrayMap$asMap$1$entries$1).l = function () {
-    return this.e20_1.s1c_1;
+    return this.g20_1.u1c_1;
   };
   protoOf(IdentityArrayMap$asMap$1$entries$1).s = function () {
-    return this.e20_1.s();
+    return this.g20_1.s();
   };
   protoOf(IdentityArrayMap$asMap$1$entries$1).n = function () {
-    return sequence(IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he_0(this.e20_1, null)).n();
+    return sequence(IdentityArrayMap$asMap$o$_get_entries_$o$iterator$slambda_r160he_0(this.g20_1, null)).n();
   };
-  protoOf(IdentityArrayMap$asMap$1$entries$1).f20 = function (elements) {
+  protoOf(IdentityArrayMap$asMap$1$entries$1).h20 = function (elements) {
     var tmp$ret$0;
     $l$block_0: {
       // Inline function 'kotlin.collections.all' call
@@ -14365,7 +14365,7 @@
       while (tmp0_iterator.b1()) {
         var element = tmp0_iterator.d1();
         // Inline function 'androidx.compose.runtime.collection.<no name provided>.containsAll.<anonymous>' call
-        if (!this.g20(element)) {
+        if (!this.i20(element)) {
           tmp$ret$0 = false;
           break $l$block_0;
         }
@@ -14375,80 +14375,80 @@
     return tmp$ret$0;
   };
   protoOf(IdentityArrayMap$asMap$1$entries$1).r = function (elements) {
-    return this.f20(elements);
+    return this.h20(elements);
   };
-  protoOf(IdentityArrayMap$asMap$1$entries$1).g20 = function (element) {
-    return this.e20_1.q1k(element.n2()) === element.o2();
+  protoOf(IdentityArrayMap$asMap$1$entries$1).i20 = function (element) {
+    return this.g20_1.s1k(element.n2()) === element.o2();
   };
   protoOf(IdentityArrayMap$asMap$1$entries$1).q = function (element) {
     if (!(!(element == null) ? isInterface(element, Entry) : false))
       return false;
-    return this.g20((!(element == null) ? isInterface(element, Entry) : false) ? element : THROW_CCE());
+    return this.i20((!(element == null) ? isInterface(element, Entry) : false) ? element : THROW_CCE());
   };
   function IdentityArrayMap$asMap$1$keys$1(this$0) {
-    this.h20_1 = this$0;
+    this.j20_1 = this$0;
   }
   protoOf(IdentityArrayMap$asMap$1$keys$1).l = function () {
-    return this.h20_1.s1c_1;
+    return this.j20_1.u1c_1;
   };
   protoOf(IdentityArrayMap$asMap$1$keys$1).s = function () {
-    return this.h20_1.s();
+    return this.j20_1.s();
   };
   protoOf(IdentityArrayMap$asMap$1$keys$1).n = function () {
-    return sequence(IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw_0(this.h20_1, null)).n();
+    return sequence(IdentityArrayMap$asMap$o$_get_keys_$o$iterator$slambda_qj88bw_0(this.j20_1, null)).n();
   };
-  protoOf(IdentityArrayMap$asMap$1$keys$1).i20 = function (elements) {
+  protoOf(IdentityArrayMap$asMap$1$keys$1).k20 = function (elements) {
     var tmp0_iterator = elements.n();
     while (tmp0_iterator.b1()) {
       var key = tmp0_iterator.d1();
-      if (!this.r1k(key))
+      if (!this.t1k(key))
         return false;
     }
     return true;
   };
   protoOf(IdentityArrayMap$asMap$1$keys$1).r = function (elements) {
-    return this.i20(elements);
+    return this.k20(elements);
   };
-  protoOf(IdentityArrayMap$asMap$1$keys$1).r1k = function (element) {
-    return this.h20_1.r1k(element);
+  protoOf(IdentityArrayMap$asMap$1$keys$1).t1k = function (element) {
+    return this.j20_1.t1k(element);
   };
   protoOf(IdentityArrayMap$asMap$1$keys$1).q = function (element) {
     if (!!(element == null))
       return false;
-    return this.r1k(!(element == null) ? element : THROW_CCE());
+    return this.t1k(!(element == null) ? element : THROW_CCE());
   };
   function IdentityArrayMap$asMap$1$values$1(this$0) {
-    this.j20_1 = this$0;
+    this.l20_1 = this$0;
   }
   protoOf(IdentityArrayMap$asMap$1$values$1).l = function () {
-    return this.j20_1.s1c_1;
+    return this.l20_1.u1c_1;
   };
   protoOf(IdentityArrayMap$asMap$1$values$1).s = function () {
-    return this.j20_1.s();
+    return this.l20_1.s();
   };
   protoOf(IdentityArrayMap$asMap$1$values$1).n = function () {
-    return sequence(IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu_0(this.j20_1, null)).n();
+    return sequence(IdentityArrayMap$asMap$o$_get_values_$o$iterator$slambda_qilghu_0(this.l20_1, null)).n();
   };
-  protoOf(IdentityArrayMap$asMap$1$values$1).k20 = function (elements) {
+  protoOf(IdentityArrayMap$asMap$1$values$1).m20 = function (elements) {
     var tmp0_iterator = elements.n();
     while (tmp0_iterator.b1()) {
       var value = tmp0_iterator.d1();
-      if (!this.l20(value))
+      if (!this.n20(value))
         return false;
     }
     return true;
   };
   protoOf(IdentityArrayMap$asMap$1$values$1).r = function (elements) {
-    return this.k20(elements);
+    return this.m20(elements);
   };
-  protoOf(IdentityArrayMap$asMap$1$values$1).l20 = function (element) {
+  protoOf(IdentityArrayMap$asMap$1$values$1).n20 = function (element) {
     var inductionVariable = 0;
-    var last = this.j20_1.s1c_1;
+    var last = this.l20_1.u1c_1;
     if (inductionVariable < last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        if (equals(this.j20_1.r1c_1[index], element))
+        if (equals(this.l20_1.t1c_1[index], element))
           return true;
       }
        while (inductionVariable < last);
@@ -14457,13 +14457,13 @@
   protoOf(IdentityArrayMap$asMap$1$values$1).q = function (element) {
     if (!(element == null ? true : !(element == null)))
       return false;
-    return this.l20((element == null ? true : !(element == null)) ? element : THROW_CCE());
+    return this.n20((element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
   function find_0($this, key) {
     var keyIdentity = identityHashCode(key);
     var low = 0;
-    var high = $this.s1c_1 - 1 | 0;
-    var keys = $this.q1c_1;
+    var high = $this.u1c_1 - 1 | 0;
+    var keys = $this.s1c_1;
     while (low <= high) {
       var mid = (low + high | 0) >>> 1 | 0;
       var midKey = keys[mid];
@@ -14480,8 +14480,8 @@
     return -(low + 1 | 0) | 0;
   }
   function findExactIndex($this, midIndex, key, keyHash) {
-    var keys = $this.q1c_1;
-    var size = $this.s1c_1;
+    var keys = $this.s1c_1;
+    var size = $this.u1c_1;
     var inductionVariable = midIndex - 1 | 0;
     if (0 <= inductionVariable)
       $l$loop: do {
@@ -14513,73 +14513,73 @@
     return -(size + 1 | 0) | 0;
   }
   function IdentityArrayMap$asMap$1(this$0) {
-    this.m20_1 = this$0;
+    this.o20_1 = this$0;
   }
   protoOf(IdentityArrayMap$asMap$1).k2 = function () {
-    return new IdentityArrayMap$asMap$1$entries$1(this.m20_1);
+    return new IdentityArrayMap$asMap$1$entries$1(this.o20_1);
   };
   protoOf(IdentityArrayMap$asMap$1).i2 = function () {
-    return new IdentityArrayMap$asMap$1$keys$1(this.m20_1);
+    return new IdentityArrayMap$asMap$1$keys$1(this.o20_1);
   };
   protoOf(IdentityArrayMap$asMap$1).l = function () {
-    return this.m20_1.s1c_1;
+    return this.o20_1.u1c_1;
   };
   protoOf(IdentityArrayMap$asMap$1).j2 = function () {
-    return new IdentityArrayMap$asMap$1$values$1(this.m20_1);
+    return new IdentityArrayMap$asMap$1$values$1(this.o20_1);
   };
   protoOf(IdentityArrayMap$asMap$1).s = function () {
-    return this.m20_1.s();
+    return this.o20_1.s();
   };
-  protoOf(IdentityArrayMap$asMap$1).q1k = function (key) {
-    return this.m20_1.q1k(key);
+  protoOf(IdentityArrayMap$asMap$1).s1k = function (key) {
+    return this.o20_1.s1k(key);
   };
   protoOf(IdentityArrayMap$asMap$1).u2 = function (key) {
     if (!!(key == null))
       return null;
-    return this.q1k(!(key == null) ? key : THROW_CCE());
+    return this.s1k(!(key == null) ? key : THROW_CCE());
   };
-  protoOf(IdentityArrayMap$asMap$1).n20 = function (key) {
-    return !(this.m20_1.q1k(key) == null);
+  protoOf(IdentityArrayMap$asMap$1).p20 = function (key) {
+    return !(this.o20_1.s1k(key) == null);
   };
   protoOf(IdentityArrayMap$asMap$1).r2 = function (key) {
     if (!!(key == null))
       return false;
-    return this.n20(!(key == null) ? key : THROW_CCE());
+    return this.p20(!(key == null) ? key : THROW_CCE());
   };
   function IdentityArrayMap(capacity) {
     capacity = capacity === VOID ? 16 : capacity;
     var tmp = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp.q1c_1 = fillArrayVal(Array(capacity), null);
+    tmp.s1c_1 = fillArrayVal(Array(capacity), null);
     var tmp_0 = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp_0.r1c_1 = fillArrayVal(Array(capacity), null);
-    this.s1c_1 = 0;
+    tmp_0.t1c_1 = fillArrayVal(Array(capacity), null);
+    this.u1c_1 = 0;
   }
   protoOf(IdentityArrayMap).s = function () {
-    return this.s1c_1 === 0;
+    return this.u1c_1 === 0;
   };
-  protoOf(IdentityArrayMap).v1f = function () {
-    return this.s1c_1 > 0;
+  protoOf(IdentityArrayMap).x1f = function () {
+    return this.u1c_1 > 0;
   };
-  protoOf(IdentityArrayMap).r1k = function (key) {
+  protoOf(IdentityArrayMap).t1k = function (key) {
     return find_0(this, key) >= 0;
   };
-  protoOf(IdentityArrayMap).q1k = function (key) {
+  protoOf(IdentityArrayMap).s1k = function (key) {
     var index = find_0(this, key);
     var tmp;
     if (index >= 0) {
-      var tmp_0 = this.r1c_1[index];
+      var tmp_0 = this.t1c_1[index];
       tmp = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
     } else {
       tmp = null;
     }
     return tmp;
   };
-  protoOf(IdentityArrayMap).z1i = function (key, value) {
-    var keys = this.q1c_1;
-    var values = this.r1c_1;
-    var size = this.s1c_1;
+  protoOf(IdentityArrayMap).b1j = function (key, value) {
+    var keys = this.s1c_1;
+    var values = this.t1c_1;
+    var size = this.u1c_1;
     var index = find_0(this, key);
     if (index >= 0) {
       values[index] = value;
@@ -14603,7 +14603,7 @@
         arrayCopy(keys, destKeys, 0, 0, insertIndex);
       }
       destKeys[insertIndex] = key;
-      this.q1c_1 = destKeys;
+      this.s1c_1 = destKeys;
       var tmp_0;
       if (resize) {
         // Inline function 'kotlin.arrayOfNulls' call
@@ -14621,18 +14621,18 @@
         arrayCopy(values, destValues, 0, 0, insertIndex);
       }
       destValues[insertIndex] = value;
-      this.r1c_1 = destValues;
-      this.s1c_1 = this.s1c_1 + 1 | 0;
+      this.t1c_1 = destValues;
+      this.u1c_1 = this.u1c_1 + 1 | 0;
     }
   };
-  protoOf(IdentityArrayMap).o1j = function () {
+  protoOf(IdentityArrayMap).q1j = function () {
     return new IdentityArrayMap$asMap$1(this);
   };
   function find_1($this, value) {
     var low = 0;
-    var high = $this.h1c_1 - 1 | 0;
+    var high = $this.j1c_1 - 1 | 0;
     var valueIdentity = identityHashCode(value);
-    var values = $this.i1c_1;
+    var values = $this.k1c_1;
     while (low <= high) {
       var mid = (low + high | 0) >>> 1 | 0;
       var midVal = values[mid];
@@ -14649,8 +14649,8 @@
     return -(low + 1 | 0) | 0;
   }
   function findExactIndex_0($this, midIndex, value, valueHash) {
-    var values = $this.i1c_1;
-    var size = $this.h1c_1;
+    var values = $this.k1c_1;
+    var size = $this.j1c_1;
     var inductionVariable = midIndex - 1 | 0;
     if (0 <= inductionVariable)
       $l$loop: do {
@@ -14682,16 +14682,16 @@
     return -(size + 1 | 0) | 0;
   }
   function IdentityArraySet$iterator$1(this$0) {
-    this.p20_1 = this$0;
-    this.o20_1 = 0;
+    this.r20_1 = this$0;
+    this.q20_1 = 0;
   }
   protoOf(IdentityArraySet$iterator$1).b1 = function () {
-    return this.o20_1 < this.p20_1.h1c_1;
+    return this.q20_1 < this.r20_1.j1c_1;
   };
   protoOf(IdentityArraySet$iterator$1).d1 = function () {
-    var tmp = this.p20_1.i1c_1;
-    var tmp1 = this.o20_1;
-    this.o20_1 = tmp1 + 1 | 0;
+    var tmp = this.r20_1.k1c_1;
+    var tmp1 = this.q20_1;
+    this.q20_1 = tmp1 + 1 | 0;
     var tmp_0 = tmp[tmp1];
     return !(tmp_0 == null) ? tmp_0 : THROW_CCE();
   };
@@ -14699,26 +14699,26 @@
     return toString(it);
   }
   function IdentityArraySet() {
-    this.h1c_1 = 0;
+    this.j1c_1 = 0;
     var tmp = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp.i1c_1 = fillArrayVal(Array(16), null);
+    tmp.k1c_1 = fillArrayVal(Array(16), null);
   }
   protoOf(IdentityArraySet).l = function () {
-    return this.h1c_1;
+    return this.j1c_1;
   };
-  protoOf(IdentityArraySet).w1n = function (element) {
+  protoOf(IdentityArraySet).y1n = function (element) {
     return find_1(this, element) >= 0;
   };
   protoOf(IdentityArraySet).q = function (element) {
     if (!!(element == null))
       return false;
-    return this.w1n(!(element == null) ? element : THROW_CCE());
+    return this.y1n(!(element == null) ? element : THROW_CCE());
   };
-  protoOf(IdentityArraySet).f1h = function (value) {
+  protoOf(IdentityArraySet).h1h = function (value) {
     var index;
-    var size = this.h1c_1;
-    var values = this.i1c_1;
+    var size = this.j1c_1;
+    var values = this.k1c_1;
     if (size > 0) {
       index = find_1(this, value);
       if (index >= 0) {
@@ -14737,41 +14737,41 @@
       arrayCopy(values, newSorted, destinationOffset, insertIndex, size);
       // Inline function 'kotlin.collections.copyInto' call
       arrayCopy(values, newSorted, 0, 0, insertIndex);
-      this.i1c_1 = newSorted;
+      this.k1c_1 = newSorted;
     } else {
       // Inline function 'kotlin.collections.copyInto' call
       var destinationOffset_0 = insertIndex + 1 | 0;
       arrayCopy(values, values, destinationOffset_0, insertIndex, size);
     }
-    this.i1c_1[insertIndex] = value;
-    this.h1c_1 = this.h1c_1 + 1 | 0;
+    this.k1c_1[insertIndex] = value;
+    this.j1c_1 = this.j1c_1 + 1 | 0;
     return true;
   };
   protoOf(IdentityArraySet).f1 = function () {
-    fill_0(this.i1c_1, null);
-    this.h1c_1 = 0;
+    fill_0(this.k1c_1, null);
+    this.j1c_1 = 0;
   };
-  protoOf(IdentityArraySet).n1o = function (collection) {
+  protoOf(IdentityArraySet).p1o = function (collection) {
     if (collection.s())
       return Unit_instance;
     if (!(collection instanceof IdentityArraySet)) {
       var tmp0_iterator = collection.n();
       while (tmp0_iterator.b1()) {
         var value = tmp0_iterator.d1();
-        this.f1h(value);
+        this.h1h(value);
       }
     } else {
-      var thisValues = this.i1c_1;
-      var otherValues = collection.i1c_1;
-      var thisSize = this.h1c_1;
-      var otherSize = collection.h1c_1;
+      var thisValues = this.k1c_1;
+      var otherValues = collection.k1c_1;
+      var thisSize = this.j1c_1;
+      var otherSize = collection.j1c_1;
       var combinedSize = thisSize + otherSize | 0;
-      var needsResize = this.i1c_1.length < combinedSize;
+      var needsResize = this.k1c_1.length < combinedSize;
       var elementsInOrder = thisSize === 0 ? true : identityHashCode(thisValues[thisSize - 1 | 0]) < identityHashCode(otherValues[0]);
       if (!needsResize ? elementsInOrder : false) {
         // Inline function 'kotlin.collections.copyInto' call
         arrayCopy(otherValues, thisValues, thisSize, 0, otherSize);
-        this.h1c_1 = this.h1c_1 + otherSize | 0;
+        this.j1c_1 = this.j1c_1 + otherSize | 0;
       } else {
         var tmp;
         if (needsResize) {
@@ -14849,21 +14849,21 @@
         }
         var newSize = combinedSize - (nextInsertIndex + 1 | 0) | 0;
         fill_0(newArray, null, newSize, combinedSize);
-        this.i1c_1 = newArray;
-        this.h1c_1 = newSize;
+        this.k1c_1 = newArray;
+        this.j1c_1 = newSize;
       }
     }
   };
   protoOf(IdentityArraySet).s = function () {
-    return this.h1c_1 === 0;
+    return this.j1c_1 === 0;
   };
-  protoOf(IdentityArraySet).v1f = function () {
-    return this.h1c_1 > 0;
+  protoOf(IdentityArraySet).x1f = function () {
+    return this.j1c_1 > 0;
   };
-  protoOf(IdentityArraySet).q20 = function (value) {
+  protoOf(IdentityArraySet).s20 = function (value) {
     var index = find_1(this, value);
-    var values = this.i1c_1;
-    var size = this.h1c_1;
+    var values = this.k1c_1;
+    var size = this.j1c_1;
     if (index >= 0) {
       if (index < (size - 1 | 0)) {
         // Inline function 'kotlin.collections.copyInto' call
@@ -14871,7 +14871,7 @@
         arrayCopy(values, values, index, startIndex, size);
       }
       values[size - 1 | 0] = null;
-      this.h1c_1 = this.h1c_1 - 1 | 0;
+      this.j1c_1 = this.j1c_1 - 1 | 0;
       return true;
     }
     return false;
@@ -14894,7 +14894,7 @@
       while (tmp0_iterator.b1()) {
         var element = tmp0_iterator.d1();
         // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.containsAll.<anonymous>' call
-        if (!this.w1n(element)) {
+        if (!this.y1n(element)) {
           tmp$ret$0 = false;
           break $l$block_0;
         }
@@ -14913,54 +14913,54 @@
     return joinToString(this, VOID, '[', ']', VOID, VOID, IdentityArraySet$toString$lambda);
   };
   function MutableVector(content, size) {
-    this.u1c_1 = content;
-    this.v1c_1 = null;
-    this.w1c_1 = size;
+    this.w1c_1 = content;
+    this.x1c_1 = null;
+    this.y1c_1 = size;
   }
-  protoOf(MutableVector).x1c = function (element) {
-    this.c3(this.w1c_1 + 1 | 0);
-    this.u1c_1[this.w1c_1] = element;
-    this.w1c_1 = this.w1c_1 + 1 | 0;
+  protoOf(MutableVector).z1c = function (element) {
+    this.c3(this.y1c_1 + 1 | 0);
+    this.w1c_1[this.y1c_1] = element;
+    this.y1c_1 = this.y1c_1 + 1 | 0;
     return true;
   };
   protoOf(MutableVector).c3 = function (capacity) {
-    var oldContent = this.u1c_1;
+    var oldContent = this.w1c_1;
     if (oldContent.length < capacity) {
       // Inline function 'kotlin.math.max' call
       var b = imul(oldContent.length, 2);
       var newSize = Math.max(capacity, b);
-      this.u1c_1 = copyOf_0(oldContent, newSize);
+      this.w1c_1 = copyOf_0(oldContent, newSize);
     }
   };
   protoOf(MutableVector).k1 = function (index) {
-    var content = this.u1c_1;
+    var content = this.w1c_1;
     var tmp = content[index];
     var item = (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
     // Inline function 'androidx.compose.runtime.collection.MutableVector.lastIndex' call
-    if (!(index === (this.w1c_1 - 1 | 0))) {
+    if (!(index === (this.y1c_1 - 1 | 0))) {
       // Inline function 'kotlin.collections.copyInto' call
       var startIndex = index + 1 | 0;
-      var endIndex = this.w1c_1;
+      var endIndex = this.y1c_1;
       arrayCopy(content, content, index, startIndex, endIndex);
     }
-    this.w1c_1 = this.w1c_1 - 1 | 0;
-    content[this.w1c_1] = null;
+    this.y1c_1 = this.y1c_1 - 1 | 0;
+    content[this.y1c_1] = null;
     return item;
   };
   function ScopeMap() {
-    this.g1i_1 = mutableScatterMapOf();
+    this.i1i_1 = mutableScatterMapOf();
   }
-  protoOf(ScopeMap).l1i = function (key, scope) {
+  protoOf(ScopeMap).n1i = function (key, scope) {
     // Inline function 'androidx.collection.MutableScatterMap.compute' call
-    var this_0 = this.g1i_1;
-    var index = this_0.i11(key);
+    var this_0 = this.i1i_1;
+    var index = this_0.k11(key);
     var inserting = index < 0;
     // Inline function 'androidx.compose.runtime.collection.ScopeMap.add.<anonymous>' call
     var tmp;
     if (inserting) {
       tmp = null;
     } else {
-      var tmp_0 = this_0.y10_1[index];
+      var tmp_0 = this_0.a11_1[index];
       tmp = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
     }
     var value = tmp;
@@ -14987,17 +14987,17 @@
     var computedValue = tmp_1;
     if (inserting) {
       var insertionIndex = ~index;
-      this_0.x10_1[insertionIndex] = key;
-      this_0.y10_1[insertionIndex] = computedValue;
+      this_0.z10_1[insertionIndex] = key;
+      this_0.a11_1[insertionIndex] = computedValue;
     } else {
-      this_0.y10_1[index] = computedValue;
+      this_0.a11_1[index] = computedValue;
     }
   };
-  protoOf(ScopeMap).k1i = function (element) {
-    return this.g1i_1.r2(element);
+  protoOf(ScopeMap).m1i = function (element) {
+    return this.i1i_1.r2(element);
   };
-  protoOf(ScopeMap).j1i = function (key, scope) {
-    var tmp0_elvis_lhs = this.g1i_1.u2(key);
+  protoOf(ScopeMap).l1i = function (key, scope) {
+    var tmp0_elvis_lhs = this.i1i_1.u2(key);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return false;
@@ -15010,12 +15010,12 @@
       var set = value instanceof MutableScatterSet ? value : THROW_CCE();
       var removed = set.z(scope);
       if (removed ? set.s() : false) {
-        this.g1i_1.m2(key);
+        this.i1i_1.m2(key);
       }
       return removed;
     } else {
       if (equals(value, scope)) {
-        this.g1i_1.m2(key);
+        this.i1i_1.m2(key);
         tmp_0 = true;
       } else {
         tmp_0 = false;
@@ -15023,13 +15023,13 @@
     }
     return tmp_0;
   };
-  protoOf(ScopeMap).y1j = function (scope) {
+  protoOf(ScopeMap).a1k = function (scope) {
     // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf' call
     // Inline function 'androidx.collection.MutableScatterMap.removeIf' call
-    var this_0 = this.g1i_1;
+    var this_0 = this.i1i_1;
     $l$block_0: {
       // Inline function 'androidx.collection.ScatterMap.forEachIndexed' call
-      var m = this_0.w10_1;
+      var m = this_0.y10_1;
       var lastIndex = m.length - 2 | 0;
       var inductionVariable = 0;
       if (inductionVariable <= lastIndex)
@@ -15051,19 +15051,19 @@
                   var index = (i << 3) + j | 0;
                   // Inline function 'androidx.collection.MutableScatterMap.removeIf.<anonymous>' call
                   // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScopeIf.<anonymous>' call
-                  var tmp = this_0.x10_1[index];
+                  var tmp = this_0.z10_1[index];
                   (tmp == null ? true : !(tmp == null)) || THROW_CCE();
-                  var tmp_0 = this_0.y10_1[index];
+                  var tmp_0 = this_0.a11_1[index];
                   var value = (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
                   var tmp_1;
                   if (value instanceof MutableScatterSet) {
                     var set = value instanceof MutableScatterSet ? value : THROW_CCE();
                     // Inline function 'androidx.collection.MutableScatterSet.removeIf' call
-                    var elements = set.l11_1;
+                    var elements = set.n11_1;
                     $l$block: {
                       // Inline function 'androidx.collection.ScatterSet.forEachIndex' call
                       // Inline function 'kotlin.contracts.contract' call
-                      var m_0 = set.k11_1;
+                      var m_0 = set.m11_1;
                       var lastIndex_0 = m_0.length - 2 | 0;
                       var inductionVariable_1 = 0;
                       if (inductionVariable_1 <= lastIndex_0)
@@ -15087,7 +15087,7 @@
                                   // Inline function 'androidx.compose.runtime.collection.ScopeMap.removeScope.<anonymous>' call
                                   var tmp_2 = elements[index_0];
                                   if (((tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE()) === scope) {
-                                    set.w11(index_0);
+                                    set.y11(index_0);
                                   }
                                 }
                                 slot_0 = slot_0.mc(8);
@@ -15106,7 +15106,7 @@
                     tmp_1 = (!(value == null) ? value : THROW_CCE()) === scope;
                   }
                   if (tmp_1) {
-                    this_0.j11(index);
+                    this_0.l11(index);
                   }
                 }
                 slot = slot.mc(8);
@@ -15121,26 +15121,26 @@
     }
   };
   function persistentSetOf() {
-    return Companion_getInstance_10().s20();
+    return Companion_getInstance_10().u20();
   }
   function persistentListOf() {
     return persistentVectorOf();
   }
   function AbstractListIterator(index, size) {
-    this.t20_1 = index;
-    this.u20_1 = size;
+    this.v20_1 = index;
+    this.w20_1 = size;
   }
   protoOf(AbstractListIterator).b1 = function () {
-    return this.t20_1 < this.u20_1;
+    return this.v20_1 < this.w20_1;
   };
   protoOf(AbstractListIterator).q1 = function () {
-    return this.t20_1 > 0;
+    return this.v20_1 > 0;
   };
-  protoOf(AbstractListIterator).v20 = function () {
+  protoOf(AbstractListIterator).x20 = function () {
     if (!this.b1())
       throw NoSuchElementException_init_$Create$_0();
   };
-  protoOf(AbstractListIterator).w20 = function () {
+  protoOf(AbstractListIterator).y20 = function () {
     if (!this.q1())
       throw NoSuchElementException_init_$Create$_0();
   };
@@ -15150,7 +15150,7 @@
   protoOf(AbstractPersistentList).e1 = function (elements) {
     // Inline function 'androidx.compose.runtime.external.kotlinx.collections.immutable.mutate' call
     // Inline function 'kotlin.apply' call
-    var this_0 = this.x20();
+    var this_0 = this.z20();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableList.AbstractPersistentList.addAll.<anonymous>' call
     this_0.e1(elements);
@@ -15201,38 +15201,38 @@
   };
   function BufferIterator(buffer, index, size) {
     AbstractListIterator.call(this, index, size);
-    this.b21_1 = buffer;
+    this.d21_1 = buffer;
   }
   protoOf(BufferIterator).d1 = function () {
     if (!this.b1()) {
       throw NoSuchElementException_init_$Create$_0();
     }
-    var tmp1 = this.t20_1;
-    this.t20_1 = tmp1 + 1 | 0;
-    return this.b21_1[tmp1];
+    var tmp1 = this.v20_1;
+    this.v20_1 = tmp1 + 1 | 0;
+    return this.d21_1[tmp1];
   };
   protoOf(BufferIterator).r1 = function () {
     if (!this.q1()) {
       throw NoSuchElementException_init_$Create$_0();
     }
-    this.t20_1 = this.t20_1 - 1 | 0;
-    return this.b21_1[this.t20_1];
+    this.v20_1 = this.v20_1 - 1 | 0;
+    return this.d21_1[this.v20_1];
   };
   function rootSize($this) {
-    return rootSize_1($this.e21_1);
+    return rootSize_1($this.g21_1);
   }
   function pushFilledTail($this, root, filledTail, newTail) {
-    if ($this.e21_1 >> get_LOG_MAX_BUFFER_SIZE() > 1 << $this.f21_1) {
+    if ($this.g21_1 >> get_LOG_MAX_BUFFER_SIZE() > 1 << $this.h21_1) {
       var newRoot = presizedBufferWith(root);
-      var newRootShift = $this.f21_1 + get_LOG_MAX_BUFFER_SIZE() | 0;
+      var newRootShift = $this.h21_1 + get_LOG_MAX_BUFFER_SIZE() | 0;
       newRoot = pushTail($this, newRoot, newRootShift, filledTail);
-      return new PersistentVector(newRoot, newTail, $this.e21_1 + 1 | 0, newRootShift);
+      return new PersistentVector(newRoot, newTail, $this.g21_1 + 1 | 0, newRootShift);
     }
-    var newRoot_0 = pushTail($this, root, $this.f21_1, filledTail);
-    return new PersistentVector(newRoot_0, newTail, $this.e21_1 + 1 | 0, $this.f21_1);
+    var newRoot_0 = pushTail($this, root, $this.h21_1, filledTail);
+    return new PersistentVector(newRoot_0, newTail, $this.g21_1 + 1 | 0, $this.h21_1);
   }
   function pushTail($this, root, shift, tail) {
-    var bufferIndex = indexSegment($this.e21_1 - 1 | 0, shift);
+    var bufferIndex = indexSegment($this.g21_1 - 1 | 0, shift);
     var tmp1_elvis_lhs = root == null ? null : copyOf_0(root, get_MAX_BUFFER_SIZE());
     var tmp;
     if (tmp1_elvis_lhs == null) {
@@ -15252,19 +15252,19 @@
     return newRootNode;
   }
   function insertIntoTail($this, root, tailIndex, element) {
-    var tailSize = $this.e21_1 - rootSize($this) | 0;
-    var newTail = copyOf_0($this.d21_1, get_MAX_BUFFER_SIZE());
+    var tailSize = $this.g21_1 - rootSize($this) | 0;
+    var newTail = copyOf_0($this.f21_1, get_MAX_BUFFER_SIZE());
     if (tailSize < get_MAX_BUFFER_SIZE()) {
       // Inline function 'kotlin.collections.copyInto' call
-      var this_0 = $this.d21_1;
+      var this_0 = $this.f21_1;
       var destinationOffset = tailIndex + 1 | 0;
       arrayCopy(this_0, newTail, destinationOffset, tailIndex, tailSize);
       newTail[tailIndex] = element;
-      return new PersistentVector(root, newTail, $this.e21_1 + 1 | 0, $this.f21_1);
+      return new PersistentVector(root, newTail, $this.g21_1 + 1 | 0, $this.h21_1);
     }
-    var lastElement = $this.d21_1[get_MAX_BUFFER_SIZE_MINUS_ONE()];
+    var lastElement = $this.f21_1[get_MAX_BUFFER_SIZE_MINUS_ONE()];
     // Inline function 'kotlin.collections.copyInto' call
-    var this_1 = $this.d21_1;
+    var this_1 = $this.f21_1;
     var destinationOffset_0 = tailIndex + 1 | 0;
     var endIndex = tailSize - 1 | 0;
     arrayCopy(this_1, newTail, destinationOffset_0, tailIndex, endIndex);
@@ -15287,7 +15287,7 @@
       var destinationOffset = bufferIndex + 1 | 0;
       var endIndex = get_MAX_BUFFER_SIZE_MINUS_ONE();
       arrayCopy(root, newRoot, destinationOffset, bufferIndex, endIndex);
-      elementCarry.g21_1 = root[get_MAX_BUFFER_SIZE_MINUS_ONE()];
+      elementCarry.i21_1 = root[get_MAX_BUFFER_SIZE_MINUS_ONE()];
       newRoot[bufferIndex] = element;
       return newRoot;
     }
@@ -15304,21 +15304,21 @@
         if (newRoot_0[i] == null)
           break $l$loop;
         var tmp_1 = root[i];
-        newRoot_0[i] = insertIntoRoot($this, (!(tmp_1 == null) ? isArray(tmp_1) : false) ? tmp_1 : THROW_CCE(), lowerLevelShift, 0, elementCarry.g21_1, elementCarry);
+        newRoot_0[i] = insertIntoRoot($this, (!(tmp_1 == null) ? isArray(tmp_1) : false) ? tmp_1 : THROW_CCE(), lowerLevelShift, 0, elementCarry.i21_1, elementCarry);
       }
        while (inductionVariable < last);
     return newRoot_0;
   }
   function removeFromTailAt($this, root, rootSize, shift, index) {
-    var tailSize = $this.e21_1 - rootSize | 0;
+    var tailSize = $this.g21_1 - rootSize | 0;
     assert(index < tailSize);
     if (tailSize === 1) {
       return pullLastBufferFromRoot($this, root, rootSize, shift);
     }
-    var newTail = copyOf_0($this.d21_1, get_MAX_BUFFER_SIZE());
+    var newTail = copyOf_0($this.f21_1, get_MAX_BUFFER_SIZE());
     if (index < (tailSize - 1 | 0)) {
       // Inline function 'kotlin.collections.copyInto' call
-      var this_0 = $this.d21_1;
+      var this_0 = $this.f21_1;
       var startIndex = index + 1 | 0;
       arrayCopy(this_0, newTail, index, startIndex, tailSize);
     }
@@ -15332,7 +15332,7 @@
     }
     var tailCarry = new ObjectRef(null);
     var newRoot = ensureNotNull(pullLastBuffer($this, root, shift, rootSize - 1 | 0, tailCarry));
-    var tmp = tailCarry.g21_1;
+    var tmp = tailCarry.i21_1;
     var newTail = (!(tmp == null) ? isArray(tmp) : false) ? tmp : THROW_CCE();
     if (newRoot[1] == null) {
       var tmp_0 = newRoot[0];
@@ -15345,7 +15345,7 @@
     var bufferIndex = indexSegment(index, shift);
     var tmp;
     if (shift === get_LOG_MAX_BUFFER_SIZE()) {
-      tailCarry.g21_1 = root[bufferIndex];
+      tailCarry.i21_1 = root[bufferIndex];
       tmp = null;
     } else {
       var tmp_0 = root[bufferIndex];
@@ -15375,8 +15375,8 @@
       var startIndex = bufferIndex + 1 | 0;
       var endIndex = get_MAX_BUFFER_SIZE();
       arrayCopy(root, newRoot, bufferIndex, startIndex, endIndex);
-      newRoot[get_MAX_BUFFER_SIZE() - 1 | 0] = tailCarry.g21_1;
-      tailCarry.g21_1 = root[bufferIndex];
+      newRoot[get_MAX_BUFFER_SIZE() - 1 | 0] = tailCarry.i21_1;
+      tailCarry.i21_1 = root[bufferIndex];
       return newRoot;
     }
     var bufferLastIndex = get_MAX_BUFFER_SIZE_MINUS_ONE();
@@ -15401,10 +15401,10 @@
   }
   function bufferFor($this, index) {
     if (rootSize($this) <= index) {
-      return $this.d21_1;
+      return $this.f21_1;
     }
-    var buffer = $this.c21_1;
-    var shift = $this.f21_1;
+    var buffer = $this.e21_1;
+    var shift = $this.h21_1;
     while (shift > 0) {
       var tmp = buffer[indexSegment(index, shift)];
       buffer = (!(tmp == null) ? isArray(tmp) : false) ? tmp : THROW_CCE();
@@ -15425,83 +15425,83 @@
   }
   function PersistentVector(root, tail, size, rootShift) {
     AbstractPersistentList.call(this);
-    this.c21_1 = root;
-    this.d21_1 = tail;
-    this.e21_1 = size;
-    this.f21_1 = rootShift;
+    this.e21_1 = root;
+    this.f21_1 = tail;
+    this.g21_1 = size;
+    this.h21_1 = rootShift;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this.e21_1 > get_MAX_BUFFER_SIZE())) {
+    if (!(this.g21_1 > get_MAX_BUFFER_SIZE())) {
       // Inline function 'androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableList.PersistentVector.<anonymous>' call
-      var message = 'Trie-based persistent vector should have at least ' + (get_MAX_BUFFER_SIZE() + 1 | 0) + ' elements, got ' + this.e21_1;
+      var message = 'Trie-based persistent vector should have at least ' + (get_MAX_BUFFER_SIZE() + 1 | 0) + ' elements, got ' + this.g21_1;
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    assert((this.e21_1 - rootSize_1(this.e21_1) | 0) <= coerceAtMost(this.d21_1.length, get_MAX_BUFFER_SIZE()));
+    assert((this.g21_1 - rootSize_1(this.g21_1) | 0) <= coerceAtMost(this.f21_1.length, get_MAX_BUFFER_SIZE()));
   }
   protoOf(PersistentVector).l = function () {
-    return this.e21_1;
+    return this.g21_1;
   };
   protoOf(PersistentVector).y = function (element) {
-    var tailSize = this.e21_1 - rootSize(this) | 0;
+    var tailSize = this.g21_1 - rootSize(this) | 0;
     if (tailSize < get_MAX_BUFFER_SIZE()) {
-      var newTail = copyOf_0(this.d21_1, get_MAX_BUFFER_SIZE());
+      var newTail = copyOf_0(this.f21_1, get_MAX_BUFFER_SIZE());
       newTail[tailSize] = element;
-      return new PersistentVector(this.c21_1, newTail, this.e21_1 + 1 | 0, this.f21_1);
+      return new PersistentVector(this.e21_1, newTail, this.g21_1 + 1 | 0, this.h21_1);
     }
     var newTail_0 = presizedBufferWith(element);
-    return pushFilledTail(this, this.c21_1, this.d21_1, newTail_0);
+    return pushFilledTail(this, this.e21_1, this.f21_1, newTail_0);
   };
-  protoOf(PersistentVector).y20 = function (index, element) {
-    ListImplementation_instance.p1(index, this.e21_1);
-    if (index === this.e21_1) {
+  protoOf(PersistentVector).a21 = function (index, element) {
+    ListImplementation_instance.p1(index, this.g21_1);
+    if (index === this.g21_1) {
       return this.y(element);
     }
     var rootSize_0 = rootSize(this);
     if (index >= rootSize_0) {
-      return insertIntoTail(this, this.c21_1, index - rootSize_0 | 0, element);
+      return insertIntoTail(this, this.e21_1, index - rootSize_0 | 0, element);
     }
     var elementCarry = new ObjectRef(null);
-    var newRoot = insertIntoRoot(this, this.c21_1, this.f21_1, index, element, elementCarry);
-    return insertIntoTail(this, newRoot, 0, elementCarry.g21_1);
+    var newRoot = insertIntoRoot(this, this.e21_1, this.h21_1, index, element, elementCarry);
+    return insertIntoTail(this, newRoot, 0, elementCarry.i21_1);
   };
   protoOf(PersistentVector).k1 = function (index) {
-    ListImplementation_instance.x1(index, this.e21_1);
+    ListImplementation_instance.x1(index, this.g21_1);
     var rootSize_0 = rootSize(this);
     if (index >= rootSize_0) {
-      return removeFromTailAt(this, this.c21_1, rootSize_0, this.f21_1, index - rootSize_0 | 0);
+      return removeFromTailAt(this, this.e21_1, rootSize_0, this.h21_1, index - rootSize_0 | 0);
     }
-    var newRoot = removeFromRootAt(this, this.c21_1, this.f21_1, index, new ObjectRef(this.d21_1[0]));
-    return removeFromTailAt(this, newRoot, rootSize_0, this.f21_1, 0);
+    var newRoot = removeFromRootAt(this, this.e21_1, this.h21_1, index, new ObjectRef(this.f21_1[0]));
+    return removeFromTailAt(this, newRoot, rootSize_0, this.h21_1, 0);
   };
-  protoOf(PersistentVector).x20 = function () {
-    return new PersistentVectorBuilder(this, this.c21_1, this.d21_1, this.f21_1);
+  protoOf(PersistentVector).z20 = function () {
+    return new PersistentVectorBuilder(this, this.e21_1, this.f21_1, this.h21_1);
   };
   protoOf(PersistentVector).p = function (index) {
-    ListImplementation_instance.p1(index, this.e21_1);
-    var tmp = this.d21_1;
-    return new PersistentVectorIterator(this.c21_1, isArray(tmp) ? tmp : THROW_CCE(), index, this.e21_1, (this.f21_1 / get_LOG_MAX_BUFFER_SIZE() | 0) + 1 | 0);
+    ListImplementation_instance.p1(index, this.g21_1);
+    var tmp = this.f21_1;
+    return new PersistentVectorIterator(this.e21_1, isArray(tmp) ? tmp : THROW_CCE(), index, this.g21_1, (this.h21_1 / get_LOG_MAX_BUFFER_SIZE() | 0) + 1 | 0);
   };
   protoOf(PersistentVector).m = function (index) {
-    ListImplementation_instance.x1(index, this.e21_1);
+    ListImplementation_instance.x1(index, this.g21_1);
     var buffer = bufferFor(this, index);
     var tmp = buffer[index & get_MAX_BUFFER_SIZE_MINUS_ONE()];
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
   protoOf(PersistentVector).v = function (index, element) {
-    ListImplementation_instance.x1(index, this.e21_1);
+    ListImplementation_instance.x1(index, this.g21_1);
     if (rootSize(this) <= index) {
-      var newTail = copyOf_0(this.d21_1, get_MAX_BUFFER_SIZE());
+      var newTail = copyOf_0(this.f21_1, get_MAX_BUFFER_SIZE());
       newTail[index & get_MAX_BUFFER_SIZE_MINUS_ONE()] = element;
-      return new PersistentVector(this.c21_1, newTail, this.e21_1, this.f21_1);
+      return new PersistentVector(this.e21_1, newTail, this.g21_1, this.h21_1);
     }
-    var newRoot = setInRoot(this, this.c21_1, this.f21_1, index, element);
-    return new PersistentVector(newRoot, this.d21_1, this.e21_1, this.f21_1);
+    var newRoot = setInRoot(this, this.e21_1, this.h21_1, index, element);
+    return new PersistentVector(newRoot, this.f21_1, this.g21_1, this.h21_1);
   };
   function rootSize_0($this) {
-    if ($this.p21_1 <= get_MAX_BUFFER_SIZE()) {
+    if ($this.r21_1 <= get_MAX_BUFFER_SIZE()) {
       return 0;
     }
-    return rootSize_1($this.p21_1);
+    return rootSize_1($this.r21_1);
   }
   function tailSize($this, size) {
     if (size <= get_MAX_BUFFER_SIZE()) {
@@ -15510,10 +15510,10 @@
     return size - rootSize_1(size) | 0;
   }
   function tailSize_0($this) {
-    return tailSize($this, $this.p21_1);
+    return tailSize($this, $this.r21_1);
   }
   function isMutable($this, buffer) {
-    return buffer.length === get_MUTABLE_BUFFER_SIZE() ? buffer[get_MUTABLE_BUFFER_SIZE() - 1 | 0] === $this.m21_1 : false;
+    return buffer.length === get_MUTABLE_BUFFER_SIZE() ? buffer[get_MUTABLE_BUFFER_SIZE() - 1 | 0] === $this.o21_1 : false;
   }
   function makeMutable($this, buffer) {
     if (buffer == null) {
@@ -15533,39 +15533,39 @@
     var size = get_MUTABLE_BUFFER_SIZE();
     var buffer = fillArrayVal(Array(size), null);
     buffer[0] = element;
-    buffer[get_MUTABLE_BUFFER_SIZE() - 1 | 0] = $this.m21_1;
+    buffer[get_MUTABLE_BUFFER_SIZE() - 1 | 0] = $this.o21_1;
     return buffer;
   }
   function mutableBuffer($this) {
     // Inline function 'kotlin.arrayOfNulls' call
     var size = get_MUTABLE_BUFFER_SIZE();
     var buffer = fillArrayVal(Array(size), null);
-    buffer[get_MUTABLE_BUFFER_SIZE() - 1 | 0] = $this.m21_1;
+    buffer[get_MUTABLE_BUFFER_SIZE() - 1 | 0] = $this.o21_1;
     return buffer;
   }
   function pushFilledTail_0($this, root, filledTail, newTail) {
     var tmp;
-    if ($this.p21_1 >> get_LOG_MAX_BUFFER_SIZE() > 1 << $this.l21_1) {
-      $this.n21_1 = pushTail_0($this, mutableBufferWith($this, root), filledTail, $this.l21_1 + get_LOG_MAX_BUFFER_SIZE() | 0);
-      $this.o21_1 = newTail;
-      $this.l21_1 = $this.l21_1 + get_LOG_MAX_BUFFER_SIZE() | 0;
-      $this.p21_1 = $this.p21_1 + 1 | 0;
+    if ($this.r21_1 >> get_LOG_MAX_BUFFER_SIZE() > 1 << $this.n21_1) {
+      $this.p21_1 = pushTail_0($this, mutableBufferWith($this, root), filledTail, $this.n21_1 + get_LOG_MAX_BUFFER_SIZE() | 0);
+      $this.q21_1 = newTail;
+      $this.n21_1 = $this.n21_1 + get_LOG_MAX_BUFFER_SIZE() | 0;
+      $this.r21_1 = $this.r21_1 + 1 | 0;
       tmp = Unit_instance;
     } else if (root == null) {
-      $this.n21_1 = filledTail;
-      $this.o21_1 = newTail;
-      $this.p21_1 = $this.p21_1 + 1 | 0;
+      $this.p21_1 = filledTail;
+      $this.q21_1 = newTail;
+      $this.r21_1 = $this.r21_1 + 1 | 0;
       tmp = Unit_instance;
     } else {
-      $this.n21_1 = pushTail_0($this, root, filledTail, $this.l21_1);
-      $this.o21_1 = newTail;
-      $this.p21_1 = $this.p21_1 + 1 | 0;
+      $this.p21_1 = pushTail_0($this, root, filledTail, $this.n21_1);
+      $this.q21_1 = newTail;
+      $this.r21_1 = $this.r21_1 + 1 | 0;
       tmp = Unit_instance;
     }
     return tmp;
   }
   function pushTail_0($this, root, tail, shift) {
-    var index = indexSegment($this.p21_1 - 1 | 0, shift);
+    var index = indexSegment($this.r21_1 - 1 | 0, shift);
     var mutableRoot = makeMutable($this, root);
     if (shift === get_LOG_MAX_BUFFER_SIZE()) {
       mutableRoot[index] = tail;
@@ -15586,11 +15586,11 @@
   }
   function pushBuffersIncreasingHeightIfNeeded($this, root, rootSize, buffers) {
     var buffersIterator = arrayIterator(buffers);
-    var mutableRoot = rootSize >> get_LOG_MAX_BUFFER_SIZE() < 1 << $this.l21_1 ? pushBuffers($this, root, rootSize, $this.l21_1, buffersIterator) : makeMutable($this, root);
+    var mutableRoot = rootSize >> get_LOG_MAX_BUFFER_SIZE() < 1 << $this.n21_1 ? pushBuffers($this, root, rootSize, $this.n21_1, buffersIterator) : makeMutable($this, root);
     while (buffersIterator.b1()) {
-      $this.l21_1 = $this.l21_1 + get_LOG_MAX_BUFFER_SIZE() | 0;
+      $this.n21_1 = $this.n21_1 + get_LOG_MAX_BUFFER_SIZE() | 0;
       mutableRoot = mutableBufferWith($this, mutableRoot);
-      pushBuffers($this, mutableRoot, 1 << $this.l21_1, $this.l21_1, buffersIterator);
+      pushBuffers($this, mutableRoot, 1 << $this.n21_1, $this.n21_1, buffersIterator);
     }
     return mutableRoot;
   }
@@ -15636,20 +15636,20 @@
   }
   function insertIntoTail_0($this, root, index, element) {
     var tailSize = tailSize_0($this);
-    var mutableTail = makeMutable($this, $this.o21_1);
+    var mutableTail = makeMutable($this, $this.q21_1);
     if (tailSize < get_MAX_BUFFER_SIZE()) {
       // Inline function 'kotlin.collections.copyInto' call
-      var this_0 = $this.o21_1;
+      var this_0 = $this.q21_1;
       var destinationOffset = index + 1 | 0;
       arrayCopy(this_0, mutableTail, destinationOffset, index, tailSize);
       mutableTail[index] = element;
-      $this.n21_1 = root;
-      $this.o21_1 = mutableTail;
-      $this.p21_1 = $this.p21_1 + 1 | 0;
+      $this.p21_1 = root;
+      $this.q21_1 = mutableTail;
+      $this.r21_1 = $this.r21_1 + 1 | 0;
     } else {
-      var lastElement = $this.o21_1[get_MAX_BUFFER_SIZE_MINUS_ONE()];
+      var lastElement = $this.q21_1[get_MAX_BUFFER_SIZE_MINUS_ONE()];
       // Inline function 'kotlin.collections.copyInto' call
-      var this_1 = $this.o21_1;
+      var this_1 = $this.q21_1;
       var destinationOffset_0 = index + 1 | 0;
       var endIndex = get_MAX_BUFFER_SIZE_MINUS_ONE();
       arrayCopy(this_1, mutableTail, destinationOffset_0, index, endIndex);
@@ -15660,7 +15660,7 @@
   function insertIntoRoot_0($this, root, shift, index, element, elementCarry) {
     var bufferIndex = indexSegment(index, shift);
     if (shift === 0) {
-      elementCarry.g21_1 = root[get_MAX_BUFFER_SIZE_MINUS_ONE()];
+      elementCarry.i21_1 = root[get_MAX_BUFFER_SIZE_MINUS_ONE()];
       // Inline function 'kotlin.collections.copyInto' call
       var destination = makeMutable($this, root);
       var destinationOffset = bufferIndex + 1 | 0;
@@ -15683,17 +15683,17 @@
         if (mutableRoot_0[i] == null)
           break $l$loop;
         var tmp_0 = mutableRoot_0[i];
-        mutableRoot_0[i] = insertIntoRoot_0($this, (!(tmp_0 == null) ? isArray(tmp_0) : false) ? tmp_0 : THROW_CCE(), lowerLevelShift, 0, elementCarry.g21_1, elementCarry);
+        mutableRoot_0[i] = insertIntoRoot_0($this, (!(tmp_0 == null) ? isArray(tmp_0) : false) ? tmp_0 : THROW_CCE(), lowerLevelShift, 0, elementCarry.i21_1, elementCarry);
       }
        while (inductionVariable < last);
     return mutableRoot_0;
   }
   function bufferFor_0($this, index) {
     if (rootSize_0($this) <= index) {
-      return $this.o21_1;
+      return $this.q21_1;
     }
-    var buffer = ensureNotNull($this.n21_1);
-    var shift = $this.l21_1;
+    var buffer = ensureNotNull($this.p21_1);
+    var shift = $this.n21_1;
     while (shift > 0) {
       var tmp = buffer[indexSegment(index, shift)];
       buffer = (!(tmp == null) ? isArray(tmp) : false) ? tmp : THROW_CCE();
@@ -15702,25 +15702,25 @@
     return buffer;
   }
   function removeFromTailAt_0($this, root, rootSize, shift, index) {
-    var tailSize = $this.p21_1 - rootSize | 0;
+    var tailSize = $this.r21_1 - rootSize | 0;
     assert(index < tailSize);
     var removedElement;
     if (tailSize === 1) {
-      removedElement = $this.o21_1[0];
+      removedElement = $this.q21_1[0];
       pullLastBufferFromRoot_0($this, root, rootSize, shift);
     } else {
-      removedElement = $this.o21_1[index];
+      removedElement = $this.q21_1[index];
       // Inline function 'kotlin.collections.copyInto' call
-      var this_0 = $this.o21_1;
-      var destination = makeMutable($this, $this.o21_1);
+      var this_0 = $this.q21_1;
+      var destination = makeMutable($this, $this.q21_1);
       var startIndex = index + 1 | 0;
       arrayCopy(this_0, destination, index, startIndex, tailSize);
       var mutableTail = destination;
       mutableTail[tailSize - 1 | 0] = null;
-      $this.n21_1 = root;
-      $this.o21_1 = mutableTail;
-      $this.p21_1 = (rootSize + tailSize | 0) - 1 | 0;
-      $this.l21_1 = shift;
+      $this.p21_1 = root;
+      $this.q21_1 = mutableTail;
+      $this.r21_1 = (rootSize + tailSize | 0) - 1 | 0;
+      $this.n21_1 = shift;
     }
     return removedElement;
   }
@@ -15734,8 +15734,8 @@
       var endIndex = get_MAX_BUFFER_SIZE();
       arrayCopy(root, destination, bufferIndex, startIndex, endIndex);
       var mutableRoot = destination;
-      mutableRoot[get_MAX_BUFFER_SIZE() - 1 | 0] = tailCarry.g21_1;
-      tailCarry.g21_1 = removedElement;
+      mutableRoot[get_MAX_BUFFER_SIZE() - 1 | 0] = tailCarry.i21_1;
+      tailCarry.i21_1 = removedElement;
       return mutableRoot;
     }
     var bufferLastIndex = get_MAX_BUFFER_SIZE_MINUS_ONE();
@@ -15760,7 +15760,7 @@
   }
   function pullLastBufferFromRoot_0($this, root, rootSize, shift) {
     if (shift === 0) {
-      $this.n21_1 = null;
+      $this.p21_1 = null;
       var tmp = $this;
       var tmp_0;
       if (root == null) {
@@ -15769,32 +15769,32 @@
       } else {
         tmp_0 = root;
       }
-      tmp.o21_1 = tmp_0;
-      $this.p21_1 = rootSize;
-      $this.l21_1 = shift;
+      tmp.q21_1 = tmp_0;
+      $this.r21_1 = rootSize;
+      $this.n21_1 = shift;
       return Unit_instance;
     }
     var tailCarry = new ObjectRef(null);
     var newRoot = ensureNotNull(pullLastBuffer_0($this, ensureNotNull(root), shift, rootSize, tailCarry));
     var tmp_1 = $this;
-    var tmp_2 = tailCarry.g21_1;
-    tmp_1.o21_1 = (!(tmp_2 == null) ? isArray(tmp_2) : false) ? tmp_2 : THROW_CCE();
-    $this.p21_1 = rootSize;
+    var tmp_2 = tailCarry.i21_1;
+    tmp_1.q21_1 = (!(tmp_2 == null) ? isArray(tmp_2) : false) ? tmp_2 : THROW_CCE();
+    $this.r21_1 = rootSize;
     if (newRoot[1] == null) {
       var tmp_3 = $this;
       var tmp_4 = newRoot[0];
-      tmp_3.n21_1 = (tmp_4 == null ? true : isArray(tmp_4)) ? tmp_4 : THROW_CCE();
-      $this.l21_1 = shift - get_LOG_MAX_BUFFER_SIZE() | 0;
+      tmp_3.p21_1 = (tmp_4 == null ? true : isArray(tmp_4)) ? tmp_4 : THROW_CCE();
+      $this.n21_1 = shift - get_LOG_MAX_BUFFER_SIZE() | 0;
     } else {
-      $this.n21_1 = newRoot;
-      $this.l21_1 = shift;
+      $this.p21_1 = newRoot;
+      $this.n21_1 = shift;
     }
   }
   function pullLastBuffer_0($this, root, shift, rootSize, tailCarry) {
     var bufferIndex = indexSegment(rootSize - 1 | 0, shift);
     var tmp;
     if (shift === get_LOG_MAX_BUFFER_SIZE()) {
-      tailCarry.g21_1 = root[bufferIndex];
+      tailCarry.i21_1 = root[bufferIndex];
       tmp = null;
     } else {
       var tmp_0 = root[bufferIndex];
@@ -15815,7 +15815,7 @@
       if (!(mutableRoot === root)) {
         $this.j1_1 = $this.j1_1 + 1 | 0;
       }
-      oldElementCarry.g21_1 = mutableRoot[bufferIndex];
+      oldElementCarry.i21_1 = mutableRoot[bufferIndex];
       mutableRoot[bufferIndex] = e;
       return mutableRoot;
     }
@@ -15825,59 +15825,59 @@
   }
   function PersistentVectorBuilder(vector, vectorRoot, vectorTail, rootShift) {
     AbstractMutableList.call(this);
-    this.i21_1 = vector;
-    this.j21_1 = vectorRoot;
-    this.k21_1 = vectorTail;
-    this.l21_1 = rootShift;
-    this.m21_1 = new MutabilityOwnership();
-    this.n21_1 = this.j21_1;
-    this.o21_1 = this.k21_1;
-    this.p21_1 = this.i21_1.l();
+    this.k21_1 = vector;
+    this.l21_1 = vectorRoot;
+    this.m21_1 = vectorTail;
+    this.n21_1 = rootShift;
+    this.o21_1 = new MutabilityOwnership();
+    this.p21_1 = this.l21_1;
+    this.q21_1 = this.m21_1;
+    this.r21_1 = this.k21_1.l();
   }
   protoOf(PersistentVectorBuilder).l = function () {
-    return this.p21_1;
+    return this.r21_1;
   };
-  protoOf(PersistentVectorBuilder).q21 = function () {
+  protoOf(PersistentVectorBuilder).s21 = function () {
     return this.j1_1;
   };
   protoOf(PersistentVectorBuilder).b3 = function () {
     var tmp = this;
     var tmp_0;
-    if (this.n21_1 === this.j21_1 ? this.o21_1 === this.k21_1 : false) {
-      tmp_0 = this.i21_1;
+    if (this.p21_1 === this.l21_1 ? this.q21_1 === this.m21_1 : false) {
+      tmp_0 = this.k21_1;
     } else {
-      this.m21_1 = new MutabilityOwnership();
-      this.j21_1 = this.n21_1;
-      this.k21_1 = this.o21_1;
+      this.o21_1 = new MutabilityOwnership();
+      this.l21_1 = this.p21_1;
+      this.m21_1 = this.q21_1;
       var tmp_1;
-      if (this.n21_1 == null) {
+      if (this.p21_1 == null) {
         var tmp_2;
         // Inline function 'kotlin.collections.isEmpty' call
-        if (this.o21_1.length === 0) {
+        if (this.q21_1.length === 0) {
           tmp_2 = persistentVectorOf();
         } else {
-          tmp_2 = new SmallPersistentVector(copyOf_0(this.o21_1, this.p21_1));
+          tmp_2 = new SmallPersistentVector(copyOf_0(this.q21_1, this.r21_1));
         }
         tmp_1 = tmp_2;
       } else {
-        tmp_1 = new PersistentVector(ensureNotNull(this.n21_1), this.o21_1, this.p21_1, this.l21_1);
+        tmp_1 = new PersistentVector(ensureNotNull(this.p21_1), this.q21_1, this.r21_1, this.n21_1);
       }
       tmp_0 = tmp_1;
     }
-    tmp.i21_1 = tmp_0;
-    return this.i21_1;
+    tmp.k21_1 = tmp_0;
+    return this.k21_1;
   };
   protoOf(PersistentVectorBuilder).y = function (element) {
     this.j1_1 = this.j1_1 + 1 | 0;
     var tailSize = tailSize_0(this);
     if (tailSize < get_MAX_BUFFER_SIZE()) {
-      var mutableTail = makeMutable(this, this.o21_1);
+      var mutableTail = makeMutable(this, this.q21_1);
       mutableTail[tailSize] = element;
-      this.o21_1 = mutableTail;
-      this.p21_1 = this.p21_1 + 1 | 0;
+      this.q21_1 = mutableTail;
+      this.r21_1 = this.r21_1 + 1 | 0;
     } else {
       var newTail = mutableBufferWith(this, element);
-      pushFilledTail_0(this, this.n21_1, this.o21_1, newTail);
+      pushFilledTail_0(this, this.p21_1, this.q21_1, newTail);
     }
     return true;
   };
@@ -15889,13 +15889,13 @@
     var tailSize = tailSize_0(this);
     var elementsIterator = elements.n();
     if ((get_MAX_BUFFER_SIZE() - tailSize | 0) >= elements.l()) {
-      this.o21_1 = copyToBuffer(this, makeMutable(this, this.o21_1), tailSize, elementsIterator);
-      this.p21_1 = this.p21_1 + elements.l() | 0;
+      this.q21_1 = copyToBuffer(this, makeMutable(this, this.q21_1), tailSize, elementsIterator);
+      this.r21_1 = this.r21_1 + elements.l() | 0;
     } else {
       var buffersSize = ((elements.l() + tailSize | 0) - 1 | 0) / get_MAX_BUFFER_SIZE() | 0;
       // Inline function 'kotlin.arrayOfNulls' call
       var buffers = fillArrayVal(Array(buffersSize), null);
-      buffers[0] = copyToBuffer(this, makeMutable(this, this.o21_1), tailSize, elementsIterator);
+      buffers[0] = copyToBuffer(this, makeMutable(this, this.q21_1), tailSize, elementsIterator);
       var inductionVariable = 1;
       if (inductionVariable < buffersSize)
         do {
@@ -15905,67 +15905,67 @@
         }
          while (inductionVariable < buffersSize);
       var tmp = this;
-      var tmp_0 = this.n21_1;
+      var tmp_0 = this.p21_1;
       var tmp_1 = rootSize_0(this);
-      tmp.n21_1 = pushBuffersIncreasingHeightIfNeeded(this, tmp_0, tmp_1, isArray(buffers) ? buffers : THROW_CCE());
-      this.o21_1 = copyToBuffer(this, mutableBuffer(this), 0, elementsIterator);
-      this.p21_1 = this.p21_1 + elements.l() | 0;
+      tmp.p21_1 = pushBuffersIncreasingHeightIfNeeded(this, tmp_0, tmp_1, isArray(buffers) ? buffers : THROW_CCE());
+      this.q21_1 = copyToBuffer(this, mutableBuffer(this), 0, elementsIterator);
+      this.r21_1 = this.r21_1 + elements.l() | 0;
     }
     return true;
   };
   protoOf(PersistentVectorBuilder).w1 = function (index, element) {
-    ListImplementation_instance.p1(index, this.p21_1);
-    if (index === this.p21_1) {
+    ListImplementation_instance.p1(index, this.r21_1);
+    if (index === this.r21_1) {
       this.y(element);
       return Unit_instance;
     }
     this.j1_1 = this.j1_1 + 1 | 0;
     var rootSize = rootSize_0(this);
     if (index >= rootSize) {
-      insertIntoTail_0(this, this.n21_1, index - rootSize | 0, element);
+      insertIntoTail_0(this, this.p21_1, index - rootSize | 0, element);
       return Unit_instance;
     }
     var elementCarry = new ObjectRef(null);
-    var newRest = insertIntoRoot_0(this, ensureNotNull(this.n21_1), this.l21_1, index, element, elementCarry);
-    var tmp = elementCarry.g21_1;
+    var newRest = insertIntoRoot_0(this, ensureNotNull(this.p21_1), this.n21_1, index, element, elementCarry);
+    var tmp = elementCarry.i21_1;
     insertIntoTail_0(this, newRest, 0, (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE());
   };
   protoOf(PersistentVectorBuilder).m = function (index) {
-    ListImplementation_instance.x1(index, this.p21_1);
+    ListImplementation_instance.x1(index, this.r21_1);
     var buffer = bufferFor_0(this, index);
     var tmp = buffer[index & get_MAX_BUFFER_SIZE_MINUS_ONE()];
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
   protoOf(PersistentVectorBuilder).k1 = function (index) {
-    ListImplementation_instance.x1(index, this.p21_1);
+    ListImplementation_instance.x1(index, this.r21_1);
     this.j1_1 = this.j1_1 + 1 | 0;
     var rootSize = rootSize_0(this);
     if (index >= rootSize) {
-      var tmp = removeFromTailAt_0(this, this.n21_1, rootSize, this.l21_1, index - rootSize | 0);
+      var tmp = removeFromTailAt_0(this, this.p21_1, rootSize, this.n21_1, index - rootSize | 0);
       return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
     }
-    var elementCarry = new ObjectRef(this.o21_1[0]);
-    var newRoot = removeFromRootAt_0(this, ensureNotNull(this.n21_1), this.l21_1, index, elementCarry);
-    removeFromTailAt_0(this, newRoot, rootSize, this.l21_1, 0);
-    var tmp_0 = elementCarry.g21_1;
+    var elementCarry = new ObjectRef(this.q21_1[0]);
+    var newRoot = removeFromRootAt_0(this, ensureNotNull(this.p21_1), this.n21_1, index, elementCarry);
+    removeFromTailAt_0(this, newRoot, rootSize, this.n21_1, 0);
+    var tmp_0 = elementCarry.i21_1;
     return (tmp_0 == null ? true : !(tmp_0 == null)) ? tmp_0 : THROW_CCE();
   };
   protoOf(PersistentVectorBuilder).v = function (index, element) {
-    ListImplementation_instance.x1(index, this.p21_1);
+    ListImplementation_instance.x1(index, this.r21_1);
     if (rootSize_0(this) <= index) {
-      var mutableTail = makeMutable(this, this.o21_1);
-      if (!(mutableTail === this.o21_1)) {
+      var mutableTail = makeMutable(this, this.q21_1);
+      if (!(mutableTail === this.q21_1)) {
         this.j1_1 = this.j1_1 + 1 | 0;
       }
       var tailIndex = index & get_MAX_BUFFER_SIZE_MINUS_ONE();
       var oldElement = mutableTail[tailIndex];
       mutableTail[tailIndex] = element;
-      this.o21_1 = mutableTail;
+      this.q21_1 = mutableTail;
       return (oldElement == null ? true : !(oldElement == null)) ? oldElement : THROW_CCE();
     }
     var oldElementCarry = new ObjectRef(null);
-    this.n21_1 = setInRoot_0(this, ensureNotNull(this.n21_1), this.l21_1, index, element, oldElementCarry);
-    var tmp = oldElementCarry.g21_1;
+    this.p21_1 = setInRoot_0(this, ensureNotNull(this.p21_1), this.n21_1, index, element, oldElementCarry);
+    var tmp = oldElementCarry.i21_1;
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
   protoOf(PersistentVectorBuilder).n = function () {
@@ -15975,106 +15975,106 @@
     return this.p(0);
   };
   protoOf(PersistentVectorBuilder).p = function (index) {
-    ListImplementation_instance.p1(index, this.p21_1);
+    ListImplementation_instance.p1(index, this.r21_1);
     return new PersistentVectorMutableIterator(this, index);
   };
   function PersistentVectorIterator(root, tail, index, size, trieHeight) {
     AbstractListIterator.call(this, index, size);
-    this.t21_1 = tail;
+    this.v21_1 = tail;
     var trieSize = rootSize_1(size);
     var trieIndex = coerceAtMost(index, trieSize);
-    this.u21_1 = new TrieIterator(root, trieIndex, trieSize, trieHeight);
+    this.w21_1 = new TrieIterator(root, trieIndex, trieSize, trieHeight);
   }
   protoOf(PersistentVectorIterator).d1 = function () {
-    this.v20();
-    if (this.u21_1.b1()) {
-      this.t20_1 = this.t20_1 + 1 | 0;
-      return this.u21_1.d1();
+    this.x20();
+    if (this.w21_1.b1()) {
+      this.v20_1 = this.v20_1 + 1 | 0;
+      return this.w21_1.d1();
     }
-    var tmp3 = this.t20_1;
-    this.t20_1 = tmp3 + 1 | 0;
-    return this.t21_1[tmp3 - this.u21_1.u20_1 | 0];
+    var tmp3 = this.v20_1;
+    this.v20_1 = tmp3 + 1 | 0;
+    return this.v21_1[tmp3 - this.w21_1.w20_1 | 0];
   };
   protoOf(PersistentVectorIterator).r1 = function () {
-    this.w20();
-    if (this.t20_1 > this.u21_1.u20_1) {
-      this.t20_1 = this.t20_1 - 1 | 0;
-      return this.t21_1[this.t20_1 - this.u21_1.u20_1 | 0];
+    this.y20();
+    if (this.v20_1 > this.w21_1.w20_1) {
+      this.v20_1 = this.v20_1 - 1 | 0;
+      return this.v21_1[this.v20_1 - this.w21_1.w20_1 | 0];
     }
-    this.t20_1 = this.t20_1 - 1 | 0;
-    return this.u21_1.r1();
+    this.v20_1 = this.v20_1 - 1 | 0;
+    return this.w21_1.r1();
   };
   function reset($this) {
-    $this.u20_1 = $this.c22_1.p21_1;
-    $this.d22_1 = $this.c22_1.q21();
-    $this.f22_1 = -1;
+    $this.w20_1 = $this.e22_1.r21_1;
+    $this.f22_1 = $this.e22_1.s21();
+    $this.h22_1 = -1;
     setupTrieIterator($this);
   }
   function setupTrieIterator($this) {
-    var root = $this.c22_1.n21_1;
+    var root = $this.e22_1.p21_1;
     if (root == null) {
-      $this.e22_1 = null;
+      $this.g22_1 = null;
       return Unit_instance;
     }
-    var trieSize = rootSize_1($this.c22_1.p21_1);
-    var trieIndex = coerceAtMost($this.t20_1, trieSize);
-    var trieHeight = ($this.c22_1.l21_1 / get_LOG_MAX_BUFFER_SIZE() | 0) + 1 | 0;
-    if ($this.e22_1 == null) {
-      $this.e22_1 = new TrieIterator(root, trieIndex, trieSize, trieHeight);
+    var trieSize = rootSize_1($this.e22_1.r21_1);
+    var trieIndex = coerceAtMost($this.v20_1, trieSize);
+    var trieHeight = ($this.e22_1.n21_1 / get_LOG_MAX_BUFFER_SIZE() | 0) + 1 | 0;
+    if ($this.g22_1 == null) {
+      $this.g22_1 = new TrieIterator(root, trieIndex, trieSize, trieHeight);
     } else {
-      ensureNotNull($this.e22_1).g22(root, trieIndex, trieSize, trieHeight);
+      ensureNotNull($this.g22_1).i22(root, trieIndex, trieSize, trieHeight);
     }
   }
   function checkForComodification($this) {
-    if (!($this.d22_1 === $this.c22_1.q21()))
+    if (!($this.f22_1 === $this.e22_1.s21()))
       throw ConcurrentModificationException_init_$Create$();
   }
   function checkHasIterated($this) {
-    if ($this.f22_1 === -1)
+    if ($this.h22_1 === -1)
       throw IllegalStateException_init_$Create$_0();
   }
   function PersistentVectorMutableIterator(builder, index) {
-    AbstractListIterator.call(this, index, builder.p21_1);
-    this.c22_1 = builder;
-    this.d22_1 = this.c22_1.q21();
-    this.e22_1 = null;
-    this.f22_1 = -1;
+    AbstractListIterator.call(this, index, builder.r21_1);
+    this.e22_1 = builder;
+    this.f22_1 = this.e22_1.s21();
+    this.g22_1 = null;
+    this.h22_1 = -1;
     setupTrieIterator(this);
   }
   protoOf(PersistentVectorMutableIterator).r1 = function () {
     checkForComodification(this);
-    this.w20();
-    this.f22_1 = this.t20_1 - 1 | 0;
-    var tmp1_elvis_lhs = this.e22_1;
+    this.y20();
+    this.h22_1 = this.v20_1 - 1 | 0;
+    var tmp1_elvis_lhs = this.g22_1;
     var tmp;
     if (tmp1_elvis_lhs == null) {
-      var tmp_0 = this.c22_1.o21_1;
-      this.t20_1 = this.t20_1 - 1 | 0;
-      var tmp_1 = tmp_0[this.t20_1];
+      var tmp_0 = this.e22_1.q21_1;
+      this.v20_1 = this.v20_1 - 1 | 0;
+      var tmp_1 = tmp_0[this.v20_1];
       return (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
     } else {
       tmp = tmp1_elvis_lhs;
     }
     var trieIterator = tmp;
-    if (this.t20_1 > trieIterator.u20_1) {
-      var tmp_2 = this.c22_1.o21_1;
-      this.t20_1 = this.t20_1 - 1 | 0;
-      var tmp_3 = tmp_2[this.t20_1 - trieIterator.u20_1 | 0];
+    if (this.v20_1 > trieIterator.w20_1) {
+      var tmp_2 = this.e22_1.q21_1;
+      this.v20_1 = this.v20_1 - 1 | 0;
+      var tmp_3 = tmp_2[this.v20_1 - trieIterator.w20_1 | 0];
       return (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
     }
-    this.t20_1 = this.t20_1 - 1 | 0;
+    this.v20_1 = this.v20_1 - 1 | 0;
     return trieIterator.r1();
   };
   protoOf(PersistentVectorMutableIterator).d1 = function () {
     checkForComodification(this);
-    this.v20();
-    this.f22_1 = this.t20_1;
-    var tmp2_elvis_lhs = this.e22_1;
+    this.x20();
+    this.h22_1 = this.v20_1;
+    var tmp2_elvis_lhs = this.g22_1;
     var tmp;
     if (tmp2_elvis_lhs == null) {
-      var tmp_0 = this.c22_1.o21_1;
-      var tmp1 = this.t20_1;
-      this.t20_1 = tmp1 + 1 | 0;
+      var tmp_0 = this.e22_1.q21_1;
+      var tmp1 = this.v20_1;
+      this.v20_1 = tmp1 + 1 | 0;
       var tmp_1 = tmp_0[tmp1];
       return (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
     } else {
@@ -16082,21 +16082,21 @@
     }
     var trieIterator = tmp;
     if (trieIterator.b1()) {
-      this.t20_1 = this.t20_1 + 1 | 0;
+      this.v20_1 = this.v20_1 + 1 | 0;
       return trieIterator.d1();
     }
-    var tmp_2 = this.c22_1.o21_1;
-    var tmp6 = this.t20_1;
-    this.t20_1 = tmp6 + 1 | 0;
-    var tmp_3 = tmp_2[tmp6 - trieIterator.u20_1 | 0];
+    var tmp_2 = this.e22_1.q21_1;
+    var tmp6 = this.v20_1;
+    this.v20_1 = tmp6 + 1 | 0;
+    var tmp_3 = tmp_2[tmp6 - trieIterator.w20_1 | 0];
     return (tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE();
   };
   protoOf(PersistentVectorMutableIterator).c1 = function () {
     checkForComodification(this);
     checkHasIterated(this);
-    this.c22_1.k1(this.f22_1);
-    if (this.f22_1 < this.t20_1)
-      this.t20_1 = this.f22_1;
+    this.e22_1.k1(this.h22_1);
+    if (this.h22_1 < this.v20_1)
+      this.v20_1 = this.h22_1;
     reset(this);
   };
   function bufferOfSize($this, size) {
@@ -16108,7 +16108,7 @@
     var tmp = this;
     // Inline function 'kotlin.emptyArray' call
     var tmp$ret$0 = [];
-    tmp.h22_1 = new SmallPersistentVector(tmp$ret$0);
+    tmp.j22_1 = new SmallPersistentVector(tmp$ret$0);
   }
   var Companion_instance_7;
   function Companion_getInstance_7() {
@@ -16119,24 +16119,24 @@
   function SmallPersistentVector(buffer) {
     Companion_getInstance_7();
     AbstractPersistentList.call(this);
-    this.i22_1 = buffer;
-    assert(this.i22_1.length <= get_MAX_BUFFER_SIZE());
+    this.k22_1 = buffer;
+    assert(this.k22_1.length <= get_MAX_BUFFER_SIZE());
   }
   protoOf(SmallPersistentVector).l = function () {
-    return this.i22_1.length;
+    return this.k22_1.length;
   };
   protoOf(SmallPersistentVector).y = function (element) {
     if (this.l() < get_MAX_BUFFER_SIZE()) {
-      var newBuffer = copyOf_0(this.i22_1, this.l() + 1 | 0);
+      var newBuffer = copyOf_0(this.k22_1, this.l() + 1 | 0);
       newBuffer[this.l()] = element;
       return new SmallPersistentVector(newBuffer);
     }
     var tail = presizedBufferWith(element);
-    return new PersistentVector(this.i22_1, tail, this.l() + 1 | 0, 0);
+    return new PersistentVector(this.k22_1, tail, this.l() + 1 | 0, 0);
   };
   protoOf(SmallPersistentVector).e1 = function (elements) {
     if ((this.l() + elements.l() | 0) <= get_MAX_BUFFER_SIZE()) {
-      var newBuffer = copyOf_0(this.i22_1, this.l() + elements.l() | 0);
+      var newBuffer = copyOf_0(this.k22_1, this.l() + elements.l() | 0);
       var index = this.l();
       var tmp0_iterator = elements.n();
       while (tmp0_iterator.b1()) {
@@ -16149,13 +16149,13 @@
     }
     // Inline function 'androidx.compose.runtime.external.kotlinx.collections.immutable.mutate' call
     // Inline function 'kotlin.apply' call
-    var this_0 = this.x20();
+    var this_0 = this.z20();
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableList.SmallPersistentVector.addAll.<anonymous>' call
     this_0.e1(elements);
     return this_0.b3();
   };
-  protoOf(SmallPersistentVector).y20 = function (index, element) {
+  protoOf(SmallPersistentVector).a21 = function (index, element) {
     ListImplementation_instance.p1(index, this.l());
     if (index === this.l()) {
       return this.y(element);
@@ -16163,10 +16163,10 @@
     if (this.l() < get_MAX_BUFFER_SIZE()) {
       var newBuffer = bufferOfSize(this, this.l() + 1 | 0);
       // Inline function 'kotlin.collections.copyInto' call
-      var this_0 = this.i22_1;
+      var this_0 = this.k22_1;
       arrayCopy(this_0, newBuffer, 0, 0, index);
       // Inline function 'kotlin.collections.copyInto' call
-      var this_1 = this.i22_1;
+      var this_1 = this.k22_1;
       var destinationOffset = index + 1 | 0;
       var endIndex = this.l();
       arrayCopy(this_1, newBuffer, destinationOffset, index, endIndex);
@@ -16175,60 +16175,60 @@
     }
     // Inline function 'kotlin.collections.copyOf' call
     // Inline function 'kotlin.js.asDynamic' call
-    var root = this.i22_1.slice();
+    var root = this.k22_1.slice();
     // Inline function 'kotlin.collections.copyInto' call
-    var this_2 = this.i22_1;
+    var this_2 = this.k22_1;
     var destinationOffset_0 = index + 1 | 0;
     var endIndex_0 = this.l() - 1 | 0;
     arrayCopy(this_2, root, destinationOffset_0, index, endIndex_0);
     root[index] = element;
-    var tail = presizedBufferWith(this.i22_1[get_MAX_BUFFER_SIZE_MINUS_ONE()]);
+    var tail = presizedBufferWith(this.k22_1[get_MAX_BUFFER_SIZE_MINUS_ONE()]);
     return new PersistentVector(root, tail, this.l() + 1 | 0, 0);
   };
   protoOf(SmallPersistentVector).k1 = function (index) {
     ListImplementation_instance.x1(index, this.l());
     if (this.l() === 1) {
-      return Companion_getInstance_7().h22_1;
+      return Companion_getInstance_7().j22_1;
     }
-    var newBuffer = copyOf_0(this.i22_1, this.l() - 1 | 0);
+    var newBuffer = copyOf_0(this.k22_1, this.l() - 1 | 0);
     // Inline function 'kotlin.collections.copyInto' call
-    var this_0 = this.i22_1;
+    var this_0 = this.k22_1;
     var startIndex = index + 1 | 0;
     var endIndex = this.l();
     arrayCopy(this_0, newBuffer, index, startIndex, endIndex);
     return new SmallPersistentVector(newBuffer);
   };
-  protoOf(SmallPersistentVector).x20 = function () {
-    return new PersistentVectorBuilder(this, null, this.i22_1, 0);
+  protoOf(SmallPersistentVector).z20 = function () {
+    return new PersistentVectorBuilder(this, null, this.k22_1, 0);
   };
   protoOf(SmallPersistentVector).o = function (element) {
-    return indexOf(this.i22_1, element);
+    return indexOf(this.k22_1, element);
   };
   protoOf(SmallPersistentVector).p = function (index) {
     ListImplementation_instance.p1(index, this.l());
-    var tmp = this.i22_1;
+    var tmp = this.k22_1;
     return new BufferIterator(isArray(tmp) ? tmp : THROW_CCE(), index, this.l());
   };
   protoOf(SmallPersistentVector).m = function (index) {
     ListImplementation_instance.x1(index, this.l());
-    var tmp = this.i22_1[index];
+    var tmp = this.k22_1[index];
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
   protoOf(SmallPersistentVector).v = function (index, element) {
     ListImplementation_instance.x1(index, this.l());
     // Inline function 'kotlin.collections.copyOf' call
     // Inline function 'kotlin.js.asDynamic' call
-    var newBuffer = this.i22_1.slice();
+    var newBuffer = this.k22_1.slice();
     newBuffer[index] = element;
     return new SmallPersistentVector(newBuffer);
   };
   function fillPath($this, index, startLevel) {
-    var shift = imul($this.x21_1 - startLevel | 0, get_LOG_MAX_BUFFER_SIZE());
+    var shift = imul($this.z21_1 - startLevel | 0, get_LOG_MAX_BUFFER_SIZE());
     var i = startLevel;
-    while (i < $this.x21_1) {
-      var tmp = $this.y21_1;
+    while (i < $this.z21_1) {
+      var tmp = $this.a22_1;
       var tmp_0 = i;
-      var tmp_1 = $this.y21_1[i - 1 | 0];
+      var tmp_1 = $this.a22_1[i - 1 | 0];
       tmp[tmp_0] = ((!(tmp_1 == null) ? isArray(tmp_1) : false) ? tmp_1 : THROW_CCE())[indexSegment(index, shift)];
       shift = shift - get_LOG_MAX_BUFFER_SIZE() | 0;
       i = i + 1 | 0;
@@ -16236,51 +16236,51 @@
   }
   function fillPathIfNeeded($this, indexPredicate) {
     var shift = 0;
-    while (indexSegment($this.t20_1, shift) === indexPredicate) {
+    while (indexSegment($this.v20_1, shift) === indexPredicate) {
       shift = shift + get_LOG_MAX_BUFFER_SIZE() | 0;
     }
     if (shift > 0) {
-      var level = ($this.x21_1 - 1 | 0) - (shift / get_LOG_MAX_BUFFER_SIZE() | 0) | 0;
-      fillPath($this, $this.t20_1, level + 1 | 0);
+      var level = ($this.z21_1 - 1 | 0) - (shift / get_LOG_MAX_BUFFER_SIZE() | 0) | 0;
+      fillPath($this, $this.v20_1, level + 1 | 0);
     }
   }
   function elementAtCurrentIndex($this) {
-    var leafBufferIndex = $this.t20_1 & get_MAX_BUFFER_SIZE_MINUS_ONE();
-    var tmp = $this.y21_1[$this.x21_1 - 1 | 0];
+    var leafBufferIndex = $this.v20_1 & get_MAX_BUFFER_SIZE_MINUS_ONE();
+    var tmp = $this.a22_1[$this.z21_1 - 1 | 0];
     return ((!(tmp == null) ? isArray(tmp) : false) ? tmp : THROW_CCE())[leafBufferIndex];
   }
   function TrieIterator(root, index, size, height) {
     AbstractListIterator.call(this, index, size);
-    this.x21_1 = height;
+    this.z21_1 = height;
     var tmp = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    var size_0 = this.x21_1;
-    tmp.y21_1 = fillArrayVal(Array(size_0), null);
-    this.z21_1 = index === size;
-    this.y21_1[0] = root;
-    fillPath(this, index - (this.z21_1 ? 1 : 0) | 0, 1);
+    var size_0 = this.z21_1;
+    tmp.a22_1 = fillArrayVal(Array(size_0), null);
+    this.b22_1 = index === size;
+    this.a22_1[0] = root;
+    fillPath(this, index - (this.b22_1 ? 1 : 0) | 0, 1);
   }
-  protoOf(TrieIterator).g22 = function (root, index, size, height) {
-    this.t20_1 = index;
-    this.u20_1 = size;
-    this.x21_1 = height;
-    if (this.y21_1.length < height) {
+  protoOf(TrieIterator).i22 = function (root, index, size, height) {
+    this.v20_1 = index;
+    this.w20_1 = size;
+    this.z21_1 = height;
+    if (this.a22_1.length < height) {
       var tmp = this;
       // Inline function 'kotlin.arrayOfNulls' call
-      tmp.y21_1 = fillArrayVal(Array(height), null);
+      tmp.a22_1 = fillArrayVal(Array(height), null);
     }
-    this.y21_1[0] = root;
-    this.z21_1 = index === size;
-    fillPath(this, index - (this.z21_1 ? 1 : 0) | 0, 1);
+    this.a22_1[0] = root;
+    this.b22_1 = index === size;
+    fillPath(this, index - (this.b22_1 ? 1 : 0) | 0, 1);
   };
   protoOf(TrieIterator).d1 = function () {
     if (!this.b1()) {
       throw NoSuchElementException_init_$Create$_0();
     }
     var result = elementAtCurrentIndex(this);
-    this.t20_1 = this.t20_1 + 1 | 0;
-    if (this.t20_1 === this.u20_1) {
-      this.z21_1 = true;
+    this.v20_1 = this.v20_1 + 1 | 0;
+    if (this.v20_1 === this.w20_1) {
+      this.b22_1 = true;
       return result;
     }
     fillPathIfNeeded(this, 0);
@@ -16290,16 +16290,16 @@
     if (!this.q1()) {
       throw NoSuchElementException_init_$Create$_0();
     }
-    this.t20_1 = this.t20_1 - 1 | 0;
-    if (this.z21_1) {
-      this.z21_1 = false;
+    this.v20_1 = this.v20_1 - 1 | 0;
+    if (this.b22_1) {
+      this.b22_1 = false;
       return elementAtCurrentIndex(this);
     }
     fillPathIfNeeded(this, get_MAX_BUFFER_SIZE_MINUS_ONE());
     return elementAtCurrentIndex(this);
   };
   function persistentVectorOf() {
-    return Companion_getInstance_7().h22_1;
+    return Companion_getInstance_7().j22_1;
   }
   function get_MAX_BUFFER_SIZE() {
     return MAX_BUFFER_SIZE;
@@ -16326,7 +16326,7 @@
     return index >> shift & 31;
   }
   function ObjectRef(value) {
-    this.g21_1 = value;
+    this.i21_1 = value;
   }
   function get_MUTABLE_BUFFER_SIZE() {
     return MUTABLE_BUFFER_SIZE;
@@ -16337,10 +16337,10 @@
   }
   function Companion_7() {
     Companion_instance_8 = this;
-    this.j22_1 = new PersistentHashMap(Companion_getInstance_9().k22_1, 0);
+    this.l22_1 = new PersistentHashMap(Companion_getInstance_9().m22_1, 0);
   }
-  protoOf(Companion_7).l22 = function () {
-    var tmp = this.j22_1;
+  protoOf(Companion_7).n22 = function () {
+    var tmp = this.l22_1;
     return tmp instanceof PersistentHashMap ? tmp : THROW_CCE();
   };
   var Companion_instance_8;
@@ -16352,11 +16352,11 @@
   function PersistentHashMap(node, size) {
     Companion_getInstance_8();
     AbstractMap.call(this);
-    this.o22_1 = node;
-    this.p22_1 = size;
+    this.q22_1 = node;
+    this.r22_1 = size;
   }
   protoOf(PersistentHashMap).l = function () {
-    return this.p22_1;
+    return this.r22_1;
   };
   protoOf(PersistentHashMap).i2 = function () {
     return new PersistentHashMapKeys(this);
@@ -16371,19 +16371,19 @@
     // Inline function 'kotlin.hashCode' call
     var tmp1_elvis_lhs = key == null ? null : hashCode(key);
     var tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
-    return this.o22_1.u22(tmp$ret$0, key, 0);
+    return this.q22_1.w22(tmp$ret$0, key, 0);
   };
   protoOf(PersistentHashMap).u2 = function (key) {
     // Inline function 'kotlin.hashCode' call
     var tmp1_elvis_lhs = key == null ? null : hashCode(key);
     var tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
-    return this.o22_1.v22(tmp$ret$0, key, 0);
+    return this.q22_1.x22(tmp$ret$0, key, 0);
   };
   protoOf(PersistentHashMap).l2 = function (key, value) {
     // Inline function 'kotlin.hashCode' call
     var tmp1_elvis_lhs = key == null ? null : hashCode(key);
     var tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
-    var tmp0_elvis_lhs = this.o22_1.w22(tmp$ret$0, key, value, 0);
+    var tmp0_elvis_lhs = this.q22_1.y22(tmp$ret$0, key, value, 0);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return this;
@@ -16391,18 +16391,18 @@
       tmp = tmp0_elvis_lhs;
     }
     var newNodeResult = tmp;
-    return new PersistentHashMap(newNodeResult.x22_1, this.l() + newNodeResult.y22_1 | 0);
+    return new PersistentHashMap(newNodeResult.z22_1, this.l() + newNodeResult.a23_1 | 0);
   };
   protoOf(PersistentHashMap).m2 = function (key) {
     // Inline function 'kotlin.hashCode' call
     var tmp1_elvis_lhs = key == null ? null : hashCode(key);
     var tmp$ret$0 = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
-    var newNode = this.o22_1.z22(tmp$ret$0, key, 0);
-    if (this.o22_1 === newNode) {
+    var newNode = this.q22_1.b23(tmp$ret$0, key, 0);
+    if (this.q22_1 === newNode) {
       return this;
     }
     if (newNode == null) {
-      return Companion_getInstance_8().l22();
+      return Companion_getInstance_8().n22();
     }
     return new PersistentHashMap(newNode, this.l() - 1 | 0);
   };
@@ -16437,137 +16437,137 @@
     PersistentHashMapBaseIterator.call(this, node, tmp_0);
   }
   function moveToNextNodeWithData($this, pathIndex) {
-    if ($this.a23_1[pathIndex].g23()) {
+    if ($this.c23_1[pathIndex].i23()) {
       return pathIndex;
     }
-    if ($this.a23_1[pathIndex].k23()) {
-      var node = $this.a23_1[pathIndex].h23();
+    if ($this.c23_1[pathIndex].m23()) {
+      var node = $this.c23_1[pathIndex].j23();
       if (pathIndex === 6) {
-        $this.a23_1[pathIndex + 1 | 0].j23(node.t22_1, node.t22_1.length);
+        $this.c23_1[pathIndex + 1 | 0].l23(node.v22_1, node.v22_1.length);
       } else {
-        $this.a23_1[pathIndex + 1 | 0].j23(node.t22_1, imul(get_ENTRY_SIZE(), node.i23()));
+        $this.c23_1[pathIndex + 1 | 0].l23(node.v22_1, imul(get_ENTRY_SIZE(), node.k23()));
       }
       return moveToNextNodeWithData($this, pathIndex + 1 | 0);
     }
     return -1;
   }
   function ensureNextEntryIsReady($this) {
-    if ($this.a23_1[$this.b23_1].g23()) {
+    if ($this.c23_1[$this.d23_1].i23()) {
       return Unit_instance;
     }
-    var inductionVariable = $this.b23_1;
+    var inductionVariable = $this.d23_1;
     if (0 <= inductionVariable)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + -1 | 0;
         var result = moveToNextNodeWithData($this, i);
-        if (result === -1 ? $this.a23_1[i].k23() : false) {
-          $this.a23_1[i].l23();
+        if (result === -1 ? $this.c23_1[i].m23() : false) {
+          $this.c23_1[i].n23();
           result = moveToNextNodeWithData($this, i);
         }
         if (!(result === -1)) {
-          $this.b23_1 = result;
+          $this.d23_1 = result;
           return Unit_instance;
         }
         if (i > 0) {
-          $this.a23_1[i - 1 | 0].l23();
+          $this.c23_1[i - 1 | 0].n23();
         }
-        $this.a23_1[i].j23(Companion_getInstance_9().k22_1.t22_1, 0);
+        $this.c23_1[i].l23(Companion_getInstance_9().m22_1.v22_1, 0);
       }
        while (0 <= inductionVariable);
-    $this.c23_1 = false;
+    $this.e23_1 = false;
   }
   function checkHasNext($this) {
     if (!$this.b1())
       throw NoSuchElementException_init_$Create$_0();
   }
   function PersistentHashMapBaseIterator(node, path) {
-    this.a23_1 = path;
-    this.b23_1 = 0;
-    this.c23_1 = true;
-    this.a23_1[0].j23(node.t22_1, imul(get_ENTRY_SIZE(), node.i23()));
-    this.b23_1 = 0;
+    this.c23_1 = path;
+    this.d23_1 = 0;
+    this.e23_1 = true;
+    this.c23_1[0].l23(node.v22_1, imul(get_ENTRY_SIZE(), node.k23()));
+    this.d23_1 = 0;
     ensureNextEntryIsReady(this);
   }
   protoOf(PersistentHashMapBaseIterator).b1 = function () {
-    return this.c23_1;
+    return this.e23_1;
   };
   protoOf(PersistentHashMapBaseIterator).d1 = function () {
     checkHasNext(this);
-    var result = this.a23_1[this.b23_1].d1();
+    var result = this.c23_1[this.d23_1].d1();
     ensureNextEntryIsReady(this);
     return result;
   };
   function TrieNodeBaseIterator() {
-    this.d23_1 = Companion_getInstance_9().k22_1.t22_1;
-    this.e23_1 = 0;
-    this.f23_1 = 0;
+    this.f23_1 = Companion_getInstance_9().m22_1.v22_1;
+    this.g23_1 = 0;
+    this.h23_1 = 0;
   }
-  protoOf(TrieNodeBaseIterator).m23 = function (buffer, dataSize, index) {
-    this.d23_1 = buffer;
-    this.e23_1 = dataSize;
-    this.f23_1 = index;
+  protoOf(TrieNodeBaseIterator).o23 = function (buffer, dataSize, index) {
+    this.f23_1 = buffer;
+    this.g23_1 = dataSize;
+    this.h23_1 = index;
   };
-  protoOf(TrieNodeBaseIterator).j23 = function (buffer, dataSize) {
-    this.m23(buffer, dataSize, 0);
+  protoOf(TrieNodeBaseIterator).l23 = function (buffer, dataSize) {
+    this.o23(buffer, dataSize, 0);
   };
-  protoOf(TrieNodeBaseIterator).g23 = function () {
-    return this.f23_1 < this.e23_1;
+  protoOf(TrieNodeBaseIterator).i23 = function () {
+    return this.h23_1 < this.g23_1;
   };
-  protoOf(TrieNodeBaseIterator).k23 = function () {
-    assert(this.f23_1 >= this.e23_1);
-    return this.f23_1 < this.d23_1.length;
+  protoOf(TrieNodeBaseIterator).m23 = function () {
+    assert(this.h23_1 >= this.g23_1);
+    return this.h23_1 < this.f23_1.length;
   };
-  protoOf(TrieNodeBaseIterator).h23 = function () {
-    assert(this.k23());
-    var tmp = this.d23_1[this.f23_1];
+  protoOf(TrieNodeBaseIterator).j23 = function () {
+    assert(this.m23());
+    var tmp = this.f23_1[this.h23_1];
     return tmp instanceof TrieNode ? tmp : THROW_CCE();
   };
-  protoOf(TrieNodeBaseIterator).l23 = function () {
-    assert(this.k23());
-    this.f23_1 = this.f23_1 + 1 | 0;
+  protoOf(TrieNodeBaseIterator).n23 = function () {
+    assert(this.m23());
+    this.h23_1 = this.h23_1 + 1 | 0;
   };
   protoOf(TrieNodeBaseIterator).b1 = function () {
-    return this.g23();
+    return this.i23();
   };
   function TrieNodeKeysIterator() {
     TrieNodeBaseIterator.call(this);
   }
   protoOf(TrieNodeKeysIterator).d1 = function () {
-    assert(this.g23());
-    this.f23_1 = this.f23_1 + 2 | 0;
-    var tmp = this.d23_1[this.f23_1 - 2 | 0];
+    assert(this.i23());
+    this.h23_1 = this.h23_1 + 2 | 0;
+    var tmp = this.f23_1[this.h23_1 - 2 | 0];
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
   function TrieNodeValuesIterator() {
     TrieNodeBaseIterator.call(this);
   }
   protoOf(TrieNodeValuesIterator).d1 = function () {
-    assert(this.g23());
-    this.f23_1 = this.f23_1 + 2 | 0;
-    var tmp = this.d23_1[this.f23_1 - 1 | 0];
+    assert(this.i23());
+    this.h23_1 = this.h23_1 + 2 | 0;
+    var tmp = this.f23_1[this.h23_1 - 1 | 0];
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   };
   function TrieNodeEntriesIterator() {
     TrieNodeBaseIterator.call(this);
   }
   protoOf(TrieNodeEntriesIterator).d1 = function () {
-    assert(this.g23());
-    this.f23_1 = this.f23_1 + 2 | 0;
-    var tmp = this.d23_1[this.f23_1 - 2 | 0];
+    assert(this.i23());
+    this.h23_1 = this.h23_1 + 2 | 0;
+    var tmp = this.f23_1[this.h23_1 - 2 | 0];
     var tmp_0 = (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
-    var tmp_1 = this.d23_1[this.f23_1 - 1 | 0];
+    var tmp_1 = this.f23_1[this.h23_1 - 1 | 0];
     return new MapEntry(tmp_0, (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE());
   };
   function MapEntry(key, value) {
-    this.w23_1 = key;
-    this.x23_1 = value;
+    this.y23_1 = key;
+    this.z23_1 = value;
   }
   protoOf(MapEntry).n2 = function () {
-    return this.w23_1;
+    return this.y23_1;
   };
   protoOf(MapEntry).o2 = function () {
-    return this.x23_1;
+    return this.z23_1;
   };
   protoOf(MapEntry).hashCode = function () {
     // Inline function 'kotlin.hashCode' call
@@ -16598,13 +16598,13 @@
   };
   function PersistentHashMapKeys(map) {
     AbstractSet.call(this);
-    this.y23_1 = map;
+    this.a24_1 = map;
   }
   protoOf(PersistentHashMapKeys).l = function () {
-    return this.y23_1.l();
+    return this.a24_1.l();
   };
   protoOf(PersistentHashMapKeys).l3 = function (element) {
-    return this.y23_1.r2(element);
+    return this.a24_1.r2(element);
   };
   protoOf(PersistentHashMapKeys).q = function (element) {
     if (!(element == null ? true : !(element == null)))
@@ -16612,17 +16612,17 @@
     return this.l3((element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
   protoOf(PersistentHashMapKeys).n = function () {
-    return new PersistentHashMapKeysIterator(this.y23_1.o22_1);
+    return new PersistentHashMapKeysIterator(this.a24_1.q22_1);
   };
   function PersistentHashMapValues(map) {
     AbstractCollection.call(this);
-    this.z23_1 = map;
+    this.b24_1 = map;
   }
   protoOf(PersistentHashMapValues).l = function () {
-    return this.z23_1.l();
+    return this.b24_1.l();
   };
   protoOf(PersistentHashMapValues).q3 = function (element) {
-    return this.z23_1.s2(element);
+    return this.b24_1.s2(element);
   };
   protoOf(PersistentHashMapValues).q = function (element) {
     if (!(element == null ? true : !(element == null)))
@@ -16630,20 +16630,20 @@
     return this.q3((element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
   protoOf(PersistentHashMapValues).n = function () {
-    return new PersistentHashMapValuesIterator(this.z23_1.o22_1);
+    return new PersistentHashMapValuesIterator(this.b24_1.q22_1);
   };
   function PersistentHashMapEntries(map) {
     AbstractSet.call(this);
-    this.a24_1 = map;
+    this.c24_1 = map;
   }
   protoOf(PersistentHashMapEntries).l = function () {
-    return this.a24_1.l();
+    return this.c24_1.l();
   };
-  protoOf(PersistentHashMapEntries).b24 = function (element) {
+  protoOf(PersistentHashMapEntries).d24 = function (element) {
     var tmp = !(element == null) ? element : THROW_CCE();
     if (!(!(tmp == null) ? isInterface(tmp, Entry) : false))
       return false;
-    var tmp0_safe_receiver = this.a24_1.u2(element.n2());
+    var tmp0_safe_receiver = this.c24_1.u2(element.n2());
     var tmp_0;
     if (tmp0_safe_receiver == null) {
       tmp_0 = null;
@@ -16654,15 +16654,15 @@
       tmp_0 = equals(tmp0_safe_receiver, element.o2());
     }
     var tmp1_elvis_lhs = tmp_0;
-    return tmp1_elvis_lhs == null ? element.o2() == null ? this.a24_1.r2(element.n2()) : false : tmp1_elvis_lhs;
+    return tmp1_elvis_lhs == null ? element.o2() == null ? this.c24_1.r2(element.n2()) : false : tmp1_elvis_lhs;
   };
   protoOf(PersistentHashMapEntries).q = function (element) {
     if (!(!(element == null) ? isInterface(element, Entry) : false))
       return false;
-    return this.b24((!(element == null) ? isInterface(element, Entry) : false) ? element : THROW_CCE());
+    return this.d24((!(element == null) ? isInterface(element, Entry) : false) ? element : THROW_CCE());
   };
   protoOf(PersistentHashMapEntries).n = function () {
-    return new PersistentHashMapEntriesIterator(this.a24_1.o22_1);
+    return new PersistentHashMapEntriesIterator(this.c24_1.q22_1);
   };
   function TrieNode_init_$Init$(dataMap, nodeMap, buffer, $this) {
     TrieNode.call($this, dataMap, nodeMap, buffer, null);
@@ -16672,8 +16672,8 @@
     return TrieNode_init_$Init$(dataMap, nodeMap, buffer, objectCreate(protoOf(TrieNode)));
   }
   function ModificationResult(node, sizeDelta) {
-    this.x22_1 = node;
-    this.y22_1 = sizeDelta;
+    this.z22_1 = node;
+    this.a23_1 = sizeDelta;
   }
   function asInsertResult($this) {
     return new ModificationResult($this, 1);
@@ -16682,48 +16682,48 @@
     return new ModificationResult($this, 0);
   }
   function hasNodeAt($this, positionMask) {
-    return !(($this.r22_1 & positionMask) === 0);
+    return !(($this.t22_1 & positionMask) === 0);
   }
   function keyAtIndex($this, keyIndex) {
-    var tmp = $this.t22_1[keyIndex];
+    var tmp = $this.v22_1[keyIndex];
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   }
   function valueAtKeyIndex($this, keyIndex) {
-    var tmp = $this.t22_1[keyIndex + 1 | 0];
+    var tmp = $this.v22_1[keyIndex + 1 | 0];
     return (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
   }
   function insertEntryAt($this, positionMask, key, value) {
-    var keyIndex = $this.c24(positionMask);
-    var newBuffer = insertEntryAtIndex($this.t22_1, keyIndex, key, value);
-    return TrieNode_init_$Create$($this.q22_1 | positionMask, $this.r22_1, newBuffer);
+    var keyIndex = $this.e24(positionMask);
+    var newBuffer = insertEntryAtIndex($this.v22_1, keyIndex, key, value);
+    return TrieNode_init_$Create$($this.s22_1 | positionMask, $this.t22_1, newBuffer);
   }
   function updateValueAtIndex($this, keyIndex, value) {
     // Inline function 'kotlin.collections.copyOf' call
     // Inline function 'kotlin.js.asDynamic' call
-    var newBuffer = $this.t22_1.slice();
+    var newBuffer = $this.v22_1.slice();
     newBuffer[keyIndex + 1 | 0] = value;
-    return TrieNode_init_$Create$($this.q22_1, $this.r22_1, newBuffer);
+    return TrieNode_init_$Create$($this.s22_1, $this.t22_1, newBuffer);
   }
   function updateNodeAtIndex($this, nodeIndex, positionMask, newNode) {
-    var newNodeBuffer = newNode.t22_1;
-    if (newNodeBuffer.length === 2 ? newNode.r22_1 === 0 : false) {
-      if ($this.t22_1.length === 1) {
-        newNode.q22_1 = $this.r22_1;
+    var newNodeBuffer = newNode.v22_1;
+    if (newNodeBuffer.length === 2 ? newNode.t22_1 === 0 : false) {
+      if ($this.v22_1.length === 1) {
+        newNode.s22_1 = $this.t22_1;
         return newNode;
       }
-      var keyIndex = $this.c24(positionMask);
-      var newBuffer = replaceNodeWithEntry($this.t22_1, nodeIndex, keyIndex, newNodeBuffer[0], newNodeBuffer[1]);
-      return TrieNode_init_$Create$($this.q22_1 ^ positionMask, $this.r22_1 ^ positionMask, newBuffer);
+      var keyIndex = $this.e24(positionMask);
+      var newBuffer = replaceNodeWithEntry($this.v22_1, nodeIndex, keyIndex, newNodeBuffer[0], newNodeBuffer[1]);
+      return TrieNode_init_$Create$($this.s22_1 ^ positionMask, $this.t22_1 ^ positionMask, newBuffer);
     }
-    var newBuffer_0 = copyOf_0($this.t22_1, $this.t22_1.length);
+    var newBuffer_0 = copyOf_0($this.v22_1, $this.v22_1.length);
     newBuffer_0[nodeIndex] = newNode;
-    return TrieNode_init_$Create$($this.q22_1, $this.r22_1, newBuffer_0);
+    return TrieNode_init_$Create$($this.s22_1, $this.t22_1, newBuffer_0);
   }
   function removeNodeAtIndex($this, nodeIndex, positionMask) {
-    if ($this.t22_1.length === 1)
+    if ($this.v22_1.length === 1)
       return null;
-    var newBuffer = removeNodeAtIndex_0($this.t22_1, nodeIndex);
-    return TrieNode_init_$Create$($this.q22_1, $this.r22_1 ^ positionMask, newBuffer);
+    var newBuffer = removeNodeAtIndex_0($this.v22_1, nodeIndex);
+    return TrieNode_init_$Create$($this.s22_1, $this.t22_1 ^ positionMask, newBuffer);
   }
   function bufferMoveEntryToNode($this, keyIndex, positionMask, newKeyHash, newKey, newValue, shift, owner) {
     var storedKey = keyAtIndex($this, keyIndex);
@@ -16732,12 +16732,12 @@
     var storedKeyHash = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
     var storedValue = valueAtKeyIndex($this, keyIndex);
     var newNode = makeNode($this, storedKeyHash, storedKey, storedValue, newKeyHash, newKey, newValue, shift + 5 | 0, owner);
-    var nodeIndex = $this.d24(positionMask) + 1 | 0;
-    return replaceEntryWithNode($this.t22_1, keyIndex, nodeIndex, newNode);
+    var nodeIndex = $this.f24(positionMask) + 1 | 0;
+    return replaceEntryWithNode($this.v22_1, keyIndex, nodeIndex, newNode);
   }
   function moveEntryToNode($this, keyIndex, positionMask, newKeyHash, newKey, newValue, shift) {
     var newBuffer = bufferMoveEntryToNode($this, keyIndex, positionMask, newKeyHash, newKey, newValue, shift, null);
-    return TrieNode_init_$Create$($this.q22_1 ^ positionMask, $this.r22_1 | positionMask, newBuffer);
+    return TrieNode_init_$Create$($this.s22_1 ^ positionMask, $this.t22_1 | positionMask, newBuffer);
   }
   function makeNode($this, keyHash1, key1, value1, keyHash2, key2, value2, shift, owner) {
     if (shift > 30) {
@@ -16774,19 +16774,19 @@
     return new TrieNode(0, tmp_0, tmp$ret$11, owner);
   }
   function removeEntryAtIndex($this, keyIndex, positionMask) {
-    if ($this.t22_1.length === 2)
+    if ($this.v22_1.length === 2)
       return null;
-    var newBuffer = removeEntryAtIndex_0($this.t22_1, keyIndex);
-    return TrieNode_init_$Create$($this.q22_1 ^ positionMask, $this.r22_1, newBuffer);
+    var newBuffer = removeEntryAtIndex_0($this.v22_1, keyIndex);
+    return TrieNode_init_$Create$($this.s22_1 ^ positionMask, $this.t22_1, newBuffer);
   }
   function collisionRemoveEntryAtIndex($this, i) {
-    if ($this.t22_1.length === 2)
+    if ($this.v22_1.length === 2)
       return null;
-    var newBuffer = removeEntryAtIndex_0($this.t22_1, i);
+    var newBuffer = removeEntryAtIndex_0($this.v22_1, i);
     return TrieNode_init_$Create$(0, 0, newBuffer);
   }
   function collisionContainsKey($this, key) {
-    var progression = step(until(0, $this.t22_1.length), 2);
+    var progression = step(until(0, $this.v22_1.length), 2);
     var inductionVariable = progression.bb_1;
     var last = progression.cb_1;
     var step_0 = progression.db_1;
@@ -16794,14 +16794,14 @@
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + step_0 | 0;
-        if (equals(key, $this.t22_1[i]))
+        if (equals(key, $this.v22_1[i]))
           return true;
       }
        while (!(i === last));
     return false;
   }
   function collisionGet($this, key) {
-    var progression = step(until(0, $this.t22_1.length), 2);
+    var progression = step(until(0, $this.v22_1.length), 2);
     var inductionVariable = progression.bb_1;
     var last = progression.cb_1;
     var step_0 = progression.db_1;
@@ -16817,7 +16817,7 @@
     return null;
   }
   function collisionPut($this, key, value) {
-    var progression = step(until(0, $this.t22_1.length), 2);
+    var progression = step(until(0, $this.v22_1.length), 2);
     var inductionVariable = progression.bb_1;
     var last = progression.cb_1;
     var step_0 = progression.db_1;
@@ -16831,17 +16831,17 @@
           }
           // Inline function 'kotlin.collections.copyOf' call
           // Inline function 'kotlin.js.asDynamic' call
-          var newBuffer = $this.t22_1.slice();
+          var newBuffer = $this.v22_1.slice();
           newBuffer[i + 1 | 0] = value;
           return asUpdateResult(TrieNode_init_$Create$(0, 0, newBuffer));
         }
       }
        while (!(i === last));
-    var newBuffer_0 = insertEntryAtIndex($this.t22_1, 0, key, value);
+    var newBuffer_0 = insertEntryAtIndex($this.v22_1, 0, key, value);
     return asInsertResult(TrieNode_init_$Create$(0, 0, newBuffer_0));
   }
   function collisionRemove($this, key) {
-    var progression = step(until(0, $this.t22_1.length), 2);
+    var progression = step(until(0, $this.v22_1.length), 2);
     var inductionVariable = progression.bb_1;
     var last = progression.cb_1;
     var step_0 = progression.db_1;
@@ -16864,7 +16864,7 @@
     var tmp = this;
     // Inline function 'kotlin.emptyArray' call
     var tmp$ret$0 = [];
-    tmp.k22_1 = TrieNode_init_$Create$(0, 0, tmp$ret$0);
+    tmp.m22_1 = TrieNode_init_$Create$(0, 0, tmp$ret$0);
   }
   var Companion_instance_9;
   function Companion_getInstance_9() {
@@ -16874,63 +16874,63 @@
   }
   function TrieNode(dataMap, nodeMap, buffer, ownedBy) {
     Companion_getInstance_9();
-    this.q22_1 = dataMap;
-    this.r22_1 = nodeMap;
-    this.s22_1 = ownedBy;
-    this.t22_1 = buffer;
+    this.s22_1 = dataMap;
+    this.t22_1 = nodeMap;
+    this.u22_1 = ownedBy;
+    this.v22_1 = buffer;
   }
-  protoOf(TrieNode).i23 = function () {
-    return countOneBits(this.q22_1);
+  protoOf(TrieNode).k23 = function () {
+    return countOneBits(this.s22_1);
+  };
+  protoOf(TrieNode).g24 = function (positionMask) {
+    return !((this.s22_1 & positionMask) === 0);
   };
   protoOf(TrieNode).e24 = function (positionMask) {
-    return !((this.q22_1 & positionMask) === 0);
+    return imul(2, countOneBits(this.s22_1 & (positionMask - 1 | 0)));
   };
-  protoOf(TrieNode).c24 = function (positionMask) {
-    return imul(2, countOneBits(this.q22_1 & (positionMask - 1 | 0)));
+  protoOf(TrieNode).f24 = function (positionMask) {
+    return (this.v22_1.length - 1 | 0) - countOneBits(this.t22_1 & (positionMask - 1 | 0)) | 0;
   };
-  protoOf(TrieNode).d24 = function (positionMask) {
-    return (this.t22_1.length - 1 | 0) - countOneBits(this.r22_1 & (positionMask - 1 | 0)) | 0;
-  };
-  protoOf(TrieNode).f24 = function (nodeIndex) {
-    var tmp = this.t22_1[nodeIndex];
+  protoOf(TrieNode).h24 = function (nodeIndex) {
+    var tmp = this.v22_1[nodeIndex];
     return tmp instanceof TrieNode ? tmp : THROW_CCE();
   };
-  protoOf(TrieNode).u22 = function (keyHash, key, shift) {
+  protoOf(TrieNode).w22 = function (keyHash, key, shift) {
     var keyPositionMask = 1 << indexSegment_0(keyHash, shift);
-    if (this.e24(keyPositionMask)) {
-      return equals(key, keyAtIndex(this, this.c24(keyPositionMask)));
+    if (this.g24(keyPositionMask)) {
+      return equals(key, keyAtIndex(this, this.e24(keyPositionMask)));
     }
     if (hasNodeAt(this, keyPositionMask)) {
-      var targetNode = this.f24(this.d24(keyPositionMask));
+      var targetNode = this.h24(this.f24(keyPositionMask));
       if (shift === 30) {
         return collisionContainsKey(targetNode, key);
       }
-      return targetNode.u22(keyHash, key, shift + 5 | 0);
+      return targetNode.w22(keyHash, key, shift + 5 | 0);
     }
     return false;
   };
-  protoOf(TrieNode).v22 = function (keyHash, key, shift) {
+  protoOf(TrieNode).x22 = function (keyHash, key, shift) {
     var keyPositionMask = 1 << indexSegment_0(keyHash, shift);
-    if (this.e24(keyPositionMask)) {
-      var keyIndex = this.c24(keyPositionMask);
+    if (this.g24(keyPositionMask)) {
+      var keyIndex = this.e24(keyPositionMask);
       if (equals(key, keyAtIndex(this, keyIndex))) {
         return valueAtKeyIndex(this, keyIndex);
       }
       return null;
     }
     if (hasNodeAt(this, keyPositionMask)) {
-      var targetNode = this.f24(this.d24(keyPositionMask));
+      var targetNode = this.h24(this.f24(keyPositionMask));
       if (shift === 30) {
         return collisionGet(targetNode, key);
       }
-      return targetNode.v22(keyHash, key, shift + 5 | 0);
+      return targetNode.x22(keyHash, key, shift + 5 | 0);
     }
     return null;
   };
-  protoOf(TrieNode).w22 = function (keyHash, key, value, shift) {
+  protoOf(TrieNode).y22 = function (keyHash, key, value, shift) {
     var keyPositionMask = 1 << indexSegment_0(keyHash, shift);
-    if (this.e24(keyPositionMask)) {
-      var keyIndex = this.c24(keyPositionMask);
+    if (this.g24(keyPositionMask)) {
+      var keyIndex = this.e24(keyPositionMask);
       if (equals(key, keyAtIndex(this, keyIndex))) {
         if (valueAtKeyIndex(this, keyIndex) === value)
           return null;
@@ -16939,8 +16939,8 @@
       return asInsertResult(moveEntryToNode(this, keyIndex, keyPositionMask, keyHash, key, value, shift));
     }
     if (hasNodeAt(this, keyPositionMask)) {
-      var nodeIndex = this.d24(keyPositionMask);
-      var targetNode = this.f24(nodeIndex);
+      var nodeIndex = this.f24(keyPositionMask);
+      var targetNode = this.h24(nodeIndex);
       var tmp;
       if (shift === 30) {
         var tmp0_elvis_lhs = collisionPut(targetNode, key, value);
@@ -16952,7 +16952,7 @@
         }
         tmp = tmp_0;
       } else {
-        var tmp1_elvis_lhs = targetNode.w22(keyHash, key, value, shift + 5 | 0);
+        var tmp1_elvis_lhs = targetNode.y22(keyHash, key, value, shift + 5 | 0);
         var tmp_1;
         if (tmp1_elvis_lhs == null) {
           return null;
@@ -16968,29 +16968,29 @@
       // Inline function 'androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableMap.ModificationResult.replaceNode.<anonymous>' call
       var tmp_2 = putResult;
       // Inline function 'androidx.compose.runtime.external.kotlinx.collections.immutable.implementations.immutableMap.TrieNode.put.<anonymous>' call
-      var node = putResult.x22_1;
-      tmp_2.x22_1 = updateNodeAtIndex(this, nodeIndex, keyPositionMask, node);
+      var node = putResult.z22_1;
+      tmp_2.z22_1 = updateNodeAtIndex(this, nodeIndex, keyPositionMask, node);
       return putResult;
     }
     return asInsertResult(insertEntryAt(this, keyPositionMask, key, value));
   };
-  protoOf(TrieNode).z22 = function (keyHash, key, shift) {
+  protoOf(TrieNode).b23 = function (keyHash, key, shift) {
     var keyPositionMask = 1 << indexSegment_0(keyHash, shift);
-    if (this.e24(keyPositionMask)) {
-      var keyIndex = this.c24(keyPositionMask);
+    if (this.g24(keyPositionMask)) {
+      var keyIndex = this.e24(keyPositionMask);
       if (equals(key, keyAtIndex(this, keyIndex))) {
         return removeEntryAtIndex(this, keyIndex, keyPositionMask);
       }
       return this;
     }
     if (hasNodeAt(this, keyPositionMask)) {
-      var nodeIndex = this.d24(keyPositionMask);
-      var targetNode = this.f24(nodeIndex);
+      var nodeIndex = this.f24(keyPositionMask);
+      var targetNode = this.h24(nodeIndex);
       var tmp;
       if (shift === 30) {
         tmp = collisionRemove(targetNode, key);
       } else {
-        tmp = targetNode.z22(keyHash, key, shift + 5 | 0);
+        tmp = targetNode.b23(keyHash, key, shift + 5 | 0);
       }
       var newNode = tmp;
       return replaceNode(this, targetNode, newNode, nodeIndex, keyPositionMask);
@@ -17075,10 +17075,10 @@
   }
   function Companion_9() {
     Companion_instance_10 = this;
-    this.r20_1 = new PersistentOrderedSet(EndOfChain_instance, EndOfChain_instance, Companion_getInstance_8().l22());
+    this.t20_1 = new PersistentOrderedSet(EndOfChain_instance, EndOfChain_instance, Companion_getInstance_8().n22());
   }
-  protoOf(Companion_9).s20 = function () {
-    return this.r20_1;
+  protoOf(Companion_9).u20 = function () {
+    return this.t20_1;
   };
   var Companion_instance_10;
   function Companion_getInstance_10() {
@@ -17089,32 +17089,32 @@
   function PersistentOrderedSet(firstElement, lastElement, hashMap) {
     Companion_getInstance_10();
     AbstractSet.call(this);
-    this.g24_1 = firstElement;
-    this.h24_1 = lastElement;
-    this.i24_1 = hashMap;
+    this.i24_1 = firstElement;
+    this.j24_1 = lastElement;
+    this.k24_1 = hashMap;
   }
   protoOf(PersistentOrderedSet).l = function () {
-    return this.i24_1.l();
+    return this.k24_1.l();
   };
   protoOf(PersistentOrderedSet).q = function (element) {
-    return this.i24_1.r2(element);
+    return this.k24_1.r2(element);
   };
   protoOf(PersistentOrderedSet).y = function (element) {
-    if (this.i24_1.r2(element)) {
+    if (this.k24_1.r2(element)) {
       return this;
     }
     if (this.s()) {
-      var newMap = this.i24_1.l2(element, Links_init_$Create$());
+      var newMap = this.k24_1.l2(element, Links_init_$Create$());
       return new PersistentOrderedSet(element, element, newMap);
     }
-    var tmp = this.h24_1;
+    var tmp = this.j24_1;
     var lastElement = (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
-    var lastLinks = ensureNotNull(this.i24_1.u2(lastElement));
-    var newMap_0 = this.i24_1.l2(lastElement, lastLinks.l24(element)).l2(element, Links_init_$Create$_0(lastElement));
-    return new PersistentOrderedSet(this.g24_1, element, newMap_0);
+    var lastLinks = ensureNotNull(this.k24_1.u2(lastElement));
+    var newMap_0 = this.k24_1.l2(lastElement, lastLinks.n24(element)).l2(element, Links_init_$Create$_0(lastElement));
+    return new PersistentOrderedSet(this.i24_1, element, newMap_0);
   };
   protoOf(PersistentOrderedSet).z = function (element) {
-    var tmp0_elvis_lhs = this.i24_1.u2(element);
+    var tmp0_elvis_lhs = this.k24_1.u2(element);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return this;
@@ -17122,33 +17122,33 @@
       tmp = tmp0_elvis_lhs;
     }
     var links = tmp;
-    var newMap = this.i24_1.m2(element);
-    if (links.m24()) {
+    var newMap = this.k24_1.m2(element);
+    if (links.o24()) {
       // Inline function 'kotlin.collections.get' call
       var this_0 = newMap;
-      var key = links.j24_1;
+      var key = links.l24_1;
       var tmp$ret$0 = (isInterface(this_0, Map) ? this_0 : THROW_CCE()).u2(key);
       var previousLinks = ensureNotNull(tmp$ret$0);
       var tmp_0 = newMap;
-      var tmp_1 = links.j24_1;
-      newMap = tmp_0.l2((tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE(), previousLinks.l24(links.k24_1));
+      var tmp_1 = links.l24_1;
+      newMap = tmp_0.l2((tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE(), previousLinks.n24(links.m24_1));
     }
-    if (links.o24()) {
+    if (links.q24()) {
       // Inline function 'kotlin.collections.get' call
       var this_1 = newMap;
-      var key_0 = links.k24_1;
+      var key_0 = links.m24_1;
       var tmp$ret$1 = (isInterface(this_1, Map) ? this_1 : THROW_CCE()).u2(key_0);
       var nextLinks = ensureNotNull(tmp$ret$1);
       var tmp_2 = newMap;
-      var tmp_3 = links.k24_1;
-      newMap = tmp_2.l2((tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE(), nextLinks.n24(links.j24_1));
+      var tmp_3 = links.m24_1;
+      newMap = tmp_2.l2((tmp_3 == null ? true : !(tmp_3 == null)) ? tmp_3 : THROW_CCE(), nextLinks.p24(links.l24_1));
     }
-    var newFirstElement = !links.m24() ? links.k24_1 : this.g24_1;
-    var newLastElement = !links.o24() ? links.j24_1 : this.h24_1;
+    var newFirstElement = !links.o24() ? links.m24_1 : this.i24_1;
+    var newLastElement = !links.q24() ? links.l24_1 : this.j24_1;
     return new PersistentOrderedSet(newFirstElement, newLastElement, newMap);
   };
   protoOf(PersistentOrderedSet).n = function () {
-    return new PersistentOrderedSetIterator(this.g24_1, this.i24_1);
+    return new PersistentOrderedSetIterator(this.i24_1, this.k24_1);
   };
   function Links_init_$Init$($this) {
     Links.call($this, EndOfChain_instance, EndOfChain_instance);
@@ -17165,48 +17165,48 @@
     return Links_init_$Init$_0(previous, objectCreate(protoOf(Links)));
   }
   function Links(previous, next) {
-    this.j24_1 = previous;
-    this.k24_1 = next;
+    this.l24_1 = previous;
+    this.m24_1 = next;
   }
-  protoOf(Links).l24 = function (newNext) {
-    return new Links(this.j24_1, newNext);
+  protoOf(Links).n24 = function (newNext) {
+    return new Links(this.l24_1, newNext);
   };
-  protoOf(Links).n24 = function (newPrevious) {
-    return new Links(newPrevious, this.k24_1);
+  protoOf(Links).p24 = function (newPrevious) {
+    return new Links(newPrevious, this.m24_1);
+  };
+  protoOf(Links).q24 = function () {
+    return !(this.m24_1 === EndOfChain_instance);
   };
   protoOf(Links).o24 = function () {
-    return !(this.k24_1 === EndOfChain_instance);
-  };
-  protoOf(Links).m24 = function () {
-    return !(this.j24_1 === EndOfChain_instance);
+    return !(this.l24_1 === EndOfChain_instance);
   };
   function checkHasNext_0($this) {
     if (!$this.b1())
       throw NoSuchElementException_init_$Create$_0();
   }
   function PersistentOrderedSetIterator(nextElement, map) {
-    this.p24_1 = nextElement;
-    this.q24_1 = map;
-    this.r24_1 = 0;
+    this.r24_1 = nextElement;
+    this.s24_1 = map;
+    this.t24_1 = 0;
   }
   protoOf(PersistentOrderedSetIterator).b1 = function () {
-    return this.r24_1 < this.q24_1.l();
+    return this.t24_1 < this.s24_1.l();
   };
   protoOf(PersistentOrderedSetIterator).d1 = function () {
     checkHasNext_0(this);
-    var tmp = this.p24_1;
+    var tmp = this.r24_1;
     var result = (tmp == null ? true : !(tmp == null)) ? tmp : THROW_CCE();
-    this.r24_1 = this.r24_1 + 1 | 0;
+    this.t24_1 = this.t24_1 + 1 | 0;
     var tmp_0 = this;
     // Inline function 'kotlin.collections.getOrElse' call
-    var tmp0_elvis_lhs = this.q24_1.u2(result);
+    var tmp0_elvis_lhs = this.s24_1.u2(result);
     var tmp_1;
     if (tmp0_elvis_lhs == null) {
       throw ConcurrentModificationException_init_$Create$_0('Hash code of an element (' + result + ') has changed after it was added to the persistent set.');
     } else {
       tmp_1 = tmp0_elvis_lhs;
     }
-    tmp_0.p24_1 = tmp_1.k24_1;
+    tmp_0.r24_1 = tmp_1.m24_1;
     return result;
   };
   function EndOfChain() {
@@ -17251,7 +17251,7 @@
         tmp_1 = false;
       }
       if (tmp_1) {
-        tmp_0 = (!_this__u8e3s4.u1i() ? true : equals(_this__u8e3s4, other)) ? true : equals(_this__u8e3s4.i13_1, other.i13_1);
+        tmp_0 = (!_this__u8e3s4.w1i() ? true : equals(_this__u8e3s4, other)) ? true : equals(_this__u8e3s4.k13_1, other.k13_1);
       } else {
         tmp_0 = false;
       }
@@ -17272,35 +17272,35 @@
   function composableLambda(composer, key, tracked, block) {
     // Inline function 'androidx.compose.runtime.rol' call
     var tmp$ret$0 = rotateLeft(key, 1);
-    composer.h1e(tmp$ret$0);
-    var slot = composer.l1f();
+    composer.j1e(tmp$ret$0);
+    var slot = composer.n1f();
     var tmp;
-    if (slot === Companion_getInstance_0().z18_1) {
+    if (slot === Companion_getInstance_0().b19_1) {
       var value = new ComposableLambdaImpl(key, tracked, block);
-      composer.r1f(value);
+      composer.t1f(value);
       tmp = value;
     } else {
       if (!(slot instanceof ComposableLambdaImpl))
         THROW_CCE();
-      slot.x24(block);
+      slot.z24(block);
       tmp = slot;
     }
     var result = tmp;
-    composer.i1e();
+    composer.k1e();
     return result;
   }
   function IntRef(element) {
     element = element === VOID ? 0 : element;
-    this.s1x_1 = element;
+    this.u1x_1 = element;
   }
   protoOf(IntRef).toString = function () {
-    return 'IntRef(element = ' + this.s1x_1 + ')@' + toString_1(hashCode(this), 16);
+    return 'IntRef(element = ' + this.u1x_1 + ')@' + toString_1(hashCode(this), 16);
   };
   function Companion_10() {
     Companion_instance_11 = this;
     var tmp = this;
-    var tmp_0 = Companion_getInstance_9().k22_1;
-    tmp.y24_1 = new PersistentCompositionLocalHashMap(tmp_0 instanceof TrieNode ? tmp_0 : THROW_CCE(), 0);
+    var tmp_0 = Companion_getInstance_9().m22_1;
+    tmp.a25_1 = new PersistentCompositionLocalHashMap(tmp_0 instanceof TrieNode ? tmp_0 : THROW_CCE(), 0);
   }
   var Companion_instance_11;
   function Companion_getInstance_11() {
@@ -17315,8 +17315,8 @@
   protoOf(PersistentCompositionLocalHashMap).k2 = function () {
     return protoOf(PersistentHashMap).k2.call(this);
   };
-  protoOf(PersistentCompositionLocalHashMap).s1f = function (key, value) {
-    var tmp0_elvis_lhs = this.o22_1.w22(hashCode(key), key, value, 0);
+  protoOf(PersistentCompositionLocalHashMap).u1f = function (key, value) {
+    var tmp0_elvis_lhs = this.q22_1.y22(hashCode(key), key, value, 0);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return this;
@@ -17324,10 +17324,10 @@
       tmp = tmp0_elvis_lhs;
     }
     var newNodeResult = tmp;
-    return new PersistentCompositionLocalHashMap(newNodeResult.x22_1, this.l() + newNodeResult.y22_1 | 0);
+    return new PersistentCompositionLocalHashMap(newNodeResult.z22_1, this.l() + newNodeResult.a23_1 | 0);
   };
   function persistentCompositionLocalHashMapOf() {
-    return Companion_getInstance_11().y24_1;
+    return Companion_getInstance_11().a25_1;
   }
   function get_emptyThreadMap() {
     _init_properties_ThreadMap_jvm_kt__b3bhkj();
@@ -17335,16 +17335,16 @@
   }
   var emptyThreadMap;
   function find_2($this, key) {
-    var high = $this.v1t_1 - 1 | 0;
+    var high = $this.x1t_1 - 1 | 0;
     var tmp0_subject = high;
     if (tmp0_subject === -1)
       return -1;
     else if (tmp0_subject === 0)
-      return $this.w1t_1[0].equals(key) ? 0 : $this.w1t_1[0].xa(key) > 0 ? -2 : -1;
+      return $this.y1t_1[0].equals(key) ? 0 : $this.y1t_1[0].xa(key) > 0 ? -2 : -1;
     var low = 0;
     while (low <= high) {
       var mid = (low + high | 0) >>> 1 | 0;
-      var midVal = $this.w1t_1[mid];
+      var midVal = $this.y1t_1[mid];
       var comparison = midVal.gc(key);
       if (comparison.xa(new Long(0, 0)) < 0)
         low = mid + 1 | 0;
@@ -17356,26 +17356,26 @@
     return -(low + 1 | 0) | 0;
   }
   function ThreadMap(size, keys, values) {
-    this.v1t_1 = size;
-    this.w1t_1 = keys;
-    this.x1t_1 = values;
+    this.x1t_1 = size;
+    this.y1t_1 = keys;
+    this.z1t_1 = values;
   }
-  protoOf(ThreadMap).y1t = function (key) {
+  protoOf(ThreadMap).a1u = function (key) {
     var index = find_2(this, key);
-    return index >= 0 ? this.x1t_1[index] : null;
+    return index >= 0 ? this.z1t_1[index] : null;
   };
-  protoOf(ThreadMap).z1t = function (key, value) {
+  protoOf(ThreadMap).b1u = function (key, value) {
     var index = find_2(this, key);
     if (index < 0)
       return false;
-    this.x1t_1[index] = value;
+    this.z1t_1[index] = value;
     return true;
   };
-  protoOf(ThreadMap).a1u = function (key, value) {
-    var size = this.v1t_1;
+  protoOf(ThreadMap).c1u = function (key, value) {
+    var size = this.x1t_1;
     // Inline function 'kotlin.collections.count' call
     var count = 0;
-    var indexedObject = this.x1t_1;
+    var indexedObject = this.z1t_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     while (inductionVariable < last) {
@@ -17394,8 +17394,8 @@
       var dest = 0;
       var source = 0;
       $l$loop: while (dest < newSize ? source < size : false) {
-        var oldKey = this.w1t_1[source];
-        var oldValue = this.x1t_1[source];
+        var oldKey = this.y1t_1[source];
+        var oldValue = this.z1t_1[source];
         if (oldKey.xa(key) > 0) {
           newKeys[dest] = key;
           newValues[dest] = value;
@@ -17414,8 +17414,8 @@
         newValues[newSize - 1 | 0] = value;
       } else {
         while (dest < newSize) {
-          var oldKey_0 = this.w1t_1[source];
-          var oldValue_0 = this.x1t_1[source];
+          var oldKey_0 = this.y1t_1[source];
+          var oldValue_0 = this.z1t_1[source];
           if (!(oldValue_0 == null)) {
             newKeys[dest] = oldKey_0;
             newValues[dest] = oldValue_0;
@@ -17595,16 +17595,16 @@
   function StateObject() {
   }
   function sam$androidx_compose_runtime_snapshots_ObserverHandle$0(function_0) {
-    this.d25_1 = function_0;
+    this.f25_1 = function_0;
   }
   protoOf(sam$androidx_compose_runtime_snapshots_ObserverHandle$0).fn = function () {
-    return this.d25_1();
+    return this.f25_1();
   };
   function sam$androidx_compose_runtime_snapshots_ObserverHandle$0_0(function_0) {
-    this.e25_1 = function_0;
+    this.g25_1 = function_0;
   }
   protoOf(sam$androidx_compose_runtime_snapshots_ObserverHandle$0_0).fn = function () {
-    return this.e25_1();
+    return this.g25_1();
   };
   function Snapshot$Companion$registerApplyObserver$lambda($observer) {
     return function () {
@@ -17629,13 +17629,13 @@
   }
   function Companion_11() {
   }
-  protoOf(Companion_11).x11 = function () {
+  protoOf(Companion_11).z11 = function () {
     return currentSnapshot();
   };
-  protoOf(Companion_11).x1o = function (readObserver, writeObserver) {
+  protoOf(Companion_11).z1o = function (readObserver, writeObserver) {
     var tmp = currentSnapshot();
     var tmp0_safe_receiver = tmp instanceof MutableSnapshot ? tmp : null;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f25(readObserver, writeObserver);
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.h25(readObserver, writeObserver);
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       var message = 'Cannot create a mutable snapshot of an read-only snapshot';
@@ -17645,7 +17645,7 @@
     }
     return tmp_0;
   };
-  protoOf(Companion_11).x1q = function (observer) {
+  protoOf(Companion_11).z1q = function (observer) {
     advanceGlobalSnapshot(get_emptyLambda());
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
@@ -17655,7 +17655,7 @@
     var tmp = Snapshot$Companion$registerApplyObserver$lambda(observer);
     return new sam$androidx_compose_runtime_snapshots_ObserverHandle$0(tmp);
   };
-  protoOf(Companion_11).g25 = function (observer) {
+  protoOf(Companion_11).i25 = function (observer) {
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
@@ -17665,17 +17665,17 @@
     var tmp = Snapshot$Companion$registerGlobalWriteObserver$lambda(observer);
     return new sam$androidx_compose_runtime_snapshots_ObserverHandle$0_0(tmp);
   };
-  protoOf(Companion_11).x1n = function () {
-    return currentSnapshot().x1n();
+  protoOf(Companion_11).z1n = function () {
+    return currentSnapshot().z1n();
   };
-  protoOf(Companion_11).v1n = function () {
+  protoOf(Companion_11).x1n = function () {
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
     // Inline function 'androidx.compose.runtime.snapshots.Companion.sendApplyNotifications.<anonymous>' call
-    var tmp0_safe_receiver = get_currentGlobalSnapshot().lq().h25();
-    var changes = (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.v1f()) === true;
+    var tmp0_safe_receiver = get_currentGlobalSnapshot().lq().j25();
+    var changes = (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.x1f()) === true;
     if (changes) {
       advanceGlobalSnapshot_0();
     }
@@ -17685,88 +17685,88 @@
     return Companion_instance_12;
   }
   function Snapshot(id, invalid) {
-    this.l1c_1 = invalid;
-    this.m1c_1 = id;
-    this.n1c_1 = false;
-    this.o1c_1 = !(id === 0) ? trackPinning(id, this.i25()) : -1;
+    this.n1c_1 = invalid;
+    this.o1c_1 = id;
+    this.p1c_1 = false;
+    this.q1c_1 = !(id === 0) ? trackPinning(id, this.k25()) : -1;
   }
-  protoOf(Snapshot).j25 = function (_set____db54di) {
-    this.l1c_1 = _set____db54di;
+  protoOf(Snapshot).l25 = function (_set____db54di) {
+    this.n1c_1 = _set____db54di;
   };
-  protoOf(Snapshot).i25 = function () {
-    return this.l1c_1;
+  protoOf(Snapshot).k25 = function () {
+    return this.n1c_1;
   };
-  protoOf(Snapshot).k25 = function (_set____db54di) {
-    this.m1c_1 = _set____db54di;
+  protoOf(Snapshot).m25 = function (_set____db54di) {
+    this.o1c_1 = _set____db54di;
   };
-  protoOf(Snapshot).p1c = function () {
-    return this.m1c_1;
+  protoOf(Snapshot).r1c = function () {
+    return this.o1c_1;
   };
-  protoOf(Snapshot).l25 = function (value) {
+  protoOf(Snapshot).n25 = function (value) {
     // Inline function 'kotlin.error' call
     var message = 'Updating write count is not supported for this snapshot';
     throw IllegalStateException_init_$Create$(toString(message));
   };
-  protoOf(Snapshot).m25 = function () {
+  protoOf(Snapshot).o25 = function () {
     return 0;
   };
   protoOf(Snapshot).fn = function () {
-    this.n1c_1 = true;
+    this.p1c_1 = true;
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
-    this.o25();
+    this.q25();
   };
-  protoOf(Snapshot).y1o = function () {
+  protoOf(Snapshot).a1p = function () {
     var previous = get_threadSnapshot().lq();
-    get_threadSnapshot().d1l(this);
+    get_threadSnapshot().f1l(this);
     return previous;
   };
-  protoOf(Snapshot).z1o = function (snapshot) {
-    get_threadSnapshot().d1l(snapshot);
+  protoOf(Snapshot).b1p = function (snapshot) {
+    get_threadSnapshot().f1l(snapshot);
   };
-  protoOf(Snapshot).s25 = function () {
+  protoOf(Snapshot).u25 = function () {
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
-    this.t25();
-    this.u25();
+    this.v25();
+    this.w25();
   };
-  protoOf(Snapshot).t25 = function () {
-    set_openSnapshots(get_openSnapshots().z25(this.p1c()));
+  protoOf(Snapshot).v25 = function () {
+    set_openSnapshots(get_openSnapshots().b26(this.r1c()));
   };
-  protoOf(Snapshot).u25 = function () {
-    this.o25();
+  protoOf(Snapshot).w25 = function () {
+    this.q25();
   };
-  protoOf(Snapshot).a26 = function () {
+  protoOf(Snapshot).c26 = function () {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!this.n1c_1) {
+    if (!!this.p1c_1) {
       // Inline function 'androidx.compose.runtime.snapshots.Snapshot.validateNotDisposed.<anonymous>' call
       var message = 'Cannot use a disposed snapshot';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
   };
-  protoOf(Snapshot).o25 = function () {
-    if (this.o1c_1 >= 0) {
-      releasePinningLocked(this.o1c_1);
-      this.o1c_1 = -1;
+  protoOf(Snapshot).q25 = function () {
+    if (this.q1c_1 >= 0) {
+      releasePinningLocked(this.q1c_1);
+      this.q1c_1 = -1;
     }
   };
-  protoOf(Snapshot).b26 = function () {
+  protoOf(Snapshot).d26 = function () {
     // Inline function 'kotlin.also' call
-    var this_0 = this.o1c_1;
+    var this_0 = this.q1c_1;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.snapshots.Snapshot.takeoverPinnedSnapshot.<anonymous>' call
-    this.o1c_1 = -1;
+    this.q1c_1 = -1;
     return this_0;
   };
   function validateNotApplied($this) {
     // Inline function 'kotlin.check' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!!$this.m1p_1) {
+    if (!!$this.o1p_1) {
       // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.validateNotApplied.<anonymous>' call
       var message = 'Unsupported operation on a snapshot that has been applied';
       throw IllegalStateException_init_$Create$(toString(message));
@@ -17775,11 +17775,11 @@
   function validateNotAppliedOrPinned($this) {
     // Inline function 'kotlin.check' call
     var tmp;
-    if (!$this.m1p_1) {
+    if (!$this.o1p_1) {
       tmp = true;
     } else {
       // Inline function 'androidx.compose.runtime.snapshots.Snapshot.isPinned' call
-      tmp = $this.o1c_1 >= 0;
+      tmp = $this.q1c_1 >= 0;
     }
     // Inline function 'kotlin.contracts.contract' call
     if (!tmp) {
@@ -17789,48 +17789,48 @@
     }
   }
   function abandon($this) {
-    var modified = $this.h25();
+    var modified = $this.j25();
     if (!(modified == null)) {
       validateNotApplied($this);
-      $this.c26(null);
-      var id = $this.p1c();
+      $this.e26(null);
+      var id = $this.r1c();
       // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
       // Inline function 'kotlin.contracts.contract' call
-      var values = modified.i1c_1;
+      var values = modified.k1c_1;
       var inductionVariable = 0;
-      var last = modified.h1c_1;
+      var last = modified.j1c_1;
       if (inductionVariable < last)
         do {
           var i = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.abandon.<anonymous>' call
           var tmp = values[i];
-          var current = (!(tmp == null) ? tmp : THROW_CCE()).s1t();
+          var current = (!(tmp == null) ? tmp : THROW_CCE()).u1t();
           while (!(current == null)) {
-            if (current.d26_1 === id ? true : contains($this.j1p_1, current.d26_1)) {
-              current.d26_1 = 0;
+            if (current.f26_1 === id ? true : contains($this.l1p_1, current.f26_1)) {
+              current.f26_1 = 0;
             }
-            current = current.e26_1;
+            current = current.g26_1;
           }
         }
          while (inductionVariable < last);
     }
-    $this.s25();
+    $this.u25();
   }
   function releasePreviouslyPinnedSnapshotsLocked($this) {
     var inductionVariable = 0;
-    var last = $this.k1p_1.length - 1 | 0;
+    var last = $this.m1p_1.length - 1 | 0;
     if (inductionVariable <= last)
       do {
         var index = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        releasePinningLocked($this.k1p_1[index]);
+        releasePinningLocked($this.m1p_1[index]);
       }
        while (inductionVariable <= last);
   }
   function Companion_12() {
     Companion_instance_13 = this;
-    this.f26_1 = new Int32Array(0);
+    this.h26_1 = new Int32Array(0);
   }
   var Companion_instance_13;
   function Companion_getInstance_13() {
@@ -17841,27 +17841,27 @@
   function MutableSnapshot(id, invalid, readObserver, writeObserver) {
     Companion_getInstance_13();
     Snapshot.call(this, id, invalid);
-    this.e1p_1 = readObserver;
-    this.f1p_1 = writeObserver;
-    this.g1p_1 = 0;
-    this.h1p_1 = null;
-    this.i1p_1 = null;
-    this.j1p_1 = Companion_getInstance_14().g26_1;
-    this.k1p_1 = Companion_getInstance_13().f26_1;
-    this.l1p_1 = 1;
-    this.m1p_1 = false;
+    this.g1p_1 = readObserver;
+    this.h1p_1 = writeObserver;
+    this.i1p_1 = 0;
+    this.j1p_1 = null;
+    this.k1p_1 = null;
+    this.l1p_1 = Companion_getInstance_14().i26_1;
+    this.m1p_1 = Companion_getInstance_13().h26_1;
+    this.n1p_1 = 1;
+    this.o1p_1 = false;
   }
-  protoOf(MutableSnapshot).p25 = function () {
-    return this.e1p_1;
+  protoOf(MutableSnapshot).r25 = function () {
+    return this.g1p_1;
   };
-  protoOf(MutableSnapshot).q25 = function () {
-    return this.f1p_1;
+  protoOf(MutableSnapshot).s25 = function () {
+    return this.h1p_1;
   };
-  protoOf(MutableSnapshot).f25 = function (readObserver, writeObserver) {
-    this.a26();
+  protoOf(MutableSnapshot).h25 = function (readObserver, writeObserver) {
+    this.c26();
     validateNotAppliedOrPinned(this);
     // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.advance' call
-    this.h26(this.p1c());
+    this.j26(this.r1c());
     // Inline function 'kotlin.also' call
     // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.takeNestedMutableSnapshot.<anonymous>' call
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
@@ -17872,29 +17872,29 @@
     var tmp0 = get_nextSnapshotId();
     set_nextSnapshotId(tmp0 + 1 | 0);
     var newId = tmp0;
-    set_openSnapshots(get_openSnapshots().i26(newId));
-    var currentInvalid = this.i25();
-    this.j25(currentInvalid.i26(newId));
-    var this_0 = new NestedMutableSnapshot(newId, addRange(currentInvalid, this.p1c() + 1 | 0, newId), mergedReadObserver(readObserver, this.p25()), mergedWriteObserver(writeObserver, this.q25()), this);
+    set_openSnapshots(get_openSnapshots().k26(newId));
+    var currentInvalid = this.k25();
+    this.l25(currentInvalid.k26(newId));
+    var this_0 = new NestedMutableSnapshot(newId, addRange(currentInvalid, this.r1c() + 1 | 0, newId), mergedReadObserver(readObserver, this.r25()), mergedWriteObserver(writeObserver, this.s25()), this);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.advance.<anonymous>' call
-    if (!this.m1p_1 ? !this.n1c_1 : false) {
-      var previousId = this.p1c();
+    if (!this.o1p_1 ? !this.p1c_1 : false) {
+      var previousId = this.r1c();
       // Inline function 'androidx.compose.runtime.snapshots.sync' call
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       var tmp0_0 = get_nextSnapshotId();
       set_nextSnapshotId(tmp0_0 + 1 | 0);
-      this.k25(tmp0_0);
-      set_openSnapshots(get_openSnapshots().i26(this.p1c()));
-      this.j25(addRange(this.i25(), previousId + 1 | 0, this.p1c()));
+      this.m25(tmp0_0);
+      set_openSnapshots(get_openSnapshots().k26(this.r1c()));
+      this.l25(addRange(this.k25(), previousId + 1 | 0, this.r1c()));
     }
     return this_0;
   };
-  protoOf(MutableSnapshot).n1p = function () {
-    var modified = this.h25();
-    var optimisticMerges_0 = !(modified == null) ? optimisticMerges(get_currentGlobalSnapshot().lq(), this, get_openSnapshots().z25(get_currentGlobalSnapshot().lq().p1c())) : null;
+  protoOf(MutableSnapshot).p1p = function () {
+    var modified = this.j25();
+    var optimisticMerges_0 = !(modified == null) ? optimisticMerges(get_currentGlobalSnapshot().lq(), this, get_openSnapshots().b26(get_currentGlobalSnapshot().lq().r1c())) : null;
     var observers = emptyList();
     var globalModified = null;
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
@@ -17903,11 +17903,11 @@
     get_lock();
     validateOpen(this);
     var tmp;
-    if (modified == null ? true : modified.h1c_1 === 0) {
-      this.t25();
+    if (modified == null ? true : modified.j1c_1 === 0) {
+      this.v25();
       var previousGlobalSnapshot = get_currentGlobalSnapshot().lq();
       takeNewGlobalSnapshot(previousGlobalSnapshot, get_emptyLambda());
-      var previousModified = previousGlobalSnapshot.h25();
+      var previousModified = previousGlobalSnapshot.j25();
       var tmp_0;
       // Inline function 'kotlin.collections.isNullOrEmpty' call
       // Inline function 'kotlin.contracts.contract' call
@@ -17919,19 +17919,19 @@
       tmp = tmp_0;
     } else {
       var previousGlobalSnapshot_0 = get_currentGlobalSnapshot().lq();
-      var result = this.j26(get_nextSnapshotId(), optimisticMerges_0, get_openSnapshots().z25(previousGlobalSnapshot_0.p1c()));
+      var result = this.l26(get_nextSnapshotId(), optimisticMerges_0, get_openSnapshots().b26(previousGlobalSnapshot_0.r1c()));
       if (!equals(result, Success_getInstance()))
         return result;
-      this.t25();
+      this.v25();
       takeNewGlobalSnapshot(previousGlobalSnapshot_0, get_emptyLambda());
-      var previousModified_0 = previousGlobalSnapshot_0.h25();
-      this.c26(null);
-      previousGlobalSnapshot_0.c26(null);
+      var previousModified_0 = previousGlobalSnapshot_0.j25();
+      this.e26(null);
+      previousGlobalSnapshot_0.e26(null);
       observers = get_applyObservers();
       globalModified = previousModified_0;
       tmp = Unit_instance;
     }
-    this.m1p_1 = true;
+    this.o1p_1 = true;
     // Inline function 'kotlin.collections.isNullOrEmpty' call
     var this_0 = globalModified;
     // Inline function 'kotlin.contracts.contract' call
@@ -17974,7 +17974,7 @@
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
-    this.u25();
+    this.w25();
     checkAndOverwriteUnusedRecordsLocked();
     var tmp0_safe_receiver = globalModified;
     if (tmp0_safe_receiver == null)
@@ -17982,9 +17982,9 @@
     else {
       // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
       // Inline function 'kotlin.contracts.contract' call
-      var values = tmp0_safe_receiver.i1c_1;
+      var values = tmp0_safe_receiver.k1c_1;
       var inductionVariable_1 = 0;
-      var last_1 = tmp0_safe_receiver.h1c_1;
+      var last_1 = tmp0_safe_receiver.j1c_1;
       if (inductionVariable_1 < last_1)
         do {
           var i = inductionVariable_1;
@@ -18001,9 +18001,9 @@
     else {
       // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
       // Inline function 'kotlin.contracts.contract' call
-      var values_0 = modified.i1c_1;
+      var values_0 = modified.k1c_1;
       var inductionVariable_2 = 0;
-      var last_2 = modified.h1c_1;
+      var last_2 = modified.j1c_1;
       if (inductionVariable_2 < last_2)
         do {
           var i_0 = inductionVariable_2;
@@ -18015,7 +18015,7 @@
         }
          while (inductionVariable_2 < last_2);
     }
-    var tmp2_safe_receiver = this.i1p_1;
+    var tmp2_safe_receiver = this.k1p_1;
     if (tmp2_safe_receiver == null)
       null;
     else {
@@ -18033,58 +18033,58 @@
         }
          while (inductionVariable_3 <= last_3);
     }
-    this.i1p_1 = null;
+    this.k1p_1 = null;
     return Success_getInstance();
   };
-  protoOf(MutableSnapshot).n25 = function () {
+  protoOf(MutableSnapshot).p25 = function () {
     return false;
   };
   protoOf(MutableSnapshot).fn = function () {
-    if (!this.n1c_1) {
+    if (!this.p1c_1) {
       protoOf(Snapshot).fn.call(this);
-      this.k26(this);
+      this.m26(this);
     }
   };
-  protoOf(MutableSnapshot).l26 = function (snapshot) {
-    this.l1p_1 = this.l1p_1 + 1 | 0;
+  protoOf(MutableSnapshot).n26 = function (snapshot) {
+    this.n1p_1 = this.n1p_1 + 1 | 0;
   };
-  protoOf(MutableSnapshot).k26 = function (snapshot) {
+  protoOf(MutableSnapshot).m26 = function (snapshot) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this.l1p_1 > 0)) {
+    if (!(this.n1p_1 > 0)) {
       // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.nestedDeactivated.<anonymous>' call
       var message = 'no pending nested snapshots';
       throw IllegalArgumentException_init_$Create$(toString(message));
     }
-    this.l1p_1 = this.l1p_1 - 1 | 0;
-    if (this.l1p_1 === 0) {
-      if (!this.m1p_1) {
+    this.n1p_1 = this.n1p_1 - 1 | 0;
+    if (this.n1p_1 === 0) {
+      if (!this.o1p_1) {
         abandon(this);
       }
     }
   };
-  protoOf(MutableSnapshot).x1n = function () {
-    if (this.m1p_1 ? true : this.n1c_1)
+  protoOf(MutableSnapshot).z1n = function () {
+    if (this.o1p_1 ? true : this.p1c_1)
       return Unit_instance;
-    this.m26();
+    this.o26();
   };
-  protoOf(MutableSnapshot).t25 = function () {
-    set_openSnapshots(get_openSnapshots().z25(this.p1c()).n26(this.j1p_1));
+  protoOf(MutableSnapshot).v25 = function () {
+    set_openSnapshots(get_openSnapshots().b26(this.r1c()).p26(this.l1p_1));
   };
-  protoOf(MutableSnapshot).u25 = function () {
+  protoOf(MutableSnapshot).w25 = function () {
     releasePreviouslyPinnedSnapshotsLocked(this);
-    protoOf(Snapshot).u25.call(this);
+    protoOf(Snapshot).w25.call(this);
   };
-  protoOf(MutableSnapshot).j26 = function (snapshotId, optimisticMerges, invalidSnapshots) {
+  protoOf(MutableSnapshot).l26 = function (snapshotId, optimisticMerges, invalidSnapshots) {
     var mergedRecords = null;
-    var start = this.i25().i26(this.p1c()).o26(this.j1p_1);
-    var modified = ensureNotNull(this.h25());
+    var start = this.k25().k26(this.r1c()).q26(this.l1p_1);
+    var modified = ensureNotNull(this.j25());
     var statesToRemove = null;
     // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
-    var values = modified.i1c_1;
+    var values = modified.k1c_1;
     var inductionVariable = 0;
-    var last = modified.h1c_1;
+    var last = modified.j1c_1;
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
@@ -18093,7 +18093,7 @@
           // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.innerApplyLocked.<anonymous>' call
           var tmp = values[i];
           var state = !(tmp == null) ? tmp : THROW_CCE();
-          var first = state.s1t();
+          var first = state.u1t();
           var tmp0_elvis_lhs = readable(first, snapshotId, invalidSnapshots);
           var tmp_0;
           if (tmp0_elvis_lhs == null) {
@@ -18102,7 +18102,7 @@
             tmp_0 = tmp0_elvis_lhs;
           }
           var current = tmp_0;
-          var tmp1_elvis_lhs = readable(first, this.p1c(), start);
+          var tmp1_elvis_lhs = readable(first, this.r1c(), start);
           var tmp_1;
           if (tmp1_elvis_lhs == null) {
             break $l$block_0;
@@ -18111,7 +18111,7 @@
           }
           var previous = tmp_1;
           if (!equals(current, previous)) {
-            var tmp2_elvis_lhs = readable(first, this.p1c(), this.i25());
+            var tmp2_elvis_lhs = readable(first, this.r1c(), this.k25());
             var tmp_2;
             if (tmp2_elvis_lhs == null) {
               readError();
@@ -18125,7 +18125,7 @@
               // Inline function 'kotlin.run' call
               // Inline function 'kotlin.contracts.contract' call
               // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.innerApplyLocked.<anonymous>.<anonymous>' call
-              tmp_3 = state.u1t(previous, current, applied);
+              tmp_3 = state.w1t(previous, current, applied);
             } else {
               tmp_3 = tmp4_elvis_lhs;
             }
@@ -18147,7 +18147,7 @@
                 } else {
                   tmp_4 = tmp6_elvis_lhs;
                 }
-                tmp_4.y(to(state, current.o1t()));
+                tmp_4.y(to(state, current.q1t()));
                 var tmp7_elvis_lhs = statesToRemove;
                 var tmp_5;
                 if (tmp7_elvis_lhs == null) {
@@ -18176,7 +18176,7 @@
                 } else {
                   tmp_6 = tmp8_elvis_lhs;
                 }
-                tmp_6.y(!equals(merged, previous) ? to(state, merged) : to(state, previous.o1t()));
+                tmp_6.y(!equals(merged, previous) ? to(state, merged) : to(state, previous.q1t()));
               }
           }
         }
@@ -18188,7 +18188,7 @@
     else {
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
-      this.m26();
+      this.o26();
       // Inline function 'kotlin.contracts.contract' call
       var inductionVariable_0 = 0;
       var last_0 = tmp0_safe_receiver.l() - 1 | 0;
@@ -18201,13 +18201,13 @@
           // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.innerApplyLocked.<anonymous>.<anonymous>' call
           var state_0 = item.z6();
           var stateRecord = item.a7();
-          stateRecord.d26_1 = this.p1c();
+          stateRecord.f26_1 = this.r1c();
           // Inline function 'androidx.compose.runtime.snapshots.sync' call
           // Inline function 'androidx.compose.runtime.synchronized' call
           // Inline function 'kotlinx.atomicfu.locks.synchronized' call
           get_lock();
-          stateRecord.e26_1 = state_0.s1t();
-          state_0.t1t(stateRecord);
+          stateRecord.g26_1 = state_0.u1t();
+          state_0.v1t(stateRecord);
         }
          while (inductionVariable_0 <= last_0);
         tmp_7 = Unit_instance;
@@ -18229,58 +18229,58 @@
           inductionVariable_1 = inductionVariable_1 + 1 | 0;
           var item_0 = tmp1_safe_receiver.m(index_0);
           // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.innerApplyLocked.<anonymous>.<anonymous>' call
-          modified.q20(item_0);
+          modified.s20(item_0);
         }
          while (inductionVariable_1 <= last_1);
-      var mergedList = this.i1p_1;
-      this.i1p_1 = mergedList == null ? tmp1_safe_receiver : plus_2(mergedList, tmp1_safe_receiver);
+      var mergedList = this.k1p_1;
+      this.k1p_1 = mergedList == null ? tmp1_safe_receiver : plus_2(mergedList, tmp1_safe_receiver);
     }
     return Success_getInstance();
   };
-  protoOf(MutableSnapshot).m26 = function () {
+  protoOf(MutableSnapshot).o26 = function () {
     // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.advance' call
-    this.h26(this.p1c());
+    this.j26(this.r1c());
     // Inline function 'kotlin.also' call
     // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.advance.<anonymous>' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.advance.<anonymous>' call
-    if (!this.m1p_1 ? !this.n1c_1 : false) {
-      var previousId = this.p1c();
+    if (!this.o1p_1 ? !this.p1c_1 : false) {
+      var previousId = this.r1c();
       // Inline function 'androidx.compose.runtime.snapshots.sync' call
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       var tmp0 = get_nextSnapshotId();
       set_nextSnapshotId(tmp0 + 1 | 0);
-      this.k25(tmp0);
-      set_openSnapshots(get_openSnapshots().i26(this.p1c()));
-      this.j25(addRange(this.i25(), previousId + 1 | 0, this.p1c()));
+      this.m25(tmp0);
+      set_openSnapshots(get_openSnapshots().k26(this.r1c()));
+      this.l25(addRange(this.k25(), previousId + 1 | 0, this.r1c()));
     }
     return Unit_instance;
   };
-  protoOf(MutableSnapshot).h26 = function (id) {
+  protoOf(MutableSnapshot).j26 = function (id) {
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
-    this.j1p_1 = this.j1p_1.i26(id);
+    this.l1p_1 = this.l1p_1.k26(id);
   };
-  protoOf(MutableSnapshot).p26 = function (id) {
+  protoOf(MutableSnapshot).r26 = function (id) {
     if (id >= 0) {
       var tmp = this;
       // Inline function 'kotlin.collections.plus' call
       // Inline function 'kotlin.collections.plus' call
-      var this_0 = this.k1p_1;
+      var this_0 = this.m1p_1;
       // Inline function 'kotlin.intArrayOf' call
       var elements = new Int32Array([id]);
-      tmp.k1p_1 = primitiveArrayConcat([this_0, elements]);
+      tmp.m1p_1 = primitiveArrayConcat([this_0, elements]);
     }
   };
-  protoOf(MutableSnapshot).q26 = function (handles) {
+  protoOf(MutableSnapshot).s26 = function (handles) {
     // Inline function 'kotlin.collections.isEmpty' call
     if (handles.length === 0)
       return Unit_instance;
-    var pinned = this.k1p_1;
+    var pinned = this.m1p_1;
     var tmp = this;
     var tmp_0;
     // Inline function 'kotlin.collections.isEmpty' call
@@ -18290,41 +18290,41 @@
       // Inline function 'kotlin.collections.plus' call
       tmp_0 = primitiveArrayConcat([pinned, handles]);
     }
-    tmp.k1p_1 = tmp_0;
+    tmp.m1p_1 = tmp_0;
   };
-  protoOf(MutableSnapshot).r26 = function (snapshots) {
+  protoOf(MutableSnapshot).t26 = function (snapshots) {
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
-    this.j1p_1 = this.j1p_1.o26(snapshots);
+    this.l1p_1 = this.l1p_1.q26(snapshots);
   };
-  protoOf(MutableSnapshot).r25 = function (state) {
-    var tmp0_elvis_lhs = this.h25();
+  protoOf(MutableSnapshot).t25 = function (state) {
+    var tmp0_elvis_lhs = this.j25();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.also' call
       var this_0 = new IdentityArraySet();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.snapshots.MutableSnapshot.recordModified.<anonymous>' call
-      this.c26(this_0);
+      this.e26(this_0);
       tmp = this_0;
     } else {
       tmp = tmp0_elvis_lhs;
     }
-    tmp.f1h(state);
+    tmp.h1h(state);
   };
-  protoOf(MutableSnapshot).l25 = function (_set____db54di) {
-    this.g1p_1 = _set____db54di;
+  protoOf(MutableSnapshot).n25 = function (_set____db54di) {
+    this.i1p_1 = _set____db54di;
   };
-  protoOf(MutableSnapshot).m25 = function () {
-    return this.g1p_1;
+  protoOf(MutableSnapshot).o25 = function () {
+    return this.i1p_1;
   };
-  protoOf(MutableSnapshot).c26 = function (_set____db54di) {
-    this.h1p_1 = _set____db54di;
+  protoOf(MutableSnapshot).e26 = function (_set____db54di) {
+    this.j1p_1 = _set____db54di;
   };
-  protoOf(MutableSnapshot).h25 = function () {
-    return this.h1p_1;
+  protoOf(MutableSnapshot).j25 = function () {
+    return this.j1p_1;
   };
   function Success() {
     Success_instance = this;
@@ -18338,7 +18338,7 @@
   }
   function Failure(snapshot) {
     SnapshotApplyResult.call(this);
-    this.s26_1 = snapshot;
+    this.u26_1 = snapshot;
   }
   function SnapshotApplyResult() {
   }
@@ -18395,25 +18395,25 @@
     var tmp$ret$5 = tmp;
     MutableSnapshot.call(this, id, invalid, null, tmp$ret$5);
   }
-  protoOf(GlobalSnapshot).f25 = function (readObserver, writeObserver) {
+  protoOf(GlobalSnapshot).h25 = function (readObserver, writeObserver) {
     return takeNewSnapshot(GlobalSnapshot$takeNestedMutableSnapshot$lambda(readObserver, writeObserver));
   };
-  protoOf(GlobalSnapshot).x1n = function () {
+  protoOf(GlobalSnapshot).z1n = function () {
     advanceGlobalSnapshot_0();
   };
-  protoOf(GlobalSnapshot).g27 = function (snapshot) {
+  protoOf(GlobalSnapshot).i27 = function (snapshot) {
     unsupported();
   };
-  protoOf(GlobalSnapshot).k26 = function (snapshot) {
-    return this.g27(snapshot);
+  protoOf(GlobalSnapshot).m26 = function (snapshot) {
+    return this.i27(snapshot);
   };
-  protoOf(GlobalSnapshot).h27 = function (snapshot) {
+  protoOf(GlobalSnapshot).j27 = function (snapshot) {
     unsupported();
   };
-  protoOf(GlobalSnapshot).l26 = function (snapshot) {
-    return this.h27(snapshot);
+  protoOf(GlobalSnapshot).n26 = function (snapshot) {
+    return this.j27(snapshot);
   };
-  protoOf(GlobalSnapshot).n1p = function () {
+  protoOf(GlobalSnapshot).p1p = function () {
     var message = 'Cannot apply the global snapshot directly. Call Snapshot.advanceGlobalSnapshot';
     throw IllegalStateException_init_$Create$(toString(message));
   };
@@ -18422,25 +18422,25 @@
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
-    this.o25();
+    this.q25();
   };
   function StateRecord() {
-    this.d26_1 = currentSnapshot().p1c();
-    this.e26_1 = null;
+    this.f26_1 = currentSnapshot().r1c();
+    this.g26_1 = null;
   }
   function trackPinning(id, invalid) {
     _init_properties_Snapshot_kt__l6n1ng();
-    var pinned = invalid.i27(id);
+    var pinned = invalid.k27(id);
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
     // Inline function 'androidx.compose.runtime.snapshots.trackPinning.<anonymous>' call
-    return get_pinningTable().o27(pinned);
+    return get_pinningTable().q27(pinned);
   }
   function releasePinningLocked(handle) {
     _init_properties_Snapshot_kt__l6n1ng();
-    get_pinningTable().p27(handle);
+    get_pinningTable().r27(handle);
   }
   function currentSnapshot() {
     _init_properties_Snapshot_kt__l6n1ng();
@@ -18458,9 +18458,9 @@
     get_lock();
     // Inline function 'androidx.compose.runtime.snapshots.advanceGlobalSnapshot.<anonymous>' call
     previousGlobalSnapshot = get_currentGlobalSnapshot().lq();
-    modified = previousGlobalSnapshot.h25();
+    modified = previousGlobalSnapshot.j25();
     if (!(modified == null)) {
-      get_pendingApplyObserverCount().o27(1);
+      get_pendingApplyObserverCount().q27(1);
     }
     var result = takeNewGlobalSnapshot(previousGlobalSnapshot, block);
     var tmp0_safe_receiver = modified;
@@ -18489,7 +18489,7 @@
         }
         tmp_0 = tmp_1;
       }finally {
-        get_pendingApplyObserverCount().o27(-1);
+        get_pendingApplyObserverCount().q27(-1);
       }
     }
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
@@ -18505,9 +18505,9 @@
     } else {
       // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
       // Inline function 'kotlin.contracts.contract' call
-      var values = tmp0_safe_receiver_0.i1c_1;
+      var values = tmp0_safe_receiver_0.k1c_1;
       var inductionVariable_0 = 0;
-      var last_0 = tmp0_safe_receiver_0.h1c_1;
+      var last_0 = tmp0_safe_receiver_0.j1c_1;
       if (inductionVariable_0 < last_0)
         do {
           var i = inductionVariable_0;
@@ -18527,41 +18527,41 @@
     return advanceGlobalSnapshot(advanceGlobalSnapshot$lambda);
   }
   function deactivate($this) {
-    if (!$this.f28_1) {
-      $this.f28_1 = true;
-      $this.e28_1.k26($this);
+    if (!$this.h28_1) {
+      $this.h28_1 = true;
+      $this.g28_1.m26($this);
     }
   }
   function NestedMutableSnapshot(id, invalid, readObserver, writeObserver, parent) {
     MutableSnapshot.call(this, id, invalid, readObserver, writeObserver);
-    this.e28_1 = parent;
-    this.f28_1 = false;
-    this.e28_1.l26(this);
+    this.g28_1 = parent;
+    this.h28_1 = false;
+    this.g28_1.n26(this);
   }
   protoOf(NestedMutableSnapshot).fn = function () {
-    if (!this.n1c_1) {
+    if (!this.p1c_1) {
       protoOf(MutableSnapshot).fn.call(this);
       deactivate(this);
     }
   };
-  protoOf(NestedMutableSnapshot).n1p = function () {
-    if (this.e28_1.m1p_1 ? true : this.e28_1.n1c_1)
+  protoOf(NestedMutableSnapshot).p1p = function () {
+    if (this.g28_1.o1p_1 ? true : this.g28_1.p1c_1)
       return new Failure(this);
-    var modified = this.h25();
-    var id = this.p1c();
-    var optimisticMerges_0 = !(modified == null) ? optimisticMerges(this.e28_1, this, this.e28_1.i25()) : null;
+    var modified = this.j25();
+    var id = this.r1c();
+    var optimisticMerges_0 = !(modified == null) ? optimisticMerges(this.g28_1, this, this.g28_1.k25()) : null;
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
     validateOpen(this);
-    if (modified == null ? true : modified.h1c_1 === 0) {
-      this.s25();
+    if (modified == null ? true : modified.j1c_1 === 0) {
+      this.u25();
     } else {
-      var result = this.j26(this.e28_1.p1c(), optimisticMerges_0, this.e28_1.i25());
+      var result = this.l26(this.g28_1.r1c(), optimisticMerges_0, this.g28_1.k25());
       if (!equals(result, Success_getInstance()))
         return result;
-      var tmp0_safe_receiver = this.e28_1.h25();
+      var tmp0_safe_receiver = this.g28_1.j25();
       var tmp;
       if (tmp0_safe_receiver == null) {
         tmp = null;
@@ -18569,26 +18569,26 @@
         // Inline function 'kotlin.apply' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.snapshots.NestedMutableSnapshot.apply.<anonymous>.<anonymous>' call
-        tmp0_safe_receiver.n1o(modified);
+        tmp0_safe_receiver.p1o(modified);
         tmp = tmp0_safe_receiver;
       }
       if (tmp == null) {
         // Inline function 'kotlin.also' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.snapshots.NestedMutableSnapshot.apply.<anonymous>.<anonymous>' call
-        this.e28_1.c26(modified);
-        this.c26(null);
+        this.g28_1.e26(modified);
+        this.e26(null);
       }
     }
-    if (this.e28_1.p1c() < id) {
-      this.e28_1.m26();
+    if (this.g28_1.r1c() < id) {
+      this.g28_1.o26();
     }
-    this.e28_1.j25(this.e28_1.i25().z25(id).n26(this.j1p_1));
-    this.e28_1.h26(id);
-    this.e28_1.p26(this.b26());
-    this.e28_1.r26(this.j1p_1);
-    this.e28_1.q26(this.k1p_1);
-    this.m1p_1 = true;
+    this.g28_1.l25(this.g28_1.k25().b26(id).p26(this.l1p_1));
+    this.g28_1.j26(id);
+    this.g28_1.r26(this.d26());
+    this.g28_1.t26(this.l1p_1);
+    this.g28_1.s26(this.m1p_1);
+    this.o1p_1 = true;
     deactivate(this);
     return Success_getInstance();
   };
@@ -18600,7 +18600,7 @@
       do {
         var invalidId = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        result = result.i26(invalidId);
+        result = result.k26(invalidId);
       }
        while (inductionVariable < until);
     return result;
@@ -18629,17 +18629,17 @@
   }
   function optimisticMerges(currentSnapshot, applyingSnapshot, invalidSnapshots) {
     _init_properties_Snapshot_kt__l6n1ng();
-    var modified = applyingSnapshot.h25();
-    var id = currentSnapshot.p1c();
+    var modified = applyingSnapshot.j25();
+    var id = currentSnapshot.r1c();
     if (modified == null)
       return null;
-    var start = applyingSnapshot.i25().i26(applyingSnapshot.p1c()).o26(applyingSnapshot.j1p_1);
+    var start = applyingSnapshot.k25().k26(applyingSnapshot.r1c()).q26(applyingSnapshot.l1p_1);
     var result = null;
     // Inline function 'androidx.compose.runtime.collection.IdentityArraySet.fastForEach' call
     // Inline function 'kotlin.contracts.contract' call
-    var values = modified.i1c_1;
+    var values = modified.k1c_1;
     var inductionVariable = 0;
-    var last = modified.h1c_1;
+    var last = modified.j1c_1;
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
@@ -18648,7 +18648,7 @@
           // Inline function 'androidx.compose.runtime.snapshots.optimisticMerges.<anonymous>' call
           var tmp = values[i];
           var state = !(tmp == null) ? tmp : THROW_CCE();
-          var first = state.s1t();
+          var first = state.u1t();
           var tmp0_elvis_lhs = readable(first, id, invalidSnapshots);
           var tmp_0;
           if (tmp0_elvis_lhs == null) {
@@ -18666,7 +18666,7 @@
           }
           var previous = tmp_1;
           if (!equals(current, previous)) {
-            var tmp2_elvis_lhs = readable(first, applyingSnapshot.p1c(), applyingSnapshot.i25());
+            var tmp2_elvis_lhs = readable(first, applyingSnapshot.r1c(), applyingSnapshot.k25());
             var tmp_2;
             if (tmp2_elvis_lhs == null) {
               readError();
@@ -18674,7 +18674,7 @@
               tmp_2 = tmp2_elvis_lhs;
             }
             var applied = tmp_2;
-            var merged = state.u1t(previous, current, applied);
+            var merged = state.w1t(previous, current, applied);
             if (!(merged == null)) {
               // Inline function 'kotlin.collections.set' call
               var tmp3_elvis_lhs = result;
@@ -18703,25 +18703,25 @@
   function validateOpen(snapshot) {
     _init_properties_Snapshot_kt__l6n1ng();
     var openSnapshots = get_openSnapshots();
-    if (!openSnapshots.m(snapshot.p1c())) {
+    if (!openSnapshots.m(snapshot.r1c())) {
       // Inline function 'kotlin.error' call
-      var tmp = snapshot.p1c();
-      var tmp_0 = snapshot.n1c_1;
+      var tmp = snapshot.r1c();
+      var tmp_0 = snapshot.p1c_1;
       var tmp0_safe_receiver = snapshot instanceof MutableSnapshot ? snapshot : null;
-      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.m1p_1;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.o1p_1;
       var tmp_1 = toString(tmp1_elvis_lhs == null ? 'read-only' : tmp1_elvis_lhs);
       // Inline function 'androidx.compose.runtime.snapshots.sync' call
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       // Inline function 'androidx.compose.runtime.snapshots.validateOpen.<anonymous>' call
-      var message = 'Snapshot is not open: id=' + tmp + ', disposed=' + tmp_0 + ', applied=' + tmp_1 + ', lowestPin=' + get_pinningTable().g28(-1);
+      var message = 'Snapshot is not open: id=' + tmp + ', disposed=' + tmp_0 + ', applied=' + tmp_1 + ', lowestPin=' + get_pinningTable().i28(-1);
       throw IllegalStateException_init_$Create$(toString(message));
     }
   }
   function takeNewGlobalSnapshot(previousGlobalSnapshot, block) {
     _init_properties_Snapshot_kt__l6n1ng();
-    var result = block(get_openSnapshots().z25(previousGlobalSnapshot.p1c()));
+    var result = block(get_openSnapshots().b26(previousGlobalSnapshot.r1c()));
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
@@ -18729,24 +18729,24 @@
     var tmp0 = get_nextSnapshotId();
     set_nextSnapshotId(tmp0 + 1 | 0);
     var globalId = tmp0;
-    set_openSnapshots(get_openSnapshots().z25(previousGlobalSnapshot.p1c()));
-    get_currentGlobalSnapshot().w1i(new GlobalSnapshot(globalId, get_openSnapshots()));
+    set_openSnapshots(get_openSnapshots().b26(previousGlobalSnapshot.r1c()));
+    get_currentGlobalSnapshot().y1i(new GlobalSnapshot(globalId, get_openSnapshots()));
     previousGlobalSnapshot.fn();
-    set_openSnapshots(get_openSnapshots().i26(globalId));
+    set_openSnapshots(get_openSnapshots().k26(globalId));
     return result;
   }
   function checkAndOverwriteUnusedRecordsLocked() {
     _init_properties_Snapshot_kt__l6n1ng();
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotWeakSet.removeIf' call
     var this_0 = get_extraStateObjects();
-    var size = this_0.h28_1;
+    var size = this_0.j28_1;
     var currentUsed = 0;
     var inductionVariable = 0;
     if (inductionVariable < size)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var entry = this_0.j28_1[i];
+        var entry = this_0.l28_1[i];
         var value = entry == null ? null : entry.lq();
         var tmp;
         if (!(value == null)) {
@@ -18757,8 +18757,8 @@
         }
         if (tmp) {
           if (!(currentUsed === i)) {
-            this_0.j28_1[currentUsed] = entry;
-            this_0.i28_1[currentUsed] = this_0.i28_1[i];
+            this_0.l28_1[currentUsed] = entry;
+            this_0.k28_1[currentUsed] = this_0.k28_1[i];
           }
           currentUsed = currentUsed + 1 | 0;
         }
@@ -18769,18 +18769,18 @@
       do {
         var i_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        this_0.j28_1[i_0] = null;
-        this_0.i28_1[i_0] = 0;
+        this_0.l28_1[i_0] = null;
+        this_0.k28_1[i_0] = 0;
       }
        while (inductionVariable_0 < size);
     if (!(currentUsed === size)) {
-      this_0.h28_1 = currentUsed;
+      this_0.j28_1 = currentUsed;
     }
   }
   function processForUnusedRecordsLocked(state) {
     _init_properties_Snapshot_kt__l6n1ng();
     if (overwriteUnusedRecordsLocked(state)) {
-      get_extraStateObjects().f1h(state);
+      get_extraStateObjects().h1h(state);
     }
   }
   function readable(r, id, invalid) {
@@ -18789,9 +18789,9 @@
     var candidate = null;
     while (!(current == null)) {
       if (valid(current, id, invalid)) {
-        candidate = candidate == null ? current : candidate.d26_1 < current.d26_1 ? current : candidate;
+        candidate = candidate == null ? current : candidate.f26_1 < current.f26_1 ? current : candidate;
       }
-      current = current.e26_1;
+      current = current.g26_1;
     }
     if (!(candidate == null)) {
       return candidate instanceof StateRecord ? candidate : THROW_CCE();
@@ -18810,13 +18810,13 @@
   }
   function overwriteUnusedRecordsLocked(state) {
     _init_properties_Snapshot_kt__l6n1ng();
-    var current = state.s1t();
+    var current = state.u1t();
     var overwriteRecord = null;
     var validRecord = null;
-    var reuseLimit = get_pinningTable().g28(get_nextSnapshotId());
+    var reuseLimit = get_pinningTable().i28(get_nextSnapshotId());
     var retainedRecords = 0;
     while (!(current == null)) {
-      var currentId = current.d26_1;
+      var currentId = current.f26_1;
       if (!(currentId === 0)) {
         if (currentId < reuseLimit) {
           if (validRecord == null) {
@@ -18824,7 +18824,7 @@
             retainedRecords = retainedRecords + 1 | 0;
           } else {
             var tmp;
-            if (current.d26_1 < validRecord.d26_1) {
+            if (current.f26_1 < validRecord.f26_1) {
               tmp = current;
             } else {
               var result = validRecord;
@@ -18836,37 +18836,37 @@
               var tmp$ret$1;
               $l$block: {
                 // Inline function 'androidx.compose.runtime.snapshots.findYoungestOr' call
-                var this_0 = state.s1t();
+                var this_0 = state.u1t();
                 var current_0 = this_0;
                 var youngest = this_0;
                 while (!(current_0 == null)) {
                   // Inline function 'androidx.compose.runtime.snapshots.overwriteUnusedRecordsLocked.<anonymous>' call
-                  if (current_0.d26_1 >= reuseLimit) {
+                  if (current_0.f26_1 >= reuseLimit) {
                     tmp$ret$1 = current_0;
                     break $l$block;
                   }
-                  if (youngest.d26_1 < current_0.d26_1)
+                  if (youngest.f26_1 < current_0.f26_1)
                     youngest = current_0;
-                  current_0 = current_0.e26_1;
+                  current_0 = current_0.g26_1;
                 }
                 tmp$ret$1 = youngest;
               }
               overwriteRecord = tmp$ret$1;
             }
-            recordToOverwrite.d26_1 = 0;
-            recordToOverwrite.n1t(overwriteRecord);
+            recordToOverwrite.f26_1 = 0;
+            recordToOverwrite.p1t(overwriteRecord);
           }
         } else {
           retainedRecords = retainedRecords + 1 | 0;
         }
       }
-      current = current.e26_1;
+      current = current.g26_1;
     }
     return retainedRecords > 1;
   }
   function valid(data, snapshot, invalid) {
     _init_properties_Snapshot_kt__l6n1ng();
-    return valid_0(snapshot, data.d26_1, invalid);
+    return valid_0(snapshot, data.f26_1, invalid);
   }
   function valid_0(currentSnapshot, candidateSnapshot, invalid) {
     _init_properties_Snapshot_kt__l6n1ng();
@@ -18874,13 +18874,13 @@
   }
   function readable_0(_this__u8e3s4, state) {
     _init_properties_Snapshot_kt__l6n1ng();
-    var snapshot = Companion_instance_12.x11();
-    var tmp0_safe_receiver = snapshot.p25();
+    var snapshot = Companion_instance_12.z11();
+    var tmp0_safe_receiver = snapshot.r25();
     if (tmp0_safe_receiver == null)
       null;
     else
       tmp0_safe_receiver(state);
-    var tmp1_elvis_lhs = readable(_this__u8e3s4, snapshot.p1c(), snapshot.i25());
+    var tmp1_elvis_lhs = readable(_this__u8e3s4, snapshot.r1c(), snapshot.k25());
     var tmp;
     if (tmp1_elvis_lhs == null) {
       // Inline function 'androidx.compose.runtime.snapshots.sync' call
@@ -18888,9 +18888,9 @@
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       // Inline function 'androidx.compose.runtime.snapshots.readable.<anonymous>' call
-      var syncSnapshot = Companion_instance_12.x11();
-      var tmp_0 = state.s1t();
-      var tmp0_elvis_lhs = readable(tmp_0 instanceof StateRecord ? tmp_0 : THROW_CCE(), syncSnapshot.p1c(), syncSnapshot.i25());
+      var syncSnapshot = Companion_instance_12.z11();
+      var tmp_0 = state.u1t();
+      var tmp0_elvis_lhs = readable(tmp_0 instanceof StateRecord ? tmp_0 : THROW_CCE(), syncSnapshot.r1c(), syncSnapshot.k25());
       var tmp_1;
       if (tmp0_elvis_lhs == null) {
         readError();
@@ -18908,8 +18908,8 @@
     // Inline function 'kotlin.let' call
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.snapshots.current.<anonymous>' call
-    var snapshot = Companion_instance_12.x11();
-    var tmp0_elvis_lhs = readable(r, snapshot.p1c(), snapshot.i25());
+    var snapshot = Companion_instance_12.z11();
+    var tmp0_elvis_lhs = readable(r, snapshot.r1c(), snapshot.k25());
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'androidx.compose.runtime.snapshots.sync' call
@@ -18920,8 +18920,8 @@
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.snapshots.current.<anonymous>.<anonymous>.<anonymous>' call
-      var syncSnapshot = Companion_instance_12.x11();
-      tmp = readable(r, syncSnapshot.p1c(), syncSnapshot.i25());
+      var syncSnapshot = Companion_instance_12.z11();
+      tmp = readable(r, syncSnapshot.r1c(), syncSnapshot.k25());
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -18936,8 +18936,8 @@
   }
   function notifyWrite(snapshot, state) {
     _init_properties_Snapshot_kt__l6n1ng();
-    snapshot.l25(snapshot.m25() + 1 | 0);
-    var tmp1_safe_receiver = snapshot.q25();
+    snapshot.n25(snapshot.o25() + 1 | 0);
+    var tmp1_safe_receiver = snapshot.s25();
     if (tmp1_safe_receiver == null)
       null;
     else
@@ -18945,11 +18945,11 @@
   }
   function overwritableRecord(_this__u8e3s4, state, snapshot, candidate) {
     _init_properties_Snapshot_kt__l6n1ng();
-    if (snapshot.n25()) {
-      snapshot.r25(state);
+    if (snapshot.p25()) {
+      snapshot.t25(state);
     }
-    var id = snapshot.p1c();
-    if (candidate.d26_1 === id)
+    var id = snapshot.r1c();
+    if (candidate.f26_1 === id)
       return candidate;
     // Inline function 'androidx.compose.runtime.snapshots.sync' call
     // Inline function 'androidx.compose.runtime.synchronized' call
@@ -18957,8 +18957,8 @@
     get_lock();
     // Inline function 'androidx.compose.runtime.snapshots.overwritableRecord.<anonymous>' call
     var newData = newOverwritableRecordLocked(_this__u8e3s4, state);
-    newData.d26_1 = id;
-    snapshot.r25(state);
+    newData.f26_1 = id;
+    snapshot.t25(state);
     return newData;
   }
   function newOverwritableRecordLocked(_this__u8e3s4, state) {
@@ -18972,19 +18972,19 @@
       // Inline function 'kotlin.apply' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.snapshots.newOverwritableRecordLocked.<anonymous>' call
-      tmp0_safe_receiver.d26_1 = IntCompanionObject_instance.MAX_VALUE;
+      tmp0_safe_receiver.f26_1 = IntCompanionObject_instance.MAX_VALUE;
       tmp_0 = tmp0_safe_receiver;
     }
     var tmp1_elvis_lhs = tmp_0;
     var tmp_1;
     if (tmp1_elvis_lhs == null) {
       // Inline function 'kotlin.apply' call
-      var this_0 = _this__u8e3s4.o1t();
+      var this_0 = _this__u8e3s4.q1t();
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.snapshots.newOverwritableRecordLocked.<anonymous>' call
-      this_0.d26_1 = IntCompanionObject_instance.MAX_VALUE;
-      this_0.e26_1 = state.s1t();
-      state.t1t(this_0 instanceof StateRecord ? this_0 : THROW_CCE());
+      this_0.f26_1 = IntCompanionObject_instance.MAX_VALUE;
+      this_0.g26_1 = state.u1t();
+      state.v1t(this_0 instanceof StateRecord ? this_0 : THROW_CCE());
       var tmp_2 = this_0;
       tmp_1 = tmp_2 instanceof StateRecord ? tmp_2 : THROW_CCE();
     } else {
@@ -18994,12 +18994,12 @@
   }
   function usedLocked(state) {
     _init_properties_Snapshot_kt__l6n1ng();
-    var current = state.s1t();
+    var current = state.u1t();
     var validRecord = null;
-    var reuseLimit = get_pinningTable().g28(get_nextSnapshotId()) - 1 | 0;
-    var invalid = Companion_getInstance_14().g26_1;
+    var reuseLimit = get_pinningTable().i28(get_nextSnapshotId()) - 1 | 0;
+    var invalid = Companion_getInstance_14().i26_1;
     while (!(current == null)) {
-      var currentId = current.d26_1;
+      var currentId = current.f26_1;
       if (currentId === 0) {
         return current;
       }
@@ -19007,20 +19007,20 @@
         if (validRecord == null) {
           validRecord = current;
         } else {
-          return current.d26_1 < validRecord.d26_1 ? current : validRecord;
+          return current.f26_1 < validRecord.f26_1 ? current : validRecord;
         }
       }
-      current = current.e26_1;
+      current = current.g26_1;
     }
     return null;
   }
   function writableRecord(_this__u8e3s4, state, snapshot) {
     _init_properties_Snapshot_kt__l6n1ng();
-    if (snapshot.n25()) {
-      snapshot.r25(state);
+    if (snapshot.p25()) {
+      snapshot.t25(state);
     }
-    var id = snapshot.p1c();
-    var tmp0_elvis_lhs = readable(_this__u8e3s4, id, snapshot.i25());
+    var id = snapshot.r1c();
+    var tmp0_elvis_lhs = readable(_this__u8e3s4, id, snapshot.k25());
     var tmp;
     if (tmp0_elvis_lhs == null) {
       readError();
@@ -19028,10 +19028,10 @@
       tmp = tmp0_elvis_lhs;
     }
     var readData = tmp;
-    if (readData.d26_1 === snapshot.p1c())
+    if (readData.f26_1 === snapshot.r1c())
       return readData;
     var newData = newWritableRecord(readData, state, snapshot);
-    snapshot.r25(state);
+    snapshot.t25(state);
     return newData;
   }
   function newWritableRecord(_this__u8e3s4, state, snapshot) {
@@ -19046,8 +19046,8 @@
   function newWritableRecordLocked(_this__u8e3s4, state, snapshot) {
     _init_properties_Snapshot_kt__l6n1ng();
     var newData = newOverwritableRecordLocked(_this__u8e3s4, state);
-    newData.n1t(_this__u8e3s4);
-    newData.d26_1 = snapshot.p1c();
+    newData.p1t(_this__u8e3s4);
+    newData.f26_1 = snapshot.r1c();
     return newData;
   }
   function emptyLambda$lambda(it) {
@@ -19079,7 +19079,7 @@
       // Inline function 'androidx.compose.runtime.synchronized' call
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
-      set_openSnapshots(get_openSnapshots().i26(result.p1c()));
+      set_openSnapshots(get_openSnapshots().k26(result.r1c()));
       return result;
     };
   }
@@ -19090,7 +19090,7 @@
       emptyLambda = emptyLambda$lambda;
       threadSnapshot = new SnapshotThreadLocal();
       lock = createSynchronizedObject();
-      openSnapshots = Companion_getInstance_14().g26_1;
+      openSnapshots = Companion_getInstance_14().i26_1;
       nextSnapshotId = 1;
       pinningTable = new SnapshotDoubleIndexHeap();
       extraStateObjects = new SnapshotWeakSet();
@@ -19099,17 +19099,17 @@
       // Inline function 'kotlin.also' call
       var tmp0 = get_nextSnapshotId();
       set_nextSnapshotId(tmp0 + 1 | 0);
-      var this_0 = new GlobalSnapshot(tmp0, Companion_getInstance_14().g26_1);
+      var this_0 = new GlobalSnapshot(tmp0, Companion_getInstance_14().i26_1);
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.snapshots.currentGlobalSnapshot.<anonymous>' call
-      set_openSnapshots(get_openSnapshots().i26(this_0.p1c()));
+      set_openSnapshots(get_openSnapshots().k26(this_0.r1c()));
       currentGlobalSnapshot = new AtomicReference(this_0);
       snapshotInitializer = get_currentGlobalSnapshot().lq();
       pendingApplyObserverCount = new AtomicInt(0);
     }
   }
   function shiftUp($this, index) {
-    var values = $this.k27_1;
+    var values = $this.m27_1;
     var value = values[index];
     var current = index;
     $l$loop: while (current > 0) {
@@ -19123,13 +19123,13 @@
     }
   }
   function shiftDown($this, index) {
-    var values = $this.k27_1;
-    var half = $this.j27_1 >> 1;
+    var values = $this.m27_1;
+    var half = $this.l27_1 >> 1;
     var current = index;
     while (current < half) {
       var right = (current + 1 | 0) << 1;
       var left = right - 1 | 0;
-      if (right < $this.j27_1 ? values[right] < values[left] : false) {
+      if (right < $this.l27_1 ? values[right] < values[left] : false) {
         if (values[right] < values[current]) {
           swap($this, right, current);
           current = right;
@@ -19143,9 +19143,9 @@
     }
   }
   function swap($this, a, b) {
-    var values = $this.k27_1;
-    var index = $this.l27_1;
-    var handles = $this.m27_1;
+    var values = $this.m27_1;
+    var index = $this.n27_1;
+    var handles = $this.o27_1;
     var t = values[a];
     values[a] = values[b];
     values[b] = t;
@@ -19156,14 +19156,14 @@
     handles[index[b]] = b;
   }
   function ensure($this, atLeast) {
-    var capacity = $this.k27_1.length;
+    var capacity = $this.m27_1.length;
     if (atLeast <= capacity)
       return Unit_instance;
     var newCapacity = imul(capacity, 2);
     var newValues = new Int32Array(newCapacity);
     var newIndex = new Int32Array(newCapacity);
     // Inline function 'kotlin.collections.copyInto' call
-    var this_0 = $this.k27_1;
+    var this_0 = $this.m27_1;
     var endIndex = this_0.length;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -19172,7 +19172,7 @@
     // Inline function 'kotlin.js.asDynamic' call
     arrayCopy(tmp, newValues, 0, 0, endIndex);
     // Inline function 'kotlin.collections.copyInto' call
-    var this_1 = $this.l27_1;
+    var this_1 = $this.n27_1;
     var endIndex_0 = this_1.length;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -19180,12 +19180,12 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     arrayCopy(tmp_0, newIndex, 0, 0, endIndex_0);
-    $this.k27_1 = newValues;
-    $this.l27_1 = newIndex;
+    $this.m27_1 = newValues;
+    $this.n27_1 = newIndex;
   }
   function allocateHandle($this) {
-    var capacity = $this.m27_1.length;
-    if ($this.n27_1 >= capacity) {
+    var capacity = $this.o27_1.length;
+    if ($this.p27_1 >= capacity) {
       var tmp = 0;
       var tmp_0 = imul(capacity, 2);
       var tmp_1 = new Int32Array(tmp_0);
@@ -19196,7 +19196,7 @@
       }
       var newHandles = tmp_1;
       // Inline function 'kotlin.collections.copyInto' call
-      var this_0 = $this.m27_1;
+      var this_0 = $this.o27_1;
       var endIndex = this_0.length;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
@@ -19204,20 +19204,20 @@
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       arrayCopy(tmp_3, newHandles, 0, 0, endIndex);
-      $this.m27_1 = newHandles;
+      $this.o27_1 = newHandles;
     }
-    var handle = $this.n27_1;
-    $this.n27_1 = $this.m27_1[$this.n27_1];
+    var handle = $this.p27_1;
+    $this.p27_1 = $this.o27_1[$this.p27_1];
     return handle;
   }
   function freeHandle($this, handle) {
-    $this.m27_1[handle] = $this.n27_1;
-    $this.n27_1 = handle;
+    $this.o27_1[handle] = $this.p27_1;
+    $this.p27_1 = handle;
   }
   function SnapshotDoubleIndexHeap() {
-    this.j27_1 = 0;
-    this.k27_1 = new Int32Array(16);
-    this.l27_1 = new Int32Array(16);
+    this.l27_1 = 0;
+    this.m27_1 = new Int32Array(16);
+    this.n27_1 = new Int32Array(16);
     var tmp = this;
     var tmp_0 = 0;
     var tmp_1 = new Int32Array(16);
@@ -19226,35 +19226,35 @@
       tmp_1[tmp_2] = tmp_2 + 1 | 0;
       tmp_0 = tmp_0 + 1 | 0;
     }
-    tmp.m27_1 = tmp_1;
-    this.n27_1 = 0;
+    tmp.o27_1 = tmp_1;
+    this.p27_1 = 0;
   }
-  protoOf(SnapshotDoubleIndexHeap).g28 = function (default_0) {
-    return this.j27_1 > 0 ? this.k27_1[0] : default_0;
+  protoOf(SnapshotDoubleIndexHeap).i28 = function (default_0) {
+    return this.l27_1 > 0 ? this.m27_1[0] : default_0;
   };
-  protoOf(SnapshotDoubleIndexHeap).o27 = function (value) {
-    ensure(this, this.j27_1 + 1 | 0);
-    var tmp1 = this.j27_1;
-    this.j27_1 = tmp1 + 1 | 0;
+  protoOf(SnapshotDoubleIndexHeap).q27 = function (value) {
+    ensure(this, this.l27_1 + 1 | 0);
+    var tmp1 = this.l27_1;
+    this.l27_1 = tmp1 + 1 | 0;
     var i = tmp1;
     var handle = allocateHandle(this);
-    this.k27_1[i] = value;
-    this.l27_1[i] = handle;
-    this.m27_1[handle] = i;
+    this.m27_1[i] = value;
+    this.n27_1[i] = handle;
+    this.o27_1[handle] = i;
     shiftUp(this, i);
     return handle;
   };
-  protoOf(SnapshotDoubleIndexHeap).p27 = function (handle) {
-    var i = this.m27_1[handle];
-    swap(this, i, this.j27_1 - 1 | 0);
-    this.j27_1 = this.j27_1 - 1 | 0;
+  protoOf(SnapshotDoubleIndexHeap).r27 = function (handle) {
+    var i = this.o27_1[handle];
+    swap(this, i, this.l27_1 - 1 | 0);
+    this.l27_1 = this.l27_1 - 1 | 0;
     shiftUp(this, i);
     shiftDown(this, i);
     freeHandle(this, handle);
   };
   function Companion_13() {
     Companion_instance_14 = this;
-    this.g26_1 = new SnapshotIdSet(new Long(0, 0), new Long(0, 0), 0, null);
+    this.i26_1 = new SnapshotIdSet(new Long(0, 0), new Long(0, 0), 0, null);
   }
   var Companion_instance_14;
   function Companion_getInstance_14() {
@@ -19263,17 +19263,17 @@
     return Companion_instance_14;
   }
   function SnapshotIdSet$iterator$slambda(this$0, resultContinuation) {
-    this.t28_1 = this$0;
+    this.v28_1 = this$0;
     CoroutineImpl.call(this, resultContinuation);
   }
-  protoOf(SnapshotIdSet$iterator$slambda).c29 = function ($this$sequence, $completion) {
-    var tmp = this.d29($this$sequence, $completion);
+  protoOf(SnapshotIdSet$iterator$slambda).e29 = function ($this$sequence, $completion) {
+    var tmp = this.f29($this$sequence, $completion);
     tmp.cd_1 = Unit_instance;
     tmp.dd_1 = null;
     return tmp.md();
   };
   protoOf(SnapshotIdSet$iterator$slambda).yd = function (p1, $completion) {
-    return this.c29(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
+    return this.e29(p1 instanceof SequenceScope ? p1 : THROW_CCE(), $completion);
   };
   protoOf(SnapshotIdSet$iterator$slambda).md = function () {
     var suspendResult = this.cd_1;
@@ -19283,9 +19283,9 @@
         switch (tmp) {
           case 0:
             this.bd_1 = 15;
-            this.v28_1 = this.t28_1.y25_1;
-            if (!(this.v28_1 == null)) {
-              this.w28_1 = intArrayIterator(this.v28_1);
+            this.x28_1 = this.v28_1.a26_1;
+            if (!(this.x28_1 == null)) {
+              this.y28_1 = intArrayIterator(this.x28_1);
               this.ad_1 = 1;
               continue $sm;
             } else {
@@ -19294,14 +19294,14 @@
             }
 
           case 1:
-            if (!this.w28_1.b1()) {
+            if (!this.y28_1.b1()) {
               this.ad_1 = 3;
               continue $sm;
             }
 
-            this.x28_1 = this.w28_1.d1();
+            this.z28_1 = this.y28_1.d1();
             this.ad_1 = 2;
-            suspendResult = this.u28_1.mf(this.x28_1, this);
+            suspendResult = this.w28_1.mf(this.z28_1, this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -19314,10 +19314,10 @@
             this.ad_1 = 4;
             continue $sm;
           case 4:
-            if (!this.t28_1.w25_1.equals(new Long(0, 0))) {
+            if (!this.v28_1.y25_1.equals(new Long(0, 0))) {
               var tmp_0 = this;
               Companion_getInstance();
-              tmp_0.y28_1 = until(0, 64).n();
+              tmp_0.a29_1 = until(0, 64).n();
               this.ad_1 = 5;
               continue $sm;
             } else {
@@ -19326,15 +19326,15 @@
             }
 
           case 5:
-            if (!this.y28_1.b1()) {
+            if (!this.a29_1.b1()) {
               this.ad_1 = 8;
               continue $sm;
             }
 
-            this.z28_1 = this.y28_1.d1();
-            if (!this.t28_1.w25_1.oc((new Long(1, 0)).lc(this.z28_1)).equals(new Long(0, 0))) {
+            this.b29_1 = this.a29_1.d1();
+            if (!this.v28_1.y25_1.oc((new Long(1, 0)).lc(this.b29_1)).equals(new Long(0, 0))) {
               this.ad_1 = 6;
-              suspendResult = this.u28_1.mf(this.z28_1 + this.t28_1.x25_1 | 0, this);
+              suspendResult = this.w28_1.mf(this.b29_1 + this.v28_1.z25_1 | 0, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
@@ -19354,10 +19354,10 @@
             this.ad_1 = 9;
             continue $sm;
           case 9:
-            if (!this.t28_1.v25_1.equals(new Long(0, 0))) {
+            if (!this.v28_1.x25_1.equals(new Long(0, 0))) {
               var tmp_1 = this;
               Companion_getInstance();
-              tmp_1.a29_1 = until(0, 64).n();
+              tmp_1.c29_1 = until(0, 64).n();
               this.ad_1 = 10;
               continue $sm;
             } else {
@@ -19366,16 +19366,16 @@
             }
 
           case 10:
-            if (!this.a29_1.b1()) {
+            if (!this.c29_1.b1()) {
               this.ad_1 = 13;
               continue $sm;
             }
 
-            this.b29_1 = this.a29_1.d1();
-            if (!this.t28_1.v25_1.oc((new Long(1, 0)).lc(this.b29_1)).equals(new Long(0, 0))) {
+            this.d29_1 = this.c29_1.d1();
+            if (!this.v28_1.x25_1.oc((new Long(1, 0)).lc(this.d29_1)).equals(new Long(0, 0))) {
               this.ad_1 = 11;
               Companion_getInstance();
-              suspendResult = this.u28_1.mf((this.b29_1 + 64 | 0) + this.t28_1.x25_1 | 0, this);
+              suspendResult = this.w28_1.mf((this.d29_1 + 64 | 0) + this.v28_1.z25_1 | 0, this);
               if (suspendResult === get_COROUTINE_SUSPENDED()) {
                 return suspendResult;
               }
@@ -19410,28 +19410,28 @@
       }
      while (true);
   };
-  protoOf(SnapshotIdSet$iterator$slambda).d29 = function ($this$sequence, completion) {
-    var i = new SnapshotIdSet$iterator$slambda(this.t28_1, completion);
-    i.u28_1 = $this$sequence;
+  protoOf(SnapshotIdSet$iterator$slambda).f29 = function ($this$sequence, completion) {
+    var i = new SnapshotIdSet$iterator$slambda(this.v28_1, completion);
+    i.w28_1 = $this$sequence;
     return i;
   };
   function SnapshotIdSet$iterator$slambda_0(this$0, resultContinuation) {
     var i = new SnapshotIdSet$iterator$slambda(this$0, resultContinuation);
     var l = function ($this$sequence, $completion) {
-      return i.c29($this$sequence, $completion);
+      return i.e29($this$sequence, $completion);
     };
     l.$arity = 1;
     return l;
   }
   function SnapshotIdSet(upperSet, lowerSet, lowerBound, belowBound) {
     Companion_getInstance_14();
-    this.v25_1 = upperSet;
-    this.w25_1 = lowerSet;
-    this.x25_1 = lowerBound;
-    this.y25_1 = belowBound;
+    this.x25_1 = upperSet;
+    this.y25_1 = lowerSet;
+    this.z25_1 = lowerBound;
+    this.a26_1 = belowBound;
   }
   protoOf(SnapshotIdSet).m = function (bit) {
-    var offset = bit - this.x25_1 | 0;
+    var offset = bit - this.z25_1 | 0;
     var tmp;
     if (offset >= 0) {
       Companion_getInstance();
@@ -19440,7 +19440,7 @@
       tmp = false;
     }
     if (tmp) {
-      return !(new Long(1, 0)).lc(offset).oc(this.w25_1).equals(new Long(0, 0));
+      return !(new Long(1, 0)).lc(offset).oc(this.y25_1).equals(new Long(0, 0));
     } else {
       var tmp_0;
       Companion_getInstance();
@@ -19453,12 +19453,12 @@
       if (tmp_0) {
         var tmp_1 = new Long(1, 0);
         Companion_getInstance();
-        return !tmp_1.lc(offset - 64 | 0).oc(this.v25_1).equals(new Long(0, 0));
+        return !tmp_1.lc(offset - 64 | 0).oc(this.x25_1).equals(new Long(0, 0));
       } else {
         if (offset > 0) {
           return false;
         } else {
-          var tmp0_safe_receiver = this.y25_1;
+          var tmp0_safe_receiver = this.a26_1;
           var tmp_2;
           if (tmp0_safe_receiver == null) {
             tmp_2 = null;
@@ -19474,8 +19474,8 @@
       }
     }
   };
-  protoOf(SnapshotIdSet).i26 = function (bit) {
-    var offset = bit - this.x25_1 | 0;
+  protoOf(SnapshotIdSet).k26 = function (bit) {
+    var offset = bit - this.z25_1 | 0;
     var tmp;
     if (offset >= 0) {
       Companion_getInstance();
@@ -19485,8 +19485,8 @@
     }
     if (tmp) {
       var mask = (new Long(1, 0)).lc(offset);
-      if (this.w25_1.oc(mask).equals(new Long(0, 0))) {
-        return new SnapshotIdSet(this.v25_1, this.w25_1.pc(mask), this.x25_1, this.y25_1);
+      if (this.y25_1.oc(mask).equals(new Long(0, 0))) {
+        return new SnapshotIdSet(this.x25_1, this.y25_1.pc(mask), this.z25_1, this.a26_1);
       }
     } else {
       var tmp_0;
@@ -19501,16 +19501,16 @@
         var tmp_1 = new Long(1, 0);
         Companion_getInstance();
         var mask_0 = tmp_1.lc(offset - 64 | 0);
-        if (this.v25_1.oc(mask_0).equals(new Long(0, 0))) {
-          return new SnapshotIdSet(this.v25_1.pc(mask_0), this.w25_1, this.x25_1, this.y25_1);
+        if (this.x25_1.oc(mask_0).equals(new Long(0, 0))) {
+          return new SnapshotIdSet(this.x25_1.pc(mask_0), this.y25_1, this.z25_1, this.a26_1);
         }
       } else {
         Companion_getInstance();
         if (offset >= imul(64, 2)) {
           if (!this.m(bit)) {
-            var newUpperSet = this.v25_1;
-            var newLowerSet = this.w25_1;
-            var newLowerBound = this.x25_1;
+            var newUpperSet = this.x25_1;
+            var newLowerSet = this.y25_1;
+            var newLowerBound = this.z25_1;
             var newBelowBound = null;
             var tmp_2 = bit + 1 | 0;
             Companion_getInstance();
@@ -19525,7 +19525,7 @@
                   var this_0 = ArrayList_init_$Create$();
                   // Inline function 'kotlin.contracts.contract' call
                   // Inline function 'androidx.compose.runtime.snapshots.SnapshotIdSet.set.<anonymous>' call
-                  var tmp0_safe_receiver = this.y25_1;
+                  var tmp0_safe_receiver = this.a26_1;
                   if (tmp0_safe_receiver == null)
                     null;
                   else {
@@ -19573,15 +19573,15 @@
             var tmp_7 = newLowerBound;
             var tmp0_safe_receiver_0 = newBelowBound;
             var tmp1_elvis_lhs = tmp0_safe_receiver_0 == null ? null : toIntArray(tmp0_safe_receiver_0);
-            return (new SnapshotIdSet(tmp_5, tmp_6, tmp_7, tmp1_elvis_lhs == null ? this.y25_1 : tmp1_elvis_lhs)).i26(bit);
+            return (new SnapshotIdSet(tmp_5, tmp_6, tmp_7, tmp1_elvis_lhs == null ? this.a26_1 : tmp1_elvis_lhs)).k26(bit);
           }
         } else {
-          var tmp2_elvis_lhs = this.y25_1;
+          var tmp2_elvis_lhs = this.a26_1;
           var tmp_8;
           if (tmp2_elvis_lhs == null) {
             // Inline function 'kotlin.intArrayOf' call
             var tmp$ret$3 = new Int32Array([bit]);
-            return new SnapshotIdSet(this.v25_1, this.w25_1, this.x25_1, tmp$ret$3);
+            return new SnapshotIdSet(this.x25_1, this.y25_1, this.z25_1, tmp$ret$3);
           } else {
             tmp_8 = tmp2_elvis_lhs;
           }
@@ -19608,15 +19608,15 @@
             // Inline function 'kotlin.js.asDynamic' call
             arrayCopy(tmp_10, newBelowBound_0, destinationOffset, insertLocation, endIndex);
             newBelowBound_0[insertLocation] = bit;
-            return new SnapshotIdSet(this.v25_1, this.w25_1, this.x25_1, newBelowBound_0);
+            return new SnapshotIdSet(this.x25_1, this.y25_1, this.z25_1, newBelowBound_0);
           }
         }
       }
     }
     return this;
   };
-  protoOf(SnapshotIdSet).z25 = function (bit) {
-    var offset = bit - this.x25_1 | 0;
+  protoOf(SnapshotIdSet).b26 = function (bit) {
+    var offset = bit - this.z25_1 | 0;
     var tmp;
     if (offset >= 0) {
       Companion_getInstance();
@@ -19626,8 +19626,8 @@
     }
     if (tmp) {
       var mask = (new Long(1, 0)).lc(offset);
-      if (!this.w25_1.oc(mask).equals(new Long(0, 0))) {
-        return new SnapshotIdSet(this.v25_1, this.w25_1.oc(mask.kc()), this.x25_1, this.y25_1);
+      if (!this.y25_1.oc(mask).equals(new Long(0, 0))) {
+        return new SnapshotIdSet(this.x25_1, this.y25_1.oc(mask.kc()), this.z25_1, this.a26_1);
       }
     } else {
       var tmp_0;
@@ -19642,18 +19642,18 @@
         var tmp_1 = new Long(1, 0);
         Companion_getInstance();
         var mask_0 = tmp_1.lc(offset - 64 | 0);
-        if (!this.v25_1.oc(mask_0).equals(new Long(0, 0))) {
-          return new SnapshotIdSet(this.v25_1.oc(mask_0.kc()), this.w25_1, this.x25_1, this.y25_1);
+        if (!this.x25_1.oc(mask_0).equals(new Long(0, 0))) {
+          return new SnapshotIdSet(this.x25_1.oc(mask_0.kc()), this.y25_1, this.z25_1, this.a26_1);
         }
       } else {
         if (offset < 0) {
-          var array = this.y25_1;
+          var array = this.a26_1;
           if (!(array == null)) {
             var location = binarySearch(array, bit);
             if (location >= 0) {
               var newSize = array.length - 1 | 0;
               if (newSize === 0) {
-                return new SnapshotIdSet(this.v25_1, this.w25_1, this.x25_1, null);
+                return new SnapshotIdSet(this.x25_1, this.y25_1, this.z25_1, null);
               }
               var newBelowBound = new Int32Array(newSize);
               if (location > 0) {
@@ -19676,7 +19676,7 @@
                 // Inline function 'kotlin.js.asDynamic' call
                 arrayCopy(tmp_3, newBelowBound, location, startIndex, endIndex);
               }
-              return new SnapshotIdSet(this.v25_1, this.w25_1, this.x25_1, newBelowBound);
+              return new SnapshotIdSet(this.x25_1, this.y25_1, this.z25_1, newBelowBound);
             }
           }
         }
@@ -19684,14 +19684,14 @@
     }
     return this;
   };
-  protoOf(SnapshotIdSet).n26 = function (bits) {
-    if (bits === Companion_getInstance_14().g26_1)
+  protoOf(SnapshotIdSet).p26 = function (bits) {
+    if (bits === Companion_getInstance_14().i26_1)
       return this;
-    if (this === Companion_getInstance_14().g26_1)
-      return Companion_getInstance_14().g26_1;
+    if (this === Companion_getInstance_14().i26_1)
+      return Companion_getInstance_14().i26_1;
     var tmp;
-    if (bits.x25_1 === this.x25_1 ? bits.y25_1 === this.y25_1 : false) {
-      tmp = new SnapshotIdSet(this.v25_1.oc(bits.v25_1.kc()), this.w25_1.oc(bits.w25_1.kc()), this.x25_1, this.y25_1);
+    if (bits.z25_1 === this.z25_1 ? bits.a26_1 === this.a26_1 : false) {
+      tmp = new SnapshotIdSet(this.x25_1.oc(bits.x25_1.kc()), this.y25_1.oc(bits.y25_1.kc()), this.z25_1, this.a26_1);
     } else {
       // Inline function 'kotlin.collections.fold' call
       var accumulator = this;
@@ -19699,30 +19699,30 @@
       while (tmp0_iterator.b1()) {
         var element = tmp0_iterator.d1();
         // Inline function 'androidx.compose.runtime.snapshots.SnapshotIdSet.andNot.<anonymous>' call
-        accumulator = accumulator.z25(element);
+        accumulator = accumulator.b26(element);
       }
       tmp = accumulator;
     }
     return tmp;
   };
-  protoOf(SnapshotIdSet).o26 = function (bits) {
-    if (bits === Companion_getInstance_14().g26_1)
+  protoOf(SnapshotIdSet).q26 = function (bits) {
+    if (bits === Companion_getInstance_14().i26_1)
       return this;
-    if (this === Companion_getInstance_14().g26_1)
+    if (this === Companion_getInstance_14().i26_1)
       return bits;
     var tmp;
-    if (bits.x25_1 === this.x25_1 ? bits.y25_1 === this.y25_1 : false) {
-      tmp = new SnapshotIdSet(this.v25_1.pc(bits.v25_1), this.w25_1.pc(bits.w25_1), this.x25_1, this.y25_1);
+    if (bits.z25_1 === this.z25_1 ? bits.a26_1 === this.a26_1 : false) {
+      tmp = new SnapshotIdSet(this.x25_1.pc(bits.x25_1), this.y25_1.pc(bits.y25_1), this.z25_1, this.a26_1);
     } else {
       var tmp_0;
-      if (this.y25_1 == null) {
+      if (this.a26_1 == null) {
         // Inline function 'kotlin.collections.fold' call
         var accumulator = bits;
         var tmp0_iterator = this.n();
         while (tmp0_iterator.b1()) {
           var element = tmp0_iterator.d1();
           // Inline function 'androidx.compose.runtime.snapshots.SnapshotIdSet.or.<anonymous>' call
-          accumulator = accumulator.i26(element);
+          accumulator = accumulator.k26(element);
         }
         tmp_0 = accumulator;
       } else {
@@ -19732,7 +19732,7 @@
         while (tmp0_iterator_0.b1()) {
           var element_0 = tmp0_iterator_0.d1();
           // Inline function 'androidx.compose.runtime.snapshots.SnapshotIdSet.or.<anonymous>' call
-          accumulator_0 = accumulator_0.i26(element_0);
+          accumulator_0 = accumulator_0.k26(element_0);
         }
         tmp_0 = accumulator_0;
       }
@@ -19743,15 +19743,15 @@
   protoOf(SnapshotIdSet).n = function () {
     return sequence(SnapshotIdSet$iterator$slambda_0(this, null)).n();
   };
-  protoOf(SnapshotIdSet).i27 = function (default_0) {
-    var belowBound = this.y25_1;
+  protoOf(SnapshotIdSet).k27 = function (default_0) {
+    var belowBound = this.a26_1;
     if (!(belowBound == null))
       return belowBound[0];
-    if (!this.w25_1.equals(new Long(0, 0)))
-      return this.x25_1 + lowestBitOf(this.w25_1) | 0;
-    if (!this.v25_1.equals(new Long(0, 0))) {
+    if (!this.y25_1.equals(new Long(0, 0)))
+      return this.z25_1 + lowestBitOf(this.y25_1) | 0;
+    if (!this.x25_1.equals(new Long(0, 0))) {
       Companion_getInstance();
-      return (this.x25_1 + 64 | 0) + lowestBitOf(this.v25_1) | 0;
+      return (this.z25_1 + 64 | 0) + lowestBitOf(this.x25_1) | 0;
     }
     return default_0;
   };
@@ -19820,50 +19820,50 @@
   var sync;
   function StateListStateRecord(list) {
     StateRecord.call(this);
-    this.g29_1 = list;
-    this.h29_1 = 0;
-    this.i29_1 = 0;
+    this.i29_1 = list;
+    this.j29_1 = 0;
+    this.k29_1 = 0;
   }
-  protoOf(StateListStateRecord).n1t = function (value) {
+  protoOf(StateListStateRecord).p1t = function (value) {
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     _get_sync_$accessor$8381d7_hayxw0();
     var tmp = this;
-    tmp.g29_1 = (value instanceof StateListStateRecord ? value : THROW_CCE()).g29_1;
-    this.h29_1 = value.h29_1;
-    this.i29_1 = value.i29_1;
+    tmp.i29_1 = (value instanceof StateListStateRecord ? value : THROW_CCE()).i29_1;
+    this.j29_1 = value.j29_1;
+    this.k29_1 = value.k29_1;
   };
-  protoOf(StateListStateRecord).o1t = function () {
-    return new StateListStateRecord(this.g29_1);
+  protoOf(StateListStateRecord).q1t = function () {
+    return new StateListStateRecord(this.i29_1);
   };
   function SnapshotStateList() {
-    this.j29_1 = new StateListStateRecord(persistentListOf());
+    this.l29_1 = new StateListStateRecord(persistentListOf());
   }
-  protoOf(SnapshotStateList).s1t = function () {
-    return this.j29_1;
+  protoOf(SnapshotStateList).u1t = function () {
+    return this.l29_1;
   };
-  protoOf(SnapshotStateList).t1t = function (value) {
-    value.e26_1 = this.j29_1;
+  protoOf(SnapshotStateList).v1t = function (value) {
+    value.g26_1 = this.l29_1;
     var tmp = this;
-    tmp.j29_1 = value instanceof StateListStateRecord ? value : THROW_CCE();
+    tmp.l29_1 = value instanceof StateListStateRecord ? value : THROW_CCE();
   };
-  protoOf(SnapshotStateList).k29 = function () {
+  protoOf(SnapshotStateList).m29 = function () {
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.withCurrent' call
     // Inline function 'androidx.compose.runtime.snapshots.withCurrent' call
-    var tmp = this.j29_1;
+    var tmp = this.l29_1;
     var this_0 = tmp instanceof StateListStateRecord ? tmp : THROW_CCE();
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.<get-structure>.<anonymous>' call
-    return current(this_0).i29_1;
+    return current(this_0).k29_1;
   };
-  protoOf(SnapshotStateList).l29 = function () {
-    var tmp = this.j29_1;
+  protoOf(SnapshotStateList).n29 = function () {
+    var tmp = this.l29_1;
     return readable_0(tmp instanceof StateListStateRecord ? tmp : THROW_CCE(), this);
   };
   protoOf(SnapshotStateList).l = function () {
-    return this.l29().g29_1.l();
+    return this.n29().i29_1.l();
   };
   protoOf(SnapshotStateList).bf = function (element) {
-    return this.l29().g29_1.q(element);
+    return this.n29().i29_1.q(element);
   };
   protoOf(SnapshotStateList).q = function (element) {
     if (!(element == null ? true : !(element == null)))
@@ -19871,24 +19871,24 @@
     return this.bf((element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
   protoOf(SnapshotStateList).cf = function (elements) {
-    return this.l29().g29_1.r(elements);
+    return this.n29().i29_1.r(elements);
   };
   protoOf(SnapshotStateList).r = function (elements) {
     return this.cf(elements);
   };
   protoOf(SnapshotStateList).m = function (index) {
-    return this.l29().g29_1.m(index);
+    return this.n29().i29_1.m(index);
   };
-  protoOf(SnapshotStateList).m29 = function (element) {
-    return this.l29().g29_1.o(element);
+  protoOf(SnapshotStateList).o29 = function (element) {
+    return this.n29().i29_1.o(element);
   };
   protoOf(SnapshotStateList).o = function (element) {
     if (!(element == null ? true : !(element == null)))
       return -1;
-    return this.m29((element == null ? true : !(element == null)) ? element : THROW_CCE());
+    return this.o29((element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
   protoOf(SnapshotStateList).s = function () {
-    return this.l29().g29_1.s();
+    return this.n29().i29_1.s();
   };
   protoOf(SnapshotStateList).n = function () {
     return this.vb();
@@ -19899,7 +19899,7 @@
   protoOf(SnapshotStateList).p = function (index) {
     return new StateListIterator(this, index);
   };
-  protoOf(SnapshotStateList).x1c = function (element) {
+  protoOf(SnapshotStateList).z1c = function (element) {
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate' call
     // Inline function 'kotlin.run' call
     // Inline function 'kotlin.contracts.contract' call
@@ -19913,12 +19913,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.withCurrent' call
       // Inline function 'androidx.compose.runtime.snapshots.withCurrent' call
-      var tmp = this.j29_1;
+      var tmp = this.l29_1;
       var this_0 = tmp instanceof StateListStateRecord ? tmp : THROW_CCE();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var current_0 = current(this_0);
-      currentModification = current_0.h29_1;
-      oldList = current_0.g29_1;
+      currentModification = current_0.j29_1;
+      oldList = current_0.i29_1;
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.add.<anonymous>' call
       var newList = ensureNotNull(oldList).y(element);
       if (equals(newList, oldList)) {
@@ -19927,7 +19927,7 @@
       }
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.writable' call
       // Inline function 'androidx.compose.runtime.snapshots.writable' call
-      var tmp_0 = this.j29_1;
+      var tmp_0 = this.l29_1;
       var this_1 = tmp_0 instanceof StateListStateRecord ? tmp_0 : THROW_CCE();
       var snapshot = get_snapshotInitializer();
       // Inline function 'kotlin.also' call
@@ -19936,7 +19936,7 @@
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       // Inline function 'androidx.compose.runtime.snapshots.writable.<anonymous>' call
-      snapshot = Companion_instance_12.x11();
+      snapshot = Companion_instance_12.z11();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>' call
       var $this$writable = writableRecord(this_1, this, snapshot);
       // Inline function 'androidx.compose.runtime.synchronized' call
@@ -19944,12 +19944,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var tmp_1;
-      if ($this$writable.h29_1 === currentModification) {
-        $this$writable.g29_1 = newList;
+      if ($this$writable.j29_1 === currentModification) {
+        $this$writable.i29_1 = newList;
         if (true) {
-          $this$writable.i29_1 = $this$writable.i29_1 + 1 | 0;
+          $this$writable.k29_1 = $this$writable.k29_1 + 1 | 0;
         }
-        $this$writable.h29_1 = $this$writable.h29_1 + 1 | 0;
+        $this$writable.j29_1 = $this$writable.j29_1 + 1 | 0;
         tmp_1 = true;
       } else {
         tmp_1 = false;
@@ -19966,9 +19966,9 @@
     return result;
   };
   protoOf(SnapshotStateList).y = function (element) {
-    return this.x1c((element == null ? true : !(element == null)) ? element : THROW_CCE());
+    return this.z1c((element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
-  protoOf(SnapshotStateList).n29 = function (index, element) {
+  protoOf(SnapshotStateList).p29 = function (index, element) {
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate' call
     // Inline function 'kotlin.run' call
     // Inline function 'kotlin.contracts.contract' call
@@ -19982,21 +19982,21 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.withCurrent' call
       // Inline function 'androidx.compose.runtime.snapshots.withCurrent' call
-      var tmp = this.j29_1;
+      var tmp = this.l29_1;
       var this_0 = tmp instanceof StateListStateRecord ? tmp : THROW_CCE();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var current_0 = current(this_0);
-      currentModification = current_0.h29_1;
-      oldList = current_0.g29_1;
+      currentModification = current_0.j29_1;
+      oldList = current_0.i29_1;
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.add.<anonymous>' call
-      var newList = ensureNotNull(oldList).y20(index, element);
+      var newList = ensureNotNull(oldList).a21(index, element);
       if (equals(newList, oldList)) {
         result = false;
         break $l$loop_0;
       }
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.writable' call
       // Inline function 'androidx.compose.runtime.snapshots.writable' call
-      var tmp_0 = this.j29_1;
+      var tmp_0 = this.l29_1;
       var this_1 = tmp_0 instanceof StateListStateRecord ? tmp_0 : THROW_CCE();
       var snapshot = get_snapshotInitializer();
       // Inline function 'kotlin.also' call
@@ -20005,7 +20005,7 @@
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       // Inline function 'androidx.compose.runtime.snapshots.writable.<anonymous>' call
-      snapshot = Companion_instance_12.x11();
+      snapshot = Companion_instance_12.z11();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>' call
       var $this$writable = writableRecord(this_1, this, snapshot);
       // Inline function 'androidx.compose.runtime.synchronized' call
@@ -20013,12 +20013,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var tmp_1;
-      if ($this$writable.h29_1 === currentModification) {
-        $this$writable.g29_1 = newList;
+      if ($this$writable.j29_1 === currentModification) {
+        $this$writable.i29_1 = newList;
         if (true) {
-          $this$writable.i29_1 = $this$writable.i29_1 + 1 | 0;
+          $this$writable.k29_1 = $this$writable.k29_1 + 1 | 0;
         }
-        $this$writable.h29_1 = $this$writable.h29_1 + 1 | 0;
+        $this$writable.j29_1 = $this$writable.j29_1 + 1 | 0;
         tmp_1 = true;
       } else {
         tmp_1 = false;
@@ -20035,9 +20035,9 @@
     return Unit_instance;
   };
   protoOf(SnapshotStateList).w1 = function (index, element) {
-    return this.n29(index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
+    return this.p29(index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
-  protoOf(SnapshotStateList).o29 = function (elements) {
+  protoOf(SnapshotStateList).q29 = function (elements) {
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate' call
     // Inline function 'kotlin.run' call
     // Inline function 'kotlin.contracts.contract' call
@@ -20051,12 +20051,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.withCurrent' call
       // Inline function 'androidx.compose.runtime.snapshots.withCurrent' call
-      var tmp = this.j29_1;
+      var tmp = this.l29_1;
       var this_0 = tmp instanceof StateListStateRecord ? tmp : THROW_CCE();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var current_0 = current(this_0);
-      currentModification = current_0.h29_1;
-      oldList = current_0.g29_1;
+      currentModification = current_0.j29_1;
+      oldList = current_0.i29_1;
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.addAll.<anonymous>' call
       var newList = ensureNotNull(oldList).e1(elements);
       if (equals(newList, oldList)) {
@@ -20065,7 +20065,7 @@
       }
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.writable' call
       // Inline function 'androidx.compose.runtime.snapshots.writable' call
-      var tmp_0 = this.j29_1;
+      var tmp_0 = this.l29_1;
       var this_1 = tmp_0 instanceof StateListStateRecord ? tmp_0 : THROW_CCE();
       var snapshot = get_snapshotInitializer();
       // Inline function 'kotlin.also' call
@@ -20074,7 +20074,7 @@
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       // Inline function 'androidx.compose.runtime.snapshots.writable.<anonymous>' call
-      snapshot = Companion_instance_12.x11();
+      snapshot = Companion_instance_12.z11();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>' call
       var $this$writable = writableRecord(this_1, this, snapshot);
       // Inline function 'androidx.compose.runtime.synchronized' call
@@ -20082,12 +20082,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var tmp_1;
-      if ($this$writable.h29_1 === currentModification) {
-        $this$writable.g29_1 = newList;
+      if ($this$writable.j29_1 === currentModification) {
+        $this$writable.i29_1 = newList;
         if (true) {
-          $this$writable.i29_1 = $this$writable.i29_1 + 1 | 0;
+          $this$writable.k29_1 = $this$writable.k29_1 + 1 | 0;
         }
-        $this$writable.h29_1 = $this$writable.h29_1 + 1 | 0;
+        $this$writable.j29_1 = $this$writable.j29_1 + 1 | 0;
         tmp_1 = true;
       } else {
         tmp_1 = false;
@@ -20104,12 +20104,12 @@
     return result;
   };
   protoOf(SnapshotStateList).e1 = function (elements) {
-    return this.o29(elements);
+    return this.q29(elements);
   };
   protoOf(SnapshotStateList).f1 = function () {
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.writable' call
     // Inline function 'androidx.compose.runtime.snapshots.writable' call
-    var tmp = this.j29_1;
+    var tmp = this.l29_1;
     var this_0 = tmp instanceof StateListStateRecord ? tmp : THROW_CCE();
     var snapshot = get_snapshotInitializer();
     // Inline function 'kotlin.also' call
@@ -20118,21 +20118,21 @@
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     get_lock();
     // Inline function 'androidx.compose.runtime.snapshots.writable.<anonymous>' call
-    snapshot = Companion_instance_12.x11();
+    snapshot = Companion_instance_12.z11();
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.clear.<anonymous>' call
     var $this$writable = writableRecord(this_0, this, snapshot);
     // Inline function 'androidx.compose.runtime.synchronized' call
     // Inline function 'kotlinx.atomicfu.locks.synchronized' call
     _get_sync_$accessor$8381d7_hayxw0();
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.clear.<anonymous>.<anonymous>' call
-    $this$writable.g29_1 = persistentListOf();
-    $this$writable.h29_1 = $this$writable.h29_1 + 1 | 0;
-    $this$writable.i29_1 = $this$writable.i29_1 + 1 | 0;
+    $this$writable.i29_1 = persistentListOf();
+    $this$writable.j29_1 = $this$writable.j29_1 + 1 | 0;
+    $this$writable.k29_1 = $this$writable.k29_1 + 1 | 0;
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.snapshots.writable.<anonymous>' call
     notifyWrite(snapshot, this);
   };
-  protoOf(SnapshotStateList).p29 = function (element) {
+  protoOf(SnapshotStateList).r29 = function (element) {
     // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate' call
     // Inline function 'kotlin.run' call
     // Inline function 'kotlin.contracts.contract' call
@@ -20146,12 +20146,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.withCurrent' call
       // Inline function 'androidx.compose.runtime.snapshots.withCurrent' call
-      var tmp = this.j29_1;
+      var tmp = this.l29_1;
       var this_0 = tmp instanceof StateListStateRecord ? tmp : THROW_CCE();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var current_0 = current(this_0);
-      currentModification = current_0.h29_1;
-      oldList = current_0.g29_1;
+      currentModification = current_0.j29_1;
+      oldList = current_0.i29_1;
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.remove.<anonymous>' call
       var newList = ensureNotNull(oldList).z(element);
       if (equals(newList, oldList)) {
@@ -20160,7 +20160,7 @@
       }
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.writable' call
       // Inline function 'androidx.compose.runtime.snapshots.writable' call
-      var tmp_0 = this.j29_1;
+      var tmp_0 = this.l29_1;
       var this_1 = tmp_0 instanceof StateListStateRecord ? tmp_0 : THROW_CCE();
       var snapshot = get_snapshotInitializer();
       // Inline function 'kotlin.also' call
@@ -20169,7 +20169,7 @@
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       // Inline function 'androidx.compose.runtime.snapshots.writable.<anonymous>' call
-      snapshot = Companion_instance_12.x11();
+      snapshot = Companion_instance_12.z11();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>' call
       var $this$writable = writableRecord(this_1, this, snapshot);
       // Inline function 'androidx.compose.runtime.synchronized' call
@@ -20177,12 +20177,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var tmp_1;
-      if ($this$writable.h29_1 === currentModification) {
-        $this$writable.g29_1 = newList;
+      if ($this$writable.j29_1 === currentModification) {
+        $this$writable.i29_1 = newList;
         if (true) {
-          $this$writable.i29_1 = $this$writable.i29_1 + 1 | 0;
+          $this$writable.k29_1 = $this$writable.k29_1 + 1 | 0;
         }
-        $this$writable.h29_1 = $this$writable.h29_1 + 1 | 0;
+        $this$writable.j29_1 = $this$writable.j29_1 + 1 | 0;
         tmp_1 = true;
       } else {
         tmp_1 = false;
@@ -20201,7 +20201,7 @@
   protoOf(SnapshotStateList).z = function (element) {
     if (!(element == null ? true : !(element == null)))
       return false;
-    return this.p29((element == null ? true : !(element == null)) ? element : THROW_CCE());
+    return this.r29((element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
   protoOf(SnapshotStateList).k1 = function (index) {
     // Inline function 'kotlin.also' call
@@ -20222,12 +20222,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.withCurrent' call
       // Inline function 'androidx.compose.runtime.snapshots.withCurrent' call
-      var tmp = this.j29_1;
+      var tmp = this.l29_1;
       var this_1 = tmp instanceof StateListStateRecord ? tmp : THROW_CCE();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var current_0 = current(this_1);
-      currentModification = current_0.h29_1;
-      oldList = current_0.g29_1;
+      currentModification = current_0.j29_1;
+      oldList = current_0.i29_1;
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.removeAt.<anonymous>.<anonymous>' call
       var newList = ensureNotNull(oldList).k1(index);
       if (equals(newList, oldList)) {
@@ -20236,7 +20236,7 @@
       }
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.writable' call
       // Inline function 'androidx.compose.runtime.snapshots.writable' call
-      var tmp_0 = this.j29_1;
+      var tmp_0 = this.l29_1;
       var this_2 = tmp_0 instanceof StateListStateRecord ? tmp_0 : THROW_CCE();
       var snapshot = get_snapshotInitializer();
       // Inline function 'kotlin.also' call
@@ -20245,7 +20245,7 @@
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       // Inline function 'androidx.compose.runtime.snapshots.writable.<anonymous>' call
-      snapshot = Companion_instance_12.x11();
+      snapshot = Companion_instance_12.z11();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>' call
       var $this$writable = writableRecord(this_2, this, snapshot);
       // Inline function 'androidx.compose.runtime.synchronized' call
@@ -20253,12 +20253,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var tmp_1;
-      if ($this$writable.h29_1 === currentModification) {
-        $this$writable.g29_1 = newList;
+      if ($this$writable.j29_1 === currentModification) {
+        $this$writable.i29_1 = newList;
         if (true) {
-          $this$writable.i29_1 = $this$writable.i29_1 + 1 | 0;
+          $this$writable.k29_1 = $this$writable.k29_1 + 1 | 0;
         }
-        $this$writable.h29_1 = $this$writable.h29_1 + 1 | 0;
+        $this$writable.j29_1 = $this$writable.j29_1 + 1 | 0;
         tmp_1 = true;
       } else {
         tmp_1 = false;
@@ -20274,7 +20274,7 @@
     }
     return this_0;
   };
-  protoOf(SnapshotStateList).q29 = function (index, element) {
+  protoOf(SnapshotStateList).s29 = function (index, element) {
     // Inline function 'kotlin.also' call
     var this_0 = this.m(index);
     // Inline function 'kotlin.contracts.contract' call
@@ -20293,12 +20293,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.withCurrent' call
       // Inline function 'androidx.compose.runtime.snapshots.withCurrent' call
-      var tmp = this.j29_1;
+      var tmp = this.l29_1;
       var this_1 = tmp instanceof StateListStateRecord ? tmp : THROW_CCE();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var current_0 = current(this_1);
-      currentModification = current_0.h29_1;
-      oldList = current_0.g29_1;
+      currentModification = current_0.j29_1;
+      oldList = current_0.i29_1;
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.set.<anonymous>.<anonymous>' call
       var newList = ensureNotNull(oldList).v(index, element);
       if (equals(newList, oldList)) {
@@ -20307,7 +20307,7 @@
       }
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.writable' call
       // Inline function 'androidx.compose.runtime.snapshots.writable' call
-      var tmp_0 = this.j29_1;
+      var tmp_0 = this.l29_1;
       var this_2 = tmp_0 instanceof StateListStateRecord ? tmp_0 : THROW_CCE();
       var snapshot = get_snapshotInitializer();
       // Inline function 'kotlin.also' call
@@ -20316,7 +20316,7 @@
       // Inline function 'kotlinx.atomicfu.locks.synchronized' call
       get_lock();
       // Inline function 'androidx.compose.runtime.snapshots.writable.<anonymous>' call
-      snapshot = Companion_instance_12.x11();
+      snapshot = Companion_instance_12.z11();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>' call
       var $this$writable = writableRecord(this_2, this, snapshot);
       // Inline function 'androidx.compose.runtime.synchronized' call
@@ -20324,12 +20324,12 @@
       _get_sync_$accessor$8381d7_hayxw0();
       // Inline function 'androidx.compose.runtime.snapshots.SnapshotStateList.conditionalUpdate.<anonymous>.<anonymous>.<anonymous>' call
       var tmp_1;
-      if ($this$writable.h29_1 === currentModification) {
-        $this$writable.g29_1 = newList;
+      if ($this$writable.j29_1 === currentModification) {
+        $this$writable.i29_1 = newList;
         if (false) {
-          $this$writable.i29_1 = $this$writable.i29_1 + 1 | 0;
+          $this$writable.k29_1 = $this$writable.k29_1 + 1 | 0;
         }
-        $this$writable.h29_1 = $this$writable.h29_1 + 1 | 0;
+        $this$writable.j29_1 = $this$writable.j29_1 + 1 | 0;
         tmp_1 = true;
       } else {
         tmp_1 = false;
@@ -20346,54 +20346,54 @@
     return this_0;
   };
   protoOf(SnapshotStateList).v = function (index, element) {
-    return this.q29(index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
+    return this.s29(index, (element == null ? true : !(element == null)) ? element : THROW_CCE());
   };
   function validateModification($this) {
-    if (!($this.r29_1.k29() === $this.u29_1)) {
+    if (!($this.t29_1.m29() === $this.w29_1)) {
       throw ConcurrentModificationException_init_$Create$();
     }
   }
   function StateListIterator(list, offset) {
-    this.r29_1 = list;
-    this.s29_1 = offset - 1 | 0;
-    this.t29_1 = -1;
-    this.u29_1 = this.r29_1.k29();
+    this.t29_1 = list;
+    this.u29_1 = offset - 1 | 0;
+    this.v29_1 = -1;
+    this.w29_1 = this.t29_1.m29();
   }
   protoOf(StateListIterator).q1 = function () {
-    return this.s29_1 >= 0;
+    return this.u29_1 >= 0;
   };
   protoOf(StateListIterator).r1 = function () {
     validateModification(this);
-    validateRange(this.s29_1, this.r29_1.l());
-    this.t29_1 = this.s29_1;
+    validateRange(this.u29_1, this.t29_1.l());
+    this.v29_1 = this.u29_1;
     // Inline function 'kotlin.also' call
-    var this_0 = this.r29_1.m(this.s29_1);
+    var this_0 = this.t29_1.m(this.u29_1);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.snapshots.StateListIterator.previous.<anonymous>' call
-    this.s29_1 = this.s29_1 - 1 | 0;
+    this.u29_1 = this.u29_1 - 1 | 0;
     return this_0;
   };
   protoOf(StateListIterator).b1 = function () {
-    return this.s29_1 < (this.r29_1.l() - 1 | 0);
+    return this.u29_1 < (this.t29_1.l() - 1 | 0);
   };
   protoOf(StateListIterator).d1 = function () {
     validateModification(this);
-    var newIndex = this.s29_1 + 1 | 0;
-    this.t29_1 = newIndex;
-    validateRange(newIndex, this.r29_1.l());
+    var newIndex = this.u29_1 + 1 | 0;
+    this.v29_1 = newIndex;
+    validateRange(newIndex, this.t29_1.l());
     // Inline function 'kotlin.also' call
-    var this_0 = this.r29_1.m(newIndex);
+    var this_0 = this.t29_1.m(newIndex);
     // Inline function 'kotlin.contracts.contract' call
     // Inline function 'androidx.compose.runtime.snapshots.StateListIterator.next.<anonymous>' call
-    this.s29_1 = newIndex;
+    this.u29_1 = newIndex;
     return this_0;
   };
   protoOf(StateListIterator).c1 = function () {
     validateModification(this);
-    this.r29_1.k1(this.s29_1);
-    this.s29_1 = this.s29_1 - 1 | 0;
-    this.t29_1 = -1;
-    this.u29_1 = this.r29_1.k29();
+    this.t29_1.k1(this.u29_1);
+    this.u29_1 = this.u29_1 - 1 | 0;
+    this.v29_1 = -1;
+    this.w29_1 = this.t29_1.m29();
   };
   function validateRange(index, size) {
     _init_properties_SnapshotStateList_kt__mu1ud5();
@@ -20426,16 +20426,16 @@
   }
   function find_3($this, value, hash) {
     var low = 0;
-    var high = $this.h28_1 - 1 | 0;
+    var high = $this.j28_1 - 1 | 0;
     while (low <= high) {
       var mid = (low + high | 0) >>> 1 | 0;
-      var midHash = $this.i28_1[mid];
+      var midHash = $this.k28_1[mid];
       if (midHash < hash)
         low = mid + 1 | 0;
       else if (midHash > hash)
         high = mid - 1 | 0;
       else {
-        var tmp0_safe_receiver = $this.j28_1[mid];
+        var tmp0_safe_receiver = $this.l28_1[mid];
         var midVal = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.lq();
         if (value === midVal)
           return mid;
@@ -20450,10 +20450,10 @@
       $l$loop: do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + -1 | 0;
-        if (!($this.i28_1[i] === valueHash)) {
+        if (!($this.k28_1[i] === valueHash)) {
           break $l$loop;
         }
-        var tmp1_safe_receiver = $this.j28_1[i];
+        var tmp1_safe_receiver = $this.l28_1[i];
         var v = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.lq();
         if (v === value) {
           return i;
@@ -20461,33 +20461,33 @@
       }
        while (0 <= inductionVariable);
     var inductionVariable_0 = midIndex + 1 | 0;
-    var last = $this.h28_1;
+    var last = $this.j28_1;
     if (inductionVariable_0 < last)
       do {
         var i_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        if (!($this.i28_1[i_0] === valueHash)) {
+        if (!($this.k28_1[i_0] === valueHash)) {
           return -(i_0 + 1 | 0) | 0;
         }
-        var tmp3_safe_receiver = $this.j28_1[i_0];
+        var tmp3_safe_receiver = $this.l28_1[i_0];
         var v_0 = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.lq();
         if (v_0 === value) {
           return i_0;
         }
       }
        while (inductionVariable_0 < last);
-    return -($this.h28_1 + 1 | 0) | 0;
+    return -($this.j28_1 + 1 | 0) | 0;
   }
   function SnapshotWeakSet() {
-    this.h28_1 = 0;
-    this.i28_1 = new Int32Array(16);
+    this.j28_1 = 0;
+    this.k28_1 = new Int32Array(16);
     var tmp = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp.j28_1 = fillArrayVal(Array(16), null);
+    tmp.l28_1 = fillArrayVal(Array(16), null);
   }
-  protoOf(SnapshotWeakSet).f1h = function (value) {
+  protoOf(SnapshotWeakSet).h1h = function (value) {
     var index;
-    var size = this.h28_1;
+    var size = this.j28_1;
     var hash = identityHashCode(value);
     if (size > 0) {
       index = find_3(this, value, hash);
@@ -20498,21 +20498,21 @@
       index = -1;
     }
     var insertIndex = -(index + 1 | 0) | 0;
-    var capacity = this.j28_1.length;
+    var capacity = this.l28_1.length;
     if (size === capacity) {
       var newCapacity = imul(capacity, 2);
       // Inline function 'kotlin.arrayOfNulls' call
       var newValues = fillArrayVal(Array(newCapacity), null);
       var newHashes = new Int32Array(newCapacity);
       // Inline function 'kotlin.collections.copyInto' call
-      var this_0 = this.j28_1;
+      var this_0 = this.l28_1;
       var destinationOffset = insertIndex + 1 | 0;
       arrayCopy(this_0, newValues, destinationOffset, insertIndex, size);
       // Inline function 'kotlin.collections.copyInto' call
-      var this_1 = this.j28_1;
+      var this_1 = this.l28_1;
       arrayCopy(this_1, newValues, 0, 0, insertIndex);
       // Inline function 'kotlin.collections.copyInto' call
-      var this_2 = this.i28_1;
+      var this_2 = this.k28_1;
       var destinationOffset_0 = insertIndex + 1 | 0;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
@@ -20523,21 +20523,21 @@
       // Inline function 'kotlin.collections.copyInto' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp_0 = this.i28_1;
+      var tmp_0 = this.k28_1;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       arrayCopy(tmp_0, newHashes, 0, 0, insertIndex);
-      this.j28_1 = newValues;
-      this.i28_1 = newHashes;
+      this.l28_1 = newValues;
+      this.k28_1 = newHashes;
     } else {
       // Inline function 'kotlin.collections.copyInto' call
-      var this_3 = this.j28_1;
-      var destination = this.j28_1;
+      var this_3 = this.l28_1;
+      var destination = this.l28_1;
       var destinationOffset_1 = insertIndex + 1 | 0;
       arrayCopy(this_3, destination, destinationOffset_1, insertIndex, size);
       // Inline function 'kotlin.collections.copyInto' call
-      var this_4 = this.i28_1;
-      var destination_0 = this.i28_1;
+      var this_4 = this.k28_1;
+      var destination_0 = this.k28_1;
       var destinationOffset_2 = insertIndex + 1 | 0;
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
@@ -20546,17 +20546,17 @@
       // Inline function 'kotlin.js.asDynamic' call
       arrayCopy(tmp_1, destination_0, destinationOffset_2, insertIndex, size);
     }
-    this.j28_1[insertIndex] = new WeakReference(value);
-    this.i28_1[insertIndex] = hash;
-    this.h28_1 = this.h28_1 + 1 | 0;
+    this.l28_1[insertIndex] = new WeakReference(value);
+    this.k28_1[insertIndex] = hash;
+    this.j28_1 = this.j28_1 + 1 | 0;
     return true;
   };
   function StateObjectImpl() {
-    this.w1j_1 = new AtomicInt(0);
+    this.y1j_1 = new AtomicInt(0);
   }
-  protoOf(StateObjectImpl).x1j = function (reader) {
+  protoOf(StateObjectImpl).z1j = function (reader) {
     do {
-      var old = _ReaderKind___init__impl__jqeebu(this.w1j_1.lq());
+      var old = _ReaderKind___init__impl__jqeebu(this.y1j_1.lq());
       // Inline function 'androidx.compose.runtime.snapshots.ReaderKind.isReadIn' call
       var this_0 = old;
       if (!((_ReaderKind___get_mask__impl__gmhzqb(this_0) & _ReaderKind___get_mask__impl__gmhzqb(reader)) === 0))
@@ -20565,11 +20565,11 @@
       var this_1 = old;
       var new_0 = _ReaderKind___init__impl__jqeebu(_ReaderKind___get_mask__impl__gmhzqb(this_1) | _ReaderKind___get_mask__impl__gmhzqb(reader));
     }
-     while (!this.w1j_1.v29(_ReaderKind___get_mask__impl__gmhzqb(old), _ReaderKind___get_mask__impl__gmhzqb(new_0)));
+     while (!this.y1j_1.x29(_ReaderKind___get_mask__impl__gmhzqb(old), _ReaderKind___get_mask__impl__gmhzqb(new_0)));
   };
-  protoOf(StateObjectImpl).y1n = function (reader) {
+  protoOf(StateObjectImpl).a1o = function (reader) {
     // Inline function 'androidx.compose.runtime.snapshots.ReaderKind.isReadIn' call
-    var this_0 = _ReaderKind___init__impl__jqeebu(this.w1j_1.lq());
+    var this_0 = _ReaderKind___init__impl__jqeebu(this.y1j_1.lq());
     return !((_ReaderKind___get_mask__impl__gmhzqb(this_0) & _ReaderKind___get_mask__impl__gmhzqb(reader)) === 0);
   };
   function _ReaderKind___init__impl__jqeebu(mask) {
@@ -20602,31 +20602,31 @@
     }
   }
   function AtomicReference(value) {
-    this.e1i_1 = value;
+    this.g1i_1 = value;
   }
   protoOf(AtomicReference).lq = function () {
     // Inline function 'kotlinx.atomicfu.atomicfu_getValue' call
-    return this.e1i_1;
+    return this.g1i_1;
   };
-  protoOf(AtomicReference).w1i = function (value) {
+  protoOf(AtomicReference).y1i = function (value) {
     // Inline function 'kotlinx.atomicfu.atomicfu_setValue' call
     // Inline function 'androidx.compose.runtime.AtomicReference.set.<set-delegate>' call
-    this.e1i_1 = value;
+    this.g1i_1 = value;
   };
-  protoOf(AtomicReference).f1i = function (value) {
+  protoOf(AtomicReference).h1i = function (value) {
     // Inline function 'kotlinx.atomicfu.atomicfu_getAndSet' call
-    var oldValue = this.e1i_1;
+    var oldValue = this.g1i_1;
     // Inline function 'androidx.compose.runtime.AtomicReference.getAndSet.<set-delegate>' call
-    this.e1i_1 = value;
+    this.g1i_1 = value;
     return oldValue;
   };
-  protoOf(AtomicReference).s1j = function (expect, newValue) {
+  protoOf(AtomicReference).u1j = function (expect, newValue) {
     var tmp$ret$0;
     $l$block_0: {
       // Inline function 'kotlinx.atomicfu.atomicfu_compareAndSet' call
-      if (equals(this.e1i_1, expect)) {
+      if (equals(this.g1i_1, expect)) {
         // Inline function 'androidx.compose.runtime.AtomicReference.compareAndSet.<set-delegate>' call
-        this.e1i_1 = newValue;
+        this.g1i_1 = newValue;
         tmp$ret$0 = true;
         break $l$block_0;
       } else {
@@ -20637,25 +20637,25 @@
     return tmp$ret$0;
   };
   function AtomicInt(value) {
-    this.q27_1 = value;
+    this.s27_1 = value;
   }
   protoOf(AtomicInt).lq = function () {
     // Inline function 'kotlinx.atomicfu.atomicfu_getValue' call
-    return this.q27_1;
+    return this.s27_1;
   };
-  protoOf(AtomicInt).o27 = function (amount) {
+  protoOf(AtomicInt).q27 = function (amount) {
     // Inline function 'kotlinx.atomicfu.atomicfu_addAndGet' call
     // Inline function 'androidx.compose.runtime.AtomicInt.add.<set-delegate>' call
-    this.q27_1 = this.q27_1 + amount | 0;
-    return this.q27_1;
+    this.s27_1 = this.s27_1 + amount | 0;
+    return this.s27_1;
   };
-  protoOf(AtomicInt).v29 = function (expect, newValue) {
+  protoOf(AtomicInt).x29 = function (expect, newValue) {
     var tmp$ret$0;
     $l$block_0: {
       // Inline function 'kotlinx.atomicfu.atomicfu_compareAndSet' call
-      if (equals(this.q27_1, expect)) {
+      if (equals(this.s27_1, expect)) {
         // Inline function 'androidx.compose.runtime.AtomicInt.compareAndSet.<set-delegate>' call
-        this.q27_1 = newValue;
+        this.s27_1 = newValue;
         tmp$ret$0 = true;
         break $l$block_0;
       } else {
@@ -20666,13 +20666,13 @@
     return tmp$ret$0;
   };
   function trackWrite($this) {
-    if ($this.t24_1) {
-      var scope = $this.v24_1;
+    if ($this.v24_1) {
+      var scope = $this.x24_1;
       if (!(scope == null)) {
-        scope.i1k();
-        $this.v24_1 = null;
+        scope.k1k();
+        $this.x24_1 = null;
       }
-      var scopes = $this.w24_1;
+      var scopes = $this.y24_1;
       if (!(scopes == null)) {
         var inductionVariable = 0;
         var last = scopes.l();
@@ -20681,7 +20681,7 @@
             var index = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
             var item = scopes.m(index);
-            item.i1k();
+            item.k1k();
           }
            while (inductionVariable < last);
         scopes.f1();
@@ -20689,19 +20689,19 @@
     }
   }
   function trackRead($this, composer) {
-    if ($this.t24_1) {
-      var scope = composer.q1g();
+    if ($this.v24_1) {
+      var scope = composer.s1g();
       if (!(scope == null)) {
-        composer.r1g(scope);
-        var lastScope = $this.v24_1;
+        composer.t1g(scope);
+        var lastScope = $this.x24_1;
         if (replacableWith(lastScope, scope)) {
-          $this.v24_1 = scope;
+          $this.x24_1 = scope;
         } else {
-          var lastScopes = $this.w24_1;
+          var lastScopes = $this.y24_1;
           if (lastScopes == null) {
             // Inline function 'kotlin.collections.mutableListOf' call
             var newScopes = ArrayList_init_$Create$();
-            $this.w24_1 = newScopes;
+            $this.y24_1 = newScopes;
             newScopes.y(scope);
           } else {
             var inductionVariable = 0;
@@ -20724,7 +20724,7 @@
     }
   }
   function invoke$invoke(receiver, p0, p1) {
-    receiver.a1e(p0, p1);
+    receiver.c1e(p0, p1);
   }
   function ComposableLambdaImpl$invoke$invoke$ref($boundThis) {
     return function (p0, p1) {
@@ -20734,51 +20734,51 @@
   }
   function ComposableLambdaImpl$invoke$lambda(this$0, $p1, $changed) {
     return function (nc, _anonymous_parameter_1__qggqgd) {
-      this$0.w29($p1, nc, updateChangedFlags($changed) | 1);
+      this$0.y29($p1, nc, updateChangedFlags($changed) | 1);
       return Unit_instance;
     };
   }
   function ComposableLambdaImpl(key, tracked, block) {
-    this.s24_1 = key;
-    this.t24_1 = tracked;
-    this.u24_1 = block;
-    this.v24_1 = null;
-    this.w24_1 = null;
+    this.u24_1 = key;
+    this.v24_1 = tracked;
+    this.w24_1 = block;
+    this.x24_1 = null;
+    this.y24_1 = null;
   }
-  protoOf(ComposableLambdaImpl).x24 = function (block) {
-    if (!equals(this.u24_1, block)) {
-      var oldBlockNull = this.u24_1 == null;
-      this.u24_1 = block;
+  protoOf(ComposableLambdaImpl).z24 = function (block) {
+    if (!equals(this.w24_1, block)) {
+      var oldBlockNull = this.w24_1 == null;
+      this.w24_1 = block;
       if (!oldBlockNull) {
         trackWrite(this);
       }
     }
   };
-  protoOf(ComposableLambdaImpl).a1e = function (c, changed) {
-    var c_0 = c.z1f(this.s24_1);
+  protoOf(ComposableLambdaImpl).c1e = function (c, changed) {
+    var c_0 = c.b1g(this.u24_1);
     trackRead(this, c_0);
-    var dirty = changed | (c_0.a16(this) ? differentBits(0) : sameBits(0));
-    var tmp = this.u24_1;
+    var dirty = changed | (c_0.c16(this) ? differentBits(0) : sameBits(0));
+    var tmp = this.w24_1;
     var result = ((!(tmp == null) ? typeof tmp === 'function' : false) ? tmp : THROW_CCE())(c_0, dirty);
-    var tmp0_safe_receiver = c_0.a1g();
+    var tmp0_safe_receiver = c_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(ComposableLambdaImpl$invoke$invoke$ref(this));
+      tmp0_safe_receiver.y1k(ComposableLambdaImpl$invoke$invoke$ref(this));
     }
     return result;
   };
-  protoOf(ComposableLambdaImpl).w29 = function (p1, c, changed) {
-    var c_0 = c.z1f(this.s24_1);
+  protoOf(ComposableLambdaImpl).y29 = function (p1, c, changed) {
+    var c_0 = c.b1g(this.u24_1);
     trackRead(this, c_0);
-    var dirty = changed | (c_0.a16(this) ? differentBits(1) : sameBits(1));
-    var tmp = this.u24_1;
+    var dirty = changed | (c_0.c16(this) ? differentBits(1) : sameBits(1));
+    var tmp = this.w24_1;
     var result = ((!(tmp == null) ? typeof tmp === 'function' : false) ? tmp : THROW_CCE())(p1, c_0, dirty);
-    var tmp0_safe_receiver = c_0.a1g();
+    var tmp0_safe_receiver = c_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(ComposableLambdaImpl$invoke$lambda(this, p1, changed));
+      tmp0_safe_receiver.y1k(ComposableLambdaImpl$invoke$lambda(this, p1, changed));
     }
     return result;
   };
@@ -20840,8 +20840,8 @@
   }
   function $withFrameNanosCOROUTINE$5(_this__u8e3s4, onFrame, resultContinuation) {
     CoroutineImpl.call(this, resultContinuation);
-    this.f2a_1 = _this__u8e3s4;
-    this.g2a_1 = onFrame;
+    this.h2a_1 = _this__u8e3s4;
+    this.i2a_1 = onFrame;
   }
   protoOf($withFrameNanosCOROUTINE$5).md = function () {
     var suspendResult = this.cd_1;
@@ -20854,7 +20854,7 @@
             this.ad_1 = 1;
             var safe = SafeContinuation_init_$Create$(intercepted(this));
             var tmp_0 = window;
-            tmp_0.requestAnimationFrame(MonotonicClockImpl$withFrameNanos$lambda(this.g2a_1, safe));
+            tmp_0.requestAnimationFrame(MonotonicClockImpl$withFrameNanos$lambda(this.i2a_1, safe));
             suspendResult = returnIfSuspended(safe.t6(), this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
@@ -20879,7 +20879,7 @@
   };
   function MonotonicClockImpl() {
   }
-  protoOf(MonotonicClockImpl).y12 = function (onFrame, $completion) {
+  protoOf(MonotonicClockImpl).a13 = function (onFrame, $completion) {
     var tmp = new $withFrameNanosCOROUTINE$5(this, onFrame, $completion);
     tmp.cd_1 = Unit_instance;
     tmp.dd_1 = null;
@@ -20908,10 +20908,10 @@
   }
   function Trace() {
   }
-  protoOf(Trace).k1c = function (name) {
+  protoOf(Trace).m1c = function (name) {
     return null;
   };
-  protoOf(Trace).z1c = function (token) {
+  protoOf(Trace).b1d = function (token) {
   };
   var Trace_instance;
   function Trace_getInstance() {
@@ -20934,26 +20934,26 @@
     initialCapacity = initialCapacity === VOID ? 10 : initialCapacity;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp.q18_1 = LinkedHashMap_init_$Create$();
+    tmp.s18_1 = LinkedHashMap_init_$Create$();
   }
   protoOf(IntMap).m = function (key) {
-    return this.q18_1.u2(key);
+    return this.s18_1.u2(key);
   };
-  protoOf(IntMap).r18 = function (key, value) {
+  protoOf(IntMap).t18 = function (key, value) {
     // Inline function 'kotlin.collections.set' call
-    this.q18_1.l2(key, value);
+    this.s18_1.l2(key, value);
   };
   function WeakReference(reference) {
-    this.k28_1 = reference;
+    this.m28_1 = reference;
   }
   protoOf(WeakReference).lq = function () {
-    return this.k28_1;
+    return this.m28_1;
   };
   //region block: post-declaration
-  protoOf(OffsetApplier).y11 = onBeginChanges;
-  protoOf(OffsetApplier).z11 = onEndChanges;
-  protoOf(AbstractApplier).y11 = onBeginChanges;
-  protoOf(AbstractApplier).z11 = onEndChanges;
+  protoOf(OffsetApplier).a12 = onBeginChanges;
+  protoOf(OffsetApplier).b12 = onEndChanges;
+  protoOf(AbstractApplier).a12 = onBeginChanges;
+  protoOf(AbstractApplier).b12 = onEndChanges;
   protoOf(BroadcastFrameClock).n2 = get_key;
   protoOf(BroadcastFrameClock).hd = get;
   protoOf(BroadcastFrameClock).mg = fold;
@@ -20962,9 +20962,9 @@
   defineProp(protoOf(ComposeRuntimeError), 'message', function () {
     return this.v6();
   });
-  protoOf(StructuralEqualityPolicy).i1t = merge;
-  protoOf(StateObjectImpl).u1t = mergeRecords;
-  protoOf(SnapshotStateList).u1t = mergeRecords;
+  protoOf(StructuralEqualityPolicy).k1t = merge;
+  protoOf(StateObjectImpl).w1t = mergeRecords;
+  protoOf(SnapshotStateList).w1t = mergeRecords;
   protoOf(MonotonicClockImpl).n2 = get_key;
   protoOf(MonotonicClockImpl).hd = get;
   protoOf(MonotonicClockImpl).mg = fold;

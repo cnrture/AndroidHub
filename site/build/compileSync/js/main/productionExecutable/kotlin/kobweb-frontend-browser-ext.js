@@ -527,6 +527,14 @@
     this.dz_1 = false;
   }
   protoOf(HttpFetcher).ez = function (resource, headers, abortController, $completion) {
+    return fetch(this.cz_1, HttpMethod_GET_getInstance(), resource, headers, null, abortController, $completion);
+  };
+  protoOf(HttpFetcher).fz = function (resource, headers, abortController, $completion, $super) {
+    headers = headers === VOID ? null : headers;
+    abortController = abortController === VOID ? null : abortController;
+    return $super === VOID ? this.ez(resource, headers, abortController, $completion) : $super.ez.call(this, resource, headers, abortController, $completion);
+  };
+  protoOf(HttpFetcher).gz = function (resource, headers, abortController, $completion) {
     return tryFetch(this.cz_1, HttpMethod_GET_getInstance(), resource, headers, null, this.dz_1, abortController, $completion);
   };
   function http$delegate$lambda() {
@@ -610,7 +618,7 @@
   }
   function Companion() {
     Companion_instance_0 = this;
-    this.fz_1 = new CancellableActionHandle(0);
+    this.hz_1 = new CancellableActionHandle(0);
   }
   var Companion_instance_0;
   function Companion_getInstance_0() {
@@ -621,16 +629,16 @@
   function CancellableActionHandle(id, isInterval) {
     Companion_getInstance_0();
     isInterval = isInterval === VOID ? false : isInterval;
-    this.gz_1 = isInterval;
-    this.hz_1 = id;
+    this.iz_1 = isInterval;
+    this.jz_1 = id;
   }
-  protoOf(CancellableActionHandle).iz = function () {
-    if (this.gz_1) {
-      self.clearInterval(this.hz_1);
+  protoOf(CancellableActionHandle).kz = function () {
+    if (this.iz_1) {
+      self.clearInterval(this.jz_1);
     } else {
-      self.clearTimeout(this.hz_1);
+      self.clearTimeout(this.jz_1);
     }
-    this.hz_1 = 0;
+    this.jz_1 = 0;
   };
   function setInterval(_this__u8e3s4, delay, block) {
     var id = _this__u8e3s4.setInterval(block, _Duration___get_inWholeMilliseconds__impl__msfiry(delay).fb());

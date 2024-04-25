@@ -41,11 +41,11 @@
   //endregion
   function SilkApp(content, $composer, $changed) {
     var $composer_0 = $composer;
-    $composer_0 = $composer_0.z1f(-1728416948);
+    $composer_0 = $composer_0.b1g(-1728416948);
     var $dirty = $changed;
     if (($changed & 14) === 0)
-      $dirty = $dirty | ($composer_0.c1f(content) ? 4 : 2);
-    if (!(($dirty & 11) === 2) ? true : !$composer_0.c1e()) {
+      $dirty = $dirty | ($composer_0.e1f(content) ? 4 : 2);
+    if (!(($dirty & 11) === 2) ? true : !$composer_0.e1e()) {
       if (isTraceInProgress()) {
         traceEventStart(-1728416948, $dirty, -1, 'com.varabyte.kobweb.silk.SilkApp (SilkApp.kt:8)');
       }
@@ -56,45 +56,45 @@
       var dispatchReceiver = composableLambda(tmp, 1100068428, true, SilkApp$lambda(content));
       // Inline function 'androidx.compose.runtime.remember' call
       var $composer_1 = $composer_0;
-      $composer_1.h1e(1157296644);
+      $composer_1.j1e(1157296644);
       sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
       // Inline function 'androidx.compose.runtime.cache' call
-      var invalid = $composer_1.a16(dispatchReceiver);
+      var invalid = $composer_1.c16(dispatchReceiver);
       // Inline function 'kotlin.let' call
       // Inline function 'kotlin.contracts.contract' call
       // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-      var it = $composer_1.l1f();
+      var it = $composer_1.n1f();
       var tmp_0;
-      if (invalid ? true : it === Companion_getInstance().z18_1) {
+      if (invalid ? true : it === Companion_getInstance().b19_1) {
         // Inline function 'com.varabyte.kobweb.silk.SilkApp.<anonymous>.<anonymous>' call
         var value = ComposableLambda$invoke$ref_0(dispatchReceiver);
-        $composer_1.r1f(value);
+        $composer_1.t1f(value);
         tmp_0 = value;
       } else {
         tmp_0 = it;
       }
       var tmp_1 = tmp_0;
       var tmp0 = (tmp_1 == null ? true : !(tmp_1 == null)) ? tmp_1 : THROW_CCE();
-      $composer_1.i1e();
+      $composer_1.k1e();
       KobwebApp(tmp0, $composer_0, 6);
       if (isTraceInProgress()) {
         traceEventEnd();
       }
     } else {
-      $composer_0.t18();
+      $composer_0.v18();
     }
-    var tmp0_safe_receiver = $composer_0.a1g();
+    var tmp0_safe_receiver = $composer_0.c1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.w1k(SilkApp$lambda_0(content, $changed));
+      tmp0_safe_receiver.y1k(SilkApp$lambda_0(content, $changed));
     }
   }
   function SilkApp$lambda$lambda($content) {
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
         if (isTraceInProgress()) {
           traceEventStart(456211017, $changed, -1, 'com.varabyte.kobweb.silk.SilkApp.<anonymous>.<anonymous> (SilkApp.kt:11)');
         }
@@ -107,7 +107,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.t18();
+        $composer_0.v18();
         tmp = Unit_instance;
       }
       return Unit_instance;
@@ -115,14 +115,14 @@
   }
   function ComposableLambda$invoke$ref($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function SilkApp$lambda($content) {
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
         if (isTraceInProgress()) {
           traceEventStart(1100068428, $changed, -1, 'com.varabyte.kobweb.silk.SilkApp.<anonymous> (SilkApp.kt:10)');
         }
@@ -133,26 +133,26 @@
         var dispatchReceiver = composableLambda(tmp_0, 456211017, true, SilkApp$lambda$lambda($content));
         // Inline function 'androidx.compose.runtime.remember' call
         var $composer_1 = $composer_0;
-        $composer_1.h1e(1157296644);
+        $composer_1.j1e(1157296644);
         sourceInformation($composer_1, 'CC(remember)P(1):Composables.kt#9igjgp');
         // Inline function 'androidx.compose.runtime.cache' call
-        var invalid = $composer_1.a16(dispatchReceiver);
+        var invalid = $composer_1.c16(dispatchReceiver);
         // Inline function 'kotlin.let' call
         // Inline function 'kotlin.contracts.contract' call
         // Inline function 'androidx.compose.runtime.cache.<anonymous>' call
-        var it = $composer_1.l1f();
+        var it = $composer_1.n1f();
         var tmp_1;
-        if (invalid ? true : it === Companion_getInstance().z18_1) {
+        if (invalid ? true : it === Companion_getInstance().b19_1) {
           // Inline function 'com.varabyte.kobweb.silk.SilkApp.<anonymous>.<anonymous>.<anonymous>.<anonymous>' call
           var value = ComposableLambda$invoke$ref(dispatchReceiver);
-          $composer_1.r1f(value);
+          $composer_1.t1f(value);
           tmp_1 = value;
         } else {
           tmp_1 = it;
         }
         var tmp_2 = tmp_1;
         var tmp0 = (tmp_2 == null ? true : !(tmp_2 == null)) ? tmp_2 : THROW_CCE();
-        $composer_1.i1e();
+        $composer_1.k1e();
         prepareSilkFoundation(null, tmp0, $composer_0, 48, 1);
         var tmp_3;
         if (isTraceInProgress()) {
@@ -161,7 +161,7 @@
         }
         tmp = tmp_3;
       } else {
-        $composer_0.t18();
+        $composer_0.v18();
         tmp = Unit_instance;
       }
       return Unit_instance;
@@ -169,7 +169,7 @@
   }
   function ComposableLambda$invoke$ref_0($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function SilkApp$lambda_0($content, $$changed) {

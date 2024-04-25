@@ -1,8 +1,9 @@
-2024-04-25 22:17:52.277 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
-2024-04-25 22:17:52.279 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
-2024-04-25 22:17:52.286 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
-2024-04-25 22:17:52.371 [main] INFO  ktor.application - Loaded and initialized server API jar in 59ms.
-2024-04-25 22:17:52.379 [main] INFO  ktor.application - Initializing Kobweb streams.
-2024-04-25 22:17:52.394 [main] INFO  ktor.application - Application started in 0.144 seconds.
-2024-04-25 22:17:52.448 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
-2024-04-25 22:17:55.729 [eventLoopGroupProxy-4-2] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-25 22:25:51.581 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
+2024-04-25 22:25:51.583 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
+2024-04-25 22:25:51.590 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
+2024-04-25 22:25:51.676 [main] INFO  ktor.application - Loaded and initialized server API jar in 58ms.
+2024-04-25 22:25:51.683 [main] INFO  ktor.application - Initializing Kobweb streams.
+2024-04-25 22:25:51.697 [main] INFO  ktor.application - Application started in 0.142 seconds.
+2024-04-25 22:25:51.753 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-04-25 22:26:11.202 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
+2024-04-25 22:26:13.277 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.

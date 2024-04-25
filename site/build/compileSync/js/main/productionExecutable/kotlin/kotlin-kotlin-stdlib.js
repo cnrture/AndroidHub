@@ -258,11 +258,11 @@ if (typeof Math.imul === 'undefined') {
   setMetadataFor(_no_name_provided__qut3iv_2, VOID, classMeta);
   setMetadataFor(TransformingSequence$iterator$1, VOID, classMeta);
   setMetadataFor(TransformingSequence, 'TransformingSequence', classMeta);
+  setMetadataFor(GeneratorSequence$iterator$1, VOID, classMeta);
+  setMetadataFor(GeneratorSequence, 'GeneratorSequence', classMeta);
   setMetadataFor(DropTakeSequence, 'DropTakeSequence', interfaceMeta);
   setMetadataFor(TakeSequence$iterator$1, VOID, classMeta);
   setMetadataFor(TakeSequence, 'TakeSequence', classMeta, VOID, [DropTakeSequence]);
-  setMetadataFor(GeneratorSequence$iterator$1, VOID, classMeta);
-  setMetadataFor(GeneratorSequence, 'GeneratorSequence', classMeta);
   setMetadataFor(EmptySequence, 'EmptySequence', objectMeta, VOID, [DropTakeSequence]);
   setMetadataFor(EmptySet, 'EmptySet', objectMeta, VOID, [Set]);
   setMetadataFor(Key, 'Key', objectMeta);
@@ -3296,13 +3296,6 @@ if (typeof Math.imul === 'undefined') {
     }
     return radix;
   }
-  function digitOf(char, radix) {
-    // Inline function 'kotlin.let' call
-    // Inline function 'kotlin.contracts.contract' call
-    // Inline function 'kotlin.text.digitOf.<anonymous>' call
-    var it = (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(48)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(57)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(48)) : (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(90)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(65)) + 10 | 0 : (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(97)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(122)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(97)) + 10 | 0 : Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(128)) < 0 ? -1 : (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65313)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65338)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(65313)) + 10 | 0 : (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65345)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65370)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(65345)) + 10 | 0 : digitToIntImpl(char);
-    return it >= radix ? -1 : it;
-  }
   function toDouble(_this__u8e3s4) {
     // Inline function 'kotlin.also' call
     // Inline function 'kotlin.js.unsafeCast' call
@@ -3314,6 +3307,25 @@ if (typeof Math.imul === 'undefined') {
       numberFormatError(_this__u8e3s4);
     }
     return this_0;
+  }
+  function digitOf(char, radix) {
+    // Inline function 'kotlin.let' call
+    // Inline function 'kotlin.contracts.contract' call
+    // Inline function 'kotlin.text.digitOf.<anonymous>' call
+    var it = (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(48)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(57)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(48)) : (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(90)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(65)) + 10 | 0 : (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(97)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(122)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(97)) + 10 | 0 : Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(128)) < 0 ? -1 : (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65313)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65338)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(65313)) + 10 | 0 : (Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65345)) >= 0 ? Char__compareTo_impl_ypi4mb(char, _Char___init__impl__6a9atx(65370)) <= 0 : false) ? Char__minus_impl_a2frrh(char, _Char___init__impl__6a9atx(65345)) + 10 | 0 : digitToIntImpl(char);
+    return it >= radix ? -1 : it;
+  }
+  function isNaN_2(_this__u8e3s4) {
+    // Inline function 'kotlin.text.lowercase' call
+    // Inline function 'kotlin.js.asDynamic' call
+    switch (_this__u8e3s4.toLowerCase()) {
+      case 'nan':
+      case '+nan':
+      case '-nan':
+        return true;
+      default:
+        return false;
+    }
   }
   function toLong(_this__u8e3s4) {
     var tmp0_elvis_lhs = toLongOrNull(_this__u8e3s4);
@@ -3334,18 +3346,6 @@ if (typeof Math.imul === 'undefined') {
       tmp = tmp0_elvis_lhs;
     }
     return tmp;
-  }
-  function isNaN_2(_this__u8e3s4) {
-    // Inline function 'kotlin.text.lowercase' call
-    // Inline function 'kotlin.js.asDynamic' call
-    switch (_this__u8e3s4.toLowerCase()) {
-      case 'nan':
-      case '+nan':
-      case '-nan':
-        return true;
-      default:
-        return false;
-    }
   }
   function Regex_init_$Init$(pattern, $this) {
     Regex.call($this, pattern, emptySet());
@@ -4723,6 +4723,10 @@ if (typeof Math.imul === 'undefined') {
     }
     return min;
   }
+  function asSequence(_this__u8e3s4) {
+    // Inline function 'kotlin.sequences.Sequence' call
+    return new _no_name_provided__qut3iv(_this__u8e3s4);
+  }
   function single_1(_this__u8e3s4) {
     var tmp;
     switch (_this__u8e3s4.l()) {
@@ -4735,10 +4739,6 @@ if (typeof Math.imul === 'undefined') {
         throw IllegalArgumentException_init_$Create$_0('List has more than one element.');
     }
     return tmp;
-  }
-  function asSequence(_this__u8e3s4) {
-    // Inline function 'kotlin.sequences.Sequence' call
-    return new _no_name_provided__qut3iv(_this__u8e3s4);
   }
   function distinct(_this__u8e3s4) {
     return toList_0(toMutableSet(_this__u8e3s4));
@@ -4854,20 +4854,6 @@ if (typeof Math.imul === 'undefined') {
   function map(_this__u8e3s4, transform) {
     return new TransformingSequence(_this__u8e3s4, transform);
   }
-  function toList_1(_this__u8e3s4) {
-    var it = _this__u8e3s4.n();
-    if (!it.b1())
-      return emptyList();
-    var element = it.d1();
-    if (!it.b1())
-      return listOf(element);
-    var dst = ArrayList_init_$Create$();
-    dst.y(element);
-    while (it.b1()) {
-      dst.y(it.d1());
-    }
-    return dst;
-  }
   function take(_this__u8e3s4, n) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
@@ -4887,6 +4873,20 @@ if (typeof Math.imul === 'undefined') {
       }
     }
     return tmp;
+  }
+  function toList_1(_this__u8e3s4) {
+    var it = _this__u8e3s4.n();
+    if (!it.b1())
+      return emptyList();
+    var element = it.d1();
+    if (!it.b1())
+      return listOf(element);
+    var dst = ArrayList_init_$Create$();
+    dst.y(element);
+    while (it.b1()) {
+      dst.y(it.d1());
+    }
+    return dst;
   }
   function _no_name_provided__qut3iv_0($this_asIterable) {
     this.hb_1 = $this_asIterable;
@@ -9031,73 +9031,73 @@ if (typeof Math.imul === 'undefined') {
   function generateSequence(seedFunction, nextFunction) {
     return new GeneratorSequence(seedFunction, nextFunction);
   }
+  function calcNext($this) {
+    $this.xf_1 = $this.yf_1 === -2 ? $this.zf_1.ag_1() : $this.zf_1.bg_1(ensureNotNull($this.xf_1));
+    $this.yf_1 = $this.xf_1 == null ? 0 : 1;
+  }
+  function GeneratorSequence$iterator$1(this$0) {
+    this.zf_1 = this$0;
+    this.xf_1 = null;
+    this.yf_1 = -2;
+  }
+  protoOf(GeneratorSequence$iterator$1).d1 = function () {
+    if (this.yf_1 < 0) {
+      calcNext(this);
+    }
+    if (this.yf_1 === 0)
+      throw NoSuchElementException_init_$Create$();
+    var tmp = this.xf_1;
+    var result = !(tmp == null) ? tmp : THROW_CCE();
+    this.yf_1 = -1;
+    return result;
+  };
+  protoOf(GeneratorSequence$iterator$1).b1 = function () {
+    if (this.yf_1 < 0) {
+      calcNext(this);
+    }
+    return this.yf_1 === 1;
+  };
+  function GeneratorSequence(getInitialValue, getNextValue) {
+    this.ag_1 = getInitialValue;
+    this.bg_1 = getNextValue;
+  }
+  protoOf(GeneratorSequence).n = function () {
+    return new GeneratorSequence$iterator$1(this);
+  };
   function emptySequence() {
     return EmptySequence_instance;
   }
   function DropTakeSequence() {
   }
   function TakeSequence$iterator$1(this$0) {
-    this.xf_1 = this$0.ag_1;
-    this.yf_1 = this$0.zf_1.n();
+    this.cg_1 = this$0.fg_1;
+    this.dg_1 = this$0.eg_1.n();
   }
   protoOf(TakeSequence$iterator$1).d1 = function () {
-    if (this.xf_1 === 0)
+    if (this.cg_1 === 0)
       throw NoSuchElementException_init_$Create$();
-    this.xf_1 = this.xf_1 - 1 | 0;
-    return this.yf_1.d1();
+    this.cg_1 = this.cg_1 - 1 | 0;
+    return this.dg_1.d1();
   };
   protoOf(TakeSequence$iterator$1).b1 = function () {
-    return this.xf_1 > 0 ? this.yf_1.b1() : false;
+    return this.cg_1 > 0 ? this.dg_1.b1() : false;
   };
   function TakeSequence(sequence, count) {
-    this.zf_1 = sequence;
-    this.ag_1 = count;
+    this.eg_1 = sequence;
+    this.fg_1 = count;
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
-    if (!(this.ag_1 >= 0)) {
+    if (!(this.fg_1 >= 0)) {
       // Inline function 'kotlin.sequences.TakeSequence.<anonymous>' call
-      var message = 'count must be non-negative, but was ' + this.ag_1 + '.';
+      var message = 'count must be non-negative, but was ' + this.fg_1 + '.';
       throw IllegalArgumentException_init_$Create$_0(toString_2(message));
     }
   }
   protoOf(TakeSequence).gb = function (n) {
-    return n >= this.ag_1 ? this : new TakeSequence(this.zf_1, n);
+    return n >= this.fg_1 ? this : new TakeSequence(this.eg_1, n);
   };
   protoOf(TakeSequence).n = function () {
     return new TakeSequence$iterator$1(this);
-  };
-  function calcNext($this) {
-    $this.bg_1 = $this.cg_1 === -2 ? $this.dg_1.eg_1() : $this.dg_1.fg_1(ensureNotNull($this.bg_1));
-    $this.cg_1 = $this.bg_1 == null ? 0 : 1;
-  }
-  function GeneratorSequence$iterator$1(this$0) {
-    this.dg_1 = this$0;
-    this.bg_1 = null;
-    this.cg_1 = -2;
-  }
-  protoOf(GeneratorSequence$iterator$1).d1 = function () {
-    if (this.cg_1 < 0) {
-      calcNext(this);
-    }
-    if (this.cg_1 === 0)
-      throw NoSuchElementException_init_$Create$();
-    var tmp = this.bg_1;
-    var result = !(tmp == null) ? tmp : THROW_CCE();
-    this.cg_1 = -1;
-    return result;
-  };
-  protoOf(GeneratorSequence$iterator$1).b1 = function () {
-    if (this.cg_1 < 0) {
-      calcNext(this);
-    }
-    return this.cg_1 === 1;
-  };
-  function GeneratorSequence(getInitialValue, getNextValue) {
-    this.eg_1 = getInitialValue;
-    this.fg_1 = getNextValue;
-  }
-  protoOf(GeneratorSequence).n = function () {
-    return new GeneratorSequence$iterator$1(this);
   };
   function EmptySequence() {
   }
@@ -10636,25 +10636,6 @@ if (typeof Math.imul === 'undefined') {
   function lines(_this__u8e3s4) {
     return toList_1(lineSequence(_this__u8e3s4));
   }
-  function padStart_0(_this__u8e3s4, length, padChar) {
-    padChar = padChar === VOID ? _Char___init__impl__6a9atx(32) : padChar;
-    if (length < 0)
-      throw IllegalArgumentException_init_$Create$_0('Desired length ' + length + ' is less than zero.');
-    if (length <= charSequenceLength(_this__u8e3s4))
-      return charSequenceSubSequence(_this__u8e3s4, 0, charSequenceLength(_this__u8e3s4));
-    var sb = StringBuilder_init_$Create$(length);
-    var inductionVariable = 1;
-    var last = length - charSequenceLength(_this__u8e3s4) | 0;
-    if (inductionVariable <= last)
-      do {
-        var i = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        sb.x5(padChar);
-      }
-       while (!(i === last));
-    sb.o8(_this__u8e3s4);
-    return sb;
-  }
   function trimEnd(_this__u8e3s4, chars) {
     // Inline function 'kotlin.text.trimEnd' call
     var tmp$ret$1;
@@ -10677,6 +10658,25 @@ if (typeof Math.imul === 'undefined') {
       tmp$ret$1 = '';
     }
     return toString_2(tmp$ret$1);
+  }
+  function padStart_0(_this__u8e3s4, length, padChar) {
+    padChar = padChar === VOID ? _Char___init__impl__6a9atx(32) : padChar;
+    if (length < 0)
+      throw IllegalArgumentException_init_$Create$_0('Desired length ' + length + ' is less than zero.');
+    if (length <= charSequenceLength(_this__u8e3s4))
+      return charSequenceSubSequence(_this__u8e3s4, 0, charSequenceLength(_this__u8e3s4));
+    var sb = StringBuilder_init_$Create$(length);
+    var inductionVariable = 1;
+    var last = length - charSequenceLength(_this__u8e3s4) | 0;
+    if (inductionVariable <= last)
+      do {
+        var i = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        sb.x5(padChar);
+      }
+       while (!(i === last));
+    sb.o8(_this__u8e3s4);
+    return sb;
   }
   function contains_10(_this__u8e3s4, other, ignoreCase) {
     ignoreCase = ignoreCase === VOID ? false : ignoreCase;
@@ -12615,6 +12615,9 @@ if (typeof Math.imul === 'undefined') {
   protoOf(UShortArray).equals = function (other) {
     return UShortArray__equals_impl_tyc3mk(this.bk_1, other);
   };
+  function toULongOrNull(_this__u8e3s4) {
+    return toULongOrNull_0(_this__u8e3s4, 10);
+  }
   function toUInt(_this__u8e3s4) {
     var tmp0_elvis_lhs = toUIntOrNull(_this__u8e3s4);
     var tmp;
@@ -12658,18 +12661,6 @@ if (typeof Math.imul === 'undefined') {
       tmp = tmp0_elvis_lhs;
     }
     return tmp;
-  }
-  function toULongOrNull(_this__u8e3s4) {
-    return toULongOrNull_0(_this__u8e3s4, 10);
-  }
-  function toUIntOrNull(_this__u8e3s4) {
-    return toUIntOrNull_0(_this__u8e3s4, 10);
-  }
-  function toUByteOrNull(_this__u8e3s4) {
-    return toUByteOrNull_0(_this__u8e3s4, 10);
-  }
-  function toUShortOrNull(_this__u8e3s4) {
-    return toUShortOrNull_0(_this__u8e3s4, 10);
   }
   function toULongOrNull_0(_this__u8e3s4, radix) {
     checkRadix(radix);
@@ -12736,6 +12727,15 @@ if (typeof Math.imul === 'undefined') {
       }
        while (inductionVariable < length);
     return result;
+  }
+  function toUIntOrNull(_this__u8e3s4) {
+    return toUIntOrNull_0(_this__u8e3s4, 10);
+  }
+  function toUByteOrNull(_this__u8e3s4) {
+    return toUByteOrNull_0(_this__u8e3s4, 10);
+  }
+  function toUShortOrNull(_this__u8e3s4) {
+    return toUShortOrNull_0(_this__u8e3s4, 10);
   }
   function toUIntOrNull_0(_this__u8e3s4, radix) {
     checkRadix(radix);

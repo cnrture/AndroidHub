@@ -56,26 +56,26 @@
   setMetadataFor(renderComposable$scope$1, VOID, classMeta);
   //endregion
   function DomNodeWrapper(node) {
-    this.h2a_1 = node;
-    this.i2a_1 = 0;
+    this.j2a_1 = node;
+    this.k2a_1 = 0;
   }
-  protoOf(DomNodeWrapper).j2a = function () {
-    return this.h2a_1;
+  protoOf(DomNodeWrapper).l2a = function () {
+    return this.j2a_1;
   };
-  protoOf(DomNodeWrapper).k2a = function (index, nodeWrapper) {
-    var length = this.j2a().childNodes.length;
+  protoOf(DomNodeWrapper).m2a = function (index, nodeWrapper) {
+    var length = this.l2a().childNodes.length;
     if (index < length) {
-      var tmp = this.j2a();
-      var tmp_0 = nodeWrapper.j2a();
+      var tmp = this.l2a();
+      var tmp_0 = nodeWrapper.l2a();
       // Inline function 'org.w3c.dom.get' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp$ret$1 = this.j2a().childNodes[index];
+      var tmp$ret$1 = this.l2a().childNodes[index];
       tmp.insertBefore(tmp_0, ensureNotNull(tmp$ret$1));
     } else {
-      this.j2a().appendChild(nodeWrapper.j2a());
+      this.l2a().appendChild(nodeWrapper.l2a());
     }
   };
-  protoOf(DomNodeWrapper).e12 = function (index, count) {
+  protoOf(DomNodeWrapper).g12 = function (index, count) {
     // Inline function 'kotlin.repeat' call
     // Inline function 'kotlin.contracts.contract' call
     var inductionVariable = 0;
@@ -84,15 +84,15 @@
         var index_0 = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         // Inline function 'org.jetbrains.compose.web.internal.runtime.DomNodeWrapper.remove.<anonymous>' call
-        var tmp = this.j2a();
+        var tmp = this.l2a();
         // Inline function 'org.w3c.dom.get' call
         // Inline function 'kotlin.js.asDynamic' call
-        var tmp$ret$1 = this.j2a().childNodes[index];
+        var tmp$ret$1 = this.l2a().childNodes[index];
         tmp.removeChild(ensureNotNull(tmp$ret$1));
       }
        while (inductionVariable < count);
   };
-  protoOf(DomNodeWrapper).f12 = function (from, to, count) {
+  protoOf(DomNodeWrapper).h12 = function (from, to, count) {
     if (from === to) {
       return Unit_instance;
     }
@@ -103,69 +103,69 @@
         inductionVariable = inductionVariable + 1 | 0;
         var fromIndex = from > to ? from + i | 0 : from;
         var toIndex = from > to ? to + i | 0 : (to + count | 0) - 2 | 0;
-        var tmp = this.j2a();
+        var tmp = this.l2a();
         // Inline function 'org.w3c.dom.get' call
         // Inline function 'kotlin.js.asDynamic' call
-        var tmp$ret$1 = this.j2a().childNodes[fromIndex];
+        var tmp$ret$1 = this.l2a().childNodes[fromIndex];
         var child = tmp.removeChild(ensureNotNull(tmp$ret$1));
-        var tmp_0 = this.j2a();
+        var tmp_0 = this.l2a();
         // Inline function 'org.w3c.dom.get' call
         // Inline function 'kotlin.js.asDynamic' call
-        var tmp$ret$3 = this.j2a().childNodes[toIndex];
+        var tmp$ret$3 = this.l2a().childNodes[toIndex];
         tmp_0.insertBefore(child, ensureNotNull(tmp$ret$3));
       }
        while (inductionVariable < count);
   };
   function DomApplier(root) {
     AbstractApplier.call(this, root);
-    this.o2a_1 = 0;
+    this.q2a_1 = 0;
   }
-  protoOf(DomApplier).p2a = function (index, instance) {
+  protoOf(DomApplier).r2a = function (index, instance) {
   };
-  protoOf(DomApplier).c12 = function (index, instance) {
-    return this.p2a(index, instance instanceof DomNodeWrapper ? instance : THROW_CCE());
+  protoOf(DomApplier).e12 = function (index, instance) {
+    return this.r2a(index, instance instanceof DomNodeWrapper ? instance : THROW_CCE());
   };
-  protoOf(DomApplier).q2a = function (index, instance) {
-    this.x11().k2a(index, instance);
+  protoOf(DomApplier).s2a = function (index, instance) {
+    this.z11().m2a(index, instance);
   };
-  protoOf(DomApplier).d12 = function (index, instance) {
-    return this.q2a(index, instance instanceof DomNodeWrapper ? instance : THROW_CCE());
+  protoOf(DomApplier).f12 = function (index, instance) {
+    return this.s2a(index, instance instanceof DomNodeWrapper ? instance : THROW_CCE());
   };
-  protoOf(DomApplier).e12 = function (index, count) {
-    this.x11().e12(index, count);
+  protoOf(DomApplier).g12 = function (index, count) {
+    this.z11().g12(index, count);
   };
-  protoOf(DomApplier).f12 = function (from, to, count) {
-    this.x11().f12(from, to, count);
+  protoOf(DomApplier).h12 = function (from, to, count) {
+    this.z11().h12(from, to, count);
   };
   function synchronize($this) {
     // Inline function 'kotlin.collections.forEach' call
-    var tmp0_iterator = $this.w2a_1.n();
+    var tmp0_iterator = $this.y2a_1.n();
     while (tmp0_iterator.b1()) {
       var element = tmp0_iterator.d1();
       // Inline function 'org.jetbrains.compose.web.internal.runtime.GlobalSnapshotManager.synchronize.<anonymous>' call
       element();
     }
-    $this.w2a_1.f1();
-    $this.x2a_1 = false;
+    $this.y2a_1.f1();
+    $this.z2a_1 = false;
   }
   function schedule($this, block) {
-    $this.w2a_1.y(block);
-    if (!$this.x2a_1) {
-      $this.x2a_1 = true;
-      launch($this.u2a_1, VOID, VOID, GlobalSnapshotManager$schedule$slambda_0(null));
+    $this.y2a_1.y(block);
+    if (!$this.z2a_1) {
+      $this.z2a_1 = true;
+      launch($this.w2a_1, VOID, VOID, GlobalSnapshotManager$schedule$slambda_0(null));
     }
   }
   function GlobalSnapshotManager$globalWriteObserver$lambda(it) {
-    if (!GlobalSnapshotManager_getInstance().s2a_1) {
-      GlobalSnapshotManager_getInstance().s2a_1 = true;
+    if (!GlobalSnapshotManager_getInstance().u2a_1) {
+      GlobalSnapshotManager_getInstance().u2a_1 = true;
       var tmp = GlobalSnapshotManager_getInstance();
       schedule(tmp, GlobalSnapshotManager$globalWriteObserver$lambda$lambda);
     }
     return Unit_instance;
   }
   function GlobalSnapshotManager$globalWriteObserver$lambda$lambda() {
-    GlobalSnapshotManager_getInstance().s2a_1 = false;
-    Companion_instance.v1n();
+    GlobalSnapshotManager_getInstance().u2a_1 = false;
+    Companion_instance.x1n();
     return Unit_instance;
   }
   function GlobalSnapshotManager$schedule$slambda(resultContinuation) {
@@ -200,7 +200,7 @@
   };
   protoOf(GlobalSnapshotManager$schedule$slambda).bz = function ($this$launch, completion) {
     var i = new GlobalSnapshotManager$schedule$slambda(completion);
-    i.h2b_1 = $this$launch;
+    i.j2b_1 = $this$launch;
     return i;
   };
   function GlobalSnapshotManager$schedule$slambda_0(resultContinuation) {
@@ -213,22 +213,22 @@
   }
   function GlobalSnapshotManager() {
     GlobalSnapshotManager_instance = this;
-    this.r2a_1 = false;
-    this.s2a_1 = false;
-    this.t2a_1 = null;
-    this.u2a_1 = CoroutineScope_0((new JsMicrotasksDispatcher()).ng(SupervisorJob()));
+    this.t2a_1 = false;
+    this.u2a_1 = false;
+    this.v2a_1 = null;
+    this.w2a_1 = CoroutineScope_0((new JsMicrotasksDispatcher()).ng(SupervisorJob()));
     var tmp = this;
-    tmp.v2a_1 = GlobalSnapshotManager$globalWriteObserver$lambda;
+    tmp.x2a_1 = GlobalSnapshotManager$globalWriteObserver$lambda;
     var tmp_0 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_0.w2a_1 = ArrayList_init_$Create$();
-    this.x2a_1 = false;
-    this.y2a_1 = 8;
+    tmp_0.y2a_1 = ArrayList_init_$Create$();
+    this.z2a_1 = false;
+    this.a2b_1 = 8;
   }
-  protoOf(GlobalSnapshotManager).i2b = function () {
-    if (!this.r2a_1) {
-      this.r2a_1 = true;
-      this.t2a_1 = Companion_instance.g25(this.v2a_1);
+  protoOf(GlobalSnapshotManager).k2b = function () {
+    if (!this.t2a_1) {
+      this.t2a_1 = true;
+      this.v2a_1 = Companion_instance.i25(this.x2a_1);
     }
   };
   var GlobalSnapshotManager_instance;
@@ -245,7 +245,7 @@
   }
   function JsMicrotasksDispatcher() {
     CoroutineDispatcher.call(this);
-    this.k2b_1 = 0;
+    this.m2b_1 = 0;
   }
   protoOf(JsMicrotasksDispatcher).up = function (context, block) {
     var tmp = Promise.resolve(Unit_instance);
@@ -256,7 +256,7 @@
   }
   function renderComposable_0(root, monotonicFrameClock, content) {
     monotonicFrameClock = monotonicFrameClock === VOID ? get_DefaultMonotonicFrameClock() : monotonicFrameClock;
-    GlobalSnapshotManager_getInstance().i2b();
+    GlobalSnapshotManager_getInstance().k2b();
     var context = monotonicFrameClock.ng(new JsMicrotasksDispatcher());
     var recomposer = new Recomposer(context);
     var tmp = CoroutineScope_0(context);
@@ -264,11 +264,11 @@
     launch(tmp, VOID, tmp_0, renderComposable$slambda_0(recomposer, null));
     var composition = ControlledComposition(new DomApplier(new DomNodeWrapper(root)), recomposer);
     var scope = new renderComposable$scope$1(root);
-    composition.m1j(ComposableLambda$invoke$ref(composableLambdaInstance(-1520853124, true, renderComposable$lambda(content, scope))));
+    composition.o1j(ComposableLambda$invoke$ref(composableLambdaInstance(-1520853124, true, renderComposable$lambda(content, scope))));
     return composition;
   }
   function renderComposable$slambda($recomposer, resultContinuation) {
-    this.t2b_1 = $recomposer;
+    this.v2b_1 = $recomposer;
     CoroutineImpl.call(this, resultContinuation);
   }
   protoOf(renderComposable$slambda).az = function ($this$launch, $completion) {
@@ -289,7 +289,7 @@
           case 0:
             this.bd_1 = 2;
             this.ad_1 = 1;
-            suspendResult = this.t2b_1.y1q(this);
+            suspendResult = this.v2b_1.a1r(this);
             if (suspendResult === get_COROUTINE_SUSPENDED()) {
               return suspendResult;
             }
@@ -312,8 +312,8 @@
      while (true);
   };
   protoOf(renderComposable$slambda).bz = function ($this$launch, completion) {
-    var i = new renderComposable$slambda(this.t2b_1, completion);
-    i.u2b_1 = $this$launch;
+    var i = new renderComposable$slambda(this.v2b_1, completion);
+    i.w2b_1 = $this$launch;
     return i;
   };
   function renderComposable$slambda_0($recomposer, resultContinuation) {
@@ -325,18 +325,18 @@
     return l;
   }
   function renderComposable$scope$1($root) {
-    this.v2b_1 = $root;
+    this.x2b_1 = $root;
   }
   function ComposableLambda$invoke$ref($boundThis) {
     return function (p0, p1) {
-      return $boundThis.a1e(p0, p1);
+      return $boundThis.c1e(p0, p1);
     };
   }
   function renderComposable$lambda($content, $scope) {
     return function ($composer, $changed) {
       var $composer_0 = $composer;
       var tmp;
-      if (!(($changed & 11) === 2) ? true : !$composer_0.c1e()) {
+      if (!(($changed & 11) === 2) ? true : !$composer_0.e1e()) {
         if (isTraceInProgress()) {
           traceEventStart(-1520853124, $changed, -1, 'org.jetbrains.compose.web.renderComposable.<anonymous> (renderComposable.kt:60)');
         }
@@ -348,7 +348,7 @@
         }
         tmp = tmp_0;
       } else {
-        $composer_0.t18();
+        $composer_0.v18();
         tmp = Unit_instance;
       }
       return Unit_instance;
