@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="androidhub">
-    <output-path>$PROJECT_DIR$/site/build/libs</output-path>
-    <root id="archive" name="androidhub.jar">
-      <element id="module-output" name="androidhub.site.jvmMain" />
-    </root>
-  </artifact>
-</component>

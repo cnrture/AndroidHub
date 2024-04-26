@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="site-js-1.0-SNAPSHOT">
-    <output-path>$PROJECT_DIR$/site/build/libs</output-path>
-    <root id="archive" name="site-js-1.0-SNAPSHOT.jar">
-      <element id="module-output" name="androidhub.site.jsMain" />
-    </root>
-  </artifact>
-</component>
