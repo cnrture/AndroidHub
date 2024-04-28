@@ -1,8 +1,8 @@
 package com.canerture.androidhub.components.widgets
 
 import androidx.compose.runtime.Composable
+import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.getSitePalette
-import com.canerture.androidhub.pages.PopularArticle
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.foundation.layout.RowScope
@@ -25,7 +25,7 @@ import org.jetbrains.compose.web.dom.Text
 @Composable
 fun RowScope.PopularArticleItem(
     isLastItem: Boolean,
-    article: PopularArticle,
+    article: Post,
 ) {
     Column(
         modifier = Modifier
@@ -41,7 +41,7 @@ fun RowScope.PopularArticleItem(
                 .backgroundColor(getSitePalette().blue)
                 .borderRadius(topRight = 1.cssRem, bottomRight = 1.cssRem)
                 .padding(topBottom = 0.3.cssRem, leftRight = 1.cssRem),
-            text = article.category
+            text = article.postModified.toString()
         )
 
         Row(
@@ -52,13 +52,13 @@ fun RowScope.PopularArticleItem(
             Column(
                 modifier = Modifier.margin(right = 2.5.cssRem)
             ) {
-                Text(article.authorName)
+                Text(article.postAuthor)
                 Spacer()
-                Text(article.readTime)
+                Text(article.postModified.toString())
             }
             SpanText(
                 modifier = Modifier.weight(1f),
-                text = article.title
+                text = article.postTitle
             )
         }
 

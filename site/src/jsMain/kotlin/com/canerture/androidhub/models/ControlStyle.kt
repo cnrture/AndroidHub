@@ -1,4 +1,4 @@
-package com.example.blogmultiplatform.models
+package com.canerture.androidhub.models
 
 sealed class ControlStyle(val style: String) {
     data class Bold(val selectedText: String?) : ControlStyle(

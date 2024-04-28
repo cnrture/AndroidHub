@@ -1,6 +1,6 @@
 package com.canerture.androidhub.models
 
-import com.canerture.androidhub.util.Res
+import com.canerture.androidhub.utils.Res
 
 enum class EditorControl(
     val icon: String,

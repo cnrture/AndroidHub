@@ -1,8 +1,8 @@
 package com.canerture.androidhub.components.widgets
 
 import androidx.compose.runtime.Composable
+import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.getSitePalette
-import com.canerture.androidhub.pages.PopularArticle
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -29,7 +29,7 @@ import org.jetbrains.compose.web.css.px
 @Composable
 fun LatestArticleItem(
     isLastItem: Boolean,
-    article: PopularArticle,
+    article: Post,
 ) {
     Column(
         modifier = Modifier
@@ -45,12 +45,12 @@ fun LatestArticleItem(
                 .backgroundColor(getSitePalette().blue)
                 .borderRadius(topRight = 1.cssRem, bottomRight = 1.cssRem)
                 .padding(topBottom = 0.3.cssRem, leftRight = 1.cssRem),
-            text = article.category
+            text = article.postModified.toString()
         )
 
         Link(
             path = "/post",
-            text = article.title,
+            text = article.postTitle,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(1.cssRem)
@@ -66,11 +66,11 @@ fun LatestArticleItem(
             horizontalArrangement = Arrangement.Center
         ) {
             SpanText(
-                text = article.authorName,
+                text = article.postAuthor,
                 modifier = Modifier.color(getSitePalette().blue).margin(right = 1.cssRem)
             )
             SpanText(
-                text = article.readTime,
+                text = article.postDate.toString(),
                 modifier = Modifier.color(getSitePalette().blue)
             )
         }

@@ -1,5 +1,7 @@
 import com.varabyte.kobweb.gradle.application.extensions.AppBlock.LegacyRouteRedirectStrategy
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
+import kotlinx.html.link
+import kotlinx.html.script
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -37,13 +39,17 @@ kotlin {
             implementation(compose.html.core)
             implementation(libs.kobweb.core)
             implementation(libs.kobweb.silk)
+            implementation(libs.silk.icons.fa)
             implementation(libs.kobwebx.markdown)
+            implementation(libs.ktorClientJs)
+            implementation(libs.koinCore)
+            implementation(libs.kotlinx.serialization.json)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.8.0")
         }
 
         jvmMain.dependencies {
-            compileOnly(libs.kobweb.api)
-            implementation(libs.mongodb.kotlin.driver)
-            implementation(libs.kotlinx.serialization.json)
+            implementation(libs.kobweb.api)
         }
     }
 }
