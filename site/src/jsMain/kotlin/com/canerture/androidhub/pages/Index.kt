@@ -1,4 +1,4 @@
-package com.canerture.androidhub.pages.index
+package com.canerture.androidhub.pages
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -16,6 +16,7 @@ import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.getHeadlineFontSize
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.getSubheadlineFontSize
+import com.canerture.androidhub.pages.index.IndexVM
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Column

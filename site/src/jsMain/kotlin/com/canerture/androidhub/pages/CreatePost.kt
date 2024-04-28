@@ -1,4 +1,4 @@
-package com.canerture.androidhub.pages.admin
+package com.canerture.androidhub.pages
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
