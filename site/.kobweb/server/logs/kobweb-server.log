@@ -1,14 +1,9 @@
-2024-04-28 11:35:51.875 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
-2024-04-28 11:35:51.876 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
-2024-04-28 11:35:51.884 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
-2024-04-28 11:35:51.904 [main] INFO  ktor.application - Loaded and initialized server API jar in 1ms.
-2024-04-28 11:35:51.915 [main] INFO  ktor.application - Initializing Kobweb streams.
-2024-04-28 11:35:51.932 [main] INFO  ktor.application - Application started in 0.085 seconds.
-2024-04-28 11:35:51.990 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
-2024-04-28 11:35:54.282 [eventLoopGroupProxy-4-2] DEBUG ktor.application - Client connected and is requesting kobweb status events.
-2024-04-28 11:38:31.751 [eventLoopGroupProxy-4-2] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
-2024-04-28 11:38:31.941 [eventLoopGroupProxy-4-3] DEBUG ktor.application - Client connected and is requesting kobweb status events.
-2024-04-28 11:39:17.229 [eventLoopGroupProxy-4-3] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
-2024-04-28 11:39:17.401 [eventLoopGroupProxy-4-4] DEBUG ktor.application - Client connected and is requesting kobweb status events.
-2024-04-28 11:40:00.231 [eventLoopGroupProxy-4-4] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
-2024-04-28 11:40:00.418 [eventLoopGroupProxy-4-5] DEBUG ktor.application - Client connected and is requesting kobweb status events.
+2024-04-28 11:41:47.711 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
+2024-04-28 11:41:47.713 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
+2024-04-28 11:41:47.722 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
+2024-04-28 11:41:47.742 [main] INFO  ktor.application - Loaded and initialized server API jar in 1ms.
+2024-04-28 11:41:47.753 [main] INFO  ktor.application - Initializing Kobweb streams.
+2024-04-28 11:41:47.771 [main] INFO  ktor.application - Application started in 0.089 seconds.
+2024-04-28 11:41:47.832 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-04-28 11:42:06.104 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
+2024-04-28 11:42:08.197 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
