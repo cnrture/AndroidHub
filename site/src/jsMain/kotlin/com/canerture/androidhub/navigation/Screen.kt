@@ -7,14 +7,14 @@ import com.canerture.androidhub.utils.Constants.QUERY_PARAM
 import com.canerture.androidhub.utils.Constants.UPDATED_PARAM
 
 sealed class Screen(val route: String) {
-    data object AdminHome : Screen(route = "/admin/")
+    data object AdminHome : Screen(route = "/admin")
     data object AdminLogin : Screen(route = "/admin/login")
-    data object AdminCreate : Screen(route = "/admin/create") {
-        fun passPostId(id: String) = "/admin/create?${POST_ID_PARAM}=$id"
+    data object AdminCreate : Screen(route = "/admin/create-post") {
+        fun passPostId(id: Int) = "/admin/create-post?${POST_ID_PARAM}=$id"
     }
 
-    data object AdminMyPosts : Screen(route = "/admin/myposts") {
-        fun searchByTitle(query: String) = "/admin/myposts?${QUERY_PARAM}=$query"
+    data object AdminMyPosts : Screen(route = "/admin/my-posts") {
+        fun searchByTitle(query: String) = "/admin/my-posts?${QUERY_PARAM}=$query"
     }
 
     data object AdminSuccess : Screen(route = "/admin/success") {
@@ -30,6 +30,6 @@ sealed class Screen(val route: String) {
     }
 
     data object PostPage : Screen(route = "/posts/post") {
-        fun getPost(id: String) = "/posts/post?${POST_ID_PARAM}=$id"
+        fun getPost(id: Int) = "/posts/post?${POST_ID_PARAM}=$id"
     }
 }

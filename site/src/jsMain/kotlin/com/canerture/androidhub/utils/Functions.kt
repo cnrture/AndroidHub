@@ -2,18 +2,17 @@ package com.canerture.androidhub.utils
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import com.canerture.androidhub.data.checkUserId
 import com.canerture.androidhub.models.ControlStyle
 import com.canerture.androidhub.models.EditorControl
-import com.canerture.androidhub.navigation.Screen
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.outline
-import com.varabyte.kobweb.core.rememberPageContext
 import kotlinx.browser.document
 import kotlinx.browser.localStorage
 import org.jetbrains.compose.web.css.LineStyle
@@ -24,24 +23,25 @@ import org.w3c.dom.set
 import kotlin.js.Date
 
 @Composable
-fun isUserLoggedIn(content: @Composable () -> Unit) {
-    val context = rememberPageContext()
+fun isUserLoggedIn(): Boolean {
     val remembered = remember { localStorage["remember"].toBoolean() }
     val userId = remember { localStorage["userId"] }
     var userIdExists by remember { mutableStateOf(false) }
-
     LaunchedEffect(key1 = Unit) {
-        userIdExists = if (!userId.isNullOrEmpty()) checkUserId(id = userId) else false
-        if (!remembered || !userIdExists) {
-            context.router.navigateTo(Screen.AdminLogin.route)
+        if (!userId.isNullOrEmpty()) {
+            checkUserId(
+                userId = userId,
+                onSuccess = {
+                    userIdExists = it
+                },
+                onError = {
+                    userIdExists = false
+                }
+            )
         }
     }
 
-    if (remembered && userIdExists) {
-        content()
-    } else {
-        println("Loading...")
-    }
+    return remembered && userIdExists
 }
 
 fun logout() {
@@ -129,7 +129,7 @@ fun applyControlStyle(
         EditorControl.Subtitle -> {
             applyStyle(
                 ControlStyle.Subtitle(
-                    selectedText = getSelectedText()
+                    selectedText = getSelectedText(),
                 )
             )
         }
@@ -149,6 +149,7 @@ fun applyControlStyle(
                 )
             )
         }
+
         EditorControl.Image -> {
             onImageClick()
         }
@@ -157,7 +158,7 @@ fun applyControlStyle(
 
 fun Long.parseDateString() = Date(this).toLocaleDateString()
 
-fun parseSwitchText(posts: List<String>): String {
+fun parseSwitchText(posts: List<Int>): String {
     return if (posts.size == 1) "1 Post Selected" else "${posts.size} Posts Selected"
 }
 

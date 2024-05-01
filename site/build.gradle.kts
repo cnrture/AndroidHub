@@ -46,6 +46,7 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.ktor.client.content.negotiation)
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:1.8.0")
+            implementation("com.github.ajalt.colormath:colormath:3.5.0")
         }
 
         jvmMain.dependencies {

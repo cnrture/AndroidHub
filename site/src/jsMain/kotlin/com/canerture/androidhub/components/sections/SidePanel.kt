@@ -8,12 +8,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import com.canerture.androidhub.getSitePalette
+import com.canerture.androidhub.navigation.Screen
 import com.canerture.androidhub.utils.Constants.COLLAPSED_PANEL_HEIGHT
 import com.canerture.androidhub.utils.Constants.FONT_FAMILY
 import com.canerture.androidhub.utils.Constants.SIDE_PANEL_WIDTH
 import com.canerture.androidhub.utils.Id
 import com.canerture.androidhub.utils.Res
-import com.canerture.androidhub.navigation.Screen
 import com.canerture.androidhub.utils.logout
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
@@ -44,6 +44,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.overflow
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.position
 import com.varabyte.kobweb.compose.ui.modifiers.scrollBehavior
+import com.varabyte.kobweb.compose.ui.modifiers.size
 import com.varabyte.kobweb.compose.ui.modifiers.transition
 import com.varabyte.kobweb.compose.ui.modifiers.translateX
 import com.varabyte.kobweb.compose.ui.modifiers.width
@@ -81,6 +82,7 @@ fun SidePanel(onMenuClick: () -> Unit) {
 
 @Composable
 private fun SidePanelInternal() {
+    val context = rememberPageContext()
     Column(
         modifier = Modifier
             .padding(leftRight = 40.px, topBottom = 50.px)
@@ -91,8 +93,14 @@ private fun SidePanelInternal() {
             .zIndex(9)
     ) {
         Image(
-            modifier = Modifier.margin(bottom = 60.px),
-            src = Res.Image.LOGO,
+            modifier = Modifier
+                .margin(bottom = 60.px)
+                .width(160.px)
+                .cursor(Cursor.Pointer)
+                .onClick {
+                    context.router.navigateTo(Screen.HomePage.route)
+                },
+            src = Res.Image.LOGO_DARK,
             alt = "Logo Image"
         )
         NavigationItems()
@@ -172,9 +180,10 @@ private fun NavigationItem(
                 .id(Id.navigationText)
                 .fontFamily(FONT_FAMILY)
                 .fontSize(16.px)
+                .color(getSitePalette().white)
                 .thenIf(
                     condition = selected,
-                    other = Modifier.color(getSitePalette().white)
+                    other = Modifier.color(getSitePalette().green)
                 ),
             text = title
         )
@@ -190,8 +199,7 @@ private fun VectorIcon(
     Svg(
         attrs = modifier
             .id(Id.svgParent)
-            .width(24.px)
-            .height(24.px)
+            .size(24.px)
             .toAttrs {
                 attr("viewBox", "0 0 24 24")
                 attr("fill", "none")
@@ -199,7 +207,9 @@ private fun VectorIcon(
     ) {
         Path {
             if (selected) {
-                attr(attr = "style", value = "stroke: ${getSitePalette().blue}")
+                attr(attr = "style", value = "stroke: ${getSitePalette().green}")
+            } else {
+                attr(attr = "style", value = "stroke: ${getSitePalette().white}")
             }
             attr(attr = "id", value = Id.vectorIcon)
             attr(attr = "d", value = pathData)
@@ -230,7 +240,7 @@ private fun CollapsedSidePanel(onMenuClick: () -> Unit) {
         )
         Image(
             modifier = Modifier.width(140.px),
-            src = Res.Image.LOGO,
+            src = Res.Image.LOGO_DARK,
             alt = "Logo Image"
         )
     }
@@ -306,7 +316,7 @@ fun OverflowSidePanel(
                         .width(80.px)
                         .onClick { context.router.navigateTo(Screen.HomePage.route) }
                         .cursor(Cursor.Pointer),
-                    src = Res.Image.LOGO,
+                    src = Res.Image.LOGO_DARK,
                     alt = "Logo Image"
                 )
             }

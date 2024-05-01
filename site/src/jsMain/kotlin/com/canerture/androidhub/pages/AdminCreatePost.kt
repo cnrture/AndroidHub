@@ -10,8 +10,11 @@ import androidx.compose.runtime.setValue
 import com.canerture.androidhub.components.layouts.AdminPageLayout
 import com.canerture.androidhub.components.widgets.ControlPopup
 import com.canerture.androidhub.components.widgets.MessagePopup
-import com.canerture.androidhub.data.model.Category
-import com.canerture.androidhub.data.model.Post
+import com.canerture.androidhub.data.addPost
+import com.canerture.androidhub.data.getCategories
+import com.canerture.androidhub.data.getPostDetail
+import com.canerture.androidhub.data.model.ParentCategory
+import com.canerture.androidhub.data.model.SubCategory
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.models.ControlStyle
 import com.canerture.androidhub.models.EditorControl
@@ -20,7 +23,6 @@ import com.canerture.androidhub.utils.Constants.FONT_FAMILY
 import com.canerture.androidhub.utils.Constants.POST_ID_PARAM
 import com.canerture.androidhub.utils.Constants.SIDE_PANEL_WIDTH
 import com.canerture.androidhub.utils.Id
-import com.canerture.androidhub.utils.addPost
 import com.canerture.androidhub.utils.applyControlStyle
 import com.canerture.androidhub.utils.applyStyle
 import com.canerture.androidhub.utils.getEditor
@@ -40,11 +42,10 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
+import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
-import com.varabyte.kobweb.compose.ui.modifiers.classNames
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.disabled
@@ -65,12 +66,14 @@ import com.varabyte.kobweb.compose.ui.modifiers.overflow
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.resize
 import com.varabyte.kobweb.compose.ui.modifiers.scrollBehavior
+import com.varabyte.kobweb.compose.ui.modifiers.size
 import com.varabyte.kobweb.compose.ui.modifiers.transition
 import com.varabyte.kobweb.compose.ui.modifiers.visibility
 import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
+import com.varabyte.kobweb.silk.components.forms.Checkbox
 import com.varabyte.kobweb.silk.components.forms.Switch
 import com.varabyte.kobweb.silk.components.forms.SwitchSize
 import com.varabyte.kobweb.silk.components.graphics.Image
@@ -83,53 +86,41 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
-import kotlinx.browser.localStorage
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.attributes.InputType
+import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.dom.A
 import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Input
-import org.jetbrains.compose.web.dom.Li
-import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.TextArea
-import org.jetbrains.compose.web.dom.Ul
 import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.HTMLTextAreaElement
-import org.w3c.dom.get
-import kotlin.js.Date
 
 data class CreatePageUiState(
-    var id: String = "",
+    var id: Int = 0,
     var title: String = "",
-    var subtitle: String = "",
     var thumbnail: String = "",
     var thumbnailInputDisabled: Boolean = true,
     var content: String = "",
-    var category: Category = Category.Programming,
+    var categories: List<ParentCategory> = emptyList(),
+    var category: String = "Category",
     var buttonText: String = "Create",
-    var popular: Boolean = false,
-    var main: Boolean = false,
-    var sponsored: Boolean = false,
     var editorVisibility: Boolean = true,
     var messagePopup: Boolean = false,
     var linkPopup: Boolean = false,
     var imagePopup: Boolean = false
 ) {
     fun reset() = this.copy(
-        id = "",
+        id = 0,
         title = "",
-        subtitle = "",
         thumbnail = "",
         content = "",
-        category = Category.Programming,
+        categories = emptyList(),
+        category = "Category",
         buttonText = "Create",
-        main = false,
-        popular = false,
-        sponsored = false,
         editorVisibility = true,
         messagePopup = false,
         linkPopup = false,
@@ -137,14 +128,9 @@ data class CreatePageUiState(
     )
 }
 
-@Page
+@Page("/admin/create-post")
 @Composable
-fun CreatePage() {
-    CreateScreen()
-}
-
-@Composable
-fun CreateScreen() {
+fun AdminCreatePost() {
     val scope = rememberCoroutineScope()
     val context = rememberPageContext()
     val breakpoint = rememberBreakpoint()
@@ -157,26 +143,48 @@ fun CreateScreen() {
     LaunchedEffect(hasPostIdParam) {
         if (hasPostIdParam) {
             val postId = context.route.params[POST_ID_PARAM] ?: ""
-            /*val response = fetchSelectedPost(id = postId)
-            if (response is ApiResponse.Success) {
-                (document.getElementById(Id.editor) as HTMLTextAreaElement).value =
-                    response.data.content
-                uiState = uiState.copy(
-                    id = response.data._id,
-                    title = response.data.title,
-                    subtitle = response.data.subtitle,
-                    content = response.data.content,
-                    category = response.data.category,
-                    thumbnail = response.data.thumbnail,
-                    buttonText = "Update",
-                    main = response.data.main,
-                    popular = response.data.popular,
-                    sponsored = response.data.sponsored
-                )
-            }*/
+            getPostDetail(
+                id = postId.toInt(),
+                onSuccess = { post ->
+                    (document.getElementById(Id.editor) as HTMLTextAreaElement).value = post.content
+                    uiState = uiState.copy(
+                        id = post.id,
+                        title = post.title,
+                        content = post.content,
+                        category = post.category.name,
+                        thumbnail = post.thumbnail,
+                        buttonText = "Update"
+                    )
+                },
+            )
         } else {
             (document.getElementById(Id.editor) as HTMLTextAreaElement).value = ""
             uiState = uiState.reset()
+            getCategories(
+                onSuccess = { categoryList ->
+                    val parentCategories = categoryList.filter { it.parentCategory.isEmpty() }.map {
+                        ParentCategory(
+                            id = it.id,
+                            name = it.name,
+                            short = it.short,
+                        )
+                    }
+                    val subCategories = categoryList.filter { it.parentCategory.isNotEmpty() }
+                    subCategories.forEach { subCategory ->
+                        val parent = parentCategories.find { subCategory.parentCategory == it.name }
+                        parent?.subCategories?.add(
+                            SubCategory(
+                                id = subCategory.id,
+                                name = subCategory.name,
+                                short = subCategory.short,
+                                parentCategory = subCategory.parentCategory
+                            )
+                        )
+                    }
+
+                    uiState = uiState.copy(categories = parentCategories)
+                }
+            )
         }
     }
 
@@ -196,68 +204,59 @@ fun CreateScreen() {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 SimpleGrid(numColumns = numColumns(base = 1, sm = 3)) {
-                    Row(
-                        modifier = Modifier
-                            .margin(
-                                right = 24.px,
-                                bottom = if (breakpoint < Breakpoint.SM) 12.px else 0.px
-                            ),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Switch(
-                            modifier = Modifier.margin(right = 8.px),
-                            checked = uiState.popular,
-                            onCheckedChange = { uiState = uiState.copy(popular = it) },
-                            size = SwitchSize.LG
-                        )
-                        SpanText(
+                    uiState.categories.forEach { category ->
+                        Box(
                             modifier = Modifier
-                                .fontSize(14.px)
-                                .fontFamily(FONT_FAMILY)
-                                .color(getSitePalette().blue),
-                            text = "Popular"
-                        )
-                    }
-                    Row(
-                        modifier = Modifier
-                            .margin(
-                                right = 24.px,
-                                bottom = if (breakpoint < Breakpoint.SM) 12.px else 0.px
-                            ),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Switch(
-                            modifier = Modifier.margin(right = 8.px),
-                            checked = uiState.main,
-                            onCheckedChange = { uiState = uiState.copy(main = it) },
-                            size = SwitchSize.LG
-                        )
-                        SpanText(
-                            modifier = Modifier
-                                .fontSize(14.px)
-                                .fontFamily(FONT_FAMILY)
-                                .color(getSitePalette().blue),
-                            text = "Main"
-                        )
-                    }
-                    Row(
-                        modifier = Modifier
-                            .margin(bottom = if (breakpoint < Breakpoint.SM) 12.px else 0.px),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Switch(
-                            modifier = Modifier.margin(right = 8.px),
-                            checked = uiState.sponsored,
-                            onCheckedChange = { uiState = uiState.copy(sponsored = it) },
-                            size = SwitchSize.LG
-                        )
-                        SpanText(
-                            modifier = Modifier
-                                .fontSize(14.px)
-                                .fontFamily(FONT_FAMILY)
-                                .color(getSitePalette().blue),
-                            text = "Sponsored"
-                        )
+                                .padding(12.px)
+                                .border(
+                                    width = 1.px,
+                                    style = LineStyle.Solid,
+                                    color = getSitePalette().blue
+                                )
+                                .borderRadius(r = 4.px)
+                                .margin(6.px)
+                        ) {
+                            Column {
+                                Checkbox(
+                                    modifier = Modifier.margin(
+                                        right = 24.px,
+                                        bottom = if (breakpoint < Breakpoint.SM) 12.px else 0.px
+                                    ),
+                                    checked = uiState.category == category.name,
+                                    onCheckedChange = { uiState = uiState.copy(category = category.name) },
+                                    content = {
+                                        SpanText(
+                                            modifier = Modifier
+                                                .fontSize(14.px)
+                                                .fontFamily(FONT_FAMILY)
+                                                .color(getSitePalette().blue),
+                                            text = category.name
+                                        )
+                                    }
+                                )
+
+                                category.subCategories.forEach { subCategory ->
+                                    Checkbox(
+                                        modifier = Modifier.margin(
+                                            left = 12.px,
+                                            right = 24.px,
+                                            bottom = if (breakpoint < Breakpoint.SM) 12.px else 0.px
+                                        ),
+                                        checked = uiState.category == subCategory.name,
+                                        onCheckedChange = { uiState = uiState.copy(category = subCategory.name) },
+                                        content = {
+                                            SpanText(
+                                                modifier = Modifier
+                                                    .fontSize(14.px)
+                                                    .fontFamily(FONT_FAMILY)
+                                                    .color(getSitePalette().blue),
+                                                text = subCategory.name
+                                            )
+                                        }
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
                 Input(
@@ -278,27 +277,7 @@ fun CreateScreen() {
                             attr("value", uiState.title)
                         }
                 )
-                Input(
-                    type = InputType.Text,
-                    attrs = Modifier
-                        .id(Id.subtitleInput)
-                        .fillMaxWidth()
-                        .height(54.px)
-                        .padding(leftRight = 20.px)
-                        .backgroundColor(getSitePalette().white)
-                        .borderRadius(r = 4.px)
-                        .noBorder()
-                        .fontFamily(FONT_FAMILY)
-                        .fontSize(16.px)
-                        .toAttrs {
-                            attr("placeholder", "Subtitle")
-                            attr("value", uiState.subtitle)
-                        }
-                )
-                CategoryDropdown(
-                    selectedCategory = uiState.category,
-                    onCategorySelect = { uiState = uiState.copy(category = it) }
-                )
+
                 Row(
                     modifier = Modifier.fillMaxWidth().margin(topBottom = 12.px),
                     horizontalArrangement = Arrangement.Start,
@@ -345,22 +324,18 @@ fun CreateScreen() {
                 CreateButton(
                     text = uiState.buttonText,
                     onClick = {
-                        uiState =
-                            uiState.copy(title = (document.getElementById(Id.titleInput) as HTMLInputElement).value)
-                        uiState =
-                            uiState.copy(subtitle = (document.getElementById(Id.subtitleInput) as HTMLInputElement).value)
-                        uiState =
-                            uiState.copy(content = (document.getElementById(Id.editor) as HTMLTextAreaElement).value)
+                        uiState = uiState.copy(
+                            title = (document.getElementById(Id.titleInput) as HTMLInputElement).value,
+                            content = (document.getElementById(Id.editor) as HTMLTextAreaElement).value
+                        )
+
                         if (!uiState.thumbnailInputDisabled) {
-                            uiState =
-                                uiState.copy(thumbnail = (document.getElementById(Id.thumbnailInput) as HTMLInputElement).value)
+                            uiState = uiState.copy(
+                                thumbnail = (document.getElementById(Id.thumbnailInput) as HTMLInputElement).value
+                            )
                         }
-                        if (
-                            uiState.title.isNotEmpty() &&
-                            uiState.subtitle.isNotEmpty() &&
-                            uiState.thumbnail.isNotEmpty() &&
-                            uiState.content.isNotEmpty()
-                        ) {
+
+                        if (uiState.title.isNotEmpty() && uiState.content.isNotEmpty()) {
                             scope.launch {
                                 if (hasPostIdParam) {
                                     /*val result = updatePost(
@@ -380,19 +355,18 @@ fun CreateScreen() {
                                         context.router.navigateTo(Screen.AdminSuccess.postUpdated())
                                     }*/
                                 } else {
-                                    val result = addPost(
-                                        Post(
-                                            postAuthor = localStorage["author"] ?: "",
-                                            postDate = Date.now(),
-                                            postContent = uiState.content,
-                                            postTitle = uiState.title,
-                                            postName = uiState.subtitle,
-                                            postModified = Date.now(),
-                                        )
+                                    addPost(
+                                        content = uiState.content,
+                                        title = uiState.title,
+                                        category = uiState.category,
+                                        thumbnail = uiState.thumbnail,
+                                        onSuccess = {
+                                            context.router.navigateTo(Screen.AdminSuccess.route)
+                                        },
+                                        onError = {
+                                            uiState = uiState.copy(messagePopup = false)
+                                        }
                                     )
-                                    if (result) {
-                                        context.router.navigateTo(Screen.AdminSuccess.route)
-                                    }
                                 }
                             }
                         } else {
@@ -442,65 +416,6 @@ fun CreateScreen() {
                 )
             }
         )
-    }
-}
-
-@Composable
-fun CategoryDropdown(
-    selectedCategory: Category,
-    onCategorySelect: (Category) -> Unit
-) {
-    Box(
-        modifier = Modifier
-            .margin(topBottom = 12.px)
-            .classNames("dropdown")
-            .fillMaxWidth()
-            .height(54.px)
-            .backgroundColor(getSitePalette().white)
-            .cursor(Cursor.Pointer)
-            .attrsModifier {
-                attr("data-bs-toggle", "dropdown")
-            }
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(leftRight = 20.px),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            SpanText(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .fontSize(16.px)
-                    .color(getSitePalette().blue)
-                    .fontFamily(FONT_FAMILY),
-                text = selectedCategory.name
-            )
-            Box(modifier = Modifier.classNames("dropdown-toggle"))
-        }
-        Ul(
-            attrs = Modifier
-                .fillMaxWidth()
-                .classNames("dropdown-menu")
-                .toAttrs()
-        ) {
-            Category.entries.forEach { category ->
-                Li {
-                    A(
-                        attrs = Modifier
-                            .classNames("dropdown-item")
-                            .color(getSitePalette().blue)
-                            .fontFamily(FONT_FAMILY)
-                            .fontSize(16.px)
-                            .onClick { onCategorySelect(category) }
-                            .toAttrs()
-                    ) {
-                        Text(value = category.name)
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -615,8 +530,8 @@ fun EditorControls(
                             else getSitePalette().green
                         )
                         .color(
-                            if (editorVisibility) getSitePalette().blue
-                            else Colors.White
+                            if (editorVisibility) getSitePalette().white
+                            else getSitePalette().white
                         )
                         .noBorder()
                         .onClick {
@@ -654,6 +569,7 @@ fun EditorControlView(
         contentAlignment = Alignment.Center
     ) {
         Image(
+            modifier = Modifier.size(if (control.name == "Subtitle") 12.px else 24.px),
             src = control.icon,
             alt = "${control.name} Icon"
         )
@@ -673,6 +589,7 @@ fun Editor(editorVisibility: Boolean) {
                 .margin(top = 8.px)
                 .padding(all = 20.px)
                 .backgroundColor(getSitePalette().white)
+                .color(getSitePalette().blue)
                 .borderRadius(r = 4.px)
                 .noBorder()
                 .visibility(
@@ -702,7 +619,8 @@ fun Editor(editorVisibility: Boolean) {
                 .maxHeight(400.px)
                 .margin(top = 8.px)
                 .padding(all = 20.px)
-                .backgroundColor(getSitePalette().blue)
+                .color(getSitePalette().blue)
+                .backgroundColor(getSitePalette().white)
                 .borderRadius(r = 4.px)
                 .visibility(
                     if (editorVisibility) Visibility.Hidden
@@ -746,6 +664,6 @@ val EditorKeyStyle by ComponentStyle {
             .transition(CSSTransition(property = "background", duration = 300.ms))
     }
     hover {
-        Modifier.backgroundColor(getSitePalette().blue)
+        Modifier.backgroundColor(getSitePalette().green)
     }
 }

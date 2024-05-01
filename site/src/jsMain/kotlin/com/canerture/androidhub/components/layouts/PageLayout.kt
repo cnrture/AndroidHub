@@ -26,7 +26,7 @@ import org.jetbrains.compose.web.css.percent
 
 val PageContentStyle by ComponentStyle {
     base { Modifier.fillMaxSize().padding(leftRight = 2.cssRem, top = 4.cssRem) }
-    Breakpoint.MD { Modifier.maxWidth(70.cssRem) }
+    Breakpoint.MD { Modifier.maxWidth(90.cssRem) }
 }
 
 @Composable

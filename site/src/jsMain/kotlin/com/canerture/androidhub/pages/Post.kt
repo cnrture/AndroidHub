@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import com.canerture.androidhub.components.layouts.PostPageLayout
 import com.varabyte.kobweb.core.Page
 
-@Page
+@Page("/posts/post")
 @Composable
 fun PostPage() {
     PostPageLayout(

@@ -27,7 +27,6 @@ fun AdminPageLayout(content: @Composable () -> Unit) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .maxWidth(PAGE_WIDTH.px)
         ) {
             SidePanel(onMenuClick = {
                 overflowOpened = true
