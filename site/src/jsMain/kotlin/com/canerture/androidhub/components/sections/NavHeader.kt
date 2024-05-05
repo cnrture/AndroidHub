@@ -14,6 +14,7 @@ import com.varabyte.kobweb.compose.dom.svg.Line
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
+import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -21,6 +22,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.animation
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.boxShadow
+import com.varabyte.kobweb.compose.ui.modifiers.classNames
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.display
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxHeight
@@ -53,6 +55,7 @@ import com.varabyte.kobweb.silk.components.style.base
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.style.vars.color.ColorVar
+import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.AnimationDirection
 import org.jetbrains.compose.web.css.AnimationFillMode
@@ -63,29 +66,45 @@ import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.Button
+import org.jetbrains.compose.web.dom.Div
 
 val NavHeaderStyle by ComponentStyle.base {
     Modifier.fillMaxWidth().padding(top = 4.cssRem, leftRight = 3.cssRem)
 }
 
 @Composable
-private fun NavLink(path: String, text: String) {
+private fun NavLink(path: String, text: String, modifier: Modifier = Modifier) {
     Link(
         path,
         text,
-        Modifier.fontSize(1.cssRem).setVariable(ColorVar, Color.black),
+        Modifier.fontSize(1.cssRem).setVariable(ColorVar, Color.black).then(modifier),
         UncoloredLinkVariant
     )
 }
 
 @Composable
 private fun MenuItems() {
-    NavLink("/", "Articles")
+    MenuItem()
     NavLink("/", "Projects")
     NavLink("/", "Extensions")
     NavLink("/", "Plugins")
     NavLink("/", "Library")
     NavLink("/", "Resources")
+}
+
+@Composable
+private fun MenuItem() {
+    var isOpen by remember { mutableStateOf(false) }
+    Column {
+        NavLink("/", "Articles", Modifier.onClick { isOpen = !isOpen })
+
+        if (isOpen) {
+            NavLink("/", "Android")
+            NavLink("/", "Kotlin")
+            NavLink("/", "Jetpack")
+        }
+    }
 }
 
 @Composable
@@ -197,7 +216,73 @@ fun NavHeader() {
                 .padding(topBottom = 0.5.cssRem, leftRight = 3.cssRem),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            MenuItems()
+            Div(
+                attrs = Modifier.classNames("navbar").toAttrs(),
+            ) {
+                Div(attrs = Modifier.classNames("dropdown").toAttrs()) {
+                    Button(
+                        attrs = Modifier.classNames("dropbtn").toAttrs()
+                    ) {
+                        SpanText("Articles")
+                    }
+                    Div(attrs = Modifier.classNames("dropdown-content").toAttrs()) {
+                        SpanText("Android Studio")
+                    }
+                }
+
+                Div(attrs = Modifier.classNames("dropdown").toAttrs()) {
+                    Button(
+                        attrs = Modifier.classNames("dropbtn").toAttrs()
+                    ) {
+                        SpanText("Projects")
+                    }
+                    Div(attrs = Modifier.classNames("dropdown-content").toAttrs()) {
+                        SpanText("Multiplatform")
+                    }
+                }
+
+                Div(attrs = Modifier.classNames("dropdown").toAttrs()) {
+                    Button(
+                        attrs = Modifier.classNames("dropbtn").toAttrs()
+                    ) {
+                        SpanText("Extensions")
+                    }
+                    Div(attrs = Modifier.classNames("dropdown-content").toAttrs()) {
+                        SpanText("View")
+                        SpanText("Intent")
+                    }
+                }
+
+                Div(attrs = Modifier.classNames("dropdown").toAttrs()) {
+                    Button(
+                        attrs = Modifier.classNames("dropbtn").toAttrs()
+                    ) {
+                        SpanText("Plugins")
+                    }
+                }
+
+                Div(attrs = Modifier.classNames("dropdown").toAttrs()) {
+                    Button(
+                        attrs = Modifier.classNames("dropbtn").toAttrs()
+                    ) {
+                        SpanText("Library")
+                    }
+                }
+
+                Div(attrs = Modifier.classNames("dropdown").toAttrs()) {
+                    Button(
+                        attrs = Modifier.classNames("dropbtn").toAttrs()
+                    ) {
+                        SpanText("Resources")
+                    }
+                    Div(attrs = Modifier.classNames("dropdown-content").toAttrs()) {
+                        SpanText("Courses")
+                        Spacer()
+                        SpanText("Youtube")
+                    }
+                }
+            }
+
             SearchButton(onClick = {})
         }
     }

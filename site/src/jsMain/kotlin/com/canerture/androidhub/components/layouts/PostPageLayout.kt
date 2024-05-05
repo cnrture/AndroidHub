@@ -7,18 +7,22 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import com.canerture.androidhub.ContainerStyle
+import com.canerture.androidhub.InputCheckBoxStyle
+import com.canerture.androidhub.common.Constants
 import com.canerture.androidhub.components.sections.Footer
 import com.canerture.androidhub.components.sections.NavHeader
 import com.canerture.androidhub.data.getPostDetail
 import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.getSitePalette
-import com.canerture.androidhub.utils.Constants.POST_ID_PARAM
 import com.canerture.androidhub.utils.Id
 import com.canerture.androidhub.utils.parseDateString
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.css.Overflow
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.css.TextOverflow
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -34,7 +38,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
 import com.varabyte.kobweb.compose.ui.modifiers.gridRow
 import com.varabyte.kobweb.compose.ui.modifiers.gridTemplateRows
-import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.id
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
@@ -42,11 +45,14 @@ import com.varabyte.kobweb.compose.ui.modifiers.minHeight
 import com.varabyte.kobweb.compose.ui.modifiers.objectFit
 import com.varabyte.kobweb.compose.ui.modifiers.overflow
 import com.varabyte.kobweb.compose.ui.modifiers.padding
+import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.compose.ui.modifiers.textOverflow
 import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.icons.fa.FaCalendar
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
@@ -55,12 +61,15 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.fr
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.Input
+import org.jetbrains.compose.web.dom.Label
 import org.w3c.dom.HTMLDivElement
 
 data class PostDetailUIState(
@@ -77,29 +86,21 @@ val PostPageContentStyle by ComponentStyle {
 fun PostPageLayout(
     title: String,
 ) {
+    val context = rememberPageContext()
+    println(context.route.queryParams.get("short"))
     LaunchedEffect(title) {
         document.title = title
     }
 
-    val scope = rememberCoroutineScope()
-    val context = rememberPageContext()
     val breakpoint = rememberBreakpoint()
     var state by remember { mutableStateOf(PostDetailUIState()) }
 
-    val hasPostIdParam = remember(key1 = context.route) {
-        context.route.params.containsKey(POST_ID_PARAM)
-    }
-
-    LaunchedEffect(key1 = context.route) {
-        println(hasPostIdParam)
-        if (hasPostIdParam) {
-            val postId = context.route.params.getValue(POST_ID_PARAM).toInt()
-            getPostDetail(
-                id = postId,
-                onSuccess = { state = PostDetailUIState(post = it, isLoading = false) },
-                onError = { println(it) }
-            )
-        }
+    val postShort = Constants.postShort
+    LaunchedEffect(key1 = postShort) {
+        getPostDetail(
+            short = postShort,
+            onSuccess = { state = PostDetailUIState(post = it, isLoading = false) }
+        )
     }
 
     Box(
@@ -243,18 +244,12 @@ fun PostContent(
     SpanText(
         modifier = Modifier
             .fillMaxWidth()
-            .color(getSitePalette().blue)
-            .fontSize(14.px),
-        text = post.date.toLong().parseDateString()
-    )
-    SpanText(
-        modifier = Modifier
-            .fillMaxWidth()
             .margin(bottom = 20.px)
             .color(getSitePalette().blue)
             .fontSize(40.px)
             .fontWeight(FontWeight.Bold)
             .overflow(Overflow.Hidden)
+            .textAlign(TextAlign.Center)
             .textOverflow(TextOverflow.Ellipsis)
             .styleModifier {
                 property("display", "-webkit-box")
@@ -264,18 +259,43 @@ fun PostContent(
             },
         text = post.title
     )
-    Image(
-        modifier = Modifier
-            .margin(bottom = 40.px)
-            .fillMaxWidth()
-            .objectFit(ObjectFit.Cover)
-            .height(
-                if (breakpoint <= Breakpoint.SM) 250.px
-                else if (breakpoint <= Breakpoint.MD) 400.px
-                else 600.px
-            ),
-        src = post.thumbnail,
-    )
+    Row(
+        modifier = Modifier.fillMaxWidth().margin(bottom = 40.px),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
+    ) {
+        FaCalendar(
+            size = IconSize.X1,
+            modifier = Modifier.color(getSitePalette().green).margin(right = 8.px)
+        )
+        SpanText(
+            modifier = Modifier
+                .color(getSitePalette().blue)
+                .fontSize(14.px),
+            text = "Published: ${post.date.toLong().parseDateString()}",
+        )
+    }
+
+    Div(
+        attrs = ContainerStyle.toModifier().toAttrs()
+    ) {
+        Input(
+            type = InputType.Checkbox,
+            attrs = InputCheckBoxStyle.toModifier().id("zoomCheck").toAttrs()
+        )
+
+        Label(forId = "zoomCheck") {
+            Image(
+                modifier = Modifier
+                    .margin(bottom = 40.px)
+                    .fillMaxWidth()
+                    .objectFit(ObjectFit.ScaleDown)
+                    .borderRadius(r = 4.px)
+                    .boxShadow(0.px, 0.px, 10.px, 0.px, getSitePalette().blue),
+                src = post.thumbnail,
+            )
+        }
+    }
     Div(
         attrs = Modifier
             .id(Id.postContent)

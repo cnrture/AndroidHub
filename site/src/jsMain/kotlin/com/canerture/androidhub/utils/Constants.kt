@@ -4,7 +4,7 @@ object Constants {
     const val POSTS_PER_PAGE = 8
     const val QUERY_PARAM = "query"
     const val CATEGORY_PARAM = "category"
-    const val POST_ID_PARAM = "postId"
+    const val POST_SHORT_PARAM = "short"
     const val SKIP_PARAM = "skip"
     const val AUTHOR_PARAM = "author"
     const val UPDATED_PARAM = "updated"
@@ -22,7 +22,7 @@ object Res {
     object Image {
         const val LOGO = "/androidhub-logo.png"
         const val LOGO_DARK = "/androidhub-logo-dark.png"
-        const val ANDROID_FIGURE = "/android-figure.png"
+        const val ANDROID_FIGURE = "/android-figure.webp"
         const val AVATAR = "/avatar.jpg"
     }
 

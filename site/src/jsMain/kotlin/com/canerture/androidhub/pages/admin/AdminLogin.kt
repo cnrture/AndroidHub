@@ -1,4 +1,4 @@
-package com.canerture.androidhub.pages
+package com.canerture.androidhub.pages.admin
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue

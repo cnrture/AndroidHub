@@ -1,4 +1,4 @@
-package com.canerture.androidhub.pages
+package com.canerture.androidhub.pages.admin
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -7,6 +7,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import com.canerture.androidhub.ShadowedGreenButtonVariant
+import com.canerture.androidhub.SuccessStyle
 import com.canerture.androidhub.components.layouts.AdminPageLayout
 import com.canerture.androidhub.components.widgets.ControlPopup
 import com.canerture.androidhub.components.widgets.MessagePopup
@@ -19,8 +21,8 @@ import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.models.ControlStyle
 import com.canerture.androidhub.models.EditorControl
 import com.canerture.androidhub.navigation.Screen
+import com.canerture.androidhub.utils.Constants
 import com.canerture.androidhub.utils.Constants.FONT_FAMILY
-import com.canerture.androidhub.utils.Constants.POST_ID_PARAM
 import com.canerture.androidhub.utils.Constants.SIDE_PANEL_WIDTH
 import com.canerture.androidhub.utils.Id
 import com.canerture.androidhub.utils.applyControlStyle
@@ -46,6 +48,7 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
+import com.varabyte.kobweb.compose.ui.modifiers.classNames
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.disabled
@@ -86,6 +89,7 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
+import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.attributes.InputType
@@ -95,6 +99,7 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Input
+import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.TextArea
 import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.HTMLTextAreaElement
@@ -135,16 +140,17 @@ fun AdminCreatePost() {
     val context = rememberPageContext()
     val breakpoint = rememberBreakpoint()
     var uiState by remember { mutableStateOf(CreatePageUiState()) }
+    var isSuccessMessageVisible by remember { mutableStateOf(false) }
 
     val hasPostIdParam = remember(key1 = context.route) {
-        context.route.params.containsKey(POST_ID_PARAM)
+        context.route.params.containsKey(Constants.POST_SHORT_PARAM)
     }
 
     LaunchedEffect(hasPostIdParam) {
         if (hasPostIdParam) {
-            val postId = context.route.params[POST_ID_PARAM] ?: ""
+            val postShort = context.route.params[Constants.POST_SHORT_PARAM].orEmpty()
             getPostDetail(
-                id = postId.toInt(),
+                short = postShort,
                 onSuccess = { post ->
                     (document.getElementById(Id.editor) as HTMLTextAreaElement).value = post.content
                     uiState = uiState.copy(
@@ -162,7 +168,7 @@ fun AdminCreatePost() {
             uiState = uiState.reset()
             getCategories(
                 onSuccess = { categoryList ->
-                    val parentCategories = categoryList.filter { it.parentCategory.isEmpty() }.map {
+                    val parentCategories = categoryList.filter { it.parentCategory == "None" }.map {
                         ParentCategory(
                             id = it.id,
                             name = it.name,
@@ -183,7 +189,7 @@ fun AdminCreatePost() {
                     }
 
                     uiState = uiState.copy(categories = parentCategories)
-                }
+                },
             )
         }
     }
@@ -203,6 +209,13 @@ fun AdminCreatePost() {
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                if (isSuccessMessageVisible) {
+                    Box(
+                        modifier = SuccessStyle.toModifier()
+                    ) {
+                        Text("Post created successfully!")
+                    }
+                }
                 SimpleGrid(numColumns = numColumns(base = 1, sm = 3)) {
                     uiState.categories.forEach { category ->
                         Box(
@@ -361,7 +374,12 @@ fun AdminCreatePost() {
                                         category = uiState.category,
                                         thumbnail = uiState.thumbnail,
                                         onSuccess = {
-                                            context.router.navigateTo(Screen.AdminSuccess.route)
+                                            scope.launch {
+                                                isSuccessMessageVisible = true
+                                                delay(2000)
+                                                isSuccessMessageVisible = false
+                                                context.router.navigateTo(Screen.AdminMyPosts.route)
+                                            }
                                         },
                                         onError = {
                                             uiState = uiState.copy(messagePopup = false)
@@ -456,7 +474,7 @@ fun ThumbnailUploader(
             attrs = Modifier
                 .onClick {
                     document.loadDataUrlFromDisk(
-                        accept = "image/png, image/jpeg",
+                        accept = "image/webp, image/gif",
                         onLoad = {
                             onThumbnailSelect(filename, it)
                         }
@@ -597,7 +615,7 @@ fun Editor(editorVisibility: Boolean) {
                     else Visibility.Hidden
                 )
                 .onKeyDown {
-                    if (it.code == "Enter" && it.shiftKey) {
+                    if (it.code == "Enter") {
                         applyStyle(
                             controlStyle = ControlStyle.Break(
                                 selectedText = getSelectedText()
@@ -640,9 +658,10 @@ fun CreateButton(
     onClick: () -> Unit
 ) {
     Button(
-        attrs = Modifier
+        attrs = ShadowedGreenButtonVariant.toModifier()
             .onClick { onClick() }
             .fillMaxWidth()
+            .cursor(Cursor.Pointer)
             .height(54.px)
             .margin(top = 24.px)
             .backgroundColor(getSitePalette().green)

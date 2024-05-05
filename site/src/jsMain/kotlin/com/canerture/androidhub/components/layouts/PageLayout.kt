@@ -32,7 +32,7 @@ val PageContentStyle by ComponentStyle {
 @Composable
 fun PageLayout(title: String, content: @Composable ColumnScope.() -> Unit) {
     LaunchedEffect(title) {
-        document.title = "AndroidHub - $title"
+        document.title = title
     }
 
     Box(

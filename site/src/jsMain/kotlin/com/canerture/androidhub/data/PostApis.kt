@@ -28,13 +28,13 @@ suspend fun getPosts(
 )
 
 suspend fun getPostDetail(
-    id: Int,
+    short: String,
     onSuccess: (Post) -> Unit = {},
     onError: (String) -> Unit = {}
 ) = safeApiCall<Post>(
     call = {
         client.get(Constants.BASE_URL.plus("posts.php")){
-            parameter("id", id)
+            parameter("short", short)
         }.body<String>()
     },
     onSuccess = onSuccess,
@@ -51,6 +51,7 @@ suspend fun addPost(
 ) = safeApiCall<Unit>(
     call = {
         client.post(Constants.BASE_URL.plus("posts.php")) {
+            val short = title.replace(" ", "-").lowercase()
             val request = Json.encodeToString(
                 AddPostRequest(
                     authorId = localStorage["userId"] ?: "",
@@ -58,6 +59,7 @@ suspend fun addPost(
                     date = Date.now(),
                     content = content,
                     title = title,
+                    short = short,
                     category = category,
                     thumbnail = thumbnail
                 )

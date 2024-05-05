@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>About</title>
+  <title>Post</title>
   <meta content="Powered by Kobweb" name="description">
   <link href="/favicon.ico" rel="icon">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -69,68 +69,8 @@
          </div></button>
        </div>
       </div>
-      <div class="page-content kobweb-col kobweb-arrange-top kobweb-align-center-horiz">
-       <div class="markdown kobweb-col kobweb-arrange-top kobweb-align-start" style="width: 100%; height: 100%;">
-        <h1 id="about-this-template">About this template</h1>
-        <p>This template is intended to both demonstrate some fundamentals of the Kobweb framework and act a starting point you can build your own site from.</p>
-        <hr class="silk-horizontal-divider">
-        <h2 id="learn">Learn</h2>
-        <p>If this is your first time using Kobweb, please open this site's project in an IDE and take a few minutes to look around the code.</p>
-        <h3 id="files">Files</h3>
-        <h4 id="appentry-kt">AppEntry.kt</h4>
-        <p>This file declares a method that is an entry point for all pages on your site. You can rename the file and the method if you like. Kobweb searches for a single method at compile time annotated with <code>@App</code>.</p>
-        <h4 id="appstyles-kt">AppStyles.kt</h4>
-        <p>An example of declaring generally useful styles that can be used anywhere across the whole site. Otherwise, you normally declare styles close to the widget that uses them.</p>
-        <h4 id="sitetheme-kt">SiteTheme.kt</h4>
-        <p>An example of how to define some site-specific colors, effectively extending the palette provided by Silk.</p>
-        <h4 id="components">components/</h4>
-        <p>By convention, Kobweb codebases organize reusable site components under this folder. Within it, you have:</p>
-        <ul>
-         <li><code>layout/</code><br>
-           Represents top-level organization for pages</li>
-         <li><code>sections/</code><br>
-           Areas of content that appear across multiple pages (such as nav bars and footers)</li>
-         <li><code>widgets/</code><br>
-           Home for low-level UI pieces that you can use around your site</li>
-        </ul>
-        <h4 id="pages">pages/</h4>
-        <p>Any <code>@Composable</code> under this folder additionally tagged with <code>@Page</code> will have a route generated for it automatically. Defining a page outside of this folder will be flagged as an error by the Kobweb Gradle plugin at compile time. Note that additional pages (like this one!) might live under the <code>resources/markdown</code> folder.</p>
-        <h4 id="resources">resources/</h4>
-        <ul>
-         <li><code>public</code><br>
-           If you want to host any media on your site (such as an icon, an image, text configuration files, movies, fonts, etc.), you should put it under this folder.</li>
-         <li><code>markdown</code><br>
-           Any markdown discovered in here by Kobweb at compile time will be converted into pages on your site.</li>
-        </ul>
-        <h3 id="classes">Classes</h3>
-        <p>The Kobweb and Silk APIs introduce a lot of powerful concepts. Here are some of the most important ones to know about which you can find used throughout this template.</p>
-        <h4 id="modifier">Modifier</h4>
-        <p>Kobweb introduces the <code>Modifier</code> keyword that Android developers will recognize from the Jetpack Compose API. In a webdev context, this is used for setting CSS styles and html attributes on elements in the page.</p>
-        <h4 id="componentstyle">ComponentStyle</h4>
-        <p>Traditional HTML pages use CSS to style their UI. In Kobweb, these styles can be declared using the <code>ComponentStyle</code> class in a Kotlin-idiomatic way. You can find examples of component styles used throughout the template.</p>
-        <h4 id="componentvariant">ComponentVariant</h4>
-        <p>You can generate variants from component styles, which are ways to take base component styles and tweak them further.</p>
-        <h4 id="keyframes">Keyframes</h4>
-        <p>You can create animations by declaring keyframes for them.</p>
-        <h2 id="starting-point">Starting Point</h2>
-        <p>This template aims to create some generally useful pieces that most sites will want to use. Making your own site could be as easy as deleting this <em>About</em> page and working from there. However, you are welcome to modify or delete anything you find in the template that you don't plan to use in your final site.</p>
-        <p>If instead you'd like to start from scratch, you can run</p>
-        <pre><code>$ kobweb create app/empty
-</code></pre>
-        <p>which will create a new project with nothing inside of it except for a minimal, skeletal structure.</p>
-        <h2 id="export-and-deploy">Export and Deploy</h2>
-        <p>When you are ready to share your site with the world, you'll want to export it first. This will create a production snapshot of your site.</p>
-        <p>There are two flavors of Kobweb sites: <em>static layout</em> and <em>full stack</em>. You can <a class="silk-link" href="https://github.com/varabyte/kobweb#static-layout-vs-full-stack-sites">read more about these choices here</a>.</p>
-        <p>For most sites, a static layout site is what you want, so to do that, return to the command line and run:</p>
-        <pre><code>$ kobweb export --layout static
-</code></pre>
-        <p>After that runs for a little while, your production site should be generated! You can find the files under the <code>.kobweb/site</code> folder.</p>
-        <p>Test it locally by running:</p>
-        <pre><code>$ kobweb run --layout static --env prod
-</code></pre>
-        <p>If you're satisfied, you can upload your site files to the static website host provider of your choice. Each provider has its own instructions for how it discovers your files, so please refer to their documentation.</p>
-        <p>You can <a class="silk-link" href="https://bitspittle.dev/blog/2022/staticdeploy">read this blog post</a> for some concrete examples of exporting a Kobweb site to two popular static website hosting providers.</p>
-       </div>
+      <div class="post-page-content kobweb-row kobweb-arrange-start kobweb-align-top" style="grid-row: 2 / 3;">
+       <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; margin: 4rem 0px 0px 4rem; background-color: rgb(255, 255, 255); border-radius: 1rem; padding: 4rem; max-width: 800px; box-shadow: lightgray 0px 0px 5px 0px;"></div>
       </div>
       <div class="footer kobweb-box kobweb-align-center" style="width: 100%; grid-row: 2 / 3;">
        <span style="text-align: center;"><a class="silk-link" href="https://bento.me/canerture"><span class="silk-span-text" style="color: rgb(61, 219, 134); font-weight: bold;">2024 - Caner Ture</span></a></span>

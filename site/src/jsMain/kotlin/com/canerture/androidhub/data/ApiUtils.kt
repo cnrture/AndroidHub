@@ -1,6 +1,5 @@
 package com.canerture.androidhub.data
 
-import com.canerture.androidhub.common.Resource
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
