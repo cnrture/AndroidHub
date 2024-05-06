@@ -20,8 +20,8 @@ object Constants {
 
 object Res {
     object Image {
-        const val LOGO = "/androidhub-logo.png"
-        const val LOGO_DARK = "/androidhub-logo-dark.png"
+        const val LOGO = "/androidhub-logo.webp"
+        const val LOGO_DARK = "/androidhub-logo-dark.webp"
         const val ANDROID_FIGURE = "/android-figure.webp"
         const val AVATAR = "/avatar.jpg"
     }

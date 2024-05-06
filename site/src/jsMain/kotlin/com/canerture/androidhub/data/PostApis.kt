@@ -33,7 +33,7 @@ suspend fun getPostDetail(
     onError: (String) -> Unit = {}
 ) = safeApiCall<Post>(
     call = {
-        client.get(Constants.BASE_URL.plus("posts.php")){
+        client.get(Constants.BASE_URL.plus("posts.php")) {
             parameter("short", short)
         }.body<String>()
     },
@@ -106,6 +106,20 @@ suspend fun deleteSelectedPosts(
     call = {
         client.get(Constants.BASE_URL.plus("posts.php")) {
             parameter("authorId", localStorage["userId"] ?: "")
+        }.body<String>()
+    },
+    onSuccess = onSuccess,
+    onError = onError
+)
+
+suspend fun getPostsByCategory(
+    category: String,
+    onSuccess: (List<Post>) -> Unit = {},
+    onError: (String) -> Unit = {}
+) = safeApiCall<List<Post>>(
+    call = {
+        client.get(Constants.BASE_URL.plus("posts.php")) {
+            parameter("category", category)
         }.body<String>()
     },
     onSuccess = onSuccess,

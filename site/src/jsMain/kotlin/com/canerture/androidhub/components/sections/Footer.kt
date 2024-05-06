@@ -22,7 +22,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.dom.Span
 
 val FooterStyle by ComponentStyle.base {
-    Modifier.padding(topBottom = 1.5.cssRem, leftRight = 10.percent)
+    Modifier.padding(topBottom = 5.cssRem, leftRight = 10.percent)
 }
 
 @Composable

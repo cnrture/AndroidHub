@@ -29,17 +29,17 @@ import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.icons.fa.FaClock
 import com.varabyte.kobweb.silk.components.icons.fa.FaUser
 import com.varabyte.kobweb.silk.components.navigation.Link
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
-fun PopularArticleItem(
-    article: Post,
-) {
+fun PopularArticleItem(article: Post) {
     val context = rememberPageContext()
     Column(
         modifier = ShadowedGrayButtonVariant.toModifier()
@@ -50,7 +50,7 @@ fun PopularArticleItem(
     ) {
         SpanText(
             modifier = Modifier
-                .margin(top = 2.cssRem, bottom = 1.cssRem)
+                .margin(top = 1.5.cssRem, bottom = 1.cssRem)
                 .backgroundColor(getSitePalette().grayTransparent)
                 .fontSize(14.px)
                 .borderRadius(topRight = 1.cssRem, bottomRight = 1.cssRem)

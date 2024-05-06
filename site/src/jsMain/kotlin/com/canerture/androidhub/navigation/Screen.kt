@@ -4,7 +4,6 @@ import com.canerture.androidhub.data.model.Category
 import com.canerture.androidhub.utils.Constants.CATEGORY_PARAM
 import com.canerture.androidhub.utils.Constants.POST_SHORT_PARAM
 import com.canerture.androidhub.utils.Constants.QUERY_PARAM
-import com.canerture.androidhub.utils.Constants.UPDATED_PARAM
 
 sealed class Screen(val route: String) {
     data object AdminHome : Screen(route = "/admin")
@@ -18,10 +17,11 @@ sealed class Screen(val route: String) {
     }
 
     data object HomePage : Screen(route = "/")
-    data object SearchPage : Screen(route = "/search/query") {
-        fun searchByCategory(category: Category) =
-            "/search/query?${CATEGORY_PARAM}=${category.name}"
+    data object CategoryPage : Screen(route = "/category") {
+        fun getCategoryPosts(category: String) = "/category?${CATEGORY_PARAM}=${category}"
+    }
 
+    data object SearchPage : Screen(route = "/search/query") {
         fun searchByTitle(query: String) = "/search/query?${QUERY_PARAM}=$query"
     }
 
