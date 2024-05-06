@@ -258,7 +258,7 @@ fun MyPostsScreen() {
                         }
                     }
                 },
-                onClick = { context.router.navigateTo(Screen.AdminCreate.passPostId(id = it)) }
+                onClick = { context.router.navigateTo(Screen.AdminCreate.passPostId(short = it)) }
             )
         }
     }

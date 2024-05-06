@@ -68,11 +68,11 @@ fun NavHeader(
     val breakpoint = rememberBreakpoint()
 
     val logoWidth = when (breakpoint) {
-        Breakpoint.ZERO -> 14.cssRem
-        Breakpoint.SM -> 18.cssRem
-        Breakpoint.MD -> 24.cssRem
-        Breakpoint.LG -> 24.cssRem
-        Breakpoint.XL -> 26.cssRem
+        Breakpoint.ZERO -> 200.px
+        Breakpoint.SM -> 200.px
+        Breakpoint.MD -> 300.px
+        Breakpoint.LG -> 320.px
+        Breakpoint.XL -> 360.px
     }
 
     Div(

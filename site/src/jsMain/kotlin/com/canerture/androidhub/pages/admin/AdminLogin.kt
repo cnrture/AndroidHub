@@ -15,7 +15,6 @@ import com.canerture.androidhub.navigation.Screen
 import com.canerture.androidhub.utils.Constants.FONT_FAMILY
 import com.canerture.androidhub.utils.Id
 import com.canerture.androidhub.utils.Res
-import com.canerture.androidhub.utils.isUserLoggedIn
 import com.canerture.androidhub.utils.noBorder
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
@@ -80,12 +79,6 @@ sealed interface LoginRegisterState {
 @Page("/admin/login")
 @Composable
 fun LoginScreen() {
-    val isUserLoggedIn = isUserLoggedIn()
-    if (isUserLoggedIn) {
-        val context = rememberPageContext()
-        context.router.navigateTo(Screen.AdminHome.route)
-    }
-
     val scope = rememberCoroutineScope()
     val context = rememberPageContext()
     var errorText by remember { mutableStateOf(" ") }
@@ -232,7 +225,7 @@ fun LoginScreen() {
                                     password = password,
                                     onSuccess = { user ->
                                         rememberLoggedIn(true, user)
-                                        context.router.navigateTo(Screen.AdminHome.route)
+                                        context.router.navigateTo(Screen.AdminMyPosts.route)
                                     },
                                     onError = { message ->
                                         errorText = message
@@ -255,7 +248,7 @@ fun LoginScreen() {
                                     password = password,
                                     onSuccess = { user ->
                                         rememberLoggedIn(true, user)
-                                        context.router.navigateTo(Screen.AdminHome.route)
+                                        context.router.navigateTo(Screen.AdminMyPosts.route)
                                     },
                                     onError = { message ->
                                         errorText = message

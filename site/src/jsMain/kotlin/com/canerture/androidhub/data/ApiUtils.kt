@@ -30,7 +30,7 @@ object ApiUtils {
     ) {
         try {
             val response = call().parseData<BaseResponse<T>>()
-            if (response.isSuccess() && response.data != null) {
+            if (response.status == 200 && response.data != null) {
                 onSuccess(response.data)
             } else {
                 onError(response.message.orEmpty())

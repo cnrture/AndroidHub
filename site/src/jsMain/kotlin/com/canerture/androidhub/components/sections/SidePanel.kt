@@ -120,15 +120,6 @@ fun NavigationItems() {
     )
     NavigationItem(
         modifier = Modifier.margin(bottom = 24.px),
-        title = "Home",
-        selected = context.route.path == Screen.AdminHome.route,
-        icon = Res.PathIcon.home,
-        onClick = {
-            context.router.navigateTo(Screen.AdminHome.route)
-        }
-    )
-    NavigationItem(
-        modifier = Modifier.margin(bottom = 24.px),
         selected = context.route.path == Screen.AdminCreate.route,
         title = "Create Post",
         icon = Res.PathIcon.create,

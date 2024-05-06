@@ -3,7 +3,6 @@ package com.canerture.androidhub.data.model
 import com.github.ajalt.colormath.model.RGBInt
 import com.github.ajalt.colormath.parse
 import kotlinx.serialization.Serializable
-import org.jetbrains.compose.web.css.Color
 
 @Serializable
 data class Category(

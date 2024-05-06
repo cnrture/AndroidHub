@@ -9,6 +9,7 @@ import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.getSubheadlineFontSize
 import com.canerture.androidhub.navigation.Screen
 import com.canerture.androidhub.utils.Res
+import com.canerture.androidhub.utils.isUserLoggedIn
 import com.varabyte.kobweb.compose.css.AlignContent
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -20,7 +21,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.alignContent
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.display
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
-import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.lineHeight
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.padding
@@ -79,7 +79,8 @@ fun AndroidHeroContent(
 
 @Composable
 private fun TextArea(breakpoint: Breakpoint, modifier: Modifier = Modifier) {
-    val ctx = rememberPageContext()
+    val context = rememberPageContext()
+    val isUserLoggedIn = isUserLoggedIn()
     Column(
         modifier = modifier
     ) {
@@ -101,7 +102,11 @@ private fun TextArea(breakpoint: Breakpoint, modifier: Modifier = Modifier) {
         Spacer()
         Button(
             onClick = {
-                ctx.router.tryRoutingTo(Screen.AdminLogin.route)
+                if (isUserLoggedIn) {
+                    context.router.navigateTo(Screen.AdminMyPosts.route)
+                } else {
+                    context.router.tryRoutingTo(Screen.AdminLogin.route)
+                }
             },
             modifier = ShadowedGreenButtonVariant.toModifier()
                 .margin(top = 2.cssRem)
@@ -110,7 +115,7 @@ private fun TextArea(breakpoint: Breakpoint, modifier: Modifier = Modifier) {
             size = ButtonSize.LG,
         ) {
             SpanText(
-                text = "Apply to be an author",
+                text = "Join us",
                 modifier = Modifier
                     .fontSize(1.25.cssRem)
                     .lineHeight(2)

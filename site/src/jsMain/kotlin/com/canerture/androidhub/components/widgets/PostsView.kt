@@ -11,7 +11,6 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
-import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
 import com.varabyte.kobweb.compose.ui.modifiers.margin
@@ -35,7 +34,7 @@ fun PostsView(
     onDeselect: (Int) -> Unit = {},
     showMoreVisibility: Boolean,
     onShowMore: () -> Unit,
-    onClick: (Int) -> Unit
+    onClick: (String) -> Unit
 ) {
     Column(
         modifier = Modifier.fillMaxWidth(

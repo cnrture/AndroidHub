@@ -15,7 +15,6 @@ import com.varabyte.kobweb.silk.SilkApp
 import com.varabyte.kobweb.silk.components.layout.Surface
 import kotlinx.browser.document
 import kotlinx.browser.window
-import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.vh
 import org.jetbrains.compose.web.css.vw
 

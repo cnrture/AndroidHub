@@ -17,6 +17,17 @@ data class AddPostRequest(
 )
 
 @Serializable
+data class UpdatePostRequest(
+    val id: Int = 0,
+    val date: Double = 0.0,
+    val content: String = "",
+    val title: String = "",
+    val short: String = "",
+    val category: String = "",
+    val thumbnail: String = "",
+)
+
+@Serializable
 data class Post(
     val id: Int = 0,
     val authorId: String = "",

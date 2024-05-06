@@ -8,14 +8,11 @@ import androidx.compose.runtime.setValue
 import com.canerture.androidhub.components.sections.NavigationItems
 import com.canerture.androidhub.components.sections.OverflowSidePanel
 import com.canerture.androidhub.components.sections.SidePanel
-import com.canerture.androidhub.utils.Constants.PAGE_WIDTH
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
-import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
-import org.jetbrains.compose.web.css.px
 
 @Composable
 fun AdminPageLayout(content: @Composable () -> Unit) {

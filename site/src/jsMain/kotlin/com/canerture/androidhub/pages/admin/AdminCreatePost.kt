@@ -17,6 +17,7 @@ import com.canerture.androidhub.data.getCategories
 import com.canerture.androidhub.data.getPostDetail
 import com.canerture.androidhub.data.model.ParentCategory
 import com.canerture.androidhub.data.model.SubCategory
+import com.canerture.androidhub.data.updatePost
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.models.ControlStyle
 import com.canerture.androidhub.models.EditorControl
@@ -48,7 +49,6 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
-import com.varabyte.kobweb.compose.ui.modifiers.classNames
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.disabled
@@ -89,8 +89,6 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
-import kotlinx.browser.window
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.LineStyle
@@ -351,22 +349,17 @@ fun AdminCreatePost() {
                         if (uiState.title.isNotEmpty() && uiState.content.isNotEmpty()) {
                             scope.launch {
                                 if (hasPostIdParam) {
-                                    /*val result = updatePost(
-                                        Post(
-                                            _id = uiState.id,
-                                            title = uiState.title,
-                                            subtitle = uiState.subtitle,
-                                            thumbnail = uiState.thumbnail,
-                                            content = uiState.content,
-                                            category = uiState.category,
-                                            popular = uiState.popular,
-                                            main = uiState.main,
-                                            sponsored = uiState.sponsored
-                                        )
+                                    updatePost(
+                                        id = uiState.id,
+                                        content = uiState.content,
+                                        title = uiState.title,
+                                        category = uiState.category,
+                                        thumbnail = uiState.thumbnail,
+                                        onSuccess = {
+                                            isSuccessMessageVisible = true
+                                            context.router.navigateTo(Screen.AdminMyPosts.route)
+                                        }
                                     )
-                                    if (result) {
-                                        context.router.navigateTo(Screen.AdminSuccess.postUpdated())
-                                    }*/
                                 } else {
                                     addPost(
                                         content = uiState.content,
@@ -374,12 +367,8 @@ fun AdminCreatePost() {
                                         category = uiState.category,
                                         thumbnail = uiState.thumbnail,
                                         onSuccess = {
-                                            scope.launch {
-                                                isSuccessMessageVisible = true
-                                                delay(2000)
-                                                isSuccessMessageVisible = false
-                                                context.router.navigateTo(Screen.AdminMyPosts.route)
-                                            }
+                                            isSuccessMessageVisible = true
+                                            context.router.navigateTo(Screen.AdminMyPosts.route)
                                         },
                                         onError = {
                                             uiState = uiState.copy(messagePopup = false)
@@ -390,8 +379,6 @@ fun AdminCreatePost() {
                         } else {
                             scope.launch {
                                 uiState = uiState.copy(messagePopup = true)
-                                delay(2000)
-                                uiState = uiState.copy(messagePopup = false)
                             }
                         }
                     }

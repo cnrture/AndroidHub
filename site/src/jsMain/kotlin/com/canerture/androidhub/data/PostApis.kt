@@ -5,10 +5,12 @@ import com.canerture.androidhub.data.ApiUtils.client
 import com.canerture.androidhub.data.ApiUtils.safeApiCall
 import com.canerture.androidhub.data.model.AddPostRequest
 import com.canerture.androidhub.data.model.Post
+import com.canerture.androidhub.data.model.UpdatePostRequest
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.client.request.parameter
 import io.ktor.client.request.post
+import io.ktor.client.request.put
 import io.ktor.client.request.setBody
 import kotlinx.browser.localStorage
 import kotlinx.serialization.encodeToString
@@ -52,10 +54,52 @@ suspend fun addPost(
     call = {
         client.post(Constants.BASE_URL.plus("posts.php")) {
             val short = title.replace(" ", "-").lowercase()
+                .replace("ğ", "g")
+                .replace("ü", "u")
+                .replace("ş", "s")
+                .replace("ı", "i")
+                .replace("ö", "o")
+                .replace("ç", "c")
             val request = Json.encodeToString(
                 AddPostRequest(
                     authorId = localStorage["userId"] ?: "",
                     authorName = localStorage["name"] ?: "",
+                    date = Date.now(),
+                    content = content,
+                    title = title,
+                    short = short,
+                    category = category,
+                    thumbnail = thumbnail
+                )
+            )
+            setBody(request)
+        }.body<String>()
+    },
+    onSuccess = onSuccess,
+    onError = onError
+)
+
+suspend fun updatePost(
+    id: Int,
+    content: String,
+    title: String,
+    category: String,
+    thumbnail: String,
+    onSuccess: (Unit) -> Unit = {},
+    onError: (String) -> Unit = {}
+) = safeApiCall<Unit>(
+    call = {
+        client.put(Constants.BASE_URL.plus("posts.php")) {
+            val short = title.replace(" ", "-").lowercase()
+                .replace("ğ", "g")
+                .replace("ü", "u")
+                .replace("ş", "s")
+                .replace("ı", "i")
+                .replace("ö", "o")
+                .replace("ç", "c")
+            val request = Json.encodeToString(
+                UpdatePostRequest(
+                    id = id,
                     date = Date.now(),
                     content = content,
                     title = title,
