@@ -7,11 +7,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import com.canerture.androidhub.ErrorStyle
 import com.canerture.androidhub.ShadowedGreenButtonVariant
 import com.canerture.androidhub.SuccessStyle
 import com.canerture.androidhub.components.layouts.AdminPageLayout
 import com.canerture.androidhub.components.widgets.ControlPopup
-import com.canerture.androidhub.components.widgets.MessagePopup
 import com.canerture.androidhub.data.addPost
 import com.canerture.androidhub.data.getCategories
 import com.canerture.androidhub.data.getPostDetail
@@ -85,10 +85,12 @@ import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
+import com.varabyte.kobweb.silk.components.style.toAttrs
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.LineStyle
@@ -112,9 +114,11 @@ data class CreatePageUiState(
     var category: String = "Category",
     var buttonText: String = "Create",
     var editorVisibility: Boolean = true,
-    var messagePopup: Boolean = false,
     var linkPopup: Boolean = false,
-    var imagePopup: Boolean = false
+    var imagePopup: Boolean = false,
+    var successMessageVisibility: Boolean = false,
+    var errorMessageVisibility: Boolean = false,
+    var message: String = "",
 ) {
     fun reset() = this.copy(
         id = 0,
@@ -125,9 +129,10 @@ data class CreatePageUiState(
         category = "Category",
         buttonText = "Create",
         editorVisibility = true,
-        messagePopup = false,
         linkPopup = false,
-        imagePopup = false
+        imagePopup = false,
+        successMessageVisibility = false,
+        message = "",
     )
 }
 
@@ -138,7 +143,6 @@ fun AdminCreatePost() {
     val context = rememberPageContext()
     val breakpoint = rememberBreakpoint()
     var uiState by remember { mutableStateOf(CreatePageUiState()) }
-    var isSuccessMessageVisible by remember { mutableStateOf(false) }
 
     val hasPostIdParam = remember(key1 = context.route) {
         context.route.params.containsKey(Constants.POST_SHORT_PARAM)
@@ -207,13 +211,6 @@ fun AdminCreatePost() {
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                if (isSuccessMessageVisible) {
-                    Box(
-                        modifier = SuccessStyle.toModifier()
-                    ) {
-                        Text("Post created successfully!")
-                    }
-                }
                 SimpleGrid(numColumns = numColumns(base = 1, sm = 3)) {
                     uiState.categories.forEach { category ->
                         Box(
@@ -346,51 +343,90 @@ fun AdminCreatePost() {
                             )
                         }
 
-                        if (uiState.title.isNotEmpty() && uiState.content.isNotEmpty()) {
-                            scope.launch {
-                                if (hasPostIdParam) {
-                                    updatePost(
-                                        id = uiState.id,
-                                        content = uiState.content,
-                                        title = uiState.title,
-                                        category = uiState.category,
-                                        thumbnail = uiState.thumbnail,
-                                        onSuccess = {
-                                            isSuccessMessageVisible = true
+                        scope.launch {
+                            if (hasPostIdParam) {
+                                updatePost(
+                                    id = uiState.id,
+                                    content = uiState.content,
+                                    title = uiState.title,
+                                    category = uiState.category,
+                                    thumbnail = uiState.thumbnail,
+                                    onSuccess = {
+                                        scope.launch {
+                                            uiState = uiState.copy(
+                                                successMessageVisibility = true,
+                                                message = it
+                                            )
+                                            delay(1000)
                                             context.router.navigateTo(Screen.AdminMyPosts.route)
                                         }
-                                    )
-                                } else {
-                                    addPost(
-                                        content = uiState.content,
-                                        title = uiState.title,
-                                        category = uiState.category,
-                                        thumbnail = uiState.thumbnail,
-                                        onSuccess = {
-                                            isSuccessMessageVisible = true
-                                            context.router.navigateTo(Screen.AdminMyPosts.route)
-                                        },
-                                        onError = {
-                                            uiState = uiState.copy(messagePopup = false)
+                                    },
+                                    onError = {
+                                        scope.launch {
+                                            uiState = uiState.copy(
+                                                errorMessageVisibility = true,
+                                                message = it
+                                            )
+                                            delay(2000)
+                                            uiState = uiState.copy(
+                                                errorMessageVisibility = false,
+                                                message = ""
+                                            )
                                         }
-                                    )
-                                }
-                            }
-                        } else {
-                            scope.launch {
-                                uiState = uiState.copy(messagePopup = true)
+                                    }
+                                )
+                            } else {
+                                addPost(
+                                    content = uiState.content,
+                                    title = uiState.title,
+                                    category = uiState.category,
+                                    thumbnail = uiState.thumbnail,
+                                    onSuccess = {
+                                        scope.launch {
+                                            uiState = uiState.copy(
+                                                successMessageVisibility = true,
+                                                message = it
+                                            )
+                                            delay(1000)
+                                            context.router.navigateTo(Screen.AdminMyPosts.route)
+                                        }
+                                    },
+                                    onError = {
+                                        scope.launch {
+                                            uiState = uiState.copy(
+                                                errorMessageVisibility = true,
+                                                message = it
+                                            )
+                                            delay(2000)
+                                            uiState = uiState.copy(
+                                                errorMessageVisibility = false,
+                                                message = ""
+                                            )
+                                        }
+                                    }
+                                )
                             }
                         }
                     }
                 )
+
+                if (uiState.successMessageVisibility) {
+                    Div(
+                        attrs = SuccessStyle.toAttrs()
+                    ) {
+                        Text(uiState.message)
+                    }
+                }
+
+                if (uiState.errorMessageVisibility) {
+                    Div(
+                        attrs = ErrorStyle.toAttrs()
+                    ) {
+                        Text(uiState.message)
+                    }
+                }
             }
         }
-    }
-    if (uiState.messagePopup) {
-        MessagePopup(
-            message = "Please fill out all fields.",
-            onDialogDismiss = { uiState = uiState.copy(messagePopup = false) }
-        )
     }
     if (uiState.linkPopup) {
         ControlPopup(

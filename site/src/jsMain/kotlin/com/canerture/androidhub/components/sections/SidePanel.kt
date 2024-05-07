@@ -120,15 +120,6 @@ fun NavigationItems() {
     )
     NavigationItem(
         modifier = Modifier.margin(bottom = 24.px),
-        selected = context.route.path == Screen.AdminCreate.route,
-        title = "Create Post",
-        icon = Res.PathIcon.create,
-        onClick = {
-            context.router.navigateTo(Screen.AdminCreate.route)
-        }
-    )
-    NavigationItem(
-        modifier = Modifier.margin(bottom = 24.px),
         selected = context.route.path == Screen.AdminMyPosts.route,
         title = "My Posts",
         icon = Res.PathIcon.posts,
@@ -137,11 +128,20 @@ fun NavigationItems() {
         }
     )
     NavigationItem(
+        modifier = Modifier.margin(bottom = 24.px),
+        selected = context.route.path == Screen.AdminCreate.route,
+        title = "Create Post",
+        icon = Res.PathIcon.create,
+        onClick = {
+            context.router.navigateTo(Screen.AdminCreate.route)
+        }
+    )
+    NavigationItem(
         title = "Logout",
         icon = Res.PathIcon.logout,
         onClick = {
             logout()
-            context.router.navigateTo(Screen.AdminLogin.route)
+            context.router.navigateTo(Screen.Login.route)
         }
     )
 }

@@ -26,7 +26,7 @@ import kotlin.js.Date
 fun isUserLoggedIn(): Boolean {
     val remembered = remember { localStorage["remember"].toBoolean() }
     val userId = remember { localStorage["userId"] }
-    var userIdExists by remember { mutableStateOf(false) }
+    var userIdExists by remember { mutableStateOf<Boolean?>(null) }
     LaunchedEffect(key1 = Unit) {
         if (!userId.isNullOrEmpty()) {
             checkUserId(
@@ -35,13 +35,13 @@ fun isUserLoggedIn(): Boolean {
                     userIdExists = it
                 },
                 onError = {
-                    userIdExists = false
+                    userIdExists = null
                 }
             )
         }
     }
 
-    return remembered && userIdExists
+    return remembered && userIdExists ?: false
 }
 
 fun logout() {

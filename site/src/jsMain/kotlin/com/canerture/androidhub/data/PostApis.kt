@@ -48,9 +48,9 @@ suspend fun addPost(
     title: String,
     category: String,
     thumbnail: String,
-    onSuccess: (Unit) -> Unit = {},
+    onSuccess: (String) -> Unit = {},
     onError: (String) -> Unit = {}
-) = safeApiCall<Unit>(
+) = safeApiCall<String>(
     call = {
         client.post(Constants.BASE_URL.plus("posts.php")) {
             val short = title.replace(" ", "-").lowercase()
@@ -85,9 +85,9 @@ suspend fun updatePost(
     title: String,
     category: String,
     thumbnail: String,
-    onSuccess: (Unit) -> Unit = {},
+    onSuccess: (String) -> Unit = {},
     onError: (String) -> Unit = {}
-) = safeApiCall<Unit>(
+) = safeApiCall<String>(
     call = {
         client.put(Constants.BASE_URL.plus("posts.php")) {
             val short = title.replace(" ", "-").lowercase()
@@ -144,9 +144,9 @@ suspend fun getMyPosts(
 
 suspend fun deleteSelectedPosts(
     ids: List<Int>,
-    onSuccess: (Unit) -> Unit = {},
+    onSuccess: (String) -> Unit = {},
     onError: (String) -> Unit = {}
-) = safeApiCall<Unit>(
+) = safeApiCall<String>(
     call = {
         client.get(Constants.BASE_URL.plus("posts.php")) {
             parameter("authorId", localStorage["userId"] ?: "")

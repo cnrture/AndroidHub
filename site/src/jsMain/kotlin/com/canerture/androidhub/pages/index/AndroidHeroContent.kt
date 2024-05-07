@@ -105,7 +105,7 @@ private fun TextArea(breakpoint: Breakpoint, modifier: Modifier = Modifier) {
                 if (isUserLoggedIn) {
                     context.router.navigateTo(Screen.AdminMyPosts.route)
                 } else {
-                    context.router.tryRoutingTo(Screen.AdminLogin.route)
+                    context.router.navigateTo(Screen.Login.route)
                 }
             },
             modifier = ShadowedGreenButtonVariant.toModifier()

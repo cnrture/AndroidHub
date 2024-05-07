@@ -222,6 +222,17 @@ val SuccessStyle by ComponentStyle.base {
         .transition(CSSTransition("transform", 0.25.s, TransitionTimingFunction.Ease))
 }
 
+val ErrorStyle by ComponentStyle.base {
+    Modifier
+        .fillMaxWidth()
+        .backgroundColor(Color.red)
+        .color(getSitePalette().white)
+        .borderLeft(6.px, LineStyle.Solid, getSitePalette().blue)
+        .padding(12.px)
+        .margin(topBottom = 24.px)
+        .transition(CSSTransition("transform", 0.25.s, TransitionTimingFunction.Ease))
+}
+
 val LoaderStyle by ComponentStyle.base {
     Modifier
         .border(10.px, LineStyle.Solid, getSitePalette().blue)

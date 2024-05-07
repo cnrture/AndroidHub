@@ -21,7 +21,6 @@ import com.canerture.androidhub.utils.Constants.POSTS_PER_PAGE
 import com.canerture.androidhub.utils.Constants.QUERY_PARAM
 import com.canerture.androidhub.utils.Constants.SIDE_PANEL_WIDTH
 import com.canerture.androidhub.utils.Id
-import com.canerture.androidhub.utils.isUserLoggedIn
 import com.canerture.androidhub.utils.noBorder
 import com.canerture.androidhub.utils.parseSwitchText
 import com.varabyte.kobweb.compose.css.CSSTransition
@@ -67,12 +66,6 @@ import org.w3c.dom.HTMLInputElement
 @Page("/admin/my-posts")
 @Composable
 fun MyPostsScreen() {
-    val isUserLoggedIn = isUserLoggedIn()
-    println("isUserLoggedIn: $isUserLoggedIn")
-    if (!isUserLoggedIn) {
-        return
-    }
-
     val context = rememberPageContext()
     val breakpoint = rememberBreakpoint()
     val scope = rememberCoroutineScope()

@@ -1,4 +1,4 @@
-package com.canerture.androidhub.pages.admin
+package com.canerture.androidhub.pages.login
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -76,7 +76,7 @@ sealed interface LoginRegisterState {
     data object Register : LoginRegisterState
 }
 
-@Page("/admin/login")
+@Page("/login")
 @Composable
 fun LoginScreen() {
     val scope = rememberCoroutineScope()
