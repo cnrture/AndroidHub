@@ -8,11 +8,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import com.canerture.androidhub.ErrorStyle
-import com.canerture.androidhub.ShadowedGreenButtonVariant
+import com.canerture.androidhub.ShadowedBlueButtonVariant
+import com.canerture.androidhub.ShadowedRedButtonVariant
 import com.canerture.androidhub.SuccessStyle
 import com.canerture.androidhub.components.layouts.AdminPageLayout
 import com.canerture.androidhub.components.widgets.ControlPopup
 import com.canerture.androidhub.data.addPost
+import com.canerture.androidhub.data.deletePost
 import com.canerture.androidhub.data.getCategories
 import com.canerture.androidhub.data.getPostDetail
 import com.canerture.androidhub.data.model.ParentCategory
@@ -38,16 +40,18 @@ import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.Overflow
 import com.varabyte.kobweb.compose.css.Resize
 import com.varabyte.kobweb.compose.css.ScrollBehavior
+import com.varabyte.kobweb.compose.css.TextAlign
+import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.css.Visibility
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
+import com.varabyte.kobweb.compose.foundation.layout.RowScope
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
-import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
@@ -70,13 +74,18 @@ import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.resize
 import com.varabyte.kobweb.compose.ui.modifiers.scrollBehavior
 import com.varabyte.kobweb.compose.ui.modifiers.size
+import com.varabyte.kobweb.compose.ui.modifiers.textAlign
+import com.varabyte.kobweb.compose.ui.modifiers.textDecorationLine
 import com.varabyte.kobweb.compose.ui.modifiers.transition
 import com.varabyte.kobweb.compose.ui.modifiers.visibility
+import com.varabyte.kobweb.compose.ui.modifiers.width
+import com.varabyte.kobweb.compose.ui.modifiers.zIndex
 import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Checkbox
+import com.varabyte.kobweb.silk.components.forms.CheckboxSize
 import com.varabyte.kobweb.silk.components.forms.Switch
 import com.varabyte.kobweb.silk.components.forms.SwitchSize
 import com.varabyte.kobweb.silk.components.graphics.Image
@@ -89,11 +98,14 @@ import com.varabyte.kobweb.silk.components.style.toAttrs
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import com.varabyte.kobweb.silk.theme.colors.ColorSchemes
 import kotlinx.browser.document
+import kotlinx.browser.localStorage
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.attributes.InputType
-import org.jetbrains.compose.web.css.LineStyle
+import org.jetbrains.compose.web.css.Color
+import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Button
@@ -103,8 +115,10 @@ import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.TextArea
 import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.HTMLTextAreaElement
+import org.w3c.dom.get
 
 data class CreatePageUiState(
+    var isLoading: Boolean = true,
     var id: Int = 0,
     var title: String = "",
     var thumbnail: String = "",
@@ -112,6 +126,7 @@ data class CreatePageUiState(
     var content: String = "",
     var categories: List<ParentCategory> = emptyList(),
     var category: String = "Category",
+    var status: String = "",
     var buttonText: String = "Create",
     var editorVisibility: Boolean = true,
     var linkPopup: Boolean = false,
@@ -119,6 +134,8 @@ data class CreatePageUiState(
     var successMessageVisibility: Boolean = false,
     var errorMessageVisibility: Boolean = false,
     var message: String = "",
+    var statusList: List<String> = listOf("Draft", "Pending", "Published"),
+    var deletePopupVisibility: Boolean = false
 ) {
     fun reset() = this.copy(
         id = 0,
@@ -127,12 +144,14 @@ data class CreatePageUiState(
         content = "",
         categories = emptyList(),
         category = "Category",
+        status = "",
         buttonText = "Create",
         editorVisibility = true,
         linkPopup = false,
         imagePopup = false,
         successMessageVisibility = false,
         message = "",
+        statusList = listOf("Draft", "Pending", "Published")
     )
 }
 
@@ -156,124 +175,73 @@ fun AdminCreatePost() {
                 onSuccess = { post ->
                     (document.getElementById(Id.editor) as HTMLTextAreaElement).value = post.content
                     uiState = uiState.copy(
+                        isLoading = false,
                         id = post.id,
                         title = post.title,
                         content = post.content,
                         category = post.category.name,
                         thumbnail = post.thumbnail,
-                        buttonText = "Update"
+                        buttonText = "Update",
+                        status = post.status
                     )
                 },
+                onError = { uiState = uiState.copy(isLoading = false, errorMessageVisibility = true, message = it) }
             )
         } else {
             (document.getElementById(Id.editor) as HTMLTextAreaElement).value = ""
             uiState = uiState.reset()
-            getCategories(
-                onSuccess = { categoryList ->
-                    val parentCategories = categoryList.filter { it.parentCategory == "None" }.map {
-                        ParentCategory(
-                            id = it.id,
-                            name = it.name,
-                            short = it.short,
-                        )
-                    }
-                    val subCategories = categoryList.filter { it.parentCategory.isNotEmpty() }
-                    subCategories.forEach { subCategory ->
-                        val parent = parentCategories.find { subCategory.parentCategory == it.name }
-                        parent?.subCategories?.add(
-                            SubCategory(
-                                id = subCategory.id,
-                                name = subCategory.name,
-                                short = subCategory.short,
-                                parentCategory = subCategory.parentCategory
-                            )
-                        )
-                    }
-
-                    uiState = uiState.copy(categories = parentCategories)
-                },
-            )
         }
+
+        getCategories(
+            onSuccess = { categoryList ->
+                val parentCategories = categoryList.filter { it.parentCategory == "None" }.map {
+                    ParentCategory(
+                        id = it.id,
+                        name = it.name,
+                        short = it.short,
+                    )
+                }
+                val subCategories = categoryList.filter { it.parentCategory.isNotEmpty() }
+                subCategories.forEach { subCategory ->
+                    val parent = parentCategories.find { subCategory.parentCategory == it.name }
+                    parent?.subCategories?.add(
+                        SubCategory(
+                            id = subCategory.id,
+                            name = subCategory.name,
+                            short = subCategory.short,
+                            parentCategory = subCategory.parentCategory
+                        )
+                    )
+                }
+
+                uiState = uiState.copy(categories = parentCategories)
+            },
+            onError = { uiState = uiState.copy(isLoading = false, errorMessageVisibility = true, message = it) }
+        )
     }
 
     AdminPageLayout {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .margin(topBottom = 50.px)
                 .padding(left = if (breakpoint > Breakpoint.MD) SIDE_PANEL_WIDTH.px else 0.px),
             contentAlignment = Alignment.TopCenter
         ) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .maxWidth(700.px),
+                    .margin(topBottom = 50.px)
+                    .maxWidth(800.px),
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                SimpleGrid(numColumns = numColumns(base = 1, sm = 3)) {
-                    uiState.categories.forEach { category ->
-                        Box(
-                            modifier = Modifier
-                                .padding(12.px)
-                                .border(
-                                    width = 1.px,
-                                    style = LineStyle.Solid,
-                                    color = getSitePalette().blue
-                                )
-                                .borderRadius(r = 4.px)
-                                .margin(6.px)
-                        ) {
-                            Column {
-                                Checkbox(
-                                    modifier = Modifier.margin(
-                                        right = 24.px,
-                                        bottom = if (breakpoint < Breakpoint.SM) 12.px else 0.px
-                                    ),
-                                    checked = uiState.category == category.name,
-                                    onCheckedChange = { uiState = uiState.copy(category = category.name) },
-                                    content = {
-                                        SpanText(
-                                            modifier = Modifier
-                                                .fontSize(14.px)
-                                                .fontFamily(FONT_FAMILY)
-                                                .color(getSitePalette().blue),
-                                            text = category.name
-                                        )
-                                    }
-                                )
-
-                                category.subCategories.forEach { subCategory ->
-                                    Checkbox(
-                                        modifier = Modifier.margin(
-                                            left = 12.px,
-                                            right = 24.px,
-                                            bottom = if (breakpoint < Breakpoint.SM) 12.px else 0.px
-                                        ),
-                                        checked = uiState.category == subCategory.name,
-                                        onCheckedChange = { uiState = uiState.copy(category = subCategory.name) },
-                                        content = {
-                                            SpanText(
-                                                modifier = Modifier
-                                                    .fontSize(14.px)
-                                                    .fontFamily(FONT_FAMILY)
-                                                    .color(getSitePalette().blue),
-                                                text = subCategory.name
-                                            )
-                                        }
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
                 Input(
                     type = InputType.Text,
                     attrs = Modifier
                         .id(Id.titleInput)
                         .fillMaxWidth()
                         .height(54.px)
-                        .margin(topBottom = 12.px)
+                        .margin(topBottom = 1.5.cssRem)
                         .padding(leftRight = 20.px)
                         .backgroundColor(getSitePalette().white)
                         .borderRadius(r = 4.px)
@@ -287,7 +255,7 @@ fun AdminCreatePost() {
                 )
 
                 Row(
-                    modifier = Modifier.fillMaxWidth().margin(topBottom = 12.px),
+                    modifier = Modifier.fillMaxWidth().margin(topBottom = 1.5.cssRem),
                     horizontalArrangement = Arrangement.Start,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -295,11 +263,11 @@ fun AdminCreatePost() {
                         modifier = Modifier.margin(right = 8.px),
                         checked = !uiState.thumbnailInputDisabled,
                         onCheckedChange = { uiState = uiState.copy(thumbnailInputDisabled = !it) },
-                        size = SwitchSize.MD
+                        size = SwitchSize.LG
                     )
                     SpanText(
                         modifier = Modifier
-                            .fontSize(14.px)
+                            .fontSize(16.px)
                             .fontFamily(FONT_FAMILY)
                             .color(getSitePalette().blue),
                         text = "Paste an Image URL instead"
@@ -329,86 +297,200 @@ fun AdminCreatePost() {
                     }
                 )
                 Editor(editorVisibility = uiState.editorVisibility)
-                CreateButton(
-                    text = uiState.buttonText,
-                    onClick = {
-                        uiState = uiState.copy(
-                            title = (document.getElementById(Id.titleInput) as HTMLInputElement).value,
-                            content = (document.getElementById(Id.editor) as HTMLTextAreaElement).value
-                        )
 
-                        if (!uiState.thumbnailInputDisabled) {
-                            uiState = uiState.copy(
-                                thumbnail = (document.getElementById(Id.thumbnailInput) as HTMLInputElement).value
-                            )
-                        }
+                SpanText(
+                    modifier = Modifier
+                        .margin(top = 2.cssRem, bottom = 1.cssRem)
+                        .fillMaxWidth()
+                        .textDecorationLine(TextDecorationLine.Underline)
+                        .fontSize(18.px)
+                        .fontWeight(FontWeight.SemiBold)
+                        .color(getSitePalette().blue),
+                    text = "Category"
+                )
 
-                        scope.launch {
-                            if (hasPostIdParam) {
-                                updatePost(
-                                    id = uiState.id,
-                                    content = uiState.content,
-                                    title = uiState.title,
-                                    category = uiState.category,
-                                    thumbnail = uiState.thumbnail,
-                                    onSuccess = {
-                                        scope.launch {
-                                            uiState = uiState.copy(
-                                                successMessageVisibility = true,
-                                                message = it
-                                            )
-                                            delay(1000)
-                                            context.router.navigateTo(Screen.AdminMyPosts.route)
-                                        }
-                                    },
-                                    onError = {
-                                        scope.launch {
-                                            uiState = uiState.copy(
-                                                errorMessageVisibility = true,
-                                                message = it
-                                            )
-                                            delay(2000)
-                                            uiState = uiState.copy(
-                                                errorMessageVisibility = false,
-                                                message = ""
-                                            )
-                                        }
-                                    }
-                                )
-                            } else {
-                                addPost(
-                                    content = uiState.content,
-                                    title = uiState.title,
-                                    category = uiState.category,
-                                    thumbnail = uiState.thumbnail,
-                                    onSuccess = {
-                                        scope.launch {
-                                            uiState = uiState.copy(
-                                                successMessageVisibility = true,
-                                                message = it
-                                            )
-                                            delay(1000)
-                                            context.router.navigateTo(Screen.AdminMyPosts.route)
-                                        }
-                                    },
-                                    onError = {
-                                        scope.launch {
-                                            uiState = uiState.copy(
-                                                errorMessageVisibility = true,
-                                                message = it
-                                            )
-                                            delay(2000)
-                                            uiState = uiState.copy(
-                                                errorMessageVisibility = false,
-                                                message = ""
-                                            )
-                                        }
-                                    }
+                SimpleGrid(
+                    modifier = Modifier.fillMaxWidth().margin(topBottom = 12.px),
+                    numColumns = numColumns(1, 4, 4, 4)
+                ) {
+                    uiState.categories.forEach { category ->
+                        Checkbox(
+                            modifier = Modifier.color(getSitePalette().green).margin(12.px),
+                            size = CheckboxSize.LG,
+                            borderColor = getSitePalette().green,
+                            colorScheme = ColorSchemes.Green,
+                            checked = uiState.category == category.name,
+                            onCheckedChange = { uiState = uiState.copy(category = category.name) },
+                            content = {
+                                SpanText(
+                                    modifier = Modifier
+                                        .fontSize(16.px)
+                                        .fontFamily(FONT_FAMILY)
+                                        .color(getSitePalette().blue),
+                                    text = category.name
                                 )
                             }
-                        }
+                        )
                     }
+                }
+
+                SpanText(
+                    modifier = Modifier
+                        .margin(top = 1.cssRem, bottom = 1.cssRem)
+                        .fillMaxWidth()
+                        .textDecorationLine(TextDecorationLine.Underline)
+                        .fontSize(18.px)
+                        .fontWeight(FontWeight.SemiBold)
+                        .color(getSitePalette().blue),
+                    text = "Status"
                 )
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    uiState.statusList.forEach { status ->
+                        val isPublishedEnabled = if (status == "Published") {
+                            localStorage["isAdmin"] == "true"
+                        } else {
+                            true
+                        }
+                        Checkbox(
+                            enabled = isPublishedEnabled,
+                            modifier = Modifier.color(getSitePalette().green).margin(12.px),
+                            size = CheckboxSize.LG,
+                            borderColor = getSitePalette().green,
+                            colorScheme = ColorSchemes.Green,
+                            checked = uiState.status == status,
+                            onCheckedChange = { uiState = uiState.copy(status = status) },
+                            content = {
+                                SpanText(
+                                    modifier = Modifier
+                                        .fontSize(16.px)
+                                        .fontFamily(FONT_FAMILY)
+                                        .color(getSitePalette().blue),
+                                    text = status
+                                )
+                            }
+                        )
+                    }
+                }
+
+                Row(
+                    modifier = Modifier.fillMaxWidth().margin(top = 24.px)
+                ) {
+                    CreateButton(
+                        text = uiState.buttonText,
+                        onClick = {
+                            uiState = uiState.copy(
+                                title = (document.getElementById(Id.titleInput) as HTMLInputElement).value,
+                                content = (document.getElementById(Id.editor) as HTMLTextAreaElement).value
+                            )
+
+                            if (!uiState.thumbnailInputDisabled) {
+                                uiState = uiState.copy(
+                                    thumbnail = (document.getElementById(Id.thumbnailInput) as HTMLInputElement).value
+                                )
+                            }
+
+                            scope.launch {
+                                uiState = uiState.copy(isLoading = true)
+                                if (hasPostIdParam) {
+                                    updatePost(
+                                        id = uiState.id,
+                                        content = uiState.content,
+                                        title = uiState.title,
+                                        category = uiState.category,
+                                        thumbnail = uiState.thumbnail,
+                                        status = uiState.status,
+                                        onSuccess = {
+                                            scope.launch {
+                                                uiState = uiState.copy(
+                                                    isLoading = false,
+                                                    successMessageVisibility = true,
+                                                    message = "Post updated successfully!"
+                                                )
+                                                delay(1000)
+                                                uiState = uiState.copy(
+                                                    successMessageVisibility = false,
+                                                    message = ""
+                                                )
+                                            }
+                                        },
+                                        onError = {
+                                            scope.launch {
+                                                uiState = uiState.copy(
+                                                    isLoading = false,
+                                                    errorMessageVisibility = true,
+                                                    message = it
+                                                )
+                                                delay(3000)
+                                                uiState = uiState.copy(
+                                                    errorMessageVisibility = false,
+                                                    message = ""
+                                                )
+                                            }
+                                        }
+                                    )
+                                } else {
+                                    addPost(
+                                        content = uiState.content,
+                                        title = uiState.title,
+                                        category = uiState.category,
+                                        thumbnail = uiState.thumbnail,
+                                        status = uiState.status,
+                                        onSuccess = {
+                                            scope.launch {
+                                                uiState = uiState.copy(
+                                                    isLoading = false,
+                                                    successMessageVisibility = true,
+                                                    message = "Post added successfully!"
+                                                )
+                                                delay(1000)
+                                                uiState = uiState.copy(
+                                                    successMessageVisibility = false,
+                                                    message = ""
+                                                )
+                                            }
+                                        },
+                                        onError = {
+                                            scope.launch {
+                                                uiState = uiState.copy(
+                                                    isLoading = false,
+                                                    errorMessageVisibility = true,
+                                                    message = it
+                                                )
+                                                delay(3000)
+                                                uiState = uiState.copy(
+                                                    errorMessageVisibility = false,
+                                                    message = ""
+                                                )
+                                            }
+                                        }
+                                    )
+                                }
+                            }
+                        }
+                    )
+
+                    Button(
+                        attrs = ShadowedRedButtonVariant.toModifier()
+                            .cursor(Cursor.Pointer)
+                            .height(54.px)
+                            .margin(left = 10.px)
+                            .backgroundColor(Color.red)
+                            .color(getSitePalette().white)
+                            .borderRadius(r = 4.px)
+                            .noBorder()
+                            .fontSize(16.px)
+                            .onClick {
+                                uiState = uiState.copy(deletePopupVisibility = true)
+                            }
+                            .toAttrs()
+                    ) {
+                        SpanText(text = "Delete Post")
+                    }
+                }
 
                 if (uiState.successMessageVisibility) {
                     Div(
@@ -423,6 +505,117 @@ fun AdminCreatePost() {
                         attrs = ErrorStyle.toAttrs()
                     ) {
                         Text(uiState.message)
+                    }
+                }
+            }
+
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .zIndex(1)
+                    .backgroundColor(getSitePalette().lightGray)
+                    .visibility(
+                        if (uiState.deletePopupVisibility) Visibility.Visible
+                        else Visibility.Hidden
+                    ),
+                contentAlignment = Alignment.Center
+            ) {
+                Column(
+                    modifier = Modifier
+                        .width(400.px)
+                        .padding(20.px)
+                        .borderRadius(r = 8.px)
+                        .backgroundColor(getSitePalette().white)
+                ) {
+                    SpanText(
+                        text = "Are you sure?",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .textAlign(TextAlign.Center)
+                            .fontSize(24.px)
+                            .color(getSitePalette().blue)
+                            .margin(bottom = 12.px)
+                    )
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center,
+                    ) {
+                        Button(
+                            attrs = ShadowedBlueButtonVariant.toModifier()
+                                .cursor(Cursor.Pointer)
+                                .weight(1f)
+                                .height(54.px)
+                                .backgroundColor(getSitePalette().blue)
+                                .color(getSitePalette().white)
+                                .margin(right = 8.px)
+                                .borderRadius(r = 4.px)
+                                .noBorder()
+                                .fontSize(16.px)
+                                .onClick {
+                                    uiState = uiState.copy(
+                                        deletePopupVisibility = false,
+                                    )
+                                }
+                                .toAttrs()
+                        ) {
+                            SpanText(text = "No")
+                        }
+
+                        Button(
+                            attrs = ShadowedRedButtonVariant.toModifier()
+                                .cursor(Cursor.Pointer)
+                                .weight(1f)
+                                .height(54.px)
+                                .backgroundColor(Color.red)
+                                .color(Colors.White)
+                                .borderRadius(r = 4.px)
+                                .noBorder()
+                                .fontSize(16.px)
+                                .onClick {
+                                    uiState = uiState.copy(
+                                        isLoading = true,
+                                        deletePopupVisibility = false,
+                                    )
+                                    scope.launch {
+                                        deletePost(
+                                            id = uiState.id,
+                                            onSuccess = {
+                                                scope.launch {
+                                                    uiState = uiState.copy(
+                                                        isLoading = false,
+                                                        successMessageVisibility = true,
+                                                        message = "Post deleted successfully!"
+                                                    )
+                                                    delay(1000)
+                                                    uiState = uiState.copy(
+                                                        successMessageVisibility = false,
+                                                        message = ""
+                                                    )
+                                                    context.router.navigateTo(Screen.AdminMyPosts.route)
+                                                }
+                                            },
+                                            onError = {
+                                                scope.launch {
+                                                    uiState = uiState.copy(
+                                                        isLoading = false,
+                                                        errorMessageVisibility = true,
+                                                        message = it
+                                                    )
+                                                    delay(3000)
+                                                    uiState = uiState.copy(
+                                                        errorMessageVisibility = false,
+                                                        message = ""
+                                                    )
+                                                }
+                                            }
+                                        )
+                                    }
+                                }
+                                .toAttrs()
+                        ) {
+                            SpanText(text = "Yes")
+                        }
                     }
                 }
             }
@@ -505,8 +698,8 @@ fun ThumbnailUploader(
                 }
                 .fillMaxHeight()
                 .padding(leftRight = 24.px)
-                .backgroundColor(if (!thumbnailInputDisabled) getSitePalette().white else getSitePalette().blue)
-                .color(if (!thumbnailInputDisabled) getSitePalette().green else Colors.White)
+                .backgroundColor(if (!thumbnailInputDisabled) getSitePalette().gray else getSitePalette().blue)
+                .color(getSitePalette().white)
                 .borderRadius(r = 4.px)
                 .noBorder()
                 .fontFamily(FONT_FAMILY)
@@ -531,7 +724,7 @@ fun EditorControls(
     onImageClick: () -> Unit,
     onEditorVisibilityChange: () -> Unit
 ) {
-    Box(modifier = Modifier.fillMaxWidth()) {
+    Box(modifier = Modifier.fillMaxWidth().margin(top = 1.5.cssRem)) {
         SimpleGrid(
             modifier = Modifier.fillMaxWidth(),
             numColumns = numColumns(base = 1, sm = 2)
@@ -584,7 +777,6 @@ fun EditorControls(
                 ) {
                     SpanText(
                         modifier = Modifier
-                            .fontFamily(FONT_FAMILY)
                             .fontWeight(FontWeight.Medium)
                             .fontSize(14.px),
                         text = "Preview"
@@ -676,22 +868,20 @@ fun Editor(editorVisibility: Boolean) {
 }
 
 @Composable
-fun CreateButton(
+fun RowScope.CreateButton(
     text: String,
     onClick: () -> Unit
 ) {
     Button(
-        attrs = ShadowedGreenButtonVariant.toModifier()
+        attrs = ShadowedBlueButtonVariant.toModifier()
             .onClick { onClick() }
-            .fillMaxWidth()
+            .weight(1f)
             .cursor(Cursor.Pointer)
             .height(54.px)
-            .margin(top = 24.px)
-            .backgroundColor(getSitePalette().green)
+            .backgroundColor(getSitePalette().blue)
             .color(Colors.White)
             .borderRadius(r = 4.px)
             .noBorder()
-            .fontFamily(FONT_FAMILY)
             .fontSize(16.px)
             .toAttrs()
     ) {

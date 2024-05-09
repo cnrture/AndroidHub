@@ -312,6 +312,7 @@ private fun rememberLoggedIn(
     localStorage["userId"] = user.userId
     localStorage["email"] = user.email
     localStorage["name"] = user.name
+    localStorage["isAdmin"] = user.isAdmin.toString()
 }
 
 val LoginInputStyle by ComponentStyle {

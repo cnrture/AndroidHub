@@ -2,10 +2,12 @@ package com.canerture.androidhub.components.widgets
 
 import androidx.compose.runtime.Composable
 import com.canerture.androidhub.data.model.Category
+import com.canerture.androidhub.data.model.colorParse
 import com.canerture.androidhub.getSitePalette
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.color
@@ -24,11 +26,7 @@ fun CategoryChip(category: Category) {
             .height(32.px)
             .padding(leftRight = 14.px)
             .borderRadius(r = 100.px)
-            .border(
-                width = 1.px,
-                style = LineStyle.Solid,
-                color = Color(category.color)
-            ),
+            .backgroundColor(colorParse(category.color)),
         contentAlignment = Alignment.Center
     ) {
         SpanText(

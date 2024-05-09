@@ -1,4 +1,4 @@
-package com.canerture.androidhub.pages.category
+package com.canerture.androidhub.pages.search
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -9,8 +9,8 @@ import androidx.compose.runtime.setValue
 import com.canerture.androidhub.components.layouts.PageLayout
 import com.canerture.androidhub.components.widgets.ErrorView
 import com.canerture.androidhub.components.widgets.LoadingIndicator
-import com.canerture.androidhub.data.getPostsByCategory
 import com.canerture.androidhub.data.model.Post
+import com.canerture.androidhub.data.searchPostsByTitle
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.pages.index.LatestArticleItem
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -38,35 +38,38 @@ import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
 
-data class CategoryUIState(
+data class SearchUIState(
     val isLoading: Boolean = true,
     val posts: List<Post> = emptyList(),
-    val category: String = "",
-    val isError: Boolean = false
+    val query: String = "",
+    val isError: Boolean = false,
 )
 
-@Page("/category")
+@Page("/search")
 @Composable
-fun Category() {
+fun Search() {
     val context = rememberPageContext()
 
-    var state by remember { mutableStateOf(CategoryUIState()) }
+    var state by remember { mutableStateOf(SearchUIState()) }
 
-    state = state.copy(category = context.route.queryParams["category"].orEmpty())
+    state = state.copy(query = context.route.queryParams["query"].orEmpty())
 
-    LaunchedEffect(state.category) {
+    LaunchedEffect(state.query) {
         state = state.copy(isLoading = true)
-        document.title = state.category
-        getPostsByCategory(
-            category = state.category,
+        document.title = state.query
+        searchPostsByTitle(
+            title = state.query,
             onSuccess = { posts ->
-                state = CategoryUIState(
+                state = SearchUIState(
                     isLoading = false,
                     posts = posts
                 )
             },
             onError = {
-                state = state.copy(isLoading = false, isError = true)
+                state = state.copy(
+                    isLoading = false,
+                    isError = true
+                )
             }
         )
     }
@@ -74,21 +77,21 @@ fun Category() {
     if (state.isLoading) {
         LoadingIndicator()
     } else {
-        PageLayout("Home") {
+        PageLayout("Search") {
             if (state.isError) {
                 ErrorView()
                 return@PageLayout
             }
 
             if (state.posts.isNotEmpty()) {
-                CategoryPosts(state.category, state.posts)
+                SearchPosts(state.query, state.posts)
             }
         }
     }
 }
 
 @Composable
-private fun CategoryPosts(category: String, list: List<Post>) {
+private fun SearchPosts(query: String, list: List<Post>) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -103,7 +106,7 @@ private fun CategoryPosts(category: String, list: List<Post>) {
                 .alignContent(AlignContent.Start),
         )
         SpanText(
-            text = category,
+            text = "${list.size} posts found for \"$query\"",
             modifier = Modifier
                 .textAlign(TextAlign.Center)
                 .fontWeight(FontWeight.Bold)

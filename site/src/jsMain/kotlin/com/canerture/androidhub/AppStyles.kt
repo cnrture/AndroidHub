@@ -13,6 +13,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.alignContent
 import com.varabyte.kobweb.compose.ui.modifiers.animation
+import com.varabyte.kobweb.compose.ui.modifiers.background
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderLeft
@@ -23,11 +24,14 @@ import com.varabyte.kobweb.compose.ui.modifiers.boxShadow
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.display
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.float
 import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
+import com.varabyte.kobweb.compose.ui.modifiers.height
+import com.varabyte.kobweb.compose.ui.modifiers.left
 import com.varabyte.kobweb.compose.ui.modifiers.lineHeight
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.minWidth
@@ -42,6 +46,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.compose.ui.modifiers.top
 import com.varabyte.kobweb.compose.ui.modifiers.transform
 import com.varabyte.kobweb.compose.ui.modifiers.transition
+import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.compose.ui.modifiers.zIndex
 import com.varabyte.kobweb.silk.components.animation.Keyframes
 import com.varabyte.kobweb.silk.components.animation.toAnimation
@@ -129,10 +134,26 @@ val UncoloredButtonVariant by ButtonStyle.addVariantBase {
     Modifier.setVariable(ButtonVars.BackgroundDefaultColor, Colors.Transparent)
 }
 
+val ShadowedBlueButtonVariant by ComponentStyle {
+    hover {
+        Modifier
+            .boxShadow(0.px, 0.px, 20.px, 0.px, getSitePalette().blue)
+            .transition(CSSTransition(property = "box-shadow", duration = 400.ms))
+    }
+}
+
 val ShadowedGreenButtonVariant by ComponentStyle {
     hover {
         Modifier
             .boxShadow(0.px, 0.px, 20.px, 0.px, getSitePalette().green)
+            .transition(CSSTransition(property = "box-shadow", duration = 400.ms))
+    }
+}
+
+val ShadowedRedButtonVariant by ComponentStyle {
+    hover {
+        Modifier
+            .boxShadow(0.px, 0.px, 20.px, 0.px, Color.red)
             .transition(CSSTransition(property = "box-shadow", duration = 400.ms))
     }
 }
@@ -317,6 +338,17 @@ val StickyStyle by ComponentStyle {
     cssRule(" + .content") {
         Modifier
             .padding(top = 60.px)
+    }
+}
+
+val NavItemStyle by ComponentStyle {
+    base {
+        Modifier
+            .color(getSitePalette().blue)
+    }
+    hover {
+        Modifier
+            .color(getSitePalette().green)
     }
 }
 

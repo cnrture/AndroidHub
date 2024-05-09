@@ -62,6 +62,7 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import kotlinx.browser.localStorage
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.Position
@@ -110,6 +111,7 @@ private fun SidePanelInternal() {
 @Composable
 fun NavigationItems() {
     val context = rememberPageContext()
+    val isAdmin = localStorage.getItem("isAdmin") == "true"
     SpanText(
         modifier = Modifier
             .margin(bottom = 30.px)
@@ -118,6 +120,19 @@ fun NavigationItems() {
             .color(getSitePalette().white),
         text = "Dashboard"
     )
+
+    if (isAdmin) {
+        NavigationItem(
+            modifier = Modifier.margin(bottom = 24.px),
+            selected = context.route.path == Screen.AdminAllPosts.route,
+            title = "All Posts",
+            icon = Res.PathIcon.posts,
+            onClick = {
+                context.router.navigateTo(Screen.AdminAllPosts.route)
+            }
+        )
+    }
+
     NavigationItem(
         modifier = Modifier.margin(bottom = 24.px),
         selected = context.route.path == Screen.AdminMyPosts.route,

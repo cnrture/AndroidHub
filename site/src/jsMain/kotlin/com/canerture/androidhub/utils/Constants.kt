@@ -64,4 +64,5 @@ object Id {
     const val linkTitleInput = "linkTitleInput"
     const val adminSearchBar = "adminSearchBar"
     const val postContent = "postContent"
+    const val navbarSearchInput = "navbarSearchInput"
 }

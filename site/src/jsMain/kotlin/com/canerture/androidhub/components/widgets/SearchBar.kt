@@ -71,7 +71,7 @@ fun SearchBar(
                 .border(
                     width = 2.px,
                     style = LineStyle.Solid,
-                    color = if (focused) getSitePalette().blue else getSitePalette().white
+                    color = if (focused) getSitePalette().green else getSitePalette().blue
                 )
                 .transition(CSSTransition(property = "border", duration = 200.ms)),
             verticalAlignment = Alignment.CenterVertically
@@ -79,7 +79,7 @@ fun SearchBar(
             FaMagnifyingGlass(
                 modifier = Modifier
                     .margin(right = 14.px)
-                    .color(if (focused) getSitePalette().green else getSitePalette().white)
+                    .color(if (focused) getSitePalette().green else getSitePalette().blue)
                     .transition(CSSTransition(property = "color", duration = 200.ms)),
                 size = IconSize.SM
             )

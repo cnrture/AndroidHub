@@ -10,10 +10,12 @@ import androidx.compose.runtime.setValue
 import com.canerture.androidhub.ContainerStyle
 import com.canerture.androidhub.InputCheckBoxStyle
 import com.canerture.androidhub.components.layouts.PageLayout
+import com.canerture.androidhub.components.widgets.ErrorView
 import com.canerture.androidhub.components.widgets.LoadingIndicator
 import com.canerture.androidhub.data.getPostDetail
 import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.getSitePalette
+import com.canerture.androidhub.utils.Constants
 import com.canerture.androidhub.utils.Id
 import com.canerture.androidhub.utils.noBorder
 import com.canerture.androidhub.utils.parseDateString
@@ -25,15 +27,19 @@ import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.css.TextOverflow
 import com.varabyte.kobweb.compose.css.WhiteSpace
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
+import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.boxShadow
+import com.varabyte.kobweb.compose.ui.modifiers.classNames
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
+import com.varabyte.kobweb.compose.ui.modifiers.display
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
@@ -41,6 +47,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.gridRow
 import com.varabyte.kobweb.compose.ui.modifiers.id
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
+import com.varabyte.kobweb.compose.ui.modifiers.minWidth
 import com.varabyte.kobweb.compose.ui.modifiers.objectFit
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.overflow
@@ -64,17 +71,22 @@ import com.varabyte.kobweb.silk.components.icons.fa.FaTwitter
 import com.varabyte.kobweb.silk.components.icons.fa.FaWhatsapp
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.layout.HorizontalDivider
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.Color
+import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.Br
 import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.HTMLMap
 import org.jetbrains.compose.web.dom.Input
 import org.jetbrains.compose.web.dom.Label
 import org.w3c.dom.HTMLDivElement
@@ -83,13 +95,15 @@ import org.w3c.dom.HTMLInputElement
 data class PostDetailUIState(
     val isLoading: Boolean = true,
     val post: Post? = null,
-    val isCopied: Boolean = false
+    val isCopied: Boolean = false,
+    val isError: Boolean = false,
 )
 
 @Page("/posts")
 @Composable
 fun PostPageLayout() {
     val context = rememberPageContext()
+    val breakpoint = rememberBreakpoint()
 
     var state by remember { mutableStateOf(PostDetailUIState()) }
 
@@ -97,7 +111,8 @@ fun PostPageLayout() {
     LaunchedEffect(key1 = postShort) {
         getPostDetail(
             short = postShort,
-            onSuccess = { state = PostDetailUIState(post = it, isLoading = false) }
+            onSuccess = { state = PostDetailUIState(post = it, isLoading = false) },
+            onError = { state = PostDetailUIState(isError = true) }
         )
     }
 
@@ -105,12 +120,55 @@ fun PostPageLayout() {
         LoadingIndicator()
     } else {
         PageLayout(state.post?.title ?: "Post") {
-            Row(
-                modifier = Modifier.gridRow(2)
-            ) {
-                state.post?.let {
-                    LeftSide(it)
-                    RightSide(it)
+            if (state.isError) {
+                ErrorView()
+                return@PageLayout
+            }
+
+            state.post?.let {
+                if (breakpoint > Breakpoint.MD) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth().gridRow(2)
+                    ) {
+                        LeftSide(
+                            modifier = Modifier
+                                .margin(top = 4.cssRem),
+                            post = it
+                        )
+                        RightSide(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .margin(left = 4.cssRem, top = 4.cssRem)
+                                .backgroundColor(getSitePalette().white)
+                                .borderRadius(1.cssRem)
+                                .padding(leftRight = 24.px)
+                                .maxWidth(800.px)
+                                .boxShadow(0.px, 0.px, 5.px, 0.px, Color.lightgray)
+                                .padding(leftRight = 4.cssRem, topBottom = 4.cssRem),
+                            post = it
+                        )
+                    }
+                } else {
+                    Column (
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        LeftSide(
+                            post = it
+                        )
+                        RightSide(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .margin(top = 1.cssRem)
+                                .backgroundColor(getSitePalette().white)
+                                .borderRadius(1.cssRem)
+                                .padding(leftRight = if (breakpoint > Breakpoint.MD) 24.px else 16.px)
+                                .maxWidth(800.px)
+                                .boxShadow(0.px, 0.px, 5.px, 0.px, Color.lightgray)
+                                .padding(leftRight = if (breakpoint > Breakpoint.MD) 4.cssRem else 2.cssRem, topBottom = 4.cssRem),
+                            post = it
+                        )
+                    }
                 }
             }
         }
@@ -118,9 +176,12 @@ fun PostPageLayout() {
 }
 
 @Composable
-fun LeftSide(post: Post) {
+fun LeftSide(
+    modifier: Modifier = Modifier,
+    post: Post
+) {
     Column(
-        modifier = Modifier.margin(top = 4.cssRem)
+        modifier = modifier,
     ) {
         SpanText(
             text = "Post Information",
@@ -140,7 +201,6 @@ fun LeftSide(post: Post) {
             LeftSideItem(
                 icon = {
                     FaTicket(
-                        size = IconSize.X1,
                         modifier = Modifier.color(getSitePalette().green)
                     )
                 },
@@ -150,7 +210,6 @@ fun LeftSide(post: Post) {
             LeftSideItem(
                 icon = {
                     FaCalendar(
-                        size = IconSize.X1,
                         modifier = Modifier.color(getSitePalette().green)
                     )
                 },
@@ -160,7 +219,6 @@ fun LeftSide(post: Post) {
             LeftSideItem(
                 icon = {
                     FaPerson(
-                        size = IconSize.X1,
                         modifier = Modifier.color(getSitePalette().green)
                     )
                 },
@@ -170,7 +228,6 @@ fun LeftSide(post: Post) {
             LeftSideItem(
                 icon = {
                     FaClock(
-                        size = IconSize.X1,
                         modifier = Modifier.color(getSitePalette().green)
                     )
                 },
@@ -188,7 +245,13 @@ fun LeftSideItem(icon: @Composable () -> Unit, title: String, value: String) {
             .fillMaxWidth()
             .margin(topBottom = 0.4.cssRem)
     ) {
-        icon()
+        Box(
+            modifier = Modifier.minWidth(20.px),
+            contentAlignment = Alignment.Center
+        ) {
+            icon()
+        }
+
         SpanText(
             text = "$title: ",
             modifier = Modifier
@@ -207,17 +270,12 @@ fun LeftSideItem(icon: @Composable () -> Unit, title: String, value: String) {
 }
 
 @Composable
-fun RightSide(post: Post) {
+fun RightSide(
+    modifier: Modifier = Modifier,
+    post: Post
+) {
     Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .margin(left = 4.cssRem, top = 4.cssRem)
-            .backgroundColor(getSitePalette().white)
-            .borderRadius(1.cssRem)
-            .padding(leftRight = 24.px)
-            .maxWidth(800.px)
-            .boxShadow(0.px, 0.px, 5.px, 0.px, Color.lightgray)
-            .padding(leftRight = 4.cssRem, topBottom = 4.cssRem),
+        modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         PostContent(
@@ -230,6 +288,7 @@ fun RightSide(post: Post) {
 fun PostContent(post: Post) {
     val context = rememberPageContext()
     val scope = rememberCoroutineScope()
+    val breakpoint = rememberBreakpoint()
     var isCopied by remember { mutableStateOf(false) }
 
     LaunchedEffect(post) {
@@ -240,17 +299,9 @@ fun PostContent(post: Post) {
             .fillMaxWidth()
             .margin(bottom = 20.px)
             .color(getSitePalette().blue)
-            .fontSize(40.px)
+            .fontSize(if (breakpoint > Breakpoint.MD) 40.px else 20.px)
             .fontWeight(FontWeight.Bold)
-            .overflow(Overflow.Hidden)
-            .textAlign(TextAlign.Center)
-            .textOverflow(TextOverflow.Ellipsis)
-            .styleModifier {
-                property("display", "-webkit-box")
-                property("-webkit-line-clamp", "2")
-                property("line-clamp", "2")
-                property("-webkit-box-orient", "vertical")
-            },
+            .textAlign(TextAlign.Center),
         text = post.title
     )
     Row(
@@ -294,6 +345,7 @@ fun PostContent(post: Post) {
         attrs = Modifier
             .id(Id.postContent)
             .color(getSitePalette().blue)
+            .fontSize(if (breakpoint > Breakpoint.MD) 18.px else 14.px)
             .fillMaxWidth()
             .toAttrs()
     )
@@ -304,12 +356,13 @@ fun PostContent(post: Post) {
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
+        val text = "Check out this post: ${post.title} on AndroidHub"
         SpanText(
             text = "Share Article:",
             modifier = Modifier
                 .color(getSitePalette().blue)
                 .fontWeight(FontWeight.Bold)
-                .fontSize(16.px)
+                .fontSize(if (breakpoint > Breakpoint.MD) 16.px else 12.px)
                 .padding(right = 1.cssRem)
         )
         FaTwitter(
@@ -319,7 +372,7 @@ fun PostContent(post: Post) {
                 .fontSize(24.px)
                 .margin(right = 1f.cssRem)
                 .onClick {
-                    window.open("https://x.com", "_blank")
+                    window.open("https://twitter.com/intent/tweet?url=${window.location.href}&text=$text", "_blank")
                 }
         )
         FaLinkedin(
@@ -329,17 +382,7 @@ fun PostContent(post: Post) {
                 .fontSize(24.px)
                 .margin(right = 1f.cssRem)
                 .onClick {
-                    window.open("https://www.linkedin.com", "_blank")
-                }
-        )
-        FaTelegram(
-            modifier = Modifier
-                .cursor(Cursor.Pointer)
-                .color(Color("#0088cc"))
-                .fontSize(24.px)
-                .margin(right = 1f.cssRem)
-                .onClick {
-                    window.open("https://telegram.org", "_blank")
+                    window.open("https://www.linkedin.com/share-offsite?mini=true&url=${window.location.href}", "_blank")
                 }
         )
         FaWhatsapp(
@@ -348,7 +391,7 @@ fun PostContent(post: Post) {
                 .color(Color("#1FB381"))
                 .fontSize(24.px)
                 .onClick {
-                    window.open("https://api.whatsapp.com", "_blank")
+                    window.open("https://api.whatsapp.com/send/?text=${post.title} - ${window.location.href}", "_blank")
                 }
         )
     }

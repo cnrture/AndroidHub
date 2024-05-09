@@ -6,6 +6,7 @@ import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.data.model.colorParse
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.navigation.Screen
+import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -18,6 +19,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.alignContent
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.color
+import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
@@ -25,9 +27,11 @@ import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.marginBlock
 import com.varabyte.kobweb.compose.ui.modifiers.marginInline
+import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.compose.ui.thenIf
+import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.icons.fa.FaClock
 import com.varabyte.kobweb.silk.components.icons.fa.FaUser
 import com.varabyte.kobweb.silk.components.navigation.Link
@@ -41,6 +45,7 @@ import org.jetbrains.compose.web.css.px
 
 @Composable
 fun LatestArticleItem(article: Post) {
+    val context = rememberPageContext()
     val breakpoint = rememberBreakpoint()
     Column(
         modifier = ShadowedGrayButtonVariant.toModifier()
@@ -56,7 +61,11 @@ fun LatestArticleItem(article: Post) {
                 .backgroundColor(colorParse(article.category.color))
                 .fontSize(0.75.cssRem)
                 .borderRadius(topRight = 1.cssRem, bottomRight = 1.cssRem)
-                .padding(topBottom = 0.5.cssRem, leftRight = 1.7.cssRem),
+                .padding(topBottom = 0.5.cssRem, leftRight = 1.7.cssRem)
+                .cursor(Cursor.Pointer)
+                .onClick {
+                    context.router.navigateTo(Screen.CategoryPage.getCategoryPosts(article.category.name))
+                },
             text = article.category.name
         )
 

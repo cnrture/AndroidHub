@@ -7,7 +7,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.canerture.androidhub.components.layouts.PageLayout
+import com.canerture.androidhub.components.widgets.ErrorView
 import com.canerture.androidhub.components.widgets.LoadingIndicator
+import com.canerture.androidhub.data.getPopularPosts
 import com.canerture.androidhub.data.getPosts
 import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.getSitePalette
@@ -40,6 +42,7 @@ data class IndexUIState(
     val isLoading: Boolean = true,
     val popularPosts: List<Post> = emptyList(),
     val latestPosts: List<Post> = emptyList(),
+    val isError: Boolean = false,
 )
 
 @Page("/")
@@ -52,10 +55,24 @@ fun Index() {
     LaunchedEffect(Unit) {
         getPosts(
             onSuccess = { posts ->
-                state = IndexUIState(
+                println(posts)
+                state = state.copy(
                     isLoading = false,
-                    popularPosts = posts,
                     latestPosts = posts
+                )
+            },
+            onError = {
+                state = state.copy(
+                    isLoading = false,
+                    isError = true
+                )
+            }
+        )
+
+        getPopularPosts(
+            onSuccess = { posts ->
+                state = state.copy(
+                    popularPosts = posts
                 )
             }
         )
@@ -65,6 +82,10 @@ fun Index() {
         LoadingIndicator()
     } else {
         PageLayout("Home") {
+            if (state.isError) {
+                ErrorView()
+                return@PageLayout
+            }
             AndroidHeroContent(breakpoint)
 
             if (state.popularPosts.isNotEmpty()) {

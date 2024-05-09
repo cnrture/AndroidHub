@@ -25,7 +25,9 @@ sealed class Screen(val route: String) {
         fun searchByTitle(query: String) = "/admin/my-posts?${QUERY_PARAM}=$query"
     }
 
-    data object SearchPage : Screen(route = "/search/query") {
-        fun searchByTitle(query: String) = "/search/query?${QUERY_PARAM}=$query"
+    data object AdminAllPosts : Screen(route = "/admin/all-posts")
+
+    data object SearchPage : Screen(route = "/search") {
+        fun searchByTitle(query: String) = "/search?${QUERY_PARAM}=$query"
     }
 }

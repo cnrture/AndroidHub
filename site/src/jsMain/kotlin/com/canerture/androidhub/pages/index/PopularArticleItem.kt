@@ -6,6 +6,7 @@ import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.data.model.colorParse
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.navigation.Screen
+import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -15,6 +16,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.color
+import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
@@ -22,6 +24,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.marginBlock
 import com.varabyte.kobweb.compose.ui.modifiers.marginInline
+import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.core.rememberPageContext
@@ -51,7 +54,11 @@ fun PopularArticleItem(article: Post) {
                 .backgroundColor(getSitePalette().grayTransparent)
                 .fontSize(14.px)
                 .borderRadius(topRight = 1.cssRem, bottomRight = 1.cssRem)
-                .padding(topBottom = 0.5.cssRem, leftRight = 1.7.cssRem),
+                .padding(topBottom = 0.5.cssRem, leftRight = 1.7.cssRem)
+                .cursor(Cursor.Pointer)
+                .onClick {
+                    context.router.navigateTo(Screen.CategoryPage.getCategoryPosts(article.category.name))
+                },
             text = article.category.name
         )
 

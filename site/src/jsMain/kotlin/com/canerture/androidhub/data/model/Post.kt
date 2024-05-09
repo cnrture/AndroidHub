@@ -14,6 +14,7 @@ data class AddPostRequest(
     val category: String = "",
     val thumbnail: String = "",
     val commentCount: Int = 0,
+    val status: String = "",
 )
 
 @Serializable
@@ -25,6 +26,7 @@ data class UpdatePostRequest(
     val short: String = "",
     val category: String = "",
     val thumbnail: String = "",
+    val status: String = "",
 )
 
 @Serializable
@@ -39,4 +41,5 @@ data class Post(
     val category: Category = Category(),
     val thumbnail: String = "",
     val commentCount: Int = 0,
+    val status: String = "",
 )
