@@ -1,5 +1,7 @@
 package com.canerture.androidhub.models
 
+import com.canerture.androidhub.getSitePalette
+
 sealed class ControlStyle(val style: String) {
     data class Bold(val selectedText: String?) : ControlStyle(
         style = "<strong>$selectedText</strong>"
@@ -30,7 +32,7 @@ sealed class ControlStyle(val style: String) {
     )
 
     data class Code(val selectedText: String?) : ControlStyle(
-        style = "<div style=\"background-color:#0d1117;padding:12px;border-radius:6px;\"><pre><code class=\"language-kotlin\"> $selectedText </code></pre></div>"
+        style = "<div style=\"background-color:${getSitePalette().blue};color:${getSitePalette().white};font-size:14px;padding:12px;border-radius:6px;\"><pre><code class=\"language-kotlin\">$selectedText</code></pre></div>"
     )
 
     data class Image(

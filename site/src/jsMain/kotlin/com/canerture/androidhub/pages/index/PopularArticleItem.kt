@@ -28,30 +28,38 @@ import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.marginBlock
 import com.varabyte.kobweb.compose.ui.modifiers.marginInline
+import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.overflow
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.textOverflow
 import com.varabyte.kobweb.compose.ui.modifiers.whiteSpace
+import com.varabyte.kobweb.compose.ui.modifiers.width
+import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.icons.fa.FaClock
 import com.varabyte.kobweb.silk.components.icons.fa.FaUser
 import com.varabyte.kobweb.silk.components.navigation.Link
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.cssRem
+import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun PopularArticleItem(article: Post) {
     val context = rememberPageContext()
+    val breakpoint = rememberBreakpoint()
     Column(
         modifier = ShadowedGrayVariant.toModifier()
             .marginInline(start = 1.cssRem, end = 1.cssRem)
             .marginBlock(end = 2.5.cssRem)
+            .thenIf(breakpoint < Breakpoint.MD, Modifier.width(300.px))
             .backgroundColor(colorParse(article.category.color))
             .borderRadius(1.cssRem),
     ) {
@@ -108,10 +116,10 @@ fun PopularArticleItem(article: Post) {
             SpanText(
                 modifier = Modifier
                     .fontWeight(FontWeight.SemiBold)
-                    .fontSize(18.px)
+                    .fontSize(if (breakpoint < Breakpoint.MD) 16.px else 18.px)
                     .color(getSitePalette().white)
-                    .overflow(Overflow.Hidden)
-                    .whiteSpace(WhiteSpace.NoWrap)
+                    .overflow(Overflow.Clip)
+                    .whiteSpace(WhiteSpace.Normal)
                     .textOverflow(TextOverflow.Ellipsis),
                 text = article.title
             )

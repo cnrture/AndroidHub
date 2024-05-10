@@ -17,6 +17,7 @@ object Res {
         const val LOGO = "/androidhub-logo.webp"
         const val LOGO_DARK = "/androidhub-logo-dark.webp"
         const val ANDROID_FIGURE = "/android-figure.webp"
+        const val JETPACK = "/jetpack.webp"
     }
 
     object Icon {

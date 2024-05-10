@@ -59,7 +59,7 @@ fun MyPostsScreen() {
     LaunchedEffect(context.route) {
         getMyPosts(
             onSuccess = {
-                state = state.copy(isLoading = false, posts = it)
+                state = state.copy(isLoading = false, posts = it.posts)
             },
             onError = {
                 state = state.copy(isLoading = false, isError = true)
@@ -107,7 +107,7 @@ fun MyPostsScreen() {
                             } else {
                                 getMyPosts(
                                     onSuccess = {
-                                        state = state.copy(isLoading = false, posts = it)
+                                        state = state.copy(isLoading = false, posts = it.posts)
                                     },
                                 )
                             }

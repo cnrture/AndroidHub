@@ -106,6 +106,7 @@ import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.dom.TextArea
 import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.HTMLTextAreaElement
+import org.w3c.dom.events.EventListener
 import org.w3c.dom.get
 
 data class CreatePageUiState(

@@ -59,8 +59,9 @@ fun AdminAllPosts() {
             )
         } else {
             getPosts(
+                page = 1,
                 onSuccess = {
-                    state = state.copy(isLoading = false, posts = it)
+                    state = state.copy(isLoading = false, posts = it.posts)
                 }
             )
         }

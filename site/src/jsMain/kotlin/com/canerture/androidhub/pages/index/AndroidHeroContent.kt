@@ -2,9 +2,7 @@ package com.canerture.androidhub.pages.index
 
 import androidx.compose.runtime.Composable
 import com.canerture.androidhub.common.Res
-import com.canerture.androidhub.getHeadlineFontSize
 import com.canerture.androidhub.getSitePalette
-import com.canerture.androidhub.getSubheadlineFontSize
 import com.varabyte.kobweb.compose.css.AlignContent
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
@@ -78,7 +76,7 @@ private fun TextArea(breakpoint: Breakpoint, modifier: Modifier = Modifier) {
                 .fontWeight(FontWeight.Bold)
                 .textAlign(TextAlign.Start)
                 .color(getSitePalette().green)
-                .fontSize(getHeadlineFontSize(breakpoint))
+                .fontSize(if (breakpoint < Breakpoint.MD) 18.px else 28.px)
         )
         Spacer()
         SpanText(
@@ -86,7 +84,7 @@ private fun TextArea(breakpoint: Breakpoint, modifier: Modifier = Modifier) {
             modifier = Modifier
                 .textAlign(TextAlign.Start)
                 .color(Color.gray)
-                .fontSize(getSubheadlineFontSize(breakpoint))
+                .fontSize(if (breakpoint < Breakpoint.MD) 14.px else 20.px)
                 .lineHeight(2)
                 .padding(right = 2.cssRem)
         )

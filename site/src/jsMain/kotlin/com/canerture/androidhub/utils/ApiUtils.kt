@@ -5,7 +5,6 @@ import com.canerture.androidhub.data.model.BaseResponse
 import com.varabyte.kobweb.browser.http.http
 import kotlinx.browser.window
 import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 
 object ApiUtils {
@@ -19,9 +18,11 @@ object ApiUtils {
             if (response.status == 200) {
                 onSuccess(response.data!!)
             } else {
+                println(response.message)
                 onError(response.message.orEmpty())
             }
         } catch (e: Exception) {
+            println(e.message)
             onError("Something went wrong!")
         }
     }
@@ -35,10 +36,17 @@ object ApiUtils {
         return window.http.get(url)
     }
 
-    suspend fun post(path: String, body: Any): ByteArray {
+    suspend fun post(path: String, body: ByteArray): ByteArray {
         return window.http.post(
             resource = Constants.BASE_URL.plus(path),
-            body = createRequestBody(body)
+            body = body
+        )
+    }
+
+    suspend fun put(path: String, body: ByteArray): ByteArray {
+        return window.http.put(
+            resource = Constants.BASE_URL.plus(path),
+            body = body
         )
     }
 
@@ -54,9 +62,5 @@ object ApiUtils {
     inline fun <reified T : Any> ByteArray?.parseData(): T {
         val json = this?.decodeToString().orEmpty()
         return Json.decodeFromString(json)
-    }
-
-    fun createRequestBody(body: Any): ByteArray {
-        return Json.encodeToString(body).encodeToByteArray()
     }
 }

@@ -45,20 +45,16 @@ import com.varabyte.kobweb.silk.components.animation.toAnimation
 import com.varabyte.kobweb.silk.components.layout.HorizontalDividerStyle
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.base
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerStyleBase
 import com.varabyte.kobweb.silk.theme.modifyComponentStyleBase
 import org.jetbrains.compose.web.css.AnimationTimingFunction
-import org.jetbrains.compose.web.css.CSSSizeValue
-import org.jetbrains.compose.web.css.CSSUnit
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.Position
-import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.deg
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
@@ -70,7 +66,7 @@ fun initSiteStyles(ctx: InitSilkContext) {
     ctx.stylesheet.registerStyleBase("body") {
         Modifier
             .fontFamily(
-                "-apple-system", "BlinkMacSystemFont", "DM Sans", "Urbanist"
+                "PT Sans",
             )
             .fontSize(18.px)
             .lineHeight(1.5)
@@ -79,26 +75,6 @@ fun initSiteStyles(ctx: InitSilkContext) {
     // Silk dividers only extend 90% by default; we want full width dividers in our site
     ctx.theme.modifyComponentStyleBase(HorizontalDividerStyle) {
         Modifier.fillMaxWidth()
-    }
-}
-
-fun getHeadlineFontSize(breakpoint: Breakpoint): CSSSizeValue<CSSUnit.rem> {
-    return when (breakpoint) {
-        Breakpoint.ZERO -> 1.4.cssRem
-        Breakpoint.SM -> 1.5.cssRem
-        Breakpoint.MD -> 1.7.cssRem
-        Breakpoint.LG -> 1.8.cssRem
-        Breakpoint.XL -> 2.cssRem
-    }
-}
-
-fun getSubheadlineFontSize(breakpoint: Breakpoint): CSSSizeValue<CSSUnit.rem> {
-    return when (breakpoint) {
-        Breakpoint.ZERO -> 0.8.cssRem
-        Breakpoint.SM -> 1.05.cssRem
-        Breakpoint.MD -> 1.1.cssRem
-        Breakpoint.LG -> 1.2.cssRem
-        Breakpoint.XL -> 1.25.cssRem
     }
 }
 
@@ -282,7 +258,7 @@ val NavItemStyle by ComponentStyle {
     }
 }
 
-val MyBtnStyle by ComponentStyle {
+val ScrollToTopStyle by ComponentStyle {
     base {
         Modifier
             .position(Position.Fixed)
@@ -291,7 +267,7 @@ val MyBtnStyle by ComponentStyle {
             .zIndex(99)
             .border(0.px)
             .outline(0.px)
-            .backgroundColor(getSitePalette().green)
+            .backgroundColor(Color.transparent)
             .color(Colors.White)
             .cursor(Cursor.Pointer)
             .borderRadius(100.percent)

@@ -78,7 +78,7 @@ fun NavHeader(
     ) {
         Row(
             modifier = Modifier.displayIfAtLeast(Breakpoint.MD)
-                .backgroundColor(getSitePalette().nearBackground)
+                .backgroundColor(getSitePalette().white)
                 .borderRadius(5.cssRem)
                 .boxShadow(0.px, 0.px, 5.px, 0.px, Color.lightgray)
                 .padding(topBottom = 1.cssRem, leftRight = 2.cssRem),
@@ -98,9 +98,9 @@ fun NavHeader(
                     .setVariable(ButtonVars.BackgroundDefaultColor, getSitePalette().green)
                     .setVariable(ButtonVars.BackgroundHoverColor, getSitePalette().green)
                     .setVariable(ButtonVars.BackgroundPressedColor, getSitePalette().green)
-                    .width(140.px)
+                    .width(120.px)
                     .borderRadius(3.cssRem)
-                    .padding(leftRight = 2.cssRem, topBottom = 0.5.cssRem)
+                    .padding(leftRight = 1.cssRem, topBottom = 0.5.cssRem)
                     .margin(right = 12.px)
                     .noBorder()
                     .cursor(Cursor.Pointer)
@@ -134,7 +134,7 @@ private fun MenuItem(
     SpanText(
         text = text,
         modifier = NavItemStyle.toModifier()
-            .margin(leftRight = 12.px)
+            .margin(leftRight = 8.px)
             .fontSize(16.px)
             .cursor(Cursor.Pointer)
             .onClick {

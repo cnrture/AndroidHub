@@ -12,7 +12,6 @@ import com.varabyte.kobweb.silk.theme.colors.palette.color
  *   but just a little.
  */
 class SitePalette(
-    val nearBackground: Color,
     val green: Color,
     val white: Color,
     val blue: Color,
@@ -23,7 +22,6 @@ class SitePalette(
 
 object SitePalettes {
     val palette = SitePalette(
-        nearBackground = Colors.White,
         green = Color.rgb(0x3DDB86),
         white = Colors.White,
         blue = Color.rgb(0x092F42),

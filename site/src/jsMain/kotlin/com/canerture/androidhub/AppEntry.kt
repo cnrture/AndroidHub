@@ -5,6 +5,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import com.canerture.androidhub.common.Res
 import com.varabyte.kobweb.compose.css.ScrollBehavior
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -15,15 +16,17 @@ import com.varabyte.kobweb.compose.ui.modifiers.minHeight
 import com.varabyte.kobweb.compose.ui.modifiers.minWidth
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.scrollBehavior
+import com.varabyte.kobweb.compose.ui.modifiers.size
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.App
 import com.varabyte.kobweb.silk.SilkApp
-import com.varabyte.kobweb.silk.components.icons.fa.FaArrowUp
+import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.Surface
 import com.varabyte.kobweb.silk.components.style.toModifier
 import kotlinx.browser.document
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.DisplayStyle
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.vh
 import org.jetbrains.compose.web.css.vw
 import org.jetbrains.compose.web.dom.Div
@@ -37,7 +40,7 @@ fun AppEntry(content: @Composable () -> Unit) {
         var isButtonVisible by remember { mutableStateOf(false) }
 
         window.onscroll = {
-            if (document.body!!.scrollTop > 100 || document.documentElement!!.scrollTop > 100) {
+            if (document.body!!.scrollTop > 300 || document.documentElement!!.scrollTop > 300) {
                 isButtonVisible = true
             } else {
                 isButtonVisible = false
@@ -57,7 +60,7 @@ fun AppEntry(content: @Composable () -> Unit) {
                 content()
 
                 Div(
-                    attrs = MyBtnStyle.toModifier()
+                    attrs = ScrollToTopStyle.toModifier()
                         .display(
                             if (isButtonVisible) DisplayStyle.Block else DisplayStyle.None
                         )
@@ -70,7 +73,10 @@ fun AppEntry(content: @Composable () -> Unit) {
                             )
                         }.toAttrs()
                 ) {
-                    FaArrowUp()
+                    Image(
+                        src = Res.Image.JETPACK,
+                        modifier = Modifier.size(80.px, 80.px)
+                    )
                 }
             }
         }

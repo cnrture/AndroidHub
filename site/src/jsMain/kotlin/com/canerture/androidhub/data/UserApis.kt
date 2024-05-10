@@ -6,17 +6,15 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.canerture.androidhub.common.Constants
 import com.canerture.androidhub.data.model.LoginRequest
 import com.canerture.androidhub.data.model.RegisterRequest
 import com.canerture.androidhub.data.model.User
-import com.canerture.androidhub.utils.ApiUtils.createRequestBody
 import com.canerture.androidhub.utils.ApiUtils.get
 import com.canerture.androidhub.utils.ApiUtils.post
 import com.canerture.androidhub.utils.ApiUtils.safeApiCall
-import com.varabyte.kobweb.browser.http.http
 import kotlinx.browser.localStorage
-import kotlinx.browser.window
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import org.w3c.dom.get
 import org.w3c.dom.set
 
@@ -29,7 +27,7 @@ suspend fun login(
     call = {
         post(
             path = "login",
-            body = LoginRequest(email, password)
+            body = Json.encodeToString(LoginRequest(email, password)).encodeToByteArray()
         )
     },
     onSuccess = onSuccess,
@@ -46,7 +44,7 @@ suspend fun register(
     call = {
         post(
             path = "register",
-            body = RegisterRequest(name, email, password)
+            body = Json.encodeToString(RegisterRequest(name, email, password)).encodeToByteArray()
         )
     },
     onSuccess = onSuccess,
