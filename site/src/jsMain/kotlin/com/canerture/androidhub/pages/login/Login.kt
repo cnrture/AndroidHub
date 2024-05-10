@@ -6,16 +6,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import com.canerture.androidhub.ShadowedGreenButtonVariant
+import com.canerture.androidhub.ShadowedGreenVariant
+import com.canerture.androidhub.common.Id
+import com.canerture.androidhub.common.Res
+import com.canerture.androidhub.common.noBorder
 import com.canerture.androidhub.data.login
 import com.canerture.androidhub.data.model.User
 import com.canerture.androidhub.data.register
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.navigation.Screen
-import com.canerture.androidhub.utils.Constants.FONT_FAMILY
-import com.canerture.androidhub.utils.Id
-import com.canerture.androidhub.utils.Res
-import com.canerture.androidhub.utils.noBorder
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -35,7 +34,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
-import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
 import com.varabyte.kobweb.compose.ui.modifiers.height
@@ -62,7 +60,6 @@ import kotlinx.browser.document
 import kotlinx.browser.localStorage
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.attributes.InputType
-import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.ms
@@ -92,7 +89,7 @@ fun LoginScreen() {
             modifier = Modifier
                 .borderRadius(r = 8.px)
                 .backgroundColor(getSitePalette().blue)
-                .boxShadow(0.px, 0.px, 20.px, 0.px, Color.black),
+                .boxShadow(0.px, 0.px, 20.px, 0.px, getSitePalette().blue),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -154,13 +151,12 @@ fun LoginScreen() {
                     Input(
                         type = InputType.Text,
                         attrs = LoginInputStyle.toModifier()
-                            .id(Id.nameInput)
+                            .id(Id.NAME_INPUT)
                             .margin(bottom = 12.px)
                             .width(350.px)
                             .height(54.px)
                             .padding(leftRight = 20.px)
                             .backgroundColor(Colors.White)
-                            .fontFamily(FONT_FAMILY)
                             .fontSize(14.px)
                             .outline(
                                 width = 0.px,
@@ -175,13 +171,12 @@ fun LoginScreen() {
                 Input(
                     type = InputType.Text,
                     attrs = LoginInputStyle.toModifier()
-                        .id(Id.emailInput)
+                        .id(Id.EMAIL_INPUT)
                         .margin(bottom = 12.px)
                         .width(350.px)
                         .height(54.px)
                         .padding(leftRight = 20.px)
                         .backgroundColor(Colors.White)
-                        .fontFamily(FONT_FAMILY)
                         .fontSize(14.px)
                         .outline(
                             width = 0.px,
@@ -195,13 +190,12 @@ fun LoginScreen() {
                 Input(
                     type = InputType.Password,
                     attrs = LoginInputStyle.toModifier()
-                        .id(Id.passwordInput)
+                        .id(Id.PASSWORD_INPUT)
                         .margin(bottom = 20.px)
                         .width(350.px)
                         .height(54.px)
                         .padding(leftRight = 20.px)
                         .backgroundColor(Colors.White)
-                        .fontFamily(FONT_FAMILY)
                         .fontSize(14.px)
                         .outline(
                             width = 0.px,
@@ -218,8 +212,8 @@ fun LoginScreen() {
                         text = "Login",
                         onClick = {
                             scope.launch {
-                                val email = (document.getElementById(Id.emailInput) as HTMLInputElement).value
-                                val password = (document.getElementById(Id.passwordInput) as HTMLInputElement).value
+                                val email = (document.getElementById(Id.EMAIL_INPUT) as HTMLInputElement).value
+                                val password = (document.getElementById(Id.PASSWORD_INPUT) as HTMLInputElement).value
                                 login(
                                     email = email,
                                     password = password,
@@ -239,9 +233,9 @@ fun LoginScreen() {
                         text = "Register",
                         onClick = {
                             scope.launch {
-                                val name = (document.getElementById(Id.nameInput) as HTMLInputElement).value
-                                val email = (document.getElementById(Id.emailInput) as HTMLInputElement).value
-                                val password = (document.getElementById(Id.passwordInput) as HTMLInputElement).value
+                                val name = (document.getElementById(Id.NAME_INPUT) as HTMLInputElement).value
+                                val email = (document.getElementById(Id.EMAIL_INPUT) as HTMLInputElement).value
+                                val password = (document.getElementById(Id.PASSWORD_INPUT) as HTMLInputElement).value
                                 register(
                                     name = name,
                                     email = email,
@@ -263,8 +257,7 @@ fun LoginScreen() {
                     modifier = Modifier
                         .width(350.px)
                         .color(Colors.Red)
-                        .textAlign(TextAlign.Center)
-                        .fontFamily(FONT_FAMILY),
+                        .textAlign(TextAlign.Center),
                     text = errorText
                 )
             }
@@ -278,7 +271,7 @@ fun ButtonContent(
     onClick: () -> Unit,
 ) {
     Button(
-        modifier = ShadowedGreenButtonVariant.toModifier()
+        modifier = ShadowedGreenVariant.toModifier()
             .margin(bottom = 24.px)
             .width(350.px)
             .height(54.px)

@@ -55,7 +55,6 @@ fun Index() {
     LaunchedEffect(Unit) {
         getPosts(
             onSuccess = { posts ->
-                println(posts)
                 state = state.copy(
                     isLoading = false,
                     latestPosts = posts
@@ -126,7 +125,7 @@ fun PopularPosts(list: List<Post>) {
     }
     SimpleGrid(
         modifier = Modifier.fillMaxWidth(),
-        numColumns = ResponsiveValues(1, 2, 3, 3, 3),
+        numColumns = ResponsiveValues(1, 1, 3, 3, 3),
     ) {
         list.take(3).forEach { article ->
             PopularArticleItem(
@@ -164,7 +163,7 @@ fun LatestPosts(
 
     SimpleGrid(
         modifier = Modifier.fillMaxWidth().padding(leftRight = 6.cssRem),
-        numColumns = ResponsiveValues(1, 2, 3, 3, 3),
+        numColumns = ResponsiveValues(1, 1, 3, 3, 3),
         content = {
             list.forEach { article ->
                 LatestArticleItem(

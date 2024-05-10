@@ -7,14 +7,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import com.canerture.androidhub.common.Constants.COLLAPSED_PANEL_HEIGHT
+import com.canerture.androidhub.common.Constants.SIDE_PANEL_WIDTH
+import com.canerture.androidhub.common.Id
+import com.canerture.androidhub.common.Res
+import com.canerture.androidhub.data.logout
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.navigation.Screen
-import com.canerture.androidhub.utils.Constants.COLLAPSED_PANEL_HEIGHT
-import com.canerture.androidhub.utils.Constants.FONT_FAMILY
-import com.canerture.androidhub.utils.Constants.SIDE_PANEL_WIDTH
-import com.canerture.androidhub.utils.Id
-import com.canerture.androidhub.utils.Res
-import com.canerture.androidhub.utils.logout
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.Overflow
@@ -33,7 +32,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxHeight
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
-import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.id
@@ -115,7 +113,6 @@ fun NavigationItems() {
     SpanText(
         modifier = Modifier
             .margin(bottom = 30.px)
-            .fontFamily(FONT_FAMILY)
             .fontSize(14.px)
             .color(getSitePalette().white),
         text = "Dashboard"
@@ -126,7 +123,7 @@ fun NavigationItems() {
             modifier = Modifier.margin(bottom = 24.px),
             selected = context.route.path == Screen.AdminAllPosts.route,
             title = "All Posts",
-            icon = Res.PathIcon.posts,
+            icon = Res.PathIcon.POSTS,
             onClick = {
                 context.router.navigateTo(Screen.AdminAllPosts.route)
             }
@@ -137,7 +134,7 @@ fun NavigationItems() {
         modifier = Modifier.margin(bottom = 24.px),
         selected = context.route.path == Screen.AdminMyPosts.route,
         title = "My Posts",
-        icon = Res.PathIcon.posts,
+        icon = Res.PathIcon.POSTS,
         onClick = {
             context.router.navigateTo(Screen.AdminMyPosts.route)
         }
@@ -146,14 +143,14 @@ fun NavigationItems() {
         modifier = Modifier.margin(bottom = 24.px),
         selected = context.route.path == Screen.AdminCreate.route,
         title = "Create Post",
-        icon = Res.PathIcon.create,
+        icon = Res.PathIcon.CREATE,
         onClick = {
             context.router.navigateTo(Screen.AdminCreate.route)
         }
     )
     NavigationItem(
         title = "Logout",
-        icon = Res.PathIcon.logout,
+        icon = Res.PathIcon.LOGOUT,
         onClick = {
             logout()
             context.router.navigateTo(Screen.Login.route)
@@ -183,8 +180,7 @@ private fun NavigationItem(
         )
         SpanText(
             modifier = Modifier
-                .id(Id.navigationText)
-                .fontFamily(FONT_FAMILY)
+                .id(Id.NAVIGATION_TEXT)
                 .fontSize(16.px)
                 .color(getSitePalette().white)
                 .thenIf(
@@ -204,7 +200,7 @@ private fun VectorIcon(
 ) {
     Svg(
         attrs = modifier
-            .id(Id.svgParent)
+            .id(Id.SVG_PARENT)
             .size(24.px)
             .toAttrs {
                 attr("viewBox", "0 0 24 24")
@@ -217,7 +213,7 @@ private fun VectorIcon(
             } else {
                 attr(attr = "style", value = "stroke: ${getSitePalette().white}")
             }
-            attr(attr = "id", value = Id.vectorIcon)
+            attr(attr = "id", value = Id.VECTOR_ICON)
             attr(attr = "d", value = pathData)
             attr(attr = "stroke-width", value = "2")
             attr(attr = "stroke-linecap", value = "round")
@@ -332,25 +328,25 @@ fun OverflowSidePanel(
 }
 
 val NavigationItemStyle by ComponentStyle {
-    cssRule(" > #${Id.svgParent} > #${Id.vectorIcon}") {
+    cssRule(" > #${Id.SVG_PARENT} > #${Id.VECTOR_ICON}") {
         Modifier
             .transition(CSSTransition(property = TransitionProperty.All, duration = 300.ms))
             .styleModifier {
                 property("stroke", getSitePalette().blue)
             }
     }
-    cssRule(":hover > #${Id.svgParent} > #${Id.vectorIcon}") {
+    cssRule(":hover > #${Id.SVG_PARENT} > #${Id.VECTOR_ICON}") {
         Modifier
             .styleModifier {
                 property("stroke", getSitePalette().blue)
             }
     }
-    cssRule(" > #${Id.navigationText}") {
+    cssRule(" > #${Id.NAVIGATION_TEXT}") {
         Modifier
             .transition(CSSTransition(property = TransitionProperty.All, duration = 300.ms))
             .color(getSitePalette().blue)
     }
-    cssRule(":hover > #${Id.navigationText}") {
+    cssRule(":hover > #${Id.NAVIGATION_TEXT}") {
         Modifier.color(getSitePalette().blue)
     }
 }

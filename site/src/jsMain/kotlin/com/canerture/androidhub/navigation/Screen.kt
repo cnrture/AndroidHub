@@ -1,14 +1,19 @@
 package com.canerture.androidhub.navigation
 
-import com.canerture.androidhub.utils.Constants.CATEGORY_PARAM
-import com.canerture.androidhub.utils.Constants.POST_SHORT_PARAM
-import com.canerture.androidhub.utils.Constants.QUERY_PARAM
+import com.canerture.androidhub.common.Constants.CATEGORY_PARAM
+import com.canerture.androidhub.common.Constants.POST_AUTHOR_ID_PARAM
+import com.canerture.androidhub.common.Constants.POST_SHORT_PARAM
+import com.canerture.androidhub.common.Constants.QUERY_PARAM
 
 sealed class Screen(val route: String) {
     data object HomePage : Screen(route = "/")
 
     data object PostPage : Screen(route = "/posts") {
         fun getPost(short: String) = "/posts?${POST_SHORT_PARAM}=$short"
+    }
+
+    data object AuthorPage : Screen(route = "/author") {
+        fun getAuthor(authorId: String) = "/author?${POST_AUTHOR_ID_PARAM}=$authorId"
     }
 
     data object CategoryPage : Screen(route = "/category") {
@@ -21,9 +26,7 @@ sealed class Screen(val route: String) {
         fun passPostId(short: String) = "/admin/create-post?${POST_SHORT_PARAM}=$short"
     }
 
-    data object AdminMyPosts : Screen(route = "/admin/my-posts") {
-        fun searchByTitle(query: String) = "/admin/my-posts?${QUERY_PARAM}=$query"
-    }
+    data object AdminMyPosts : Screen(route = "/admin/my-posts")
 
     data object AdminAllPosts : Screen(route = "/admin/all-posts")
 

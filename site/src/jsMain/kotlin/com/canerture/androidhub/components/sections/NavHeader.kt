@@ -3,10 +3,13 @@ package com.canerture.androidhub.components.sections
 import androidx.compose.runtime.Composable
 import com.canerture.androidhub.NavItemStyle
 import com.canerture.androidhub.NavbarStyle
-import com.canerture.androidhub.components.widgets.SearchButton
+import com.canerture.androidhub.ShadowedGreenVariant
+import com.canerture.androidhub.common.Res
+import com.canerture.androidhub.common.noBorder
+import com.canerture.androidhub.components.widgets.SearchArea
+import com.canerture.androidhub.data.isUserLoggedIn
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.navigation.Screen
-import com.canerture.androidhub.utils.Res
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -16,16 +19,19 @@ import com.varabyte.kobweb.compose.ui.modifiers.alignContent
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.boxShadow
-import com.varabyte.kobweb.compose.ui.modifiers.classNames
+import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
-import com.varabyte.kobweb.compose.ui.modifiers.gap
+import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
+import com.varabyte.kobweb.compose.ui.modifiers.setVariable
+import com.varabyte.kobweb.compose.ui.modifiers.size
 import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.rememberPageContext
+import com.varabyte.kobweb.silk.components.forms.ButtonVars
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.components.navigation.Link
@@ -45,18 +51,13 @@ val navItems = listOf("Article", "Project", "Extension", "Plugin", "Library", "R
 
 @Composable
 fun NavHeader(
-    modifier: Modifier = Modifier,
-    onSearchClick: () -> Unit
+    modifier: Modifier = Modifier
 ) {
     val breakpoint = rememberBreakpoint()
+    val context = rememberPageContext()
+    val isUserLoggedIn = isUserLoggedIn()
 
-    val logoWidth = when (breakpoint) {
-        Breakpoint.ZERO -> 200.px
-        Breakpoint.SM -> 200.px
-        Breakpoint.MD -> 300.px
-        Breakpoint.LG -> 320.px
-        Breakpoint.XL -> 360.px
-    }
+    val logoSize = if (breakpoint > Breakpoint.MD) Pair(340.px, 90.px) else Pair(250.px, 66.px)
 
     Div(
         attrs = modifier.toAttrs()
@@ -65,7 +66,7 @@ fun NavHeader(
             Image(
                 src = Res.Image.LOGO,
                 description = "AndroidHub Logo",
-                modifier = Modifier.width(logoWidth).alignContent(AlignContent.Center)
+                modifier = Modifier.size(logoSize.first, logoSize.second).alignContent(AlignContent.Center)
             )
         }
     }
@@ -76,11 +77,11 @@ fun NavHeader(
         horizontalArrangement = Arrangement.Center
     ) {
         Row(
-            modifier = Modifier.gap(1.5.cssRem).displayIfAtLeast(Breakpoint.MD)
+            modifier = Modifier.displayIfAtLeast(Breakpoint.MD)
                 .backgroundColor(getSitePalette().nearBackground)
                 .borderRadius(5.cssRem)
                 .boxShadow(0.px, 0.px, 5.px, 0.px, Color.lightgray)
-                .padding(topBottom = 0.5.cssRem, leftRight = 2.cssRem),
+                .padding(topBottom = 1.cssRem, leftRight = 2.cssRem),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Div(
@@ -91,61 +92,36 @@ fun NavHeader(
                 }
             }
 
-            SearchButton(
-                modifier = Modifier.cursor(Cursor.Pointer),
-                onClick = onSearchClick
-            )
-        }
-    }
-}
-
-@Composable
-fun StickyHeader(
-    modifier: Modifier = Modifier
-) {
-    val breakpoint = rememberBreakpoint()
-
-    val logoWidth = when (breakpoint) {
-        Breakpoint.ZERO -> 14.cssRem
-        Breakpoint.SM -> 18.cssRem
-        Breakpoint.MD -> 18.cssRem
-        Breakpoint.LG -> 16.cssRem
-        Breakpoint.XL -> 20.cssRem
-    }
-
-    Row(
-        modifier = modifier.fillMaxWidth().padding(leftRight = 1.cssRem),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center
-    ) {
-        Link(
-            path = Screen.HomePage.route,
-            modifier = Modifier.margin(top = 2.cssRem, bottom = 1.cssRem, left = 1.cssRem, right = 6.cssRem)
-        ) {
-            Image(
-                src = Res.Image.LOGO,
-                description = "AndroidHub Logo",
-                modifier = Modifier.width(logoWidth)
-            )
-        }
-        Row(
-            modifier = Modifier.gap(1.5.cssRem).displayIfAtLeast(Breakpoint.MD)
-                .padding(topBottom = 0.5.cssRem, leftRight = 2.cssRem),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Div(
-                attrs = Modifier.classNames("navbar").toAttrs(),
-            ) {
-                Div(
-                    attrs = Modifier.classNames("navbar").toAttrs(),
-                ) {
-                    navItems.forEach { item ->
-                        MenuItem(item)
+            Button(
+                attrs = ShadowedGreenVariant.toModifier()
+                    .backgroundColor(getSitePalette().green)
+                    .setVariable(ButtonVars.BackgroundDefaultColor, getSitePalette().green)
+                    .setVariable(ButtonVars.BackgroundHoverColor, getSitePalette().green)
+                    .setVariable(ButtonVars.BackgroundPressedColor, getSitePalette().green)
+                    .width(140.px)
+                    .borderRadius(3.cssRem)
+                    .padding(leftRight = 2.cssRem, topBottom = 0.5.cssRem)
+                    .margin(right = 12.px)
+                    .noBorder()
+                    .cursor(Cursor.Pointer)
+                    .onClick {
+                        if (isUserLoggedIn) {
+                            context.router.navigateTo(Screen.AdminMyPosts.route)
+                        } else {
+                            context.router.navigateTo(Screen.Login.route)
+                        }
                     }
-                }
+                    .toAttrs(),
+            ) {
+                SpanText(
+                    text = "Join us",
+                    modifier = Modifier
+                        .fontSize(16.px)
+                        .color(getSitePalette().white)
+                )
             }
 
-            SearchButton(onClick = {})
+            SearchArea()
         }
     }
 }
@@ -155,18 +131,14 @@ private fun MenuItem(
     text: String
 ) {
     val context = rememberPageContext()
-    Div(attrs = Modifier.classNames("dropdown").toAttrs()) {
-        Button(
-            attrs = Modifier.classNames("dropbtn").toAttrs()
-        ) {
-            SpanText(
-                text = text,
-                modifier = NavItemStyle.toModifier()
-                    .cursor(Cursor.Pointer)
-                    .onClick {
-                        context.router.tryRoutingTo(Screen.CategoryPage.getCategoryPosts(text))
-                    }
-            )
-        }
-    }
+    SpanText(
+        text = text,
+        modifier = NavItemStyle.toModifier()
+            .margin(leftRight = 12.px)
+            .fontSize(16.px)
+            .cursor(Cursor.Pointer)
+            .onClick {
+                context.router.tryRoutingTo(Screen.CategoryPage.getCategoryPosts(text))
+            }
+    )
 }

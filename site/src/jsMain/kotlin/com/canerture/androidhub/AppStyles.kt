@@ -1,6 +1,6 @@
 package com.canerture.androidhub
 
-import com.canerture.androidhub.utils.noBorder
+import com.canerture.androidhub.common.noBorder
 import com.varabyte.kobweb.compose.css.AlignContent
 import com.varabyte.kobweb.compose.css.AnimationIterationCount
 import com.varabyte.kobweb.compose.css.CSSFloat
@@ -13,7 +13,6 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.alignContent
 import com.varabyte.kobweb.compose.ui.modifiers.animation
-import com.varabyte.kobweb.compose.ui.modifiers.background
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderLeft
@@ -24,14 +23,10 @@ import com.varabyte.kobweb.compose.ui.modifiers.boxShadow
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.display
-import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.float
 import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
-import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
-import com.varabyte.kobweb.compose.ui.modifiers.height
-import com.varabyte.kobweb.compose.ui.modifiers.left
 import com.varabyte.kobweb.compose.ui.modifiers.lineHeight
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.minWidth
@@ -40,21 +35,15 @@ import com.varabyte.kobweb.compose.ui.modifiers.overflow
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.position
 import com.varabyte.kobweb.compose.ui.modifiers.right
-import com.varabyte.kobweb.compose.ui.modifiers.setVariable
 import com.varabyte.kobweb.compose.ui.modifiers.size
 import com.varabyte.kobweb.compose.ui.modifiers.textAlign
-import com.varabyte.kobweb.compose.ui.modifiers.top
 import com.varabyte.kobweb.compose.ui.modifiers.transform
 import com.varabyte.kobweb.compose.ui.modifiers.transition
-import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.compose.ui.modifiers.zIndex
 import com.varabyte.kobweb.silk.components.animation.Keyframes
 import com.varabyte.kobweb.silk.components.animation.toAnimation
-import com.varabyte.kobweb.silk.components.forms.ButtonStyle
-import com.varabyte.kobweb.silk.components.forms.ButtonVars
 import com.varabyte.kobweb.silk.components.layout.HorizontalDividerStyle
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.addVariantBase
 import com.varabyte.kobweb.silk.components.style.base
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
@@ -113,28 +102,7 @@ fun getSubheadlineFontSize(breakpoint: Breakpoint): CSSSizeValue<CSSUnit.rem> {
     }
 }
 
-val HeadlineTextStyle by ComponentStyle.base {
-    Modifier
-        .fontSize(2.cssRem)
-        .fontWeight(700)
-        .textAlign(TextAlign.Start)
-}
-
-val SubheadlineTextStyle by ComponentStyle.base {
-    Modifier
-        .textAlign(TextAlign.Start)
-        .color(getSitePalette().blue.toRgb())
-}
-
-val CircleButtonVariant by ButtonStyle.addVariantBase {
-    Modifier.padding(0.px).borderRadius(50.percent)
-}
-
-val UncoloredButtonVariant by ButtonStyle.addVariantBase {
-    Modifier.setVariable(ButtonVars.BackgroundDefaultColor, Colors.Transparent)
-}
-
-val ShadowedBlueButtonVariant by ComponentStyle {
+val ShadowedBlueVariant by ComponentStyle {
     hover {
         Modifier
             .boxShadow(0.px, 0.px, 20.px, 0.px, getSitePalette().blue)
@@ -142,7 +110,7 @@ val ShadowedBlueButtonVariant by ComponentStyle {
     }
 }
 
-val ShadowedGreenButtonVariant by ComponentStyle {
+val ShadowedGreenVariant by ComponentStyle {
     hover {
         Modifier
             .boxShadow(0.px, 0.px, 20.px, 0.px, getSitePalette().green)
@@ -150,7 +118,7 @@ val ShadowedGreenButtonVariant by ComponentStyle {
     }
 }
 
-val ShadowedRedButtonVariant by ComponentStyle {
+val ShadowedRedVariant by ComponentStyle {
     hover {
         Modifier
             .boxShadow(0.px, 0.px, 20.px, 0.px, Color.red)
@@ -158,7 +126,7 @@ val ShadowedRedButtonVariant by ComponentStyle {
     }
 }
 
-val ShadowedGrayButtonVariant by ComponentStyle {
+val ShadowedGrayVariant by ComponentStyle {
     base {
         Modifier
             .boxShadow(0.px, 0.px, 3.px, 0.px, Color.lightgray)
@@ -269,6 +237,7 @@ val LoaderStyle by ComponentStyle.base {
         )
         .size(72.px)
 }
+
 val Spin by Keyframes {
     0.percent {
         Modifier
@@ -277,6 +246,39 @@ val Spin by Keyframes {
     100.percent {
         Modifier
             .transform { rotate(360.deg) }
+    }
+}
+
+val NavbarStyle by ComponentStyle {
+    base {
+        Modifier
+            .fillMaxWidth()
+            .alignContent(AlignContent.Center)
+            .overflow(Overflow.Hidden)
+    }
+    cssRule(" a") {
+        Modifier
+            .float(CSSFloat.Left)
+            .display(DisplayStyle.Block)
+            .color(getSitePalette().white)
+            .textAlign(TextAlign.Center)
+            .padding(14.px, 16.px)
+    }
+    cssRule(" a.active") {
+        Modifier
+            .backgroundColor(getSitePalette().green)
+            .color(Colors.White)
+    }
+}
+
+val NavItemStyle by ComponentStyle {
+    base {
+        Modifier
+            .color(getSitePalette().blue)
+    }
+    hover {
+        Modifier
+            .color(getSitePalette().green)
     }
 }
 
@@ -296,59 +298,3 @@ val MyBtnStyle by ComponentStyle {
             .padding(topBottom = 15.px, leftRight = 22.px)
     }
 }
-
-val HeaderStyle by ComponentStyle.base {
-    Modifier
-        .backgroundColor(getSitePalette().green)
-        .padding(30.px)
-        .textAlign(TextAlign.Center)
-}
-
-val NavbarStyle by ComponentStyle {
-    base {
-        Modifier
-            .fillMaxWidth()
-            .alignContent(AlignContent.Center)
-            .overflow(Overflow.Hidden)
-    }
-    cssRule(" a") {
-        Modifier
-            .float(CSSFloat.Left)
-            .display(DisplayStyle.Block)
-            .color(getSitePalette().white)
-            .textAlign(TextAlign.Center)
-            .padding(14.px, 16.px)
-            .fontSize(17.px)
-    }
-    cssRule(" a.active") {
-        Modifier
-            .backgroundColor(getSitePalette().green)
-            .color(Colors.White)
-    }
-}
-
-val StickyStyle by ComponentStyle {
-    base {
-        Modifier
-            .position(Position.Fixed)
-            .top(0.px)
-            .fillMaxWidth()
-            .backgroundColor(getSitePalette().white)
-    }
-    cssRule(" + .content") {
-        Modifier
-            .padding(top = 60.px)
-    }
-}
-
-val NavItemStyle by ComponentStyle {
-    base {
-        Modifier
-            .color(getSitePalette().blue)
-    }
-    hover {
-        Modifier
-            .color(getSitePalette().green)
-    }
-}
-

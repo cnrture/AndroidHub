@@ -1,18 +1,14 @@
 package com.canerture.androidhub.data
 
-import com.canerture.androidhub.common.Constants
-import com.canerture.androidhub.data.ApiUtils.safeApiCall
 import com.canerture.androidhub.data.model.Category
-import com.varabyte.kobweb.browser.http.http
-import kotlinx.browser.window
+import com.canerture.androidhub.utils.ApiUtils.get
+import com.canerture.androidhub.utils.ApiUtils.safeApiCall
 
 suspend fun getCategories(
     onSuccess: (List<Category>) -> Unit = {},
     onError: (String) -> Unit = {}
 ) = safeApiCall<List<Category>>(
-    call = {
-        window.http.get(Constants.BASE_URL.plus("categories.php"))
-    },
+    call = { get("categories") },
     onSuccess = onSuccess,
     onError = onError
 )

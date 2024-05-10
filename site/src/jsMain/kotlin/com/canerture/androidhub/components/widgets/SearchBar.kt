@@ -6,9 +6,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import com.canerture.androidhub.common.Id
+import com.canerture.androidhub.common.noBorder
 import com.canerture.androidhub.getSitePalette
-import com.canerture.androidhub.utils.Id
-import com.canerture.androidhub.utils.noBorder
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -31,7 +31,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.onFocusOut
 import com.varabyte.kobweb.compose.ui.modifiers.onKeyDown
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.transition
-import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.icons.fa.FaMagnifyingGlass
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
@@ -46,8 +45,6 @@ import org.jetbrains.compose.web.dom.Input
 fun SearchBar(
     breakpoint: Breakpoint,
     modifier: Modifier = Modifier,
-    fullWidth: Boolean = true,
-    darkTheme: Boolean = false,
     onEnterClick: () -> Unit,
     onSearchIconClick: (Boolean) -> Unit
 ) {
@@ -57,13 +54,10 @@ fun SearchBar(
         if (breakpoint >= Breakpoint.SM) onSearchIconClick(false)
     }
 
-    if (breakpoint >= Breakpoint.SM || fullWidth) {
+    if (breakpoint >= Breakpoint.SM) {
         Row(
             modifier = modifier
-                .thenIf(
-                    condition = fullWidth,
-                    other = Modifier.fillMaxWidth()
-                )
+                .fillMaxWidth()
                 .padding(left = 20.px)
                 .height(54.px)
                 .backgroundColor(getSitePalette().white)
@@ -86,9 +80,9 @@ fun SearchBar(
             Input(
                 type = InputType.Text,
                 attrs = Modifier
-                    .id(Id.adminSearchBar)
+                    .id(Id.ADMIN_SEARCH_BAR)
                     .fillMaxSize()
-                    .color(if (darkTheme) Colors.White else Colors.Black)
+                    .color(getSitePalette().blue)
                     .backgroundColor(Colors.Transparent)
                     .noBorder()
                     .onFocusIn { focused = true }

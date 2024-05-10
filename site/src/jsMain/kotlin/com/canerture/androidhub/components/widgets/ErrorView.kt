@@ -35,7 +35,7 @@ fun ErrorView(
         )
 
         SpanText(
-            text = if (message.isNotEmpty()) message else "An error occurred while loading the page.",
+            text = message.ifEmpty { "An error occurred while loading the page." },
             modifier = Modifier
                 .color(getSitePalette().blue)
                 .fontSize(24.px)

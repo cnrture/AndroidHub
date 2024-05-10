@@ -9,16 +9,15 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import com.canerture.androidhub.ContainerStyle
 import com.canerture.androidhub.InputCheckBoxStyle
+import com.canerture.androidhub.common.Id
+import com.canerture.androidhub.common.noBorder
+import com.canerture.androidhub.common.parseDateString
 import com.canerture.androidhub.components.layouts.PageLayout
 import com.canerture.androidhub.components.widgets.ErrorView
 import com.canerture.androidhub.components.widgets.LoadingIndicator
 import com.canerture.androidhub.data.getPostDetail
 import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.getSitePalette
-import com.canerture.androidhub.utils.Constants
-import com.canerture.androidhub.utils.Id
-import com.canerture.androidhub.utils.noBorder
-import com.canerture.androidhub.utils.parseDateString
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.ObjectFit
@@ -32,14 +31,12 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.attrsModifier
+import com.varabyte.kobweb.compose.ui.modifiers.alignContent
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.boxShadow
-import com.varabyte.kobweb.compose.ui.modifiers.classNames
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
-import com.varabyte.kobweb.compose.ui.modifiers.display
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
@@ -55,7 +52,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.compose.ui.modifiers.textOverflow
 import com.varabyte.kobweb.compose.ui.modifiers.whiteSpace
-import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
@@ -64,10 +60,9 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.fa.FaCalendar
 import com.varabyte.kobweb.silk.components.icons.fa.FaClock
 import com.varabyte.kobweb.silk.components.icons.fa.FaLinkedin
-import com.varabyte.kobweb.silk.components.icons.fa.FaPerson
-import com.varabyte.kobweb.silk.components.icons.fa.FaTelegram
 import com.varabyte.kobweb.silk.components.icons.fa.FaTicket
 import com.varabyte.kobweb.silk.components.icons.fa.FaTwitter
+import com.varabyte.kobweb.silk.components.icons.fa.FaUser
 import com.varabyte.kobweb.silk.components.icons.fa.FaWhatsapp
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.layout.HorizontalDivider
@@ -80,13 +75,11 @@ import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.attributes.InputType
+import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.Color
-import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.dom.Br
 import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.HTMLMap
 import org.jetbrains.compose.web.dom.Input
 import org.jetbrains.compose.web.dom.Label
 import org.w3c.dom.HTMLDivElement
@@ -149,7 +142,7 @@ fun PostPageLayout() {
                         )
                     }
                 } else {
-                    Column (
+                    Column(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
@@ -165,7 +158,10 @@ fun PostPageLayout() {
                                 .padding(leftRight = if (breakpoint > Breakpoint.MD) 24.px else 16.px)
                                 .maxWidth(800.px)
                                 .boxShadow(0.px, 0.px, 5.px, 0.px, Color.lightgray)
-                                .padding(leftRight = if (breakpoint > Breakpoint.MD) 4.cssRem else 2.cssRem, topBottom = 4.cssRem),
+                                .padding(
+                                    leftRight = if (breakpoint > Breakpoint.MD) 4.cssRem else 2.cssRem,
+                                    topBottom = 4.cssRem
+                                ),
                             post = it
                         )
                     }
@@ -218,7 +214,7 @@ fun LeftSide(
             )
             LeftSideItem(
                 icon = {
-                    FaPerson(
+                    FaUser(
                         modifier = Modifier.color(getSitePalette().green)
                     )
                 },
@@ -243,10 +239,11 @@ fun LeftSideItem(icon: @Composable () -> Unit, title: String, value: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .margin(topBottom = 0.4.cssRem)
+            .margin(topBottom = 0.4.cssRem),
+        verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
-            modifier = Modifier.minWidth(20.px),
+            modifier = Modifier.minWidth(20.px).alignContent(AlignContent.Center),
             contentAlignment = Alignment.Center
         ) {
             icon()
@@ -292,7 +289,7 @@ fun PostContent(post: Post) {
     var isCopied by remember { mutableStateOf(false) }
 
     LaunchedEffect(post) {
-        (document.getElementById(Id.postContent) as HTMLDivElement).innerHTML = post.content
+        (document.getElementById(Id.POST_CONTENT) as HTMLDivElement).innerHTML = post.content
     }
     SpanText(
         modifier = Modifier
@@ -343,7 +340,7 @@ fun PostContent(post: Post) {
     }
     Div(
         attrs = Modifier
-            .id(Id.postContent)
+            .id(Id.POST_CONTENT)
             .color(getSitePalette().blue)
             .fontSize(if (breakpoint > Breakpoint.MD) 18.px else 14.px)
             .fillMaxWidth()
@@ -382,7 +379,10 @@ fun PostContent(post: Post) {
                 .fontSize(24.px)
                 .margin(right = 1f.cssRem)
                 .onClick {
-                    window.open("https://www.linkedin.com/share-offsite?mini=true&url=${window.location.href}", "_blank")
+                    window.open(
+                        "https://www.linkedin.com/share-offsite?mini=true&url=${window.location.href}",
+                        "_blank"
+                    )
                 }
         )
         FaWhatsapp(
@@ -452,9 +452,8 @@ fun PostContent(post: Post) {
         }
 
         if (isCopied) {
-            println("isCopied: $isCopied")
             scope.launch {
-                delay(2000)
+                delay(1000)
                 isCopied = false
             }
         }

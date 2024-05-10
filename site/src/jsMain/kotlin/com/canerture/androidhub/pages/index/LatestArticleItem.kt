@@ -1,7 +1,7 @@
 package com.canerture.androidhub.pages.index
 
 import androidx.compose.runtime.Composable
-import com.canerture.androidhub.ShadowedGrayButtonVariant
+import com.canerture.androidhub.ShadowedGrayVariant
 import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.data.model.colorParse
 import com.canerture.androidhub.getSitePalette
@@ -30,15 +30,12 @@ import com.varabyte.kobweb.compose.ui.modifiers.marginInline
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.textAlign
-import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.icons.fa.FaClock
 import com.varabyte.kobweb.silk.components.icons.fa.FaUser
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
-import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
@@ -46,10 +43,8 @@ import org.jetbrains.compose.web.css.px
 @Composable
 fun LatestArticleItem(article: Post) {
     val context = rememberPageContext()
-    val breakpoint = rememberBreakpoint()
     Column(
-        modifier = ShadowedGrayButtonVariant.toModifier()
-            .thenIf(breakpoint < Breakpoint.SM, Modifier.fillMaxWidth())
+        modifier = ShadowedGrayVariant.toModifier()
             .marginInline(end = 2.5.cssRem)
             .marginBlock(end = 2.5.cssRem)
             .backgroundColor(getSitePalette().white)
@@ -102,7 +97,11 @@ fun LatestArticleItem(article: Post) {
                 modifier = Modifier
                     .fontSize(13.px)
                     .color(getSitePalette().blue)
-                    .margin(right = 1.cssRem),
+                    .margin(right = 1.cssRem)
+                    .cursor(Cursor.Pointer)
+                    .onClick {
+                        context.router.navigateTo(Screen.AuthorPage.getAuthor(article.authorId))
+                    },
                 text = article.authorName
             )
             FaClock(

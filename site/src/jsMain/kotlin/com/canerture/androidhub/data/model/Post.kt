@@ -4,7 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class AddPostRequest(
-    val id: Int = 0,
     val authorId: String = "",
     val authorName: String = "",
     val date: Double = 0.0,
@@ -13,7 +12,6 @@ data class AddPostRequest(
     val short: String = "",
     val category: String = "",
     val thumbnail: String = "",
-    val commentCount: Int = 0,
     val status: String = "",
 )
 

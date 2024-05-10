@@ -1,12 +1,10 @@
 package com.canerture.androidhub.components.widgets
 
 import androidx.compose.runtime.Composable
+import com.canerture.androidhub.common.Id
+import com.canerture.androidhub.common.noBorder
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.models.EditorControl
-import com.canerture.androidhub.utils.Constants.FONT_FAMILY
-import com.canerture.androidhub.utils.Id
-import com.canerture.androidhub.utils.noBorder
-import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -17,7 +15,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
-import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.id
@@ -25,7 +22,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.position
-import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.compose.ui.modifiers.zIndex
 import com.varabyte.kobweb.compose.ui.toAttrs
@@ -39,43 +35,6 @@ import org.jetbrains.compose.web.css.vw
 import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Input
 import org.w3c.dom.HTMLInputElement
-
-@Composable
-fun MessagePopup(
-    message: String,
-    onDialogDismiss: () -> Unit
-) {
-    Box(
-        modifier = Modifier
-            .width(100.vw)
-            .height(100.vh)
-            .position(Position.Fixed)
-            .zIndex(19),
-        contentAlignment = Alignment.Center
-    ) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .backgroundColor(getSitePalette().blue)
-                .onClick { onDialogDismiss() }
-        )
-        Box(
-            modifier = Modifier
-                .padding(all = 24.px)
-                .backgroundColor(Colors.White)
-                .borderRadius(r = 4.px)
-        ) {
-            SpanText(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .textAlign(TextAlign.Center)
-                    .fontFamily(FONT_FAMILY)
-                    .fontSize(16.px),
-                text = message
-            )
-        }
-    }
-}
 
 @Composable
 fun ControlPopup(
@@ -107,12 +66,11 @@ fun ControlPopup(
             Input(
                 type = InputType.Text,
                 attrs = Modifier
-                    .id(Id.linkHrefInput)
+                    .id(Id.LINK_HREF_INPUT)
                     .fillMaxWidth()
                     .height(54.px)
                     .padding(left = 20.px)
                     .margin(bottom = 12.px)
-                    .fontFamily(FONT_FAMILY)
                     .fontSize(14.px)
                     .noBorder()
                     .borderRadius(r = 4.px)
@@ -127,12 +85,11 @@ fun ControlPopup(
             Input(
                 type = InputType.Text,
                 attrs = Modifier
-                    .id(Id.linkTitleInput)
+                    .id(Id.LINK_TITLE_INPUT)
                     .fillMaxWidth()
                     .height(54.px)
                     .padding(left = 20.px)
                     .margin(bottom = 20.px)
-                    .fontFamily(FONT_FAMILY)
                     .fontSize(14.px)
                     .noBorder()
                     .borderRadius(r = 4.px)
@@ -148,9 +105,9 @@ fun ControlPopup(
                 attrs = Modifier
                     .onClick {
                         val href =
-                            (document.getElementById(Id.linkHrefInput) as HTMLInputElement).value
+                            (document.getElementById(Id.LINK_HREF_INPUT) as HTMLInputElement).value
                         val title =
-                            (document.getElementById(Id.linkTitleInput) as HTMLInputElement).value
+                            (document.getElementById(Id.LINK_TITLE_INPUT) as HTMLInputElement).value
                         onAddClick(href, title)
                         onDialogDismiss()
                     }
@@ -160,7 +117,6 @@ fun ControlPopup(
                     .backgroundColor(getSitePalette().blue)
                     .color(Colors.White)
                     .noBorder()
-                    .fontFamily(FONT_FAMILY)
                     .fontSize(14.px)
                     .toAttrs()
             ) {
