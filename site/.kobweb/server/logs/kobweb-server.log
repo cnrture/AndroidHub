@@ -1,9 +1,9 @@
-2024-05-10 15:19:39.049 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
-2024-05-10 15:19:39.051 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
-2024-05-10 15:19:39.061 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
-2024-05-10 15:19:39.082 [main] INFO  ktor.application - Loaded and initialized server API jar in 1ms.
-2024-05-10 15:19:39.095 [main] INFO  ktor.application - Initializing Kobweb streams.
-2024-05-10 15:19:39.119 [main] INFO  ktor.application - Application started in 0.1 seconds.
-2024-05-10 15:19:39.184 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
-2024-05-10 15:20:10.750 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
-2024-05-10 15:20:12.833 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
+2024-05-10 15:49:47.187 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
+2024-05-10 15:49:47.189 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
+2024-05-10 15:49:47.198 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
+2024-05-10 15:49:47.220 [main] INFO  ktor.application - Loaded and initialized server API jar in 2ms.
+2024-05-10 15:49:47.232 [main] INFO  ktor.application - Initializing Kobweb streams.
+2024-05-10 15:49:47.250 [main] INFO  ktor.application - Application started in 0.092 seconds.
+2024-05-10 15:49:47.310 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-05-10 15:50:14.935 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
+2024-05-10 15:50:16.005 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
