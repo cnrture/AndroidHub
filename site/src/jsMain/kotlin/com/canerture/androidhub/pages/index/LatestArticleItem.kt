@@ -32,6 +32,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.compose.ui.modifiers.width
+import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.icons.fa.FaClock
@@ -84,7 +85,13 @@ fun LatestArticleItem(article: Post) {
                     .fontSize(if (breakpoint < Breakpoint.MD) 16.px else 18.px)
                     .textAlign(TextAlign.Center)
                     .fontWeight(FontWeight.Bold)
-                    .color(getSitePalette().blue),
+                    .color(getSitePalette().blue)
+                    .styleModifier {
+                        property("display", "-webkit-box")
+                        property("-webkit-line-clamp", "2")
+                        property("line-clamp", "2")
+                        property("-webkit-box-orient", "vertical")
+                    },
             )
         }
 

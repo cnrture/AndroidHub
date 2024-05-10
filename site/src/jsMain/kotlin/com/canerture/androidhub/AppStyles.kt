@@ -257,20 +257,3 @@ val NavItemStyle by ComponentStyle {
             .color(getSitePalette().green)
     }
 }
-
-val ScrollToTopStyle by ComponentStyle {
-    base {
-        Modifier
-            .position(Position.Fixed)
-            .bottom(20.px)
-            .right(30.px)
-            .zIndex(99)
-            .border(0.px)
-            .outline(0.px)
-            .backgroundColor(Color.transparent)
-            .color(Colors.White)
-            .cursor(Cursor.Pointer)
-            .borderRadius(100.percent)
-            .padding(topBottom = 15.px, leftRight = 22.px)
-    }
-}

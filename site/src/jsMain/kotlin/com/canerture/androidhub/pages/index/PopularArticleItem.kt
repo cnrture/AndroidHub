@@ -35,6 +35,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.textOverflow
 import com.varabyte.kobweb.compose.ui.modifiers.whiteSpace
 import com.varabyte.kobweb.compose.ui.modifiers.width
+import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.Button
@@ -100,7 +101,9 @@ fun PopularArticleItem(article: Post) {
                         .margin(right = 8.px),
                 )
                 SpanText(
-                    modifier = Modifier.fontSize(12.px).fontWeight(FontWeight.Bold),
+                    modifier = Modifier
+                        .fontSize(12.px)
+                        .fontWeight(FontWeight.Bold),
                     text = article.authorName
                 )
             }
@@ -109,18 +112,21 @@ fun PopularArticleItem(article: Post) {
         Link(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
-                .margin(leftRight = 1.7.cssRem, topBottom = 1.5.cssRem),
+                .weight(1f),
             path = Screen.PostPage.getPost(short = article.short),
         ) {
             SpanText(
                 modifier = Modifier
                     .fontWeight(FontWeight.SemiBold)
+                    .margin(leftRight = 1.7.cssRem, topBottom = 1.5.cssRem)
                     .fontSize(if (breakpoint < Breakpoint.MD) 16.px else 18.px)
                     .color(getSitePalette().white)
-                    .overflow(Overflow.Clip)
-                    .whiteSpace(WhiteSpace.Normal)
-                    .textOverflow(TextOverflow.Ellipsis),
+                    .styleModifier {
+                        property("display", "-webkit-box")
+                        property("-webkit-line-clamp", "2")
+                        property("line-clamp", "2")
+                        property("-webkit-box-orient", "vertical")
+                    },
                 text = article.title
             )
         }

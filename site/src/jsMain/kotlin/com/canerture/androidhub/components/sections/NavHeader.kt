@@ -12,6 +12,7 @@ import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.navigation.Screen
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
+import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -23,6 +24,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
+import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
@@ -33,6 +35,8 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.forms.ButtonVars
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.icons.fa.FaBars
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.layout.breakpoint.displayIfAtLeast
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
@@ -51,7 +55,8 @@ val navItems = listOf("Article", "Project", "Extension", "Plugin", "Library", "R
 
 @Composable
 fun NavHeader(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onMenuOpen: () -> Unit
 ) {
     val breakpoint = rememberBreakpoint()
     val context = rememberPageContext()
@@ -59,14 +64,27 @@ fun NavHeader(
 
     val logoSize = if (breakpoint > Breakpoint.MD) Pair(340.px, 90.px) else Pair(250.px, 66.px)
 
-    Div(
-        attrs = modifier.toAttrs()
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
     ) {
-        Link(Screen.HomePage.route, Modifier.fillMaxWidth()) {
+        if (breakpoint < Breakpoint.MD) {
+            FaBars(
+                modifier = Modifier
+                    .margin(right = 12.px, bottom = 12.px)
+                    .color(getSitePalette().blue)
+                    .cursor(Cursor.Pointer)
+                    .onClick { onMenuOpen() },
+                size = IconSize.XL
+            )
+        }
+
+        Link(Screen.HomePage.route) {
             Image(
                 src = Res.Image.LOGO,
                 description = "AndroidHub Logo",
-                modifier = Modifier.size(logoSize.first, logoSize.second).alignContent(AlignContent.Center)
+                modifier = Modifier.size(logoSize.first, logoSize.second)
             )
         }
     }
@@ -127,7 +145,7 @@ fun NavHeader(
 }
 
 @Composable
-private fun MenuItem(
+fun MenuItem(
     text: String
 ) {
     val context = rememberPageContext()
@@ -135,6 +153,23 @@ private fun MenuItem(
         text = text,
         modifier = NavItemStyle.toModifier()
             .margin(leftRight = 8.px)
+            .fontSize(16.px)
+            .cursor(Cursor.Pointer)
+            .onClick {
+                context.router.tryRoutingTo(Screen.CategoryPage.getCategoryPosts(text))
+            }
+    )
+}
+
+@Composable
+fun SidePanelMenuItem(
+    text: String
+) {
+    val context = rememberPageContext()
+    SpanText(
+        text = text,
+        modifier = Modifier
+            .margin(left = 12.px, bottom = 32.px)
             .fontSize(16.px)
             .cursor(Cursor.Pointer)
             .onClick {

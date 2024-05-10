@@ -7,7 +7,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import com.canerture.androidhub.NavbarStyle
 import com.canerture.androidhub.components.layouts.PageLayout
+import com.canerture.androidhub.components.sections.AdminNavigationItems
+import com.canerture.androidhub.components.sections.MenuItem
+import com.canerture.androidhub.components.sections.OverflowSidePanel
+import com.canerture.androidhub.components.sections.navItems
 import com.canerture.androidhub.components.widgets.ErrorView
 import com.canerture.androidhub.components.widgets.LoadingIndicator
 import com.canerture.androidhub.data.getPopularPosts
@@ -42,6 +47,7 @@ import com.varabyte.kobweb.silk.components.icons.fa.FaChevronRight
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.breakpoint.ResponsiveValues
+import com.varabyte.kobweb.silk.components.style.toAttrs
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.window
@@ -50,6 +56,7 @@ import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.Div
 import org.w3c.dom.SMOOTH
 import org.w3c.dom.ScrollBehavior
 import org.w3c.dom.ScrollToOptions
@@ -62,6 +69,7 @@ data class IndexUIState(
     val totalPage: Int = 1,
     val page: Int = 1,
     val currentPage: Int = 1,
+    val overflowOpened: Boolean = false,
 )
 
 @Page("/")
@@ -108,6 +116,7 @@ fun Index() {
                 ErrorView()
                 return@PageLayout
             }
+
             AndroidHeroContent(breakpoint)
 
             if (state.popularPosts.isNotEmpty()) {

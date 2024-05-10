@@ -31,8 +31,10 @@ import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.icons.fa.FaBoltLightning
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.breakpoint.ResponsiveValues
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.browser.document
 import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.cssRem
@@ -89,10 +91,11 @@ fun Category() {
 
 @Composable
 private fun CategoryPosts(category: String, list: List<Post>) {
+    val breakpoint = rememberBreakpoint()
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(bottom = 2.cssRem, top = 6.cssRem, leftRight = 6.cssRem),
+            .padding(bottom = 2.cssRem, top = if (breakpoint < Breakpoint.MD) 1.cssRem else 6.cssRem, leftRight = 6.cssRem),
         verticalAlignment = Alignment.CenterVertically
     ) {
         FaBoltLightning(
@@ -113,7 +116,7 @@ private fun CategoryPosts(category: String, list: List<Post>) {
     }
 
     SimpleGrid(
-        modifier = Modifier.fillMaxWidth().padding(leftRight = 6.cssRem),
+        modifier = Modifier.fillMaxWidth().padding(leftRight = if (breakpoint < Breakpoint.MD) 1.cssRem else 6.cssRem),
         numColumns = ResponsiveValues(1, 2, 3, 3, 3),
         content = {
             list.forEach { article ->

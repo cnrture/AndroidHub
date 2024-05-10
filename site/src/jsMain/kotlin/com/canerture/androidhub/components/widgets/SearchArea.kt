@@ -26,6 +26,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.onFocusIn
 import com.varabyte.kobweb.compose.ui.modifiers.onFocusOut
 import com.varabyte.kobweb.compose.ui.modifiers.onKeyDown
+import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.size
 import com.varabyte.kobweb.compose.ui.modifiers.transition
 import com.varabyte.kobweb.compose.ui.modifiers.width
@@ -109,4 +110,34 @@ fun SearchArea() {
             )
         }
     }
+}
+
+@Composable
+fun MobileSearchArea() {
+    var focused by remember { mutableStateOf(false) }
+    val context = rememberPageContext()
+
+    Input(
+        type = InputType.Text,
+        attrs = Modifier
+            .id(Id.NAVBAR_SEARCH_INPUT)
+            .margin(top = 1.cssRem)
+            .padding(0.5.cssRem, 1.cssRem)
+            .fontSize(14.px)
+            .width(140.px)
+            .onFocusIn { focused = true }
+            .onFocusOut { focused = false }
+            .onKeyDown {
+                if (it.key == "Enter") {
+                    val input =
+                        (document.getElementById(Id.NAVBAR_SEARCH_INPUT) as HTMLInputElement).value
+                    context.router.navigateTo(Screen.SearchPage.searchByTitle(input))
+                }
+            }
+            .borderRadius(5.cssRem)
+            .border(2.px, LineStyle.Solid, getSitePalette().blue)
+            .toAttrs {
+                attr("placeholder", "Search...")
+            }
+    )
 }

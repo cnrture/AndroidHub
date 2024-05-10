@@ -5,7 +5,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.canerture.androidhub.components.sections.NavigationItems
+import com.canerture.androidhub.components.sections.AdminNavigationItems
 import com.canerture.androidhub.components.sections.OverflowSidePanel
 import com.canerture.androidhub.components.sections.SidePanel
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -25,16 +25,16 @@ fun AdminPageLayout(content: @Composable () -> Unit) {
             modifier = Modifier
                 .fillMaxSize()
         ) {
-            SidePanel(onMenuClick = {
-                overflowOpened = true
-            })
+            SidePanel(
+                onMenuClick = { overflowOpened = true }
+            )
             if (overflowOpened) {
                 OverflowSidePanel(
                     onMenuClose = {
                         overflowOpened = false
                     },
                     content = {
-                        NavigationItems()
+                        AdminNavigationItems()
                     }
                 )
             }
