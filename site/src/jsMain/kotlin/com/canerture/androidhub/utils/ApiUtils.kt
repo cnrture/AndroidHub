@@ -18,11 +18,9 @@ object ApiUtils {
             if (response.status == 200) {
                 onSuccess(response.data!!)
             } else {
-                println(response.message)
                 onError(response.message.orEmpty())
             }
         } catch (e: Exception) {
-            println(e.message)
             onError("Something went wrong!")
         }
     }
