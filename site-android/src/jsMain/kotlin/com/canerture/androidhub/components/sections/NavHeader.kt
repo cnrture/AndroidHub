@@ -62,7 +62,7 @@ fun NavHeader(
     val context = rememberPageContext()
     val isUserLoggedIn = isUserLoggedIn()
 
-    val logoSize = if (breakpoint > Breakpoint.MD) Pair(340.px, 90.px) else Pair(250.px, 66.px)
+    val logoSize = if (breakpoint > Breakpoint.MD) Pair(340.px, 80.px) else Pair(250.px, 66.px)
 
     Row(
         modifier = modifier.fillMaxWidth(),
