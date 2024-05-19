@@ -8,4 +8,5 @@ pluginManagement {
 
 rootProject.name = "androidhub"
 
-include(":site")
+include(":site-android")
+include(":site-ios")

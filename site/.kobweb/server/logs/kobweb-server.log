@@ -1,9 +1,0 @@
-2024-05-10 19:27:45.669 [main] DEBUG ktor.application - Java Home: /Users/canerture/Library/Java/JavaVirtualMachines/jbr-17.0.9/Contents
-2024-05-10 19:27:45.671 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/canerture/Documents/GitHub/AndroidHub/site/.kobweb/server/server.jar!/ch]
-2024-05-10 19:27:45.680 [main] INFO  ktor.application - API jar found and will be loaded: "build/libs/androidhub.jar"
-2024-05-10 19:27:45.701 [main] INFO  ktor.application - Loaded and initialized server API jar in 1ms.
-2024-05-10 19:27:45.712 [main] INFO  ktor.application - Initializing Kobweb streams.
-2024-05-10 19:27:45.731 [main] INFO  ktor.application - Application started in 0.091 seconds.
-2024-05-10 19:27:45.795 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
-2024-05-10 19:28:14.927 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
-2024-05-10 19:28:15.980 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
