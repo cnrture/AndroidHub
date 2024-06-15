@@ -9,8 +9,9 @@ import androidx.compose.runtime.setValue
 import com.canerture.androidhub.common.Constants.SIDE_PANEL_WIDTH
 import com.canerture.androidhub.components.layouts.AdminPageLayout
 import com.canerture.androidhub.components.widgets.PostsView
+import com.canerture.androidhub.data.getAdminAllPosts
+import com.canerture.androidhub.data.getDraftPosts
 import com.canerture.androidhub.data.getPendingPosts
-import com.canerture.androidhub.data.getPosts
 import com.canerture.androidhub.data.model.Post
 import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.navigation.Screen
@@ -40,6 +41,7 @@ data class AllPostsUIState(
     var isLoading: Boolean = true,
     var posts: List<Post> = emptyList(),
     var pendingPostEnabled: Boolean = false,
+    var draftPostEnabled: Boolean = false,
 )
 
 @Page("/admin/all-posts")
@@ -50,18 +52,23 @@ fun AdminAllPosts() {
 
     var state by remember { mutableStateOf(AllPostsUIState()) }
 
-    LaunchedEffect(state.pendingPostEnabled) {
-        if (state.pendingPostEnabled) {
-            getPendingPosts(
+    LaunchedEffect(state.pendingPostEnabled || state.draftPostEnabled) {
+        when {
+            state.pendingPostEnabled -> getPendingPosts(
                 onSuccess = {
                     state = state.copy(isLoading = false, posts = it)
                 }
             )
-        } else {
-            getPosts(
-                page = 1,
+
+            state.draftPostEnabled -> getDraftPosts(
                 onSuccess = {
-                    state = state.copy(isLoading = false, posts = it.posts)
+                    state = state.copy(isLoading = false, posts = it)
+                }
+            )
+
+            else -> getAdminAllPosts(
+                onSuccess = {
+                    state = state.copy(isLoading = false, posts = it)
                 }
             )
         }
@@ -89,7 +96,12 @@ fun AdminAllPosts() {
                 Switch(
                     modifier = Modifier.margin(right = 8.px),
                     checked = state.pendingPostEnabled,
-                    onCheckedChange = { state = state.copy(pendingPostEnabled = it) },
+                    onCheckedChange = {
+                        state = state.copy(pendingPostEnabled = it)
+                        if (it) {
+                            state = state.copy(draftPostEnabled = false)
+                        }
+                    },
                     size = SwitchSize.MD
                 )
                 SpanText(
@@ -97,6 +109,24 @@ fun AdminAllPosts() {
                         .fontSize(14.px)
                         .color(getSitePalette().blue),
                     text = "Show Pending Posts"
+                )
+
+                Switch(
+                    modifier = Modifier.margin(leftRight = 8.px),
+                    checked = state.draftPostEnabled,
+                    onCheckedChange = {
+                        state = state.copy(draftPostEnabled = it)
+                        if (it) {
+                            state = state.copy(pendingPostEnabled = false)
+                        }
+                    },
+                    size = SwitchSize.MD
+                )
+                SpanText(
+                    modifier = Modifier
+                        .fontSize(14.px)
+                        .color(getSitePalette().blue),
+                    text = "Show Draft Posts"
                 )
             }
             PostsView(

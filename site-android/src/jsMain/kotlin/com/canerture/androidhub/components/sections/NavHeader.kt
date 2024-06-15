@@ -12,11 +12,9 @@ import com.canerture.androidhub.getSitePalette
 import com.canerture.androidhub.navigation.Screen
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
-import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.alignContent
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.boxShadow
@@ -24,7 +22,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
-import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
@@ -44,7 +41,6 @@ import com.varabyte.kobweb.silk.components.style.toAttrs
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
-import org.jetbrains.compose.web.css.AlignContent
 import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.cssRem
 import org.jetbrains.compose.web.css.px
@@ -62,7 +58,7 @@ fun NavHeader(
     val context = rememberPageContext()
     val isUserLoggedIn = isUserLoggedIn()
 
-    val logoSize = if (breakpoint > Breakpoint.MD) Pair(340.px, 80.px) else Pair(250.px, 66.px)
+    val logoSize = if (breakpoint > Breakpoint.MD) Pair(340.px, 90.px) else Pair(250.px, 66.px)
 
     Row(
         modifier = modifier.fillMaxWidth(),

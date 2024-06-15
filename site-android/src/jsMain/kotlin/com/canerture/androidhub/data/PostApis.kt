@@ -9,7 +9,6 @@ import com.canerture.androidhub.data.model.UpdatePostRequest
 import com.canerture.androidhub.utils.ApiUtils.delete
 import com.canerture.androidhub.utils.ApiUtils.get
 import com.canerture.androidhub.utils.ApiUtils.post
-import com.canerture.androidhub.utils.ApiUtils.put
 import com.canerture.androidhub.utils.ApiUtils.safeApiCall
 import kotlinx.browser.localStorage
 import kotlinx.serialization.encodeToString
@@ -17,8 +16,17 @@ import kotlinx.serialization.json.Json
 import org.w3c.dom.get
 import kotlin.js.Date
 
+suspend fun getAdminAllPosts(
+    onSuccess: (List<Post>) -> Unit = {},
+    onError: (String) -> Unit = {}
+) = safeApiCall<List<Post>>(
+    call = { get("admin_all_posts") },
+    onSuccess = onSuccess,
+    onError = onError
+)
+
 suspend fun getPosts(
-    page: Int,
+    page: Int = 0,
     onSuccess: (GetPostsResponse) -> Unit = {},
     onError: (String) -> Unit = {}
 ) = safeApiCall<GetPostsResponse>(
@@ -51,6 +59,15 @@ suspend fun getPendingPosts(
     onError: (String) -> Unit = {}
 ) = safeApiCall<List<Post>>(
     call = { get("pending_posts") },
+    onSuccess = onSuccess,
+    onError = onError
+)
+
+suspend fun getDraftPosts(
+    onSuccess: (List<Post>) -> Unit = {},
+    onError: (String) -> Unit = {}
+) = safeApiCall<List<Post>>(
+    call = { get("draft_posts") },
     onSuccess = onSuccess,
     onError = onError
 )

@@ -1,7 +1,7 @@
 package com.canerture.androidhub.common
 
 object Constants {
-    const val BASE_URL = "https://api.canerture.com/androidhub/"
+    const val BASE_URL = "https://api.canerture.com/ioshub/"
 
     const val QUERY_PARAM = "query"
     const val CATEGORY_PARAM = "category"
