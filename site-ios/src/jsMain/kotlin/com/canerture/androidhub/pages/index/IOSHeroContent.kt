@@ -85,7 +85,7 @@ private fun TextArea(breakpoint: Breakpoint, modifier: Modifier = Modifier) {
         )
         Spacer()
         SpanText(
-            text = "Let’s explore everything about the exciting world of Android together. On this platform, you can delve into the vast opportunities offered by the Android operating system and examine the latest developments in the field. Come on, let’s discover the limitless world of Android together!",
+            text = "Let’s explore everything about the exciting world of iOS together. On this platform, you can delve into the vast opportunities offered by the iOS operating system and examine the latest developments in the field. Come on, let’s discover the limitless world of iOS together!",
             modifier = Modifier
                 .textAlign(TextAlign.Start)
                 .color(Color.gray)
